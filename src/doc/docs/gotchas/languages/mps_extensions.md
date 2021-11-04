@@ -1,0 +1,54 @@
+# Editor
+
+## slisson.richtext
+
+!!! warning "The ordering of text and IWords can't be arbitrary"
+
+    A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.
+
+## de.itemis.mps.editor.diagram
+
+!!! info "I encountered a bug. Is it a known bug?"
+
+    Have you checked the [Meta Issue](https://github.com/JetBrains/MPS-extensions/issues/120) of the language?
+
+## de.slisson.mps.conditionalEditor
+
+!!! warning "There are generation errors."
+
+    The condition of the conditional editor is not optional, it has to be set.
+
+## de.slisson.mps.tables
+
+!!! question "How to get rid of the small little extra grid lines on the outside of the table rows?"
+
+    Change these properties to `!java true`. ![Set Properties to true](/img/table_lines_properties.png)
+
+## de.itemis.mps.editor.celllayout
+
+!!! question "What does this language do?"
+
+    In the MPS layout algorithms the children decide about their width and height and the parent cell can only arrange the already layouted children. In the algorithms from the celllayout language are similar to the swing layouters where the child is asked for its min/max/preferred size, but the parent decides about the size of the child and the child then has to fit itself into these bounds. This is used in tables and diagram, but also for the styles defined in the celllayout.styles language.
+
+## de.itemis.mps.editor.diagram
+
+!!! question "How do I use this language?"
+
+    Have a look at the samples of this language in mps-extensions. There is also an [external tutorial series](https://tillschallau.de/mps/).
+
+!!! question "What is edge ID in the diagrams used for?"
+
+    It’s used in the map that contains the layout data. It can be any unique string. LayoutMapEntry.key is the property where this string is used.
+
+# Grammar Cells
+
+!!! question "Grammar cells force me to create a dummy component. Is this really necessary?"
+
+    Yes it is, otherwise the generator doesn't get used. See the answers of the discussion in [Slack](https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300).
+
+!!! question "What combination of cells are not supported?"
+
+    The following combinations are not allowed:
+
+    - optional(constant)
+    - optional(reference)

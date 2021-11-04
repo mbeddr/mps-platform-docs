@@ -1,0 +1,117 @@
+site_name: MPSGotchas
+
+# Meta tags (placed in header)
+site_description: 
+site_author: Alexander Pann
+site_url: https://alexanderpann.github.io/MPSGotchas
+
+# Repository (add link to repository on each page)
+repo_name: MPSGotchas
+repo_url: http://github.com/alexanderpann/MPSGotchas
+edit_uri: edit/master/src/doc/docs/
+
+# Copyright (shown at the footer)
+copyright: 'Copyright &copy; 2021 Alexander Pann'
+
+# Material theme
+theme:
+  name: 'material'
+  features:
+    - navigation.top
+    - navigation.instant
+    - header.autohide
+
+extra_css:
+  - stylesheets/extra.css
+
+#plugins:
+#  - search
+#    Required for variables support (https://github.com/rosscdh/mkdocs-markdownextradata-plugin)
+#  - markdownextradata
+
+#extra:
+#  palette:
+#    primary: 'indigo'
+#    accent: 'indigo'
+
+#  social:
+#    - icon: fontawesome/brands/github
+#      link: https://github.com/you
+#    - icon: fontawesome/brands/twitter
+#      link: https://twitter.com/you
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+nav:
+  - Home: index.md
+  - General: gotchas/general/index.md
+  - UI: gotchas/ui/index.md
+  - Aspects:
+    - Structure: gotchas/aspects/structure/index.md
+    - Editor: gotchas/aspects/editor/index.md
+    - Constraints: gotchas/aspects/constraints/index.md
+    - Behaviour: gotchas/aspects/behavior/index.md
+    - Actions: gotchas/aspects/actions/index.md
+    - Typesystem: gotchas/aspects/typesystem/index.md
+    - Intentions: gotchas/aspects/intentions/index.md
+    - Migrations: gotchas/aspects/migrations/index.md
+    - Generator: gotchas/aspects/generator/index.md
+    - Plugin: gotchas/aspects/plugin/index.md
+    - TextGen: gotchas/aspects/textGen/index.md
+    - Tests: gotchas/aspects/tests/index.md
+    - Dataflow: gotchas/aspects/dataFlow/index.md
+    - Feedback: gotchas/aspects/feedback/index.md
+    - Refactorings: gotchas/aspects/refactorings/index.md
+    - Find Usages: gotchas/aspects/findUsages/index.md
+    - VCS: gotchas/aspects/vcs/index.md
+    - Scripts: gotchas/aspects/scripts/index.md
+    - Listener*: gotchas/aspects/listener/index.md
+    - Documentation*: gotchas/aspects/documentation/index.md
+    - Polyfun*: gotchas/aspects/polyfun/index.md
+    - Virtual Interfaces*: gotchas/aspects/virtualinterfaces/index.md
+    - Transformations*: gotchas/aspects/transformations/index.md
+  - Languages:
+      - Base Language: gotchas/languages/baselanguage.md
+      - Collections Language: gotchas/languages/baselanguage_collections.md
+      - MPS Extensions: gotchas/languages/mps_extensions.md
+      - Mbeddr (mpsutil): gotchas/languages/mbeddr_mpsutil.md
+      - Misc: gotchas/languages/index.md
+  - Open API: gotchas/openapi/index.md
+  - Console: gotchas/console/index.md
+  - Plugins: gotchas/plugins/index.md
+  - Build: gotchas/build/index.md
+  - External Files and Tools: gotchas/external_files_and_tools/index.md
+  - Miscellaneous: gotchas/misc/index.md
+  - General programming principles: clean_code/programming_principles.md
+  - Deprecation: clean_code/deprecation.md
+  - Clean code (MPS):
+    - General: clean_code/mps/general.md
+    - Miscellaneous: clean_code/mps/misc.md
+  - Clean code (Base Language):
+    - Java Style Guide: clean_code/baselanguage/java_style_guide.md
+    - General: clean_code/baselanguage/general.md
