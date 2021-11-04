@@ -3,5 +3,5 @@
 ## Serve
 gradle mkdocsServe
 
-## 
+## Build
 gradle mkdocsBuild
