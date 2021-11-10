@@ -1,13 +1,13 @@
 site_name: MPSGotchas
 
 # Meta tags (placed in header)
-site_description: 
+site_description: This website describes gotchas when working with MPS and gives some hints on how to write clean code in MPS.
 site_author: Alexander Pann
-site_url: https://alexanderpann.github.io/MPSGotchas
+site_url: https://alexanderpann.github.io/mps-gotchas
 
 # Repository (add link to repository on each page)
 repo_name: MPSGotchas
-repo_url: http://github.com/alexanderpann/MPSGotchas
+repo_url: http://github.com/alexanderpann/mps-gotchas
 edit_uri: edit/master/src/doc/docs/
 
 # Copyright (shown at the footer)
