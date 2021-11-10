@@ -1,45 +1,27 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Build documentation
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
-          architecture: 'x64'
-      
-      - name: Alias Python3
-        run: alias python3="python"
-      
-      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-15
-        with:
-          args: mkdocsBuild
+          python-version: "3.8"
 
-      - name: Activate Python environment
-        run: source .gradle/python/bin/activate 
-
-      - uses: BSFishy/pip-action@v1
-        with:
-          packages: mkdocs
-
-      - name: Deploy using mkdocs
-        run: mkdocs gh-deploy --config-file src/doc/mkdocs.yml --remote-branch gh-pages
-
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          CONFIG_FILE: src/doc/mkdocs.yml
