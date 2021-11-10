@@ -26,6 +26,9 @@ jobs:
           python-version: '3.x'
           architecture: 'x64'
       
+      - name: Alias Python3
+        run: alias python3="python"
+      
       - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-15
         with:
           args: mkdocsBuild
