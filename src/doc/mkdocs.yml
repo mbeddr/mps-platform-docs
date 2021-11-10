@@ -70,7 +70,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - General: gotchas/general/index.md
-  - UI: gotchas/ui/index.md
   - Aspects:
     - Structure: gotchas/aspects/structure/index.md
     - Editor: gotchas/aspects/editor/index.md
@@ -101,11 +100,11 @@ nav:
       - MPS Extensions: gotchas/languages/mps_extensions.md
       - Mbeddr (mpsutil): gotchas/languages/mbeddr_mpsutil.md
       - Misc: gotchas/languages/index.md
-  - Open API: gotchas/openapi/index.md
   - Console: gotchas/console/index.md
   - Plugins: gotchas/plugins/index.md
   - Build: gotchas/build/index.md
   - External Files and Tools: gotchas/external_files_and_tools/index.md
+  - Internal MPS: gotchas/mps_internal/index.md
   - Miscellaneous: gotchas/misc/index.md
   - General programming principles: clean_code/programming_principles.md
   - Deprecation: clean_code/deprecation.md

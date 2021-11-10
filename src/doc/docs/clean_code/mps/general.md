@@ -27,7 +27,7 @@ It describes how git is used in the mbeddr project for contributing changes, and
 
 ## Exceptions
 - Use checked exceptions for recoverable conditions and run-time exceptions for programming errors [^2]^,^[^3].
-- Consider alternative ways to showing errors than throwing exceptions such as showing [notifications](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons). Examples for such notifications are balloons and dialogs.
+- Consider alternative ways of showing errors than throwing exceptions such as showing [notifications](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons). Examples for such notifications are balloons and dialogs.
 - Attach throwable objects to logging statement if available:
   `#!java log error "This is an error",errorObject`
 - Clean up in the finally block of a try statement.

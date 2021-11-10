@@ -8,6 +8,6 @@
 
 !!! question "How can I find plugins on the JetBrains Marketplace that are usable in MPS?"
 
-    Search for the word [MPS](https://plugins.jetbrains.com/search?products=mps&search=MPS) in all categories should do the trick.
+    Searching for the word [MPS](https://plugins.jetbrains.com/search?products=mps&search=MPS) in all categories should do the trick.
 
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)

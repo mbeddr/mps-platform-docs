@@ -23,6 +23,7 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
     - [Sealed classes](https://www.baeldung.com/java-sealed-classes-interfaces)
     - [Pattern matching for switch statements](https://docs.oracle.com/en/java/javase/17/language/pattern-matching-switch-expressions-and-statements.html)
     - [Pattern matching for instanceof](https://www.baeldung.com/java-pattern-matching-instanceof)
+    - [double brace initialization](https://www.geeksforgeeks.org/double-brace-initialization-java)
 
 
 !!! warning "I have written a function with baselanguage code but doesn't return anything when called"

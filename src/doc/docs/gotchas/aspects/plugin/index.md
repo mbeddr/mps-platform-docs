@@ -27,3 +27,10 @@
 !!! hint "I want to store different states/versions of a node inside of the model."
 
     Use the language `de.itemis.mps.nodeversioning` from mps-extensions.
+
+
+!!! hint "I want to create new SContainmentLink for non-existent role[^1]."
+Can be created through MetaAdapterFactory.
+
+
+[^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-) 

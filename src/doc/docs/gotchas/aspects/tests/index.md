@@ -8,11 +8,6 @@
     When running the tests from a run configuration, enable "Execute in the same process" in the configuration settings.
     Also check the box "Allow parallel run".
 
-!!! warning "Tests have a long warm up time and run slowly."
-
-    When running the tests from a run configuration, enable "Execute in the same process" in the configuration settings.
-    Also check the box "Allow parallel run".
-
 !!! warning "Tests are not running at all."
 
     A [test info node](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F5097124989038916362) has to

@@ -7,3 +7,7 @@
 !!! hint "I want to group my intentions and give them names."
 
     Use the language `com.mbeddr.mpsutil.intentions` from mps-extensions.
+
+!!! hint "I need to get all available intentions for a node."
+
+    Call `IntentionsManager.getInstance().getAvailableIntentions()`.

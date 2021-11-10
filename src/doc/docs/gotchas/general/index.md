@@ -7,17 +7,22 @@
 
     There might be a bug related to caching. Reopening a dialog or invalidating the cache or restarting the project might help.
 
-!!! warning "Are there any recommended MPS settings that should be changed?"
+!!! question "Are there any recommended MPS settings that should be changed?"
 
-    The Maximum Heap Size in Help->Change Memory settings should be changed to a higher values such as 6 or 8 GB when using many languages or plugins.
+    The Maximum Heap Size in Help->Change Memory settings should be changed to a higher values such as 8 GB when using many languages or plugins.
 
-!!! question "What is a SRepostory and how is it structured?"
+!!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?"
+
+    When you have enabled the Loaded models indicator in the lower right corner of the screen, you can click on the text to unload not needed models.
+    The memory indicator at the same location can be used to free memory. As a last resort the power saving mode can be enabled which disables background tasks such as the model checker.
+
+!!! question "What is a SRepository and how is it structured?"
     The answer can be found in the MPS source code[^1].There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
     There's no need in making ids unique globally as each subsystem knows, which exact repository it needs to use at any moment.
     (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )
     <p/>
     A repository contains modules, modules have model roots, each model root can load models.
-    Also module can be a models container itself (without model root).
+    Also a module can be a models container itself (without model root).
     A model is then a set of "root" nodes.
     Each "root" node is a root of a tree of nodes. So that overall, repository is a tree structure.
     <pre>

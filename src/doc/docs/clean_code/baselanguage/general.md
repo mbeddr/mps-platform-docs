@@ -1,12 +1,13 @@
 Information about general code smells can be found [here](https://refactoring.guru/refactoring/smells){target=_blank}.
 
+- Be aware of common [Java gotchas](https://stackoverflow.com/questions/169815/java-common-gotchas).
 - Avoid acronyms and abbreviations that may not be clear to others.
--  Methods and variables should be named after what they mean. Before giving a name, consider what is the responsibility of that piece of code.[^1]
+- Methods and variables should be named after what they mean. Before giving a name, consider what is the responsibility of that piece of code.[^1]
 - Return empty collections instead of returning null elements ([reference](http://www.javapractices.com/topic/TopicAction.do?Id=59)). It saves the efforts needed for testing on null elements.
 - Efficiency: Use StringBuilder or StringBuffer for String concatenation
 - Refactor your code [regularly](https://refactoring.guru/refactoring), especially when your classes or methods become too big.[^2]^,^[^3].
 - Remember to check parameters of public methods for illegal values. These methods shouldn't crash because of a NullPointer.
-- Order class members by scope from private to public.[^4]^,^[^5]
+- Order class members by scope from private to public[^4]^,^[^5] (the reserve order is also fine )
 - Minimize the accessibility of class members. It enforces [information hiding or encapsulation](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#PrivateMembers).
 - Avoid hardcoded values.
 - Use lazy initialization if performance is [critical](http://www.javapractices.com/topic/TopicAction.do?Id=34) or use [caching](https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/) if necessary.
