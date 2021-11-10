@@ -22,7 +22,7 @@
 
 !!! question "How to get rid of the small little extra grid lines on the outside of the table rows?"
 
-    Change these properties to `!java true`. ![Set Properties to true](/img/table_lines_properties.png)
+    Change these properties to `true`. ![Set Properties to true](/img/table_lines_properties.png)
 
 ## de.itemis.mps.editor.celllayout
 
