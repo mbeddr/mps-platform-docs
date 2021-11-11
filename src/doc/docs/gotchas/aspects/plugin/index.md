@@ -30,7 +30,7 @@
 
 
 !!! hint "I want to create new SContainmentLink for non-existent role[^1]."
-Can be created through MetaAdapterFactory.
+    It can be created through MetaAdapterFactory.
 
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-) 

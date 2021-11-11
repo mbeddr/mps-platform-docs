@@ -14,12 +14,12 @@ Information about general code smells can be found [here](https://refactoring.gu
 
 # Utility and Helper classes
 - Utility class = only static methods and stateless. Don't create an instance of such a class.
-- Helper class = can be a utility class or it can be stateful or require an instance be created. It can be any class whose design is to aid another class.
+- Helper class = can be a utility class, or it can be stateful or require an instance be created. It can be any class whose design is to aid another class.
 - Try to make the name of the utility or helper class more specific (e.g. ``AdministrationHelper``, ``LoginHelper`` instead of ``Helper``).
 
 # Additional tips
 - If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult [this](http://www.javapractices.com/topic/TopicAction.do?Id=274) page.
-- If you want to use newer Java feature, have a look at [this](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
+- If you want to use newer Java features, have a look at [this](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
 - Have a look at common sources of [complexity](http://www.javapractices.com/topic/TopicAction.do?Id=287).
 
 [^1]:[Naming 101: Programmer’s Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)

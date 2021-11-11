@@ -8,9 +8,9 @@
 
 ## de.itemis.mps.editor.diagram
 
-!!! info "I encountered a bug. Is it a known bug?"
+!!! warning "I encountered a bug."
 
-    Have you checked the [Meta Issue](https://github.com/JetBrains/MPS-extensions/issues/120) of the language?
+    Check the [Meta Issue](https://github.com/JetBrains/MPS-extensions/issues/120) on Github.
 
 ## de.slisson.mps.conditionalEditor
 

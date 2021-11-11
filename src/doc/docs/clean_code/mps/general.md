@@ -4,7 +4,7 @@ Before reading this document, __read the [mbeddr Development Guide](https://gith
 It describes how git is used in the mbeddr project for contributing changes, and it also provides some general guidelines ([commit messages](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#commit-messages), [branches](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#branches), [merging](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#merging), [test organization](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#test-organization) etc.).
 
 ## Readability/Maintainability
-- Use enhanced for loops instead of for loops with counter:
+- Use enhanced for loops instead of for loops with counters:
   `#!java for(type variable:iterable)` and `#!java foreach variable in iterable`
 - Mark classes/concepts etc. as deprecated when they shouldn't be used: 
 [DeprecatedNodeAnnotation](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590292%28jetbrains.mps.lang.structure.structure%29%2F1224240836180)

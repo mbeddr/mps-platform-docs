@@ -10,7 +10,7 @@
 
     Yes it is. More info in [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479).
 
-!!! warning "The editor shows type system errors in the inspectors that shouldn't be there."
+!!! warning "The editor shows type system errors in the inspector that shouldn't be there anymore."
 
     Known bug. Pressing F5 helps.
 
@@ -29,7 +29,7 @@
 
     Call `NavigationSupport.getInstance().openNode()`.
 
-!!! hint "I want to set editor hints"
+!!! hint "I want to set editor hints."
 
     Call `editorContext.getEditorComponent().getUpdater().addExplicitEditorHintsForNode()`.
 
@@ -45,7 +45,7 @@
 
     Use the language `de.slisson.mps.conditionalEditor` from mps-extensions.
 
-!!! hint "I want to get the Editor font."
+!!! hint "I want to get the font of editor."
 Use `jetbrains.mps.nodeEditor.EditorSettings#getDefaultEditorFont()`
 
 !!! hint "I want to subscribe to editor changes."

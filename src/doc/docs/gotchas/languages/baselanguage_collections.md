@@ -6,7 +6,7 @@
 
     Use the copy constructor: `#!java new arraylist<string>(copy: yourArrayList)`
 
-!!! question "How do I convert base language collections to a Java Stream"
+!!! question "How do I convert base language collections to a Java Stream?"
 
     First convert your collection to a list that you downcast to a Java List.
     Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`

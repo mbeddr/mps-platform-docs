@@ -1,9 +1,7 @@
 !!! question  "What languages are old/deprecated and should better not be used?"
 
     TODO: HELP
-
-    The following languages were found:
-    
+ 
     - com.mbeddr.mpsutil.breadcrumb (removed in a revent version of mbeddr)
     - com.mbeddr.mpsutil.coverage.emma
     - com.mbeddr.mpsutik.userstyles

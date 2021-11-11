@@ -3,13 +3,13 @@
     Try invalidating the cache and restarting MPS. Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
     Ask a question on [Slack](http://slack-mps.jetbrains.com).
 
-!!! warning "I changed something in a model, in a settings page and nothing changed"
+!!! warning "I changed something in a settings page and nothing changed."
 
-    There might be a bug related to caching. Reopening a dialog or invalidating the cache or restarting the project might help.
+    There might be a bug related to caching. Reopening the dialog or invalidating the cache or restarting the project might help.
 
 !!! question "Are there any recommended MPS settings that should be changed?"
 
-    The Maximum Heap Size in Help->Change Memory settings should be changed to a higher values such as 8 GB when using many languages or plugins.
+    The Maximum Heap Size in Help->Change Memory setting should be changed to a higher values such as 8 GB when using many languages or plugins.
 
 !!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?"
 

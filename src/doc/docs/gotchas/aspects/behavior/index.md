@@ -17,11 +17,11 @@
 
     No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-27720).
 
-!!! question  "Can I use variable arguments (varArgs) in Behaviour methods?"
+!!! question  "Can I use variable arguments (varArgs) in behaviour methods?"
 
     No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-31056).
 
-!!! question  "Can I enter a throws clause in Behaviour methods?"
+!!! question  "Can I enter a throws clause in behaviour methods?"
 
     No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-22306).
 

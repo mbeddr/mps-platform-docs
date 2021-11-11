@@ -2,7 +2,7 @@
 
     It can't be used in nested structures. Use it at the top level instead.
 
-!!! warning "How can I enter more the one statement into the console?"
+!!! question "How can I enter more the one statement into the console?"
 
     Enter an opening curly brace (starts a new statement list in baselanguage) and enter your statements.
 
@@ -35,7 +35,7 @@
     plan into the console that disables some generators? Did you import a solution that doesn't has the Java Facet checked
     or has a different solution kind such as "Other"?
 
-!!! warning "What does the expression #internalMode do?"
+!!! question "What does the expression #internalMode do?"
 
     It tells you if the internal mode is activated which can be achieved by calling [RuntimeFlags.setInternalMode(true)](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags)
     or by setting a system variable. The exact functionality of this flag can be found by lookiing at the [MPS source code](https://github.com/JetBrains/MPS/search?q=isInternalMode&type=code).
