@@ -5,7 +5,7 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
 !!! warning "Paste as Java class doesn't work."
 
     Not all newer Java features can be pasted such as the double colon operator(::) and static imports. Loops with more
-    than one variable also doesn't work.
+    than one variable also don't work.
 
 !!! warning "Set 'Export' flag at the moduleX import"
 
@@ -17,12 +17,12 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
 
     The following features are not supported (yet):
 
-    - [Local classes](https://www.baeldung.com/java-nested-classes)
+    - [local classes](https://www.baeldung.com/java-nested-classes)
     - [multiline strings/text blocks](https://www.baeldung.com/java-multiline-string)
-    - [Records](https://www.baeldung.com/java-record-keyword)
-    - [Sealed classes](https://www.baeldung.com/java-sealed-classes-interfaces)
-    - [Pattern matching for switch statements](https://docs.oracle.com/en/java/javase/17/language/pattern-matching-switch-expressions-and-statements.html)
-    - [Pattern matching for instanceof](https://www.baeldung.com/java-pattern-matching-instanceof)
+    - [records](https://www.baeldung.com/java-record-keyword)
+    - [sealed classes](https://www.baeldung.com/java-sealed-classes-interfaces)
+    - [pattern matching for switch statements](https://docs.oracle.com/en/java/javase/17/language/pattern-matching-switch-expressions-and-statements.html)
+    - [pattern matching for instanceof](https://www.baeldung.com/java-pattern-matching-instanceof)
     - [double brace initialization](https://www.geeksforgeeks.org/double-brace-initialization-java)
 
 
@@ -35,7 +35,7 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
 
 !!! warning "TextGen not found for concept of X language."
 
-    Bug. Wrong generator order of languages. The generators of language x are executed first and then the generator of
+    Bug (can't find ticket). Wrong generator order of languages. The generators of language x are executed first and then the generator of
     the var variable. It should be the other way around. You can specify a custom generation plan to fix this issue.
 
 ## Closures (jetbrains.mps.baselanguage.closures)

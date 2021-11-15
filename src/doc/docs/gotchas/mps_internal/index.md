@@ -31,3 +31,9 @@
 !!! question "How does class loading work in MPS?"
     See [this comment](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F9026887257679817888),
     [Dependencies and Classpath in MPS](https://github.com/mbeddr/mbeddr.core/wiki/MPS:-Deps-and-Classpath) and [classloading issues](https://github.com/mbeddr/mbeddr.core/wiki/Misc-Topics#classloading-issues).
+
+!!! question "Is there a way to start two instances of MPS, each with its own cache/state?"
+
+    You can create a copy of you MPS installation and edit the idea.properties file in the bin directory. 
+    Changing idea.system.path should allows you start a second instance with dedicated caches/state. 
+    If you don’t want to share any configuration also update idea.config.path.

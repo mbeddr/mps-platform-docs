@@ -1,6 +1,6 @@
 !!! warning "I have a problem that is not in this list."
 
-    Try invalidating the cache and restarting MPS. Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
+    Try [invalidating the cache](https://www.jetbrains.com/help/mps/invalidate-caches.html) and restarting MPS (same menu). Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
     Ask a question on [Slack](http://slack-mps.jetbrains.com).
 
 !!! warning "I changed something in a settings page and nothing changed."
@@ -9,12 +9,12 @@
 
 !!! question "Are there any recommended MPS settings that should be changed?"
 
-    The Maximum Heap Size in Help->Change Memory setting should be changed to a higher values such as 8 GB when using many languages or plugins.
+    The [Maximum Heap Size](https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options) in Help->Change Memory setting should be changed to a higher values such as 8 GB when using many languages or plugins.
 
 !!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?"
 
-    When you have enabled the Loaded models indicator in the lower right corner of the screen, you can click on the text to unload not needed models.
-    The memory indicator at the same location can be used to free memory. As a last resort the power saving mode can be enabled which disables background tasks such as the model checker.
+    When you have enabled the Loaded models indicator in the lower right corner of the screen, you can click on the text to [unload not needed models](https://confluence.jetbrains.com/display/MPS/What%27s+New+in+2019.3#What'sNewin2019.3-Modelunloading).
+    The memory indicator at the same location can be used to free memory. As a last resort the [power saving mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons) can be enabled which disables background tasks such as the model checker.
 
 !!! question "What is a SRepository and how is it structured?"
     The answer can be found in the MPS source code[^1].There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
@@ -53,6 +53,6 @@
 
 !!! question "Where are my log messages?"
 
-    `log info` logs to the MPS log file (idea.log), `message info` logs to the messages view.
+    `log info` logs to the MPS log file ([idea.log](https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files)), `message info` logs to the [messages view](https://www.jetbrains.com/help/mps/messages-tool-window.html).
 
 [^1]: [SRepository.java](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24)

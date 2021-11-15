@@ -2,9 +2,9 @@
 
     TODO: HELP
  
-    - com.mbeddr.mpsutil.breadcrumb (removed in a revent version of mbeddr)
-    - com.mbeddr.mpsutil.coverage.emma
-    - com.mbeddr.mpsutik.userstyles
+    - `com.mbeddr.mpsutil.breadcrumb` (removed in a recent version of mbeddr)
+    - `com.mbeddr.mpsutil.coverage.emma`
+    - `com.mbeddr.mpsutik.userstyles`
 
 !!! question  "Why are there two Context Action tools?"
     
@@ -13,5 +13,5 @@
 
 !!! question  "Why are some of these language not migrated to mps-extensions?"
 
-    Some language have dependencies that would also need to be migrated to mps-extensions. Other languages
+    Some language have dependencies that would also need to be migrated to [mps-extensions](https://jetbrains.github.io/MPS-extensions/). Other languages
     are deemed as not stable or important enough to be migrated.

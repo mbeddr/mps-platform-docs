@@ -6,4 +6,4 @@
 
 !!! question "Can I also generate text from the generator aspect?"
 
-    Yes. Use the language `com.dslfoundry.plaintextgen` from mps-extensions.
+    Yes. Use the language `com.dslfoundry.plaintextgen` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).

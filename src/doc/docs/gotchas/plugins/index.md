@@ -2,9 +2,9 @@
 
     The main platform is MPS itself, or a custom IDE based on MPS (so called RCP).
 
-!!! question "Are MPS language often used as plugins in Intellij IDEs instead of MPS itself?"
+!!! question "Are MPS language often used as plugins in Intellij IDEs instead of MPS itself? (an IntelliJ IDEA plugin, not custom RCP)"
 
-    No, this functionality is not used at all.
+    No, this functionality is not used very often.
 
 !!! question "How can I find plugins on the JetBrains Marketplace that are usable in MPS?"
 

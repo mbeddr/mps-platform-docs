@@ -10,7 +10,7 @@
 
 !!! question  "Can I access the parent in the constructor?"
 
-    No, it doesn't work because the node is not attached yet. Use for example a [node factory](https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation) to
+    No, it doesn't work because the node is not attached yet ([documentation](https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors)). Use for example a [node factory](https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation) to
     access the parent instead.
 
 !!! question  "Can I use a more specific return type while overriding behavior?"

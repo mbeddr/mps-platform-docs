@@ -20,7 +20,7 @@
 
 !!! hint "I want to copy the output to another location"
 
-    Use the @CopyOutcome annotation.
+    Use the [@CopyOutcome](http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F12232831069847415239) annotation.
 
 !!! hint "I want to generate latex files."
 
@@ -32,7 +32,7 @@
 
 !!! hint "I want to generate text."
 
-    Use the textgen aspect or use mps-plaintextgen from mps-extensions.
+    Use the textgen aspect or use [mps-plaintextgen](https://dslfoundry.com/plaintextgen-tutorial/) from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
 
 !!! hint "I need a temporary model."
 

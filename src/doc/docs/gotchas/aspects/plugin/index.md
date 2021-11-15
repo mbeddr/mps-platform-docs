@@ -1,6 +1,6 @@
 !!! question "Should I use this aspect?"
 
-    No. You should use plugin solutions instead.
+    No. You should use [plugin solutions](https://www.jetbrains.com/help/mps/plugin.html) instead.
 
 !!! warning "References to keys in action context parameters are out of search scope."
 
@@ -14,23 +14,23 @@
     All of the action context parameters that are marked as required have to be available and the isApplicable block must
     return true for an action to be visible. For debugging purposes you can set "always visible" to true to check if your
     action is registered at all. You also need to have a standalone descriptor in your model for it to work. Additionaly,
-    the solution kind should be set to Other in the Java tab of the solution properties.
+    the solution kind should be set to Other in the Java tab of the solution properties ([official documentation](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups)).
 
 !!! hint "I want to merge models."
 
-    Use the language `de.itemis.mps.modelmerger` (experimental) from mps-extensions.
+    Use the language `de.itemis.mps.modelmerger` (experimental) from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
 
 !!! hint "I want to check the structure of a node."
 
-    Use the language `de.slisson.mps.structurecheck` from mps-extensions.
+    Use the language `de.slisson.mps.structurecheck` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
 
-!!! hint "I want to store different states/versions of a node inside of the model."
+!!! hint "I want to store different states/versions of a node inside the model."
 
-    Use the language `de.itemis.mps.nodeversioning` from mps-extensions.
+    Use the language `de.itemis.mps.nodeversioning` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
 
 
 !!! hint "I want to create new SContainmentLink for non-existent role[^1]."
-    It can be created through MetaAdapterFactory.
+    It can be created through [MetaAdapterFactory](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.adapter.structure%28MPS.Core%2F%29%2F%7EMetaAdapterFactory).
 
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-) 

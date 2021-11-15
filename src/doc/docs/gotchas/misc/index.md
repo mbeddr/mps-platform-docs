@@ -1,6 +1,7 @@
 # MPS in the web
 !!! info "I want to know about existing projects regarding MPS in the web."
-Have a look at [Deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options) and [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
+
+    Have a look at [Deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
 
 # Internationalization and localization
 

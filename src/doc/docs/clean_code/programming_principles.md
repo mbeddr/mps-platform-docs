@@ -10,4 +10,4 @@ These are some general programming principles taken from [this article](https://
 - **Single responsibility** — Every class or module in a program should only concern itself with providing one bit of specific functionality.
 - **Fail fast, fail hard** — The fail-fast principle stands for stopping the current operation as soon as any unexpected error occurs. Adhering to this principle generally results in a more stable solution
 
-General Java design patterns can be found [here](https://refactoring.guru/design-patterns/catalog).
+General Java design patterns can be found [here](https://refactoring.guru/design-patterns/catalog) (very nice illustrations).

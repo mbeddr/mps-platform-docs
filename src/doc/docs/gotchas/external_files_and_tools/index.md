@@ -1,6 +1,6 @@
 # External files
 
-!!! info "I want to load an external file into mps/ I want to migrate existing data into MPS.[^1]"
+!!! info "I want to load an external file into MPS / I want to migrate existing data into MPS.[^1]"
 
     Write a solution that imports the files and converts them to your model or use custom persistence.
 
@@ -17,7 +17,7 @@
 
     Not possible at the moment.
 
-!!! info "I want to share mps snippets."
+!!! info "I want to share MPS snippets."
 
     You can use [Skadi Cloud](https://blog.logv.ws/2021/10/19/skadi-cloud-gist-2/).
 
