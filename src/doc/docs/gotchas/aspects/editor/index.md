@@ -45,7 +45,7 @@
 
     Use the language `de.slisson.mps.conditionalEditor` from mps-extensions.
 
-!!! hint "I want to get the font of editor."
+!!! hint "I want to get the font of an editor."
 
     Use `jetbrains.mps.nodeEditor.EditorSettings#getDefaultEditorFont()`
 
@@ -56,5 +56,21 @@
 !!! hint "I need to get the text of an EditorCell programmatically."
 
     Call `EditorCell.renderText().getText()`.
+
+!!! question "How can find out if an editor cell is readonly?"
+
+    Execute `ReadOnlyUtil.isCellsReadOnlyInEditor(this.editorComponent, new singleton<EditorCell>(editorCell))`.
+
+!!! question "How do I get an editor for a node as a swing component?"
+
+    ```
+    HeadlessEditorComponent component = new HeadlessEditorComponent(#project.getRepository()); 
+    component.editNode(node);
+    return component;
+    ```
+
+!!! question "How to I get the selection/ selected node in the editor."
+
+    Call `editorComponent.getSelectionManager().getSelection() / editorContext.getSelectedNode()`.
 
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

@@ -37,3 +37,46 @@
     You can create a copy of you MPS installation and edit the idea.properties file in the bin directory. 
     Changing idea.system.path should allows you start a second instance with dedicated caches/state. 
     If you don’t want to share any configuration also update idea.config.path.
+
+!!! question "How do I get an icon for a concept?"
+
+    Call `GlobalIconManager.getInstance().getIconFor(concept)`.
+
+!!! question "Where can I find builtin icons?"
+
+    IntelliJ IDEA icons are declared in the class [AllIcons](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons).
+    MPS icons are declared in the class [MPSIcons](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons).
+
+!!! info "I have settings that I want to save globally[^1]."
+
+    Preferences can be only used at the project level. Use the workaround described in [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects)
+    or save your values in the global IntelliJ IDEA [Registry](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry).
+    More information about the Registry can be found in [this Stack Overflow post](https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry).
+    It can also be shown programmatically by calling `new RegistryUi().show()`.
+
+!!! question "How can I call make or rebuild?"
+    
+    Use need to use [MakeActionImpl](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237). Example usuages
+    can be found in the same model.
+
+!!! question "How do I work with temporary models?"
+    
+    
+    ```
+    try { 
+    undo-transparent command with this.mpsProject.getRepository() {
+    tmpModel = TemporaryModels.getInstance().createReadOnly(TempModuleOptions.forDefaultModule());
+    tmpModel.addRootNode(type);
+    TemporaryModels.getInstance().addMissingImports(tmpModel);
+    }
+    // do something with the node
+    } finally {
+        undo-transparent command with this.mpsProject.getRepository() {
+            tmpModel.removeRootNode(type);
+            TemporaryModels.getInstance().dispose(tmpModel);
+        }
+    }
+    ```
+
+
+[^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects
