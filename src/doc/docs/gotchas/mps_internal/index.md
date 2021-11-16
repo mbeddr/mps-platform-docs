@@ -24,6 +24,7 @@
     - [NewModuleUtil](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904ab%28jetbrains.mps.ide.newSolutionDialog%29%2F5890305283801268194) - utilities related to created new modules such as creating solutions or languages
     - [TemporaryModels](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.tempmodel%28MPS.Core%2F%29%2F%7ETemporaryModels) - utilities for creating temporary models
     - [UIUtil](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.util.ui%28MPS.IDEA%2F%29%2F%7EUIUtil) - utilities related to the Intellij UI such as checking for dark mode (isUnderDarcula()).
+    - [PathManager](http://127.0.0.1:63320/node?ref=r%3A067fd2c9-d009-4506-91db-a69992d65964%28jetbrains.mps.tool.common%29%2F4774692914340655529)/[PathManager](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.application%28MPS.IDEA%2F%29%2F%7EPathManager) - classes for getting all kind of paths such as the plugins folder or the log folder.
 
 !!! warning "I want to change something inside a SModule such as adding a dependency but can't find the right method."
     Try casting it to [AbstractModule](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EAbstractModule) first.
@@ -78,5 +79,13 @@
     }
     ```
 
+!!! question "How to I add widgets to the status bar? (memory indicator, save transient models...)"
+
+    Have a look at [this answer](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120). 
+    Make sure to call this code from a [project plugin](https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)).
+
+!!! question "How to I display a message in the status bar? (left bottom corner)"
+    Note: The message might not be visible by calling from the console, because the rebuild of the model already shows a message:
+    `WindowManager.getInstance().getStatusBar(ProjectHelper.toIdeaProject(#project))`
 
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects
