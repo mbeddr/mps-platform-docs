@@ -55,4 +55,8 @@
 
     `log info` logs to the MPS log file ([idea.log](https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files)), `message info` logs to the [messages view](https://www.jetbrains.com/help/mps/messages-tool-window.html).
 
+!!! question "Which log level should I use?"
+
+    Have a look at [this Stack Overflow answer](https://stackoverflow.com/a/2031209).
+
 [^1]: [SRepository.java](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24)
