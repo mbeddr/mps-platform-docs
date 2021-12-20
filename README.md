@@ -2,10 +2,14 @@
 
 This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS. 
 Only general problems or questions that can be easily explained are listed here. This document doesn't describe how to achieve
-specific tasks in detail. The linked issues should be common issues that can be easily reproduced.
-In the last sections some ideas on how to write clean code in MPS are also introduced.
+specific tasks in detail.
+The last sections introduce some ideas on how to write clean code in MPS.
 
-[Go to alexanderpann.github.io/mps-gotchas](https://alexanderpann.github.io/mps-gotchas/)
+![build status](https://img.shields.io/github/workflow/status/alexanderpann/mps-gotchas/Build%20documentation)
+![license](https://img.shields.io/github/license/alexanderpann/mps-gotchas)
+![last commit](https://img.shields.io/github/last-commit/alexanderpann/mps-gotchas)
+
+**Website:** [mps-gotchas](https://alexanderpann.github.io/mps-gotchas/)
 
 <img width="1377" alt="Screenshot 2021-11-16 at 19 04 36" src="https://user-images.githubusercontent.com/88385944/142040832-4605e08b-fd3c-4c38-964b-366ed9db3d17.png">
 
@@ -25,12 +29,7 @@ In the last sections some ideas on how to write clean code in MPS are also intro
 - [Clean code (Base Language)](https://alexanderpann.github.io/mps-gotchas/clean_code/baselanguage/java_style_guide/)
 
 ## Local execution
-Run
-```
-gradle mkdocsServe
-```
-Build:
-```
-gradle mkdocsBuild
-```
+Run: `gradle mkdocsServe`
+
+Build: `gradle mkdocsBuild`
 
