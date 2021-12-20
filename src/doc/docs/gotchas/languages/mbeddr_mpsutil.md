@@ -25,3 +25,17 @@
 
     Some language have dependencies that would also need to be migrated to [mps-extensions](https://jetbrains.github.io/MPS-extensions/). Other languages
     are deemed as not stable or important enough to be migrated.
+
+!!! warning "I am using some mbeddr languages in my project but some of them are not deployed."
+
+    There might be some additional plugins that need to be installed:
+    
+    - de.itemis.mps.nativelibs.loader
+    - com.mbeddr.mpsutil.actionsfilter
+    - mbeddr.spawner
+
+    They can be installed by calling `gradlew.bat install "-PMPS_Installation=<path to MPS>"`
+    from the root folder of the mbeddr.core repository when building from source. The actionsfilter plugin
+    is necessary for the actionsfilter language.
+
+
