@@ -98,7 +98,7 @@ nav:
       - Base Language: gotchas/languages/baselanguage.md
       - Collections Language: gotchas/languages/baselanguage_collections.md
       - MPS Extensions: gotchas/languages/mps_extensions.md
-      - Mbeddr (mpsutil): gotchas/languages/mbeddr_mpsutil.md
+      - Mbeddr: gotchas/languages/mbeddr_mpsutil.md
       - Misc: gotchas/languages/index.md
   - Console: gotchas/console/index.md
   - Plugins: gotchas/plugins/index.md
