@@ -6,7 +6,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'ru.vyarus:gradle-mkdocs-plugin:2.1.1'
+        classpath 'ru.vyarus:gradle-mkdocs-plugin:2.2.0'
     }
 }
+
 apply plugin: 'ru.vyarus.mkdocs'
+
+mkdocs.publish.docPath = '1.0'
