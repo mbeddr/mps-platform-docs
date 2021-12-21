@@ -8,16 +8,7 @@
 
 !!! question "How can I find all System.out.println statements?"
 
-    ``` Java
-    #show #instances<scope = project>(ExpressionStatement).where({~node =>
-    node<ClassConcept> System = nodeRef@75295;
-    node<InstanceMethodDeclaration> println = nodeRef@50206;
-    node.expression.isInstanceOf(DotExpression) && node.expression:DotExpression.operand.isInstanceOf(StaticFieldReference)
-    && node.expression:DotExpression.operand:StaticFieldReference.classifier :eq: System &&
-    node.expression:DotExpression.operation.isInstanceOf(InstanceMethodCallOperation) &&
-    node.expression:DotExpression.operation:InstanceMethodCallOperation.instanceMethodDeclaration :eq: println;
-    })
-    ```
+    [![find print statements](../../img/find_print_statement.png)](https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc)
 
 !!! question "#nodes,#models, #usages etc. don't show any result. What did I do wrong"
     Make sure that your query is correct. You also have to set I scope for these statements in square brackets such as
