@@ -20,8 +20,5 @@ jobs:
         with:
           python-version: "3.8"
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          CONFIG_FILE: src/doc/mkdocs.yml
+      - name: Build with Gradle
+        run: ./gradlew mkdocsPublish
