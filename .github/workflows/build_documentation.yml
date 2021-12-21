@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
+      - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
+        with:
+          SSHKEY: ${{ secrets.SSH_KEY_PRIVATE }} # ----- BEGIN RSA PRIVATE KEY----- ...
+      - run: ssh -T git@github.com || true
+
       - uses: actions/checkout@v2
 
       - name: Set up Python
