@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
+
       - uses: actions/checkout@v2
 
       - name: Set up Python
