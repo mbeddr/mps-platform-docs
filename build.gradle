@@ -13,3 +13,5 @@ buildscript {
 apply plugin: 'ru.vyarus.mkdocs'
 
 mkdocs.publish.docPath = '1.0'
+
+python.pip 'mkdocs-git-revision-date-localized-plugin:0.11.1'

@@ -29,6 +29,9 @@ extra_css:
 #  - search
 #    Required for variables support (https://github.com/rosscdh/mkdocs-markdownextradata-plugin)
 #  - markdownextradata
+plugins:
+  - search
+  - git-revision-date-localized
 
 #extra:
 #  palette:
