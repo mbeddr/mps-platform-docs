@@ -60,6 +60,7 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.snippets
@@ -123,3 +124,4 @@ nav:
     - General: clean_code/baselanguage/general.md
   - Reference:
     - Icons: reference/icons.md
+    - Exceptions: reference/exceptions.md
