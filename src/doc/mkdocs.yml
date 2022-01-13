@@ -112,7 +112,9 @@ nav:
   - Plugins: gotchas/plugins/index.md
   - Build: gotchas/build/index.md
   - External Files and Tools: gotchas/external_files_and_tools/index.md
-  - Internal MPS: gotchas/mps_internal/index.md
+  - Internal MPS:
+      - General: gotchas/mps_internal/index.md
+      - GUI: gotchas/mps_internal/gui.md
   - Miscellaneous: gotchas/misc/index.md
   - General programming principles: clean_code/programming_principles.md
   - Deprecation: clean_code/deprecation.md
