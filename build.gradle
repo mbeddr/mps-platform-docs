@@ -1,18 +1,13 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath 'ru.vyarus:gradle-mkdocs-plugin:2.2.0'
-    }
+plugins {
+    id 'ru.vyarus.mkdocs' version '2.2.0'
 }
 
-apply plugin: 'ru.vyarus.mkdocs'
+wrapper {
+    gradleVersion = '6.9'
+}
 
 mkdocs.publish.docPath = '1.0'
 mkdocs.strict = false
 
 python.pip 'mkdocs-git-revision-date-localized-plugin:0.11.1'
+python.pip 'mkdocs-kroki-plugin:0.2.0'
