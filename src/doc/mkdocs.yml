@@ -7,7 +7,7 @@ site_url: https://alexanderpann.github.io/mps-gotchas
 
 # Repository (add link to repository on each page)
 repo_name: mps-gotchas
-repo_url: http://github.com/alexanderpann/mps-gotchas
+repo_url: https://github.com/alexanderpann/mps-gotchas
 edit_uri: edit/main/src/doc/docs/
 
 # Copyright (shown at the footer)
@@ -32,6 +32,7 @@ extra_css:
 plugins:
   - search
   - git-revision-date-localized
+  - kroki
 
 #extra:
 #  palette:
@@ -127,3 +128,5 @@ nav:
   - Reference:
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
+    - Actions: reference/actions.md
+    - Diagrams: reference/diagrams.md
