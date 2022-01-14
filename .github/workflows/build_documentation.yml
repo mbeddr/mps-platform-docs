@@ -11,13 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
-
     steps:
-      - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
-        with:
-          SSHKEY: ${{ secrets.SSH_KEY_PRIVATE }} # ----- BEGIN RSA PRIVATE KEY----- ...
-      - run: ssh -T git@github.com || true
-
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -26,6 +20,14 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.KEY }}
+          known_hosts: |
+            |1|8lWcwvLPhEtnTSizMx0d5UUNYC0=|Alh4AroxQB+J8NEPc3h8pJpc0pI= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
+            |1|top6r/hT6ING6N4c3QFIwasTojI=|DEWKT8Q/3R7mL+8rvqND1z6NEQs= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
 
       - name: Build with Gradle
         run: ./gradlew mkdocsPublish
