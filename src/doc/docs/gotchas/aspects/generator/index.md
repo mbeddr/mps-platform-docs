@@ -55,6 +55,10 @@
 
     Call `myModule.getModuleDescriptor() as SolutionDescriptor.getOutputPath()`
 
+!!! warning "no output location for X"
+
+    Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old MPS project.
+
 [^1]:[MPS forum - i want export multi language from mps](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)
 [^3]:[MPS forum - Generator error: uncaught exception ?no classifier?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260-Generator-error-uncaught-exception-no-classifier-)
