@@ -11,7 +11,7 @@ repo_url: https://github.com/alexanderpann/mps-gotchas
 edit_uri: edit/main/src/doc/docs/
 
 # Copyright (shown at the footer)
-copyright: 'Copyright &copy; 2021 Alexander Pann'
+copyright: 'Copyright &copy; 2022 Alexander Pann'
 
 # Material theme
 theme:
@@ -20,6 +20,7 @@ theme:
     - navigation.top
     - navigation.instant
     - header.autohide
+    - content.code.annotate
   custom_dir: overrides
 
 extra_css:
@@ -108,6 +109,7 @@ nav:
       - Collections Language: gotchas/languages/baselanguage_collections.md
       - MPS Extensions: gotchas/languages/mps_extensions.md
       - Mbeddr: gotchas/languages/mbeddr_mpsutil.md
+      - Double dispatch: gotchas/languages/double_dispatch.md
       - Misc: gotchas/languages/index.md
   - Console: gotchas/console/index.md
   - Plugins: gotchas/plugins/index.md
