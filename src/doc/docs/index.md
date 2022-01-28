@@ -5,4 +5,9 @@ In the last sections some ideas on how to write clean code in MPS are also intro
 
 !!! quote "Quote"
     "6 hours of debugging can save you 5 minutes of reading documentation." -- A Twitter user
-    
+
+Navigation: 
+
+- ++n++ ext
+- ++p++ previous
+- ++s++ earch

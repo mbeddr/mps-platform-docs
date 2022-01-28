@@ -16,12 +16,24 @@ copyright: 'Copyright &copy; 2022 Alexander Pann'
 # Material theme
 theme:
   name: 'material'
+  palette:
+    - primary: light green
+    - accent: indigo
+
   features:
     - navigation.top
     - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
     - header.autohide
     - content.code.annotate
+    - toc.integrate
+
   custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.png
 
 extra_css:
   - stylesheets/extra.css
@@ -34,11 +46,6 @@ plugins:
   - search
   - git-revision-date-localized
   - kroki
-
-#extra:
-#  palette:
-#    primary: 'indigo'
-#    accent: 'indigo'
 
 #  social:
 #    - icon: fontawesome/brands/github
