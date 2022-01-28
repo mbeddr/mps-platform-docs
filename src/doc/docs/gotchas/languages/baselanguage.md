@@ -1,4 +1,5 @@
-## Base Language (jetbrains.mps.baselanguage)
+## Base Language
+Language: <u>jetbrains.mps.baselanguage</u>
 
 For a full list of baselanguage bugs and feature request, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
 
@@ -31,15 +32,32 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
     places where implicit returns are not support such as when return a new ListScope class. Make sure to add a return
     statement in such places.
 
-## Var Variable (jetbrains.mps.baselanguage.varVariable)
+## Var Variable
+Language: <u>jetbrains.mps.baselanguage.varVariable</u>
 
 !!! warning "TextGen not found for concept of X language."
 
     Bug (can't find ticket). Wrong generator order of languages. The generators of language x are executed first and then the generator of
     the var variable. It should be the other way around. You can specify a custom generation plan to fix this issue.
 
-## Closures (jetbrains.mps.baselanguage.closures)
+## Closures
+Language: <u>jetbrains.mps.baselanguage.closures</u>
 
 !!! warning "Exception when passing closure literal as a parameter in a behaviour method call"
 
-    Closures can't be used for functional interface types such as `java.util.Runnable` in behaviour methods (see [this ticket](https://youtrack.jetbrains.com/issue/MPS-31866)) 
+    Closures can't be used for functional interface types such as `java.util.Runnable` in behaviour methods (see [this ticket](https://youtrack.jetbrains.com/issue/MPS-31866))
+
+## Collections
+
+!!! question "How do I create a sequence with one element?"
+
+    Use the singleton constructor: `#!java new singleton<string>("single")`
+
+!!! question "How do convert from a Java ArrayList to a Base Language list?"
+
+    Use the copy constructor: `#!java new arraylist<string>(copy: yourArrayList)`
+
+!!! question "How do I convert base language collections to a Java Stream?"
+
+    First convert your collection to a list that you downcast to a Java List.
+    Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`

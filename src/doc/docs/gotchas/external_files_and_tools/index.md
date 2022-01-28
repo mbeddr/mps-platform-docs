@@ -1,10 +1,10 @@
-# External files
+## Files
 
 !!! info "I want to load an external file into MPS / I want to migrate existing data into MPS.[^1]"
 
     Write a solution that imports the files and converts them to your model or use custom persistence.
 
-## External tools
+## Tools
 
 !!! info "I want to run an LSP server for MPS grammars."
     Not possible at the moment.

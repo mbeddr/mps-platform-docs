@@ -85,8 +85,14 @@ markdown_extensions:
           - overrides/.icons
   - attr_list
 nav:
-  - Home: index.md
-  - General: gotchas/general/index.md
+  - Home:
+    - Welcome: index.md
+    - General: gotchas/general/index.md
+    - Plugins: gotchas/plugins/index.md
+    - External Files and Tools: gotchas/external_files_and_tools/index.md
+    - Console: gotchas/console/index.md
+    - Build: gotchas/build/index.md
+    - Miscellaneous: gotchas/misc/index.md
   - Aspects:
     - Structure: gotchas/aspects/structure/index.md
     - Editor: gotchas/aspects/editor/index.md
@@ -106,34 +112,29 @@ nav:
     - Find Usages: gotchas/aspects/findUsages/index.md
     - VCS: gotchas/aspects/vcs/index.md
     - Scripts: gotchas/aspects/scripts/index.md
-    - Listener*: gotchas/aspects/listener/index.md
-    - Documentation*: gotchas/aspects/documentation/index.md
-    - Polyfun*: gotchas/aspects/polyfun/index.md
-    - Virtual Interfaces*: gotchas/aspects/virtualinterfaces/index.md
-    - Transformations*: gotchas/aspects/transformations/index.md
+    - Contributed Aspects:
+      - Listener*: gotchas/aspects/listener/index.md
+      - Documentation*: gotchas/aspects/documentation/index.md
+      - Polyfun*: gotchas/aspects/polyfun/index.md
+      - Virtual Interfaces*: gotchas/aspects/virtualinterfaces/index.md
+      - Transformations*: gotchas/aspects/transformations/index.md
   - Languages:
-      - Base Language: gotchas/languages/baselanguage.md
-      - Collections Language: gotchas/languages/baselanguage_collections.md
+      - Info: gotchas/languages/index.md
+      - Base Language and Extensions: gotchas/languages/baselanguage.md
       - MPS Extensions: gotchas/languages/mps_extensions.md
       - Mbeddr: gotchas/languages/mbeddr_mpsutil.md
       - Double dispatch: gotchas/languages/double_dispatch.md
-      - Misc: gotchas/languages/index.md
-  - Console: gotchas/console/index.md
-  - Plugins: gotchas/plugins/index.md
-  - Build: gotchas/build/index.md
-  - External Files and Tools: gotchas/external_files_and_tools/index.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
-  - Miscellaneous: gotchas/misc/index.md
-  - General programming principles: clean_code/programming_principles.md
-  - Deprecation: clean_code/deprecation.md
-  - Clean code (MPS):
-    - General: clean_code/mps/general.md
-    - Miscellaneous: clean_code/mps/misc.md
-  - Clean code (Base Language):
-    - Java Style Guide: clean_code/baselanguage/java_style_guide.md
-    - General: clean_code/baselanguage/general.md
+  - Clean code:
+      - General: clean_code/mps/general.md
+      - Miscellaneous: clean_code/mps/misc.md
+      - Deprecation: clean_code/deprecation.md
+      - Base language:
+        - General: clean_code/baselanguage/general.md
+        - Programming principles: clean_code/programming_principles.md
+        - Java Style Guide: clean_code/baselanguage/java_style_guide.md
   - Reference:
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
