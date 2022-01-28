@@ -30,10 +30,15 @@ theme:
     - header.autohide
     - content.code.annotate
     - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
 
   custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/github
 
 extra_css:
   - stylesheets/extra.css
