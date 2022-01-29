@@ -10,4 +10,4 @@ mkdocs.publish.docPath = '1.0'
 mkdocs.strict = false
 
 python.pip 'mkdocs-git-revision-date-localized-plugin:0.11.1'
-python.pip 'mkdocs-kroki-plugin:0.2.0'
+python.pip 'mkdocs-kroki-plugin:0.2.1'

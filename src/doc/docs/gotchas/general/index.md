@@ -18,22 +18,31 @@
     The answer can be found in the MPS source code[^1].There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
     There's no need in making ids unique globally as each subsystem knows, which exact repository it needs to use at any moment.
     (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )
-    <p/>
+
     A repository contains modules, modules have model roots, each model root can load models.
     Also a module can be a models container itself (without model root).
     A model is then a set of "root" nodes.
     Each "root" node is a root of a tree of nodes. So that overall, repository is a tree structure.
-    <pre>
-     repository
-     -module1
-            model root 1
-                model1
-                  root_node_1
-                    child_node_1
-                      child_node_1_1
-                    child_node2
-            model root 2
 
+    ```kroki-mermaid
+    %%{init: {'theme':'base'}}%%
+    graph LR;
+    REP[(repository)]
+    MOD1[[module 1]]
+    MOD2[[module 2]]
+    MODN[[module n]]
+
+    REP --> MOD1;
+    REP --> MOD2;
+    REP --> MODN;
+    MOD2 --> MR1[\model root 1\];
+    MR2 --> MD1{{model 1}};
+    MD1 --> RN1(root node 1);
+    MD1 --> RN2(root node 2);
+    MD1 --> RNN(root node n);
+    MOD2 --> MR2[\model root 2\];
+    MOD2 --> MRN[\mmodel root n\];
+    ``` 
 
 !!! question "Are there othere languages besides Base Language?"
     Have a look at the [MPS Languages Repository](https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository?_ga=2.190406190.441906427.1635067376-1212584208.1633605628).
