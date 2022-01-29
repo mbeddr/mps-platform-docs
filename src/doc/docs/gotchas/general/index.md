@@ -1,6 +1,6 @@
 !!! warning "I have a problem that is not in this list."
 
-    Try [invalidating the cache](https://www.jetbrains.com/help/mps/invalidate-caches.html) and restarting MPS (same menu). Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
+    Try <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/invalidate-caches.html">invalidating the cache<span><img src="../../img/invalidate_cache.gif" alt="invalidate cache" /></span></a></span> and restarting MPS (same menu). Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
     Ask a question on [Slack](http://slack-mps.jetbrains.com).
 
 !!! warning "I changed something in a settings page and nothing changed."
@@ -8,13 +8,11 @@
     There might be a bug related to caching. Reopening the dialog or invalidating the cache or restarting the project might help.
 
 !!! question "Are there any recommended MPS settings that should be changed?"
+    The <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options">maximum heap size<span><img src="../../img/maximum_heap_size.gif" alt="maximum heap size" /></span></a></span> setting should be changed to a higher values such as 8 GB when using many languages or plugins.
 
-    The [Maximum Heap Size](https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options) in Help->Change Memory setting should be changed to a higher values such as 8 GB when using many languages or plugins.
-
-!!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?"
-
-    When you have enabled the Loaded models indicator in the lower right corner of the screen, you can click on the text to [unload not needed models](https://confluence.jetbrains.com/display/MPS/What%27s+New+in+2019.3#What'sNewin2019.3-Modelunloading).
-    The memory indicator at the same location can be used to free memory. As a last resort the [power saving mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons) can be enabled which disables background tasks such as the model checker.
+!!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?" 
+    When you have enabled the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons">loaded models indicator<span><img src="../../img/memory_indicator.gif" alt="memory indicator" /></span></a></span> in the lower right corner of the screen, you can click on the text to [unload not needed models](https://confluence.jetbrains.com/display/MPS/What%27s+New+in+2019.3#What'sNewin2019.3-Modelunloading).
+    The memory indicator at the same location can be used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><img src="../../img/power_saving_mode.gif" alt="power saving mode" /></span></a></span> can be enabled which disables background tasks such as the model checker.
 
 !!! question "What is a SRepository and how is it structured?"
     The answer can be found in the MPS source code[^1].There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
@@ -52,8 +50,7 @@
     Have a look at [this blog post](https://dslfoundry.com/how-to-debug-in-mps/).
 
 !!! question "Where are my log messages?"
-
-    `log info` logs to the MPS log file ([idea.log](https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files)), `message info` logs to the [messages view](https://www.jetbrains.com/help/mps/messages-tool-window.html).
+    `log info` logs to the MPS log file <span class="hover_img"><a href="https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files">idea.log<span><img src="../../img/show_log.gif" alt="show log" /></span></a></span>, `message info` logs to the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/messages-tool-window.html">messages view<span><img src="../../img/messages_view.png" alt="messages view" /></span></a></span>.
 
 !!! question "Which log level should I use?"
 
