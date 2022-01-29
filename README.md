@@ -1,9 +1,8 @@
 # mps-gotchas
 
 This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS. 
-Only general problems or questions that can be easily explained are listed here. This document doesn't describe how to achieve
-specific tasks in detail.
-The last sections introduce some ideas on how to write clean code in MPS.
+It is mainly written in the form of a QA. If you have any suggestions, please write a comment at the bottom of the page or
+open an issue on Github.
 
 ![build status](https://img.shields.io/github/workflow/status/alexanderpann/mps-gotchas/Build%20documentation)
 ![license](https://img.shields.io/github/license/alexanderpann/mps-gotchas)
