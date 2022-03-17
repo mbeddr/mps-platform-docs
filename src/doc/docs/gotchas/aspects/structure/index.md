@@ -1,6 +1,14 @@
 !!! question  "How do I use a list of string properties?"
 
-    Wrap your property into a new concept and use a child collection (myString: MyString[0..n])
+    Wrap your property into a new concept and use a child collection
+
+    ```kroki-plantuml
+    @startuml
+    class Concept {
+    myString: MyString [0..n]
+    }
+    @enduml
+    ```
 
 !!! question  "Can properties be overridden?"
 
@@ -8,6 +16,6 @@
 
 !!! warning  "I implemented `ISuppressErrors` but errors are still shown for my node."
 
-    You have to implement `IDontApplyTypesystemRules`and `ISkipConstraintsChecking`. More information can be found
+    You have to implement [IDontApplyTypesystemRules](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422) and [ISkipConstraintsChecking](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091). More information can be found
     in the [official documentation](https://www.jetbrains.com/help/mps/2020.1/suppressing-errors.html).
 

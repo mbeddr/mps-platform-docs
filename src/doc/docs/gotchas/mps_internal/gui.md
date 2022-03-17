@@ -27,3 +27,13 @@
     Everything related to text files: [Documents](https://plugins.jetbrains.com/docs/intellij/documents.html),
     [PSI files](https://plugins.jetbrains.com/docs/intellij/psi-files.html), [Templates](https://plugins.jetbrains.com/docs/intellij/templates.html), QuickDoc,
     [IDE Features Trainer](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer), CodeSmellDetector and [Custom Language Support](https://plugins.jetbrains.com/docs/intellij/custom-language-support.html).
+
+!!! question "How do I add an action to the menu bar of a tool window?"
+
+    Example:
+    ```Java
+    ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(ToolWindowId.PROJECT_VIEW);
+    if (window != null) {
+        window.setTitleActions(titleActions);
+    }
+    ```

@@ -1,3 +1,7 @@
+!!! question "What is Helgins?"
+
+    It's the old name of the typesystem. The name is nowadays is not used anymore.
+
 !!! warning  "Typesystem rules are not executing."
 
     Turn off the [power save mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode). Also make sure that the languages that contains the rules is used. Make sure that under Tool->
@@ -7,3 +11,10 @@
 !!! question  "Are comparison rules often used?"
 
     No, they are rarely used (not many results across various code bases).
+
+!!! question "How to I learn more about MPS CodeRules?"
+
+    This is kind of a new typesystem bases on constraints. Visit the [Github page](https://github.com/JetBrains/mps-coderules)
+    for more information. There is also a [blog post](https://specificlanguages.com/posts/2022-01/13-coderules-entering-exiting/)
+    about this project. The new MPS implementation of the Kotlin language uses CodeRules. More information can be found on the
+    [Github page](https://github.com/JetBrains/mps-kotlin-typesystem).

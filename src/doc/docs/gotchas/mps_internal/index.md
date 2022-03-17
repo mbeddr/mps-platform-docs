@@ -88,4 +88,18 @@
     Note: The message might not be visible by calling from the console, because the rebuild of the model already shows a message:
     `WindowManager.getInstance().getStatusBar(ProjectHelper.toIdeaProject(#project))`
 
+!!! question "How can I register an IntelliJ extension?"
+
+    Find the interface you want to add an extension on [this page](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html).
+    The corresponding interface has a static field `EP_NAME`. If the interface is implemented in Kotlin it might have a static field `Companion` with a `getEP_NAME()` method. Extend this interface (EX) and register it through the extension point.
+    Example: `Interface.EP_NAME.getPoint().registerExtension(new Ex())`
+
+!!! question "How can I add a status bar widget?"
+
+    Implement the interface `StatusBarWidgetFactory` and register it through the StatusBarWidgetFactory.EP_NAME extension point.
+
+!!! question "How can I react to selection changes in the editor?"
+
+    editorContext.getSelectionManager().addSelectionListener(new SingularSelectionListenerAdapter() { ... })
+
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

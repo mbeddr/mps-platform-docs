@@ -44,7 +44,7 @@
     MOD2 --> MRN[\mmodel root n\];
     ``` 
 
-!!! question "Are there othere languages besides Base Language?"
+!!! question "Are there other languages besides Base Language?"
     Have a look at the [MPS Languages Repository](https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository?_ga=2.190406190.441906427.1635067376-1212584208.1633605628).
 
 !!! question "Is there an existing expression/scripting language?"

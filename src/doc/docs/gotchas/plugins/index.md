@@ -10,4 +10,10 @@
 
     Searching for the word [MPS](https://plugins.jetbrains.com/search?products=mps&search=MPS) in all categories should do the trick.
 
+!!! question "Why do many IntelliJ plugins don't work with MPS?"
+
+    Many of these plugins are working in combination with the text editor. MPS uses custom editors. It doesn't use
+    documents and the [Program Structure Interface(PSI)](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
+    Using plugins that are not developed for MPS can interfere with certain features of MPS (e.g. find usages isn't working anymore).
+
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
