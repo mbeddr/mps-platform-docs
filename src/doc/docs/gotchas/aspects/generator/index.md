@@ -18,7 +18,7 @@
 
     The solution that contains the class has to be added as a runtime solution (see [here](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000))
 
-!!! hint "I want to copy the output to another location"
+!!! hint "I want to copy the output to another location."
 
     Use the [@CopyOutcome](http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F12232831069847415239) annotation.
 
@@ -55,7 +55,7 @@
 
     Call `myModule.getModuleDescriptor() as SolutionDescriptor.getOutputPath()`
 
-!!! warning "no output location for X"
+!!! warning "no output location for X."
 
     Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old MPS project.
 
@@ -76,6 +76,16 @@
         - mapping configuration: CreateRootRuleContext **_context**
     - Editor:
         - General: SNode **myNode**
+
+!!! question "How do I debug generators?"
+    Specific Languages Blog &mdash; [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){target=_blank}
+
+!!! question "How does MPS collect generators to engage on a model?"
+    Specific Languages Blog &mdash; [How MPS collects generators to engage on a model](https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/){target=_blank}
+
+!!! question "How do I generate language X from MPS?"
+    Specific Languages Blog &mdash; [How do I generate language X from MPS?](https://specificlanguages.com/posts/how-do-i-generate-language-x-from-mps/){target=_blank}
+
 
 [^1]:[MPS forum - i want export multi language from mps](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)

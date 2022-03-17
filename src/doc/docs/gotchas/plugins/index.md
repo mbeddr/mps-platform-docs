@@ -16,4 +16,13 @@
     documents and the [Program Structure Interface(PSI)](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
     Using plugins that are not developed for MPS can interfere with certain features of MPS (e.g. find usages isn't working anymore).
 
+!!! warning "My plugin is incompatible with the current RCP version."
+    Specific Languages Blog &mdash; [Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/){target=_blank}
+
+!!! question "Are there any general purpose plugins for MPS from the community?"
+    Have a look at the [plugin section](https://mps.rocks/#awesome-MPS) of [mps.rocks](https://mps.rocks).
+
+!!! question "Which kinds of plugins are there?"
+    Specific Languages Blog &mdash; [Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/){target=_blank}
+
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)

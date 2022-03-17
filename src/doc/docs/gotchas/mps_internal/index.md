@@ -1,5 +1,8 @@
 # CoreComponent
 
+!!! question "How to I start using MPS' Open API?"
+    Specific Languages Blog &mdash; [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/){target=_blank}
+
 !!! question "How to I get MPS core components from code?"
 
     From the console:
@@ -101,5 +104,21 @@
 !!! question "How can I react to selection changes in the editor?"
 
     editorContext.getSelectionManager().addSelectionListener(new SingularSelectionListenerAdapter() { ... })
+
+!!! question "How to I add model imports and used languages programmatically?"
+    Specific Languages Blog &mdash; [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/){target=_blank}
+
+!!! question "How do I run MPS code from the command line/CI?"
+    - Specific Languages Blog &mdash; [Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/){target=_blank}
+    - Specific Languages Blog &mdash; [Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/){target=_blank}
+
+!!! question "How can I render a node as text?"
+    Specific Languages Blog &mdash; [Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/){target=_blank}
+
+!!! question "How can I associate additional information with a node?"
+    Specific Languages Blog &mdash; [Associating additional information with a node](https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/){target=_blank}
+
+!!! question "How does shrinking of absolute paths work?"
+    Specific Languages Blog &mdash; [Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/){target=_blank}
 
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

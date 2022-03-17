@@ -12,6 +12,8 @@
 - When asynchronous code freezes (e.g. on console:), try to call it with [ApplicationManager.getApplication().invokeLater(runnable)](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.application%28MPS.IDEA%2F%29%2F%7EApplication.invokeLater%2528java.lang.Runnable%2529).
 - Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that have a name. The name property can be automatically used as the name for root nodes, references etc.
 - Avoid deeply nested call chains e.g. nodea.nodeb.nodec.property. Consider providing a method do access a property or method for the deeper levels.
+- [Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/){target=_blank} (Specific Languages Blog)
+- [Warnings should not replace documentation](https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/){target=_blank} (Specific Languages Blog)
 
 [^1]:[Treat Warnings As Errors](https://blog.submain.com/treat-warnings-errors/)
 [^2]:[Choosing the right Collection](http://www.javapractices.com/topic/TopicAction.do?Id=65)

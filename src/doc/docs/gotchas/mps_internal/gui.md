@@ -37,3 +37,15 @@
         window.setTitleActions(titleActions);
     }
     ```
+
+!!! question "How can I have clickable icons in the left editor margin?"
+    Specific Languages Blog &mdash; [Clickable icons in the left editor margin](https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/){target=_blank}
+
+!!! question "Are there alternatives to message boxes?"
+    Specific Languages Blog &mdash; [Use notification balloons instead of message boxes](https://specificlanguages.com/posts/notification-balloons-instead-of-message-boxes/){target=_blank}
+
+!!! question "What IDEA UI elements are available?"
+    Specific Languages Blog &mdash; [Polished UI for free: IDEA UI components](https://specificlanguages.com/posts/2022-02/09-idea-ui-components/){target=_blank}
+
+!!! question "How do I create menu items with checkboxes?"
+    Specific Languages Blog &mdash; [Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/){target=_blank}

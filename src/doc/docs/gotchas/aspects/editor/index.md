@@ -6,6 +6,10 @@
 
     Use `com.mbeddr.mpsutil.hyperlink` from [mbeddr platform](http://mbeddr.com/platform.html).
 
+!!! question "How do I create clickable links?"
+    - Specific Languages Blog &mdash; [Creating clickable URL links in the editor](https://specificlanguages.com/posts/basic-editors/clickable-url-links/){target=_blank}
+    - Specific Languages Blog &mdash; [More clickable URL links](https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/){target=_blank}
+
 !!! question "Is it possible to access the selected value of one swing component from inside another swing component?"
 
     Yes it is. More info in [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479).
@@ -24,6 +28,9 @@
 !!! hint "I want to open the inspector programmatically."
 
     Call `editorContext.openInspector()`.
+    - Specific Languages Blog &mdash; [Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/){target=_blank}
+    - Specific Languages Blog &mdash; [Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/){target=_blank}
+    - Specific Languages Blog &mdash; [Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/){target=_blank}
 
 !!! hint "I want to open the editor for a node programmatically."
 
@@ -72,5 +79,20 @@
 !!! question "How to I get the selection/ selected node in the editor."
 
     Call `editorComponent.getSelectionManager().getSelection() / editorContext.getSelectedNode()`.
+
+!!! question "How do I use empty text for empty cells?"
+    Specific Languages Blog &mdash; [Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/){target=_blank}
+
+!!! question "How to get the current MPS project from within the editor?"
+    Specific Languages Blog &mdash; [How to get the current MPS project from within the editor](https://specificlanguages.com/posts/how-to-get-current-project-from-editor/){target=_blank}
+
+!!! question "How do I find all open editors?"
+    Specific Languages Blog &mdash; [Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/){target=_blank}
+
+!!! warning "The property value is invalid."
+    Specific Languages Blog &mdash; [Invalid property values](https://specificlanguages.com/posts/2022-02/22-invalid-property-values/){target=_blank}
+
+!!! question "What happens when I press F5 in the editor?"
+    Specific Languages Blog &mdash; [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/){target=_blank}
 
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

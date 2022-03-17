@@ -1,3 +1,14 @@
+!!! question "How do I write an importer?"
+
+    - Specific Languages Blog &mdash; [Writing an importer: Introduction](https://specificlanguages.com/posts/2022-01/06-writing-an-importer-introduction/){target=_blank}
+    - Specific Languages Blog &mdash; [Writing an importer: Adding the action to a menu](https://specificlanguages.com/posts/2022-01/14-writing-an-importer-adding-action-to-menu/){target=_blank}
+    - Specific Languages Blog &mdash; [Writing an importer: Invoking from the editor](https://specificlanguages.com/posts/2022-01/18-writing-an-importer-invoking-from-editor/){target=_blank}
+    - Specific Languages Blog &mdash; [Writing an importer: Error handling considerations](https://specificlanguages.com/posts/2022-01/25-writing-an-importer-error-handling-considerations/){target=_blank}
+    - Specific Languages Blog &mdash; [Writing an importer: Updating existing nodes](https://specificlanguages.com/posts/2022-02/14-writing-an-importer-updating-existing-nodes/){target=_blank}
+
+!!! question "Where do I put my JARs?"
+Specific Languages Blog &mdash; [Where do I put my JARs?](https://specificlanguages.com/posts/2022-03/04-where-do-i-put-my-jars/){target=_blank}
+
 ## Files
 
 !!! info "I want to load an external file into MPS / I want to migrate existing data into MPS.[^1]"
@@ -14,7 +25,8 @@
 
 !!! info "I want to use databases in MPS."
 
-    MPS doesn't have any special support for databases or for example Spring Boot  (unlike IntelliJ IDEA) .
+    - MPS doesn't have any special support for databases or for example Spring Boot  (unlike IntelliJ IDEA) .
+    - Specific Languages Blog &mdash; [MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/){target=_blank}
 
 !!! info "I want to create a standalone utility (not a complete IDE) for language generation with MPS.[^2]"
 
@@ -55,6 +67,9 @@
 !!! info "I want to run MPS in the browser."
 
     You can try [Skadi Cloud](https://skadi.cloud/).
+
+!!! question "How do I correctly run git clean?"
+    Specific Languages Blog &mdash; [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/){target=_blank}
 
 [^1]:[MPS forum - How to migrate existing data into MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010855700-How-to-migrate-existing-data-into-MPS-)
 [^2]:[MPS forum - Standalone language generator](https://mps-support.jetbrains.com/hc/en-us/community/posts/360006153579-Standalone-language-generator)

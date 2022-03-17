@@ -2,6 +2,9 @@
 !!! info "I want to know about existing projects regarding MPS in the web."
 
     Have a look at [Deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
+    
+    - Specific Languages Blog &mdash; [Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/){target=_blank}
+    - Specific Languages Blog &mdash; [MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/){target=_blank}
 
 # Internationalization and localization
 

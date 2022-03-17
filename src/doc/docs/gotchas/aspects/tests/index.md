@@ -14,3 +14,9 @@
     be added to the model of the tests, so that the tests can find the path of the project. The project path also has to be set
     in this node. Make sure that variables that are used in this path are set in Preferences->Appearance&Behavior->Path Variables.
     ([official documentation](https://www.jetbrains.com/help/mps/testing-languages.html#testinfo))
+
+!!! question "How do I create a TestInfo node for my tests?"
+    Specific Languages Blog &mdash; [How to create a TestInfo node for your tests](https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/){target=_blank}
+
+!!! warning "How do node tests work?"
+    Specific Languages Blog &mdash; [How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/){target=_blank}

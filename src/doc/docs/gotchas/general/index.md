@@ -1,3 +1,6 @@
+!!! question "Who is MPS for?"
+    Specific Languages Blog &mdash; [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/){target=_blank}
+
 !!! warning "I have a problem that is not in this list."
 
     Try <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/invalidate-caches.html">invalidating the cache<span><img src="../../img/invalidate_cache.gif" alt="invalidate cache" /></span></a></span> and restarting MPS (same menu). Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
@@ -13,6 +16,9 @@
 !!! warning "I am running low on memory or MPS is running slowly. What can I do without restarting MPS?" 
     When you have enabled the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons">loaded models indicator<span><img src="../../img/memory_indicator.gif" alt="memory indicator" /></span></a></span> in the lower right corner of the screen, you can click on the text to [unload not needed models](https://confluence.jetbrains.com/display/MPS/What%27s+New+in+2019.3#What'sNewin2019.3-Modelunloading).
     The memory indicator at the same location can be used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><img src="../../img/power_saving_mode.gif" alt="power saving mode" /></span></a></span> can be enabled which disables background tasks such as the model checker.
+
+!!! questions "What is the difference between a module and a model?"
+    Specific Languages Blog &mdash; [Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/){target=_blank}
 
 !!! question "What is a SRepository and how is it structured?"
     The answer can be found in the MPS source code[^1].There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
@@ -64,5 +70,13 @@
 !!! question "Which log level should I use?"
 
     Have a look at [this Stack Overflow answer](https://stackoverflow.com/a/2031209).
+
+!!! question "How to I export data from MPS?"
+    - Specific Languages Blog &mdash; [The simplest way to export your data from MPS](https://specificlanguages.com/posts/simplest-export-from-mps/){target=_blank}
+    - Specific Languages Blog &mdash; [Good and bad ways of exporting DSL models](https://specificlanguages.com/posts/good-and-bad-ways-of-exporting-dsl-models/){target=_blank}
+    - Specific Languages Blog &mdash; [Translation vs export](https://specificlanguages.com/posts/translation-vs-export/){target=_blank}
+
+!!! question "Why is my project suddenly read-only?"
+    Specific Languages Blog &mdash; [Why is my project suddenly read-only?](https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/){target=_blank}
 
 [^1]: [SRepository.java](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24)

@@ -60,3 +60,13 @@ Language: <u>de.itemis.mps.grammarcells</u>
 
     - optional and constant
     - optional and reference
+
+!!! question "How can enter enumerations easier?"
+    Specific Languages Blog &mdash; [Entering enumerations easier with grammar cells](https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/){target=_blank}
+
+# Querylist
+Language: <u>com.mbeddr.mpsutil.editor.querylist</u>
+
+!!! question "How do I fold collections returned by a querylist?"
+
+    Surround the querylist with a vertical collection and and set the cell layout of the querylist (not its content) to vertical.
