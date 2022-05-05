@@ -53,7 +53,8 @@
 
 !!! hint "I need to get the output path for a solution."
 
-    Call `myModule.getModuleDescriptor() as SolutionDescriptor.getOutputPath()`
+    - To get an `IFile` call `SModelOperations.getOutputLocation(model)`.
+    - To get an string call `ProjectPathUtil.getGeneratorOutputPath(module.getModuleDescriptor())`. You have to first cast the module to an `AbstractModule.`
 
 !!! warning "no output location for X."
 

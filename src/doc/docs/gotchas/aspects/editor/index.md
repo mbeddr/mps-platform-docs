@@ -76,6 +76,16 @@
     return component;
     ```
 
+!!! question "How do I get a Project instance for an ActionEvent?"
+    ```
+    button.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+        Project mpsProject = UiUtils.getMpsProjectFromActionEvent(e);
+        }
+    }
+    ```
+
+
 !!! question "How to I get the selection/ selected node in the editor."
 
     Call `editorComponent.getSelectionManager().getSelection() / editorContext.getSelectedNode()`.
