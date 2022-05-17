@@ -27,3 +27,9 @@
 
 !!! question "How do I find examples of MPS concepts?"
     Specific Languages Blog &mdash; [Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/){target=_blank}
+
+!!! question "How do I get the previous label of a reference?"
+    `((SReference)node.getReference(link)).getResolveInfo()` or `node.reference<ref>.resolveInfo`.
+
+!!! question "Can I use the resolve info to fix a broken reference?"
+    `ResolverComponent.getInstance().resolve`.
