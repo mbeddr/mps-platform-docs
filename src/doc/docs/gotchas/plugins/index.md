@@ -25,4 +25,8 @@
 !!! question "Which kinds of plugins are there?"
     Specific Languages Blog &mdash; [Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/){target=_blank}
 
+!!! question "How do I disable notifications for fatal errors?"
+
+    Add `idea.fatal.error.notification=disabled` to idea.properties.
+
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
