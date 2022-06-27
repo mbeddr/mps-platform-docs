@@ -10,4 +10,9 @@
     of this language in your project with an terxt editor and change the attribute version to 7. Then run the migration assistant again and hope that everything
     works. Some concepts cannot be migrated automatically such as the substitute and transformation menues. There will also be other issues that have to be fixed manually.
 
+!!! hint "I want to replace a node A with another node B where A and B share the same super concept."
+
+    Use the class [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346). This class can be use to set/unset property or replace nodes with other ones.
+    Example: `RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentConfigRef/)`
+
 [^1]:[MPS forum - Migration scripts best practice](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810-Migration-scripts-best-practic)

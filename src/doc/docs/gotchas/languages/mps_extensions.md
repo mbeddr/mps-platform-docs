@@ -3,7 +3,7 @@
 ## Richtext
 Language: <u>slisson.richtext</u>
 
-!!! warning "The ordering of text and IWords can't be arbitrary"
+!!! warning "The ordering of text and IWords can't be arbitrary,"
 
     A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.
 

@@ -139,9 +139,11 @@ nav:
   - Continuous Integration (CI):
       - CI: ci/index.md
       - Build: ci/build.md
+      - Gradle: ci/gradle.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
+      - IntelliJ SDK: gotchas/mps_internal/intellij_sdk.md
   - Clean code:
       - General: clean_code/mps/general.md
       - Miscellaneous: clean_code/mps/misc.md
@@ -154,6 +156,13 @@ nav:
     - Trouble Shooting Guide: reference/trouble_shooting_guide.md
     - Dependencies and Classpath: reference/deps_and_classpath.md
     - Classloaders: reference/classloaders.md
+    - Debugging: reference/debugging.md
+    - Design Patterns: reference/design_patterns.md
+    - Platform specific:
+        - Window: reference/platforms/windows.md
+        - Mac: reference/platforms/mac.md
+        - Linux: reference/platforms/linux.md
+    - Git: reference/git.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md

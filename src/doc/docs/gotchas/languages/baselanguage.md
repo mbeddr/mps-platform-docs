@@ -61,3 +61,14 @@ Language: <u>jetbrains.mps.baselanguage.closures</u>
 
     First convert your collection to a list that you downcast to a Java List.
     Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`
+
+## CheckedDots
+Language: <u>jetbrains.mps.baselanguage.checkeddots</u>
+
+- avoid NullPointerExceptions when a method call on a variable happens, which is null e.g. `myObject.?toString()` will not throw a NullPointerException, if `myObject` is null.
+- **bold** methods or dot-expression are null safe (by hand-shake), e.g. `new arraylist<string>()`.**where**`({~it => })`
+
+## Access
+Language: <u>jetbrains.mps.lang.access</u>
+
+- [official documentation](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage)

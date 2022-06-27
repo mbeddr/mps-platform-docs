@@ -39,4 +39,22 @@
 
     Use the class [ModelImportHelper](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.project%28MPS.Platform%2F%29%2F%7EModelImportHelper) and call [addImport](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.project%28MPS.Platform%2F%29%2F%7EModelImportHelper.addImport%2528org.jetbrains.mps.openapi.model.SModel%2529).
 
+!!! question "How do facets work?"
+
+    <img src="../../../img/facets.png" alt="facets" />
+
+    Red rectangles: marker facets
+    
+    - do not define depdencies on other facets
+    - known to MPS Make Process and are available for user
+    - User can define where his/her own facet should fit in and decide if they require some facet.
+
+    Usage:
+
+    - Targets act as filters working on a stream of data delivered to them,
+    - The data flowing along targets is called *resources*.
+    - Resources are represented as Java tnterfaces and tuples,
+
+
+
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-) 

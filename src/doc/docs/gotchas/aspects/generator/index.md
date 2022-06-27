@@ -87,6 +87,35 @@
 !!! question "How do I generate language X from MPS?"
     Specific Languages Blog &mdash; [How do I generate language X from MPS?](https://specificlanguages.com/posts/how-do-i-generate-language-x-from-mps/){target=_blank}
 
+!!! question "How to ensure that a generator B can use output of a generator A?"
+
+    1. Define priorities or a fixed genplan for `B` (and maybe `A`)
+    2. If you can't run / don't want to run both generators in the same “phase”, configure them to run one after each other.
+
+    Solution **1**:
+
+    - Define a *MM (structure)* (INFO-NODE) in `A` where you accumulate all required information and pass for all other generators.
+    - Configure `A` to remove INFO-NODE if not required (separate mapping configuration).
+
+    Solution **2**:
+
+    - Define an annotation and store all req. infos there
+    - Configure `A` to drop annotation if not required (separate mapping configuration),
+
+    Solution **3**:
+
+    - Use user objects to store required information as part of the real AST nodes.
+    - User objects are “volatile” children/properties which are not persisted but survive several generation phases. Use `com.mbeddr.mpsutil.genutil` to achieve this.
+
+    Solution **4**:
+    
+    - Define a fixed genplan with checkpoints.
+    - Organize the whole generation process manually.
+
+!!! question "genplan (in devkit) vs. generator priorities?"
+
+    The genplan is applied instead of the generator priorities. If your generator should be applied in a model using a genplan, your generator has to be part of the genplan (somehow)
+    When developing a language, which is used within an aspect, e.g. typesystem, the MPS aspect's genplan can block the generator.
 
 [^1]:[MPS forum - i want export multi language from mps](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)

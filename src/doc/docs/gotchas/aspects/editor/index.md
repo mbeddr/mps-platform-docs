@@ -14,6 +14,23 @@
 
     Yes it is. More info in [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479).
 
+!!! hint "Explain the different menu related terms."
+
+- Menu definitions
+    - have two "flavours" named and default
+    - can be defined in transformation or substitute menus
+- Default menu
+    - Default substitution: will replace the default menu that MPS shows ++ctrl+space++ or ++cmd+space++
+    - Transformation menu: Define UI actions that will be shown in various locations
+        - In implementation the menu is defined as a list of sections.
+        - Each section contains a list of menu parts for a set of locations.
+        - At runtime the menu parts and locations are used to generate the content of the completion menu.
+        - The content of completion menu is called menu items.
+    - Parameterized action: allows to calculate a list of elements of a specific type to be shown  in the completion menu
+        - calculates all elements for the substitution menu
+        - has influence on the node creation
+        - defines the selection where the cursor should be placed
+        
 !!! warning "Highlighting of constraint errors in inspector doesn't work."
 
     Known bug ([ticket](https://youtrack.jetbrains.com/issue/MPS-32350)). Pressing F5 helps.
@@ -105,4 +122,15 @@
 !!! question "What happens when I press F5 in the editor?"
     Specific Languages Blog &mdash; [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/){target=_blank}
 
+!!! info "Explain all cell related variables."
+
+    A cell takes up a specific amount of space in the editor component(width and height).
+    
+    - padding-left/right/top/bottom  - a floating point number, which specifies the padding of a text cell, i.e. how much space will be between cell's text and cell's left and right sides, respectively.
+    - inset = representation of the borders of an element. It specifies the space that an element must leave at each of its edges.
+    - baseline = the line upon which most letters sit 
+    - ascent = The recommended distance above the baseline for singled spaced text.
+    - descent = The recommended distance below the baseline for singled spaced text.
+    - height = ascent + descent
+    - gap = space between cells in a collection. There is a left and right gap.
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)
