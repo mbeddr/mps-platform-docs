@@ -62,7 +62,7 @@
     Read the two answers in [this thread](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010373120-How-to-organize-large-projects-in-MPS-).
 
 !!! question "How to I debug MPS projects?"
-    Have a look at [this blog post](https://dslfoundry.com/how-to-debug-in-mps/).
+    Have a look at [this blog post](https://dslfoundry.com/how-to-debug-in-mps/) or [this guide](../../files/mps_debugging.pdf).
 
 !!! question "Where are my log messages?"
     `log info` logs to the MPS log file <span class="hover_img"><a href="https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files">idea.log<span><img src="../../img/show_log.gif" alt="show log" /></span></a></span>, `message info` logs to the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/messages-tool-window.html">messages view<span><img src="../../img/messages_view.png" alt="messages view" /></span></a></span>.

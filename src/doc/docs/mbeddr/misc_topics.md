@@ -87,11 +87,3 @@ try {
 ```
 
 This will prevent the exception but make sure to set the class loader back when you are finished. Also calling things written in MPS like behavior methods when the class loader is changes is like to not work and gives you all kind of strange exceptions.
-
-## How to Debug MPS with IntelliJ
-
-Tamas made a good video to set up IntelliJ for remote debugging of MPS on Mac (see here: https://www.youtube.com/watch?v=y3pFmlYDaXo). On Windows this is slightly different, because the VM Options cannot be passed using the `Info.plist` file. Instead, additional VM options should be set in the `mps.bat` script that can be found in the MPS installation directory. Just copy the first entry from the Run Configuration in IntelliJ to set the environment variable `ADDITIONAL_JVM_ARGS`, i.e.
-
-    set ADDITIONAL_JVM_ARGS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
-
-(line 39 in my case)
