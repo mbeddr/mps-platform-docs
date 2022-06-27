@@ -136,6 +136,9 @@ nav:
       - BigProject: mbeddr/big_project.md
       - Development Guide: mbeddr/development_guide.md
       - Miscellaneous topics: mbeddr/misc_topics.md
+  - Continuous Integration (CI):
+      - CI: ci/index.md
+      - Build: ci/build.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
