@@ -134,6 +134,7 @@ nav:
       - Double dispatch: gotchas/languages/double_dispatch.md
   - Mbeddr:
       - BigProject: mbeddr/big_project.md
+      - Development Guide: mbeddr/development_guide.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
