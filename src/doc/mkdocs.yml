@@ -135,6 +135,7 @@ nav:
   - Mbeddr:
       - BigProject: mbeddr/big_project.md
       - Development Guide: mbeddr/development_guide.md
+      - Miscellaneous topics: mbeddr/misc_topics.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
