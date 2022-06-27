@@ -150,6 +150,7 @@ nav:
   - Reference:
     - Trouble Shooting Guide: reference/trouble_shooting_guide.md
     - Dependencies and Classpath: reference/deps_and_classpath.md
+    - Classloaders: reference/classloaders.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
