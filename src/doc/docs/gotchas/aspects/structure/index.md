@@ -33,3 +33,6 @@
 
 !!! question "Can I use the resolve info to fix a broken reference?"
     `ResolverComponent.getInstance().resolve`.
+
+!!! question "How can I find broken references on the console?"
+    `#instances<scope = global>(BaseConcept).where({~it => it.references.any({~it => it.target == null; }); })`
