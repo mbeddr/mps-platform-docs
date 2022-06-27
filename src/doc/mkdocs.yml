@@ -148,6 +148,7 @@ nav:
         - Programming principles: clean_code/programming_principles.md
         - Java Style Guide: clean_code/baselanguage/java_style_guide.md
   - Reference:
+    - Dependencies and Classpath: reference/deps_and_classpath.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
