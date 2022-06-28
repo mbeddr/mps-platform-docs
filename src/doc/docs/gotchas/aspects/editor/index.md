@@ -53,9 +53,17 @@
 
     Call `NavigationSupport.getInstance().openNode()`.
 
-!!! hint "I want to set editor hints programmatically."
+!!! hint "How can I set editor hints?"
 
-    Call `editorContext.getEditorComponent().getUpdater().addExplicitEditorHintsForNode()`.
+    - push editor hint vs. EditorHintToggleAction and vs. initial editor hints
+        - you can set hints via editorContext.getEditorComponent().getUpdater()
+            - explicit hints for nodes
+            - initial hints globally ( --> behaves similar to "pushed" hints)
+        - via Right Click --> push Editor Hints and select a specific one.
+        - via an [com.mbeddr.mpsutil.refactoring.rt.util.EditorHintToggleAction](http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613) (e.g. in action declarations)
+            - They are not visible in the push Editor hints menu.
+            - If you need the same behavior e.g. in intentions, you can use code from there (via [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent))
+        - Explicit hints for nodes and hints via “EditorHintToggleAction”/ ”ConceptEditorHintSettingsComponent.HintsState” are not obvious
 
 !!! question "Is there a disadvantage by using the indent layout instead of the indent cell mode?"
 
