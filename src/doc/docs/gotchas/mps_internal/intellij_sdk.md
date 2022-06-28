@@ -1,5 +1,9 @@
 # IntelliJ SDK
 
+- [Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)
+- [Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)
+    - IDEA thread modeling (e.g. invokeLater), PSI, Virtual Files, Dynamic plugins, UI
+
 ## Listeners and Message Bus
 
 ### Message Bus (Message Interface)

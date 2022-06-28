@@ -1,5 +1,3 @@
-# CoreComponent
-
 !!! question "How to I start using MPS' Open API?"
     Specific Languages Blog &mdash; [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/){target=_blank}
 
