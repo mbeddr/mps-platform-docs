@@ -1,5 +1,5 @@
 ## Base Language
-Language: <u>jetbrains.mps.baselanguage</u>
+Language: ^^jetbrains.mps.baselanguage^^
 
 For a full list of baselanguage bugs and feature request, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
 
@@ -33,7 +33,7 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
     statement in such places.
 
 ## Var Variable
-Language: <u>jetbrains.mps.baselanguage.varVariable</u>
+Language: ^^jetbrains.mps.baselanguage.varVariable^^
 
 !!! warning "TextGen not found for concept of X language."
 
@@ -41,7 +41,7 @@ Language: <u>jetbrains.mps.baselanguage.varVariable</u>
     the var variable. It should be the other way around. You can specify a custom generation plan to fix this issue.
 
 ## Closures
-Language: <u>jetbrains.mps.baselanguage.closures</u>
+Language: ^^jetbrains.mps.baselanguage.closures^^
 
 !!! warning "Exception when passing closure literal as a parameter in a behaviour method call"
 
@@ -63,12 +63,30 @@ Language: <u>jetbrains.mps.baselanguage.closures</u>
     Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`
 
 ## CheckedDots
-Language: <u>jetbrains.mps.baselanguage.checkeddots</u>
+Language: ^^jetbrains.mps.baselanguage.checkeddots^^
 
 - avoid NullPointerExceptions when a method call on a variable happens, which is null e.g. `myObject.?toString()` will not throw a NullPointerException, if `myObject` is null.
 - **bold** methods or dot-expression are null safe (by hand-shake), e.g. `new arraylist<string>()`.**where**`({~it => })`
 
 ## Access
-Language: <u>jetbrains.mps.lang.access</u>
+Language: ^^jetbrains.mps.lang.access^^
 
 - [official documentation](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage)
+
+## Transactional property cells
+Language: ^^jetbrains.mps.lang.editor.structure^^
+
+- A regular property-cell (string, int, boolean) can be marked as transactional via an intention
+- The editor is updated, when the cursor leaves the cell (= commit).
+- The commit-handler must be defined in the inspector.
+    - benefit: the editor is not permanently updated on every key typed
+- useful for example if you set your text-color dynamically
+
+## Images
+Language: ^^jetbrains.mps.lang.editor.figures^^
+
+- Statically embed images into the editor.
+
+Example:
+
+<img src="../../../img/image_cell.png" alt="image cell" />

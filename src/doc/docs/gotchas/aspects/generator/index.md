@@ -61,7 +61,7 @@
     Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old MPS project.
 
 !!! question "Which variable names can't be used because of hidden variables in the generator?"
-    <u>Underlined</u> variables are special variables that are available.
+    ^^Underlined^^ variables are special variables that are available.
 
     - Console: ConsoleContext **context**, ConsoleStream **console**
     - Constraint:
@@ -71,7 +71,7 @@
         - comparison rule: SNode **node1**, SNode **node2**, 
         - inequation replacement rule
             - custom condition: SNode **subtype**, SNode **supertype**,
-            - rule: SNode **subtype**, **SNode supertype**, <u>EquationInfo **equationInfo**</u>, TypeCheckingContext **typeCheckingContext**, boolean **inequalityIsWeak**, boolean **inequalityIsLessThan**
+            - rule: SNode **subtype**, **SNode supertype**, ^^EquationInfo **equationInfo**^^, TypeCheckingContext **typeCheckingContext**, boolean **inequalityIsWeak**, boolean **inequalityIsLessThan**
         - substitute type rule: SNode **originalType**
     - Generator:
         - mapping configuration: CreateRootRuleContext **_context**
