@@ -143,6 +143,7 @@ nav:
       - Creating a command line tool: ci/command_line_tool.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
+      - Classloading: gotchas/mps_internal/classloading.md
       - GUI: gotchas/mps_internal/gui.md
       - IntelliJ SDK: gotchas/mps_internal/intellij_sdk.md
   - Clean code:
