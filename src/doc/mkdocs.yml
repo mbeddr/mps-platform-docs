@@ -160,7 +160,13 @@ nav:
         - Java Style Guide: clean_code/baselanguage/java_style_guide.md
   - Reference:
     - Trouble Shooting Guide: reference/trouble_shooting_guide.md
-    - Dependencies and Classpath: reference/deps_and_classpath.md
+    - Dependencies and Classpath:
+        - General: reference/deps_and_classpath.md
+        - Terminology and UI for Access: reference/terminology_and_ui_for_access.md
+        - Moduls: reference/modules.md
+        - Models: reference/models.md
+        - Dependencies: reference/dependencies.md
+        - Recipes: reference/recipes.md
     - Classloaders: reference/classloaders.md
     - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
