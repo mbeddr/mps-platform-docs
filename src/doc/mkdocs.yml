@@ -1,17 +1,17 @@
-site_name: mps-gotchas
+site_name: mps-platform-docs
 
 # Meta tags (placed in header)
-site_description: This website describes gotchas when working with MPS and gives some hints on how to write clean code in MPS.
-site_author: Alexander Pann
-site_url: https://alexanderpann.github.io/mps-gotchas
+site_description: This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS and common MPS platforms.
+site_author: itemis platform team
+site_url: https://mbeddr.github.io/mps-platform-docs
 
 # Repository (add link to repository on each page)
-repo_name: mps-gotchas
-repo_url: https://github.com/alexanderpann/mps-gotchas
+repo_name: mps-platform-docs
+repo_url: https://github.com/mbeddr/mps-platform-docs
 edit_uri: edit/main/src/doc/docs/
 
 # Copyright (shown at the footer)
-copyright: 'Copyright &copy; 2022 Alexander Pann'
+copyright: 'Copyright &copy; 2022 itemis platform team'
 
 # Material theme
 theme:
