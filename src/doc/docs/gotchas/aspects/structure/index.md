@@ -36,3 +36,8 @@
 
 !!! question "How can I find broken references on the console?"
     `#instances<scope = global>(BaseConcept).where({~it => it.references.any({~it => it.target == null; }); })`
+
+!!! question "How can I get the short node ID from the normal node ID and vice versa?"
+
+    - Short one: `new IdEncoder().toText(node.getNodeId())`
+    - Long one: `ew IdEncoder().parseNodeId(nodeId)`
