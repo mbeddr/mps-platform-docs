@@ -16,6 +16,7 @@
 
 ## Language Design
 
+- [Inline Definitions](https://specificlanguages.com/articles/patterns/inline-definitions/){target=_blank} (Specific Languages Blog)
 - [Escape hatch](https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/){target=_blank} (Specific Languages Blog)
 - [Externalized names](https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/){target=_blank} (Specific Languages Blog)
 - [Empty lines](https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/){target=_blank} (Specific Languages Blog)
