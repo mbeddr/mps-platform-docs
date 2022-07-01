@@ -140,6 +140,7 @@ nav:
       - CI: ci/index.md
       - Build: ci/build.md
       - Gradle: ci/gradle.md
+      - Creating a command line tool: ci/command_line_tool.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - GUI: gotchas/mps_internal/gui.md
