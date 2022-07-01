@@ -1,3 +1,5 @@
+# General
+
 !!! question  "What languages are old/deprecated and should not be used anymore?"
 
     - `com.mbeddr.mpsutil.breadcrumb` (removed in a recent version of mbeddr)
@@ -17,7 +19,7 @@
     - `com.mbeddr.mpsutil.varscope` (replaced with MPS scopes)
 
 !!! question  "Why are there two Context Action tools?"
-    
+
     The context actions tool from `com.mbeddr.mpsutil.contextactions` was developed first. Later MPS developed their own
     tool that works the same as the one from mpsutil. Nowadays both tool windows coexist.
 

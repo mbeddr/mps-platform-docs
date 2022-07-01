@@ -133,9 +133,9 @@ nav:
       - Info: gotchas/languages/index.md
       - Base Language and Extensions: gotchas/languages/baselanguage.md
       - MPS Extensions: gotchas/languages/mps_extensions.md
-      - Mbeddr: gotchas/languages/mbeddr_mpsutil.md
       - Double dispatch: gotchas/languages/double_dispatch.md
   - Mbeddr:
+      - General: mbeddr/general.md
       - BigProject: mbeddr/big_project.md
       - Development Guide: mbeddr/development_guide.md
       - Miscellaneous topics: mbeddr/misc_topics.md
