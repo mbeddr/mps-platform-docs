@@ -163,7 +163,6 @@ nav:
     - Dependencies and Classpath:
         - General: reference/deps_and_classpath.md
         - Terminology and UI for Access: reference/terminology_and_ui_for_access.md
-        - Moduls: reference/modules.md
         - Models: reference/models.md
         - Dependencies: reference/dependencies.md
         - Recipes: reference/recipes.md

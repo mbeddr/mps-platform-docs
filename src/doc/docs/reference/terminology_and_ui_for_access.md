@@ -11,35 +11,22 @@ All global and project settings.
 
 <a name="global_settings"></a>
 ### IDE Settings (aka Global Settings)
-Settings applied to all projects opened with this MPS installation. Stored in
-
-	Windows:
-	C:\Users\«username»\Application Settings\.MPS31
-		
-	Linux:
-	~/MPS31
-
-
-	Mac:
-	~/Library/Application Support/MPS31
-	~/Library/Caches/MPS31
-	~/Library/Logs/MPS31
-	~/Library/Preferences/MPS31
+Settings applied to all projects opened with this MPS installation ([official documentation](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.htm)).
 
 <a name="path_variables"></a>
 #### Path Variables
 **UI:** Entry in Settings Dialog
 
-Variables pointing to some place in the file system. For any path selected in MPS contained within one of these Path Variables, the path is stored relative to the variable.
+Variables pointing to some place in the file system. For any path selected in MPS contained within one of these Path Variables, the path is stored relative to the variable. ([official documentation](https://www.jetbrains.com/help/mps/absolute-path-variables.html))
 
 Known pre-defined Path Variables:
 
-* `${module}` Containing Module
-* `${user.home}` Current user home directory ???
-* `${language_descriptor}` Directory containing the Language Module ?
-* `${solution_descriptor}` Directory containing the Solution Module ?
-* `${project}` Directory containing the Project
-* `${mps_home}` Installation directory of this MPS installation
+* `${module}` containing Module
+* `${user.home}` user home directory
+* `${language_descriptor}` descriptor file of current language
+* `${solution_descriptor}` descriptor file of current solution 
+* `${project}` directory containing the Project
+* `${mps_home}` directory of MPS installation
 
 Do **not** point Path Variables to a sub-path of another Path Variable, as MPS will always apply the first (pre-defined before user-defined, user-defined in order of definition) one matching.
 
@@ -51,7 +38,7 @@ Do **not** point Path Variables to a sub-path of another Path Variable, as MPS w
 #### Global Libraries
 **UI:** Entry in Settings Dialog
 
-Paths recursively scanned for [Modules](#module).
+Paths recursively scanned for modules.
 
 <a name="idea_plugin"></a>
 #### (IDEA) Plugins
