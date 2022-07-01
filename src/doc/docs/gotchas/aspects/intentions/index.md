@@ -8,8 +8,8 @@
 
     Use the language `com.mbeddr.mpsutil.intentions` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/). 
     It is also possible to split the description into multiple literals. The first literal will then be used to group intentions.
-    ![intention description](../../../img/intention_description.png)
-    ![intention description grouping](../../../img/intention_description_result.png)
+    ![intention description](intention_description.png)
+    ![intention description grouping](intention_description_result.png)
 
 !!! hint "I need to get all available intentions for a node."
 

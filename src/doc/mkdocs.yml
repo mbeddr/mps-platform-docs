@@ -51,6 +51,7 @@ plugins:
   - search
   - git-revision-date-localized
   - kroki
+  - autolinks
 
 #  social:
 #    - icon: fontawesome/brands/github

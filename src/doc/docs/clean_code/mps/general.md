@@ -8,11 +8,11 @@ It describes how git is used in the mbeddr project for contributing changes, and
   `#!java for(type variable:iterable)` and `#!java foreach variable in iterable`
 - Mark classes/concepts etc. as deprecated when they shouldn't be used: 
 [DeprecatedNodeAnnotation](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590292%28jetbrains.mps.lang.structure.structure%29%2F1224240836180)
-  ![DeprecatedNodeAnnotation](../../img/deprecated.png)
+  ![DeprecatedNodeAnnotation](deprecated2.png)
 [DeprecatedBlockDocTag](http://127.0.0.1:63320/node?ref=r%3A4095af4f-a097-4799-aaa9-03df087ddfa6%28jetbrains.mps.baseLanguage.javadoc.structure%29%2F8465538089690331492)
-  ![DeprecatedBlockDocTag](../../img/deprecated2.png)
+  ![DeprecatedBlockDocTag](deprecated2.png)
 [Java Deprecated annotation](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EDeprecated)
-  ![Java Deprecated annotation](../../img/deprecated3.png)
+  ![Java Deprecated annotation](deprecated3.png)
 - Use the text ``TODO`` in comments. These strings can be found with the TODO tool.
 - Check for redundant variable initializers (typesystem warning).
 - Use empty lines between statements (for example method declarations) for readability.

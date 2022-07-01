@@ -71,7 +71,7 @@ Language: ^^de.slisson.mps.tables^^
 
 !!! question "How to get rid of the small little extra grid lines on the outside of the table rows? ([original question](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700))"
 
-    Change these properties to `true`. ![Set Properties to true](../../img/table_lines_properties.png)
+    Change these properties to `true`. ![Set Properties to true](table_lines_properties.png)
 
 ## Cell Layout
 Language: ^^de.itemis.mps.editor.celllayout^^

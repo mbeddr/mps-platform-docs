@@ -8,7 +8,7 @@
 
 !!! question "How can I find all System.out.println statements?"
 
-    [![find print statements](../../img/find_print_statement.png)](https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc)
+    [![find print statements](find_print_statement.png)](https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc)
 
 !!! question "#nodes,#models, #usages etc. don't show any result. What did I do wrong"
     Make sure that your query is correct. You also have to set I scope for these statements in square brackets such as

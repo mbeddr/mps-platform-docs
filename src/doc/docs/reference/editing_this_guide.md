@@ -65,7 +65,7 @@ In addition to the Material extensions, there are some [Pymdown](https://faceles
 - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret/): superscript text via caret
 - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): allows to mark words
 - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
-- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Example: [MPS Icons](../Icons)
+- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Example: [MPS Icons](icons.md)
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with check boxe
 
 ## Editing
