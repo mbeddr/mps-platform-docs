@@ -196,4 +196,5 @@ For preparing a mbeddr release, you can modify the version number that is set fo
 
 ``` -PmajorVersion=1 -PbuildVersion=0 -PminorVersion=0000 build_mbeddr publishMbeddrAllInOnePublicationToMavenRepository```
 
-![version numbers in MPS build scripts](https://github.com/mbeddr/mbeddr.core/blob/master/documentation/wiki/build/images/versionnumbers.png)
+<img src="../../img/mbeddr_version_numbers.png" alt="version numbers in MPS build scripts" />
+
