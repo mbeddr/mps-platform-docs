@@ -2,7 +2,7 @@
 
 This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS and common MPS platforms.
 It is mainly written in the form of a QA. If you have any suggestions, please write a comment at the bottom of the page or
-open an issue on Github.
+open an issue on GitHub.
 
 ![build status](https://img.shields.io/github/workflow/status/mbeddr/mps-platform-docs/Build%20documentation)
 ![license](https://img.shields.io/github/license/mbeddr/mps-platform-docs)

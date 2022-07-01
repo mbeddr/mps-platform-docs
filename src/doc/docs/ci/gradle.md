@@ -42,5 +42,5 @@ There are three choices:
     - full qualified identifiers, similar to Java packages
     - Use pattern component/company/plugin-name
     - examples
-        - com.github.[name].[plugin-name]
-        - com.github.[arimer].[migration-checker]
+        - `com.github.[name].[plugin-name]`
+        - `com.github.[arimer].[migration-checker]`

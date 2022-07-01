@@ -19,7 +19,7 @@
     You have to implement [IDontApplyTypesystemRules](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422) and [ISkipConstraintsChecking](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091). More information can be found
     in the [official documentation](https://www.jetbrains.com/help/mps/2020.1/suppressing-errors.html).
 
-!!! question "How can I create a MPS concept declaration programatically?"
+!!! question "How can I create an MPS concept declaration programmatically?"
     Specific Languages Blog &mdash; [Create a MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/){target=_blank}
 
 !!! warning "Concept X was not found in the language"

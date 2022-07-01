@@ -17,7 +17,7 @@ public class CommandLineTool {
     final Project project = env.openProject(new File(projectPath));
     Throwable thrown = null;
     try {
-      // (2) Do something with the project
+        doSomething(); // 2
     } catch (Exception e) {
       thrown = e;
     } finally {
@@ -52,7 +52,7 @@ We still need to have on the classpath the initial set of JARs to run our class 
 ```groovy
 task runCommandLineTool(type: JavaExec) { 
     main = 'CommandLineTool' 
-    classpath file('solutions/commandlinetool/classes_gen') // Location of CommandLineTool.class
+    classpath file('solutions/commandline/classes_gen') // Location of CommandLineTool.class
     classpath fileTree("$mps_home/lib") // $mps_home points to the MPS installation
 }
 ```

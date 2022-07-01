@@ -2,7 +2,7 @@
 
     No. You should use [plugin solutions](https://www.jetbrains.com/help/mps/plugin.html) instead.
 
-!!! warning "References to keys in action context parameters are out of search scope."
+!!! warning "A reference to a key in action context parameters is out of search scope."
 
     You need to add a dependency to [MPSCommonDataKeys](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys).
     This class extends [PlatformDataKeys](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EPlatformDataKeys)

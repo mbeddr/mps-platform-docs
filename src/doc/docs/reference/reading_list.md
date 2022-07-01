@@ -10,7 +10,7 @@ I suggest you start with the book on DSL Engineering. It is available as a free 
 
 In the first part, it discusses some general characterizations of DSLs. Part two is on language design; you should become proficient in the design concerns discussed there. Part three is about language implementation with different tools; you can skip the non-MPS parts, if you want to. The MPS-specific explanations are not quite up to date, but the concepts and approaches explained there are still very relevant.
 
-One recent extension to MPS we use all the time now is grammar cells, a way to more easily build nicely-usable editors for textual notations. We strongly suggest to read this paper: http://voelter.de/data/pub/SLE2016-GrammarCells.pdf
+One recent extension to MPS we use all the time now is grammar cells, a way to more easily build nicely-usable editors for textual notations. We strongly suggest reading this paper: http://voelter.de/data/pub/SLE2016-GrammarCells.pdf
 
 Next, you may want to take a look at the MPS books by Fabien Campagne: http://campagnelab.org/publications/our-books/
 They are essentially a beginner's guide to language development with MPS. Whenever you want to do something specific, then looking at how to do it in those books is a good starting point for deeper discussions with the colleagues.
@@ -20,14 +20,14 @@ and in particular, the user guide: https://confluence.jetbrains.com/display/MPSD
 
 It is not always completely up to date, but recently, many parts of the user guide have received updates. The documentation page also contains videos and tutorials on a variety of specific MPS-related topics.
 
-Over the years we have built a lot of useful extensions and utilities to MPS. They are described at the mbeddr.platform documentation page: http://mbeddr.com/platform.html Most of those are not really documented, but you can find examples for all (relevant and stable) utilities in mbeddr itself.
+Over the years we have built a lot of useful extensions and utilities to MPS. They are described on the mbeddr platform documentation page: http://mbeddr.com/platform.html Most of those are not really documented, but you can find examples for all (relevant and stable) utilities in mbeddr itself.
 
 Finally, to understand the experiences we have made with MPS over the years, you may want to read this draft paper: http://voelter.de/data/pub/BuildingMbeddr-Experiences.pdf
 
 
 ## Working on (extending) mbeddr
 
-If, in addition to working with MPS in general you plan to work on the mbeddr languages, there is more reading we suggest. We suggest reading parts of Markus' thesis, because it is the most comprehensive and up to date description of mbeddr. You can get the thesis here:
+If, in addition to working with MPS in general you plan to work on the mbeddr languages, there is more reading we suggest. We suggest reading parts of Markus' thesis, because it is the most comprehensive and up-to-date description of mbeddr. You can get the thesis here:
 
 http://voelter.de/data/books/GenericToolsSpecificLanguages-1.0-web.pdf
 

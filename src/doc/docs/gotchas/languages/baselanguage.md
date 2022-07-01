@@ -28,7 +28,7 @@ For a full list of baselanguage bugs and feature request, have a look at [this t
 
 
 !!! warning "I have written a function with base language code but doesn't return anything when called"
-    Base Language allows implicit returns that means that the last statement is automatically returned. There are some
+    Base Language allows implicit returns. The last statement is automatically returned. There are some
     places where implicit returns are not support such as when return a new ListScope class. Make sure to add a return
     statement in such places.
 

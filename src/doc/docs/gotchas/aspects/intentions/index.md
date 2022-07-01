@@ -18,5 +18,5 @@
 !!! question "How can I make intentions visible?"
     Specific Languages Blog &mdash; [Making intentions visible](https://specificlanguages.com/posts/2021-02/10-making-intentions-visible/){target=_blank}
 
-!!! question "How can I show a submenu in the intentions menu?"
+!!! question "How can I show a submenu in the intention menu?"
     Specific Languages Blog &mdash; [Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/){target=_blank}

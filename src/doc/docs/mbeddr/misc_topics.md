@@ -2,7 +2,7 @@
 
 ## Windows and none ASCII chars
 
-Compilation from the command line might fail due to none ASCII chars when run on windows and possibly also on Linux. The error message will look something like this:
+Compilation from the command line might fail due to none ASCII chars when run on Windows and possibly also on Linux. The error message will look something like this:
 
 ```
 [generate] NewLanguage\behavior\rtzj__BehaviorDescriptor.java : Invalid character constant (line: 27) 
@@ -31,6 +31,6 @@ In additions to elements with a cardinality of 1 there are other items that can'
 
 ##### Code smells
 
-- Replacement of functioncall expr where parent is expression statement
+- Replacement of `functioncall` expr where parent is expression statement
     + Replace complete statement to generate readable code
 

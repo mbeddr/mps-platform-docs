@@ -14,7 +14,7 @@
 
     There is a gist for a [minimal build](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75). There is a [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin). For more complex projects look at build scripts of big projects such as [MPS-extensions](https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle).
 
-!!! question "How do I build a MPS project with maven?"
+!!! question "How do I build an MPS project with maven?"
     Specific Languages Blog &mdash; [Building MPS projects using Maven - a sample](https://specificlanguages.com/posts/building-mps-projects-using-maven/){target=_blank}
 
 !!! warning "The gradle build fails with exception: Incremental build fails during generation on no changed models"
@@ -27,7 +27,7 @@
     in the file build.gradle (for example in [this line](https://github.com/JetBrains/MPS-extensions/blob/3e137bcf269f8a2ac79589d4e4938f78900cf294/build.gradle#L81)
     in mps-extension). For older MPS projects there is no waying of finding out the version.
 
-!!! question "What do I need to put into the .gitignored file?"
+!!! question "What do I need to put into the .gitignore file?"
 
     Have a look at this [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore) file.
 

@@ -23,7 +23,7 @@ System.out.println(ship.GetShipType()); // output: (1)
 
 1. ApolloSpacecraft
 
-The actual method implementation to be called is chosen at runtime based solely on the actual type of ship. So, only the type of a single object is used to select the method, hence the name single dispatch.
+The actual method implementation to be called is chosen at runtime based solely on the actual type of ship. So, only the type of single object is used to select the method, hence the name single dispatch.
 
 Note: *Single dispatch* is one form of *dynamic dispatch*, i.e. the method is chosen at runtime. If the method is chosen at compile time (true for all non-virtual methods), it’s called *static dispatch*.
 

@@ -22,7 +22,7 @@ Information about general code smells can be found [here](https://refactoring.gu
 - If you want to use newer Java features, have a look at [this](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
 - Have a look at common sources of [complexity](http://www.javapractices.com/topic/TopicAction.do?Id=287).
 
-[^1]:[Naming 101: Programmer’s Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)
+[^1]:[Naming 101: A Programmer's Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)
 [^2]:[Rule of 30 – When is a Method, Class or Subsystem Too Big?](https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or)
 [^3]:[Avoid basic style errors](http://www.javapractices.com/topic/TopicAction.do?Id=227)
 [^4]:[Ordering Class Members by Scopes](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering)

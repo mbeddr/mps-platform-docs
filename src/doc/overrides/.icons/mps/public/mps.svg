@@ -24,7 +24,7 @@
   <title>MPS2</title>
   <g>
     <polygon points="5 85 85 85 44.822 44.892 5 5 5 85" fill="url(#linear-gradient)"/>
-    <polygon id="_Path_" data-name="&lt;Path&gt;" points="85 85 44.822 44.892 85 5 85 85" fill="url(#linear-gradient-2)"/>
-    <polygon id="_Path_2" data-name="&lt;Path&gt;" points="63.153 63.153 44.822 44.892 85 5 63.153 63.153" fill="url(#linear-gradient-3)"/>
+    <polygon id="_Path_" points="85 85 44.822 44.892 85 5 85 85" fill="url(#linear-gradient-2)"/>
+    <polygon id="_Path_2" points="63.153 63.153 44.822 44.892 85 5 63.153 63.153" fill="url(#linear-gradient-3)"/>
   </g>
 </svg>

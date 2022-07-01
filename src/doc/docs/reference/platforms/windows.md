@@ -2,7 +2,7 @@
 
 ## Windows and none ASCII chars
 
-Compilation from the command line might fail due to none ASCII chars when run on windows and possibly also on Linux. The error message will look something like this:
+Compilation from the command line might fail due to none ASCII chars when run on Windows and possibly also on Linux. The error message will look something like this:
 
 ```
 [generate] NewLanguage\behavior\rtzj__BehaviorDescriptor.java : Invalid character constant (line: 27) 

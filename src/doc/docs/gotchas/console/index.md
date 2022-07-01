@@ -10,7 +10,7 @@
 
     [![find print statements](find_print_statement.png)](https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc)
 
-!!! question "#nodes,#models, #usages etc. don't show any result. What did I do wrong"
+!!! question "#nodes,#models, #usages etc. don't show any result. What did I do wrong?"
     Make sure that your query is correct. You also have to set I scope for these statements in square brackets such as
     &#35;nodes&lt;scope = global&gt; to find all the nodes in the global scope.
 

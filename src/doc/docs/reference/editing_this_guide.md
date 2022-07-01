@@ -1,8 +1,8 @@
 # Editing this guide
 
-This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/).
+This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 The reference for the Material theme can be found [here](https://squidfunk.github.io/mkdocs-material/reference/).
-Additional mkdocs plugins can be installed in build.gradle + mkdocs.yml.
+Additional MkDocs plugins can be installed in build.gradle + mkdocs.yml.
 
 ## Diagrams
 
@@ -33,7 +33,7 @@ There is support for diagrams via [Kroki](http://kroki.io) ([examples](https://k
 - [Vega-Lite](https://vega.github.io/vega-lite/)
 - [WaveDrom](https://wavedrom.com/tutorial.html)
 
-They can be embedded by creating a code block and the text kroki-[diagramtype].
+They can be embedded by creating a code block and the text `kroki-[diagramtype]`.
 
 ## Extensions
 
@@ -43,16 +43,16 @@ In addition to the Material extensions, there are some [Pymdown](https://faceles
 - [pymdownx.inlinehilite](https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/): inline code highlighting; example: #!js var test = 0;
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): linkafies URLs
 - [pymdownx.smartsymbols](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/): inserts commonly used Unicode characters via simple ASCII representations.
-- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): extension to Markdown fenches
+- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): extension to Markdown fences
 - [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/): collapsible elements
 - [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)
 - [pymdownx.snippets](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/):  include other Markdown or HTML snippets into the current Markdown file
 - [pymdownx.keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/): simplifies inserting key inputs; example: ++ctrl+alt+delete++
 - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret/): superscript text via caret
-- [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): allows to mark words
+- [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): allows marking words
 - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
 - [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Example: [MPS Icons](icons.md)
-- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with check boxe
+- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with check boxes
 
 ## Editing
 

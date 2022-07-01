@@ -27,7 +27,7 @@ Language: ^^slisson.richtext^^
     A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.
 
 ## Multiline property cell
-Language: ^^de.slisson.mps.editor.mulitline^^
+Language: ^^de.slisson.mps.editor.multiline^^
 
 string properties over multiple lines
 
@@ -116,7 +116,7 @@ Language: ^^com.mbeddr.mpsutil.editor.querylist^^
 Language: ^^de.itemis.mps.tooltips.structure^^
 
 - tooltips on hover
-- A regular editor and a hover editor must be defined..
+- A regular editor and a hover editor must be defined.
 - deprecated; use `jetbrains.mps.lang.editor.tooltips` instead.
 
 # Dropdown

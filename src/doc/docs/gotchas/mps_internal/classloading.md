@@ -7,16 +7,16 @@ For this example, we assume we want to use classes from the "git4idea" plugin in
 ### Solution 1
 
 1. Create a solution "MySolution"
-2. Create a model ending with ".plugin", e. g. "MySolution.plugin"
+2. Create a model ending with ".plugin", e.g. "MySolution.plugin"
 3. Add the language "jetbrains.mps.lang.plugin.standalone" to both the "MySolution.plugin" model and the "MySolution" solution.
 4. Create a "StandalonePluginDescriptor" in the "MySolution.plugin" model.
-5. Add the "MySolution" to a build model (referred to as MySolution.build).
+5. Add the "MySolution" to a build model (referred to as "MySolution.build").
 6. Create an idea plugin the build model with id "MySolution.IdeaPlugin".
-7. Add MySolution.build to the idea plugin "MySolution.IdeaPlugin" content.
+7. Add "MySolution.build" to the idea plugin "MySolution.IdeaPlugin" content.
 8. Add the dependency on "git4idea" to "MySolution.IdeaPlugin" dependencies.
 9. Execute the build script.
 10. In properties of solution "MySolution", on the Facets tab, check "Idea Plugin".
-11. In newly appearing Idea Plugin tab, set Pugin ID to "MySolution.IdeaPlugin".
+11. In newly appearing Idea Plugin tab, set plugin ID to "MySolution.IdeaPlugin".
 12. Restart MPS.
 
 Now the classes within "git4idea" are available within "MySolution".
@@ -30,6 +30,8 @@ An example can be found [here](https://github.com/modelix/modelix/blob/master/mp
 1. Create a solution "git4idea.withJavaFacet".
 2. Edit the created msd file and make the following modifications:
 ```xml
+  <solution>
+    ...
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -53,13 +55,15 @@ An example can be found [here](https://github.com/modelix/modelix/blob/master/mp
   <dependencies>
     ...
   </dependencies>
+    ...
+</solution>
 ```
 
 The jar files are directly referenced from the mps plugins folder. The jars are then loaded as part of the Git4Idea facet.
 
 ## Classloading issues
 
-In some cases you might get conflicts with existing libraries that MPS already ships. For instance while using the `SAXBuilder`. In these cases you will get a class version exception or similar. As a work around you can set the classloader and the current thread while instantiating such classes:
+In some cases you might get conflicts with existing libraries that MPS already ships. For instance while using the `SAXBuilder`. In these cases you will get a class version exception or similar. As a workaround you can set the classloader and the current thread while instantiating such classes:
 
 ```java
 ClassLoader cl = Thread.currentThread().getContextClassLoader(); 
