@@ -26,7 +26,6 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
     - header.autohide
     - content.code.annotate
     - toc.integrate
@@ -175,6 +174,7 @@ nav:
         - Recipes: reference/recipes.md
     - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
+    - UX/UI: reference/ux_ui.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
