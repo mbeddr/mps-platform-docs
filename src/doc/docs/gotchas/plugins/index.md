@@ -29,4 +29,13 @@
 
     Add `idea.fatal.error.notification=disabled` to idea.properties.
 
+!!! question "How can I customize the welcome screen in an RCP?"
+
+    - Specific Languages Blog &mdash; [Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/){target=_blank}
+    
+    The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. A cheat sheet for the syntax can be found [here](https://devhints.io/xpath). 
+    
+    - Specific Languages Blog &mdash; [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/){target=_blank}
+    - Specific Languages Blog &mdash; [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/){target=_blank}    
+
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
