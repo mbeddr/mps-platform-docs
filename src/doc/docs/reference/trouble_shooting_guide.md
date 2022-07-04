@@ -85,3 +85,13 @@ this is a non-exhaustive list of common problems with MPS and itemis platform pr
               make sure the OS and Mbeddr repos are checked out on the right branches / commits
                 - remove the file `projectlibraries.overrides.properties` from your CORE and OS repo and execute
               `./gradlew setup` in both. This configures MPS to directy use the Java class files from the Gradle Artifacts instead of the checked-out repos.
+
+## Debugging
+
+Some tips for debugging:
+
+- [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
+- [The Debugger Checklist – Part I](https://talktotheduck.dev/the-debugger-checklist-part-i)
+- [The Debugger Checklist – Part II](https://talktotheduck.dev/the-debugger-checklist-part-ii)
+- [Debugging tips](https://jonskeet.uk/csharp/debugging.html)
+- [10 Debugging Tips for Beginners](https://blog.hartleybrody.com/debugging-code-beginner/)
