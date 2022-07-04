@@ -1,8 +1,5 @@
 This document lists some recommendations for code written it MPS.
 
-Before reading this document, __read the [mbeddr Development Guide](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide)__.
-It describes how git is used in the mbeddr project for contributing changes, and it also provides some general guidelines ([commit messages](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#commit-messages), [branches](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#branches), [merging](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#merging), [test organization](https://github.com/mbeddr/mbeddr.core/wiki/Development-Guide#test-organization) etc.).
-
 ## Readability/Maintainability
 - Use enhanced for loops instead of for loops with counters:
   `#!java for(type variable:iterable)` and `#!java foreach variable in iterable`

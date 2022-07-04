@@ -18,41 +18,36 @@ Other types of dependencies on Modules include *Java Stubs* (in combination with
 
 <a name=mps_plugin></a>
 ## MPS Plugins
-MPS Plugins are automatically loaded according to the Solution Kind set in [Java Module Settings](#java-module-settings).
+MPS Plugins are automatically loaded according to the Solution Kind set in Java module settings.
 
-MPS Plugins need to be contained in [MPS Plugin Models](#mps-plugin-model).
+MPS Plugins need to be contained in MPS plugin models.
 
 #### StandalonePluginDescriptor
 We need to add a StandalonePluginDescriptor (defined in Language `jetbrains.mps.lang.plugin.standalone`) as Root Node to any MPS Plugin Model using a Concept from Language `jetbrains.mps.lang.plugin`. Other concepts from Language `jetbrains.mps.lang.plugin.standalone` don't need a StandalonePluginDescriptor.
 
-
-
-<a name="plugin_disambiguation"></a>
 ## Plugin Disambiguation
 The term "plugin" is used at various places throughout MPS. It describes very different things:
 
-* **[IDEA Plugins](#idea-plugin):** A packaged set of contributions to the IntelliJ IDEA Platform, which MPS is based upon.
+* **IDEA plugins:** A packaged set of contributions to the IntelliJ IDEA Platform, which MPS is based upon.
 
-* **[MPS Plugins](#mps-plugin):** Automatically loaded Models.
+* **MPS plugins:** Automatically loaded Models.
 
-* **[Plugin Language Aspect](#plugin-aspect):** Model inside a Language defining Extension Points.
+* **Plugin language aspect:** Model inside a Language defining Extension Points.
 
-* **[Build Model Plugins](#build-model-plugins):** Part of Build Model language providing new entries for Build Models.
+* **Build model plugins:** Part of Build Model language providing new entries for Build Models.
 
 
-
-<a name="non_project_sources"></a>
 ## Non-Project Sources
 
 Non-Project Sources are
 
-* [Global Libraries](#global-libraries)
-* [IDEA Plugins](#idea-plugin)
-* [Project Libraries](#project-libraries)
-* [Common](#common-module-settings) and [Java](#java-module-settings) Module Settings regarding Java classes and Java source files
-* [IDEA Plugins](#idea-plugin-module_settings) referenced by a Module
+* Global libraries
+* IDEA plugins
+* Project libraries
+* Common and Java Module Settings regarding Java classes and Java source files
+* IDEA plugins referenced by a Module
 
-These directories or Jar files are recursively scanned for `*.mpl` ([Languages](#language)), `*.msd`([Solutions](#solution)), and `*.devkit` ([DevKit](#devkit)) files. If found, the corresponding content is added to the [Modules Pool](#modules-pool).
+These directories or Jar files are recursively scanned for `*.mpl` (Languages), `*.msd`(Solutions), and `*.devkit` (DevKit) files. If found, the corresponding content is added to the modules pool.
 
 
 ## Java Classpath vs. Relations
@@ -63,10 +58,6 @@ As a rule of thumb, the Classpath contains all Java classes reachable through an
 
 The Dependency Relations on Modules and Models are completely separated from the Used Language Relations on Modules and Models. Thus, no Dependency requires a Used Language or vice versa.
 
-<a name="_dependencies"></a>
-
-
-<a name="used_language"></a>
 ## Used Languages
 
 [Model Used Languages](#model-used-languages) need to be listed in the containing [Module Used Languages](#module-used-languages).
@@ -205,15 +196,15 @@ languages used in applied Generators) are **not** added to the output Model. [Im
 
 Tests are regular or extended [JUnit](http://junit.org/) tests that can be executed within MPS or [stand-alone](#build-language).
 
-Tests are contained in [Test Models](#test-model), defined by `@tests` [Stereotype](#stereotype).
+Tests are contained in test models, defined by `@tests` stereotyp.
 
 The Stereotype enables
 
-* the "Run Tests" entry in [Solution](#solution) and [Test Model](#test-model) context menu.
+* the "Run Tests" entry in solution and test model context menu.
 
-* [Build Language](#build-language) test instruction to search the Model for tests.
+* Build language test instruction to search the Model for tests.
 
-As soon as we're using any concepts from language `jetbrains.mps.lang.test`, we need to have a `TestInfo` Root Node in the same model. The TestInfo node needs to refer to a [Project](#project) to be used to execute the tests. This reference may *not* use a `${module}`, `${language_descriptor}`, `${solution_descriptor}`, or `${project}` built-in [Path Variables](#path-variables). It needs to refer to a Project containing the test.
+As soon as we're using any concepts from language `jetbrains.mps.lang.test`, we need to have a `TestInfo` Root Node in the same model. The TestInfo node needs to refer to a project to be used to execute the tests. This reference may *not* use a `${module}`, `${language_descriptor}`, `${solution_descriptor}`, or `${project}` built-in path variables. It needs to refer to a Project containing the test.
 
 
 

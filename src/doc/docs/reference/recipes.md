@@ -92,7 +92,7 @@ Behavior method `opA` inside `ConceptA` inside `LanguageA`.
 * MPS will automatically add a Dependency from `ModuleB` to `LanguageA`.
 
 **Note:** We could also add a Dependency from `ModelB` to `LanguageA.behavior`. However, as we need
-to depend on `LanguageA.structure` [anyway](#use_node_type) (to be able to access the type), the recipe presented above is preferred.
+to depend on `LanguageA.structure` anyway (to be able to access the type), the recipe presented above is preferred.
 
 ## Use Concept as Child or Reference
 

@@ -51,7 +51,7 @@ Contained in one of the following places:
 * `${mps_home}/plugins`
 * `«GlobalSettingsDir»/plugins`
 
-There are other things called plugins, known as [MPS Plugins](#mps-plugins), bearing no relationship to IDEA Plugins.
+There are other things called plugins, known as MPS plugins, bearing no relationship to IDEA Plugins.
 However, MPS Plugins can be packaged into IDEA Plugins, just as any other content of MPS.
 
 <a name="project_settings"></a>
@@ -65,7 +65,7 @@ Settings applied to one project. Stored in `${project}/.mps/`.
 #### Project Libraries
 **UI:** Entry in Settings Dialog
 
-Paths recursively scanned for [Modules](#module).
+Paths recursively scanned for modules.
 
 <a name="modules_pool"></a>
 ## Modules Pool

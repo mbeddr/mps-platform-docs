@@ -2,7 +2,7 @@
 
 By default, only Nodes present in the current Model can be referenced. Dependencies add other Models and Modules to be referenced from the current Model.
 
-Models listed as Dependencies of Model A need to be contained within Modules listed in the Dependencies (including [transitive entries](#reexport)) of the Module containing this Model. Example:
+Models listed as Dependencies of Model A need to be contained within Modules listed in the Dependencies (including transitive entries) of the Module containing this Model. Example:
 
 	Module: ModuleA
 		Model: ModelA.one
@@ -113,11 +113,11 @@ Some Dependencies are added implicitly, i.e. without being listed in the corresp
 
 A Generator "inherits" some Dependencies from the Language it's defined in:
 
-* The [Language](#language)'s [Runtime Solutions](#runtime-solution) are added to the Generator [Module Dependencies](#module-dependencies).
+* The Language's runtime solutions are added to the Generator module dependencies.
 * The Language Module is added to the Generator Module Dependencies.
-* The Language is added to the Generator [Used Languages](#module-used_languages).
+* The Language is added to the Generator used languages.
 
-Except the case of generating a Concept of a Language that has a Runtime Solution (as [described above](#generating-concept-with-runtime-solution)), there is no requirement on the Language's Dependencies or Used Languages stemming from the Generator.
+Except the case of generating a Concept of a Language that has a Runtime Solution, there is no requirement on the Language's Dependencies or Used Languages stemming from the Generator.
 
 <a name="implicit_language_export"></a>
 ### Implicit Exports of Used Language and Language Structure Aspect
@@ -127,12 +127,12 @@ Both a Used Language and the Language Structure Aspect implicitly allow accessin
 <a name="implicit_runtime_exports"></a>
 ### Implicit Exports of Runtime Language Settings
 
-**[Runtime Solutions](#runtime-solution)** are
+**Runtime solutions** are
 
 * implicitly loaded into the Java classpath of any Module using this Language.
 * implicitly added to the Dependencies of the Generator contained in this Language.
 
-**[Accessories Models](#accessories-model)** are
+**Accessory Models** are
 
 * implicitly loaded into the Dependencies of any Model using this Language.
 
@@ -147,7 +147,7 @@ Neither Runtime Solutions nor Accessory Models constitute a Dependency from the 
 
 Cyclic Dependencies between Modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic "Extends Scope Dependency".
 
-A special case are [Runtime Solutions](#runtime-solution), [Accessories Models](#accessories-model), and [Utility Models](#utility-model).
+A special case are runtime solutions, accessory models, and utility models.
 
 In contrast to Runtime Solutions, Utility Models are used *while* accessing a Behavior or running a Generator. Code within Runtime Solutions is used *after* the Generator ran from the generated code. Thus, a Runtime Solution SHOULD NOT use or reference the Language it's referred from. A Utility Model CAN use or reference the Language it's referred from.
 
