@@ -174,7 +174,9 @@ nav:
         - Recipes: reference/recipes.md
     - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
-    - UX/UI: reference/ux_ui.md
+    - UX/UI:
+        -  General: reference/ux_ui.md
+        -  Patterns: reference/ui_patterns.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
