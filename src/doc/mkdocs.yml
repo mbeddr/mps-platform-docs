@@ -149,7 +149,7 @@ nav:
       - Build: build/build.md
       - Gradle: build/gradle.md
       - Creating a command line tool: build/command_line_tool.md
-      - Git: reference/git.md
+      - Git: build/git.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - Classloading: gotchas/mps_internal/classloading.md
