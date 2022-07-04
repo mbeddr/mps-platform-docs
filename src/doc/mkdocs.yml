@@ -142,11 +142,12 @@ nav:
       - BigProject: mbeddr/big_project.md
       - Development Guide: mbeddr/development_guide.md
       - Miscellaneous topics: mbeddr/misc_topics.md
-  - Continuous Integration (CI):
-      - CI: ci/index.md
-      - Build: ci/build.md
-      - Gradle: ci/gradle.md
-      - Creating a command line tool: ci/command_line_tool.md
+  - Build:
+      - CI: build/index.md
+      - Build: build/build.md
+      - Gradle: build/gradle.md
+      - Creating a command line tool: build/command_line_tool.md
+      - Git: reference/git.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - Classloading: gotchas/mps_internal/classloading.md
@@ -176,7 +177,6 @@ nav:
         - Window: reference/platforms/windows.md
         - Mac: reference/platforms/mac.md
         - Linux: reference/platforms/linux.md
-    - Git: reference/git.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
