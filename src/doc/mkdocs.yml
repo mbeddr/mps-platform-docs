@@ -170,7 +170,6 @@ nav:
         - Models: reference/models.md
         - Dependencies: reference/dependencies.md
         - Recipes: reference/recipes.md
-    - Classloaders: reference/classloaders.md
     - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
     - Platform specific:
