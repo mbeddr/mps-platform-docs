@@ -25,3 +25,11 @@ See also: Specific Languages Blog &mdash; [Debugging in MPS](https://specificlan
 ## Random
 
 - `SNode::putUserObject()`: You can store and access Java-Objects (as key-value pairs) where you normally could not access them in the mps-context, e.g. storing it as "Node-member" and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases!
+
+# General Blog posts
+
+- [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
+- [The Debugger Checklist – Part I](https://talktotheduck.dev/the-debugger-checklist-part-i)
+- [The Debugger Checklist – Part II](https://talktotheduck.dev/the-debugger-checklist-part-ii)
+- [Debugging tips](https://jonskeet.uk/csharp/debugging.html)
+- [10 Debugging Tips for Beginners](https://blog.hartleybrody.com/debugging-code-beginner/)
