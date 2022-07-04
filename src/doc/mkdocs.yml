@@ -106,7 +106,10 @@ nav:
     - External Files and Tools: gotchas/external_files_and_tools/index.md
     - Console: gotchas/console/index.md
     - Build: gotchas/build/index.md
-    - Miscellaneous: gotchas/misc/index.md
+    - Platform specific:
+      - Window: reference/platforms/windows.md
+      - Mac: reference/platforms/mac.md
+      - Linux: reference/platforms/linux.md
   - Aspects:
     - Structure: gotchas/aspects/structure/index.md
     - Editor: gotchas/aspects/editor/index.md
@@ -172,10 +175,6 @@ nav:
         - Recipes: reference/recipes.md
     - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
-    - Platform specific:
-        - Window: reference/platforms/windows.md
-        - Mac: reference/platforms/mac.md
-        - Linux: reference/platforms/linux.md
     - Reading List: reference/reading_list.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md

@@ -38,4 +38,19 @@
     - Specific Languages Blog &mdash; [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/){target=_blank}
     - Specific Languages Blog &mdash; [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/){target=_blank}    
 
+!!! info "I want to know about existing projects regarding MPS in the web."
+
+    Have a look at [Deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
+    
+    - Specific Languages Blog &mdash; [Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/){target=_blank}
+    - Specific Languages Blog &mdash; [MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/){target=_blank}
+
+!!! info "I want to translate all of MPS.[^2]"
+
+    Install a [language pack](https://plugins.jetbrains.com/search?tags=Language%20Pack) for Intellij. Hardcoded parts of MPS can't be translated.
+    There are also known bugs with extented characters [ticket](https://youtrack.jetbrains.com/issue/MPS-31835?_ga=2.198252074.441906427.1635067376-1212584208.1633605628) and [unicode](https://youtrack.jetbrains.com/issues/MPS?q=unicode)
+    in general in case you want to use special characters.
+
+[^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
+
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
