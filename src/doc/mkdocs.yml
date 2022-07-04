@@ -61,6 +61,7 @@ plugins:
 
 # Extensions
 markdown_extensions:
+  - abbr
   - admonition
   - codehilite:
       guess_lang: false
@@ -78,7 +79,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+        auto_append:
+           - includes/abbreviations.md
   - pymdownx.tabbed:
         alternate_style: true
   - pymdownx.keys
