@@ -69,9 +69,20 @@ Language: ^^de.slisson.mps.tables^^
 - use slisson-tables instead of mps-tables because it is more flexible (and not deprecated)
 
 
-!!! question "How to get rid of the small little extra grid lines on the outside of the table rows? ([original question](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700))"
+??? question "How to get rid of the small little extra grid lines on the outside of the table rows? ([original question](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700))"
 
-    Change these properties to `true`. ![Set Properties to true](table_lines_properties.png)
+    Change these properties to `true`. 
+
+    ![Set Properties to true](table_lines_properties.png)
+
+!!! question "How can I improve my tables?"
+
+    -  even-odd coloring of rows
+    -  coloring of columns and row headers
+    - group columns by color
+    - multi-column headers
+    - annotations for cells
+    - pagination + other UI buttons
 
 ## Cell Layout
 Language: ^^de.itemis.mps.editor.celllayout^^
