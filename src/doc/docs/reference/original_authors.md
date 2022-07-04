@@ -4,7 +4,7 @@ This site contains documents and contributions from different sites. It contains
 
 - [@abstraktor](https://github.com/abstraktor) (*internal knowledge base*)
 - [@AlexeiQ](https://github.com/AlexeiQ) (*mbeddr wiki*)
-- [@arimer](https://github.com/arimer) (*internal knowledge base)
+- [@arimer](https://github.com/arimer) (*internal knowledge base*)
 - [@coolya](https://github.com/coolya) (*mbeddr wiki*)
 - [@DomenikP](https://github.com/DomenikP) (*mbeddr wiki*)
 - [@enikao](https://github.com/enikao) (*mbeddr wiki*)
