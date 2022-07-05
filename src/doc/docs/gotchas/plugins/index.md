@@ -13,7 +13,7 @@
 !!! question "Why do many IntelliJ plugins don't work with MPS?"
 
     Many of these plugins are working in combination with the text editor. MPS uses custom editors. It doesn't use
-    documents and the [Program Structure Interface(PSI)](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
+    documents and the [PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
     Using plugins that are not developed for MPS can interfere with certain features of MPS (e.g. find usages isn't working anymore).
 
 !!! warning "My plugin is incompatible with the current RCP version."

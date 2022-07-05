@@ -162,7 +162,11 @@ In case you want to build type system tests that require a specific Path Macro (
 folder mps.macro.mbeddr.github.core.home = $mbeddr.github.core.home
 ```
 
-Further, solutions containing type system tests need to be marked as 'content: (with sources and tests) '. To achieve this, please perform the following steps: (1) Inside your `BuildProject` move your cursor to the solution that contains your type system tests. (2) open the inspector. (3) Inside the Inspector select the node 'sources', open the context menu and select 'sources and tests' from it.
+Further, solutions containing type system tests need to be marked as 'content: (with sources and tests) '. To achieve this, please perform the following steps: 
+
+1. Inside your `BuildProject` move your cursor to the solution that contains your type system tests.
+2. Open the inspector.
+3. Inside the Inspector select the node 'sources', open the context menu and select 'sources and tests' from it.
 
 Next, in order to get your tests executed, you first need to add the `module-tests` plugin to your *use plugins:' section (on top of your `BuildProject`). In case you cannot add the node 'module-tests' to this section, please first import it from jetbrains.mps.build.mps.tests.accessories (pressing `CTRL+R` opens the import dialog). Finally, create a 'BuildMpsLayout_TestModules' (a _test configuration_) at bottom of your `BuildProject` and list there all solutions that contain type system tests to be executed.
 
