@@ -49,3 +49,9 @@
 
 !!! question "How do I create menu items with checkboxes?"
     Specific Languages Blog &mdash; [Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/){target=_blank}
+
+!!! question "How can I retrieve all opened windows in [split screen mode](https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen)?"
+
+    ```java
+    FileEditorManagerEx.getInstanceEx(ProjectHelper.toIdeaProject(#project)).getSplitters().getWindows()
+    ```
