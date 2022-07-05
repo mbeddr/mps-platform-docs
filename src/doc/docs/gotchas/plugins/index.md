@@ -52,6 +52,31 @@
     in general in case you want to use special characters.
     Further information can be found in this article: [Localizing an IntelliJ Plugin](https://www.plugin-dev.com/intellij/general/plugin-localization/).
 
+!!! question "Can I get information about a MPS installation via HTTP request?"
+
+    Yes, this is possible through the [IntelliJ Platform REST API](https://www.develar.org/idea-rest-api/):
+    Send a GET request (or enter it into the browser address bar): [http://localhost:63342/api/about?more=true](http://localhost:63342/api/about?more=true).
+    Example output:
+
+    ```json
+    {
+        "name": "MPS 2021.2.5",
+        "productName": "MPS",
+        "baselineVersion": 212,
+        "buildNumber": "212.5284.1355",
+        "vendor": "JetBrains s.r.o.",
+        "isEAP": false,
+        "productCode": "MPS",
+        "buildDate": 1647561654804,
+        "isSnapshot": false,
+        "configPath": "/Users/user/Library/Application Support/JetBrains/MPS2021.2",
+        "systemPath": "/Users/user/Library/Caches/JetBrains/MPS2021.2",
+        "binPath": "/Applications/mps/mac/MPS-2021.2.app/Contents/bin",
+        "logPath": "/Users/user/Library/Logs/JetBrains/MPS2021.2",
+        "homePath": "/Applications/mps/mac/MPS-2021.2.app/Contents"
+    }
+    ```
+
 [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
 
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
