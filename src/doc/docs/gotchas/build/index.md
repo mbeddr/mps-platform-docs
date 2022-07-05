@@ -35,11 +35,11 @@
 
     There is a path that is too long for Windows in the build script. 
     Choose the option 'compressArgs' in 'test modules' node to fix the issue.
-    More info can be found in the [ticket](https://youtrack.jetbrains.com/issue/MPS-24137).
+    More info can be found in [MPS-24137](https://youtrack.jetbrains.com/issue/MPS-24137).
 
 !!! warning "Command line generation fails on Windows if using non-ASCII characters"
     
-    This is a known bug ([ticket](https://youtrack.jetbrains.com/issue/MPS-34059)). It happens because the generation is
+    This is a known bug ([MPS-34059](https://youtrack.jetbrains.com/issue/MPS-34059)). It happens because the generation is
     started with a Window encoding. Set the following environment variable before starting the build:
     `set JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"`
 

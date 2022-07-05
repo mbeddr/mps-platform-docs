@@ -33,7 +33,7 @@
         
 !!! warning "Highlighting of constraint errors in inspector doesn't work."
 
-    Known bug ([ticket](https://youtrack.jetbrains.com/issue/MPS-32350)). Pressing F5 helps.
+    Known bug ([MPS-32350](https://youtrack.jetbrains.com/issue/MPS-32350)). Pressing ++f5++ helps.
 
 !!! hint  "I need to delete non-existing children, references or properties from a node."
 

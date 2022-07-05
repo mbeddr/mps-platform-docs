@@ -1,6 +1,6 @@
 !!! question  "I want to use generic return types.[^1]"
 
-    Not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-22502).
+    Not possible. Have a look at [MPS-22502](https://youtrack.jetbrains.com/issue/MPS-22502).
 
 !!! question  "Can I use asynchronous code in behaviour methods such as calls to external tools?"
 
@@ -15,15 +15,15 @@
 
 !!! question  "Can I use a more specific return type while overriding behavior?"
 
-    No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-27720).
+    No, it is not possible. Have a look at [MPS-27720](https://youtrack.jetbrains.com/issue/MPS-27720).
 
 !!! question  "Can I use variable arguments (varArgs) in behaviour methods?"
 
-    No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-31056).
+    No, it is not possible. Have a look at [MPS-31056](https://youtrack.jetbrains.com/issue/MPS-31056).
 
 !!! question  "Can I enter a throws clause in behaviour methods?"
 
-    No, it is not possible. Have a look at [this ticket](https://youtrack.jetbrains.com/issue/MPS-22306).
+    No, it is not possible. Have a look at [MPS-22306](https://youtrack.jetbrains.com/issue/MPS-22306).
 
 !!! question  "Where can I save temporary information about nodes?"
     

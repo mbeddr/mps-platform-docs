@@ -45,7 +45,7 @@ Language: ^^jetbrains.mps.baselanguage.closures^^
 
 !!! warning "Exception when passing closure literal as a parameter in a behaviour method call"
 
-    Closures can't be used for functional interface types such as `java.util.Runnable` in behaviour methods (see [this ticket](https://youtrack.jetbrains.com/issue/MPS-31866))
+    Closures can't be used for functional interface types such as `java.util.Runnable` in behaviour methods (see [MPS-31866](https://youtrack.jetbrains.com/issue/MPS-31866))
 
 ## Collections
 
