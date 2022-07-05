@@ -76,7 +76,9 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.details
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets:
         auto_append:
