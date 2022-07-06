@@ -94,7 +94,7 @@ Language: ^^de.itemis.mps.editor.celllayout^^
     but the parent decides about the size of the child and the child then has to fit itself into these bounds. 
     This is used in tables and diagram, but also for the styles defined in the `de.itemis.mps.celllayout` language ([source](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&cid=C99H1FR42)).
 
-# Grammar Cells
+## Grammar Cells
 Language: ^^de.itemis.mps.grammarcells^^
 
 !!! question "Grammar cells force me to create a dummy component. Is this really necessary?"
@@ -111,7 +111,7 @@ Language: ^^de.itemis.mps.grammarcells^^
 !!! question "How can enter enumerations easier?"
     Specific Languages Blog &mdash; [Entering enumerations easier with grammar cells](https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/){target=_blank}
 
-# Querylist
+## Querylist
 Language: ^^com.mbeddr.mpsutil.editor.querylist^^
 
 - Displays node(s), which are not directly accessible by, thus instead via query.
@@ -125,21 +125,21 @@ Language: ^^com.mbeddr.mpsutil.editor.querylist^^
 
 {% include 'external_questions/querylist_navigatable.md' %}
 
-# Tooltips
+## Tooltips
 Language: ^^de.itemis.mps.tooltips.structure^^
 
 - tooltips on hover
 - A regular editor and a hover editor must be defined.
 - deprecated; use `jetbrains.mps.lang.editor.tooltips` instead.
 
-# Dropdown
+## Dropdown
 Language: ^^de.itemis.mps.dropdown^^
 
 - Surrounds an editor cell with a dropdown cell + button. 
 - When clicked, opens the code completion menu.
 - probably not very stable
 
-# Collapsible cells
+## Collapsible cells
 Language: ^^de.itemis.mps.editor.collapsible^^
 
 - defines collapsed/folded and expanded/unfolded editors
@@ -147,7 +147,7 @@ Language: ^^de.itemis.mps.editor.collapsible^^
 - no need for foldable collections
 - can be used for example in combination with query-lists
 
-# Mathematical operators
+## Mathematical operators
 Language: ^^de.itemis.mps.editor.math.notations^^
 
 - embeds mathematical operators into the editor
