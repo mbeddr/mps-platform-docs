@@ -61,6 +61,7 @@ plugins:
 # Extensions
 markdown_extensions:
   - abbr
+  - smarty
   - admonition
   - codehilite:
       guess_lang: false
