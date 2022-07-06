@@ -27,3 +27,13 @@
 
 !!! question "How can I speed up model checks?"
     Specific Languages Blog &mdash; [Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/){target=_blank}
+
+!!! question "How to build language extension for checking rules?"
+
+    > I built a baselanguage extension which can be used in a checking rule (i.e., in the typesystem aspect of another language) buut the new language#s generator isn't engaged during the generation of some checking rule using the extension (generation plan says: "NOT IN THE PLAN").
+
+    The generator of the new language must have a dependency to the baseLanguage generator with Scope set to `Extends`.
+    
+    ![extend baselanguage generator](generator_extend_baselanguage.png){width="800px"}
+
+    <sub>Contribution by: [@kbirken](https://github.com/kbirken)<sub>

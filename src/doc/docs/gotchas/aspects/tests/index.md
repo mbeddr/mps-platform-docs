@@ -20,3 +20,21 @@
 
 !!! warning "How do node tests work?"
     Specific Languages Blog &mdash; [How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/){target=_blank}
+
+!!! warning "How to know if my MPS code is inside a test?"
+
+    > Given I am writing some code in MPS that is supposed to run only if we're not running tests. How can I detect if I'm running a test?
+
+    1. Don't. 19 out of 20 questions asking for this figure out the code would better be running so that the tests will be checking your actual application. Consider mocking something out instead or ensuring that you are testing on a low-enough level!
+
+    2. If you read 1. and still want to do it, there are these two options:
+
+    ```java
+    // true if running tests from inside the MPS process or from command line
+    jetbrains.mps.RuntimeFlags.getTestMode().isInsideTestEnvironment()
+   
+    // true if running tests from command line only
+    jetbrains.mps.RuntimeFlags.isTestMode()
+    ```
+
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>

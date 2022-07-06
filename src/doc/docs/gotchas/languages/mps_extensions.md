@@ -123,6 +123,8 @@ Language: ^^com.mbeddr.mpsutil.editor.querylist^^
 
     Surround the querylist with a vertical collection and and set the cell layout of the querylist (not its content) to vertical.
 
+{% include 'external_questions/querylist_navigatable.md' %}
+
 # Tooltips
 Language: ^^de.itemis.mps.tooltips.structure^^
 

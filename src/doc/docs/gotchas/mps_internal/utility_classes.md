@@ -16,6 +16,7 @@
 - [ClassLoaderManager](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F%7EClassLoaderManager) - class responsible for loading (MPS) classes
 - [FindUsagesManager](http://127.0.0.1:63320/node?ref=r%3A54a768d9-9f11-4443-98d8-70ab3a783c52%28jetbrains.mps.findUsages%29%2F8568892084424436293) - class that contains methods for invoking the find usage ui
 - [CloneUtil](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator.impl%28MPS.Core%2F%29%2F%7ECloneUtil) - utility method for cloning a model
+    - Example: `new CloneUtil(resultModel, leftModel).cloneModelWithImports();`
 - [ModelDigestUtil](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EModelDigestUtil) - class that contains hash methods
 - [FindUtils](http://127.0.0.1:63320/node?ref=r%3A3cb1700d-933a-4e99-ae78-290ebea08948%28jetbrains.mps.ide.findusages.view%29%2F8568892084424436823) - class for find nodes in MPS
 - [MatchingUtil](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.lang.pattern.util%28MPS.Core%2F%29%2F%7EMatchingUtil) - method for checking if two nodes structurally match

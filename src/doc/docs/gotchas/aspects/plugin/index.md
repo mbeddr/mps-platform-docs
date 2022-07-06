@@ -55,6 +55,13 @@
     - The data flowing along targets is called *resources*.
     - Resources are represented as Java tnterfaces and tuples,
 
+!!! question "How can a change the default project directory?"
 
+    Put the following code in an application plugin:
+    ```java
+    // set default project location 
+    string defaultProjectDir = Paths.get(System.getProperty("user.home"), "NewProjectDir").toString();
+    GeneralSettings.getInstance().setDefaultProjectDirectory(defaultProjectDir);
+    ```
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-) 
