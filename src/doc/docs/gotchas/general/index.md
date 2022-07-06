@@ -42,7 +42,7 @@
     REP --> MOD2;
     REP --> MODN;
     MOD2 --> MR1[\model root 1\];
-    MR2 --> MD1{{model 1}};
+    MR2 --> MD1{model 1};
     MD1 --> RN1(root node 1);
     MD1 --> RN2(root node 2);
     MD1 --> RNN(root node n);
