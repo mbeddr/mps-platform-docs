@@ -30,3 +30,13 @@
 *[SRepository]: Semantic Repository
 *[BaseLanguage]: a projectional clone of Java 6 (with optional extensions for Java 7 and 8)
 *[DSL]:Domain Specific Language
+
+*[OS]: Open Source
+*[PR]: Pull Request or Public Relations
+*[MDD]: Model Driven Development
+*[MDSD]: Model Driven Software Development
+*[NDA]: Non Disclosure Agreement (Vertraulichkeitsvereinbarung)
+*[IETS3]: Integrated Specification Environment for the Specification of Technical Software Systems
+*[UML]: Unified Markup Language
+*[JVM]: Java Virtual Machine
+*[AI]: Artificial Intelligence (künstliche Intelligenz)
