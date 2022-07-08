@@ -5,3 +5,8 @@
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
 .hover_img a:hover span { display:block; width: 600px; overflow: visible;  }
+
+:root > * {
+  --md-code-hl-variable-color: #1c7d4d;
+  --md-code-hl-string-color: #BA2121;
+}
