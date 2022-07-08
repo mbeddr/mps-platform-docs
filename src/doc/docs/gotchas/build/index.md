@@ -31,12 +31,6 @@
 
     Have a look at this [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore) file.
 
-!!! warning "Tests fail with a message, that a filename or extension is too long (Windows)."
-
-    There is a path that is too long for Windows in the build script. 
-    Choose the option 'compressArgs' in 'test modules' node to fix the issue.
-    More info can be found in [MPS-24137](https://youtrack.jetbrains.com/issue/MPS-24137).
-
 !!! warning "Command line generation fails on Windows if using non-ASCII characters"
     
     This is a known bug ([MPS-34059](https://youtrack.jetbrains.com/issue/MPS-34059)). It happens because the generation is
@@ -49,6 +43,13 @@
 !!! question "Why can I successfully build models with missing imports?"
     Specific Languages Blog &mdash; [Why can I successfully build models with missing imports?](https://specificlanguages.com/posts/2022-02/11-successfully-build-models-with-errors/){target=_blank}
 
-!!! warning "X errors before generation"
+!!! warning "X errors before generation."
     Specific Languages Blog &mdash; [3358 errors before generation](https://specificlanguages.com/posts/2022-02/17-errors-before-generation/){target=_blank}
+
+!!! question "How do I clean the generated files in MPS?"
+
+    Possible solutions:
+
+    - Specific Languages Blog &mdash; [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/){target=_blank}
+    - When using a build script, have a dedicated clean task ([gradle example](https://github.com/JetBrains/MPS-extensions/blob/ade5d7798c2a233ce850ad539336362ed8ec437e/build.gradle#L272)).
 

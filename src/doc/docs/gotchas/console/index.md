@@ -32,3 +32,20 @@
     or by setting a system variable. The exact functionality of this flag can be found by looking at the [MPS source code](https://github.com/JetBrains/MPS/search?q=isInternalMode&type=code).
     One of the new action groups that it adds, is called Internal. There is also an Internal Actions Menu in Intellij IDE's. Consolute the [documentation](https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html)
     for more info.
+
+!!! question "How do I open the selected node in console?"
+
+    > Given I have a node selected in the editor. How can I select it to manipulate it in the MPS console?
+
+    <sub>Question by: [@aquapp](https://github.com/aquapp)<sub>
+
+    You can simply copy the node and paste it into the console:
+
+    1. copy node in editor (cmd/ctrl + c)
+    2. goto console
+    3. paste (cmd/ctrl + v)
+    4. MPS pastes a node reference where you can directly manipulate the node:
+
+    ![console_node_reference](console_node_reference.png)
+
+    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>

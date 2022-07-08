@@ -79,4 +79,39 @@
 !!! question "Why is my project suddenly read-only?"
     Specific Languages Blog &mdash; [Why is my project suddenly read-only?](https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/){target=_blank}
 
+??? question "How do I work with multiple projects in MPS?"
+
+    > Given I want to work on a MPS project that uses other projects and I want to switch between tasks that sometimes need changes on both, in the dependent project and the root project. I would like to switch back and forth between using the default prepackaged project dependencies and my own repository of them where I build them myself. How could I do that?
+
+    **Option 0**: Open multiple projects in MPS at the same time
+
+    - Works when doing small changes
+    - fast
+    - unreliable: when changing dependencies in my source models, this leads to a reload operation on the repository, which sometimes messes up the loaded repository and caches
+
+    **Option 1**: Publish and pull from local maven
+
+    - reliable
+    - [example](https://github.com/IETS3/iets3.opensource/wiki/Building-IETS3#building-against-local-mbeddr)
+    - 
+
+    - gradle script needs to be told to pull from local repository
+    -- e.g. by providing `-PforceLocalDependencies` to iets3
+    -- or use dependency overrides
+
+    **Option 3**: Changing project libraries
+
+    - does not affect command line builds
+
+    **Option 3a**: Command line setup Task
+    We usually have a `./gradlew setup` task in our projects that replaces your `.mps/libraries.xml`. When you want to change the project, you'll need to change the configuration of that command line setup task and rerun it.
+
+    **Option 3b**: MPS "Path variables" in Settings (deprecated)
+
+    In the MPS setttings, I can configure path variables that can be used in my `.mps/libraries.xml` to pinpoint to the location of a target project.
+
+    They will only configure your MPS behavior and not affect the command line builds. So in most cases, you'll not want to use them and instead let your build script setup these files.
+
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
 [^1]: [SRepository.java](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24)

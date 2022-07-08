@@ -37,3 +37,65 @@
     ![extend baselanguage generator](generator_extend_baselanguage.png){width="800px"}
 
     <sub>Contribution by: [@kbirken](https://github.com/kbirken)<sub>
+
+!!! question "When and why should a type be copied in an inference rule?"
+
+    > I've seen basically the same code, where one time the type is copied and another time it's just used (without the copy). When should we copy the type and why?
+
+    > ![typeof_Member](typeof_Member.png)
+
+    The type should only be copied if you want to use it in another type as a child.
+
+    In the example it should be fine to simply use `member.type`. But let's say you have a `SetType` concept in your language that contains an `innerType` as a child. If you want to construct an instance of that concept, you would write code like this:
+    
+    ```java
+    node<SetType> result = new node<SetType>;
+    result.innerType = member.type.copy;
+    typeof(member) :==: result
+    ```
+    
+    If you omit the `.copy` in the code, you would attempt to "hijack" the `member.type` node from the `member` and break the model. MPS will complain.
+
+    <sub>Contribution by: [@sergej-koscejev](https://github.com/sergej-koscejev)<sub>
+
+!!! question "How do I suppress errors?"
+
+    > Given I have a piece of embedded demonstration code and don't want it to show warnings (e.g. on unused variables).
+    > How can I do that?
+
+    Make your demonstration node implement the `ISuppressErrors` interface. If you don't override any methods of it, it will suppress all constraint, typesystem and cardinality errors and warnings.
+
+    - You may override `#suppress(node<>)` to only suppress the errors of certain subnodes.
+    - You may override `#suppress(NodeReportItem)` to only suppress certain errors. Overriding this will take precedence of overriding `#suppress(node<>)`, so that you should implement only one of them or manually call `#suppress(node<>)` from `#suppress(NodeReportItem)`.
+    
+    - If there are nested nodes that implement `ISuppressErrors`, the error will be suppressed if any of them returns true**. You may debug such by copying the error-node to the console (e.g. `nodeRef@50283`) and running this line:
+    
+    ```java
+    > nodeRef@50283.ancestors<concept = ISuppressErrors>.select({~it => [it, it.suppress(nodeRef@50283)]; });
+    
+    [[dummy, false], [<no name>[LiteralProgramFragment]: dummy():void, false], [Demo1, true]]
+    ```
+    
+    The result is the path of from that node to the top and will tell you which node is suppressing that error.
+    
+    The concept `IAntisuppressErrors` also plays a role there, yet is deprecated (implement the `suppress`-method instead).
+
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
+??? question "Is there an Elegant Way to Express Inference Rules on Lists?"
+
+    When want to calculate the common type of more than one node you can use a variable in the type system for that. I think in your case it should be possible to do:
+
+    ```java
+    var x;
+    
+    foreach it in self.items {
+        infer x :>=: typeof(it)
+    }
+    
+    typeof(self) :==: operation type(self, x, null);
+    ```
+
+    Given that you really need the operation type in the end. You most probably need to change the implementation of the rules contributing to the `operation type` to only use "one side". If the type of the expression is simply the type of the variable `x` you can omit it.
+
+    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>

@@ -68,8 +68,14 @@
 
     You can try [Skadi Cloud](https://skadi.cloud/).
 
-!!! question "How do I correctly run git clean?"
-    Specific Languages Blog &mdash; [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/){target=_blank}
+!!! info "I want to show a browser in MPS."
+
+    Since Intellij 2020.1 it is possible to use the [Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html).
+    Create a new swing component:
+    ```java
+    JBCefBrowser myBrowser = new JBCefBrowser(myUrl);
+    return myBrowser.getComponent();
+    ```
 
 [^1]:[MPS forum - How to migrate existing data into MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010855700-How-to-migrate-existing-data-into-MPS-)
 [^2]:[MPS forum - Standalone language generator](https://mps-support.jetbrains.com/hc/en-us/community/posts/360006153579-Standalone-language-generator)

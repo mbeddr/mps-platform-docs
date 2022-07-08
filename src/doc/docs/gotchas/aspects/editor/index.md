@@ -142,4 +142,82 @@
     - descent = The recommended distance below the baseline for singled spaced text.
     - height = ascent + descent
     - gap = space between cells in a collection. There is a left and right gap.
+
+??? question "What is the best way to improve the autocomplete description of concepts?"
+
+    > As you can see in the screenshot, the concepts of both opening braces are indistinguishable.
+
+    > ![autocompletion myUnion](autocompletion_myUnion.png)
+
+    > By changing the short description in the concept structure, I can change the description.
+
+    > 1. What's the best format to improve these descriptions?
+    > 2. And is this way the correct/best one to change the autocomplete concept description?
+
+    > ![concept BracketInitializer](bracketInitializer_concept.png)
+
+    > ![autocompletion int16](autocompletion_int16.png)
+
+    <sub>Question by: [@aquapp](https://github.com/aquapp)<sub>
+
+    In general, it's up to the users and specific context to decide there what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up right concept from the code completion menu.
+
+    Short description in the concept is the original, simple way to provide static description in the code completion menu. You can also add your own substitute action in the substitute menu of the concept (Editor aspect) to get the full control over the code completion menu and be able to generate the text dynamically based on the context.
+    
+    ![DataItem SubstituteMenu](DataItem_substituteMenu.png){width="800px"}
+    
+    ![data autocompletion](data_autocompletion.png){width="800px"}
+
+    <sub>Answer by: [@wsafonov](https://github.com/wsafonov)<sub>
+
+??? question "How do I set the cursor to the first editable cell?"
+
+    > ![editable cell and error_cell](editable_cell_error_cell.png)
+
+    > - (A) What it looks like after creation
+    > - (B) Initial situation with cursor at (1): pressing "Enter" leads to (C)
+
+    > The problem is, that in (C) the cursor is at (2), right before a read-only cell and thus editing or moving to the next cell is not possible. I would like to have, that the cursor jumps to the first editable cell, which is at position (3)
+    
+    > Structure of the new node in (C):
+
+    > ![concept:compoundInitializerMember](compoundInitializerMember_concept.png)
+
+    > Editor of the new node in (C):
+
+    >  ![example c:node editor](example_c_node_editor.png)
+
+    Usually, you would set the "attracts focus" property of the cell, where the cursor should be positioned, to "attractsFocus" or "FirstEditableCell".
+    But, since (C.2 and C.3) are error-cells, the default behaviour is to set the cursor in front of the first error cell, which is (C.2).
+    
+    Therefore, change the first part of your editor to a querylist cell (A), which references the "member" in the cell properties (B) and set the read-only property on the querylist.
+
+    ![new editor for CompoundInitializerMember](CompoundInitializerMember_editor_new.png)
+
+    <sub>Contribution by: [@aquapp](https://github.com/aquapp)<sub>
+
+!!! question "How do I programmatically collapse editor cells?"
+
+    Call `#!java EditorCell_Collection.fold()/unfold()`. You can check if is foldable by calling `#!java EditorCell_Collection.isFoldable()`.
+
+!!! question "How can I can hide ("show if") a custom cell in the editor?"
+
+    > Custom cells expect only a cell provider in the inspector, but don't offer the possibility to specify other attributes to set e.g. "show if". How can I hide a custom cell under a specific condition? ([MPS-33195](https://youtrack.jetbrains.com/issue/MPS-33195))
+
+    The meta model actually allows to specify the “show if” (and other attributes) on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
+
+    Since these attributes are "totally hidden" and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the "show if" on the collection.
+
+    <sub>Contribution by: [@aquapp](https://github.com/aquapp)<sub>
+
+!!! question "Is there a callback/hook when an editor tab is closed?"
+
+    > When closing an editor tab, MPS removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.
+    
+    > In my code, I want to react on this editor-close event. Is there are way to implement a callback or hook which is called when an editor tab is closed?
+
+    You can register an EditorComponentCreateListener, that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
+
+
+
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

@@ -20,3 +20,16 @@
 
 !!! question "How can I show a submenu in the intention menu?"
     Specific Languages Blog &mdash; [Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/){target=_blank}
+
+!!! question "An Intention is not visible although it should be. What can I do?"
+
+    > Intention X should be visible on Concept Y. However, when I select an instance of Y, it is not listed in the intention menu. What can I do?
+
+    Some simple steps to check:
+
+    - make sure the language that declares the intention is in the `used languages` of the model
+
+        - check if the intention applies to the concept you want it to apply to. (Maybe "visible on child nodes` is not set)
+        - check if the `isApplicable` condition evaluated to true (try to avoid adding `System.err.our` prints to the model)
+
+    <sub>Contribution by: [@coolya](https://github.com/coolya)<sub>

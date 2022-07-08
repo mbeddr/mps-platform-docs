@@ -62,6 +62,34 @@ Language: ^^jetbrains.mps.baselanguage.closures^^
     First convert your collection to a list that you downcast to a Java List.
     Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`
 
+??? question "Why doesn't my `yield` work inside a select operation?"
+
+    > Given I have this code: `myNode.items.select({~it => yield it.index})`
+    > When I run it, then I expect the result `[0,1,2,3,4]` but unexpectedly, I get the same list of nodes, as if I ran `myNode.items`
+    > What's happening?
+
+    `Yield` does not work with `.select({…})`
+
+    The yield statement doesn't work in a select.
+    It will do what you expected if you just call `.selectMany({…})` instead. That'll also make it clear what happens if you `yield` multiple times during an iteration, and that the control flow doesn't end when you're yielding.
+
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
+??? question "How to sort my children collection?"
+
+    > Given I have a node `myNode` with a child collection `myNode.children`.
+    > How do I sort them by their `toString()`?
+    > I tried `myNode.children/.sort(Ordering.lexical())`, but that doesn't do anything. Stepping revealed that it seems to create a copy of that list and sort that one.
+
+    Use the bold sort, call `toList` to materialize the result, and then `.clear` and `.addAll` it:
+
+    ```java
+    sequence<T> sorted = list.sort({~a,~b => ORDERING.compare(a, b); }, asc).toList;
+    list.clear;
+    list.addAll(sorted);
+    ```
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
 ## CheckedDots
 Language: ^^jetbrains.mps.baselanguage.checkeddots^^
 

@@ -5,7 +5,7 @@ open an issue on GitHub.
 
 If you are not already a member, consider joining [MPS on slack](http://slack-mps.jetbrains.com/).
 
-MPS versions: Latest {{ mps_latest }} Author: {{ mps_author }}
+Latest MPS version {{ mps_latest }} Minimum version in doc: {{ mps_author }}
 
 !!! quote "A Twitter user"
     "6 hours of debugging can save you 5 minutes of reading documentation."

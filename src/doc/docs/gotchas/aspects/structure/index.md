@@ -41,3 +41,7 @@
 
     - Short one: `new IdEncoder().toText(node.getNodeId())`
     - Long one: `ew IdEncoder().parseNodeId(nodeId)`
+
+!!! question "What is IMainClass good for?"
+    
+    An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).

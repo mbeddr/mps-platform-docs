@@ -106,4 +106,161 @@
 !!! question "How does shrinking of absolute paths work?"
     Specific Languages Blog &mdash; [Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/){target=_blank}
 
+!!! question "How can I retrieve nodes of other models and modules?"
+
+    `model.nodesIncludingImported` returns all nodes including the ones from other models that are currently imported. 
+
+!!! question "How can I delete a model in a module programmatically?"
+
+    Get the model-to-be-deleted as SModel (interface) and use `#!java new ModelDeleteHelper(model).delete();`
+    For more context see: [DeleteModeHelper](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java)
+
+
+!!! question "How can I make an internal MPS editor being read-only?"
+
+    > Given I want to make a contribution to a generator the `j.mps.lang.editor`.
+    > When I download the [MPS source](https://github.com/JetBrains/MPS), open the project in MPS under `code`
+    > and open `j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare`, then I see the model being read-only. What can I do?
+
+    You need to open MPS in IDEA (Community Edition is enough), compile and run it from there, then you can edit MPS sources. There are instructions in [README](https://github.com/JetBrains/MPS).
+
+??? question "How do I do a fulltext search in MPS?"
+
+    > I sometimes need a textual search which MPS doesn't provide out of the box.
+
+    > In that situation, I am unsure of the concept and type of what I see, so a top-down search is not an option. Instead I would like to search for that string to have a starting point for my investigation.
+
+    > Examples:
+
+    > - I want to investigate in an editor in the user interface and don't want to reverse engineer what hints, editors and concepts lead to what I see.
+    > - Behavioral view code, like custom cells, swing cells or querylists make it hard to figure out where the source logic of that is located.
+    > - when the console shows something I don't understand, I'd like to see its context source code, so that I can figure out what to do next.
+
+    **Option 0**: Use Language Debugging facilities of MPS instead.
+
+    For built-in languages, MPS brings a load of dedicated debugging facilities:
+
+    - Debugging **editor cells and nodes**: When you right-click an item in the editor, you can find a submenu "Language Debug".
+    - Debugging **menu entries**: Select an item that you're curious in and press CMD+Alt+B (Ctrl+Alt+B) to open the _Menu Trace_ of it.
+    - Setup and an IntelliJ and connect it to step through java code.
+
+    **Option 1**: Search for literals from console.
+
+    **Option 2**: Search through serialized Java.
+
+    1. Set up IntelliJ with your project.
+    2. Hit CMD+Shift+F (Ctrl+Shift+F) to search in path.
+    3. When you found a class of interest, open it in MPS via CMD+N (Ctrl+N). The source node usually has a similar name.
+
+    This is great for finding editor nodes, for example, if that java class is named `Vehicle_EditorBuilder`, your source node was an editor for the `Vehicle` concept.
+
+    **Last Resort**: Search XML model directly
+
+    Use this only if you have no Assembly and your project doesn't open. The serialized API is subject to change and using this should be the last barrier.
+
+    Then I use `ack` on the command line to find the relevant models that contain this string. The output even contains the node id though, as in this example:
+
+    ```
+    $ ack "ack com.mbeddr.mpsutil.grammarcells"
+    …
+    <node concept="3bR9La" id="1aL6sVX49Cb" role="1SiIV1">
+        <property role="3bR36h" value="false" />
+        <ref role="3bR37D" to="90a9:F1NWDqq_DA" resolve="com.mbeddr.mpsutil.grammarcells.runtime" />
+    </node>
+    …
+    ```
+
+    Use `#!java new IdEncoder().parseNodeId("1aL6sVX49Cb")` to get the node id.
+    This will print the corresponding node to console. Clicking it will open in in MPS:
+
+    ```java
+    #nodes.where({~it => 
+    boolean equals = false; 
+    try { 
+        equals = it/.getNodeId().equals(new IdEncoder().parseNodeId("1aL6sVX49Cb")); 
+    } catch (Exception e) { 
+        <no statements> 
+    } 
+    return equals; 
+    })
+    ```
+
+!!! question "How can you copy a language without the new one having duplicate model IDs?"
+
+    Try the following code:
+
+    ```java
+    { =>
+    SModule sm = module/module1;
+    SModule tm = module/module2;
+
+    map<SNode, SNode> node = new hashmap<SNode, SNode>;
+
+    foreach aspect in LanguageAspect.values {
+        SModel s = aspect.get((Language) sm);
+        SModel t = aspect.get((Language) tm);
+        if(s != null && t!= null) {
+            foreach r in new arraylist<SNode>(copy: t.getRootNodes()) {
+                ((node<>) r).detach;
+            }
+            foreach r in CopyUtil.copyAndPreserveId((((sequence<SNode>) s,getRootNodes())).toList, node) {
+                t.addRootNode(r)
+            }
+        }
+    }
+    }.invoke()
+    ```
+
+??? question "How to get rid of 'Error: Shall specify a repository to lock'?"
+    > When accessing model properties in rendering code, I must encapsulate the model accessing code in a read action:
+    
+    > ![read action missing repository](read_action_missing_repository.png)
+    
+    > It always has an error "Error: Shall specify a repository to lock". How can I get rid of it?
+    > What is a 'repository' and is there any documentation that explains the concept and how to use it correctly?
+
+    <sub>Question by: [@cwalesch](https://github.com/cwalesch)<sub>
+
+    The repository is what is represented as the "modules pool" in the UI. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. MPS is slowly but steadily moving to project specific repositories. That would mean each project (window) of MPS would have it's own separate repository. 
+
+    To get the repository you will need access to the project. e.g. the editor context will give you access to the repository: `editorContext.getRepository()`.
+    
+    In other cases for instance when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository though to the place where you need it.
+
+    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+
+??? question "How can I get an identifier of a node?"
+
+    > Given I have a node myNode and I need to serialize something that identifies it.
+    > When I serialize that something and then deserialize that identifier again, then I will find exactly that node.
+    > How can I build such a thing?
+
+    **Option 1**: PersistenceFacade Id
+
+    Since the url does not look nice; you may use this combined string of model-id and node id that is used for the Url. For that, import the class `org.jetbrains.mps.openapi.persistence.PersistenceFacade` from the _MPS.OpenApi_ stub and run:
+    
+    ```java
+    # serialize identifier
+    string mySerializedId = SNodePointer.serialize(node/.getReference())
+    
+    # find node based on serialized identifier
+    node<> myFoundNode = SNodePointer.deserialize(mySerializedId).resolve(repository)
+    
+    # then, node == myFoundNode
+    ```
+
+    **Option 2**: Url
+    
+    Import the `httpsupport` language and use `node.getURL`. This will be a url that you can use locally to open this node. It includes the node id and the model and thus is a pretty good globally unique id.
+    
+    This id is a local URL and looks odd though: `http://127.0.0.1:63320/node?ref=r%3A4bc03cd1-b1e3-49da-84da-f27e7062f6f7%28integrityOfUpdate%29%2F2209769512593382448&project=SecurityAnalyst`. Especially the code to find the node again based on this url contains some grepping then.
+    
+    **Option 3**: Node Id
+    
+    Use `#!java node/.getNodeId().toString()` it will yield the nodes id. Note that a nodeid is **only unique within this model**. If it should be globally unique, consider the next options.
+    
+    You could also deserialize this again somehow, but I don't have at hand, how.
+
+    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects
