@@ -29,7 +29,7 @@
 
     > Is it not possible to "override the textgen" this way?
 
-    <sub>Question by: [@markusvoelter](https://github.com/markusvoelter)<sub>
+    {{ question_by('markusvoelter') }}
 
     It's not possible this way. 
 
@@ -41,4 +41,4 @@
 
     There is [MPS-22092](https://youtrack.jetbrains.com/issue/MPS-22092) which describes this request.
 
-    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+    {{ answer_by('coolya') }}

@@ -31,4 +31,4 @@
     
     Note that elements that are not an instance of `INamedConcept` will make `forNamedElements` throw an exception.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}

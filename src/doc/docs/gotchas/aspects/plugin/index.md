@@ -85,7 +85,7 @@
     
     To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, and then call `getProject` on it.
 
-    <sub>Contribution by: [@coolya](https://github.com/coolya)<sub>
+    {{ contribution_by('coolya') }}
 
 !!! question "How can I open an MPS Editor Tab programmatically?"
 
@@ -105,7 +105,7 @@
     6. Click on `+` and select the new location of this `.msd` file.
     7. Open your build script for ci tests and update the solution path in the project structure.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 !!! question "How to execute an MPS action programmatically?"
 
@@ -150,7 +150,7 @@
 
     ![DanglingReferenceHandler](DanglingReferenceHandler.png)
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 ??? question "How can I ensure that a jar is loaded exaclty once and then never again?"
 
@@ -162,7 +162,7 @@
 
     Now we just have to ensure that the .jars can be found at runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the "lib" directory of the application (e.g. MPS installation / your product RCP).
 
-    <sub>Contribution by: [@till-f](https://github.com/till-f)<sub>
+    {{ contribution_by('till-f') }}
 
 ??? question "How can I use an IntelliJ icon for my action?"
 
@@ -172,7 +172,7 @@
 
     ![IconLoader](IconLoader.png)
 
-    <sub>Contribution by: [@till-f](https://github.com/till-f)<sub>
+    {{ contribution_by('till-f') }}
 
 ??? question "How to tell which IntelliJ version my MPS runs with?"
 
@@ -209,6 +209,6 @@
     
     Hint when used with grammarcells: you have to 'disable component inlining' which can be activated by an intention at the position where the include of A happens. Also in any EditorComponent that inherits from A and A itself we cannot use 'grammarcells'.
 
-    <sub>Contribution by: [@dbinkele](https://github.com/dbinkele)<sub>
+    {{ contribution_by('dbinkele') }}
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)

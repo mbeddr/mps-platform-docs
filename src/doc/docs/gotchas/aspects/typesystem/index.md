@@ -36,7 +36,7 @@
     
     ![extend baselanguage generator](generator_extend_baselanguage.png){width="800px"}
 
-    <sub>Contribution by: [@kbirken](https://github.com/kbirken)<sub>
+    {{ contribution_by('kbirken') }}
 
 !!! question "When and why should a type be copied in an inference rule?"
 
@@ -56,7 +56,7 @@
     
     If you omit the `.copy` in the code, you would attempt to "hijack" the `member.type` node from the `member` and break the model. MPS will complain.
 
-    <sub>Contribution by: [@sergej-koscejev](https://github.com/sergej-koscejev)<sub>
+    {{ contribution_by('sergej-koscejev') }}
 
 !!! question "How do I suppress errors?"
 
@@ -80,7 +80,7 @@
     
     The concept `IAntisuppressErrors` also plays a role there, yet is deprecated (implement the `suppress`-method instead).
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 ??? question "Is there an Elegant Way to Express Inference Rules on Lists?"
 
@@ -98,4 +98,4 @@
 
     Given that you really need the operation type in the end. You most probably need to change the implementation of the rules contributing to the `operation type` to only use "one side". If the type of the expression is simply the type of the variable `x` you can omit it.
 
-    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+    {{ answer_by('coolya') }}

@@ -156,7 +156,7 @@
     
     Unfortunately, it does not seem to be reliable. E.g., when changing something in the model, the API behaves correct in the first place. But after executing the "Synchronize" action, MPS for some reason believes that generation is not required any more (even though the change would have an effect on the output and "Synchronize" does not execute generation). This odd behavior can also be seen in the project view.
 
-    <sub>Contribution by: [@till-f](https://github.com/till-f)<sub>
+    {{ contribution_by('till-f') }}
 
 ??? question "How to generate large strings?"
 
@@ -184,7 +184,7 @@
 
     ![long string improved macro](long_string_improved_macro.png)
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 ??? question "How can I debug differences of generation between command line and MPS?"
 
@@ -214,7 +214,7 @@
 
     Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to an MPS bug [MPS-32026](youtrack.jetbrains.com/issue/MPS-32026) that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 ??? question "How use generated classes which implement an extension-point?"
 
@@ -247,7 +247,8 @@
     System.out.println("---> extension " + obj); 
     }
     ```
-    <sub>Contribution by: [@dbinkele](https://github.com/dbinkele)<sub>
+
+    {{ contribution_by('dbinkele') }}
 
 [^1]:[MPS forum - I want export multiple languages from MPS](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)

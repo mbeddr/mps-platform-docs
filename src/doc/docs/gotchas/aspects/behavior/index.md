@@ -129,6 +129,6 @@
     
     The rationale behind may be that if a method is overriding another one, both of them **must** be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the `isVirtual` more precisely as „is explicitly virtual", and `isVirtual()` as "is effectively virtual".
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 [^1]: [MPS forum - Generics for return type of behavior method](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010808559-Generics-for-return-type-of-behavior-method)

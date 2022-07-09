@@ -15,4 +15,4 @@
 
     A common workaround to get similar behavior with `navigatable-node` is to point it to a child or parent of the desired node instead of that node itself.
 
-    <sub>Contribution by: [@jonaskraemer](https://github.com/jonaskraemer)<sub>
+    {{ contribution_by('jonaskraemer') }}

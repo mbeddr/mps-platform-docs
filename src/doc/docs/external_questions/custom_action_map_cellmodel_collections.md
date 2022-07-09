@@ -25,4 +25,4 @@
     
     ![custom factory cell delete actions](custom_factory_cell_delete_actions.png)
 
-    <sub>Contribution by: [@arimer](https://github.com/arimer)<sub>
+    {{ contribution_by('arimer') }}

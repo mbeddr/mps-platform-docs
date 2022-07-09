@@ -11,7 +11,7 @@
 
     The language de.q60.mps.polymorphicfunctions that allows you to do that. It provides a new language aspect that allows you to declare a function in one language and multiple implementations in other languages. It supports polymorphic dispatch and even priority rules in case there are multiple applicable implementations.
 
-    <sub>Answer by: [@slisson](https://github.com/slisson)<sub>
+    {{ answer_by('slisson') }}
 
     **Alternative**
 
@@ -33,4 +33,4 @@
 
     Because the facade would typically implement some simple caching of the resulting EPI implementation (to not query the EP every time the functionality is required), this would mean that you might need to implement some additional mechanism to allow for dynamical reload/reset of the current EPI implementation during the development, when a new extension is created and tested.
 
-    <sub>Answer by: [@wsafonov](https://github.com/wsafonov)<sub>
+    {{ answer_by('wsafonov') }}

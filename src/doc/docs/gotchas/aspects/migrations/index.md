@@ -35,7 +35,6 @@
         }
     }
     ```
-    
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 [^1]:[MPS forum - Migration scripts best practice](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810-Migration-scripts-best-practic)

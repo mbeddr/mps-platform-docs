@@ -100,4 +100,4 @@
         private_user=XXX
         private_token=YYY
 
-    <sub>Contribution by: [@nkoester](https://github.com/nkoester)<sub>
+    {{ contribution_by('nkoester') }}

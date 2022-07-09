@@ -37,7 +37,7 @@
     jetbrains.mps.RuntimeFlags.isTestMode()
     ```
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 !!! error "Why does my test execution fail with "Test project '$...' is not opened. Aborted"?"
 
@@ -51,7 +51,7 @@
     
     > Unfortunately this setup always leads to broken tests. It seems like the unit tests are executed before the models (which are build during ci-run) and though the test fails.
 
-    <sub>Question by: [@arimer](https://github.com/arimer)<sub>
+    {{ question_by('arimer') }}
 
     The tests work fine when run from within the IDE? 
     If so the problem is most probably that when your tests are executed the are running from the jars and not the sources. So the generator output location points into the jar file that the tests are executed from and not the real source location anymore.
@@ -84,7 +84,7 @@
     
     I think the easier solution is to place the tests in separate solution and then invoke the make process for the solution that contains your input programmatically, so you can assert over the output. An example implementation how the make process is invoked can be found in the [mbeddr-c part](http://127.0.0.1:63320/node?ref=r%3A35144171-bbda-419f-9015-4d1f075e1db4%28com.mbeddr.core.runconfiguration.pluginSolution.plugin%29%2F7943990500389317776).
 
-    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+    {{ answer_by('coolya') }}
 
 ??? question "Why does my node id change during a node test?"
 
@@ -177,7 +177,7 @@
     \- "Item Name" must be replaced with the name of the item as shown in the editor  
     \- "\_this" is a concept from internalBaseLanguage DSL
 
-    <sub>Contribution by: [@cmoine](https://github.com/cmoine)<sub>
+    {{ contribution_by('cmoine') }}
 
 ??? question "How to name checking-errors with dynamic message?"
 
@@ -202,4 +202,4 @@
 
     Note that this does not work for errors that result from _constraints_.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}

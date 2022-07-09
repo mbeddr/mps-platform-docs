@@ -37,7 +37,7 @@
 
     > Given I have a node selected in the editor. How can I select it to manipulate it in the MPS console?
 
-    <sub>Question by: [@aquapp](https://github.com/aquapp)<sub>
+    {{ question_by('aquapp') }}
 
     You can simply copy the node and paste it into the console:
 
@@ -48,4 +48,4 @@
 
     ![console_node_reference](console_node_reference.png)
 
-    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+    {{ answer_by('coolya') }}

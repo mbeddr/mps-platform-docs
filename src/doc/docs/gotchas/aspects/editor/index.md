@@ -158,7 +158,7 @@
 
     > ![autocompletion int16](autocompletion_int16.png)
 
-    <sub>Question by: [@aquapp](https://github.com/aquapp)<sub>
+    {{ question_by('aquapp') }}
 
     In general, it's up to the users and specific context to decide there what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up right concept from the code completion menu.
 
@@ -168,7 +168,7 @@
     
     ![data autocompletion](data_autocompletion.png){width="800px"}
 
-    <sub>Answer by: [@wsafonov](https://github.com/wsafonov)<sub>
+    {{ answer_by('wsafonov') }}
 
 ??? question "How do I set the cursor to the first editable cell?"
 
@@ -194,7 +194,7 @@
 
     ![new editor for CompoundInitializerMember](CompoundInitializerMember_editor_new.png)
 
-    <sub>Contribution by: [@aquapp](https://github.com/aquapp)<sub>
+    {{ contribution_by('aquapp') }}
 
 !!! question "How do I programmatically collapse editor cells?"
 
@@ -208,7 +208,7 @@
 
     Since these attributes are "totally hidden" and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the "show if" on the collection.
 
-    <sub>Contribution by: [@aquapp](https://github.com/aquapp)<sub>
+    {{ contribution_by('aquapp') }}
 
 !!! question "Is there a callback/hook when an editor tab is closed?"
 

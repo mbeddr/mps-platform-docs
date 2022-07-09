@@ -219,7 +219,7 @@
     > It always has an error "Error: Shall specify a repository to lock". How can I get rid of it?
     > What is a 'repository' and is there any documentation that explains the concept and how to use it correctly?
 
-    <sub>Question by: [@cwalesch](https://github.com/cwalesch)<sub>
+    {{ question_by('cwalesch') }}
 
     The repository is what is represented as the "modules pool" in the UI. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. MPS is slowly but steadily moving to project specific repositories. That would mean each project (window) of MPS would have it's own separate repository. 
 
@@ -227,7 +227,7 @@
     
     In other cases for instance when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository though to the place where you need it.
 
-    <sub>Answer by: [@coolya](https://github.com/coolya)<sub>
+    {{ answer_by('coolya') }}
 
 ??? question "How can I get an identifier of a node?"
 
@@ -261,6 +261,6 @@
     
     You could also deserialize this again somehow, but I don't have at hand, how.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

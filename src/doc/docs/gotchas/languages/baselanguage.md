@@ -73,7 +73,7 @@ Language: ^^jetbrains.mps.baselanguage.closures^^
     The yield statement doesn't work in a select.
     It will do what you expected if you just call `.selectMany({…})` instead. That'll also make it clear what happens if you `yield` multiple times during an iteration, and that the control flow doesn't end when you're yielding.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 ??? question "How to sort my children collection?"
 
@@ -88,7 +88,8 @@ Language: ^^jetbrains.mps.baselanguage.closures^^
     list.clear;
     list.addAll(sorted);
     ```
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+
+    {{ contribution_by('abstraktor') }}
 
 ## CheckedDots
 Language: ^^jetbrains.mps.baselanguage.checkeddots^^

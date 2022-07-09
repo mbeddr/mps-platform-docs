@@ -112,6 +112,6 @@
 
     They will only configure your MPS behavior and not affect the command line builds. So in most cases, you'll not want to use them and instead let your build script setup these files.
 
-    <sub>Contribution by: [@abstraktor](https://github.com/abstraktor)<sub>
+    {{ contribution_by('abstraktor') }}
 
 [^1]: [SRepository.java](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24)

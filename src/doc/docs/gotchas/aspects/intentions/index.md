@@ -32,4 +32,4 @@
         - check if the intention applies to the concept you want it to apply to. (Maybe "visible on child nodes` is not set)
         - check if the `isApplicable` condition evaluated to true (try to avoid adding `System.err.our` prints to the model)
 
-    <sub>Contribution by: [@coolya](https://github.com/coolya)<sub>
+    {{ contribution_by('coolya') }}

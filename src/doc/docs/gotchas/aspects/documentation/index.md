@@ -24,6 +24,6 @@
 
     Take a look at the doc.aspect project in mbeddr.core. There is a node attribute that can be attached on pieces of a document to bind the document to some concept or node. I have recently reworked the project, and I created an example project in there which demonstrates the use.
 
-    <sub>Answer by: [@szabta89](https://github.com/szabta89)<sub>
+    {{ answer_by('szabta89') }}
 
 [^1]:[Use javadoc liberally](http://www.javapractices.com/topic/TopicAction.do?Id=60)
