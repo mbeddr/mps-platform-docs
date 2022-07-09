@@ -1,19 +1,15 @@
 site_name: mps-platform-docs
 
-# Meta tags (placed in header)
 site_description: This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS and common MPS platforms.
 site_author: itemis platform team
 site_url: https://mbeddr.github.io/mps-platform-docs
 
-# Repository (add link to repository on each page)
 repo_name: mps-platform-docs
 repo_url: https://github.com/mbeddr/mps-platform-docs
 edit_uri: edit/main/src/doc/docs/
 
-# Copyright (shown at the footer)
 copyright: 'Copyright &copy; 2022 itemis platform team'
 
-# Material theme
 theme:
   name: 'material'
   palette:
@@ -45,10 +41,7 @@ extra_css:
 extra:
   mps_latest: MPS 2021.3.1
   mps_author: MPS 2021.1.4
-#plugins:
-#  - search
-#    Required for variables support (https://github.com/rosscdh/mkdocs-markdownextradata-plugin)
-#  - markdownextradata
+
 plugins:
   - search
   - macros
@@ -56,13 +49,6 @@ plugins:
   - kroki
   - autolinks
 
-#  social:
-#    - icon: fontawesome/brands/github
-#      link: https://github.com/you
-#    - icon: fontawesome/brands/twitter
-#      link: https://twitter.com/you
-
-# Extensions
 markdown_extensions:
   - abbr
   - smarty
