@@ -212,7 +212,7 @@
 
     Remark 1: Inplace transformations are on or off depending on your build script, same applied to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build not project is opened, which means anything that tried to access the project incl, virtual files will fail.
 
-    Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to an MPS bug [MPS-32026](youtrack.jetbrains.com/issue/MPS-32026) that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
+    Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to an MPS bug MPS-32026 that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
 
     {{ contribution_by('abstraktor') }}
 

@@ -33,7 +33,7 @@
         
 !!! warning "Highlighting of constraint errors in inspector doesn't work."
 
-    Known bug ([MPS-32350](https://youtrack.jetbrains.com/issue/MPS-32350)). Pressing ++f5++ helps.
+    Known bug (MPS-32350. Pressing ++f5++ helps.
 
 !!! hint  "I need to delete non-existing children, references or properties from a node."
 
@@ -202,7 +202,7 @@
 
 !!! question "How can I can hide ("show if") a custom cell in the editor?"
 
-    > Custom cells expect only a cell provider in the inspector, but don't offer the possibility to specify other attributes to set e.g. "show if". How can I hide a custom cell under a specific condition? ([MPS-33195](https://youtrack.jetbrains.com/issue/MPS-33195))
+    > Custom cells expect only a cell provider in the inspector, but don't offer the possibility to specify other attributes to set e.g. "show if". How can I hide a custom cell under a specific condition? (MPS-33195)
 
     The meta model actually allows to specify the “show if” (and other attributes) on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
 

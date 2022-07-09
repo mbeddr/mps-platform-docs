@@ -12,7 +12,7 @@
 
 !!! question  "Can properties be overridden?"
 
-    No. More info can be found in [MPS-17143](https://youtrack.jetbrains.com/issue/MPS-17143).
+    No. More info can be found in MPS-17143.
 
 !!! warning  "I implemented `ISuppressErrors` but errors are still shown for my node."
 

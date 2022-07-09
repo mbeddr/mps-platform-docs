@@ -20,7 +20,7 @@
 ## Tools
 
 !!! info "I want to run an LSP server for MPS grammars."
-    There is no support for this in IntelliJ products (see [IDEABKL-7409](https://youtrack.jetbrains.com/issue/IDEABKL-7409))
+    There is no support for this in IntelliJ products (see IDEABKL-7409)
     and also no implementation in MPS.
 
 !!! info "I want to use databases in MPS."

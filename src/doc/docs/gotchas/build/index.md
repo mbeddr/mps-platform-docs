@@ -19,7 +19,7 @@
 
 !!! warning "The gradle build fails with exception: Incremental build fails during generation on no changed models"
 
-    [Known bug](https://youtrack.jetbrains.com/issue/MPS-33541). Run `git clean -xdf` and rebuild everything.
+   Run `git clean -xdf` and rebuild everything (MPS-33541.)
 
 !!! question "How can I find out the supported MPS version of a project?"
 
@@ -33,9 +33,8 @@
 
 !!! warning "Command line generation fails on Windows if using non-ASCII characters"
     
-    This is a known bug ([MPS-34059](https://youtrack.jetbrains.com/issue/MPS-34059)). It happens because the generation is
-    started with a Window encoding. Set the following environment variable before starting the build:
-    `set JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"`
+    It happens because the generation is started with a Window encoding. Set the following environment variable before starting the build:
+    `set JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"` (MPS-34059).
 
 !!! question "How can I fetch dependencies using Gradle?"
     Specific Languages Blog &mdash; [Fetching dependencies with Gradle](https://specificlanguages.com/posts/2022-01/31-fetching-dependencies-with-gradle/){target=_blank}

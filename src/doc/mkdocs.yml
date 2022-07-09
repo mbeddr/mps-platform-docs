@@ -48,7 +48,19 @@ plugins:
   - git-revision-date-localized
   - kroki
   - autolinks
-
+  - autolink_references:
+      autolinks:
+        - reference_prefix: MPS-
+          target_url: https://youtrack.jetbrains.com/issue/MPS-<num>
+        - reference_prefix: IDEABKL-
+          target_url: https://youtrack.jetbrains.com/issue/IDEABKL-<num>
+        - reference_prefix: JBR-
+          target_url: https://youtrack.jetbrains.com/issue/JBR-<num>
+        - reference_prefix: IDEA-
+          target_url: https://youtrack.jetbrains.com/issue/IDEA-<num>
+        - reference_prefix: IJSDK-
+          target_url: https://youtrack.jetbrains.com/issue/IJSDK-<num>
+          
 markdown_extensions:
   - abbr
   - smarty

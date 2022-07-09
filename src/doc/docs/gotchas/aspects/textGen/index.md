@@ -39,6 +39,6 @@
 
     2. Create annotations that override the text gen of the concepts and attache them in a generator. Then MPS will first call the text gen of the annotation and you can override it there. 
 
-    There is [MPS-22092](https://youtrack.jetbrains.com/issue/MPS-22092) which describes this request.
+    There is MPS-22092 which describes this request.
 
     {{ answer_by('coolya') }}
