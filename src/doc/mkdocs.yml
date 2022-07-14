@@ -109,7 +109,6 @@ nav:
     - Plugins: gotchas/plugins/index.md
     - External Files and Tools: gotchas/external_files_and_tools/index.md
     - Console: gotchas/console/index.md
-    - Build: gotchas/build/index.md
     - Platform specific:
       - Windows: reference/platforms/windows.md
       - Mac: reference/platforms/mac.md
