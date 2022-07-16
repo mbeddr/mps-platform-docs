@@ -1,6 +1,6 @@
 !!! question "Where can I use my languages that I have created?[^1]"
 
-    The main platform is MPS itself, or a custom IDE based on MPS (so called RCP).
+    They can be used in MPS itself, or in a custom IDE based on MPS (so called RCP).
 
 !!! question "Are MPS language often used as plugins in Intellij IDEs instead of MPS itself? (an IntelliJ IDEA plugin, not custom RCP)"
 
@@ -16,9 +16,6 @@
     documents and the [PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
     Using plugins that are not developed for MPS can interfere with certain features of MPS (e.g. find usages isn't working anymore).
 
-!!! warning "My plugin is incompatible with the current RCP version."
-    Specific Languages Blog &mdash; [Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/){target=_blank}
-
 !!! question "Are there any general purpose plugins for MPS from the community?"
     Have a look at the [plugin section](https://mps.rocks/#awesome-MPS) of [mps.rocks](https://mps.rocks).
 
@@ -28,15 +25,6 @@
 !!! question "How do I disable notifications for fatal errors?"
 
     Add `idea.fatal.error.notification=disabled` to idea.properties.
-
-!!! question "How can I customize the welcome screen in an RCP?"
-
-    - Specific Languages Blog &mdash; [Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/){target=_blank}
-    
-    The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. A cheat sheet for the syntax can be found [here](https://devhints.io/xpath). 
-    
-    - Specific Languages Blog &mdash; [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/){target=_blank}
-    - Specific Languages Blog &mdash; [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/){target=_blank}    
 
 !!! info "I want to know about existing projects regarding MPS in the web."
 
@@ -76,23 +64,6 @@
         "homePath": "/Applications/mps/mac/MPS-2021.2.app/Contents"
     }
     ```
-
-!!! question "How can I reduce the size of the RCP?"
-
-    - Remove all packaged plugins that you don't need
-    - Use a JBR version without JCEF if you don't need an embedded browser (jbr_nomod).
-
-!!! question "How can I deactivate a preference page?"
-
-    - Remove the plugin that contains the preference page.
-    - For  SPreference Pages: They are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and call `#!java dispose`
-    or you could unregister the preference pages itself. For example:
-    ```java
-    list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project)).getPlugins());
-    plugins.findFirst({~it => it.toString().startsWith("com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin"); }).getPrefsComponents().get(0).getPages().get(0).unregister();
-    ```
-    
-    For preference forms: they can be found through `#!java Configurable.APPLICATION_CONFIGURABLE.getPoint().getExtensionList` and removed by calling `#!java unregisterExtension`.
 
 [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
 

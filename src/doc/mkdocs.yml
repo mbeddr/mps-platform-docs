@@ -113,6 +113,7 @@ nav:
       - Windows: reference/platforms/windows.md
       - Mac: reference/platforms/mac.md
       - Linux: reference/platforms/linux.md
+    - RCP: gotchas/rcp/index.md
   - Aspects:
     - Structure: gotchas/aspects/structure/index.md
     - Editor: gotchas/aspects/editor/index.md

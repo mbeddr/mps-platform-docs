@@ -64,11 +64,6 @@
     GeneralSettings.getInstance().setDefaultProjectDirectory(defaultProjectDir);
     ```
 
-!!! question "How can I replace the logical view on left side with a  custom one?"
-
-
-    Use the class `com.mbeddr.mpsutil.projectview`. You can find a example that replicates the _logical view_ [in mbeddr](http://127.0.0.1:63320/node?ref=r%3Ab2f3d5f9-b81e-4589-95e8-d5be28f6e48f%28com.mbeddr.mpsutil.projectview.views.plugin%29%2F8309912865649309798&project=com.mbeddr.mpsutil).
-
 !!! warning "My project is not a project"
     
     > I want to call `GenerationCheckHelper.checkModelsBeforeGenerationIfNeeded` to check my model. It that takes a `Project` but my `Project` that I get  as an action context isn't the correct project. The type system complains that it's not the correct class. 
@@ -152,7 +147,7 @@
 
     {{ contribution_by('abstraktor') }}
 
-??? question "How can I ensure that a jar is loaded exaclty once and then never again?"
+??? question "How can I ensure that a jar is loaded exactly once and then never again?"
 
     > I have a .jar that depends on a native libray (.dll/.so/...). To use it in an MPS plugin I have a stubs solution for it. Unfortunately, without further ado, MPS tries to reload the jar in some cases (e.g. after a rebuild). This will fail, because the JVM does not allow reloading of native libraries.
     
@@ -173,25 +168,6 @@
     ![IconLoader](IconLoader.png)
 
     {{ contribution_by('till-f') }}
-
-??? question "How to tell which IntelliJ version my MPS runs with?"
-
-    > Given I want to know, which version of [IntelliJ Community](https://github.com/JetBrains/intellij-community) my MPS is built from.
-    > How to tell?
-
-    The easiest way to get the correct platform for an MPS version is by running ant in the root of your MPS sources:
-
-    `ant -f build/getDependencies.xml download-platform`
-
-    It will place the platform in `mps-platform` of the repository and its automatically imported into the intellij project where can read the sources and also step into them when debugging.
-
-    In case you're looking at an RCP: `/build.number` provides this information and more, eg `idea.platform.build.number=MPS-203.7717.56`.
-
-    The platform version is part of the build information e.g. MPS-211.7442.1291
-
-    To get the baseline version e.g. 211: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
-
-    To get the full version e.g. 211.7442.1291: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
 
 ??? question "How to use a Projection Mode Switcher to alter EditorComponent?"
 
@@ -216,35 +192,5 @@
 
     Execute: `#!java repository.getModelAccess().executeUndoTransparentCommand()`
 
-??? question "How can I show my custom project view instead of the MPS logical view?"
-
-    ```java
-    SwingUtilities.invokeLater(new Runnable() { 
-        public void run() {
-            list<AbstractProjectViewPane> viewsToRemove = new linkedlist<AbstractProjectViewPane>;
-            ProjectView projectView = ProjectView.getInstance(project.getProject());
-            foreach paneID in projectView.getPaneIds() {
-            if (paneID.endsWith(ProjectViewHelper.YOUR_PROJCET_VIEW_ID)) {
-            if (!projectView.getCurrentViewId().equals(paneID)) {
-            projectView.changeView(paneID);
-            }
-            } else if (this.viewsToKeep.asSequence.any({~it => paneID.endsWith(it); })) {
-            continue;
-            } else {
-            viewsToRemove.add(projectView.getProjectViewPaneById(paneID));
-            }
-            }
-            viewsToRemove.forEach({~it =>
-            projectView.removeProjectPane(it);
-            it.dispose();
-            });
-            ProjectPane.getInstance(project).activate();
-        }
-        })
-    ```
-
-!!! question "How can I customise the New Roots (mbeddr.platform) or New dialog of MPS/mbeddr?"    
-
-    `#!java CreateRootFilterEP.getInstance().addFilter`
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)
