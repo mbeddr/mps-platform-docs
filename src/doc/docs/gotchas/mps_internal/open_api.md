@@ -88,3 +88,18 @@
 
     Get the model-to-be-deleted as SModel (interface) and use `#!java new ModelDeleteHelper(model).delete();`
     For more context see: [DeleteModeHelper](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java)
+
+!!! question "How can I add a language to the "Used Languages" settings of a model programmatically?"
+
+    - Module level: `#!java ((AbstractModule) moduleA).addDependency(moduleB.getModuleReference(), false)`
+    - Model level: `#!java new ModelImports(model).addUsedLanguage(language)`
+
+    To get the language from a reference, you can call: `MetaAdapterFactory.getLanguage(moduleRef)`.
+
+!!! question "Can a node-ptr point to non-root nodes?"
+
+    Yes: `#!java node-ptr/Integer->parseInt->radix/`
+
+!!! question "How can I create a MPS Language programatically and add it to the current project?"
+
+    `#!java NewModuleUtil.createLanguage`

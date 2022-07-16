@@ -21,6 +21,9 @@ See also: Specific Languages Blog &mdash; [Debugging in MPS](https://specificlan
 - Where stores MPS user-specific files (configuration, caches, plugins, logs, and so on)
     - [Default IDE directories](https://www.jetbrains.com/help/mps/2020.1/tuning-the-ide.html#default-dirs)
 
+!!! question "How do I debug action maps?"
+
+  Set a breakpoint in `CellActionExecutorFinder`.
 
 # General Blog posts
 

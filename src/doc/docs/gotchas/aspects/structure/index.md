@@ -45,3 +45,14 @@
 !!! question "What is IMainClass good for?"
     
     An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
+
+!!! question "When a concept extends another concepts/implements some interfaces, which method is called when they exist in multiple concepts/interfaces?"
+
+    The used algorithm is a a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source code](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30). When the concept doesn't implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
+    You can try it yourself, for example for the concept `ClassConcept`:
+    ```java
+    BehaviorRegistryImpl r = (BehaviorRegistryImpl) ConceptRegistry.getInstance().getBehaviorRegistry();
+    BHDescriptor d = r.getBHDescriptor(concept/ClassConcept/);
+    #print r.getMRO().calcLinearization(_SAbstractConcept.wrap(concept/ClassConcept/));
+    ```
+    If you want to call a specific `type() -implementation, you have to just cast the node to the corresponding concept and then call the method e.g. `#!java myNode as MyITypeable.type()`

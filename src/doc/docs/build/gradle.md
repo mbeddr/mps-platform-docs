@@ -1,5 +1,13 @@
 # Gradle Tips
 
+!!! question "Is there a Gradle plugin for downloading things?"
+
+    Yes, [gradle-download-task](https://github.com/michel-kraemer/gradle-download-task).
+
+!!! question "Is there a Gradle plugin for making HTTP requests?"
+
+    Yes, [gradle-http-plugin](https://http-builder-ng.github.io/gradle-http-plugin/).
+
 | Item               | Description                                                                                                                                                                                                                                                                                |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Closures           | The closure does `it (delay)  {}` which will delay the value propagation to execution instead of configuration time.                                                                                                                                                                       |

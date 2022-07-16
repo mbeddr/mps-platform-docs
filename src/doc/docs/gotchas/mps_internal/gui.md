@@ -2,6 +2,10 @@
     It can be found in the IntelliJ IDEA [documentation](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html).
     A more technical explanation can be found in the IntelliJ Platform Plugin SDK [documentation](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
 
+!!! question "How can I show modal dialogs for inputting text?"
+
+    Use the class [com.intellij.openapi.ui.Messages](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.ui%28MPS.IDEA%2F%29%2F%7EMessages).
+
 !!! question "How do I add messages to the right side of the window?"
 
     In IntelliJ IDEA it is called [error stripe](https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html),

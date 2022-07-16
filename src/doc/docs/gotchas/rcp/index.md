@@ -82,3 +82,20 @@
 !!! question "How can I customise the New Roots (mbeddr.platform) or New dialog of MPS/mbeddr?"
 
     `#!java CreateRootFilterEP.getInstance().addFilter`
+
+!!! question "how to change (or turn off) the exception submission dialog?
+
+    - Remove all error handlers like [this](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36).
+    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop ups in the IDE where you can see the exception.
+
+!!! question "Where can I find the latest MPS and IntelliJ icons?"
+
+    - MPS: [mps-icons](https://github.com/JetBrains/MPS/tree/master/workbench/mps-icons/source)
+    - IntelliJ: [Icons list](https://jetbrains.design/intellij/resources/icons_list/)
+
+!!! question "How can I restart MPS programmatically?"
+
+    ```java
+    ApplicationEx app = ApplicationManagerEx.getApplicationEx(); 
+    app.restart(true,true);
+    ```

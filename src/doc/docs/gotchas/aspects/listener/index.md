@@ -4,4 +4,8 @@
 
 !!! question "Is there a simple way to listener to changes in any descendant?"
 
-    Add a single change listener to `BaseConcept. You would still need to define your logic for every kind of a change (property, reference, child...) separately there.
+    Add a single change listener to `BaseConcept`. You would still need to define your logic for every kind of a change (property, reference, child...) separately there.
+
+!!! question "Are they executed synchronously or asynchronously?"
+
+    They are executed synchronously.

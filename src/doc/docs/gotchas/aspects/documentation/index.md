@@ -26,4 +26,8 @@
 
     {{ answer_by('szabta89') }}
 
+!!! Is there a way to resolve references to embedded images (screenshots) across different documents?
+
+    This is enabled by adding the document to the "depends on" section.
+
 [^1]:[Use javadoc liberally](http://www.javapractices.com/topic/TopicAction.do?Id=60)

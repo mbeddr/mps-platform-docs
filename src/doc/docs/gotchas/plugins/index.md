@@ -65,6 +65,17 @@
     }
     ```
 
+!!! question "How can I compare two nodes?"
+
+    - Select them in the logical view, right click -> Compare two nodes
+    - Use the language `com.mbeddr.mpsutil.nodediff`
+        - Select first node: Set as First Node in Diff
+        - Select second node: Show Diff with First Node
+
+!!! error "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found"
+    
+    Make sure that the solution kind is not set to none.
+
 [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
 
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)

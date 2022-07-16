@@ -250,9 +250,18 @@
 
     {{ contribution_by('dbinkele') }}
 
-!!! Where should I put classes that I need on the user side and in the generator?
+!!! question "Where should I put classes that I need on the user side and in the generator?"
 
     Move the classes to a solution and add that solution as a runtime solution to the language (in the module properties).
+
+!!! question "Can I access the output model in a property macro?"
+
+    > In reference macros in generators, I can use the provided "outputNode" parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
+    > Can I do something similar in property macros? For those, there obviously is no "outputNode". I'd still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?
+
+    {{ question('jonaskraemer') }}
+
+    You can try to use the `post-processing` function of a `$MAP_SRC$` macro.   
 
 [^1]:[MPS forum - I want export multiple languages from MPS](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)

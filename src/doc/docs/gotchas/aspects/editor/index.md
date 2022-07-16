@@ -232,4 +232,27 @@
     })
     ```
 
+!!! question "How can I set common cell attributes such `show if` in a `custom cell`?"
+
+    Not possible at the moment (MPS-33195). For `show if` the cell has to be surrounded by a collection and there 
+    the attribute can be set.
+
+!!! question "How can I paint the background of certain editor cells with a different color based on an analysis of the model?"
+
+    - with a conditional editor
+    - by using the class `NodeHighlightManager`:
+
+    ```java
+    NodeHighlightManager highlightManager = this.editorComponent.getHighlightManager(); 
+    EditorMessageOwner messageOwner = this.editorComponent.getHighlightMessagesOwner();
+    (...)
+    highlightManager.mark(((SNode) ref), HighlightConstants.INSTANCES_COLOR, "usage", messageOwner);
+    ```
+
+    The second approach has a better performance, because the highlighter runs asynchronously and not during the editor rebuild.
+
+!!! question "Is there a utility class related to editor hints?"
+
+    Yes, there is in mbeddr: [EditorHintHelper](http://127.0.0.1:63320/node?ref=r%3A1784e088-20fd-4fdb-96b8-bc57f0056d94%28com.mbeddr.core.base.editor%29%2F7773837976085536185)
+
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

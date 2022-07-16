@@ -2,6 +2,10 @@
 
 For details see: https://www.jetbrains.com/help/mps/build-language.html
 
+!!! question "How can I override the build directory name `build to something different?"
+
+    You can do it when you invoke Ant by passing `-Dbuild.dir=otherDir`.
+
 !!! warning "Dependencies on a module not visible from current build project."
 Specific Languages Blog &mdash; [Build script error: "Dependency on a module not visible from current build project"](https://specificlanguages.com/posts/build-script-errors/dependency-on-a-module-not-visible-from-current-build-project/){target=_blank}
 

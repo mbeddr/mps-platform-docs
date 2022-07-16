@@ -37,4 +37,24 @@
     ```
     {{ contribution_by('abstraktor') }}
 
+!!! question "How can I find all references to a specified root node and change these references, so they point to another root node?"
+
+    Search through the methods in [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346).
+
+    Example with finders:
+
+    ```java
+    SearchResults<node<>> results = execute finders(NodeUsages, node, unspecified scope, <default>); 
+
+    foreach result in results.getSearchResults() {
+    node<> resultObject = result.getObject();
+    sequence<reference> references = resultObject.references.where({~it => it.target :eq: node; });
+    references.forEach({~it => resultObject/.setReferenceTarget(it.link, reuseact); });
+    }
+    ```
+
+!!! error "When creating root nodes as part of language migration via model.add root(someRoot), the exception UnsupportedOperationException is thrown."
+
+    Make sure that the affected model is not a non-editable model.
+
 [^1]:[MPS forum - Migration scripts best practice](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810-Migration-scripts-best-practic)

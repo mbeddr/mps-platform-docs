@@ -203,3 +203,14 @@
     Note that this does not work for errors that result from _constraints_.
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "What's the best way to test the contents of a the code completion/subsitution menu for a given cursor position using a NodesTestCase or an EditorTestCase?"
+
+    Example (EditorTestCase):
+
+    ```java
+    SubstituteInfo si = (editor component.getSelectedCell()).getSubstituteInfo();
+    list<SubstituteAction> actions = si.getMatchingActions("", false);
+    assert actions.size == 4;
+    assert actions.any({ it => it.getMatchingText().equals("something"); });
+    ```

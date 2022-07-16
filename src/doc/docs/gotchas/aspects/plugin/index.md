@@ -141,5 +141,8 @@
 
     {{ contribution_by('dbinkele') }}
 
+!!! question "Is it possible to associate a MPS-Aspect with multiple nodes?"
+
+    Yes, see: `#!java IConceptAspect.getBaseConceptCollection`.
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)

@@ -32,3 +32,12 @@
     Note that elements that are not an instance of `INamedConcept` will make `forNamedElements` throw an exception.
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "How can I combine scopes?"
+
+    Use the class [CompositeScope](http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F8401916545537277021).
+
+!!! question "What is the difference between `parent scope`and `super.getScope`?"
+
+    `parent scope` asks the scope to the container of your node or up in the hierarchy until it finds a scope provider.
+    `super.getScope` will use the implementation from the super concept.
