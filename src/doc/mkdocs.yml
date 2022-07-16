@@ -114,6 +114,8 @@ nav:
       - Mac: reference/platforms/mac.md
       - Linux: reference/platforms/linux.md
     - RCP: gotchas/rcp/index.md
+    - Trouble Shooting Guide: reference/trouble_shooting_guide.md
+    - Debugging: reference/debugging.md
   - Aspects:
     - Structure: gotchas/aspects/structure/index.md
     - Editor: gotchas/aspects/editor/index.md
@@ -159,6 +161,12 @@ nav:
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
       - Open API: gotchas/mps_internal/open_api.md
+      - Dependencies and Classpath:
+        - General: reference/deps_and_classpath.md
+        - Terminology and UI for Access: reference/terminology_and_ui_for_access.md
+        - Models: reference/models.md
+        - Dependencies: reference/dependencies.md
+        - Recipes: reference/recipes.md
       - Classloading: gotchas/mps_internal/classloading.md
       - Utility classes: gotchas/mps_internal/utility_classes.md
       - GUI: gotchas/mps_internal/gui.md
@@ -172,14 +180,6 @@ nav:
         - Programming principles: clean_code/programming_principles.md
         - Java Style Guide: clean_code/baselanguage/java_style_guide.md
   - Reference:
-    - Trouble Shooting Guide: reference/trouble_shooting_guide.md
-    - Dependencies and Classpath:
-        - General: reference/deps_and_classpath.md
-        - Terminology and UI for Access: reference/terminology_and_ui_for_access.md
-        - Models: reference/models.md
-        - Dependencies: reference/dependencies.md
-        - Recipes: reference/recipes.md
-    - Debugging: reference/debugging.md
     - Design Patterns: reference/design_patterns.md
     - UX/UI:
         -  General: reference/ux_ui.md
@@ -188,5 +188,6 @@ nav:
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
+  - About:
     - Editing this guide: reference/editing_this_guide.md
     - Original authors: reference/original_authors.md

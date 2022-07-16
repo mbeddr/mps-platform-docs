@@ -20,11 +20,7 @@ See also: Specific Languages Blog &mdash; [Debugging in MPS](https://specificlan
 - Log file: is stored in the Logs folder, e.g. `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
 - Where stores MPS user-specific files (configuration, caches, plugins, logs, and so on)
     - [Default IDE directories](https://www.jetbrains.com/help/mps/2020.1/tuning-the-ide.html#default-dirs)
-    
 
-## Random
-
-- `SNode::putUserObject()`: You can store and access Java-Objects (as key-value pairs) where you normally could not access them in the mps-context, e.g. storing it as "Node-member" and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases!
 
 # General Blog posts
 

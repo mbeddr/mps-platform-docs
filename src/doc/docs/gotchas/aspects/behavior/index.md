@@ -80,7 +80,9 @@
 !!! question  "Where can I save temporary information about nodes?"
     
     Consider saving temporay data about nodes in annotations and user objects ([node/.putUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529), [node/.getUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529))
-    instead of introducing properties. For the generator consult the section "Transferring User Data" of the [generator documentation](https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference).
+    instead of introducing properties. 
+    `SNode::putUserObject()`: You can store and access Java-Objects (as key-value pairs) where you normally could not access them in the mps-context, e.g. storing it as "Node-member" and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases!
+    For the generator consult the section "Transferring User Data" of the [generator documentation](https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference).
 
 !!! question "How to mark a constructor-created child optional? (created by a light quotation)"
 
