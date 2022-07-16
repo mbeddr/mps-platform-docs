@@ -22,7 +22,7 @@
 
 !!! question "How can I find the git commit that deleted a concept?"
 
-  Assuming the concept is called `Foo`, search with Git Log in the corresponding structure model:  `git log -SFoo -- path/to/structure.mps`
+    Assuming the concept is called `Foo`, search with Git Log in the corresponding structure model:  `git log -SFoo -- path/to/structure.mps`
 
 **GitHub Publishing Checklist**
 

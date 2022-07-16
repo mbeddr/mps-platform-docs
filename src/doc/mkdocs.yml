@@ -158,6 +158,7 @@ nav:
       - Dependencies: build/dependencies.md
   - Internal MPS:
       - General: gotchas/mps_internal/index.md
+      - Open API: gotchas/mps_internal/open_api.md
       - Classloading: gotchas/mps_internal/classloading.md
       - Utility classes: gotchas/mps_internal/utility_classes.md
       - GUI: gotchas/mps_internal/gui.md

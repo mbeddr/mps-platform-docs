@@ -55,33 +55,6 @@
     - The data flowing along targets is called *resources*.
     - Resources are represented as Java tnterfaces and tuples,
 
-!!! question "How can a change the default project directory?"
-
-    Put the following code in an application plugin:
-    ```java
-    // set default project location 
-    string defaultProjectDir = Paths.get(System.getProperty("user.home"), "NewProjectDir").toString();
-    GeneralSettings.getInstance().setDefaultProjectDirectory(defaultProjectDir);
-    ```
-
-!!! warning "My project is not a project"
-    
-    > I want to call `GenerationCheckHelper.checkModelsBeforeGenerationIfNeeded` to check my model. It that takes a `Project` but my `Project` that I get  as an action context isn't the correct project. The type system complains that it's not the correct class. 
-    >
-    > How do I get the correct project class?
-
-    The two `Project` interfaces  are always a source of confusion. Essentially one comes from the IntelliJ platform and the other one holds MPS specific parts of the project.
-
-    `com.intellij.openapi.project.Project`:  The project from the platform is stores basic information like the folder where the project is located and give access to project plugins for instance.
-    
-    `jetbrains.mps.project.Project`: MPS specific aspects of a project like model access or the repository. It also gives access to the modules (languages and solutions) of the project.
-    
-    To get the *MPS Project* from a *Idea Project* use `ProjectHelper.fromIdeaProject`.
-    
-    To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, and then call `getProject` on it.
-
-    {{ contribution_by('coolya') }}
-
 !!! question "How can I open an MPS Editor Tab programmatically?"
 
      - `#!java EditorContext.getEditorPanelManager().openEditor(node)`
@@ -102,25 +75,6 @@
 
     {{ contribution_by('abstraktor') }}
 
-!!! question "How to execute an MPS action programmatically?"
-
-    Use `ActionUtils` to create an event and to run the action:
-    
-    ```java
-    # cast to EditorContext class
-    DataContext dataContext = DataManager.getInstance().getDataContext(((EditorContext) editorContext).getNodeEditorComponent()); 
-    AnActionEvent event = ActionUtils.createEvent(ActionPlaces.EDITOR_TAB, dataContext); 
-    ActionUtils.updateAndPerformAction(action<openHtmlReport>, event);
-    ```
-    
-    Since this is based on IDEA components, we need to get the `getNodeEditorComponent`, which is not part of the openapi. That's why we need to downcast it to the EditorComponent class.
-
-    Note: `action<…>` comes from the `jetbrains.mps.lang.plugin` language.
-
-!!! question "How to "shutdown" MPS programmatically?"
-
-    In normal conditions one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work an exception
-     may be thrown on purpose. 
 
 ??? question "How to guide through cleaning up after deleting a referenced node?"
 
@@ -186,11 +140,6 @@
     Hint when used with grammarcells: you have to 'disable component inlining' which can be activated by an intention at the position where the include of A happens. Also in any EditorComponent that inherits from A and A itself we cannot use 'grammarcells'.
 
     {{ contribution_by('dbinkele') }}
-
-!!! question "How do I set modify an MPS model without creating an undo entry?"
-    > Example: Setting a property (=flag) via a button.
-
-    Execute: `#!java repository.getModelAccess().executeUndoTransparentCommand()`
 
 
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)

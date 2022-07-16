@@ -1,3 +1,21 @@
+!!! warning "My project is not a project"
+
+    > I want to call `GenerationCheckHelper.checkModelsBeforeGenerationIfNeeded` to check my model. It that takes a `Project` but my `Project` that I get  as an action context isn't the correct project. The type system complains that it's not the correct class. 
+    >
+    > How do I get the correct project class?
+
+    The two `Project` interfaces  are always a source of confusion. Essentially one comes from the IntelliJ platform and the other one holds MPS specific parts of the project.
+
+    `com.intellij.openapi.project.Project`:  The project from the platform is stores basic information like the folder where the project is located and give access to project plugins for instance.
+    
+    `jetbrains.mps.project.Project`: MPS specific aspects of a project like model access or the repository. It also gives access to the modules (languages and solutions) of the project.
+    
+    To get the *MPS Project* from a *Idea Project* use `ProjectHelper.fromIdeaProject`.
+    
+    To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, and then call `getProject` on it.
+
+    {{ contribution_by('coolya') }}
+
 !!! question "How to I start using MPS' Open API?"
     Specific Languages Blog &mdash; [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/){target=_blank}
 
@@ -25,9 +43,6 @@
     Changing idea.system.path should allows you start a second instance with dedicated caches/state. 
     If you don’t want to share any configuration also update idea.config.path.
 
-!!! question "How do I get an icon for a concept?"
-
-    Call `GlobalIconManager.getInstance().getIconFor(concept)`.
 
 !!! question "Where can I find builtin icons?"
 
@@ -46,24 +61,6 @@
     Use need to use [MakeActionImpl](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237). Example usuages
     can be found in the same model.
 
-!!! question "How do I work with temporary models?"
-    
-    
-    ```
-    try { 
-    undo-transparent command with this.mpsProject.getRepository() {
-    tmpModel = TemporaryModels.getInstance().createReadOnly(TempModuleOptions.forDefaultModule());
-    tmpModel.addRootNode(type);
-    TemporaryModels.getInstance().addMissingImports(tmpModel);
-    }
-    // do something with the node
-    } finally {
-        undo-transparent command with this.mpsProject.getRepository() {
-            tmpModel.removeRootNode(type);
-            TemporaryModels.getInstance().dispose(tmpModel);
-        }
-    }
-    ```
 
 !!! question "How to I add widgets to the status bar? (memory indicator, save transient models...)"
 
@@ -84,10 +81,6 @@
 
     Implement the interface `StatusBarWidgetFactory` and register it through the StatusBarWidgetFactory.EP_NAME extension point.
 
-!!! question "How can I react to selection changes in the editor?"
-
-    editorContext.getSelectionManager().addSelectionListener(new SingularSelectionListenerAdapter() { ... })
-
 !!! question "How to I add model imports and used languages programmatically?"
     Specific Languages Blog &mdash; [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/){target=_blank}
 
@@ -107,11 +100,6 @@
 !!! question "How can I retrieve nodes of other models and modules?"
 
     `model.nodesIncludingImported` returns all nodes including the ones from other models that are currently imported. 
-
-!!! question "How can I delete a model in a module programmatically?"
-
-    Get the model-to-be-deleted as SModel (interface) and use `#!java new ModelDeleteHelper(model).delete();`
-    For more context see: [DeleteModeHelper](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java)
 
 
 !!! question "How can I make an internal MPS editor being read-only?"
@@ -183,32 +171,6 @@
     })
     ```
 
-!!! question "How can you copy a language without the new one having duplicate model IDs?"
-
-    Try the following code:
-
-    ```java
-    { =>
-    SModule sm = module/module1;
-    SModule tm = module/module2;
-
-    map<SNode, SNode> node = new hashmap<SNode, SNode>;
-
-    foreach aspect in LanguageAspect.values {
-        SModel s = aspect.get((Language) sm);
-        SModel t = aspect.get((Language) tm);
-        if(s != null && t!= null) {
-            foreach r in new arraylist<SNode>(copy: t.getRootNodes()) {
-                ((node<>) r).detach;
-            }
-            foreach r in CopyUtil.copyAndPreserveId((((sequence<SNode>) s,getRootNodes())).toList, node) {
-                t.addRootNode(r)
-            }
-        }
-    }
-    }.invoke()
-    ```
-
 ??? question "How to get rid of 'Error: Shall specify a repository to lock'?"
     > When accessing model properties in rendering code, I must encapsulate the model accessing code in a read action:
     
@@ -261,7 +223,7 @@
 
     {{ contribution_by('abstraktor') }}
 
-!!! question "Where does MPS store preferences?"
+??? question "Where does MPS store preferences?"
 
     For a starting point, read [Directories used by the IDE](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html).
     `CONFIG_DIR` refers to the configuration directory. `WORKSPACE_FILE` refers to `$PROJECT/.mps/workspace.xml``
