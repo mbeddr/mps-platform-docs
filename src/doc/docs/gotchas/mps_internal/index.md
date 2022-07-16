@@ -19,8 +19,6 @@
     See [this comment](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F9026887257679817888),
     [Dependencies and Classpath in MPS](https://github.com/mbeddr/mbeddr.core/wiki/MPS:-Deps-and-Classpath) and [classloading issues](https://github.com/mbeddr/mbeddr.core/wiki/Misc-Topics#classloading-issues).
 
-
-!!! question
 !!! question "Is there a way to start two instances of MPS, each with its own cache/state?"
 
     You can create a copy of you MPS installation and edit the idea.properties file in the bin directory. 
@@ -262,5 +260,39 @@
     You could also deserialize this again somehow, but I don't have at hand, how.
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "Where does MPS store preferences?"
+
+    For a starting point, read [Directories used by the IDE](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html).
+    `CONFIG_DIR` refers to the configuration directory. `WORKSPACE_FILE` refers to `$PROJECT/.mps/workspace.xml``
+
+    - refactoring settings: `CONFIG_DIR/options/refactoringSettings.xml`
+    - override/implement setttings: `WORKSPACE_FILE/OverrideImplementMethodComponent`
+    - additional libraries: `CONFIG_DIR/options/AdditionalLibrariesManager.xml`
+    - default search options: `WORKSPACE_FILE/DefaultSearchOptions3`
+    - make configuration: `WORKSPACE_FILE/mpsMakeService`
+    - code style settings: `CONFIG_DIR/options/codeStyleSettings.xml`
+    - break point settings: `WORKSPACE_FILE/BreakpointViewSettings`
+    - migration state: `WORKSPACE_FILE/MigrationProperties`
+    - model validation settings: `CONFIG_DIR/options/mpsModelValidationSettings.xml`
+    - concept editor settings: `WORKSPACE_FILE/ConceptEditorHintSettings`
+    - node search history: `WORKSPACE_FILE/NodeEditorSearchHistory`
+    - project libraries: `WORKSPACE_FOLDER/libraries.xml`
+    - bookmarks: `WORKSPACE_FILE/BookmarksTool`
+    - project view: `WORKSPACE_FILE/ProjectView`
+    - blame dialog: `CONFIG_DIR/options/charismaBlameDialog.xml`
+    - compiler settings: `WORKSPACE_FOLDER/compiler.xml`
+    - model checker settings: `CONFIG_DIR/options/modelCheckerSettings.xml`
+    - modules: `WORKSPACE_FOLDER/modules.xml`
+    - project plugin settings: `WORKSPACE_FILE/ProjectPluginManager`
+    - generation settings: `CONFIG_DIR/options/generationSettings.xml`
+    - console history: `WORKSPACE_FILE/ConsoleHistory`
+    - break points: `WORKSPACE_FILE/BreakpointManager`
+    - bookmarks: `WORKSPACE_FILE/MPSBookmarkManager`
+    - messages view tool settings: `WORKSPACE_FILE/MessagesViewTool`
+    - usages view tool settings: `WORKSPACE_FILE/UsagesViewTool`
+    - disabled intentions: `CONFIG_DIR/options/intentions.xml`
+    - editor settings: `CONFIG_DIR/options/mpsEditor.xml`
+    - migration trigger settings: `WORKSPACE_FILE/MigrationTrigger`
 
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

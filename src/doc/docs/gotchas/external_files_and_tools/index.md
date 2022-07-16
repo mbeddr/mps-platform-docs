@@ -6,6 +6,11 @@
     - Specific Languages Blog &mdash; [Writing an importer: Error handling considerations](https://specificlanguages.com/posts/2022-01/25-writing-an-importer-error-handling-considerations/){target=_blank}
     - Specific Languages Blog &mdash; [Writing an importer: Updating existing nodes](https://specificlanguages.com/posts/2022-02/14-writing-an-importer-updating-existing-nodes/){target=_blank}
 
+!!! question "How do deal with errors when writing an importer?"
+
+    - Create a new tab in the messages view and show the errors
+    - Create error concepts in the language. If the import fails for a particular node, it can be replaced with one of these error nodes in the output model and some error message can be appended. By doing this you can also implement checking rules for the error nodes so that they also show in the model checker or use finders to find all occurrences of errors in the models.
+
 !!! question "Where do I put my JARs?"
     Specific Languages Blog &mdash; [Where do I put my JARs?](https://specificlanguages.com/posts/2022-03/04-where-do-i-put-my-jars/){target=_blank}
 

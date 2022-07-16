@@ -218,6 +218,18 @@
 
     You can register an EditorComponentCreateListener, that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
 
+!!! question "Where can I find all key mappings for the editor?"
 
+    Windows and mac shortcuts for editor actions can be found in [MPSEditorActions.xml](https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml).
+
+
+!!! question "How can I access an icon stored in a concept?"
+
+    Create a new EditorCell for it: 
+    ```java
+    EditorCell_Image.createImageCell(context, node, {
+        EditorContext context, SNode node => GlobalIconManager.getInstance().getIconFor(concept); 
+    })
+    ```
 
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

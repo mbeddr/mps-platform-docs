@@ -133,4 +133,18 @@
 
     {{ contribution_by('abstraktor') }}
 
+!!! question "Is there a way to call the constructor of a super concept inside the constructor of a sub concept?"
+    > Something like:
+    > ```java
+    constructor {
+    superConcept()
+    }
+    ```
+
+    `#!java concept/MyConcept/.new initialized instance()` provides this behaviour.
+
+!!! question "How can I delete a child node from a node where the child’s concept no longer exists and the parent node's child link is no longer defined?"
+
+    `#!java node.getChildren().where(…).foreach { it.delete }`
+
 [^1]: [MPS forum - Generics for return type of behavior method](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010808559-Generics-for-return-type-of-behavior-method)

@@ -94,6 +94,10 @@ Language: ^^de.itemis.mps.editor.celllayout^^
     but the parent decides about the size of the child and the child then has to fit itself into these bounds. 
     This is used in tables and diagram, but also for the styles defined in the `de.itemis.mps.celllayout` language ([source](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&cid=C99H1FR42)).
 
+!!! question "What does grow-x and push-x do?"
+
+    Grow-x grows the cell to the with of the parent? Push-x is like setting grow-x on the cell and all ancestor cells.
+
 ## Grammar Cells
 Language: ^^de.itemis.mps.grammarcells^^
 

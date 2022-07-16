@@ -250,6 +250,10 @@
 
     {{ contribution_by('dbinkele') }}
 
+!!! Where should I put classes that I need on the user side and in the generator?
+
+    Move the classes to a solution and add that solution as a runtime solution to the language (in the module properties).
+
 [^1]:[MPS forum - I want export multiple languages from MPS](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)
 [^3]:[MPS forum - Generator error: uncaught exception ?no classifier?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260-Generator-error-uncaught-exception-no-classifier-)

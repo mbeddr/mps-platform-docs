@@ -211,4 +211,40 @@
 
     {{ contribution_by('dbinkele') }}
 
+!!! question "How do I set modify an MPS model without creating an undo entry?"
+    > Example: Setting a property (=flag) via a button.
+
+    Execute: `#!java repository.getModelAccess().executeUndoTransparentCommand()`
+
+??? question "How can I show my custom project view instead of the MPS logical view?"
+
+    ```java
+    SwingUtilities.invokeLater(new Runnable() { 
+        public void run() {
+            list<AbstractProjectViewPane> viewsToRemove = new linkedlist<AbstractProjectViewPane>;
+            ProjectView projectView = ProjectView.getInstance(project.getProject());
+            foreach paneID in projectView.getPaneIds() {
+            if (paneID.endsWith(ProjectViewHelper.YOUR_PROJCET_VIEW_ID)) {
+            if (!projectView.getCurrentViewId().equals(paneID)) {
+            projectView.changeView(paneID);
+            }
+            } else if (this.viewsToKeep.asSequence.any({~it => paneID.endsWith(it); })) {
+            continue;
+            } else {
+            viewsToRemove.add(projectView.getProjectViewPaneById(paneID));
+            }
+            }
+            viewsToRemove.forEach({~it =>
+            projectView.removeProjectPane(it);
+            it.dispose();
+            });
+            ProjectPane.getInstance(project).activate();
+        }
+        })
+    ```
+
+!!! question "How can I customise the New Roots (mbeddr.platform) or New dialog of MPS/mbeddr?"    
+
+    `#!java CreateRootFilterEP.getInstance().addFilter`
+
 [^1]:[How to create new SContainmentLink for non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)

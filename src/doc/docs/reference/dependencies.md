@@ -145,7 +145,8 @@ Neither Runtime Solutions nor Accessory Models constitute a Dependency from the 
 <a name="cyclic_dependency"></a>
 ## Cyclic Dependencies
 
-Cyclic Dependencies between Modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic "Extends Scope Dependency".
+Cyclic Dependencies between Modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic "Extends Scope Dependency". Cycles between models in the same module are fine.
+Starting with MPS 2021.1 there is a higher chance that you could run into troubles with those cyclic dependencies, as the new javax compiler doesn't act as forgiving on that as the previous one (ECJ).
 
 A special case are runtime solutions, accessory models, and utility models.
 

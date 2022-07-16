@@ -77,6 +77,23 @@
     }
     ```
 
+!!! question "How can I reduce the size of the RCP?"
+
+    - Remove all packaged plugins that you don't need
+    - Use a JBR version without JCEF if you don't need an embedded browser (jbr_nomod).
+
+!!! question "How can I deactivate a preference page?"
+
+    - Remove the plugin that contains the preference page.
+    - For  SPreference Pages: They are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and call `#!java dispose`
+    or you could unregister the preference pages itself. For example:
+    ```java
+    list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project)).getPlugins());
+    plugins.findFirst({~it => it.toString().startsWith("com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin"); }).getPrefsComponents().get(0).getPages().get(0).unregister();
+    ```
+    
+    For preference forms: they can be found through `#!java Configurable.APPLICATION_CONFIGURABLE.getPoint().getExtensionList` and removed by calling `#!java unregisterExtension`.
+
 [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
 
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)
