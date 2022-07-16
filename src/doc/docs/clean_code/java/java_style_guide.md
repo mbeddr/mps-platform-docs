@@ -1,0 +1,18 @@
+These are some points taken from the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) that make sense in MPS.
+
+- [Fall-through: commented](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): write a comment why a fall-through is necessary in a switch statement.
+- [Default case is present](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): always write a default case for switch statements.
+- [Rules common to all identifiers](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): identifiers use only ASCII letters and digits, and, in a few cases noted below, underscores. Don't use prefixes or suffixes with particular meanings. For example, these names don't adhere to the style: `name_, mName, s_name and kName`.
+- [Package names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): package names are all lowercase, with consecutive words concatenated together (no underscores). For example, ``com.example.deepspace``, not ``com.example.deepSpace`` or ``com.example.deep_space``
+- [Class names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): should be in UpperCamelCase. Class names are typically nouns or noun phrases. For example, ``Character`` or ``ImmutableList``. Interface names may also be nouns or noun phrases (for example, ``List``), but may sometimes be adjectives or adjective phrases instead (for example, ``Readable``). Test classes should start with the name of the class they're testing, and ending with Test. For example, ``HashTest`` or ``HashIntegrationTest``.
+- [Method names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): should be in lowerCamelCase. Method names are typically verbs or verb phrases. For example: `sendMessage or stop`. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, for example ``pop_emptyStack``. No correct way exists for naming test methods.
+- [Constant names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): use all uppercase letters, with each word separated from the next by a single underscore
+- [Non-constant field names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): non-constant field names (static or otherwise) should be ``lowerCamelCase``. These names are typically nouns or noun phrases. For example, ``computedValues`` or ``index``.
+- [Parameter names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch) should be `lowerCamelCase`. One-character parameter names in public methods should be avoided.
+- [Local variable names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch) should be in lowerCamelCase. Even when final and immutable, local variables are not considered to be constants, and should not be styled as constants.
+- [Type variable names](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as ``E``, ``T``, ``X``, ``T2``) or a name in the form used for classes, followed by the capital letter T (examples: ``RequestT``, ``FooBarT``).
+- [Camel case: defined](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): tutorial on how to write camelcase
+- [Don't ignore caught exceptions](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch)
+  (see also: [Avoid empty catch blocks](http://www.javapractices.com/topic/TopicAction.do?Id=16))
+
+Additional java practises can be found at [javapractices.com]( http://www.javapractices.com/home/HomeAction.do).

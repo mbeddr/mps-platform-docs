@@ -1,11 +1,24 @@
-This website answers some common questions about MPS and shows common gotchas and pitfalls when working with MPS. 
-It is mainly written in the form of a Q&A. Links starting with http://127.0.0.1 can be opened with the builtin MPS HTTP server.
-If you have any suggestions, please write a comment at the bottom of the page or
-open an issue on GitHub.
+---
+title: Home
+hide:
+- toc
+---
 
-If you are not already a member, consider joining [MPS on slack](http://slack-mps.jetbrains.com/).
+This website answers some common questions about MPS and shows common gotchas and pitfalls when working with :mps-public-mps:.
+It's mainly written in the form of a Q&A. Long answers are collapsed by default.
+It contains answers for the following projects:
 
-Latest MPS version {{ mps_latest }} Minimum version in doc: {{ mps_author }}
+- [MPS](https://github.com/JetBrains/MPS)
+- [MPS-extensions](https://github.com/JetBrains/MPS-extensions)
+- [mbeddr platform](http://mbeddr.com/platform.html)
+
+You can open links starting with http://127.0.0.1 with the builtin [HTTP support plugin](https://www.jetbrains.com/help/mps/http-support-plugin.html).
+
+If you have any suggestions, please write a comment at the bottom of the page or open an issue on GitHub.
+
+- Latest version: {{ mps_latest }} Minimum version in doc: {{ mps_author }}
+
+If you aren't already a member, consider joining [MPS on slack](http://slack-mps.jetbrains.com/).
 
 !!! quote "A Twitter user"
     "6 hours of debugging can save you 5 minutes of reading documentation."

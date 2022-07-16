@@ -4,7 +4,7 @@ Basic code:
 public class CommandLineTool { 
    
   public static void main(string[] args) throws Exception {
-    final string projectPath = /* (1) Get project path, e.g. from args or system properties */;
+    final string projectPath = YOUR_PATH /* (1) Get project path, for example, from args or system properties */;
 
     final EnvironmentConfig config = EnvironmentConfig
       .emptyConfig()
@@ -28,7 +28,7 @@ public class CommandLineTool {
       thrown.printStackTrace();
       System.exit(1);
     } else {
-      // System.exit is needed even in case of success to kill threads that MPS plugins may be leaving behind.
+      // You need `System.exit` even in a successful case to stop threads that MPS plugins may be leaving behind.
       System.exit(0);
     }
   }
@@ -38,14 +38,18 @@ public class CommandLineTool {
 What can you do with the project (at point 2)? Here is how you invoke a static method `foo()` on class `Bar` in module `Baz`:
 
 ```java
-ModuleRepositoryFacade facade = new ModuleRepositoryFacade(project);
-ReloadableModule module = (ReloadableModule) (facade.getModule(module-reference/Baz/));
-Class<?> classToInvoke = module.getClass("somepackage.Bar");
-Method methodToInvoke = classToInvoke.getMethod("foo");
-methodToInvoke.invoke(null);
+class InvokeMethod {
+    void execute() {
+        ModuleRepositoryFacade facade = new ModuleRepositoryFacade(project);
+        ReloadableModule module = (ReloadableModule) (facade.getModule(module-reference/Baz/));
+        Class<?> classToInvoke = module.getClass("some-package.Bar");
+        Method methodToInvoke = classToInvoke.getMethod("foo");
+        methodToInvoke.invoke(null);       
+    }
+}
 ```
 
-Why all the reflection tricks and why not call the class directly instead? The answer is that when MPS is initialized and a project is opened, it sets up classloaders for us, putting on the classpath any dependencies that module `Baz` might have, so we don't have to specify them ourselves.
+Why all the reflection tricks and why not call the class directly instead? The answer is that when MPS is initialized and a project is opened, it sets up classloaders, putts on the classpath any dependencies that module `Baz` might have, so that you don't have to specify them ourselves.
 
 We still need to have on the classpath the initial set of JARs to run our class and start MPS. Here is how you would run our tool from Gradle:
 
@@ -57,7 +61,7 @@ task runCommandLineTool(type: JavaExec) {
 }
 ```
 
-Alternatively, MSP can be added to the gradle dependencies block:
+You can also add MPS to the gradle dependencies block:
 
 ```groovy
 dependencies {

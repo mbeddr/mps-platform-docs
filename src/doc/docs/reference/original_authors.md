@@ -1,6 +1,6 @@
 # Original authors
 
-This site contains documents and contributions from different sites. It contains knowledge from the following people in alphabetical order:
+This site includes documents and contributions from different sites. It includes knowledge of the following people (and more) in alphabetical order:
 
 - [@abstraktor](https://github.com/abstraktor) (*internal knowledge base*)
 - [@AlexeiQ](https://github.com/AlexeiQ) (*mbeddr wiki*)
@@ -17,4 +17,5 @@ This site contains documents and contributions from different sites. It contains
 - [@krinara86](https://github.com/krinara86) (*mbeddr wiki*)
 - [@sergej-koscejev](https://github.com/sergej-koscejev) (*mbeddr wiki*)
 - [@szabta89](https://github.com/szabta89) (*mbeddr wiki*)
+- [@slisson](https://github.com/slisson) (*answers to many questions*)
 - [@till-f](https://github.com/till-f) (*mbeddr wiki*)

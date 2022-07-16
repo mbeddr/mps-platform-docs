@@ -1,87 +1,96 @@
-# Continuous Integration
+# Build language
 
-??? question "How to attach debugger to a ci build on GitHub actions?"
+For details see: https://www.jetbrains.com/help/mps/build-language.html
 
-    The plan is to first teach the build to open up a reachable ssh connection, and then tunnel a local port onto it so that we can connect IntelliJ to it.
+!!! question "How can you override the build directory name `build to something different?"
 
-    - Sign up with ngrok and get your authtoken
+    You can do it when you invoke Ant by passing `-Dbuild.dir=otherDir`.
 
-    Since build agents usually are not reachable from the web, we'll need someone to bridge the build agents' firewalls. A common solution for that seems to be https://ngrok.com/ which requires a free signup. I tried tmate as well, but that doesn't support port forwarding.
+!!! warning "Dependencies on a module not visible from the current `build` project."
 
-    - Open ssh from your `.github/workflows/build.yml`
+    Specific Languages blog: [Build script error: "Dependency on a module not visible from current build project"](https://specificlanguages.com/posts/build-script-errors/dependency-on-a-module-not-visible-from-current-build-project/)
 
-    Lucky us, there are prepared github actions that start up sshd with ngrok. I used [debug-via-ssh](https://github.com/marketplace/actions/debug-via-ssh) All we need to give it is our `ngrok authtoken` from above, and our public ssh key of the key that we want to use to get into the machine.
+!!! warning "Build script error: unsatisfied dependency"
 
-    Given we already have `.github/workflows/build.yml`, I added a step right before the failing step:
+    Specific Languages blog: [Build script error: "Unsatisfied dependency"](https://specificlanguages.com/posts/build-script-errors/unsatisfied-dependency/)
 
-    ```yml
-    # …
-    - name: Start SSH session
-    uses: luchihoratiu/debug-via-ssh@main
-    with:
-        NGROK_AUTH_TOKEN: 2343953890afgaegaewgiöoio2332äää
-        SSH_PASS: ssh-rsa AAAJOAKJFLJWKLJLEKJLEFKJLFEKJLK…JAOIFJOFA bkruck@itemis.com
-    # …
-    ```
+!!! warning "Build script error: can't find used language in dependencies"
+    
+    Specific Languages blog: [Build script error: "Cannot find used language in dependencies"](https://specificlanguages.com/posts/build-script-errors/cannot-find-used-language-in-dependencies/)
 
-    Since this is a private repository, I was fine with directly pasting my authtoken and public ssh key into it directly (I didn't have permissions to add secrets to the repo). After the whole session, I reset my ngrok auth token.
+!!! warning "Can't find extended language in dependencies."
+    
+    Check [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004407199/comments/360000679499).
 
-    Another note worth mentioning is, that we trust the author of the action and ngrok here to not man-in-the-middle us here.
+!!! info "How do you set up a gradle build for an MPS project?"
 
-    - Tell MPS to wait for us
+    There is a gist for a [minimal build](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75). There is a [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin). For more complex projects look at build scripts of big projects such as [MPS-extensions](https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle).
 
-    Now we can run the github build and see that ngrok is stopping the build at the desired location, being ready for us to connect. In the [endpoints list](https://dashboard.ngrok.com/endpoints/status), our agent should be listed with a domain name and port. Taking the two, we can now ssh into it:
+!!! question "How do you build an MPS project with maven?" 
 
-    ```
-    # ssh through ngrok onto the build machine, already forwarding local 5020 to the remote machine
-    ssh -L 5020:localhost:5020 -p11720 runner@4.tcp.ngrok.io
-    ```
+    Specific Languages blog: [Building MPS projects using Maven - a sample](https://specificlanguages.com/posts/building-mps-projects-using-maven/)
 
-    If you are asked for a password, fix the casing of `-p`.
-    If still asked for a password, check which user is running the build. On github, that user seems to be called `runner` right now. Even though he has sudo rights.
+!!! question "How can you find out the supported MPS version of a project?"
 
-    We now want to teach MPS to open the debug ports and wait for us to connect before running any tests. On CLI, this doesn't work with `.vmoptions` files, but instead, we're running the tests from an ant-file in this project.
+    Search the readme for this information. If the project uses a gradle script, you can most likely find this information
+    in the file build.gradle (for example in [this line](https://github.com/JetBrains/MPS-extensions/blob/3e137bcf269f8a2ac79589d4e4938f78900cf294/build.gradle#L81)
+    in mps-extension). For older MPS projects there is no waying of finding out the version.
 
-    Since the "allScripts" generation was already performed, we only need to open the ant-file and add a jvm argument. I like to open `build/myProject/build-tests.xml` with vim and then execute the following search-expression: `%s/<\/jvmargs>/  <arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>\r      <\/jvmargs>/g`. In other terms: Look for `</jvmargs>` and add `<arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>` right in front of it. The `suspend=y` will tell java to not start doing anything before we are connected, while teh `address=5020` tells it to be welcoming us on port 5020.
+!!! question "What do you need to put into the `.gitignore` file?"
 
-    ```
-    --- build/myProject/build-tests.xml	2021-09-17 21:15:50.000000000 +0200
-    +++ build/myProject/build-tests.xml.before	2021-09-17 21:32:09.000000000 +0200
-    @@ -342,7 +342,6 @@
-        <jvmargs>
-            <arg value="-ea" />
-            <arg value="-Xmx3072m" />
-    -        <arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5020" />
-        </jvmargs>
-        <macro name="mps_home" path="${mps_home}" />
-        <macro name="myProject.home" path="${myProject.home}" />
-    ```
+    Have a look at this [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore) file.
 
-    - Run the tests from within ssh
+!!! warning "Command line generation fails on Windows if using non-ASCII characters"
 
-    Since I don't know how to move ngrok into the background while proceeding the build, I just ran the next github action by hand:
+    It happens because the generation is started with a Window encoding. Set the following environment variable before starting the build:
+    `set JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"` (MPS-34059).
 
-    ```
-    $ cd worker/myProject
-    $ ./gradlew testLanguages
-    …
-    …
-    Listening for transport dt_socket at address: 5020
-    ```
+!!! question "Why is it possible to successfully build models with missing imports?"
 
-    We should now see the command line MPS start up and say that it is waiting for us on `5020`.
+    Specific Languages blog: [Why can I successfully build models with missing imports?](https://specificlanguages.com/posts/2022-02/11-successfully-build-models-with-errors/)
 
-    - Connect with your local IntelliJ
+!!! warning "X errors before generation."
+    
+    Specific Languages blog: [3358 errors before generation](https://specificlanguages.com/posts/2022-02/17-errors-before-generation/)
 
-    Assuming, that you have the MPS sources checked out, opened it in IntelliJ and added the sources of your project as a module, we should be ready to connect now:
+!!! question "How do you clean the generated files in MPS?"
 
-    Just start a remote debugging session on port 5020. It will forward the requests over ssh to the agent machine. Once connected, you'll be able to set breakpoints (for example, I set an Exception breakpoint for `StackOverflowError`), and then proceed the build to run into the break point.
+    Possible solutions:
 
-    - Cleanup
+    - Specific Languages Blog &mdash; [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/)
+    - When using a build script, have a dedicated clean task ([gradle example](https://github.com/JetBrains/MPS-extensions/blob/ade5d7798c2a233ce850ad539336362ed8ec437e/build.gradle#L272)).
 
-    After you found your issue and everything is shiny, remember to remove the step from your github workflow again and reset your ngrok auth token. Just to make sure…
+!!! warning "The [files from](http://127.0.0.1:63320/node?ref=r%3Ae9081cad-d8c3-45f2-b4ad-1dabd5ff82af%28jetbrains.mps.build.structure%29%2F2750015747481074431) operation from the MPS build model, changes the access permissions of the copied over files."
 
-## Docker
-Docker is a linux container technology that we use heavily within our build. You can think of it as a very lightweight virtual machine. In addition to the container runtime docker also includes the tools required to build preconfigured images that are then executed in the container. These images are built from a Dockerfile. Essentially everything in our infrastructure is provisioning using docker from the teamcity frontend over the database to the build agent. For the build agent this approach allows us to keep the build agents consistent in their installed software and their versions. The Dockerfile for our general purpose agents can be found at GitHub. The docker image build from the docker file is published to docker hub, hosting service for images, and then used in our build server.
+    As a workaroudn you can use [Buildlayout_Filemode](https://app.slack.com/client/T3XHGU6G0/C3YUV3YK0/thread/C3YUV3YK0-1657543516.836299#:~:text=BuildLayout_Filemode) or unzip the files using Gradle.
 
-The complete docker configuration for our build server is hosted on the itemis GitLab here. It also included the scripts that download/update the docker image and run the agent. Since our teamcity setup uses multiple containers, a separate container for the database or the webserver that handles the encrypted connection, we are using docker-compose as an orchestration tool. 
+## MPS build script
+
+The build-language is one of the oldest parts of MPS, designed to generate the ant files in an easier way, but it isn't refactored until today. The generator of the build language has to find out what, for example, “Solution needs BaseLanguage” means at runtime-level. To execute code from the Solution, the jvm needs the baselanguage.jar on the classpath. The more dependencies the Solution has, the more complex becomes the generated ant file, because the generator has to consider all these transitive dependencies. The generator needs to know what artefact a module generates and how the generated artefact/module is used at runtime. Therefore, the jars must be on the classpath.
+
+The modules in the mps-groups in the MPS build script contain information from the serialized descriptors (.msd files, .mpl files, …). The `Reload all modules from disk` intention loads them explicitly. The descriptor-files aren't read before generation, so that you should always verify before you push if your mps build scripts are up-to-date. For every dependency added to a module or a changed reexport flag, this intention has to be triggered by hand.
+
+Problem: the current implementation of the build-language isn't extensible, because it always looks into the original model. The main part of the ant file generation is the dependency analysis (for the modules), and for this it needs to access the original model for some technical reasons. These limit you to languages which are provided by MPS. You can't use your own patterns, for example, you can't write an extension which picks all modules from a folder, generates an intellij-plugin out of them and stores the result in a zip file and generates all the code required for the command-line build. But this isn't possible because of the build-language-inherent dependency analysis mechanism.
+
+
+The code generator of the build-language has to verify for dependencies like jars in stub-models, jars at runtime etc., but the error messages aren't well-designed. For example, you have a jar file xyz.jar entered as java runtime dependency of the language abc. Instead of something like “you have to enter xyz.jar to your build layout plugin-123, cause language abc specifies it as java runtime dependency” you get for example "jar stub library should be extracted into build-script: `${my.project}/very/long/path/lib/xyz.jar`”, which isn't helpful.
+
+Many problems the generator finds could also be found by the model checker, but the checks are done at generation time and implemented as "gencontext.show error" in the generator.
+
+## Generated ant scripts ("build.xml")
+
+The mps build scripts are generated to ant scripts, which then generate the modules.
+The ant script starts a headless-MPS with all required dependencies, puts jars on the classpath and does some further magic.
+Tasks can be passed to the ant script like the “generate” task.
+
+Modules have several models with dependencies. For example, for a language, the behavior uses the structure aspect; the type-system uses the behavior aspect etc. which can result in complex dependencies between these models. These have to be considered when the models are generated and compiled. The order is derived by the code generator of the build-language and results in an execution plan where the “compile units” are grouped in “chunks”. Chunks with bootstrap-dependencies are explicitly marked, which means all modules in the chunk have to be compiled at the same time.
+
+MPS consists of hundreds of jar files which must be on the classpath for the code generation and compilation, which leads to giant ant scripts (with some thousand lines). Even simple mps build scripts, which only use BaseLanguage result into big ant scripts.
+
+The build layout in the MPS build script defines how your modules are packaged e.g. as zip containing multiple plugins, as simple plugin-folder, as lib-folder with a flat list of jars, etc.
+
+The ant-script needs to know where the local MPS is installed and where your modules and dependencies are located. This is usually done using folder macros in the mps build script which are generated as “properties'' in the ant script. This makes the build independent of your local machine and the ant script can be executed on the CI or any other machine.
+
+The Headless-MPS, which is started by the ant script, behaves differently
+in some cases compared to an IDE-MPS. For example circular dependencies can be resolved in the IDE by just applying "Make Project" multiple times, which doesn't work on the command line and thus also fails on the CI.
+Dependencies which are visible in the IDE aren't always visible in the MPS build script/ ant script and can result in failing builds. MPS holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the IDE everything's always visible and wrong dependencies can be resolved but on the command line the build can fail, because the referenced model isn't loaded. The build language generator doesn't check the nodes for e.g. references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.
