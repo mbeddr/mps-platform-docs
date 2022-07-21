@@ -99,12 +99,12 @@
     - fast
     - unreliable: when changing dependencies in my source models, this leads to a reload operation on the repository, which sometimes messes up the loaded repository and caches
 
-    **Option 1**: Publish and pull from local maven
+    **Option 1**: Publish and pull from local maven {{ iets3() }} 
 
     - reliable
     - [example](https://github.com/IETS3/iets3.opensource/wiki/Building-IETS3#building-against-local-mbeddr)
     - gradle script needs to be told to pull from local repository
-    -- e.g. by providing `-PforceLocalDependencies` to iets3
+    -- e.g. by providing `-PforceLocalDependencies` to IETS3
     -- or use dependency overrides
 
     **Option 3**: Changing project libraries

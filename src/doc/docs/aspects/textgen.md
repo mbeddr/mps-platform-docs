@@ -15,7 +15,7 @@ title: TextGen aspect
 
 !!! question "Can you also generate the text from the generator aspect?"
 
-    Use the language `com.dslfoundry.plaintextgen` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
+    Use the language `com.dslfoundry.plaintextgen` from {{ mps_extensions() }}.
 
 ??? question "TextGen for another language?"
 

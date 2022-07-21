@@ -115,15 +115,15 @@ title: Plugin aspect
 
 !!! hint "I want to merge models."
 
-    Use the language `de.itemis.mps.modelmerger` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
+    Use the language `de.itemis.mps.modelmerger` from {{ mps_extensions() }}.
 
 !!! hint "I want to verify the structure of a node."
 
-    Use the language `de.slisson.mps.structurecheck` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
+    Use the language `de.slisson.mps.structurecheck` from {{ mps_extensions() }}.
 
 !!! hint "I want to store different states/versions of a node inside the model."
 
-    Use the language `de.itemis.mps.nodeversioning` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
+    Use the language `de.itemis.mps.nodeversioning` from {{ mps_extensions() }}.
 
 ## Open API
 

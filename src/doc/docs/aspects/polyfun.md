@@ -4,8 +4,9 @@ title: Polyfun aspect
 
 # Polyfun aspect
 
-This aspect allows to declare polymorphic functions and is part of Shadowmodels in [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
-You can declare a function that can have different implementations per language. To get a better understanding, have a look at the corresponding sandbox in [mps-extensions](https://jetbrains.github.io/MPS-extensions/)
+This aspect allows to declare polymorphic functions and is part of Shadowmodels in {{ mps_extensions() }}.
+You can declare a function that can have different implementations per language. To get a better understanding, have a look at the corresponding sandbox in
+{{ mps_extensions() }}.
 
 !!! question "Is there a handler which the IDE calls when it loads a language?"
 

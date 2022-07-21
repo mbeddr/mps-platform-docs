@@ -24,10 +24,9 @@ title: Typsystem aspect
 
 !!! question "How do you learn more about MPS CodeRules?"
 
-    This is kind of a new typesystem bases on constraints. Visit the [Github page](https://github.com/JetBrains/mps-coderules)
+    This is kind of a new typesystem bases on constraints. Visit @JetBrains/mps-coderules
     for more information. There is also a [blog post](https://specificlanguages.com/posts/2022-01/13-coderules-entering-exiting/)
-    about this project. The new MPS implementation of the Kotlin language uses CodeRules. More information can be found on the
-    [Github page](https://github.com/JetBrains/mps-kotlin-typesystem). There is also a free course about it on [stepik](https://stepik.org/course/101057/promo).
+    about this project. The new MPS implementation of the Kotlin language uses CodeRules. More information can be found in @JetBrains/mps-kotlin-typesystem. There is also a free course about it on [stepik](https://stepik.org/course/101057/promo).
 
 !!! question "Type system vs constraints?"
     

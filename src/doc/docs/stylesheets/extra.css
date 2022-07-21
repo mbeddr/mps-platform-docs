@@ -15,8 +15,8 @@
     margin: 0;
 }
 
-a:not([class])[href^="http"]::after,
-a:not([class])[href^="https://"]::after
+a:not([class^="md-"])[href^="http"]::after,
+a:not([class^="md-"])[href^="https://"]::after
 {
   content: "";
   width: 11px;

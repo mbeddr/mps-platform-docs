@@ -4,15 +4,17 @@ hide:
 - toc
 ---
 
-This website answers some common questions about MPS and shows common gotchas and pitfalls when working with :mps-public-mps:.
+This website answers some common questions about MPS and shows common gotchas and pitfalls when working with :mps:.
 It's mainly written in the form of a Q&A. Long answers are collapsed by default.
-It contains answers for the following projects:
+It contains answers for the following platforms:
 
-- [MPS](https://github.com/JetBrains/MPS)
-- [MPS-extensions](https://github.com/JetBrains/MPS-extensions)
-- [mbeddr platform](http://mbeddr.com/platform.html)
+- {{ mps() }}
+- {{ mps_extensions() }}
+- {{ mbeddr() }}
+- {{ iets3() }}
 
 You can open links starting with http://127.0.0.1 with the builtin [HTTP support plugin](https://www.jetbrains.com/help/mps/http-support-plugin.html).
+Platform specific instructions are marked when possible.
 
 If you have any suggestions, please write a comment at the bottom of the page or open an issue on GitHub.
 

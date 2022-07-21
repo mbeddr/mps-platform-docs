@@ -43,7 +43,7 @@ Language: ^^de.itemis.mps.editor.diagram^^
 
 !!! question "How do you use this language?"
 
-    Have a look at the samples of this language in [mps-extensions](https://jetbrains.github.io/MPS-extensions/). There is also an [external tutorial series](https://tillschallau.de/mps/).
+    Have a look at the samples of this language in {{ mps_extensions() }}. There is also an [external tutorial series](https://tillschallau.de/mps/).
 
 !!! question "What's the edge ID in the diagrams used for?"
 

@@ -25,7 +25,7 @@
 
 !!! question "Why are some of these language not migrated to mps-extensions?"
 
-    Some language have dependencies that would also need to be migrated to [mps-extensions](https://jetbrains.github.io/MPS-extensions/). Other languages
+    Some language have dependencies that would also need to be migrated to {{ mps_extensions() }}. Other languages
     are deemed as not stable or important enough to be migrated.
 
 !!! warning "I am using some mbeddr languages in my project but some of them aren't deployed."

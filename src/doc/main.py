@@ -38,15 +38,15 @@ def define_env(env):
 
     @env.macro
     def contribution_by(github_username):
-        return "<sub>Contribution by: [@" + github_username + "](https://github.com/" + github_username + ")<sub>"
+        return "<sub>Contribution by: @" + github_username + "<sub>"
         
     @env.macro
     def question_by(github_username):
-        return "<sub>Question by: [@" + github_username + "](https://github.com/" + github_username + ")<sub>"
+        return "<sub>Question by: @" + github_username + "<sub>"
         
     @env.macro
     def answer_by(github_username):
-        return "<sub>Answer by: [@" + github_username + "](https://github.com/" + github_username + ")<sub>"
+        return "<sub>Answer by: @" + github_username + "<sub>"
         
     @env.macro
     def mps_url(identifier):
@@ -64,3 +64,19 @@ def define_env(env):
     @env.macro
     def image_popup(link, text, image_path, alt_text):
         return '<span class="hover_img"><a href="' + link + '">' + text + '<span><img src="' + image_path + '" alt="' + alt_text + '" /></span></a></span>'
+        
+    @env.macro
+    def iets3():
+        return ':iets3:[IETS3](https://github.com/IETS3/iets3.opensource)'
+        
+    @env.macro
+    def mbeddr():
+        return ':mbeddr:[mbeddr](https://github.com/mbeddr/mbeddr.core)'
+            
+    @env.macro
+    def mps_extensions():
+        return ':mps_extensions:[MPS-extensions](https://github.com/JetBrains/MPS-extensions)'
+        
+    @env.macro
+    def mps():
+        return ':mps_logo:[MPS](https://github.com/JetBrains/MPS)'

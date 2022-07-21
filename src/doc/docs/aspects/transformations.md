@@ -4,7 +4,7 @@ title: Transformations aspect
 
 # Transformations aspect
 
-This language is part of Shadowmodels in [mps-extensions](https://jetbrains.github.io/MPS-extensions/). Consult the [documentation](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels/)
+This language is part of Shadowmodels in {{ mps_extensions() }}. Consult the [documentation](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels/)
 for more information.
 
 !!! question "What's a fork?"

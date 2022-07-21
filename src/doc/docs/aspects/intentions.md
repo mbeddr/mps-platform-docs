@@ -18,7 +18,7 @@ title: Intentions aspect
 
 !!! question "How can I group intentions and give them names?"
 
-    Use the language `com.mbeddr.mpsutil.intentions` from [mps-extensions](https://jetbrains.github.io/MPS-extensions/). 
+    Use the language `com.mbeddr.mpsutil.intentions` from {{ mps_extensions() }}. 
     It is also possible to split the description into multiple literals. The first literal will then be used to group intentions.
 
     ![intention description](intention_description.png){width="600px"}

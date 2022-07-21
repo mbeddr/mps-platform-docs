@@ -74,7 +74,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! hint "I need a specific graphical notation/feature for the editor."
 
-    Have a look at the [full extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/#editor) from [mps-extensions](https://jetbrains.github.io/MPS-extensions).
+    Have a look at the [full extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/#editor) from {{ mps_extensions() }}.
 
 !!! hint "I need hyperlinks."
 
@@ -87,7 +87,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you include non-child relations in the editor?."
 
-    Use the language `com.mbeddr.mpsutil.editor.querylist` from [mps-extensions](https://jetbrains.github.io/MPS-extensions).
+    Use the language `com.mbeddr.mpsutil.editor.querylist` from {{ mps_extensions() }}.
 
 ## Editor declaration
 
@@ -225,7 +225,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you override an arbitrary editor?"
 
-    Use the language `de.slisson.mps.conditionalEditor` from [mps-extensions](https://jetbrains.github.io/MPS-extensions).
+    Use the language `de.slisson.mps.conditionalEditor` from {{ mps_extensions() }}.
 
 !!! question "How can you get the font of an editor?"
 

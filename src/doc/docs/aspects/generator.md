@@ -107,7 +107,7 @@ title: Generator aspect
 
     Have a look at the [language repository](https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository). You
     might also find other languages on GitHub. In general there doesn't have to be an existing language. Any text can be
-    generated with TextGen or Plaintextgen from [mps-extensions](https://jetbrains.github.io/MPS-extensions). It's also possible to generate code from an action or
+    generated with TextGen or Plaintextgen from {{ mps_extensions() }}. It's also possible to generate code from an action or
     pre/post-processing script in the generator by using an existing Java library such as Apache Poi. A tutorial for example 
     for excel can be found [here](https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi).
 
@@ -121,7 +121,7 @@ title: Generator aspect
 
 !!! question "How can you generate some text?"
 
-    Use the textgen aspect or use [mps-plaintextgen](https://dslfoundry.com/plaintextgen-tutorial/) from [mps-extensions](https://jetbrains.github.io/MPS-extensions/).
+    Use the textgen aspect or use [mps-plaintextgen](https://dslfoundry.com/plaintextgen-tutorial/) from {{ mps_extensions() }}.
 
 !!! question "Can you use an alternative approach to generating code?"
 

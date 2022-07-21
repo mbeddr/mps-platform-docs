@@ -111,6 +111,10 @@ markdown_extensions:
       custom_checkbox: true
       clickable_checkbox: true
   - md_in_html
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      social_url_shorthand: true
+
 nav:
   - Home:
     - index.md
