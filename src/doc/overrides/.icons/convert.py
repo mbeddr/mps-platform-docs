@@ -21,7 +21,7 @@ def image_to_data_url(filename):
 
 basePath = "" # set path to icons here
 
-for file in glob.glob(basePath+"/**/**/*.png"):
+for file in glob.glob(basePath+"/*.png"):
     png_file = file
     svg_file = file[0:-4]+ ".svg"
     image_data = image_to_data_url(png_file)
