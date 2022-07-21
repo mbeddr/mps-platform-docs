@@ -8,16 +8,16 @@
     - Specific Languages Blog: [Writing an importer: Error handling considerations](https://specificlanguages.com/posts/2022-01/25-writing-an-importer-error-handling-considerations/)
     - Specific Languages Blog: [Writing an importer: Updating existing nodes](https://specificlanguages.com/posts/2022-02/14-writing-an-importer-updating-existing-nodes/)
 
-    Alternative solution: Write a solution that imports the files and converts them to your model or use [custom persistence](https://www.jetbrains.com/help/mps/custom-persistence-cookbook.html).
+    Alternative solution: use [custom persistence](https://www.jetbrains.com/help/mps/custom-persistence-cookbook.html).
 
 !!! question "How do you deal with errors when writing an importer?"
 
-    - Create a new tab in the messages view and show the errors
-    - Create error concepts in the language. If the import fails for a particular node, it can be replaced with one of these error nodes in the output model and some error message can be appended. By doing this you can also implement checking rules for the error nodes so that they also show in the model checker or use finders to find all occurrences of errors in the models.
+    - Create a new tab in the messages view and show the errors.
+    - Create error concepts in the language. If the import fails for a particular node, it can be replaced with one of these error nodes in the output model and some error message can be appended. By doing this you can also implement checking rules for the error nodes so that they errors also are displayed as part of model checking. You can also use finders to find all occurrences of errors in the model.
 
 !!! question "Is there a wizard available to set up an MPS language based on an XML schema (defined in .xsd files)?"
 
-    No, not possible at the moment.
+    No, not possible at the moment but you can create new projects from local or GitHub hosted templates with [Lochkarte](https://github.com/coolya/Lochkarte).
 
 !!! question "Where do you put JARs?"
     
@@ -31,7 +31,7 @@
 
 !!! question "How can you use databases in MPS?"
 
-    - MPS doesn't have any special support for databases or for example Spring Boot  (unlike IntelliJ IDEA) .
+    - MPS doesn't have any special support for databases or for frameworks such as Spring Boot (unlike IntelliJ IDEA) .
     - Specific Languages blog: [MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/)
 
 !!! question "How can you create a standalone utility (not a complete IDE) for language generation with MPS?[^2]"
@@ -69,7 +69,7 @@
 
 !!! question "How can you share MPS snippets?"
 
-    You can use [Skadi Cloud Gists](https://blog.logv.ws/2021/10/19/skadi-cloud-gist-2/).
+    You can use [Skadi Cloud Gists](https://gist.skadi.cloud).
 
 !!! question "How can you run MPS in the browser?"
 
@@ -78,7 +78,7 @@
 !!! question "How can you embed a web browser in MPS?"
 
     Since Intellij 2020.1 it is possible to use the [Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html).
-    Create a new swing component:
+    Create a new swing component in the editor:
     ```java
     JBCefBrowser myBrowser = new JBCefBrowser(myUrl);
     return myBrowser.getComponent();

@@ -5,7 +5,7 @@ take a long time building in the IDE. Many dependencies can create cycles which 
 
 By default, you can only reference nodes present in the current model. Dependencies add other models and modules that you can reference from the current model.
 
-Models listed as Dependencies of `Model A` need to be contained within Modules listed in the Dependencies (including transitive entries) of the Module containing this Model. Example:
+Models listed as dependencies of Model $A$ need to be contained within modules listed in the dependencies (including transitive entries) of the module containing this model. Example:
 
 ```kroki-plantuml
 @startuml
@@ -61,7 +61,7 @@ You can't mark a model *internal* and hide it from outside access.
 
 ## Export flag
 
-Re-exports a Module Dependency to be used by Modules depending on this Module. Example:
+It exports a Module Dependency again to be used by modules depending on this module. Example:
 
 ```kroki-plantuml
 @startuml
@@ -121,13 +121,13 @@ hide empty members
 
 ## Scope
 
-`Default Scope` is available for all module types.
+*Default Scope* is available for all module types.
 
-`Extends Scope` is a superset of `Default Scope`, for example, you never need to have both a `Default Scope` and an `Extends Scope` dependency on another module.
+*Extends Scope* is a superset of *Default Scope*, for example, you never need to have both a *Default Scope* and an *Extends Scope* dependency on another module.
 
 ### Extends scope for languages
 
-`LanguageB` (containing `ConceptB`) must extend `LanguageA` (containing `ConceptA` and `ConceptInterfaceA`) if and only if
+*LanguageB* (containing *ConceptB*) must extend *LanguageA* (containing *ConceptA* and *ConceptInterfaceA*) if and only if
 
 ```kroki-plantuml
 @startuml
@@ -165,9 +165,9 @@ hide empty members
 @enduml
 ```
 
-Another case is if `LanguageB` defines a generator outputting `ConceptA` and `LanguageA` has a runtime solution.
+Another case is if *LanguageB* defines a generator outputting *ConceptA* and *LanguageA* has a runtime solution.
 
-`LanguageB` shouldn't extend `LanguageA` (but needs a `Default Scope` dependency) if
+*LanguageB* shouldn't extend *LanguageA* (but needs a *Default Scope* dependency) if
 
 ```kroki-plantuml
 @startuml
@@ -196,7 +196,7 @@ hide empty members
 @enduml
 ```
 
-LanguageB can't define
+*LanguageB* can't define
 
 ```kroki-plantuml
 @startuml
@@ -220,11 +220,11 @@ hide empty members
 @enduml
 ```
 
-To be precise, it *is* possible to remove all errors flagged on behaviors and constraints in `LanguageB`. However, they aren't taken into account for `ConceptA`.
+To be precise, it is possible to remove all errors flagged on behaviors and constraints in *LanguageB*. However, they aren't taken into account for *ConceptA*.
 
 ### Extends scope for generators
 
-`GeneratorB` (inside `LanguageB`, and containing `ConceptB`) **must** extend `GeneratorA` (inside `LanguageA`, and containing `ConceptA`), if and only if
+*GeneratorB* (inside *LanguageB*, and containing *ConceptB*) must extend *GeneratorA* (inside *LanguageA*, and containing *ConceptA*), if and only if
 
 ```kroki-plantuml
 @startuml
@@ -250,42 +250,42 @@ hide empty members
 
 ## Implicit dependencies
 
-MPS adds some Dependencies implicitly without listing them in the corresponding dialog.
+MPS adds some dependencies implicitly without listing them in the corresponding dialog.
 
-Warning: Even if the Dependencies described below are established implicitly, they aren't taken into account in every aspect of MPS. So if an error occurs, make sure you didn't rely on some implicit dependency. If in doubt, make the dependency explicit.
+Warning: even if the dependencies described below are established implicitly, they aren't taken into account in every aspect of MPS. So if an error occurs, make sure you didn't rely on some implicit dependency. If in doubt, make the dependency explicit.
 
 ### Implicit dependencies inherited by a generator from its language
 
-A Generator inherits some dependencies from the language where it is defined in:
+A Generator inherits some dependencies from the language where it's defined in:
 
-- The Language's runtime solutions are added to the Generator module dependencies.
-- The Language Module is added to the Generator Module Dependencies.
-- The Language is added to the Generator used languages.
+- The language's runtime solutions are added to the generator module dependencies.
+- The language's module is added to the generator module dependencies.
+- The language is added to the generator *Used languages*.
 
-Except the case of generating a Concept of a Language that has a Runtime Solution, there is no requirement on the Language's Dependencies or Used Languages stemming from the Generator.
+Except the case of generating a concept of a language that has a runtime solution, there is no requirement on the language's dependencies or *Used Languages* stemming from the generator.
 
 ### Implicit exports of used language and language structure aspect
 
-Both a `Used Language` and the language structure aspect implicitly make it possible to access the language's behavior methods. However, they not re-export the complete Behavior Aspect. For example, a BaseLanguage Class contained in the Behavior Aspect is not visible.
+Both a *Used Language* and the language structure aspect implicitly make it possible to access the language's behavior methods. However, they not export again the complete behavior aspect. For example, a *baselanguage* class contained in the behavior Aspect isn't visible.
 
 ### Implicit exports of runtime language settings
 
 Runtime solutions are
 
-- implicitly loaded into the Java classpath of any Module using this Language.
-- implicitly added to the Dependencies of the Generator contained in this Language.
+- implicitly loaded into the Java classpath of any module using this language.
+- implicitly added to the Dependencies of the Generator contained in this language.
 
 Accessory Models are
 
-- implicitly loaded into the Dependencies of any Model using this Language.
+- implicitly loaded into the dependencies of any model using this language.
 
-  Accessory Models are not designed to keep any classes. This is "design-only" information. They should not affect Java class path anyhow.
+  Accessory Models aren't designed to keep any classes. This is design-only information. They shouldn't affect Java class path anyhow.
 
-Neither runtime solutions nor accessory models constitute a dependency from the Language to the referenced Solution or Model.
+Neither runtime solutions nor accessory models constitute a dependency from the language to the referenced solution or model.
 
 ## Cyclic dependencies
 
-Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic `Extends Scope` dependency. Cycles between models in the same module are fine.
+Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic *Extends Scope* dependency. Cycles between models in the same module are fine.
 Starting with MPS 2021.1, there is a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn't act as forgiving as the earlier one (ECJ).
 
 Distinctive cases are runtime solutions, accessory models, and utility models.

@@ -4,19 +4,87 @@ This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https:
 [This page](https://squidfunk.github.io/mkdocs-material/reference/) contains the reference for the material theme.
 Install extra MkDocs plugins in build.gradle + mkdocs.yml.
 
-If you are using IntelliJ for editing, it is recommended to install the plugin `Grazie Professional` for spell checking. 
+If you are using IntelliJ for editing, it is recommended to install the plugin [Grazie Professional](https://plugins.jetbrains.com/plugin/16136-grazie-professional) for spell checking. 
+
+## Editing
+
+- The first header should be `#`.
+- Inserted images with Markdown, not HTML: `![description](url){width="600px"}`. Set the with to 600px or 300px, depending on how big or small the image is
+- [footnotes syntax](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
+- The `target=_blank` attribute and an icon for external links gets automatically added to links.
+
+The following symbols must be escaped:
+
+  - &#36; is `&#36;` because it collides with inline Latex blocks.
+
+## Extensions
+
+Besides the Material extensions, the project used the following [Pymdown](https://facelessuser.github.io/pymdown-extensions/) extensions:
+
+- [pymdownx.betterem](https://facelessuser.github.io/pymdown-extensions/extensions/betterem/): different emphasis handling
+- [pymdownx.inlinehilite](https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/): inline code highlighting; example: #!js var test = 0;
+- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): linkafies URLs
+- [pymdownx.smartsymbols](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/): inserts commonly used Unicode characters via ASCII representations.
+- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): extension to Markdown fences
+- [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/): collapsible elements
+- [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)
+- [pymdownx.snippets](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/): include other Markdown or HTML snippets into the current Markdown file
+- [pymdownx.keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/): simplifies inserting key inputs; example: ++ctrl+alt+delete++
+- [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret/): superscript text via caret
+- [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): enables marking words
+- [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
+- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Some example icons are in [MPS Icons](../reference/icons.md).
+- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
+- [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
+- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 
+
+## Macros
+
+The plugin [mkdocs-macros-plugin](https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/) is activated.
+You can add variables to the extra section of mkdocs.yml (example: `mps_latest`) and use the available macros:
+
+  - contribution_by(github_username)
+  - question_by(github_username)
+  - answer_by(github_username)
+  - mps_url(identifier)
+  - image_popup()
+  - iets3()
+  - mbeddr()
+  - mbeddr_platform()
+  - mps_extensions()
+  - mps
+  
+  Look through main.py to see how they are implemented.
+
+The identifier can start with one of the following special identifiers:
+
+  - @openapi
+  - @mps
+  - @baselang
+  - @mpsutil
+  - @itemis
+  - @mbeddr
+  - @iets3
+
+The special identifiers get translated to the corresponding package names. Only the last part of the identifier has to
+be the correct name. The identifier can reference classes, interfaces, concept, and interface declarations in baselanguage,
+mps-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
+exact.
+
+Example: `@mps.ClassConcept` will find `jetbrains.mps.baseLanguage.structure.ClassConcept`. When the wrong node is
+selected, enter more parts of the full qualified name of the node.
 
 ## Diagrams
 
 [Kroki](http://kroki.io) enables support for diagrams ([examples](https://kroki.io/examples.html)). It supports the following diagrams:
 
 - [BlockDiag](http://blockdiag.com/en/)
-    - [BlockDiag](http://blockdiag.com/en/blockdiag/index.html) (simple block diagrams)
-    - [SeqDiag](http://blockdiag.com/en/seqdiag/) (simple sequence diagrams)
-    - [ActDiag](http://blockdiag.com/en/actdiag/index.html) (simple activity diagrams)
-    - [NwDiag](http://blockdiag.com/en/nwdiag/index.html) (simple network diagrams)
-    - [PacketDiag](http://blockdiag.com/en/nwdiag/packetdiag-examples.html) (packet header diagrams)
-    - [RackDiag](http://blockdiag.com/en/nwdiag/rackdiag-examples.html) (rack diagrams)
+  - [BlockDiag](http://blockdiag.com/en/blockdiag/index.html) (simple block diagrams)
+  - [SeqDiag](http://blockdiag.com/en/seqdiag/) (simple sequence diagrams)
+  - [ActDiag](http://blockdiag.com/en/actdiag/index.html) (simple activity diagrams)
+  - [NwDiag](http://blockdiag.com/en/nwdiag/index.html) (simple network diagrams)
+  - [PacketDiag](http://blockdiag.com/en/nwdiag/packetdiag-examples.html) (packet header diagrams)
+  - [RackDiag](http://blockdiag.com/en/nwdiag/rackdiag-examples.html) (rack diagrams)
 - [BPMN](https://bpmn.io/)
 - [Bytefield](https://bytefield-svg.deepsymmetry.org/bytefield-svg/1.6.1/intro.html)
 - [C4 (with PlantUML)](https://github.com/plantuml-stdlib/C4-PlantUML)
@@ -36,65 +104,6 @@ If you are using IntelliJ for editing, it is recommended to install the plugin `
 - [WaveDrom](https://wavedrom.com/tutorial.html)
 
 They can be embedded by creating a code block and the text `kroki-[diagramtype]`.
-
-## Extensions
-
-Besides the Material extensions, the following project used the following [Pymdown](https://facelessuser.github.io/pymdown-extensions/) extensions:
-
-- [pymdownx.betterem](https://facelessuser.github.io/pymdown-extensions/extensions/betterem/): different emphasis handling
-- [pymdownx.inlinehilite](https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/): inline code highlighting; example: #!js var test = 0;
-- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): linkafies URLs
-- [pymdownx.smartsymbols](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/): inserts commonly used Unicode characters via ASCII representations.
-- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): extension to Markdown fences
-- [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/): collapsible elements
-- [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)
-- [pymdownx.snippets](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/): include other Markdown or HTML snippets into the current Markdown file
-- [pymdownx.keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/): simplifies inserting key inputs; example: ++ctrl+alt+delete++
-- [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret/): superscript text via caret
-- [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): enables marking words
-- [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
-- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Some example icons are in [MPS Icons](icons.md).
-- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
-
-## Macros
-
-The plugin [mkdocs-macros-plugin](https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/) is activated.
-You can add variables to the extra section of mkdocs.yml (example: `mps_latest`) or
-
-Available macros:
-
-  - contribution_by(github_username)
-  - question_by(github_username)
-  - answer_by(github_username)
-  - mps_url(identifier)
-  
-The identifier can start with one of the following special identifiers:
-
-  - @openapi
-  - @mps
-  - @baselang
-  - @mpsutil
-  - @itemis
-  - @mbeddr
-  - @iets3
-
-The special identifiers get translated to the corresponding package names. Only the last part of the identifier has to
-be the correct name. The identifier can reference classes, interfaces, concept, and interface declarations in baselanguage,
-mps-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
-exact.
-
-Example: `#!text @mps.ClassConcept` will find `jetbrains.mps.baseLanguage.structure.ClassConcept`. When the wrong node is
-selected, enter more parts of the full qualified name of the node.
-
-## Editing
-
-- The first header should be `#`.
-- Inserted images with Markdown, not HTML: `![description](url){width="600px"}`. Set the with to 600px or 300px, depending on how big or small the image is
-- [footnotes syntax](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
-- Code snippet for gifs and show on hover: `<span class="hover_img"><a href="LINK">TEXT<span><img src="../../img/IMG.gif" alt="ALT_TEXT" /></span></a></span>`
-- The `target=_blank` attribute and an icon for external links gets automatically added to links.
-
-## Diagrams
 
 The following sections contain ideas for diagrams.
 

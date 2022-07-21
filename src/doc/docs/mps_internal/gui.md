@@ -1,6 +1,6 @@
 !!! question "Where can you find an overview of the user interface?"
     It can be found in the IntelliJ IDEA [documentation](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html).
-    A more technical explanation can be found in the IntelliJ Platform Plugin SDK [documentation](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
+    A more technical explanation can be found in the [IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
 
 !!! question "How can you show modal dialogs for inputting text?"
 

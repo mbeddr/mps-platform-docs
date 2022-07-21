@@ -1,3 +1,5 @@
+RCP stands for Rich Client Platform. The topic is explained in [Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html).
+
 !!! warning "A plugin is incompatible with the current RCP version."
     
     Specific Languages blog: [Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/)
@@ -19,11 +21,13 @@
 !!! question "How can I deactivate a preference page?"
 
     - Remove the plugin that contains the preference page.
-    - For  SPreference Pages: They are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and call `#!java dispose`
+    - For `SPreference` pages: they are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and then call `#!java dispose`
     or you could unregister the preference pages itself. For example:
     ```java
-    list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project)).getPlugins());
-    plugins.findFirst({~it => it.toString().startsWith("com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin"); }).getPrefsComponents().get(0).getPages().get(0).unregister();
+    Project ideaProject = ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project);
+    list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ideaProject.getPlugins());
+    BaseProjectPrefsComponent component = plugins.findFirst({~it => it.toString().startsWith("path_to_your._ProjectPlugin"); }).getPrefsComponents()  get(0);
+    component.getPages().get(0).unregister();
     ```
     
     For preference forms: they can be found through `#!java Configurable.APPLICATION_CONFIGURABLE.getPoint().getExtensionList` and removed by calling `#!java unregisterExtension`.
@@ -31,28 +35,29 @@
 !!! question "How can you replace the logical view on the left side with a custom one?"
 
 
-    Use the class `com.mbeddr.mpsutil.projectview`. You can find a example that replicates the _logical view_ [in mbeddr](http://127.0.0.1:63320/node?ref=r%3Ab2f3d5f9-b81e-4589-95e8-d5be28f6e48f%28com.mbeddr.mpsutil.projectview.views.plugin%29%2F8309912865649309798&project=com.mbeddr.mpsutil).
+    Use the class ^^com.mbeddr.mpsutil.projectview^^ from {{ mps_extensions() }}. You can find an example that replicates the _logical view_ [in mbeddr](http://127.0.0.1:63320/node?ref=r%3Ab2f3d5f9-b81e-4589-95e8-d5be28f6e48f%28com.mbeddr.mpsutil.projectview.views.plugin%29%2F8309912865649309798&project=com.mbeddr.mpsutil).
 
-??? question "How to tell which IntelliJ version MPS runs with?"
+??? question "How can you tell which IntelliJ version MPS runs with?"
 
     > Given I want to know, which version of [IntelliJ Community](https://github.com/JetBrains/intellij-community) my MPS is built from.
-    > How to tell?
+    > How can I know?
 
-    The easiest way to get the correct platform for an MPS version is by running ant in the root of your MPS sources:
+    {{ mbeddr() }}: The easiest way to get the correct platform for an MPS version is by running ant in the root of your MPS sources:
 
     `ant -f build/getDependencies.xml download-platform`
 
-    It will place the platform in `mps-platform` of the repository and its automatically imported into the intellij project where can read the sources and also step into them when debugging.
+    It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the intelliJ project where you can read the sources and also step into them when debugging.
 
-    In case you're looking at an RCP: `/build.number` provides this information and more, eg `idea.platform.build.number=MPS-203.7717.56`.
+    In case you're looking at an RCP: `/build.number` provides this information and more, eg `idea.platform.build.number=MPS—203.7717.56`.
 
-    The platform version is part of the build information e.g. MPS-211.7442.1291
+    The platform version is part of the build information e.g. MPS—211.7442.1291
 
-    To get the baseline version e.g. 211: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
+    To get the baseline version e.g. 211, programatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
 
-    To get the full version e.g. 211.7442.1291: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
+    To get the full version e.g. 211.7442.1291, programatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
 
-??? question "How can you show a custom project view instead of the MPS logical view?"
+??? question "How can you show a custom implemented project view instead of the MPS logical view?"
+    Assume that the view was build with ^^com.mbeddr.mpsutil.projectview^^:    
 
     ```java
     SwingUtilities.invokeLater(new Runnable() { 
@@ -79,9 +84,11 @@
         })
     ```
 
-!!! question "How can you customise the `New Roots` (mbeddr.platform) or `New dialog` of MPS/mbeddr?"
+!!! question "How can you customise the *New Roots* (mbeddr.platform) or *New dialog* of MPS/mbeddr?"
 
-    `#!java CreateRootFilterEP.getInstance().addFilter`
+    ```java
+    CreateRootFilterEP.getInstance().addFilter
+    ```
 
 !!! question "how to change (or turn off) the exception submission dialog?"
 

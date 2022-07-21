@@ -44,13 +44,13 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "What's {{ mps_url("@mps.IMainClass") }} used for?"
 
-    It allows to execute `baselanguage` code. An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
+    It allows to execute *baselanguage* code. An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
 
 ## Properties
 
 !!! question "How do you use a list of string properties?"
 
-    Wrap your property into a new concept and use a child collection
+    Wrap your property into a new concept and use a child collection:
 
     ```kroki-plantuml
     @startuml

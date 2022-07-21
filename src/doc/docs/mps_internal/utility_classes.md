@@ -10,10 +10,10 @@
 | {{ mps_url("@mps.util.JavaNameUtil") }}                                                                     | utilities related to java naming                                                        |
 | {{ mps_url("@mps.util.NameUtil") }}                                                                         | related utilities such as pluralizing or escaping strings                               |
 | {{ mps_url("@mps.ide.datatransfer.CopyPasteUtil") }}/{{ mps_url("@mps.ide.datatransfer.TextPasteUtil") }}   | copy paste related utilities                                                            |
-| {{ mps_url("@mps.workbench.action.ActionUtils") }}                                                          | action related utilities. These methods can execute actions programmatically.           |
+| {{ mps_url("@mps.workbench.action.ActionUtils") }}                                                          | action related utilities; these methods can execute actions programmatically.           |
 | {{ mps_url("@mps.ide.newSolutionDialog.NewModuleUtil") }}                                                   | utilities related to creating new modules such as creating solutions or languages       |
 | {{ mps_url("@mps.smodel.tempmodel.TemporaryModels") }}                                                      | utilities for creating temporary models                                                 |
-| {{ mps_url("com.intellij.util.ui.UIUtil") }}                                                                | utilities related to the Intellij UI such as checking for dark mode (isUnderDarcula()). |
+| {{ mps_url("com.intellij.util.ui.UIUtil") }}                                                                | utilities related to the Intellij UI such as checking for dark mode (`isUnderDarcula()`). |
 | {{ mps_url("@mps.tool.common.PathManager") }}/{{ mps_url("com.intellij.openapi.application.PathManager") }} | classes for getting all kinds of paths such as the plugins folder or the log folder.    |
 | {{ mps_url("@mps.classloading.ClassLoaderManager") }}                                                       | class responsible for loading (MPS) classes                                             |
 | {{ mps_url("@mps.findUsages.FindUsagesManager") }}                                                          | class that has methods for invoking the find usage UI                                   |

@@ -20,28 +20,24 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! hint "Explain the different menu related terms."
 
-    - **Menu definitions**
-        
-        They have two flavours `named` and `default` and can be defined in transformation or substitute menus.
+    - **Menu definitions** have two flavours *named* and +default+ and can be defined in transformation or substitute menus.
     - **Default menu**
-        - **Default substitution**
-
-            It will replace the default menu that MPS shows.
+        - **Default substitutions** will replace the default menu that MPS shows.
 
             Shortcut: ++ctrl+space++ or ++cmd+space++
-        - **Transformation menu**
-            It defines UI actions that will be shown in various locations. The menu is defined as a list of sections.
+        - **Transformation menus**
+            define UI actions that will be shown in various locations. The menu is defined as a list of sections.
             Each section contains a list of menu parts for a set of locations. 
             At runtime the menu parts and locations are used to generate the content of the completion menu.
             The contents of the completion menu are called menu items.
-        - **Parameterized action**
-            It allows to calculate a list of elements of a specific type to be shown in the completion menu.
-            It calculates all elements for the substitution menu and has an influence on the node creation.
-            Moreover, it defines the selection where the cursor should be placed.
+        - **Parameterized actions**
+            allow to calculate a list of elements of a specific type to be shown in the completion menu.
+            They calculate all elements for the substitution menu and have an influence on the node creation.
+            Moreover, they definesthe selection where the cursor should be placed.
 
 !!! question "How do you find out where a substitute menu entry is coming from?"
 
-    Use the Menu Trace Tool Window. More information can be found in [Menu Trace Tool Window | MPS](https://www.jetbrains.com/help/mps/menu-trace-tool-window.html).
+    Use the *Menu Trace Tool* window. More information can be found in [Menu Trace Tool Window | MPS](https://www.jetbrains.com/help/mps/menu-trace-tool-window.html).
 
 ??? question "What's the best way to improve the autocomplete description of concepts?"
 
@@ -78,7 +74,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! hint "I need hyperlinks."
 
-    Use the language `com.mbeddr.mpsutil.hyperlink` from the [mbeddr platform](http://mbeddr.com/platform.html).
+    Use the language ^^com.mbeddr.mpsutil.hyperlink^^ from {{ mbeddr_platform() }}.
 
 !!! question "How do you create clickable links?"
 
@@ -87,7 +83,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you include non-child relations in the editor?."
 
-    Use the language `com.mbeddr.mpsutil.editor.querylist` from {{ mps_extensions() }}.
+    Use the language ^^com.mbeddr.mpsutil.editor.querylist^^ from {{ mps_extensions() }}.
 
 ## Editor declaration
 
@@ -152,7 +148,7 @@ The editor aspect defines the projectional editor of a concept.
 
     >  ![example c:node editor](example_c_node_editor.png)
 
-    Usually, you would set the `attracts focus` property of the cell, where the cursor should be positioned, to `attractsFocus` or `FirstEditableCell`.
+    Usually, you would set the *attracts focus* property of the cell, where the cursor should be positioned, to `attractsFocus` or `FirstEditableCell`.
     But, since (**C.2** and **C.3**) are error cells, the default behaviour is to set the cursor in front of the first error cell, which is **(C.2)**.
     
     Therefore, change the first part of your editor to a querylist cell **(A)**, which references the "member" in the cell properties **(B)** and set the read-only property on the querylist.
@@ -168,7 +164,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you access an icon stored in a concept?"
 
-    Create a new `custom cell`: 
+    Create a new *custom cell*: 
 
     ```java
     new AbstractCellProvider() {
@@ -183,7 +179,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you paint the background of certain editor cells with a different color based on analysis of the model?"
 
-    - with a conditional editor
+    - with the help of a conditional editor
     - by using the class `NodeHighlightManager`:
 
     ```java
@@ -195,13 +191,13 @@ The editor aspect defines the projectional editor of a concept.
 
     The second approach has a better performance, because the highlighter runs asynchronously and not during the editor rebuild.
 
-!!! question "How can you hide ("show if") a custom cell in the editor?"
+!!! question "How can you hide a custom cell in the editor? (*show if* property)"
 
     > Custom cells expect only a cell provider in the inspector, but don't offer the possibility to specify other attributes to set e.g. "show if". How can I hide a custom cell under a specific condition? (MPS-33195)
 
-    The meta model actually allows to specify the “show if” (and other attributes) on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
+    The meta model actually allows to specify the *show if* property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
 
-    Since these attributes are "totally hidden" and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the "show if" on the collection.
+    Since these attributes are hidden and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the *show if* property on the collection.
 
     {{ contribution_by('aquapp') }}
 
@@ -225,7 +221,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you override an arbitrary editor?"
 
-    Use the language `de.slisson.mps.conditionalEditor` from {{ mps_extensions() }}.
+    Use the language ^^de.slisson.mps.conditionalEditor^^ from {{ mps_extensions() }}.
 
 !!! question "How can you get the font of an editor?"
 
@@ -235,7 +231,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you subscribe to editor changes?"
 
-    Read: [Add a tool that subscribes to editor changes | MPS forum](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009846039/comments/360002369420).
+    - [Add a tool that subscribes to editor changes | MPS forum](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009846039/comments/360002369420).
 
 !!! question "How do you get the text of an EditorCell programmatically?"
 
@@ -257,7 +253,7 @@ The editor aspect defines the projectional editor of a concept.
     return component;
     ```
 
-!!! question "How do you get a Project instance for an ActionEvent?"
+!!! question "How do you get a *Project* instance for an *ActionEvent*?"
 
     ```java
     button.addActionListener(new ActionListener() {
@@ -297,11 +293,11 @@ The editor aspect defines the projectional editor of a concept.
     
     > In my code, I want to react on this editor-close event. Is there are way to implement a callback or hook which is called when an editor tab is closed?
 
-    You can register an EditorComponentCreateListener, that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
+    You can register an [EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener), that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
 
 !!! question "Is there a utility class related to editor hints?"
 
-    Yes, there is in mbeddr: {{ mps_url("@mbeddr.EditorHintHelper") }}.
+    Yes, there is in {{ mbeddr() }}: {{ mps_url("@mbeddr.EditorHintHelper") }}.
 
 ## Bugs
 

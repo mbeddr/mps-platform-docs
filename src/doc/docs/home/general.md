@@ -10,32 +10,32 @@
 
 !!! warning "I changed something in a settings page and nothing changed."
 
-    There might be a bug related to caching. Reopening the dialog or invalidating the cache or restarting the project might help.
+    There might be a bug related to caching. Reopening the dialog, invalidating the cache or restarting the project might help.
 
 !!! question "Which standard IDE settings should you change?"
     
     The {{ image_popup("https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options", "maximum heap size", "../../img/maximum_heap_size.gif", "maximum heap size") }} setting should be changed to a higher values such as 8 GB when using many languages or plugins.
-    A reason for high memory usages can also be many or poorly implemented checking rules. 
+    Another reason for high memory usage can be many (poorly) implemented checking rules. 
 
 !!! warning "I am running low on memory or the IDE is running slow. What can you do without restarting MPS?" 
 
     When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models indicator", "../../img/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
-    The memory indicator at the same location can be used to free memory. As a last resort the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power saving mode", "../../img/power_saving_mode.gif", "power saving mode") }} can be enabled which disables background tasks such as the model checker.
+    The memory indicator at the same location can be used to free memory. As a last resort the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power saving mode", "../../img/power_saving_mode.gif", "power saving mode") }} can be enabled which disables background tasks such as the model checker (not recommended).
 
 !!! question "What's the difference between a module and a model?"
 
     Specific Languages blog: [Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/)
 
-!!! question "What's a `SRepository` and how's it structured?"
+!!! question "What's a SRepository and how's it structured?"
 
-    The answer can be found in the [MPS source code](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24).There can be multiple repositories available. Given a repository, references to modules/models/nodes can be resolved.
+    The answer can be found in the [MPS source code](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24).Multiple repositories could be available in the feature. Given a repository, references to modules/models/nodes can be resolved.
     There's no need in making ids unique globally as each subsystem knows, which exact repository it needs to use at any moment.
     (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )
 
     A repository contains modules, modules have model roots, each model root can load models.
     Also a module can be a models container itself (without model root).
-    A model is then a set of "root" nodes.
-    Each "root" node is a root of a tree of nodes. So that overall, repository is a tree structure.
+    A model is then a set of root nodes.
+    Each root node is a root of a tree of nodes, So that overall, a repository is a tree structure.
 
     ```kroki-mermaid
     %%{init: {'theme':'base'}}%%
@@ -60,7 +60,7 @@
 !!! question "Is there an existing expression/scripting language?"
 
     There is the expressions sample project. For a full language that can also be evaluated, have a look at
-    [KernelF](http://voelter.de/data/pub/kernelf-reference.pdf) available at [iets3.opensource](https://github.com/IETS3/iets3.opensource).
+    [KernelF](http://voelter.de/data/pub/kernelf-reference.pdf) available at {{ iets3() }}.
 
 !!! question "How do you organize large projects in MPS?"
 
@@ -99,7 +99,7 @@
     - fast
     - unreliable: when changing dependencies in my source models, this leads to a reload operation on the repository, which sometimes messes up the loaded repository and caches
 
-    **Option 1**: Publish and pull from local maven {{ iets3() }} 
+    **Option 1**: Publish and pull from local maven ({{ iets3() }})
 
     - reliable
     - [example](https://github.com/IETS3/iets3.opensource/wiki/Building-IETS3#building-against-local-mbeddr)
@@ -111,13 +111,13 @@
 
     - does not affect command line builds
 
-    **Option 3a**: Command line setup Task
+    **Option 3a**: Command line setup Task ({{ iets3() }})
     We usually have a `./gradlew setup` task in our projects that replaces your `.mps/libraries.xml`. When you want to change the project, you'll need to change the configuration of that command line setup task and rerun it.
 
-    **Option 3b**: MPS "Path variables" in Settings (deprecated)
+    **Option 3b**: MPS *Path variables* in settings (deprecated)
 
-    In the MPS setttings, I can configure path variables that can be used in my `.mps/libraries.xml` to pinpoint to the location of a target project.
+    In the MPS setttings, you can configure path variables that can be used in `.mps/libraries.xml` to pinpoint to the location of a target project.
 
-    They will only configure your MPS behavior and not affect the command line builds. So in most cases, you'll not want to use them and instead let your build script setup these files.
+    They will only configure the MPS behavior and not affect the command line builds. So in most cases, you don't want to use them and instead let your build script setup these files.
 
     {{ contribution_by('abstraktor') }}

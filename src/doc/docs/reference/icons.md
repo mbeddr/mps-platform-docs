@@ -1,5 +1,7 @@
 ## Actions
 
+The icons can be used in this repository by inserting the corresponding code in a markdown file.
+
 | Code                                    | Icon                                  | Icon_2x                                  | Icon_dark                                  | Icon_2x_dark                                  |
 |-----------------------------------------|---------------------------------------|------------------------------------------|--------------------------------------------|-----------------------------------------------|
 | `:mps-actions-addToVcs:`                | :mps-actions-addToVcs:                | :mps-actions-addToVcs_2x:                | :mps-actions-addToVcs_dark:                | :mps-actions-addToVcs_2x_dark:                |

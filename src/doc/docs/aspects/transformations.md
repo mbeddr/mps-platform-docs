@@ -4,7 +4,7 @@ title: Transformations aspect
 
 # Transformations aspect
 
-This language is part of Shadowmodels in {{ mps_extensions() }}. Consult the [documentation](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels/)
+This language is part of [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels) in {{ mps_extensions() }}. Consult the [documentation](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels/)
 for more information.
 
 !!! question "What's a fork?"
@@ -12,8 +12,8 @@ for more information.
     ![fork](fork.png)
 
     It can group a list of rules which can be applied. If there are nodes in the output where one of the transformations would again be applicable, nothing will happen unless you enable the fixpoint mode.
-    When you use the transform keyword it will just copy the input and all its descendants. If any input concept matches a transformation rule parameter in the auto apply part it will transform the input according to the matched transformation.
+    When you use the transform keyword it will just copy the input and all its descendants. If any input concept matches a transformation rule parameter in the auto apply part, it will transform the input according to the matched transformation.
 
 !!! question "What does the transform statement do?"
 
-    It has the same meaning as a `COPY_SRC` macro in MPS and it will just copy the input node and apply a rule.
+    It has the same meaning as a *COPY_SRC* macro in MPS and it will just copy the input node and apply a rule.

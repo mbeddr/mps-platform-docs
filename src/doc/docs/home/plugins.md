@@ -1,18 +1,18 @@
 !!! question "Where can you use a created language?[^1]"
 
-    They can be used in MPS itself, or in a custom IDE based on MPS (so called RCP).
+    They can be used in MPS itself, or in a custom IDE based on MPS (a so called RCP).
 
 !!! question "Are MPS language often used as plugins in Intellij IDEs instead of MPS itself? (an IntelliJ IDEA plugin, not custom RCP)"
 
     No, this functionality is not used very often.
 
-!!! question "How can you find plugins on the JetBrains Marketplace that are usable in MPS?"
+!!! question "How can you find plugins on the JetBrains marketplace that are usable in MPS?"
 
     Searching for the word [MPS](https://plugins.jetbrains.com/search?products=mps&search=MPS) in all categories should do the trick.
 
 !!! question "Why do many IntelliJ plugins don't work with MPS?"
 
-    Many of these plugins are working in combination with the text editor. MPS uses custom editors. It doesn't use
+    Many of these plugins operate on lines in a text editor. MPS uses projectional editors which are not normal text editors. It doesn't use
     documents and the [PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text based.
     Using plugins that are not developed for MPS can interfere with certain features of MPS (e.g. find usages isn't working anymore).
 
@@ -25,11 +25,11 @@
 
 !!! question "How do I disable notifications for fatal errors?"
 
-    Add `idea.fatal.error.notification=disabled` to [idea.properties](https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties).
+    Add `#!properties idea.fatal.error.notification=disabled` to [idea.properties](https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties).
 
 !!! question "Are there existing projects regarding MPS on the web?"
 
-    Have a look at [Deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
+    Have a look at [deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
     
     - Specific Languages Blog: [Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/)
     - Specific Languages Blog: [MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/)
@@ -45,7 +45,7 @@
 
     Yes, this is possible through the [IntelliJ Platform REST API](https://www.develar.org/idea-rest-api/):
     Send a GET request (or enter it into the browser address bar): [http://localhost:63342/api/about?more=true](http://localhost:63342/api/about?more=true).
-    Example output:
+    Make sure that you don't have IntelliJ opened at the same time as it has the same API. Example output:
 
     ```json
     {
@@ -68,10 +68,10 @@
 
 !!! question "How can you compare two nodes?"
 
-    - Select them in the logical view, right-click --> `#!text Compare two nodes`.
-    - Use the language `com.mbeddr.mpsutil.nodediff`:
-        - Select first node: `#!text Set as First Node in Diff`.
-        - Select second node: `#!text Show Diff with First Node`.
+    - Select them in the logical view, right-click --> *Compare two nodes*.
+    - Use the language ^^com.mbeddr.mpsutil.nodediff^^:
+        - Select first node: *Set as First Node in Diff*.
+        - Select second node: *Show Diff with First Node*.
 
 !!! error "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
     

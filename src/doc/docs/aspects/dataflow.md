@@ -10,5 +10,5 @@ title: Dataflow aspect
 
 !!! question "Where can you find good examples to understand how dataflow works?"
 
-    Have a look at the data flow builders of `jetbrains.mps.baselanguage`. You can also search for usages of
+    Have a look at the data flow builders of ^^jetbrains.mps.baselanguage^^. You can also search for usages of
     {{ mps_url("@mps.DataFlowBuilderDeclaration") }} in general.

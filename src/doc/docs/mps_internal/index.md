@@ -4,15 +4,15 @@
     >
     > How do I get the correct project class?
 
-    The two `Project` interfaces  are always a source of confusion. Essentially one comes from the IntelliJ platform and the other one holds MPS specific parts of the project.
+    The two *Project* interfaces  are always a source of confusion. Essentially one comes from the IntelliJ platform and the other one holds MPS specific parts of the project.
 
-    `com.intellij.openapi.project.Project`:  The project from the platform is stores basic information like the folder where the project is located and give access to project plugins for instance.
+    [com.intellij.openapi.project.Project](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.project%28MPS.IDEA%2F%29%2F%7EProject):  The project from the platform stores basic information like the folder where the project is located and gives, for example, access to project plugins.
     
-    `jetbrains.mps.project.Project`: MPS specific aspects of a project like model access or the repository. It also gives access to the modules (languages and solutions) of the project.
+    [jetbrains.mps.project.Project](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProject): MPS specific aspects of a project like model access or the repository. It also gives access to the modules (languages and solutions) of the project.
     
-    To get the *MPS Project* from a *Idea Project* use `ProjectHelper.fromIdeaProject`.
+    To get the *MPS Project* from an *Idea Project* use `fromIdeaProject` from [ProjectHelper](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.project%28MPS.Platform%2F%29%2F%7EProjectHelper).
     
-    To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, and then call `getProject` on it.
+    To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, call `getProject` on it.
 
     {{ contribution_by('coolya') }}
 
@@ -28,23 +28,15 @@
     Platform host = (Platform) p.getPlatform();
     #print host.findComponent(MakeServiceComponent.class);
     ```
-!!! question "How do you convert between different Project classes?"
-    
-    Use the class [ProjectHelper](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.project%28MPS.Platform%2F%29%2F%7EProjectHelper).
 
-!!! warning "I want to change something inside a `SModule` such as adding a dependency but can't find the right method."
+!!! warning "I want to change something inside a *SModule* such as adding a dependency but can't find the right method."
     
     Try casting it to [AbstractModule](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EAbstractModule) first.
-
-!!! question "How does class loading work in MPS?"
-    
-    Check [this comment](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F9026887257679817888),
-    [Dependencies and Classpath in MPS](https://github.com/mbeddr/mbeddr.core/wiki/MPS:-Deps-and-Classpath) and [classloading issues](https://github.com/mbeddr/mbeddr.core/wiki/Misc-Topics#classloading-issues).
 
 !!! question "Is there a way to start two instances of MPS, each with its own cache/state?"
 
     You can create a copy of you MPS installation and edit the idea.properties file in the bin directory. 
-    Changing idea.system.path should allows you start a second instance with dedicated caches/state. 
+    Changing *idea.system.path* should allows you start a second instance with dedicated caches/state. 
     If you don’t want to share any configuration also update idea.config.path.
 
 
@@ -62,7 +54,7 @@
 
 !!! question "How can you call make or rebuild?"
     
-    Use need to use [MakeActionImpl](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237). Example usuages
+    Use the class [MakeActionImpl](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237). Example usages
     can be found in the same model.
 
 
@@ -72,7 +64,7 @@
     Make sure to call this code from a [project plugin](https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)).
 
 !!! question "How do you display a message in the status bar? (left bottom corner)"
-    Note: the message might not be visible by calling from the console, because the rebuild of the model already shows a message:
+    Note: the message might not be visible when executing the code from the console, because the rebuild of the model overrides it with a new message:
     `WindowManager.getInstance().getStatusBar(ProjectHelper.toIdeaProject(#project))`
 
 !!! question "How can I register an IntelliJ extension?"
@@ -86,7 +78,7 @@
     Implement the interface `StatusBarWidgetFactory` and register it through the StatusBarWidgetFactory.EP_NAME extension point.
 
 !!! question "How do you add model imports and used languages programmatically?"
-    Specific Languages Blog &mdash; [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/)
+    Specific Languages Blog: [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/)
 
 !!! question "How can you run some MPS code from the command line/CI?"
     
@@ -133,8 +125,8 @@
 
     For built-in languages, MPS brings a load of dedicated debugging facilities:
 
-    - Debugging **editor cells and nodes**: When you right-click an item in the editor, you can find a submenu "Language Debug".
-    - Debugging **menu entries**: Select an item that you're curious in and press CMD+Alt+B (Ctrl+Alt+B) to open the _Menu Trace_ of it.
+    - Debugging editor cells and nodes: When you right-click an item in the editor, you can find a submenu *Language Debug*.
+    - Debugging menu entries: Select an item that you're curious in and press ++cmd+alt+b++/++ctrl+alt+b++ to open the *Menu Trace* of it.
     - Setup and an IntelliJ and connect it to step through java code.
 
     **Option 1**: Search for literals from console.
@@ -142,16 +134,16 @@
     **Option 2**: Search through serialized Java.
 
     1. Set up IntelliJ with your project.
-    2. Hit CMD+Shift+F (Ctrl+Shift+F) to search in path.
-    3. When you found a class of interest, open it in MPS via CMD+N (Ctrl+N). The source node usually has a similar name.
+    2. Hit ++cmd+shift+f++/++ctrl+shift+f++ to search in path.
+    3. When you found a class of interest, open it in MPS via ++cmd+n++/++ctrl+n++. The source node usually has a similar name.
 
-    This is great for finding editor nodes, for example, if that java class is named `Vehicle_EditorBuilder`, your source node was an editor for the `Vehicle` concept.
+    This is great for finding editor nodes, for example, if that java class is named *Vehicle_EditorBuilder*, your source node was an editor for the *Vehicle* concept.
 
-    **Last Resort**: Search XML model directly
+    **Last Resort**: Search XML model directly.
 
-    Use this only if you have no Assembly and your project doesn't open. The serialized API is subject to change and using this should be the last barrier.
+    Use this only if you have no assembly and your project doesn't open. The serialized API is subject to change and using this should be the last barrier.
 
-    Then I use `ack` on the command line to find the relevant models that contain this string. The output even contains the node id though, as in this example:
+    Then use *ack* (or a similar tool) on the command line to find the relevant models that contain this string. The output even contains the node id though, as in this example:
 
     ```
     $ ack "ack com.mbeddr.mpsutil.grammarcells"
@@ -178,7 +170,8 @@
     })
     ```
 
-??? question "How to get rid of 'Error: shall specify a repository to lock'?"
+??? question "How to get rid of Error: shall specify a repository to lock?"
+
     > When accessing model properties in rendering code, you must encapsulate the model accessing code in a read action:
     
     > ![read action missing repository](read_action_missing_repository.png)
@@ -192,7 +185,7 @@
 
     To get the repository you will need access to the project. e.g. the editor context will give you access to the repository: `editorContext.getRepository()`.
     
-    In other cases for instance when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository though to the place where you need it.
+    In other cases, for instance,  when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository though to the place where you need it.
 
     {{ answer_by('coolya') }}
 
@@ -202,9 +195,9 @@
     > When I serialize that something and then deserialize that identifier again, then I will find exactly that node.
     > How can I build such a thing?
 
-    **Option 1**: PersistenceFacade Id
+    **Option 1**: PersistenceFacade ID
 
-    Since the url does not look nice; you may use this combined string of model-id and node id that is used for the Url. For that, import the class `org.jetbrains.mps.openapi.persistence.PersistenceFacade` from the _MPS.OpenApi_ stub and run:
+    Since the url does not look nice; you may use this combined string of model ID and node ID that is used for the url. For that, import the class `org.jetbrains.mps.openapi.persistence.PersistenceFacade` from the _MPS.OpenApi_ stub and run:
     
     ```java
     # serialize identifier
@@ -224,44 +217,42 @@
     
     **Option 3**: Node Id
     
-    Use `#!java node/.getNodeId().toString()` it will yield the nodes id. Note that a nodeid is **only unique within this model**. If it should be globally unique, consider the next options.
-    
-    You could also deserialize this again somehow, but I don't have at hand, how.
+    Use `#!java node/.getNodeId().toString()` it will yield the nodes id. Note that a node ID is only unique within this model. If it should be globally unique, consider option 1.
 
     {{ contribution_by('abstraktor') }}
 
 ??? question "Where does MPS store preferences?"
 
     For a starting point, read [Directories used by the IDE](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html).
-    `CONFIG_DIR` refers to the configuration directory. `WORKSPACE_FILE` refers to `$PROJECT/.mps/workspace.xml``
+    *CONFIG_DIR* refers to the configuration directory. *WORKSPACE_FILE* refers to *$PROJECT/.mps/workspace.xml*:
 
-    - refactoring settings: `CONFIG_DIR/options/refactoringSettings.xml`
-    - override/implement setttings: `WORKSPACE_FILE/OverrideImplementMethodComponent`
-    - additional libraries: `CONFIG_DIR/options/AdditionalLibrariesManager.xml`
-    - default search options: `WORKSPACE_FILE/DefaultSearchOptions3`
-    - make configuration: `WORKSPACE_FILE/mpsMakeService`
-    - code style settings: `CONFIG_DIR/options/codeStyleSettings.xml`
-    - break point settings: `WORKSPACE_FILE/BreakpointViewSettings`
-    - migration state: `WORKSPACE_FILE/MigrationProperties`
-    - model validation settings: `CONFIG_DIR/options/mpsModelValidationSettings.xml`
-    - concept editor settings: `WORKSPACE_FILE/ConceptEditorHintSettings`
-    - node search history: `WORKSPACE_FILE/NodeEditorSearchHistory`
-    - project libraries: `WORKSPACE_FOLDER/libraries.xml`
-    - bookmarks: `WORKSPACE_FILE/BookmarksTool`
-    - project view: `WORKSPACE_FILE/ProjectView`
-    - blame dialog: `CONFIG_DIR/options/charismaBlameDialog.xml`
-    - compiler settings: `WORKSPACE_FOLDER/compiler.xml`
-    - model checker settings: `CONFIG_DIR/options/modelCheckerSettings.xml`
-    - modules: `WORKSPACE_FOLDER/modules.xml`
-    - project plugin settings: `WORKSPACE_FILE/ProjectPluginManager`
-    - generation settings: `CONFIG_DIR/options/generationSettings.xml`
-    - console history: `WORKSPACE_FILE/ConsoleHistory`
-    - break points: `WORKSPACE_FILE/BreakpointManager`
-    - bookmarks: `WORKSPACE_FILE/MPSBookmarkManager`
-    - messages view tool settings: `WORKSPACE_FILE/MessagesViewTool`
-    - usages view tool settings: `WORKSPACE_FILE/UsagesViewTool`
-    - disabled intentions: `CONFIG_DIR/options/intentions.xml`
-    - editor settings: `CONFIG_DIR/options/mpsEditor.xml`
-    - migration trigger settings: `WORKSPACE_FILE/MigrationTrigger`
+    - refactoring settings: *CONFIG_DIR/options/refactoringSettings.xml*
+    - override/implement setttings: *WORKSPACE_FILE/OverrideImplementMethodComponent*
+    - additional libraries: *CONFIG_DIR/options/AdditionalLibrariesManager.xml*
+    - default search options: *WORKSPACE_FILE/DefaultSearchOptions3*
+    - make configuration: *WORKSPACE_FILE/mpsMakeService*
+    - code style settings: *CONFIG_DIR/options/codeStyleSettings.xml*
+    - break point settings: *WORKSPACE_FILE/BreakpointViewSettings*
+    - migration state: *WORKSPACE_FILE/MigrationProperties*
+    - model validation settings: *CONFIG_DIR/options/mpsModelValidationSettings.xml*
+    - concept editor settings: *WORKSPACE_FILE/ConceptEditorHintSettings*
+    - node search history: *WORKSPACE_FILE/NodeEditorSearchHistory*
+    - project libraries: *WORKSPACE_FOLDER/libraries.xml*
+    - bookmarks: *WORKSPACE_FILE/BookmarksTool*
+    - project view: *WORKSPACE_FILE/ProjectView*
+    - blame dialog: *CONFIG_DIR/options/charismaBlameDialog.xml*
+    - compiler settings: *WORKSPACE_FOLDER/compiler.xml*
+    - model checker settings: *CONFIG_DIR/options/modelCheckerSettings.xml*
+    - modules: *WORKSPACE_FOLDER/modules.xml*
+    - project plugin settings: *WORKSPACE_FILE/ProjectPluginManager*
+    - generation settings: *CONFIG_DIR/options/generationSettings.xml*
+    - console history: *WORKSPACE_FILE/ConsoleHistory*
+    - break points: *WORKSPACE_FILE/BreakpointManager*
+    - bookmarks: *WORKSPACE_FILE/MPSBookmarkManager*
+    - messages view tool settings: *WORKSPACE_FILE/MessagesViewTool*
+    - usages view tool settings: *WORKSPACE_FILE/UsagesViewTool*
+    - disabled intentions: *CONFIG_DIR/options/intentions.xml*
+    - editor settings: *CONFIG_DIR/options/mpsEditor.xml*
+    - migration trigger settings: *WORKSPACE_FILE/MigrationTrigger*
 
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

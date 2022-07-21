@@ -15,9 +15,9 @@ This document lists some recommendations for code written it MPS.
 
 - Use language [checkedDots](https://www.jetbrains.com/help/mps/other-languages.html) for saver access of possible null values. You can check nodes for null: [node.isNull](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870)
 - Use annotation `#!java @NotNull` and `#!java @Nullable` for baselanguage code. a specific type system rule in MPS checks these annotations.
-- Use [:eq:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259) (NPE-safe equals operation) and [\:ne:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393) 
-  NPE-safe not equals operation instead of [==](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152) and `#!java equals`.
-- Return optional values instead of null in baselanguage code[^1].
+- Use [:eq:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259) (NPE safe equals operation) and [\:ne:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393) 
+  NPE safe not equals operation instead of [==](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152) and `#!java equals`.
+- Return optional values instead of null in `baselanguage` code[^1].
 
 ## Exceptions and warnings
 
@@ -25,14 +25,14 @@ This document lists some recommendations for code written it MPS.
 - Consider alternative ways of showing errors than throwing exceptions such as showing [notifications](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons). Examples for such notifications are balloons and dialogs.
 - Attach throwable objects to logging statements if available:
   `#!java log error "This is an error",errorObject`
-- Clean up in the `finally block` of a try statement.
+- Clean up in the *finally block* of a try statement.
 - Treat warnings in MPS as errors[^5] and also don't ignore warnings and errors. Warnings might become errors or even make the compilation fail in the future. Ignoring too many messages can hide real errors that you have to address.
 - Specific Languages blog: [Warnings should not replace documentation](https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/)
 
 ## Swing components
 
-- Use components from the intellij platform. [here](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html) describe some more components. Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.
-- Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (`a`, `an`, `the`, `and`, `or`, `so`, `yet`, etc.), and don't appear as the first or last word.
+- Use components from the IntelliJ platform. [here](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html) describe some more components. Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.
+- Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (*a*, *an*, *the*, *and*, *or*, *so*, *yet*, etc.), and don't appear as the first or last word.
   If the text isn't short, then you should use the capitalization used in ordinary prose (sentence capitalization) instead.
 - Read the [Swing tutorials](https://docs.oracle.com/javase/tutorial/uiswing/index.html) to get a better understanding of the components.
 
@@ -44,8 +44,7 @@ This document lists some recommendations for code written it MPS.
 
 ## Miscellaneous
 
-- Be careful when using unicode inside MPS. It might break something.
-    - (MPS-33687, MPS-31835)
+- Be careful when using unicode inside MPS. It might break something (MPS-33687, MPS-31835).
 - Use gradle for build scripts ([minimal example](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75)).
 - Do not leave debug statements in production code (exception [debug log](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497) statements).
 

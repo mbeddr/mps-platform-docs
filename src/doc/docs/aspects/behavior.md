@@ -8,7 +8,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
 ## General
 
-!!! question "Can you use asynchronous code in behaviour methods such as calls to external tools?"
+!!! question "Can you use asynchronous code in behaviour methods such as calling external tools?"
 
     Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behaviour code. 
     It should always be assumed that you have the correct lock in this methods. Move the code concerning the concurrent access for example into a background task.
@@ -18,7 +18,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
     Consider saving temporay data about nodes in annotations and user objects ([node/.putUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529), [node/.getUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529))
     instead of introducing properties. 
-    `SNode::putUserObject()`: You can store and access Java-Objects (as key-value pairs) where you normally could not access them in the mps-context, e.g. storing it as  node member and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
+    You can store and access Java-Objects in `SNode::putUserObject()` as key-value pairs)where you normally could not access them in the MPS context, e.g. storing it as node member and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
     For the generator consult the section `Transferring User Data` of the [generator documentation](https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference).
 
 ??? question "How to mark a constructor-created child optional? (created by a light quotation)"
@@ -29,7 +29,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
     Solutions:
 
-    - Initialize it with "null" in the light quotation.
+    - Initialize it with `null` in the light quotation.
     - Create it without light quotation.
     - Allow the child to be optional (`[0..1]`).
 
@@ -41,11 +41,11 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     }
     ```
 
-??? question "Why does the virtual method have `isVirtual=false`?"
+??? question "Why does the virtual method have *isVirtual=false*?"
 
     > Given there is a virtual behavior method `getPresentation`.
-    > When I override `getPresentation` in a sub-concept
-    > hhen I see it displays the overriding method to be virtual.
+    > When I override `getPresentation` in a subconcept
+    > then I see it displays the overriding method to be virtual.
     
     > ![virtual getPresentation](virtual_getPresentation.png)
     
@@ -63,15 +63,15 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     }
     ```
     
-    The editor shows a method to be _virtual_ when `isVirtual()` is true. As a result, overriding methods of virtual methods are not necessarily having `isVirtual=true`, but will still display _virtual_.
+    The editor shows that a method is _virtual_ when `isVirtual()` is true. As a result, overriding methods of virtual methods are not necessarily having `isVirtual=true`, but will still display _virtual_.
     
-    The rationale behind may be that if a method is overriding another one, both of them **must** be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the `isVirtual` more precisely as „is explicitly virtual", and `isVirtual()` as "is effectively virtual".
+    The rationale behind may be that if a method is overriding another one, both of them must be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the `isVirtual` more precisely as „is explicitly virtual", and `isVirtual()` as "is effectively virtual".
 
     {{ contribution_by('abstraktor') }}
 
 ## Initialization
 
-??? question "How to initialize a node?"
+??? question "How do you initialize a node?"
 
     ```kroki-plantuml
     @startuml
@@ -81,15 +81,15 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     @enduml
     ```
 
-    > How can I ensure that all created node will have a non-null HTMLDescription?
+    > How can I ensure that all created node will have a non-null `HTMLDescription`?
 
     **Using a node factory**
 
     The node factory will be called when
 
-    - the code completion menu is invoked to create such a node or to replace another one
-    - `add new initialized`, `set new initialized`, or `replace new initialized` is called
-    - such node is created as a root from the context menu in the project view.
+    - The code completion menu is invoked to create such a node or to replace another one.
+    - `add new initialized`, `set new initialized`, or `replace new initialized` is called.
+    - Such a node is created as a root from the context menu in the project view.
 
     The node factory is **not** called when
 
@@ -117,11 +117,13 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
     This would work only for properties though, not for children or references, and requires quotations to also set the `initialized` value if trying to override the default. Furthermore, your quotations will still be marked. 
 
-    ![Constraints: Car](constraints_Car.png){width="600px"}
+    ![Constraints: Car](constraints_Car.png){width="500px"}
 
-    Usage:
-
-    ![Usage: Car](car_usage.png){width="600px"}
+    <figure markdown>
+    ![Usage: Car](car_usage.png){width="500px"}
+      <figcaption>Usage</figcaption>
+    </figure>
+    
 
 !!! question "Can you access the parent in the constructor?"
 
@@ -136,7 +138,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     
     Note: Node factories are invoked in the inverse order of constructors. MPS will first invoke the specific node factory and the more generic ones if the exist.
 
-!!! question "Is there a way to call the constructor of a super concept inside the constructor of a sub concept?"
+!!! question "Is there a way to call the constructor of a super concept inside the constructor of a subconcept?"
     > Something like:
     > ```java
     constructor {
@@ -151,17 +153,17 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
 !!! question "How can you use generic return types?[^1]"
 
-    Not possible. Have a look at MPS-22502.
+    No, it is not possible (MPS-22502).
 
-!!! question "Can you use a more specific return type while an overriding behavior method?"
+!!! question "Can you use a more specific return type while overriding a behavior method?"
 
     No, it is not possible (MPS-27720).
 
-!!! question "Can you use variable arguments (varArgs) in behaviour methods?"
+!!! question "Can you use variable arguments (varArgs) in behavior methods?"
 
     No, it is not possible (MPS-31056).
 
-!!! question "Can you enter a `throws` clause in behaviour methods?"
+!!! question "Can you enter a *throws* clause in behavior methods?"
 
     No, it is not possible (MPS-22306).
 

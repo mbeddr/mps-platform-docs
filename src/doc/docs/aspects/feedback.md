@@ -8,4 +8,4 @@ The feedback aspect defines custom messages to show to the user when an error or
 
 !!! warning "Can I override error messages?"
 
-    Yes, in this aspect. Read: [Feedback - MPS](https://www.jetbrains.com/help/mps/feedback.html).
+    Yes, in this aspect: [Feedback - MPS](https://www.jetbrains.com/help/mps/feedback.html).

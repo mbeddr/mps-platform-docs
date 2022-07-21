@@ -1,0 +1,46 @@
+## Windows
+
+!!! error "Compilation from the command line might fail due to none ASCII chars."
+
+    The error message looks something like this:
+
+    ```
+    [generate] NewLanguage\behavior\rtzj__BehaviorDescriptor.java : Invalid character constant (line: 27) 
+    ```
+    If this happens, set the environment variable *JAVA_TOOL_OPTIONS* to `#!properties -Dfile.encoding=UTF8` (MPS-23526).
+
+!!! warning "Tests are failing with a message, that a filename or extension is too long (Windows)."
+
+    The error message looks like this: `Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long`
+    There is a path that is too long for Windows in the build script. 
+    Choose the option *compressArgs* in *test modules* node to fix the issue (MPS-24137).
+
+## Mac
+
+!!! question "How do I get my defined environment variables?"
+
+    Execute `printenv` on a shell.
+
+!!! warning "Using ^^com.mbeddr.mpsutil.datepicker^^ doesn't work when look and feel is set to macOS Light."
+
+    Use the default light theme. There is no other workaround at the moment (MPS-3388,MBEDDR-2203).
+
+!!! warning "Can't find TBItem with uid 'XY'."
+
+    This is a MacBook Pro with touchbar related issue. No workaround at the moment (MPS-31728).
+
+!!! question "What other active bugs are there?"
+
+    - Standalone application: impossible to define application icon (MPS-32971)
+
+## Linux
+
+!!! error "Autocompleting doesn't work with MPS + i3 (linux window manager)."
+
+    No solution at the moment (MPS-30499).
+
+!!! warning "Completion menu on wrong screen in multi monitor setup (linux+i3)."
+
+    No solution at the moment (MPS-33689).
+
+    

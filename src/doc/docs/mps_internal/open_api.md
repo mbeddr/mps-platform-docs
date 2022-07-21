@@ -6,8 +6,6 @@
 
 !!! question "How can you copy a language without the new one having duplicate model IDs?"
 
-    Try the following code:
-
     ```java
     { =>
     SModule sm = module/module1;
@@ -41,7 +39,7 @@
 
 !!! question "How can you execute an MPS action programmatically?"
 
-    Use `ActionUtils` to create an event and to run the action:
+    Use [ActionUtils](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.workbench.action%28MPS.Platform%2F%29%2F%7EActionUtils) to create an event and to run the action:
     
     ```java
     # cast to EditorContext class
@@ -52,14 +50,14 @@
     
     Since this is based on IDEA components, we need to get the `getNodeEditorComponent`, which is not part of the openapi. That's why we need to downcast it to the EditorComponent class.
 
-    Note: `action<…>` comes from the `jetbrains.mps.lang.plugin` language.
+    Note: `action<…>` comes from the ^^jetbrains.mps.lang.plugin^^ language.
 
 !!! question "How to shutdown MPS programmatically?"
 
-    In normal conditions one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work an exception
-     may be thrown on purpose. 
+    In normal conditions one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, an exception
+     can be thrown on purpose. 
 
-!!! question "How can you react to opening and closing auf projects?"
+!!! question "How can you react to opening and closing of projects?"
 
     Register a {{ mps_url("jetbrains.mps.project.ProjectManagerListener") }} in a plugin via the class 
     {{ mps_url("jetbrains.mps.project.ProjectManager") }}.
@@ -68,7 +66,9 @@
 
     > Example: Setting a property (=flag) via a button.
 
-    Execute: `#!java repository.getModelAccess().executeUndoTransparentCommand()`
+    ```java
+    repository.getModelAccess().executeUndoTransparentCommand()
+    ```
 
 !!! question "How do you work with temporary models?"
 
@@ -99,14 +99,16 @@
     Get the model-to-be-deleted as SModel (interface) and use `#!java new ModelDeleteHelper(model).delete();`
     For more context see: [DeleteModeHelper](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java)
 
-!!! question "How can you add a language to the "Used Languages" settings of a model programmatically?"
+!!! question "How can you add a language to the *Used Languages* settings of a model programmatically?"
 
     - Module level: `#!java ((AbstractModule) moduleA).addDependency(moduleB.getModuleReference(), false)`
     - Model level: `#!java new ModelImports(model).addUsedLanguage(language)`
 
     To get the language from a reference, you can call: `MetaAdapterFactory.getLanguage(moduleRef)`.
 
-!!! question "Can a node-ptr point to non-root nodes?"
+!!! question "Can a node pointer point to non-root nodes?"
+
+    Yes, for example:
 
     ```java
     node-ptr/Integer->parseInt->radix/

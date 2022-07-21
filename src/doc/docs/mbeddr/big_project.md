@@ -4,10 +4,10 @@ To avoid this, you can either open all the projects in `mbeddr.core\code\languag
 A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in the individual projects, thus you can run a migration once that executes on all these modules.
 
 1. Open project `mbeddr.core\tools\BigProject` with IntelliJ IDEA community edition.
-2. In Idea click in the menu on `Run > Run BigProjectGenerator`
-    1. If an SDK isn't configured, follow the error message in the bottom right corner or via project settings and select a Java 11 SDK installed on your system
-    2. use "default" for project language level
-    3. If a project compiler output path isn't configured, set it to `mbeddr.core\tmp\BigProject`
+2. In Idea click in the menu on *Run* --> *Run BigProjectGenerator*.
+    1. If an SDK isn't configured, follow the error message in the bottom right corner or via project settings and select a Java 11 SDK that's installed on your system.
+    2. Use *default* for the project language level.
+    3. If a project compiler output path isn't configured, set it to `mbeddr.core\tmp\BigProject`.
     4. Close and open the project again to run the project generator.
 3. Check generation feedback. It looks like this:
    ```
@@ -16,9 +16,9 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
     Solutions: 305
     Devkits: 22
    ```
-4. Open project `mbeddr.core\tools\BigProject` with MPS
+4. Open project `mbeddr.core\tools\BigProject` with MPS.
 5. When the migration wizard starts automatically, execute migrations, otherwise
-    1. Check for the popup "Migration suspended" in the right bottom corner. It tells you, which languages aren't built /deployed
+    1. Check for the popup *Migration suspended* in the right bottom corner. It tells you, which languages aren't built /deployed.
     2. Build or rebuild all languages in that list. Usually, MPS must build all languages and a set of solutions for the wizard to start automatically.
    
 		

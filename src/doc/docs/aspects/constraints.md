@@ -20,7 +20,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How can you set default values for properties?"
 
-    Use the language `com.mbeddr.mpsutil.propertydefault` from the [mbeddr platform](http://mbeddr.com/platform.html).
+    Use the language ^^com.mbeddr.mpsutil.propertydefault^^ from {{ mbeddr_platform() }}.
 
 !!! warning "The property value isn't valid."
 
@@ -34,7 +34,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 ## Scopes
 
-??? question "What's the best way to wrap a list of nodes into a Scope?"
+??? question "What's the best way to wrap a list of nodes into a *Scope*?"
 
     > I have a list of nodes and want to wrap them into a scope
     > How do you do that?
@@ -50,7 +50,7 @@ The constraints aspect defines constraints for the concepts of the language.
     
     Note that elements with a blank name are not part of the scope created by `ListScope.forNamedElements(sequence<node<>> elements)`. They'll get silently omitted.
     
-    Note that elements that are not an instance of {{ mps_url("@mps.INamedConcept") }} will make `forNamedElements` throw an exception.
+    Note that elements that are not an instance of {{ mps_url("@mps.INamedConcept") }}, will make `forNamedElements` throw an exception.
 
     {{ contribution_by('abstraktor') }}
 
@@ -58,7 +58,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
     Use the class {{ mps_url("@mps.CompositeScope") }}.
 
-!!! question "What's the difference between `parent scope`and `super.getScope`?"
+!!! question "What's the difference between *parent scope* and *super.getScope*?"
 
-    `parent scope` asks the scope to the container of your node or up in the hierarchy until it finds a scope provider.
+    `parent scope` asks of your node or up in the hierarchy for the scope until it finds a scope provider.
     `super.getScope` will use the implementation from the super concept.

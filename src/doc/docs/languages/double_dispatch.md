@@ -1,4 +1,4 @@
-This article explains the language `jetbrains.mps.baselanguage.doubleDispatch`. The example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
+This article explains the language ^^jetbrains.mps.baselanguage.doubleDispatch^^. The example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
 
 Most OOP programming languages support single dispatch, more commonly known as virtual methods. For example, consider the following code:
 
@@ -94,7 +94,7 @@ public class DoubleDispatch {
 8. ExplodingAsteroid hit a SpaceShip
 
 The desired result here would be *ExplodingAsteroid hit an ApolloSpacecraft* but instead you get *ExplodingAsteroid hit a SpaceShip*.
-To support double dispatch, import the dispatch-language and include dispatch-modifiers in ExplodingAsteroid:
+To support double dispatch, import the dispatch language and include dispatch modifiers in ExplodingAsteroid:
 
 ``` java
 public class ExplodingAsteroid extends Asteroid {

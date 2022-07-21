@@ -16,10 +16,12 @@ title: Migration aspect
 
 !!! question "I want to migrate an MPS project that's many years old. How do you do that?"
 
-    For old projects you have to edit the module files manually because the structure slightly changed. Open the .mpl files in an text editor
+    First of all make sure that you don't skip too many MPS versions, otherwise the migration won't succeed. For old projects you have to edit the module files manually because the structure slightly changed. Open the .mpl files in an text editor
     and change all occurences of `<language id="%ID" fqName="%FQNAME" version="%VERSION" />` into 
-    `<language slang="l:%ID:%FQNAME" version="%VERSION" />`. The next step is to start the migration assistant. It will fail because it can't find
-    migrations for some language versions. For example: jetbrains.mps.lang.editor only has a migration starting with version 7.You have to find all occurences
+    `<language slang="l:%ID:%FQNAME" version="%VERSION" />`. 
+
+    The next step is to start the migration assistant. It will fail because it can't find migrations for some language versions.
+    For example: ^^jetbrains.mps.lang.editor^^ only has a migration starting with version 7.You have to find all occurences
     of this language in your project with an terxt editor and change the attribute version to 7. Then run the migration assistant again and hope that everything
     works. Some concepts cannot be migrated automatically such as the substitute and transformation menues. There will also be other issues that have to be fixed manually.
 
@@ -67,7 +69,7 @@ title: Migration aspect
     ```
 ## Troubleshooting
 
-!!! error "When creating root nodes as part of language migration via `#!java model.add root(someRoot)`, it throws the exception `UnsupportedOperationException`."
+!!! error "When creating root nodes as part of language migration via *java model.add root(someRoot)*, it throws the exception *UnsupportedOperationException*."
 
     Make sure that the affected model is not a non-editable model.
 

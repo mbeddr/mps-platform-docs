@@ -35,7 +35,7 @@ Go through your editors and check the following list.
     - CAPS
         - Used for acronyms
 
-??? hint "You use Buttons in a correct way."
+??? hint "You use buttons correctly."
 
     (Swing) Buttons use appropriate symbols/text to make clear what they do. Buttons can alse be used as up and down keys. Buttons can also be hidden to not disrupt the text editing:
     ![hidable buttons](hide_buttons.png)
@@ -105,7 +105,7 @@ Go through your editors and check the following list.
 
 ??? hint "You use existing stylesheets."
 
-    For `baselanguage` there is [BaseLanguageStyle](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c3%28jetbrains.mps.baseLanguage.editor%29%2F1186415538255).
+    For *baselanguage* there is [BaseLanguageStyle](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c3%28jetbrains.mps.baseLanguage.editor%29%2F1186415538255).
     You can search globally for instances of [Stylesheet](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029e%28jetbrains.mps.lang.editor.structure%29%2F1186402211651) to find more styles.
 
 ??? hint "The font size conveys hierarchy."

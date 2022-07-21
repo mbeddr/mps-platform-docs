@@ -38,15 +38,15 @@ def define_env(env):
 
     @env.macro
     def contribution_by(github_username):
-        return "<sub>Contribution by: @" + github_username + "<sub>"
+        return "<sub>contributed by: @" + github_username + "<sub>"
         
     @env.macro
     def question_by(github_username):
-        return "<sub>Question by: @" + github_username + "<sub>"
+        return "<sub>asked by: @" + github_username + "<sub>"
         
     @env.macro
     def answer_by(github_username):
-        return "<sub>Answer by: @" + github_username + "<sub>"
+        return "<sub>answered by: @" + github_username + "<sub>"
         
     @env.macro
     def mps_url(identifier):
@@ -72,6 +72,10 @@ def define_env(env):
     @env.macro
     def mbeddr():
         return ':mbeddr:[mbeddr](https://github.com/mbeddr/mbeddr.core)'
+        
+    @env.macro
+    def mbeddr_platform():
+        return ':mbeddr:[mbeddr platform](http://mbeddr.com/platform.html)'
             
     @env.macro
     def mps_extensions():

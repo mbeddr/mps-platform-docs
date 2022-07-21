@@ -30,6 +30,8 @@
 *[SRepository]: Semantic Repository
 *[BaseLanguage]: a projectional clone of Java 6 (with optional extensions for Java 7 and 8)
 *[DSL]: Domain Specific Language
+*[JCEF]: Java Chromium Embedded Framework
+*[NPE]: NullPointerException
 
 *[OS]: Open Source
 *[PR]: Pull Request or Public Relations
@@ -42,3 +44,4 @@
 *[UML]: Unified Markup Language
 *[JVM]: Java Virtual Machine
 *[AI]: Artificial Intelligence
+*[SSH]: Secure Shell

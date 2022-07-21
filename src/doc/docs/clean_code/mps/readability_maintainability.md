@@ -17,7 +17,7 @@
   <figcaption markdown>[Java Deprecated annotation](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EDeprecated)</figcaption>
 </figure>
 
-- Use the text ``TODO`` in comments. The TODO tool can find these strings.
+- Use the text *TODO* in comments. The *TODO* tool can find these strings.
 - Check for redundant variable initializers (type system warning).
 - Use empty lines between statements (for example method declarations) for readability.
 - Use virtual packages to organize your code.
