@@ -126,7 +126,7 @@ nav:
     - Plugins: home/plugins.md
     - External files and tools: home/external_files_and_tools.md
     - Console: home/console.md
-    - Platform-specific bugs: home/platform_specific_bugs.md
+    - OS-specific bugs: home/platform_specific_bugs.md
     - RCP: home/rcp.md
     - Trouble shooting guide: home/trouble_shooting_guide.md
     - Debugging: home/debugging.md
