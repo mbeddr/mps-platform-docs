@@ -6,7 +6,7 @@ wrapper {
     gradleVersion = '6.9'
 }
 
-mkdocs.publish.docPath = '1.0'
+mkdocs.publish.docPath = ''
 mkdocs.strict = false
 
 python.pip 'mkdocs-material:8.4.0rc1' // override version in mkdocs gradle plugin. We want the latest version.
