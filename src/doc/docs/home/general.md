@@ -121,3 +121,7 @@
     They will only configure the MPS behavior and not affect the command line builds. So in most cases, you don't want to use them and instead let your build script setup these files.
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
+
+    JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime.

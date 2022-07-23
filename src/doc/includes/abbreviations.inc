@@ -32,6 +32,8 @@
 *[DSL]: Domain Specific Language
 *[JCEF]: Java Chromium Embedded Framework
 *[NPE]: NullPointerException
+*[JDK]: Java Development Kit
+*[JRE]: Java Runtime Environment
 
 *[OS]: Open Source
 *[PR]: Pull Request or Public Relations
