@@ -1,0 +1,2607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&A.">
+      
+      
+        <meta name="author" content="MPS Platform Docs team">
+      
+      
+        <link rel="canonical" href="https://mbeddr.github.io/mps-platform-docs/1.0/languages/mps_extensions/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>MPS-extensions - MPS Platform Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#checkboxes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MPS Platform Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MPS-extensions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aspects/structure/" class="md-tabs__link">
+        Aspects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Languages
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mbeddr/" class="md-tabs__link">
+        Mbeddr
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../build/" class="md-tabs__link">
+        Build
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mps_internal/" class="md-tabs__link">
+        Internal MPS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../clean_code/mps/" class="md-tabs__link">
+        Clean code
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../patterns/language_design/" class="md-tabs__link">
+        Language/UI patterns
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/reading_list/" class="md-tabs__link">
+        Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/editing_this_guide/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    MPS Platform Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/plugins/" class="md-nav__link">
+        Plugins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/external_files_and_tools/" class="md-nav__link">
+        External files and tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/console/" class="md-nav__link">
+        Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/platform_specific_bugs/" class="md-nav__link">
+        Platform-specific bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/rcp/" class="md-nav__link">
+        RCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/trouble_shooting_guide/" class="md-nav__link">
+        Trouble shooting guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Aspects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Aspects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Aspects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/structure/" class="md-nav__link">
+        Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/editor/" class="md-nav__link">
+        Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/actions/" class="md-nav__link">
+        Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/constraints/" class="md-nav__link">
+        Constraints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/behavior/" class="md-nav__link">
+        Behavior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/feedback/" class="md-nav__link">
+        Feedback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/typesystem/" class="md-nav__link">
+        Typesystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/refactorings/" class="md-nav__link">
+        Refactorings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/intentions/" class="md-nav__link">
+        Intentions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/findusages/" class="md-nav__link">
+        Find Usages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/plugin/" class="md-nav__link">
+        Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/dataflow/" class="md-nav__link">
+        Dataflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/textgen/" class="md-nav__link">
+        TextGen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/migration/" class="md-nav__link">
+        Migration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/vcs/" class="md-nav__link">
+        VCS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/generator/" class="md-nav__link">
+        Generator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" type="checkbox" id="__nav_2_19" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_19">
+          Contributed aspects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contributed aspects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_19">
+          <span class="md-nav__icon md-icon"></span>
+          Contributed aspects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/listener/" class="md-nav__link">
+        Listener
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/polyfun/" class="md-nav__link">
+        Polyfun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/virtualinterfaces/" class="md-nav__link">
+        Virtual Interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/transformations/" class="md-nav__link">
+        Transformations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Languages</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../baselanguage/" class="md-nav__link">
+        Baselanguage and extensions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MPS-extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        MPS-extensions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checkboxes" class="md-nav__link">
+    Checkboxes
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkboxes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-checkboxes" class="md-nav__link">
+    Boolean checkboxes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerationmulti-value" class="md-nav__link">
+    Enumeration/Multi-value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#richtext" class="md-nav__link">
+    Richtext
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-property-cell" class="md-nav__link">
+    Multiline property cell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-editor" class="md-nav__link">
+    Conditional Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-layout" class="md-nav__link">
+    Cell Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grammar-cells" class="md-nav__link">
+    Grammar Cells
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querylist" class="md-nav__link">
+    Querylist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-tips" class="md-nav__link">
+    Tool tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropdown" class="md-nav__link">
+    Dropdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collapsible-cells" class="md-nav__link">
+    Collapsible cells
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-operators" class="md-nav__link">
+    Mathematical operators
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../double_dispatch/" class="md-nav__link">
+        Double dispatch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mbeddr/">Mbeddr</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Mbeddr" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Mbeddr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/big_project/" class="md-nav__link">
+        BigProject
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/development_guide/" class="md-nav__link">
+        Development guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/misc_topics/" class="md-nav__link">
+        Miscellaneous topics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../build/">Build</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Build" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/ci/" class="md-nav__link">
+        CI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/gradle/" class="md-nav__link">
+        Gradle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/command_line_tool/" class="md-nav__link">
+        Creating a command line tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mps_internal/">Internal MPS</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Internal MPS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Internal MPS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/open_api/" class="md-nav__link">
+        Open API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+          
+            <label for="__nav_6_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dependencies and classpath" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Dependencies and classpath
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/terminology_and_ui_for_access/" class="md-nav__link">
+        Terminology and UI for access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/dependencies/" class="md-nav__link">
+        Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/recipes/" class="md-nav__link">
+        Recipes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/classloading/" class="md-nav__link">
+        Classloading
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/utility_classes/" class="md-nav__link">
+        Utility classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/gui/" class="md-nav__link">
+        GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/intellij_sdk/" class="md-nav__link">
+        IntelliJ SDK
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../clean_code/mps/">Clean code</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Clean code" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Clean code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/mps/readability_maintainability/" class="md-nav__link">
+        Readability/maintainability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/mps/deprecation/" class="md-nav__link">
+        Deprecation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../clean_code/java/">Java (Base Language)</a>
+          
+            <label for="__nav_7_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Java (Base Language)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Java (Base Language)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/java/programming_principles/" class="md-nav__link">
+        Programming principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/java/java_style_guide/" class="md-nav__link">
+        Java style guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Language/UI patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Language/UI patterns" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Language/UI patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/language_design/" class="md-nav__link">
+        Language design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/user_experience/" class="md-nav__link">
+        User experience
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/ui_patterns/" class="md-nav__link">
+        UI patterns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reading_list/" class="md-nav__link">
+        Reading list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/icons/" class="md-nav__link">
+        Icons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/exceptions/" class="md-nav__link">
+        Exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/actions/" class="md-nav__link">
+        Actions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/editing_this_guide/" class="md-nav__link">
+        Editing this guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/original_authors/" class="md-nav__link">
+        Original authors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checkboxes" class="md-nav__link">
+    Checkboxes
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkboxes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-checkboxes" class="md-nav__link">
+    Boolean checkboxes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerationmulti-value" class="md-nav__link">
+    Enumeration/Multi-value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#richtext" class="md-nav__link">
+    Richtext
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-property-cell" class="md-nav__link">
+    Multiline property cell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-editor" class="md-nav__link">
+    Conditional Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-layout" class="md-nav__link">
+    Cell Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grammar-cells" class="md-nav__link">
+    Grammar Cells
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querylist" class="md-nav__link">
+    Querylist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-tips" class="md-nav__link">
+    Tool tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropdown" class="md-nav__link">
+    Dropdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collapsible-cells" class="md-nav__link">
+    Collapsible cells
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-operators" class="md-nav__link">
+    Mathematical operators
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+  <a href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/languages/mps_extensions.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>MPS-extensions</h1>
+
+<h2 id="checkboxes">Checkboxes<a class="headerlink" href="#checkboxes" title="Permanent link">&para;</a></h2>
+<h3 id="boolean-checkboxes">Boolean checkboxes<a class="headerlink" href="#boolean-checkboxes" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><ins>de.itemis.mps.editor.bool</ins></p>
+</blockquote>
+<p>A boolean checkbox cell that provides custom icons for states.</p>
+<h3 id="enumerationmulti-value">Enumeration/Multi-value<a class="headerlink" href="#enumerationmulti-value" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><ins>de.itemis.mps.editor.enumeration</ins></p>
+</blockquote>
+<p>A checkbox cell with more than one state. You have to define states by an enumeration property.</p>
+<h2 id="richtext">Richtext<a class="headerlink" href="#richtext" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>slisson.richtext</ins></p>
+</blockquote>
+<p>A multi-line text-block that&rsquo;s extendable (e.g. for images). It looks a bit latex-like.
+The mbeddr doc language used it for generating xhtml, latex, and markdown.</p>
+<div class="admonition warning">
+<p class="admonition-title">The ordering of text and IWords can&rsquo;t be arbitrary,</p>
+<p>A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.</p>
+</div>
+<h2 id="multiline-property-cell">Multiline property cell<a class="headerlink" href="#multiline-property-cell" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.slisson.mps.editor.multiline</ins></p>
+</blockquote>
+<p>A cell for string properties over multiple lines.</p>
+<h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.editor.diagram</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">I encountered a bug.</p>
+<p>Check the <a href="https://github.com/JetBrains/MPS-extensions/issues/120">meta Issue</a> on Github.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you use this language?</p>
+<p>Have a look at the samples of this language in <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,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"
+    />
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>. There is also an <a href="https://tillschallau.de/mps/">external tutorial series</a>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What&rsquo;s the edge ID in the diagrams used for?</p>
+<p>It’s used in the map that contains the layout data. It can be any unique string.
+LayoutMapEntry.key is the property where this string is used (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1634132395020500?thread_ts=1634127497.019400&amp;cid=C99H1FR42">source</a>).</p>
+</div>
+<h2 id="conditional-editor">Conditional Editor<a class="headerlink" href="#conditional-editor" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.slisson.mps.conditionalEditor</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Generation errors exist.</p>
+<p>The condition of the conditional editor is not optional, it has to be set.</p>
+</div>
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.slisson.mps.tables</ins></p>
+</blockquote>
+<p>Use <em>slisson-tables</em> instead of <em>mps-tables</em> because the language is more flexible (and not deprecated).
+The language displays content in a tabular format. The table can be hard-coded or can consist of complex queries/dynamic content.
+You have to add new cells and rows in the editor. They can also be readonly.
+You need a little experience (trial-and-error) to create these tables.
+Features:</p>
+<ul>
+<li>table cell queries</li>
+<li>partial tables</li>
+<li>grid queries</li>
+</ul>
+<p>Strumenta blog: <a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/">Tabular projections in Jetbrains <abbr title="Meta Programming System">MPS</abbr>: let’s start building an accounting system</a></p>
+<details class="question">
+<summary>How do you get rid of the small little extra grid lines on the outside of the table rows? (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700">original question</a>)</summary>
+<p>Change these properties to true. </p>
+<p><img alt="Set Properties to true" src="../../img/table_lines_properties.png" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">How can I improve my tables?</p>
+<ul>
+<li>even-odd coloring of rows</li>
+<li>coloring of columns and row headers</li>
+<li>group columns by color</li>
+<li>multi-column headers</li>
+<li>annotations for cells</li>
+<li>pagination + other <abbr title="User Interface">UI</abbr> buttons</li>
+</ul>
+</div>
+<h2 id="cell-layout">Cell Layout<a class="headerlink" href="#cell-layout" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.editor.celllayout</ins></p>
+</blockquote>
+<div class="admonition question">
+<p class="admonition-title">What does this language do?</p>
+<p>In the <abbr title="Meta Programming System">MPS</abbr> layout algorithms the children decide about their width and height and the parent cell can only arrange the already layouted children. 
+In the algorithms from the celllayout language are similar to the swing layouters where the child is asked for its min/max/preferred size, 
+but the parent decides about the size of the child and the child then has to fit itself into these bounds. 
+This is used in tables and diagram, but also for the styles defined in the <ins>de.itemis.mps.celllayout</ins> language (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&amp;cid=C99H1FR42">source</a>).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What does grow-x and push-x do?</p>
+<p><em>Grow-x</em> grows the cell to the with of the parent. <em>Push-x</em> is like setting <em>grow-x</em> on the cell and all ancestor cells.</p>
+</div>
+<h2 id="grammar-cells">Grammar Cells<a class="headerlink" href="#grammar-cells" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.grammarcells</ins></p>
+</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Grammar cells seem to need a dummy component. Is this necessary?</p>
+<p>Yes it is, otherwise the generator doesn&rsquo;t get used(<a href="https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300">source</a>).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What combinations of cells aren&rsquo;t supported?</p>
+<p>The following combinations are not allowed:</p>
+<ul>
+<li>optional and constant</li>
+<li>optional and reference</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can you enter enumerations easier?</p>
+<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/">Entering enumerations easier with grammar cells</a></p>
+</div>
+<h2 id="querylist">Querylist<a class="headerlink" href="#querylist" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.editor.querylist</ins></p>
+</blockquote>
+<p>You can use nodes in the editor, which aren&rsquo;t directly available in the current context. The language is more 
+powerful than (readonly) model access (displays a string).
+You can have editor cells, which can have actions and all other normal cell features.
+<a href="http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197">queryListNode</a> allows to access the surrounding context node in the editor definition (which otherwise isn&rsquo;t available).</p>
+<div class="admonition question">
+<p class="admonition-title">How do I fold collections returned by a querylist?</p>
+<p>Surround the querylist with a vertical collection and and set the cell layout of the querylist (not its content) to vertical.</p>
+</div>
+<details class="question">
+<summary>How do I make cells in querylists navigatable?</summary>
+<blockquote>
+<p>I&rsquo;m trying to create a list of navigatable cells via querylist from mpsutil.</p>
+<p>The querylists query collects some nodes from my model, and I&rsquo;d like to make it so that each cell produced with this querylist navigates to its respective node.</p>
+<p>Using the <em>navigatable-node</em> style attribute (returning <code>node</code>, the node from the query) on these cells doesn&rsquo;t seem to work though - ctrl+clicking them doesn&rsquo;t do anything.</p>
+<p>How can I make the cells in a querylist navigatable to that node?</p>
+</blockquote>
+<p>The <code>navigatable-node</code> style attribute won&rsquo;t allow you to point directly to the node from the querylist&rsquo;s query. <br />
+Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsutil) to make the navigation work, and the <code>hyperlink-style</code> attribute to make it look like a regular reference:</p>
+<p><img alt="hyperlink node" src="../../img/external_questions/hyperlink_node.png" />  </p>
+<p>A common workaround to get similar behavior with <em>navigatable-node</em> is to point it to a child or parent of the desired node instead of that node itself.</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></p>
+</details>
+<h2 id="tool-tips">Tool tips<a class="headerlink" href="#tool-tips" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.tooltips.structure</ins></p>
+</blockquote>
+<p>This language is deprecated, use <ins>jetbrains.mps.lang.editor.tooltips</ins> instead. It provides tooltips on hover.
+You have to define a regular editor and a hover editor.</p>
+<h2 id="dropdown">Dropdown<a class="headerlink" href="#dropdown" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.dropdown</ins></p>
+</blockquote>
+<p>This language surrounds an editor cell with a dropdown cell with a button. 
+It opens the code completion menu whe you click on it.
+The language might not be very stable.</p>
+<h2 id="collapsible-cells">Collapsible cells<a class="headerlink" href="#collapsible-cells" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.editor.collapsible</ins></p>
+</blockquote>
+<p>This language defines collapsed/folded and expanded/unfolded editors. It provides plus(+) and minus(-) buttons in the editor.
+There is no need for foldable collections. Use them together with other languages such as query lists.</p>
+<h2 id="mathematical-operators">Mathematical operators<a class="headerlink" href="#mathematical-operators" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins>de.itemis.mps.editor.math.notations</ins></p>
+</blockquote>
+<p>This language embeds mathematical operators into the editor  and also provides a set of predefined operators.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      
+    
+  </small>
+</div>
+
+              
+
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="mbeddr/mps-platform-docs"
+        data-repo-id="R_kgDOGU63Qw"
+        data-category-id="DIC_kwDOGU63Q84B_z-C"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+      
+    targetBlank();
+    })
+   
+   function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+    }
+  }
+};
+  </script>
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../baselanguage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Baselanguage and extensions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Baselanguage and extensions
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../double_dispatch/" class="md-footer__link md-footer__link--next" aria-label="Next: Double dispatch" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Double dispatch
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
