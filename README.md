@@ -9,9 +9,13 @@ open an issue in this repository.
 
 **Website:** [mps-platform-docs](https://mbeddr.github.io/mps-platform-docs/)
 
-<img width="1068" alt="screenshot_website" src="https://user-images.githubusercontent.com/88385944/151652075-c00bcbf8-8972-4c7f-8847-cd4dde6c3a9d.png">
+<img width="1068" alt="mps-platform-docs homeepage" src="https://user-images.githubusercontent.com/88385944/180607116-2c61d660-7893-4ebb-a383-97b56ff94abb.png">
 
 ## Local execution
-Run: `gradle mkdocsServe`
+Run: `./gradlew mkdocsServe`
 
-Build: `gradle mkdocsBuild`
+Build: `./gradlew mkdocsBuild`
+
+## Publishing
+
+`./gradlew mkdocsPublish` is automatically run on push (Github Actions). The secret key is just a ssh key from someone who has push permissions for this repository.
