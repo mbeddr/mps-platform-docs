@@ -293,3 +293,5 @@ Distinctive cases are runtime solutions, accessory models, and utility models.
 In contrast to runtime solutions, utility models are used *while* accessing behavior or running a generator. Code within runtime solutions is used *after* the generator ran from the generated code. Thus, a runtime solution shouldn't use or reference the language it is referenced from. A utility model can use or reference the language it is reference from.
 
 Accessory models can use or reference the language they're referenced from.
+
+For build scripts there is a flag that allows bootstrap dependencies. More information can be found in section *MPS Settings* of the [build language documentation](https://www.jetbrains.com/help/mps/build-language.html?q=bootstrap%20%E2%80%93%20setting%20this%20flag#whatismpsbuildlanguage?). 
