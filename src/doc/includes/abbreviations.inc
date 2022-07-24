@@ -47,3 +47,5 @@
 *[JVM]: Java Virtual Machine
 *[AI]: Artificial Intelligence
 *[SSH]: Secure Shell
+
+*[FJ]: ForkJoin
