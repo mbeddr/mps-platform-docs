@@ -3,8 +3,8 @@
 }
 
 .hover_img a { position:relative; }
-.hover_img a span { position:absolute; display:none; z-index:99; }
-.hover_img a:hover span { display:block; width: 600px; overflow: visible;  }
+.hover_img a ~ a { position:absolute; display:none; z-index:99; }
+.hover_img a:hover ~ a { display:block; width: 600px; overflow: visible;  }
 
 :root > * {
   --md-code-hl-variable-color: #1c7d4d;
@@ -15,8 +15,8 @@
     margin: 0;
 }
 
-a:not([class^="md-"])[href^="http"]::after,
-a:not([class^="md-"])[href^="https://"]::after
+a:not([class^="md-"]):not(.glightbox)[href^="http"]::after,
+a:not([class^="md-"]):not(.glightbox)[href^="https://"]::after
 {
   content: "";
   width: 11px;

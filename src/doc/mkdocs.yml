@@ -52,6 +52,10 @@ plugins:
   - macros
   - git-revision-date-localized
   - kroki
+  - glightbox:
+      width: 70vw
+      height: 20vw
+      selector: .glightbox
   - autolinks
   - autolink_references:
       autolinks:
