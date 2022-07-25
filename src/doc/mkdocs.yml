@@ -45,7 +45,8 @@ extra:
   mps_author: MPS 2021.1.4
 
 plugins:
-  - search
+  - search:
+      separator: '(?!MPS)[\s\-/#:]'
   - macros
   - git-revision-date-localized
   - kroki
