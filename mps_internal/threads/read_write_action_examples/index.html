@@ -7,25 +7,25 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/home/debugging/" rel="canonical"/>
-<link href="../../assets/favicon.png" rel="icon"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/threads/read_write_action_examples/" rel="canonical"/>
+<link href="../../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.4.0rc1" name="generator"/>
-<title>Debugging - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.476df7d4.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<title>Example actions using locks - MPS Platform Docs</title>
+<link href="../../../assets/stylesheets/main.476df7d4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#debugging">
+<a class="md-skip" href="#example-of-actions-that-require-mps-locks">
           Skip to content
         </a>
 </div>
@@ -33,8 +33,8 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
-<img alt="logo" src="../../assets/logo.png"/>
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
+<img alt="logo" src="../../../assets/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Debugging
+              Example actions using locks
             
           </span>
 </div>
@@ -108,52 +108,52 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../..">
+<a class="md-tabs__link" href="../../..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../aspects/structure/">
+<a class="md-tabs__link" href="../../../aspects/structure/">
         Aspects
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../languages/">
+<a class="md-tabs__link" href="../../../languages/">
         Languages
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mbeddr/">
+<a class="md-tabs__link" href="../../../mbeddr/">
         Mbeddr
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../build/">
+<a class="md-tabs__link" href="../../../build/">
         Build
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         Internal MPS
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../clean_code/mps/">
+<a class="md-tabs__link" href="../../../clean_code/mps/">
         Clean code
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../patterns/language_design/">
+<a class="md-tabs__link" href="../../../patterns/language_design/">
         Language/UI patterns
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../reference/reading_list/">
+<a class="md-tabs__link" href="../../../reference/reading_list/">
         Reference
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../about/editing_this_guide/">
+<a class="md-tabs__link" href="../../../about/editing_this_guide/">
         About
       </a>
 </li>
@@ -169,8 +169,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
-<img alt="logo" src="../../assets/logo.png"/>
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
+<img alt="logo" src="../../../assets/logo.png"/>
 </a>
     MPS Platform Docs
   </label>
@@ -185,10 +185,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Home</a>
+<a href="../../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -200,43 +200,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../general/">
+<a class="md-nav__link" href="../../../home/general/">
         General
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../plugins/">
+<a class="md-nav__link" href="../../../home/plugins/">
         Plugins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external_files_and_tools/">
+<a class="md-nav__link" href="../../../home/external_files_and_tools/">
         External files and tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../console/">
+<a class="md-nav__link" href="../../../home/console/">
         Console
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../platform_specific_bugs/">
+<a class="md-nav__link" href="../../../home/platform_specific_bugs/">
         OS-specific bugs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rcp/">
+<a class="md-nav__link" href="../../../home/rcp/">
         RCP
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../trouble_shooting_guide/">
+<a class="md-nav__link" href="../../../home/trouble_shooting_guide/">
         Trouble shooting guide
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/debugging/">
         Debugging
       </a>
 </li>
@@ -256,92 +255,92 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/structure/">
+<a class="md-nav__link" href="../../../aspects/structure/">
         Structure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/editor/">
+<a class="md-nav__link" href="../../../aspects/editor/">
         Editor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/actions/">
+<a class="md-nav__link" href="../../../aspects/actions/">
         Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/constraints/">
+<a class="md-nav__link" href="../../../aspects/constraints/">
         Constraints
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/behavior/">
+<a class="md-nav__link" href="../../../aspects/behavior/">
         Behavior
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/feedback/">
+<a class="md-nav__link" href="../../../aspects/feedback/">
         Feedback
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/typesystem/">
+<a class="md-nav__link" href="../../../aspects/typesystem/">
         Typesystem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/refactorings/">
+<a class="md-nav__link" href="../../../aspects/refactorings/">
         Refactorings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/scripts/">
+<a class="md-nav__link" href="../../../aspects/scripts/">
         Scripts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/intentions/">
+<a class="md-nav__link" href="../../../aspects/intentions/">
         Intentions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/findusages/">
+<a class="md-nav__link" href="../../../aspects/findusages/">
         Find Usages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/plugin/">
+<a class="md-nav__link" href="../../../aspects/plugin/">
         Plugin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/dataflow/">
+<a class="md-nav__link" href="../../../aspects/dataflow/">
         Dataflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/test/">
+<a class="md-nav__link" href="../../../aspects/test/">
         Test
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/textgen/">
+<a class="md-nav__link" href="../../../aspects/textgen/">
         TextGen
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/migration/">
+<a class="md-nav__link" href="../../../aspects/migration/">
         Migration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/vcs/">
+<a class="md-nav__link" href="../../../aspects/vcs/">
         VCS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/generator/">
+<a class="md-nav__link" href="../../../aspects/generator/">
         Generator
       </a>
 </li>
@@ -358,27 +357,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/documentation/">
+<a class="md-nav__link" href="../../../aspects/documentation/">
         Documentation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/listener/">
+<a class="md-nav__link" href="../../../aspects/listener/">
         Listener
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/polyfun/">
+<a class="md-nav__link" href="../../../aspects/polyfun/">
         Polyfun
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/virtualinterfaces/">
+<a class="md-nav__link" href="../../../aspects/virtualinterfaces/">
         Virtual Interfaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/transformations/">
+<a class="md-nav__link" href="../../../aspects/transformations/">
         Transformations
       </a>
 </li>
@@ -391,7 +390,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../languages/">Languages</a>
+<a href="../../../languages/">Languages</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -403,17 +402,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/baselanguage/">
+<a class="md-nav__link" href="../../../languages/baselanguage/">
         Baselanguage and extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/mps_extensions/">
+<a class="md-nav__link" href="../../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
+<a class="md-nav__link" href="../../../languages/double_dispatch/">
         Double dispatch
       </a>
 </li>
@@ -423,7 +422,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mbeddr/">Mbeddr</a>
+<a href="../../../mbeddr/">Mbeddr</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -435,17 +434,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/big_project/">
+<a class="md-nav__link" href="../../../mbeddr/big_project/">
         BigProject
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/development_guide/">
+<a class="md-nav__link" href="../../../mbeddr/development_guide/">
         Development guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+<a class="md-nav__link" href="../../../mbeddr/misc_topics/">
         Miscellaneous topics
       </a>
 </li>
@@ -455,7 +454,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../build/">Build</a>
+<a href="../../../build/">Build</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -467,32 +466,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/ci/">
+<a class="md-nav__link" href="../../../build/ci/">
         CI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/gradle/">
+<a class="md-nav__link" href="../../../build/gradle/">
         Gradle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/command_line_tool/">
+<a class="md-nav__link" href="../../../build/command_line_tool/">
         Creating a command line tool
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/git/">
+<a class="md-nav__link" href="../../../build/git/">
         Git
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">Internal MPS</a>
+<a href="../../">Internal MPS</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -504,14 +503,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+<a class="md-nav__link" href="../../open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../../deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -523,22 +522,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../../terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+<a class="md-nav__link" href="../../models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../../dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+<a class="md-nav__link" href="../../recipes/">
         Recipes
       </a>
 </li>
@@ -546,14 +545,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+<a class="md-nav__link" href="../../classloading/">
         Classloading
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../">Threads</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -564,13 +563,79 @@
           Threads
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Example actions using locks
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Example actions using locks
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-actions-that-require-mps-locks">
+    Example of actions that require MPS locks
+  </a>
+<nav aria-label="Example of actions that require MPS locks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-actions">
+    Write actions
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="#read-actions">
+    Read actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-actions-in-edt">
+    Read actions in EDT
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples-of-actions-that-require-idea-locks">
+    Examples of actions that require IDEA locks
+  </a>
+<nav aria-label="Examples of actions that require IDEA locks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-actions_1">
+    Write actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-actions_1">
+    Read actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-executed-on-edt">
+    Actions executed on EDT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-that-are-executed-on-a-pooled-thread">
+    Actions that are executed on a pooled thread
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../named_threads/">
         Named threads
       </a>
 </li>
@@ -578,17 +643,17 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../../utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+<a class="md-nav__link" href="../../gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../../intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
@@ -598,7 +663,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../clean_code/mps/">Clean code</a>
+<a href="../../../clean_code/mps/">Clean code</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -610,19 +675,19 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
+<a class="md-nav__link" href="../../../clean_code/mps/readability_maintainability/">
         Readability/maintainability
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
+<a class="md-nav__link" href="../../../clean_code/mps/deprecation/">
         Deprecation
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" id="__nav_7_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../clean_code/java/">Java (Base Language)</a>
+<a href="../../../clean_code/java/">Java (Base Language)</a>
 <label for="__nav_7_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -634,12 +699,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
+<a class="md-nav__link" href="../../../clean_code/java/programming_principles/">
         Programming principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
+<a class="md-nav__link" href="../../../clean_code/java/java_style_guide/">
         Java style guide
       </a>
 </li>
@@ -662,17 +727,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/language_design/">
+<a class="md-nav__link" href="../../../patterns/language_design/">
         Language design
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/user_experience/">
+<a class="md-nav__link" href="../../../patterns/user_experience/">
         User experience
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/ui_patterns/">
+<a class="md-nav__link" href="../../../patterns/ui_patterns/">
         UI patterns
       </a>
 </li>
@@ -692,22 +757,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/reading_list/">
+<a class="md-nav__link" href="../../../reference/reading_list/">
         Reading list
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/icons/">
+<a class="md-nav__link" href="../../../reference/icons/">
         Icons
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/exceptions/">
+<a class="md-nav__link" href="../../../reference/exceptions/">
         Exceptions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/actions/">
+<a class="md-nav__link" href="../../../reference/actions/">
         Actions
       </a>
 </li>
@@ -727,12 +792,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../about/editing_this_guide/">
+<a class="md-nav__link" href="../../../about/editing_this_guide/">
         Editing this guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../about/original_authors/">
+<a class="md-nav__link" href="../../../about/original_authors/">
         Original authors
       </a>
 </li>
@@ -748,57 +813,158 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-actions-that-require-mps-locks">
+    Example of actions that require MPS locks
+  </a>
+<nav aria-label="Example of actions that require MPS locks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-actions">
+    Write actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-actions">
+    Read actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-actions-in-edt">
+    Read actions in EDT
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples-of-actions-that-require-idea-locks">
+    Examples of actions that require IDEA locks
+  </a>
+<nav aria-label="Examples of actions that require IDEA locks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-actions_1">
+    Write actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-actions_1">
+    Read actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-executed-on-edt">
+    Actions executed on EDT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-that-are-executed-on-a-pooled-thread">
+    Actions that are executed on a pooled thread
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/home/debugging.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/threads/read_write_action_examples.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h1>
-<p>See also: Specific Languages blog: <a href="https://specificlanguages.com/articles/debugging/">Debugging in <abbr title="Meta Programming System">MPS</abbr></a></p>
+<h1>Example actions using locks</h1>
+<p>These actions use IntelliJ platforms or access <abbr title="Meta Programming System">MPS</abbr> models and need additional locks because of the location where they
+are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and write locks should be available in every language aspect and manually locking isn’t necessary.</p>
+<h2 id="example-of-actions-that-require-mps-locks">Example of actions that require <abbr title="Meta Programming System">MPS</abbr> locks<a class="headerlink" href="#example-of-actions-that-require-mps-locks" title="Permanent link">¶</a></h2>
+<h3 id="write-actions">Write actions<a class="headerlink" href="#write-actions" title="Permanent link">¶</a></h3>
 <ul>
-<li>The menu entry <em>Tools</em> → <em>Internal Actions</em> provides many useful debugging features, for example, the <abbr title="User Interface">UI</abbr> Inspector (Swing debugging).</li>
-<li>Right-click → <em>Preview Generated Text</em>: show the result of the <abbr title="Model to Text">M2T</abbr> transformation (for example generated code) for the current node</li>
-<li>Inspect Node: right-click → <em>Show Node in Explorer</em></li>
-<li>Inspector: right-click → <em>Inspect Node</em></li>
-<li>Right-click → <em>Language Debug</em><ul>
-<li><em>Show Type</em>: show type system type of current node.</li>
-<li><em>Rule which caused Error</em>: find Checking-Rule/Constraint, which caused an error.</li>
-<li><em>Cell in Explorer</em>: debug editor cells and collections.</li>
-<li><em>Generation Traceback</em>: debug the generator. In transient models you can find the source node for the generated (intermediate) node.</li>
+<li>reload/add/remove/modify<ul>
+<li>projects</li>
+<li>modules</li>
+<li>models</li>
 </ul>
 </li>
-<li>Find Action: <em>Help</em> → <em>Find Action</em> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> if you forgot the name of your action.</li>
-<li>Changing <abbr title="Integrated Development Environment">IDE</abbr> settings<ul>
-<li>Two locations: bin folder (<abbr title="Meta Programming System">MPS</abbr>/<abbr title="Integrated Development Environment">IDE</abbr> folder) and Preferences folder (overwrites bin-folder)</li>
-<li><abbr title="Java Virtual Machine">JVM</abbr>: bin/mps.vmoptions (RAM/Xmx, debugger port, …)</li>
-<li>Log-level (Log4J): bin/log.xml    </li>
-<li>IDEA properties: bin/idea.properties: change default paths, advanced <abbr title="Integrated Development Environment">IDE</abbr> settings</li>
+</ul>
+<h3 id="read-actions">Read actions<a class="headerlink" href="#read-actions" title="Permanent link">¶</a></h3>
+<ul>
+<li>resolve node references</li>
+<li>read nodes/models/modules</li>
+</ul>
+<h3 id="read-actions-in-edt">Read actions in <abbr title="Event Dispatch Thread">EDT</abbr><a class="headerlink" href="#read-actions-in-edt" title="Permanent link">¶</a></h3>
+<ul>
+<li>select a node in the tree view</li>
+<li>clear the marks in the highlight manager</li>
+<li>move nodes refactoring</li>
+<li>resolve node references and open them in the editor</li>
+<li>run the model checker</li>
+<li>rebuild editor components</li>
+<li>paste nodes</li>
+<li>select nodes in the editor</li>
+<li>recreate opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
+<li>show the completion menu</li>
+<li>rehighlight nodes</li>
+</ul>
+<h2 id="examples-of-actions-that-require-idea-locks">Examples of actions that require IDEA locks<a class="headerlink" href="#examples-of-actions-that-require-idea-locks" title="Permanent link">¶</a></h2>
+<p>Useful methods:</p>
+<ul>
+<li>Read action: <code class="highlight"><span class="n">Applicationmanager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">runReadAction</span><span class="p">()</span><span class="w"></span></code></li>
+<li>Read action allowed: <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertReadAccessAllowed</span><span class="p">()</span><span class="w"></span></code></li>
+<li>Write action: <code class="highlight"><span class="n">Applicationmanager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">runWriteAction</span><span class="p">()</span><span class="w"></span></code></li>
+<li>Write action allowed: <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertWriteAccessAllowed</span><span class="p">()</span><span class="w"></span></code></li>
+</ul>
+<h3 id="write-actions_1">Write actions<a class="headerlink" href="#write-actions_1" title="Permanent link">¶</a></h3>
+<ul>
+<li><abbr title="Virtual File System">VFS</abbr> related actions<ul>
+<li>refresh files</li>
+<li>create/remove directories</li>
+<li>create/modify/delete/copy files</li>
 </ul>
 </li>
-<li>Log file: is stored in the logs folder, e.g. <code>Logs/&lt;My-MPS-/My-RCP-Identifier&gt;/idea.log</code></li>
+<li>paste data</li>
+<li>create facets</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">How do I debug action maps?</p>
-<p>Set a breakpoint in <code>CellActionExecutorFinder</code>.</p>
-</div>
-<h1 id="general-blog-posts">General Blog posts<a class="headerlink" href="#general-blog-posts" title="Permanent link">¶</a></h1>
+<h3 id="read-actions_1">Read actions<a class="headerlink" href="#read-actions_1" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c">24 debugging tips and tricks</a></li>
-<li><a href="https://talktotheduck.dev/the-debugger-checklist-part-i">The Debugger Checklist – Part I</a></li>
-<li><a href="https://talktotheduck.dev/the-debugger-checklist-part-ii">The Debugger Checklist – Part II</a></li>
-<li><a href="https://jonskeet.uk/csharp/debugging.html">Debugging tips</a></li>
-<li><a href="https://blog.hartleybrody.com/debugging-code-beginner/">10 Debugging Tips for Beginners</a></li>
+<li>find files</li>
+<li>get a list of file editors</li>
+</ul>
+<h3 id="actions-executed-on-edt">Actions executed on <abbr title="Event Dispatch Thread">EDT</abbr><a class="headerlink" href="#actions-executed-on-edt" title="Permanent link">¶</a></h3>
+<p>They are executed in the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">invokeLater</span><span class="o">/</span><span class="n">invokeAndWait</span><span class="p">)</span><span class="w"></span></code>.</p>
+<ul>
+<li>update tools</li>
+<li>show progress bars for a long running actions</li>
+<li>update text in swing components</li>
+<li>dispose <abbr title="User Interface">UI</abbr> components</li>
+<li>rebuild components</li>
+<li>start a make process</li>
+<li>save projects/modules</li>
+<li>update toolbars</li>
+<li>show dialogs</li>
+<li>update the project pane</li>
+<li>perform refactorings</li>
+<li>unload models</li>
+</ul>
+<h3 id="actions-that-are-executed-on-a-pooled-thread">Actions that are executed on a pooled thread<a class="headerlink" href="#actions-that-are-executed-on-a-pooled-thread" title="Permanent link">¶</a></h3>
+<p>They are executed in the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">executeOnPooledThread</span><span class="w"></span></code></p>
+<ul>
+<li>set break points on startup</li>
+<li>preview the generated text for nodes</li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -858,7 +1024,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Trouble shooting guide" class="md-footer__link md-footer__link--prev" href="../trouble_shooting_guide/" rel="prev">
+<a aria-label="Previous: Index" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -867,17 +1033,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Trouble shooting guide
+              Index
             </div>
 </div>
 </a>
-<a aria-label="Next: Structure" class="md-footer__link md-footer__link--next" href="../../aspects/structure/" rel="next">
+<a aria-label="Next: Named threads" class="md-footer__link md-footer__link--next" href="../named_threads/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Structure
+              Named threads
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -902,11 +1068,11 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.0bc13b87.min.js"></script>
-<script src="../../javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.0bc13b87.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../javascripts/tablesort.js"></script>
+<script src="../../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>

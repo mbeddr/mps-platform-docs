@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/home/debugging/" rel="canonical"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/threads/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.4.0rc1" name="generator"/>
-<title>Debugging - MPS Platform Docs</title>
+<title>Index - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.476df7d4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#debugging">
+<a class="md-skip" href="#main-thread">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Debugging
+              Index
             
           </span>
 </div>
@@ -108,7 +108,7 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../..">
+<a class="md-tabs__link" href="../..">
         Home
       </a>
 </li>
@@ -133,7 +133,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Internal MPS
       </a>
 </li>
@@ -185,8 +185,8 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../..">Home</a>
 <label for="__nav_1">
@@ -200,43 +200,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../general/">
+<a class="md-nav__link" href="../../home/general/">
         General
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../plugins/">
+<a class="md-nav__link" href="../../home/plugins/">
         Plugins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external_files_and_tools/">
+<a class="md-nav__link" href="../../home/external_files_and_tools/">
         External files and tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../console/">
+<a class="md-nav__link" href="../../home/console/">
         Console
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../platform_specific_bugs/">
+<a class="md-nav__link" href="../../home/platform_specific_bugs/">
         OS-specific bugs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rcp/">
+<a class="md-nav__link" href="../../home/rcp/">
         RCP
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../trouble_shooting_guide/">
+<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
         Trouble shooting guide
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/debugging/">
         Debugging
       </a>
 </li>
@@ -489,10 +488,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">Internal MPS</a>
+<a href="../">Internal MPS</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -504,14 +503,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+<a class="md-nav__link" href="../open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -523,22 +522,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+<a class="md-nav__link" href="../models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+<a class="md-nav__link" href="../recipes/">
         Recipes
       </a>
 </li>
@@ -546,14 +545,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+<a class="md-nav__link" href="../classloading/">
         Classloading
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Threads</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -565,12 +564,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+<a class="md-nav__link" href="read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="named_threads/">
         Named threads
       </a>
 </li>
@@ -578,17 +577,17 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+<a class="md-nav__link" href="../gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
@@ -748,57 +747,82 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-thread">
+    Main thread
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#awt-event-dispatch-thread-edt-ui-thread">
+    AWT event dispatch thread (EDT) / UI Thread
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#background-threads">
+    Background threads
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/home/debugging.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/threads/index.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h1>
-<p>See also: Specific Languages blog: <a href="https://specificlanguages.com/articles/debugging/">Debugging in <abbr title="Meta Programming System">MPS</abbr></a></p>
+<h1>Index</h1>
 <ul>
-<li>The menu entry <em>Tools</em> → <em>Internal Actions</em> provides many useful debugging features, for example, the <abbr title="User Interface">UI</abbr> Inspector (Swing debugging).</li>
-<li>Right-click → <em>Preview Generated Text</em>: show the result of the <abbr title="Model to Text">M2T</abbr> transformation (for example generated code) for the current node</li>
-<li>Inspect Node: right-click → <em>Show Node in Explorer</em></li>
-<li>Inspector: right-click → <em>Inspect Node</em></li>
-<li>Right-click → <em>Language Debug</em><ul>
-<li><em>Show Type</em>: show type system type of current node.</li>
-<li><em>Rule which caused Error</em>: find Checking-Rule/Constraint, which caused an error.</li>
-<li><em>Cell in Explorer</em>: debug editor cells and collections.</li>
-<li><em>Generation Traceback</em>: debug the generator. In transient models you can find the source node for the generated (intermediate) node.</li>
+<li><a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model">IDEA threading model | developerlife.com</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">Modality and invokeLater() | IntelliJ Platform SDK</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Event Dispatch Thread | Oracle Java documentation</a></li>
 </ul>
-</li>
-<li>Find Action: <em>Help</em> → <em>Find Action</em> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> if you forgot the name of your action.</li>
-<li>Changing <abbr title="Integrated Development Environment">IDE</abbr> settings<ul>
-<li>Two locations: bin folder (<abbr title="Meta Programming System">MPS</abbr>/<abbr title="Integrated Development Environment">IDE</abbr> folder) and Preferences folder (overwrites bin-folder)</li>
-<li><abbr title="Java Virtual Machine">JVM</abbr>: bin/mps.vmoptions (RAM/Xmx, debugger port, …)</li>
-<li>Log-level (Log4J): bin/log.xml    </li>
-<li>IDEA properties: bin/idea.properties: change default paths, advanced <abbr title="Integrated Development Environment">IDE</abbr> settings</li>
-</ul>
-</li>
-<li>Log file: is stored in the logs folder, e.g. <code>Logs/&lt;My-MPS-/My-RCP-Identifier&gt;/idea.log</code></li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">How do I debug action maps?</p>
-<p>Set a breakpoint in <code>CellActionExecutorFinder</code>.</p>
-</div>
-<h1 id="general-blog-posts">General Blog posts<a class="headerlink" href="#general-blog-posts" title="Permanent link">¶</a></h1>
+<p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to performed holding an appropriate lock.
+IntelliJ IDEA also requires read and write locks in its platform. The IDEA’s lock is acquired first and only then the <abbr title="Meta Programming System">MPS</abbr>‘s lock is acquired when using
+the <abbr title="Meta Programming System">MPS</abbr> access language.
+The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<h2 id="main-thread">Main thread<a class="headerlink" href="#main-thread" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c">24 debugging tips and tricks</a></li>
-<li><a href="https://talktotheduck.dev/the-debugger-checklist-part-i">The Debugger Checklist – Part I</a></li>
-<li><a href="https://talktotheduck.dev/the-debugger-checklist-part-ii">The Debugger Checklist – Part II</a></li>
-<li><a href="https://jonskeet.uk/csharp/debugging.html">Debugging tips</a></li>
-<li><a href="https://blog.hartleybrody.com/debugging-code-beginner/">10 Debugging Tips for Beginners</a></li>
+<li>some operations need to be run there in order to keep race conditions from occurring</li>
+<li>the <abbr title="User Interface">UI</abbr> freezes when operations take a long time (run them in the background)</li>
+<li>Write <abbr title="Meta Programming System">MPS</abbr> model: <code>write action with</code></li>
+<li>Read <abbr title="Meta Programming System">MPS</abbr> model: <code>read action with</code></li>
+</ul>
+<h2 id="awt-event-dispatch-thread-edt-ui-thread">AWT event dispatch thread (<abbr title="Event Dispatch Thread">EDT</abbr>) / <abbr title="User Interface">UI</abbr> Thread<a class="headerlink" href="#awt-event-dispatch-thread-edt-ui-thread" title="Permanent link">¶</a></h2>
+<ul>
+<li>drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Swing</a></li>
+<li>Swing isn’t thread safe, most of the Swing code runs in <abbr title="Event Dispatch Thread">EDT</abbr>.</li>
+<li><abbr title="Event Dispatch Thread">EDT</abbr> = series of short tasks such as the <code>actionPerformed</code> method of a button.</li>
+<li>Tasks must be short or the <abbr title="User Interface">UI</abbr> becomes unresponsive.</li>
+<li>Synchronously write/read <abbr title="Meta Programming System">MPS</abbr> model: <code>command with</code>.</li>
+<li>Asynchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>execute command in EDT with</code>.</li>
+<li>Asynchronously read <abbr title="Meta Programming System">MPS</abbr> model: <code>execute in EDT with</code>.</li>
+<li>The <em>in <abbr title="Event Dispatch Thread">EDT</abbr></em> commands allow to read/write the <abbr title="Meta Programming System">MPS</abbr> model and perform <abbr title="Event Dispatch Thread">EDT</abbr>-related <abbr title="User Interface">UI</abbr> activities</li>
+<li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertIsDispatchThread</span><span class="p">()</span><span class="w"></span></code> or <code class="highlight"><span class="n">ThreadUtils</span><span class="p">.</span><span class="na">isInEDT</span><span class="p">()</span><span class="w"></span></code></li>
+</ul>
+<h2 id="background-threads">Background threads<a class="headerlink" href="#background-threads" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a></li>
+<li>Extend class <em>Task</em> and run it in a modal dialog or in the background</li>
+<li>They must be invoked on <abbr title="Event Dispatch Thread">EDT</abbr> through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code></li>
+<li>synchronous: <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeAndWait</span><span class="w"></span></code></li>
+<li>Don’t call it with <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code> in the Intellij platform/<abbr title="Meta Programming System">MPS</abbr> because it doesn’t respect the modality state.</li>
+<li>modality state = background or an open dialog</li>
+<li>The class <code>ThreadUtils</code> contains <code>runInUIThreadAndWait</code> which takes a <code>Runnable</code> instance as a parameter and uses the right method based on the calling context</li>
+<li>When there are many tasks, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.com</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -858,7 +882,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Trouble shooting guide" class="md-footer__link md-footer__link--prev" href="../trouble_shooting_guide/" rel="prev">
+<a aria-label="Previous: Classloading" class="md-footer__link md-footer__link--prev" href="../classloading/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -867,17 +891,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Trouble shooting guide
+              Classloading
             </div>
 </div>
 </a>
-<a aria-label="Next: Structure" class="md-footer__link md-footer__link--next" href="../../aspects/structure/" rel="next">
+<a aria-label="Next: Example actions using locks" class="md-footer__link md-footer__link--next" href="read_write_action_examples/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Structure
+              Example actions using locks
             </div>
 </div>
 <div class="md-footer__button md-icon">
