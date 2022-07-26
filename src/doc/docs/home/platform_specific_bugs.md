@@ -11,7 +11,8 @@
 
 !!! warning "Tests are failing with a message, that a filename or extension is too long (Windows)."
 
-    The error message looks like this: `Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long`
+    The error message looks like this: `Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long`.
+    It can also look like this: `Process fork failed.`
     There is a path that is too long for Windows in the build script. 
     Choose the option *compressArgs* in *test modules* node to fix the issue (MPS-24137).
 
