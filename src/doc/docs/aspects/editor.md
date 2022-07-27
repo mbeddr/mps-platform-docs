@@ -16,6 +16,10 @@ The editor aspect defines the projectional editor of a concept.
 
     Switch to the [reflective editor](https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor) and remove the offending parts. There is also an [enhancement script](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633) that can remove properties.
 
+!!! warning "I've set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme."
+
+    The return type of those functions indicate that they return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found [here](../../patterns/user_experience#dark-theme).
+
 ## Menus
 
 !!! hint "Explain the different menu related terms."
