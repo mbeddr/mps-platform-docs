@@ -1,7 +1,7 @@
 # Reading list
 
 This page includes some more resources for working with MPS. This article is a bit dated but maybe still useful.
-It may be better to start to look for resourced at [mps.rocks](https://mps.rocks/) first.
+It may be better to start to look for resources at [mps.rocks](https://mps.rocks/) first.
 
 ## Language engineering with MPS
 
