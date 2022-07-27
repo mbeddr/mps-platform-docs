@@ -816,7 +816,8 @@ If this happens, set the environment variable <em>JAVA_TOOL_OPTIONS</em> to <cod
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Tests are failing with a message, that a filename or extension is too long (Windows).</p>
-<p>The error message looks like this: <code>Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long</code>
+<p>The error message looks like this: <code>Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long</code>.
+It can also look like this: <code>Process fork failed.</code>
 There is a path that is too long for Windows in the build script. 
 Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the issue (<a href="https://youtrack.jetbrains.com/issue/MPS-24137"><abbr title="Meta Programming System">MPS</abbr>-24137</a>).</p>
 </div>
@@ -853,7 +854,7 @@ Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

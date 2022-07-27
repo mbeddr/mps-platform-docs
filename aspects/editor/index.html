@@ -846,6 +846,10 @@
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
 <p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script</a> that can remove properties.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">I’ve set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme.</p>
+<p>The return type of those functions indicate that they return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found <a href="../../patterns/user_experience#dark-theme">here</a>.</p>
+</div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Explain the different menu related terms.</p>
@@ -1169,7 +1173,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 27, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
