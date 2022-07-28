@@ -124,6 +124,10 @@
 
     {{ contribution_by('nkoester') }}
 
+!!! question "How to run a Gradle task from java code?"    
+
+    Using the Gradle wrapper or the Gradle tooling API as described in this [StackOverflow answer](https://stackoverflow.com/a/49877200/16577108).
+
 ## Gradle Tips
 
 | Item               | Description                                                                                                                                                                                                                                                                                |
