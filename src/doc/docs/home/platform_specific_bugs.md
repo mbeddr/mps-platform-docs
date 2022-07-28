@@ -1,3 +1,13 @@
+## Native crashes
+
+Native crashes are crashes where MPS crashes internally (C/C++ code) and shows an error dialog. First search the following Youtrack projects:
+
+- [MPS](https://youtrack.jetbrains.com/issues/MPS): MPS related crashes
+- [IntelliJ IDEA](https://youtrack.jetbrains.com/issues/IDEA): IntelliJ (platform) related crashes
+- [JetBrains Runtime](https://youtrack.jetbrains.com/issues/JBR): mostly UI and JCEF related issues
+
+For crashes on MacOS, have a look at [Identifying the Cause of Common Crashes | developer.apple.com](https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes).
+
 ## Windows
 
 !!! error "Compilation from the command line might fail due to none ASCII chars."
