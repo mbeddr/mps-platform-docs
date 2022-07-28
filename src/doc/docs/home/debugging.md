@@ -23,6 +23,24 @@ See also: Specific Languages blog: [Debugging in MPS](https://specificlanguages.
 
     Set a breakpoint in `CellActionExecutorFinder`.
 
+# Free Java debugging tools
+
+- [VisualVM](https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a)
+    - display process configuration and environment (e.g. Java/MPS version, JVM arguments, system properties)
+    - monitor process performance And memory (e.g. CPU/heap usage, loaded classes, threads)
+    - visualize process threads (e.g. dispatch thread)
+    - profile performance And memory usage (e.g. CPU usage)
+    - take and display thread dumps (e.g. find [deadlocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html))
+    - take and browse heap dumps (e.g. find memory leaks)
+    - analyze core dumps (e.g. crashed Java processes)
+
+    ![VisualVM](visualvm.png)
+
+- [Memory Analyzer (MAT)](https://www.eclipse.org/mat/)
+    - find memory relates issues such as memory leaks
+
+    ![Memory Analyzer (MAT)](http://www.eclipse.org/mat/about/overview.png)
+
 # General Blog posts
 
 - [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
