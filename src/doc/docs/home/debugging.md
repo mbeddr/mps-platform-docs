@@ -47,6 +47,8 @@ See also: Specific Languages blog: [Debugging in MPS](https://specificlanguages.
 
     ![JDK Mission control](https://docs.oracle.com/en/java/javase/11/troubleshoot/img/garbage_collection_performance_automated_analysis_results_7_1_2.png)
 
+- [jstack.review - Java Thread Dump Analyzer](https://jstack.review/#tda_1_dump)
+
 # General Blog posts
 
 - [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
