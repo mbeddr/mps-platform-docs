@@ -41,6 +41,12 @@ See also: Specific Languages blog: [Debugging in MPS](https://specificlanguages.
 
     ![Memory Analyzer (MAT)](http://www.eclipse.org/mat/about/overview.png)
 
+- [JDK Mission Control](https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html)
+    - [troubleshoot memory leaks](https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshooting-memory-leaks.html#GUID-8090B138-6E0C-4926-9659-BE739062AB75)
+    - [troubleshoot performance issues using flight recorder](https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshoot-performance-issues-using-jfr.html#GUID-0FE29092-18B5-4BEB-8D8D-0CBA7A4FEA1D)
+
+    ![JDK Mission control](https://docs.oracle.com/en/java/javase/11/troubleshoot/img/garbage_collection_performance_automated_analysis_results_7_1_2.png)
+
 # General Blog posts
 
 - [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
