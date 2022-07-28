@@ -13,6 +13,7 @@
 - [UX Writing: Handy Tips on Text Improving User Experience](https://blog.tubikstudio.com/user-experience-tips-ux-writing/)
 - [The Punctuation Guide](https://www.thepunctuationguide.com/index.html)
 - [Technical Writing Essentials – Document Design](https://pressbooks.bccampus.ca/technicalwriting/part/documentdesign/)
+- [Word Choices and Language in UX, Part Three: User Interface Labels & Messages](https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a)
 
 ## UI
 
