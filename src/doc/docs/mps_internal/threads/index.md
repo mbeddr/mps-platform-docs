@@ -1,5 +1,6 @@
 References:
 
+- [Common Concurrency Pitfalls in Java](https://www.baeldung.com/java-common-concurrency-pitfalls)
 - [IDEA threading model | developerlife.com](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model)
 - [Modality and invokeLater() | IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater)
 - [The Event Dispatch Thread | Oracle Java documentation](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html)
