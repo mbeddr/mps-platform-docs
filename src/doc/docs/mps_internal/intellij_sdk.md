@@ -4,6 +4,10 @@
 - [Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)
     - IDEA thread modeling (for example: `invokeLater`), PSI, Virtual Files, Dynamic plugins, UI
 
+!!! question "Where can you find a list of all IntelliJ registry entries?"
+
+    They can be found in [registry.properties](https://github.com/JetBrains/intellij-community/blob/master/platform/util/resources/misc/registry.properties).
+
 ## Listeners and message bus
 
 ### Message bus (message interface)
