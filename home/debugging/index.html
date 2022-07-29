@@ -785,6 +785,40 @@
 <p class="admonition-title">How do I debug action maps?</p>
 <p>Set a breakpoint in <code>CellActionExecutorFinder</code>.</p>
 </div>
+<h1 id="free-java-debugging-tools">Free Java debugging tools<a class="headerlink" href="#free-java-debugging-tools" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p><a href="https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a">VisualVM</a></p>
+<ul>
+<li>display process configuration and environment (e.g. Java/<abbr title="Meta Programming System">MPS</abbr> version, <abbr title="Java Virtual Machine">JVM</abbr> arguments, system properties)</li>
+<li>monitor process performance And memory (e.g. CPU/heap usage, loaded classes, threads)</li>
+<li>visualize process threads (e.g. dispatch thread)</li>
+<li>profile performance And memory usage (e.g. CPU usage)</li>
+<li>take and display thread dumps (e.g. find <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html">deadlocks</a>)</li>
+<li>take and browse heap dumps (e.g. find memory leaks)</li>
+<li>analyze core dumps (e.g. crashed Java processes)</li>
+</ul>
+<p><a class="glightbox" href="../../img/visualvm.png"><img alt="VisualVM" src="../../img/visualvm.png"/></a></p>
+</li>
+<li>
+<p><a href="https://www.eclipse.org/mat/">Memory Analyzer (MAT)</a></p>
+<ul>
+<li>find memory relates issues such as memory leaks</li>
+</ul>
+<p><a class="glightbox" href="http://www.eclipse.org/mat/about/overview.png"><img alt="Memory Analyzer (MAT)" src="http://www.eclipse.org/mat/about/overview.png"/></a></p>
+</li>
+<li>
+<p><a href="https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html"><abbr title="Java Development Kit">JDK</abbr> Mission Control</a></p>
+<ul>
+<li><a href="https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshooting-memory-leaks.html#GUID-8090B138-6E0C-4926-9659-BE739062AB75">troubleshoot memory leaks</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshoot-performance-issues-using-jfr.html#GUID-0FE29092-18B5-4BEB-8D8D-0CBA7A4FEA1D">troubleshoot performance issues using flight recorder</a></li>
+</ul>
+<p><a class="glightbox" href="https://docs.oracle.com/en/java/javase/11/troubleshoot/img/garbage_collection_performance_automated_analysis_results_7_1_2.png"><img alt="JDK Mission control" src="https://docs.oracle.com/en/java/javase/11/troubleshoot/img/garbage_collection_performance_automated_analysis_results_7_1_2.png"/></a></p>
+</li>
+<li>
+<p><a href="https://jstack.review/#tda_1_dump">jstack.review - Java Thread Dump Analyzer</a></p>
+</li>
+</ul>
 <h1 id="general-blog-posts">General Blog posts<a class="headerlink" href="#general-blog-posts" title="Permanent link">¶</a></h1>
 <ul>
 <li><a href="https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c">24 debugging tips and tricks</a></li>
@@ -798,7 +832,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
