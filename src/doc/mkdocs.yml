@@ -195,7 +195,7 @@ nav:
         - Dependencies: mps_internal/dependencies.md
         - Recipes: mps_internal/recipes.md
       - Classloading: mps_internal/classloading.md
-      - Threads:
+      - Threading:
           - mps_internal/threads/index.md
           - Example actions using locks: mps_internal/threads/read_write_action_examples.md
           - Named threads: mps_internal/threads/named_threads.md
