@@ -35,6 +35,7 @@
 *[JDK]: Java Development Kit
 *[JRE]: Java Runtime Environment
 *[GP]: Generation Plan
+*[TMC]: Template Mapping Configuration
 
 *[OS]: Open Source
 *[PR]: Pull Request or Public Relations
@@ -48,5 +49,7 @@
 *[JVM]: Java Virtual Machine
 *[AI]: Artificial Intelligence
 *[SSH]: Secure Shell
+*[COW]: Copy On Write
+*[UUID]: Universally Unique Identifier
 
 *[FJ]: ForkJoin

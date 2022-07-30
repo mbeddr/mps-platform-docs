@@ -49,8 +49,15 @@ extra:
 plugins:
   - search:
       separator: '(?!MPS)[\s\-/#:]'
-  - macros
-  - git-revision-date-localized
+  - macros:
+      on_error_fail: true
+  - gen-files:
+      scripts:
+          - gen_abbreviations.py
+  - git-revision-date-localized:
+      exclude:
+        - includes/abbreviations.md
+        - reference/abbreviations.md
   - kroki
   - glightbox:
       width: 70vw
@@ -101,7 +108,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
         auto_append:
-           - includes/abbreviations.inc
+           - docs/includes/abbreviations.md
   - pymdownx.tabbed:
         alternate_style: true
   - pymdownx.keys
@@ -212,6 +219,7 @@ nav:
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
+    - Abbreviations: reference/abbreviations.md 
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
