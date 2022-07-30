@@ -105,6 +105,13 @@ title: Generator aspect
 
     You can try to use the *post-processing* function of a `$MAP_SRC$` macro.   
 
+!!! question "Which generation plan is used: the one of the custom generation facet or from any of the used devkits?"
+
+    - Custom generation facet: if there is a GP defined, this plan is used.
+    - Devkits: first, MPS looks if any devkit specifies a GP. The first devKit with an associated plan is consulted, if any, and no further lookup is done.
+      If there are no devkits with associated plans, MPS checks the facets of the devkit modules if any is an GP provider.
+      The first found facet serves as a provider.
+
 ## How to generate XY
 
 !!! question "What can be generated?"

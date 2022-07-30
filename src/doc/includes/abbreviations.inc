@@ -34,6 +34,7 @@
 *[NPE]: NullPointerException
 *[JDK]: Java Development Kit
 *[JRE]: Java Runtime Environment
+*[GP]: Generation Plan
 
 *[OS]: Open Source
 *[PR]: Pull Request or Public Relations
