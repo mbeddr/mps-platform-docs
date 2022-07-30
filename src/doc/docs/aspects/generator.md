@@ -231,6 +231,16 @@ title: Generator aspect
 
     {{ contribution_by('till-f') }}
 
+!!! question "How can you react to changed generated files?"
+
+    ```java
+    new GenStatusUpdater(#project).getStatusManager().addGenerationStatusListener(new ModelGenerationStatusListener() {
+        void generatedFilesChanged(Collection<SModel> models) {
+            // do something
+        }
+    );
+    ```
+
 ## Troubleshooting
 
 !!! warning "MPS can't resolve the import XY.[^3]"
