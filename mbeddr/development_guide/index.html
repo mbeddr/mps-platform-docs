@@ -655,15 +655,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -811,6 +811,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../reference/actions/">
         Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
       </a>
 </li>
 </ul>
@@ -961,29 +971,29 @@ might not reflect the workflow and guidelines of newer committers anymore.</p>
 <h2 id="commit-messages">Commit messages<a class="headerlink" href="#commit-messages" title="Permanent link">¶</a></h2>
 <p>In general, try to follow <a href="https://chris.beams.io/posts/git-commit/">this guide</a> with some exceptions for minor changes:</p>
 <p>When you commit a major change that relates to a GitHub issue, start your commit message with a short title (less than 50 char). Ideally, it contains the title of the GitHub issue if it fits.
-If you can’t fit the issue title, please reference the issue ID with <em>#4711</em> notation in the title. The title is followed by a short optional paragraph (not longer than 80 chars) describing the change:</p>
+If you can’t fit the issue title, please reference the issue ID with <em>#4711</em> notation <abbr title="input (stream)">in</abbr> the title. The title is followed by a short optional paragraph (not longer than 80 chars) describing the change:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ClassCastException on FilteringActionManager #1207
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 </code></pre></div></td></tr></table></div>
-<p>In contrast, if your commit is just a minor fix, then you mention the modified mbeddr subsystem (for example <em>mpsutil:</em>, <em>core:</em> or <em>ext:</em>) and provide a short description, followed by a short optional paragraph (not longer than 80 chars) describing the change:</p>
+<p>In contrast, if your commit is just a minor fix, then you mention the modified mbeddr subsystem (for example <em>mpsutil:</em>, <em>core:</em> or <em><abbr title="extension">ext</abbr>:</em>) and provide a short description, followed by a short optional paragraph (not longer than 80 chars) describing the change:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>core,ext: Lorem ipsum dolor sit amet.
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 </code></pre></div></td></tr></table></div>
-<p>The optional paragraph at the end of your commit message contains further information about the change. Tests were added or describe why the fix was necessary, maybe there are special conditions when the issue surfaces.
+<p>The optional paragraph <abbr title="affine transform">at</abbr> the end of your commit message contains further information about the change. Tests were added or describe why the fix was necessary, maybe there are special conditions when the issue surfaces.
 This is also the place where you can put GitHub <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">issue commands</a> to close or reference other issues.</p>
-<p>Further information and ideas on  how to write good commit messages can be found <a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">here</a> and <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">here</a></p>
+<p>Further information and ideas on  how to write good commit messages can <abbr title="binary expression">be</abbr> found <a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">here</a> and <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">here</a></p>
 <h2 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">¶</a></h2>
-<p>We make heavy use of branches in the development process. If your task requires more than one commit, commit your changes on a branch.</p>
-<p>Two types of branches exist: <em>feature</em> and <em>refactor</em>: the first is used for new features, the second for bug fixes or code refactorings. They are distinguished by prefix: a feature branch my-awesome-stuff would be named <em>feature/my-awesome-stuff</em> or <em>refactor/my-awesome-stuff</em>, if it’s a refactoring branch. Both kinds of branches should be short living (a couple of days) to reduce the risk of diverting to far from master and causing huge afford to merge. Ideally, no commits happen directly to <em>master</em> and every commit is first evaluated on a feature/refactoring branch.</p>
+<p>We make heavy use of branches <abbr title="input (stream)">in</abbr> the development process. If your task requires more than one commit, commit your changes on a branch.</p>
+<p>Two types of branches exist: <em>feature</em> and <em>refactor</em>: the first is used for new features, the second for bug fixes or code refactorings. They are distinguished by prefix: a feature branch my-awesome-stuff would <abbr title="binary expression">be</abbr> named <em>feature/my-awesome-stuff</em> or <em>refactor/my-awesome-stuff</em>, if it’s a refactoring branch. Both kinds of branches should <abbr title="binary expression">be</abbr> short living (a couple of days) to reduce the risk of diverting to far from master and causing huge afford to merge. Ideally, no commits happen directly to <em>master</em> and every commit is first evaluated on a feature/refactoring branch.</p>
 <p>Note: Nowadays we mostly do merging instead of rebasing. The following sections might therefore not accurately reflect the current workflow.</p>
 <h3 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">¶</a></h3>
-<p>Once your work is done, it needs to be integrated into the <em>master</em> branch. Because your branch most likely diverted from master, merging it into <em>master</em> would normally end up with a merge commit on the <em>master</em> branch. We have learned the hard way that merging clutters Git history and makes all intermediate commits of the branch end up in master. To prevent this, the suggested workflow is to rebase your branch onto <em>master</em> and thereby squash all your commits into a single one.</p>
+<p>Once your work is done, it needs to <abbr title="binary expression">be</abbr> integrated into the <em>master</em> branch. Because your branch most likely diverted from master, merging it into <em>master</em> would normally end up with a merge commit on the <em>master</em> branch. We have learned the hard way that merging clutters Git history and makes all intermediate commits of the branch end up <abbr title="input (stream)">in</abbr> master. To prevent this, the suggested workflow is to rebase your branch onto <em>master</em> and thereby squash all your commits into a single one.</p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h4>
 <p>This example shows you how to integrate your branch into the <em>master</em> branch by using rebase instead of merge.</p>
 <p>The list of commands to use is:</p>
@@ -1002,7 +1012,7 @@ This is also the place where you can put GitHub <a href="https://help.github.com
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>git push
 </code></pre></div></td></tr></table></div>
 They are all explained below.</p>
-<p>Below you can see the starting point in the repository:</p>
+<p>Below you can see the starting point <abbr title="input (stream)">in</abbr> the repository:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>* 1ed51e3        (HEAD -&gt; master) added another file
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>* 5cee848        initial commit
@@ -1051,27 +1061,27 @@ Now run <code>git merge --ff-only feature/my-awesome-stuff</code>. The <em>–ff
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>* 1ed51e3        added another file
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>* 5cee848        initial commit
 </code></pre></div></td></tr></table></div>
-<p>You haven’t created a merge commit, and all commits from your branch appear as a single commit in the Git history. You are good to go to push back to the repo. But wait, what if somebody has changes things in the meantime on the remote, wouldn’t the pull create a new merge? Yes it would! Therefor don’t use a plain <code>git pull</code> but use <code>git pull --rebase</code> in case you are pulling from the repo into your local <em>master</em> branch. This way, Git doesn’t produce a new merge commit but rebase your local changes on top of the remote changes.</p>
+<p>You haven’t created a merge commit, and all commits from your branch appear as a single commit <abbr title="input (stream)">in</abbr> the Git history. You are good to go to push back to the <abbr title="repository">repo</abbr>. But wait, what if somebody has changes things <abbr title="input (stream)">in</abbr> the meantime on the remote, wouldn’t the pull create a new merge? Yes it would! Therefor don’t use a plain <code>git pull</code> but use <code>git pull --rebase</code> <abbr title="input (stream)">in</abbr> case you are pulling from the <abbr title="repository">repo</abbr> into your local <em>master</em> branch. This way, Git doesn’t produce a new merge commit but rebase your local changes on top of the remote changes.</p>
 <h2 id="test-organization">Test Organization<a class="headerlink" href="#test-organization" title="Permanent link">¶</a></h2>
 <h3 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">¶</a></h3>
-<p>The test solution for language <em>com.mbeddr.x.lang</em> should be named <em>test.com.mbeddr.x.lang</em>. Respectively, the test solution for solution <em>com.mbeddr.y.sol</em> should be named <em>test.com.mbeddr.y.sol</em>. If you need a dedicated language for testing purposes, you should name it <em>test.com.mbeddr.x.[lang|sol].testsupport</em> (or a similar suffix).</p>
+<p>The test solution for language <em>com.mbeddr.x.<abbr title="language">lang</abbr></em> should <abbr title="binary expression">be</abbr> named <em>test.com.mbeddr.x.<abbr title="language">lang</abbr></em>. Respectively, the test solution for solution <em>com.mbeddr.y.<abbr title="solver">sol</abbr></em> should <abbr title="binary expression">be</abbr> named <em>test.com.mbeddr.y.<abbr title="solver">sol</abbr></em>. If you need a dedicated language for testing purposes, you should name it <em>test.com.mbeddr.x.[<abbr title="language">lang</abbr>|<abbr title="solver">sol</abbr>].testsupport</em> (or a similar suffix).</p>
 <p>This way, you can discriminate between “real” code below namespace <em>com.mbeddr</em> and test code below namespace <em>test</em>. You should also place any demo or playground modules outside the <em>com.mbeddr</em> namespace for the same reason.</p>
-<p>By following this scheme, you can build productive code in the <abbr title="User Interface">UI</abbr> by building everything below <em>com.mbeddr</em> in the modules pool, and be assured not to be interfered by test, demo, or playground code.</p>
+<p>By following this scheme, you can build productive code <abbr title="input (stream)">in</abbr> the <abbr title="User Interface">UI</abbr> by building everything below <em>com.mbeddr</em> <abbr title="input (stream)">in</abbr> the modules pool, and <abbr title="binary expression">be</abbr> assured not to <abbr title="binary expression">be</abbr> interfered by test, demo, or playground code.</p>
 <h3 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">¶</a></h3>
-<p>All languages, solutions, tests, demos, and playgrounds of one feature should be placed below a common virtual folder bearing the name of the feature. An exception might be build models.</p>
-<p>Generators must be present only when required or deleted if empty.</p>
+<p>All languages, solutions, tests, demos, and playgrounds of one feature should <abbr title="binary expression">be</abbr> placed below a common virtual folder bearing the name of the feature. An exception might <abbr title="binary expression">be</abbr> build models.</p>
+<p>Generators must <abbr title="binary expression">be</abbr> present only when required or deleted if empty.</p>
 <p>This allows us to access all artifacts constituting one feature.</p>
 <h3 id="file-system">File System<a class="headerlink" href="#file-system" title="Permanent link">¶</a></h3>
-<p>All test code should be placed in a special folder in the file system:</p>
+<p>All test code should <abbr title="binary expression">be</abbr> placed <abbr title="input (stream)">in</abbr> a special folder <abbr title="input (stream)">in</abbr> the file system:</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp10E0KwjAQBeB9TjEUlz2BWymIVCq2S0FCM42BmKn5EaT07qZajFjczrz3wYzGzoMnsEpePAhlsfWKDGMdaYEWstVwOFa7YtOct9W-GDMYGMC8dKTDlHbAHdRxbsjjTFEH9RpaMp6rKaA19JZEiPwdUzNhmhsZuMQXVi6w8j_2aSbMo_MOJqlZSM2P9HWFEQk7GYu3EB8iIvoWcxB4pRx6zR_SUjCCjewJDRNwhQ=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp10E0KwjAQBeB9TjEUlz2BWymIVCq2S0FCM42BmKn5EaT07qZajFjczrz3wYzGzoMnsEpePAhlsfWKDGMdaYEWstVwOFa7YtOct9W-GDMYGMC8dKTDlHbAHdRxbsjjTFEH9RpaMp6rKaA19JZEiPwdUzNhmhsZuMQXVi6w8j_2aSbMo_MOJqlZSM2P9HWFEQk7GYu3EB8iIvoWcxB4pRx6zR_SUjCCjewJDRNwhQ=="/></a></p>
 <h2 id="build">Build<a class="headerlink" href="#build" title="Permanent link">¶</a></h2>
 <h3 id="build-script-setup">Build script setup<a class="headerlink" href="#build-script-setup" title="Permanent link">¶</a></h3>
 <p>In mbeddr there are different build scripts. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
-This documentation guides you in following the mbeddr standards for setting up your <em>BuildProject</em> and integrating it into Mbeddr’s build infrastructure.</p>
+This documentation guides you <abbr title="input (stream)">in</abbr> following the mbeddr standards for setting up your <em>BuildProject</em> and integrating it into Mbeddr’s build infrastructure.</p>
 <h4 id="required-buildfoldermacros">Required BuildFolderMacros<a class="headerlink" href="#required-buildfoldermacros" title="Permanent link">¶</a></h4>
-<p>In your <em>BuildProject</em> (the build script’s model representation in <abbr title="Meta Programming System">MPS</abbr>) you first need a <em>BuildFolderMacro</em> (a <em>folder</em>) named <em>mps.home</em> (see code snippet below).
-If you want to run the generated ant script in your <abbr title="Meta Programming System">MPS</abbr>, then you should specify the location of your <abbr title="Meta Programming System">MPS</abbr> installation in a relative way, otherwise you don’t need a path for <em>mps.home</em>.
-At script execution time, you will redefine <em>mps.home</em>, to point to the folder where your <abbr title="Meta Programming System">MPS</abbr> installation is located at.</p>
+<p>In your <em>BuildProject</em> (the build script’s model representation <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>) you first need a <em>BuildFolderMacro</em> (a <em>folder</em>) named <em>mps.home</em> (see code snippet below).
+If you want to run the generated ant script <abbr title="input (stream)">in</abbr> your <abbr title="Meta Programming System">MPS</abbr>, then you should specify the location of your <abbr title="Meta Programming System">MPS</abbr> installation <abbr title="input (stream)">in</abbr> a relative way, otherwise you don’t need a path for <em>mps.home</em>.
+At script execution time, you will redefine <em>mps.home</em>, to point to the folder where your <abbr title="Meta Programming System">MPS</abbr> installation is located <abbr title="affine transform">at</abbr>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>folder mps.home = &lt;no defaultPath&gt;
 </code></pre></div></td></tr></table></div>
 <p>Next, you need a <em>BuildFolderMacro</em> named <em>artifacts.root</em> that doesn’t require a path (see snippet below).
@@ -1080,7 +1090,7 @@ When executing the ant script, generated from your <em>BuildProject</em>, define
 </code></pre></div></td></tr></table></div>
 <p>For each <em>BuildProjectDependency</em> (the dependency’s section below your folders) we need a separate <em>BuildFolderMacro</em> that follows the naming convention <buildproject name="">.artifacts and points to <code>$artifacts.root/&lt;BuildProject name&gt;</code>.
 At build script execution time, those macros will point to the folders, where your required plugins are located.
-In the code snippet below you can see the resulting <em>BuildFolderMacros</em> for a <em>BuildProject</em> with two dependencies: mps-sl-all and com.mbeddr.platform.</buildproject></p>
+In the code snippet below you can see the resulting <em>BuildFolderMacros</em> for a <em>BuildProject</em> with two dependencies: mps-<abbr title="selection or statement list">sl</abbr>-all and com.mbeddr.platform.</buildproject></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>folder sl-all.artifacts = $artifacts.root/mps-sl-all 
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>folder platform.artifacts = $artifacts.root/com.mbeddr.platform
@@ -1088,7 +1098,7 @@ In the code snippet below you can see the resulting <em>BuildFolderMacros</em> f
 <h4 id="type-system-tests">Type system tests<a class="headerlink" href="#type-system-tests" title="Permanent link">¶</a></h4>
 <p>When you want to build type system tests that require a specific path macro (for example: for specifying the project location inside your <code>TestInfo</code>), then you must create a <em>BuildFolderMacro</em> for this path macro.
 The name of this <em>BuildFolderMacro</em> should start with <em>mps.macro</em>, followed by the name of the respective path macro.
-In the example below, you instruct <abbr title="Meta Programming System">MPS</abbr> via <em>mps.macro.mbeddr.github.core.home</em> to create a path macro <em>mbeddr.github.core.home</em> that points to the relative path location specified in the other <em>BuildFolderMacro</em> <em>mbeddr.github.core.home</em>.</p>
+In the example below, you instruct <abbr title="Meta Programming System">MPS</abbr> via <em>mps.macro.mbeddr.github.core.home</em> to create a path macro <em>mbeddr.github.core.home</em> that points to the relative path location specified <abbr title="input (stream)">in</abbr> the other <em>BuildFolderMacro</em> <em>mbeddr.github.core.home</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>folder mps.macro.mbeddr.github.core.home = $mbeddr.github.core.home
 </code></pre></div></td></tr></table></div>
 <p>Furthermore, you need to mark solutions containing type system tests as <em>content: (with sources and tests)</em>. To achieve this, please perform the following steps: </p>
@@ -1097,11 +1107,11 @@ In the example below, you instruct <abbr title="Meta Programming System">MPS</ab
 <li>Open the inspector.</li>
 <li>Inside the Inspector select the node sources, open the context menu and select <em>sources and tests</em> from it.</li>
 </ol>
-<p>To get your tests executed, you first need to add the <em>module-tests</em> plugin to your <em>use plugins:</em> section (on top of your <em>BuildProject</em>).
-When you can’t add the node <em>module-tests</em> to this section, import it from <em>jetbrains.mps.build.mps.tests.accessories</em>.
-Finally, create a <em>BuildMpsLayout_TestModules</em> (a <em>test configuration</em>) at bottom of your <em>BuildProject</em> and list there all solutions that contain type system tests to be executed.</p>
+<p>To get your tests executed, you first need to <abbr title="addition">add</abbr> the <em>module-tests</em> plugin to your <em>use plugins:</em> section (on top of your <em>BuildProject</em>).
+When you can’t <abbr title="addition">add</abbr> the node <em>module-tests</em> to this section, import it from <em>jetbrains.mps.build.mps.tests.accessories</em>.
+Finally, create a <em>BuildMpsLayout_TestModules</em> (a <em>test configuration</em>) <abbr title="affine transform">at</abbr> bottom of your <em>BuildProject</em> and list there all solutions that contain type system tests to <abbr title="binary expression">be</abbr> executed.</p>
 <h4 id="configurations-for-generator-and-compiler">Configurations for generator and compiler<a class="headerlink" href="#configurations-for-generator-and-compiler" title="Permanent link">¶</a></h4>
-<p>To make sure code is generated and compiled the same way as in <abbr title="Meta Programming System">MPS</abbr>, you have to add the following configurations (<em>BuildSource_JavaOptions</em> and <em>BuildMps_GeneratorOptions</em>) to your <em>BuildProject</em>‘s project structure. Those configurations control the generator engine and the Java compiler to make sure we have the same build behavior as in the <abbr title="Integrated Development Environment">IDE</abbr>.</p>
+<p>To make sure code is generated and compiled the same way as <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>, you have to <abbr title="addition">add</abbr> the following configurations (<em>BuildSource_JavaOptions</em> and <em>BuildMps_GeneratorOptions</em>) to your <em>BuildProject</em>‘s project structure. Those configurations control the generator engine and the Java compiler to make sure we have the same build behavior as <abbr title="input (stream)">in</abbr> the <abbr title="Integrated Development Environment">IDE</abbr>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -1136,7 +1146,7 @@ Finally, create a <em>BuildMpsLayout_TestModules</em> (a <em>test configuration<
 </code></pre></div></td></tr></table></div>
 <h3 id="building-a-release">Building a release<a class="headerlink" href="#building-a-release" title="Permanent link">¶</a></h3>
 <p>For preparing a mbeddr release, you can modify the version number that is set for the mbeddr plugins by overwriting the values of <em>major.version</em>, <em>minor.version</em> and <em>build</em>(see screenshot below).
-However, you don’t change these values inside the <abbr title="Meta Programming System">MPS</abbr> build scripts, instead, either you change them in the global gradle script (<em>mbeddr.core/build.gradle</em>), or you overwrite them via the command line while spawning a new release build:</p>
+However, you don’t change these values inside the <abbr title="Meta Programming System">MPS</abbr> build scripts, instead, either you change them <abbr title="input (stream)">in</abbr> the global gradle script (<em>mbeddr.core/build.gradle</em>), or you overwrite them via the command line while spawning a new release build:</p>
 <p><code>-PmajorVersion=1 -PbuildVersion=0 -PminorVersion=0000 build_mbeddr publishMbeddrAllInOnePublicationToMavenRepository</code></p>
 <p><a class="glightbox" href="../../img/mbeddr_version_numbers.png"><img alt="version numbers in MPS build scripts" src="../../img/mbeddr_version_numbers.png"/></a></p>
 <hr/>

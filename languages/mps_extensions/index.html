@@ -644,15 +644,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -800,6 +800,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../reference/actions/">
         Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
       </a>
 </li>
 </ul>
@@ -950,10 +960,10 @@
 <p><ins>slisson.richtext</ins></p>
 </blockquote>
 <p>A multi-line text-block that’s extendable (e.g. for images). It looks a bit latex-like.
-The mbeddr doc language used it for generating xhtml, latex, and markdown.</p>
+The mbeddr <abbr title="documentation">doc</abbr> language used it for generating xhtml, latex, and markdown.</p>
 <div class="admonition warning">
-<p class="admonition-title">The ordering of text and IWords can’t be arbitrary,</p>
-<p>A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.</p>
+<p class="admonition-title">The ordering of text and IWords can’t <abbr title="binary expression">be</abbr> arbitrary,</p>
+<p>A checking rule enforces that the text is normalized: There has to <abbr title="binary expression">be</abbr> <abbr title="affine transform">at</abbr> least one child, it must start with a Word and a Word must always <abbr title="binary expression">be</abbr> betweeen two embedded nodes and there are noo two consecutive Words.</p>
 </div>
 <h2 id="multiline-property-cell">Multiline property cell<a class="headerlink" href="#multiline-property-cell" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -970,15 +980,15 @@ The mbeddr doc language used it for generating xhtml, latex, and markdown.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use this language?</p>
-<p>Have a look at the samples of this language in <span class="twemoji">
+<p>Have a look <abbr title="affine transform">at</abbr> the samples of this language <abbr title="input (stream)">in</abbr> <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,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"/>
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>. There is also an <a href="https://tillschallau.de/mps/">external tutorial series</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What’s the edge ID in the diagrams used for?</p>
-<p>It’s used in the map that contains the layout data. It can be any unique string.
+<p class="admonition-title">What’s the edge ID <abbr title="input (stream)">in</abbr> the diagrams used for?</p>
+<p>It’s used <abbr title="input (stream)">in</abbr> the map that contains the layout data. It can <abbr title="binary expression">be</abbr> any unique string.
 LayoutMapEntry.key is the property where this string is used (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1634132395020500?thread_ts=1634127497.019400&amp;cid=C99H1FR42">source</a>).</p>
 </div>
 <h2 id="conditional-editor">Conditional Editor<a class="headerlink" href="#conditional-editor" title="Permanent link">¶</a></h2>
@@ -987,15 +997,15 @@ LayoutMapEntry.key is the property where this string is used (<a href="https://j
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Generation errors exist.</p>
-<p>The condition of the conditional editor is not optional, it has to be set.</p>
+<p>The condition of the conditional editor is not optional, it has to <abbr title="binary expression">be</abbr> set.</p>
 </div>
 <h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><ins>de.slisson.mps.tables</ins></p>
 </blockquote>
 <p>Use <em>slisson-tables</em> instead of <em>mps-tables</em> because the language is more flexible (and not deprecated).
-The language displays content in a tabular format. The table can be hard-coded or can consist of complex queries/dynamic content.
-You have to add new cells and rows in the editor. They can also be readonly.
+The language displays content <abbr title="input (stream)">in</abbr> a tabular format. The table can <abbr title="binary expression">be</abbr> hard-coded or can consist of complex queries/dynamic content.
+You have to <abbr title="addition">add</abbr> new cells and rows <abbr title="input (stream)">in</abbr> the editor. They can also <abbr title="binary expression">be</abbr> readonly.
 You need a little experience (trial-and-error) to create these tables.
 Features:</p>
 <ul>
@@ -1003,7 +1013,7 @@ Features:</p>
 <li>partial tables</li>
 <li>grid queries</li>
 </ul>
-<p>Strumenta blog: <a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/">Tabular projections in Jetbrains <abbr title="Meta Programming System">MPS</abbr>: let’s start building an accounting system</a></p>
+<p>Strumenta blog: <a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/">Tabular projections <abbr title="input (stream)">in</abbr> Jetbrains <abbr title="Meta Programming System">MPS</abbr>: let’s start building an accounting system</a></p>
 <details class="question">
 <summary>How do you get rid of the small little extra grid lines on the outside of the table rows? (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700">original question</a>)</summary>
 <p>Change these properties to true. </p>
@@ -1027,9 +1037,9 @@ Features:</p>
 <div class="admonition question">
 <p class="admonition-title">What does this language do?</p>
 <p>In the <abbr title="Meta Programming System">MPS</abbr> layout algorithms the children decide about their width and height and the parent cell can only arrange the already layouted children. 
-In the algorithms from the celllayout language are similar to the swing layouters where the child is asked for its min/max/preferred size, 
+In the algorithms from the celllayout language are similar to the swing layouters where the child is asked for its <abbr title="minimum">min</abbr>/<abbr title="maximum">max</abbr>/preferred size, 
 but the parent decides about the size of the child and the child then has to fit itself into these bounds. 
-This is used in tables and diagram, but also for the styles defined in the <ins>de.itemis.mps.celllayout</ins> language (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&amp;cid=C99H1FR42">source</a>).</p>
+This is used <abbr title="input (stream)">in</abbr> tables and diagram, but also for the styles defined <abbr title="input (stream)">in</abbr> the <ins>de.itemis.mps.celllayout</ins> language (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&amp;cid=C99H1FR42">source</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What does grow-x and push-x do?</p>
@@ -1059,21 +1069,21 @@ This is used in tables and diagram, but also for the styles defined in the <ins>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.editor.querylist</ins></p>
 </blockquote>
-<p>You can use nodes in the editor, which aren’t directly available in the current context. The language is more 
+<p>You can use nodes <abbr title="input (stream)">in</abbr> the editor, which aren’t directly available <abbr title="input (stream)">in</abbr> the current context. The language is more 
 powerful than (readonly) model access (displays a string).
 You can have editor cells, which can have actions and all other normal cell features.
-<a href="http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197">queryListNode</a> allows to access the surrounding context node in the editor definition (which otherwise isn’t available).</p>
+<a href="http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197">queryListNode</a> allows to access the surrounding context node <abbr title="input (stream)">in</abbr> the editor definition (which otherwise isn’t available).</p>
 <div class="admonition question">
 <p class="admonition-title">How do I fold collections returned by a querylist?</p>
 <p>Surround the querylist with a vertical collection and and set the cell layout of the querylist (not its content) to vertical.</p>
 </div>
 <details class="question">
-<summary>How do I make cells in querylists navigatable?</summary>
+<summary>How do I make cells <abbr title="input (stream)">in</abbr> querylists navigatable?</summary>
 <blockquote>
 <p>I’m trying to create a list of navigatable cells via querylist from mpsutil.</p>
 <p>The querylists query collects some nodes from my model, and I’d like to make it so that each cell produced with this querylist navigates to its respective node.</p>
 <p>Using the <em>navigatable-node</em> style attribute (returning <code>node</code>, the node from the query) on these cells doesn’t seem to work though - ctrl+clicking them doesn’t do anything.</p>
-<p>How can I make the cells in a querylist navigatable to that node?</p>
+<p>How can I make the cells <abbr title="input (stream)">in</abbr> a querylist navigatable to that node?</p>
 </blockquote>
 <p>The <code>navigatable-node</code> style attribute won’t allow you to point directly to the node from the querylist’s query. <br/>
 Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsutil) to make the navigation work, and the <code>hyperlink-style</code> attribute to make it look like a regular reference:</p>
@@ -1085,7 +1095,7 @@ Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsu
 <blockquote>
 <p><ins>de.itemis.mps.tooltips.structure</ins></p>
 </blockquote>
-<p>This language is deprecated, use <ins>jetbrains.mps.lang.editor.tooltips</ins> instead. It provides tooltips on hover.
+<p>This language is deprecated, use <ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.tooltips</ins> instead. It provides tooltips on hover.
 You have to define a regular editor and a hover editor.</p>
 <h2 id="dropdown">Dropdown<a class="headerlink" href="#dropdown" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -1093,12 +1103,12 @@ You have to define a regular editor and a hover editor.</p>
 </blockquote>
 <p>This language surrounds an editor cell with a dropdown cell with a button. 
 It opens the code completion menu whe you click on it.
-The language might not be very stable.</p>
+The language might not <abbr title="binary expression">be</abbr> very stable.</p>
 <h2 id="collapsible-cells">Collapsible cells<a class="headerlink" href="#collapsible-cells" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><ins>de.itemis.mps.editor.collapsible</ins></p>
 </blockquote>
-<p>This language defines collapsed/folded and expanded/unfolded editors. It provides plus(+) and minus(-) buttons in the editor.
+<p>This language defines collapsed/folded and expanded/unfolded editors. It provides plus(+) and minus(-) buttons <abbr title="input (stream)">in</abbr> the editor.
 There is no need for foldable collections. Use them together with other languages such as query lists.</p>
 <h2 id="mathematical-operators">Mathematical operators<a class="headerlink" href="#mathematical-operators" title="Permanent link">¶</a></h2>
 <blockquote>

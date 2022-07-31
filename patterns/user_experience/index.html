@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -748,6 +748,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -839,7 +849,7 @@
 <li><a href="https://blog.tubikstudio.com/user-experience-tips-ux-writing/"><abbr title="User Experience">UX</abbr> Writing: Handy Tips on Text Improving User Experience</a></li>
 <li><a href="https://www.thepunctuationguide.com/index.html">The Punctuation Guide</a></li>
 <li><a href="https://pressbooks.bccampus.ca/technicalwriting/part/documentdesign/">Technical Writing Essentials – Document Design</a></li>
-<li><a href="https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a">Word Choices and Language in <abbr title="User Experience">UX</abbr>, Part Three: User Interface Labels &amp; Messages</a></li>
+<li><a href="https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a">Word Choices and Language <abbr title="input (stream)">in</abbr> <abbr title="User Experience">UX</abbr>, Part Three: User Interface Labels &amp; Messages</a></li>
 </ul>
 <h2 id="ui"><abbr title="User Interface">UI</abbr><a class="headerlink" href="#ui" title="Permanent link">¶</a></h2>
 <ul>
@@ -852,7 +862,7 @@
 <li><a href="https://blog.tubikstudio.com/ux-design-readable-user-interface/"><abbr title="User Experience">UX</abbr> Design: How to Make User Interface Readable</a></li>
 </ul>
 <h2 id="dark-theme">Dark theme<a class="headerlink" href="#dark-theme" title="Permanent link">¶</a></h2>
-<p>Use the predefined colors in <abbr title="Meta Programming System">MPS</abbr> or define your own colors using the class  <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor">JBColor</a> with the constructor <code>JBColor(light theme color, dark theme color)</code>. By using this class, it shouldn’t be necessary to verify if the user is <a href="https://stackoverflow.com/c/itemis-mps/questions/426">using the Darcula theme</a>. The <abbr title="Meta Programming System">MPS</abbr> colors already support the light and dark theme because they inherit from <code>JBColor</code>. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don’t use hard-coded hex colors or the class <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor">Color</a>.</p>
+<p>Use the predefined colors <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> or define your own colors using the class  <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor">JBColor</a> with the constructor <code>JBColor(light theme color, dark theme color)</code>. By using this class, it shouldn’t <abbr title="binary expression">be</abbr> necessary to verify if the user is <a href="https://stackoverflow.com/c/itemis-mps/questions/426">using the Darcula theme</a>. The <abbr title="Meta Programming System">MPS</abbr> colors already support the light and dark theme because they inherit from <code>JBColor</code>. As seen <abbr title="input (stream)">in</abbr> the screenshot below, the colors can <abbr title="binary expression">be</abbr> different when using the dark theme (for example: the white and black colors). Don’t use hard-coded hex colors or the class <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor">Color</a>.</p>
 <figure>
 <p><a class="glightbox" href="../../img/light_theme_colors.png"><img alt="light theme" src="../../img/light_theme_colors.png"/></a>
 </p>
@@ -864,7 +874,7 @@
 <figcaption>Dark theme</figcaption>
 </figure>
 <p>Make sure that the foreground color is readable for the chosen background (see preceding screenshots). You can use an online <a href="https://webaim.org/resources/contrastchecker/">contrast checker tool</a> to verify that the color combination is readable.</p>
-<p>Example for colors with a good contrast ratio (foreground: black, the ratio can be found after the hex code):</p>
+<p>Example for colors with a good contrast ratio (foreground: black, the ratio can <abbr title="binary expression">be</abbr> found after the hex code):</p>
 <p><a class="glightbox" href="../../img/colors_good_contrast_ratio.png"><img alt="good color ratio" src="../../img/colors_good_contrast_ratio.png"/></a></p>
 <p>If this change isn’t feasible, you can switch to the default theme (useful for RCPs):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>

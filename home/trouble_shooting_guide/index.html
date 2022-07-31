@@ -580,15 +580,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -738,6 +738,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -820,7 +830,7 @@
 <ol>
 <li><em>Tools</em> → <em>Reload All Classes</em>.</li>
 <li><em>File</em> → <em>Invalidate Caches</em>, then restart.</li>
-<li><em>File</em> → <em>Invalidate Caches</em>, shutdown <abbr title="Meta Programming System">MPS</abbr>; in the repository in question: run <code>git clean -fxd -e build.properties -e gradle.properties</code>, rebuild with Gradle (<code>./gradlew</code>), restart <abbr title="Meta Programming System">MPS</abbr>.</li>
+<li><em>File</em> → <em>Invalidate Caches</em>, shutdown <abbr title="Meta Programming System">MPS</abbr>; <abbr title="input (stream)">in</abbr> the repository <abbr title="input (stream)">in</abbr> question: run <code>git clean -fxd -e build.properties -e gradle.properties</code>, rebuild with Gradle (<code>./gradlew</code>), restart <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ol>
 </div>
 <div class="admonition error">
@@ -835,15 +845,15 @@
 </ol>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> doesn’t let you enter some text / an intention isn’t visible that should be there.</p>
+<p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> doesn’t let you enter some text / an intention isn’t visible that should <abbr title="binary expression">be</abbr> there.</p>
 <ol>
-<li>check: is the concept / intention visible in the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)<ul>
+<li>check: is the concept / intention visible <abbr title="input (stream)">in</abbr> the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)<ul>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → Use <em>Edit</em> → <em>Add Language Import</em> to import the language containing the concept / the intention.</li>
 </ul>
 </li>
 <li>check the concept: is the type of the concept suitable for the place where you want to create an instance? Does it implement the right interface?</li>
-<li>check the tntention: is the <code class="highlight"><span class="n">isApplicable</span><span class="p">()</span><span class="w"></span></code>-method called? (add a <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">()</span><span class="w"></span></code> to the method and check what <abbr title="Meta Programming System">MPS</abbr> outputs)<ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → The intention is most probably not visible in the model → see above</li>
+<li>check the tntention: is the <code class="highlight"><span class="n">isApplicable</span><span class="p">()</span><span class="w"></span></code>-method called? (<abbr title="addition">add</abbr> a <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">()</span><span class="w"></span></code> to the method and check what <abbr title="Meta Programming System">MPS</abbr> outputs)<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → The intention is most probably not visible <abbr title="input (stream)">in</abbr> the model → see above</li>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z" fill-rule="evenodd"></path></svg></span> → Make sure the method returns true</li>
 </ul>
 </li>
@@ -855,7 +865,7 @@
 <ol>
 <li>Does the <abbr title="Meta Programming System">MPS</abbr> Model-Checker report problems? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z" fill-rule="evenodd"></path></svg></span> → Fix identified problems.</li>
 <li>Does the build log report intelligible problems? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z" fill-rule="evenodd"></path></svg></span> → Fix identified problems.</li>
-<li>Does it build in Gradle? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → See: <a href="#gradle">Gradle-Build fails</a>.</li>
+<li>Does it build <abbr title="input (stream)">in</abbr> Gradle? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → See: <a href="#gradle">Gradle-Build fails</a>.</li>
 </ol>
 </div>
 <h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">¶</a></h2>
@@ -864,8 +874,8 @@
 <ol>
 <li>Did you call <code>git clean -fxd -e build.properties</code> before <code>./gradlew</code>? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → Do it, retry.</li>
 <li>Did you call <code>./gradlew</code> with <code>--refresh-dependencies</code>? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → Retry with <code>--refresh-dependencies</code>.</li>
-<li>Does the error message start with “dependencies should be extracted into build script”?<ul>
-<li>In <abbr title="Meta Programming System">MPS</abbr>, apply the model-checker to the “_build”-package. Many problems can be fixed by applying the intention “Reload modules from disk”.</li>
+<li>Does the error message start with “dependencies should <abbr title="binary expression">be</abbr> extracted into build script”?<ul>
+<li>In <abbr title="Meta Programming System">MPS</abbr>, apply the model-checker to the “_build”-package. Many problems can <abbr title="binary expression">be</abbr> fixed by applying the intention “Reload modules from disk”.</li>
 <li>Rebuild the “_build”-package.</li>
 <li>Retry the gradle build.</li>
 </ul>
@@ -896,15 +906,15 @@
 </li>
 </ul>
 </li>
-<li>If nothing helped: try cloning your repo again.</li>
+<li>If nothing helped: try cloning your <abbr title="repository">repo</abbr> again.</li>
 <li>Out of options. Ask somebody for help.</li>
 </ol>
 </div>
 <h2 id="ci">CI<a class="headerlink" href="#ci" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Tests are failing on CI, but run green in the local <abbr title="Meta Programming System">MPS</abbr> installation.</p>
+<p class="admonition-title">Tests are failing on CI, but run green <abbr title="input (stream)">in</abbr> the local <abbr title="Meta Programming System">MPS</abbr> installation.</p>
 <p>What about the local Gradle build?
-The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.home=PATH_TO_YOU_MPS_INSTALLTION</code>. Afterwards the test results can be found in <code>build/iets3-allScripts</code> (<span class="twemoji">
+The tests can <abbr title="binary expression">be</abbr> executed locally with: <code>./gradlew ant-build-tests -Dmps.home=PATH_TO_YOU_MPS_INSTALLTION</code>. Afterwards the test results can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <code>build/iets3-allScripts</code> (<span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
 </svg>
@@ -915,18 +925,18 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 </ul>
 </li>
 <li>It shows the same test failures as the CI → there is a discrepancy between the <abbr title="Meta Programming System">MPS</abbr> Build and the Gradle Build<ul>
-<li>Rebuild the build scripts in <abbr title="Meta Programming System">MPS</abbr>.</li>
-<li>Try running the tests in a seperate Ppocess (edit the run configuration in <abbr title="Meta Programming System">MPS</abbr>).</li>
+<li>Rebuild the build scripts <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>.</li>
+<li>Try running the tests <abbr title="input (stream)">in</abbr> a seperate Ppocess (edit the run configuration <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>).</li>
 <li>Make sure your <abbr title="Meta Programming System">MPS</abbr> uses the same (versions of the) dependencies as the gradle build.<ul>
-<li>This can be achieved in 2 different ways:<ul>
+<li>This can <abbr title="binary expression">be</abbr> achieved <abbr title="input (stream)">in</abbr> 2 different ways:<ul>
 <li>Run <code>./gradlew dependencies</code> to see which versions of which dependency gradle uses and
   make sure the <abbr title="Open Source">OS</abbr> and Mbeddr repos are checked out on the right branches / commits (<span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
 </svg>
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>).</li>
-<li>Remove the file <em>projectlibraries.overrides.properties</em> from your repo and execute
-  <code>./gradlew setup</code> in both. This configures <abbr title="Meta Programming System">MPS</abbr> to directy use the Java class files from the Gradle artifacts instead of the checked out repos.</li>
+<li>Remove the file <em>projectlibraries.overrides.properties</em> from your <abbr title="repository">repo</abbr> and execute
+  <code>./gradlew setup</code> <abbr title="input (stream)">in</abbr> both. This configures <abbr title="Meta Programming System">MPS</abbr> to directy use the Java class files from the Gradle artifacts instead of the checked out repos.</li>
 </ul>
 </li>
 </ul>

@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -711,6 +711,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -758,14 +768,14 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <div class="admonition question">
-<p class="admonition-title">What does the dollar sign in error messages mean?</p>
+<p class="admonition-title">What does the dollar sign <abbr title="input (stream)">in</abbr> error messages mean?</p>
 <p>This indicates an anomyous class (<a href="https://stackoverflow.com/questions/11388840/java-compiled-classes-contain-dollar-signs">more information</a>).</p>
 </div>
-<p>For a list of common Java exceptions have a look at <a href="https://docstore.mik.ua/orelly/java/langref/ch09_04.htm">The Exception Hierarchy</a> and <a href="https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/">Types of Exception in Java with Examples</a>. <a href="https://docs.oracle.com/javase/7/docs/api/allclasses-noframe.html">This list</a> includes documentation for all kinds of exceptions.</p>
-<p>Here is some more information for exceptions that often occur in <abbr title="Meta Programming System">MPS</abbr>:</p>
+<p>For a list of common Java exceptions have a look <abbr title="affine transform">at</abbr> <a href="https://docstore.mik.ua/orelly/java/langref/ch09_04.htm">The Exception Hierarchy</a> and <a href="https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/">Types of Exception <abbr title="input (stream)">in</abbr> Java with Examples</a>. <a href="https://docs.oracle.com/javase/7/docs/api/allclasses-noframe.html">This list</a> includes documentation for all kinds of exceptions.</p>
+<p>Here is some more information for exceptions that often occur <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>:</p>
 <ul>
 <li><a href="https://techvidvan.com/tutorials/java-concurrentmodificationexception/">java.util.ConcurrentModificationException</a></li>
-<li><a href="https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/">java.lang.NullPointerException</a></li>
+<li><a href="https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/">java.<abbr title="language">lang</abbr>.NullPointerException</a></li>
 </ul>
 <h1 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
 <table>
@@ -793,24 +803,24 @@
 <td>Indicates forbidden operations over a SModel/<abbr title="Semantic Node">SNode</abbr> (<a href="https://www.jetbrains.com/help/mps/2021.3/smodel-language.html#accesslanguage">official documentation</a>).</td>
 </tr>
 <tr>
-<td><a href="https://github.com/JetBrains/MPS/blob/6f2f932bd21b581cce437a253414c46ce4cbe5f4/core/kernel/source/jetbrains/mps/smodel/DynamicReference.java#L116">AssertionError: Taking target node of dynamic reference<br/>whose source node is not in a model</a></td>
-<td>a node is in detached state</td>
+<td><a href="https://github.com/JetBrains/MPS/blob/6f2f932bd21b581cce437a253414c46ce4cbe5f4/core/kernel/source/jetbrains/mps/smodel/DynamicReference.java#L116">AssertionError: Taking target node of dynamic reference<br/>whose source node is not <abbr title="input (stream)">in</abbr> a model</a></td>
+<td>a node is <abbr title="input (stream)">in</abbr> detached state</td>
 <td>The source of a dynamic reference doesn’t belong to a model.</td>
 </tr>
 <tr>
 <td>Position n is not allowed for X</td>
-<td>The caret is the first position but the first position was disabled in the style.</td>
-<td>The caret is at a position that is not allowed.</td>
+<td>The caret is the first position but the first position was disabled <abbr title="input (stream)">in</abbr> the style.</td>
+<td>The caret is <abbr title="affine transform">at</abbr> a position that is not allowed.</td>
 </tr>
 <tr>
 <td>ModuleClassLoaderIsDisposedException</td>
-<td>A module couldn’t be disposed and it is loaded again.</td>
+<td>A module couldn’t <abbr title="binary expression">be</abbr> disposed and it is loaded again.</td>
 <td>The classloader of a module is disposed.</td>
 </tr>
 <tr>
-<td>ClassLoader of module could not be found</td>
+<td>ClassLoader of module could not <abbr title="binary expression">be</abbr> found</td>
 <td></td>
-<td>A module can’t be loaded because the classloader can’t be found.</td>
+<td>A module can’t <abbr title="binary expression">be</abbr> loaded because the classloader can’t <abbr title="binary expression">be</abbr> found.</td>
 </tr>
 </tbody>
 </table>
@@ -840,7 +850,7 @@
 <td>If you get an exception from this method, then you need to move the computation to the background while also trying to avoid blocking the <abbr title="User Interface">UI</abbr> thread as well.</td>
 </tr>
 <tr>
-<td>Argument for <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a> parameter must not be null</td>
+<td>Argument for <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a> parameter must not <abbr title="binary expression">be</abbr> null</td>
 <td>method with <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a> Annotation is called with null</td>
 <td>A null check failed (<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">official documentation</a>).</td>
 </tr>

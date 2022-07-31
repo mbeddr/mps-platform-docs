@@ -553,15 +553,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -711,6 +711,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -758,20 +768,20 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="findusages-aspect">FindUsages aspect<a class="headerlink" href="#findusages-aspect" title="Permanent link">¶</a></h1>
-<p>Custom finders for discovering related nodes can be implemented in this aspect.</p>
+<p>Custom finders for discovering related nodes can <abbr title="binary expression">be</abbr> implemented <abbr title="input (stream)">in</abbr> this aspect.</p>
 <div class="admonition warning">
-<p class="admonition-title">I click <em>Find usages</em> in the context menu of a node, and it doesn’t find anything.</p>
-<p>The standard search scope is the project. Try to expand it to global in the find usages settings. Also check that
-you are using the correcting finders in the <em>Finders</em> section of the settings. </p>
+<p class="admonition-title">I click <em>Find usages</em> <abbr title="input (stream)">in</abbr> the context menu of a node, and it doesn’t find anything.</p>
+<p>The standard search scope is the project. Try to expand it to global <abbr title="input (stream)">in</abbr> the find usages settings. Also check that
+you are using the correcting finders <abbr title="input (stream)">in</abbr> the <em>Finders</em> section of the settings. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">I want to execute <em>Find usages</em> more than once, but the result tab gets overridden.</p>
-<p>Select the option <em>Open in new tab</em> in the section <em>View</em> of the <em>Find usages</em> preferences or pin the result tabs by right-clicking and selecting <em>Pin Tab</em>.</p>
+<p>Select the option <em>Open <abbr title="input (stream)">in</abbr> new tab</em> <abbr title="input (stream)">in</abbr> the section <em>View</em> of the <em>Find usages</em> preferences or pin the result tabs by right-clicking and selecting <em>Pin Tab</em>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to restrict the scope of a <em>Finder</em> execution?</p>
 <blockquote>
-<p>I am using this <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959035b%28jetbrains.mps.lang.findUsages.structure%29%2F2005690715325995353">finder</a> and would like to restrict the scope from <em>global</em>, to lets say <em>project</em>. </p>
+<p>I <abbr title="abstract module">am</abbr> using this <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959035b%28jetbrains.mps.lang.findUsages.structure%29%2F2005690715325995353">finder</a> and would like to restrict the scope from <em>global</em>, to lets say <em>project</em>. </p>
 <p>How do I do this?</p>
 </blockquote>
 <p>You can pass any <em>FindUsages Scope</em> implementation to the expression, for instance the <a href="http://127.0.0.1:63320/node?ref=r%3A3189948c-a57a-415e-beba-405572f2d13c%28jetbrains.mps.ide.findusages.model.scopes%29%2F8568892084424440553">ProjectScope</a>:</p>

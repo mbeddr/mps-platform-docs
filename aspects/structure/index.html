@@ -585,15 +585,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -743,6 +743,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -823,7 +833,7 @@
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create a <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically</a></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Concept XY wasn’t found in the language.</p>
+<p class="admonition-title">Concept XY wasn’t found <abbr title="input (stream)">in</abbr> the language.</p>
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found</a></p>
 </div>
 <div class="admonition question">
@@ -831,8 +841,8 @@
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?</p>
-<p>The used algorithm is a a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a>(<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn’t implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
+<p class="admonition-title">When a concept extends another concept/implements some interfaces, which method is called when they are defined <abbr title="input (stream)">in</abbr> more than one concepts/interfaces?</p>
+<p>The used algorithm is a a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a>(<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn’t implement the method itself, first the implemented interfaces are recursively considered <abbr title="input (stream)">in</abbr> declaration order, then the extended concept.
 You can try it yourself, for example for the concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068390468198">ClassConcept</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -852,11 +862,11 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 <h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors</a> but errors are still shown for the node.</p>
-<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. More information can be found in <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What’s <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass</a> used for?</p>
-<p>It allows to execute <em>baselanguage</em> code. An example can be found in <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a>.</p>
+<p>It allows to execute <em>baselanguage</em> code. An example can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a>.</p>
 </div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h2>
 <div class="admonition question">
@@ -865,8 +875,8 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZzz85JTC0oUqsFiuZXBJUWZeelWCr5QlkK0gZ5eXixYtpYLSSNcAURnWWJOaaqVQjFYDKoaRDqk5qXAbAQAJ10l1Q=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZzz85JTC0oUqsFiuZXBJUWZeelWCr5QlkK0gZ5eXixYtpYLSSNcAURnWWJOaaqVQjFYDKoaRDqk5qXAbAQAJ10l1Q=="/></a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can properties be overridden?</p>
-<p>No, more info can be found in <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a>.</p>
+<p class="admonition-title">Can properties <abbr title="binary expression">be</abbr> overridden?</p>
+<p>No, more <abbr title="information">info</abbr> can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a>.</p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
 <div class="admonition question">
@@ -879,7 +889,7 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can you use the resolve info to fix a broken reference?</p>
+<p class="admonition-title">Can you use the resolve <abbr title="information">info</abbr> to fix a broken reference?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">ResolverComponent</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">resolve</span><span class="p">(...)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>

@@ -553,15 +553,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -711,6 +711,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -759,14 +769,14 @@
 </a>
 <h1 id="typstem-aspect">Typstem aspect<a class="headerlink" href="#typstem-aspect" title="Permanent link">¶</a></h1>
 <blockquote>
-<p>A type system is part of a language definition assigning types to the nodes in the models written using the language. The type system language is also used to check certain constraints on nodes and their types.</p>
+<p>A type system is part of a language definition assigning types to the nodes <abbr title="input (stream)">in</abbr> the models written using the language. The type system language is also used to check certain constraints on nodes and their types.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Type system rules aren’t executing.</p>
 <p>Turn off the <a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode">power save mode</a>. Also make sure that the languages that contains the rules is used. Make sure that under <em>Tool</em> →
 <em>Model Checker</em> the typesystem checks are enabled. Some rules are only checked when <em>Check model</em> is invoked. In this case the
-option <em>do not apply on the fly</em> is set to true in a checking rule.</p>
+option <em>do not apply on the fly</em> is set to true <abbr title="input (stream)">in</abbr> a checking rule.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are comparison rules often used?</p>
@@ -776,7 +786,7 @@ option <em>do not apply on the fly</em> is set to true in a checking rule.</p>
 <p class="admonition-title">How do you learn more about <abbr title="Meta Programming System">MPS</abbr> CodeRules?</p>
 <p>This is kind of a new typesystem bases on constraints. Visit <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/mps-coderules" title="GitHub Repository: JetBrains/mps-coderules">JetBrains/mps-coderules</a>
 for more information. There is also a <a href="https://specificlanguages.com/posts/2022-01/13-coderules-entering-exiting/">blog post</a>
-about this project. The new <abbr title="Meta Programming System">MPS</abbr> implementation of the Kotlin language uses CodeRules. More information can be found in <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/mps-kotlin-typesystem" title="GitHub Repository: JetBrains/mps-kotlin-typesystem">JetBrains/mps-kotlin-typesystem</a>. There is also a free course about it on <a href="https://stepik.org/course/101057/promo">stepik</a>.</p>
+about this project. The new <abbr title="Meta Programming System">MPS</abbr> implementation of the Kotlin language uses CodeRules. More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/mps-kotlin-typesystem" title="GitHub Repository: JetBrains/mps-kotlin-typesystem">JetBrains/mps-kotlin-typesystem</a>. There is also a free course about it on <a href="https://stepik.org/course/101057/promo">stepik</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Type system vs constraints?</p>
@@ -793,14 +803,14 @@ about this project. The new <abbr title="Meta Programming System">MPS</abbr> imp
 <details class="question">
 <summary>How do you build a language extension for checking rules?</summary>
 <blockquote>
-<p>I built a baselanguage extension which can be used in a checking rule (i.e., in the typesystem aspect of another language) buut the new language’s generator isn’t engaged during the generation of some checking rule using the extension (generation plan says: “NOT IN THE PLAN”).</p>
+<p>I built a baselanguage extension which can <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> a checking rule (i.e., <abbr title="input (stream)">in</abbr> the typesystem aspect of another language) buut the new language’s generator isn’t engaged during the generation of some checking rule using the extension (generation plan says: “NOT IN THE PLAN”).</p>
 </blockquote>
 <p>The generator of the new language must have a dependency to the baseLanguage generator with the scope set to <code>Extends</code>.</p>
 <p><a class="glightbox" href="../../img/generator_extend_baselanguage.png"><img alt="extend baselanguage generator" src="../../img/generator_extend_baselanguage.png" width="600px"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/kbirken" title="GitHub User: kbirken">@kbirken</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">When and why should you copy a type in an inference rule?</p>
+<p class="admonition-title">When and why should you copy a type <abbr title="input (stream)">in</abbr> an inference rule?</p>
 <blockquote>
 <p>I’ve seen basically the same code, where one time the type is copied and another time it’s just used (without the copy). When should we copy the type and why?</p>
 </blockquote>
@@ -822,15 +832,15 @@ about this project. The new <abbr title="Meta Programming System">MPS</abbr> imp
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The type should only be copied if you want to use it in another type as a child.</p>
-<p>In the example it should be fine to simply use <code>member.type</code>. But let’s say you have a <code>SetType</code> concept in your language that contains an <code>innerType</code> as a child. If you want to construct an instance of that concept, you would write code like this:</p>
+<p>The type should only <abbr title="binary expression">be</abbr> copied if you want to use it <abbr title="input (stream)">in</abbr> another type as a child.</p>
+<p>In the example it should <abbr title="binary expression">be</abbr> fine to simply use <code>member.type</code>. But let’s say you have a <code>SetType</code> concept <abbr title="input (stream)">in</abbr> your language that contains an <code>innerType</code> as a child. If you want to construct an instance of that concept, you would write code like this:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">node</span><span class="o">&lt;</span><span class="n">SetType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">node</span><span class="o">&lt;</span><span class="n">SetType</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">result</span><span class="p">.</span><span class="na">innerType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">member</span><span class="p">.</span><span class="na">type</span><span class="p">.</span><span class="na">copy</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">typeof</span><span class="p">(</span><span class="n">member</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">==</span><span class="p">:</span><span class="w"> </span><span class="n">result</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>If you omit the <code>.copy</code> in the code, you would attempt to “hijack” the <code>member.type</code> node from the <code>member</code> and break the model. <abbr title="Meta Programming System">MPS</abbr> will complain.</p>
+<p>If you omit the <code>.copy</code> <abbr title="input (stream)">in</abbr> the code, you would attempt to “hijack” the <code>member.type</code> node from the <code>member</code> and break the model. <abbr title="Meta Programming System">MPS</abbr> will complain.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></sub></sub></p>
 </div>
 <div class="admonition question">
@@ -846,7 +856,7 @@ How can I do that?</p>
 <p>You may override <code>#suppress(NodeReportItem)</code> to only suppress certain errors. Overriding this will take precedence of overriding <code>#suppress(node&lt;&gt;)</code>. Xou should implement only one of them or manually call <code>#suppress(node&lt;&gt;)</code> from <code>#suppress(NodeReportItem)</code>.</p>
 </li>
 <li>
-<p>If there are nested nodes that implement <code>ISuppressErrors</code>, the error will be suppressed if any of them returns true. You may debug such by copying the errornode to the console (e.g. <code>nodeRef@50283</code>) and running this line:</p>
+<p>If there are nested nodes that implement <code>ISuppressErrors</code>, the error will <abbr title="binary expression">be</abbr> suppressed if any of them returns true. You may debug such by copying the errornode to the console (e.g. <code>nodeRef@50283</code>) and running this line:</p>
 </li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -876,7 +886,7 @@ The concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">==</span><span class="p">:</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Given that you really need the operation type in the end. You most probably need to change the implementation of the rules contributing to the <code>operation type</code> to only use “one side”. If the type of the expression is simply the type of the variable <code>x</code> you can omit it.</p>
+<p>Given that you really need the operation type <abbr title="input (stream)">in</abbr> the end. You most probably need to change the implementation of the rules contributing to the <code>operation type</code> to only use “one side”. If the type of the expression is simply the type of the variable <code>x</code> you can omit it.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">

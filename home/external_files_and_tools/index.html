@@ -575,15 +575,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -733,6 +733,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -811,13 +821,13 @@
 <div class="admonition question">
 <p class="admonition-title">How do you deal with errors when writing an importer?</p>
 <ul>
-<li>Create a new tab in the messages view and show the errors.</li>
-<li>Create error concepts in the language. If the import fails for a particular node, it can be replaced with one of these error nodes in the output model and some error message can be appended. By doing this you can also implement checking rules for the error nodes so that they errors also are displayed as part of model checking. You can also use finders to find all occurrences of errors in the model.</li>
+<li>Create a new tab <abbr title="input (stream)">in</abbr> the messages view and show the errors.</li>
+<li>Create error concepts <abbr title="input (stream)">in</abbr> the language. If the import fails for a particular node, it can <abbr title="binary expression">be</abbr> replaced with one of these error nodes <abbr title="input (stream)">in</abbr> the output model and some error message can <abbr title="binary expression">be</abbr> appended. By doing this you can also implement checking rules for the error nodes so that they errors also are displayed as part of model checking. You can also use finders to find all occurrences of errors <abbr title="input (stream)">in</abbr> the model.</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Is there a wizard available to set up an <abbr title="Meta Programming System">MPS</abbr> language based on an XML schema (defined in .xsd files)?</p>
-<p>No, not possible at the moment but you can create new projects from local or GitHub hosted templates with <a href="https://github.com/coolya/Lochkarte">Lochkarte</a>.</p>
+<p class="admonition-title">Is there a wizard available to set up an <abbr title="Meta Programming System">MPS</abbr> language based on an XML schema (defined <abbr title="input (stream)">in</abbr> .xsd files)?</p>
+<p>No, not possible <abbr title="affine transform">at</abbr> the moment but you can create new projects from local or GitHub hosted templates with <a href="https://github.com/coolya/Lochkarte">Lochkarte</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where do you put JARs?</p>
@@ -826,10 +836,10 @@
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you run an <abbr title="Language Server Protocol">LSP</abbr> server for <abbr title="Meta Programming System">MPS</abbr> grammars?</p>
-<p>There is no support for this in IntelliJ products (see <a href="https://youtrack.jetbrains.com/issue/IDEABKL-7409">IDEABKL-7409</a>) and also no implementation exist in <abbr title="Meta Programming System">MPS</abbr>.</p>
+<p>There is no support for this <abbr title="input (stream)">in</abbr> IntelliJ products (see <a href="https://youtrack.jetbrains.com/issue/IDEABKL-7409">IDEABKL-7409</a>) and also no implementation exist <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you use databases in <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p class="admonition-title">How can you use databases <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>?</p>
 <ul>
 <li><abbr title="Meta Programming System">MPS</abbr> doesn’t have any special support for databases or for frameworks such as Spring Boot (unlike IntelliJ IDEA) .</li>
 <li>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/"><abbr title="Meta Programming System">MPS</abbr> is not a (relational) database</a></li>
@@ -837,7 +847,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you create a standalone utility (not a complete <abbr title="Integrated Development Environment">IDE</abbr>) for language generation with <abbr title="Meta Programming System">MPS</abbr>?<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<p>This is not possible at the moment but you can interact with <abbr title="Meta Programming System">MPS</abbr> models from Java when you setup the necessary dependencies:</p>
+<p>This is not possible <abbr title="affine transform">at</abbr> the moment but you can interact with <abbr title="Meta Programming System">MPS</abbr> models from Java when you setup the necessary dependencies:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -896,13 +906,13 @@
 <p>You can use <a href="https://gist.skadi.cloud">Skadi Cloud Gists</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you run <abbr title="Meta Programming System">MPS</abbr> in the browser?</p>
+<p class="admonition-title">How can you run <abbr title="Meta Programming System">MPS</abbr> <abbr title="input (stream)">in</abbr> the browser?</p>
 <p>You can try <a href="https://skadi.cloud/">Skadi Cloud</a>. There is also <a href="https://github.com/modelix/modelix">Modelix</a> and <a href="https://blog.logv.ws/2021/03/16/jetbrains-projector-a-game-changer-for-jetbrains-mps-projects/">JetBrains Projector</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you embed a web browser in <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p class="admonition-title">How can you embed a web browser <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>?</p>
 <p>Since Intellij 2020.1 it is possible to use the <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html">Java Chromium Embedded Framework</a>.
-Create a new swing component in the editor:
+Create a new swing component <abbr title="input (stream)">in</abbr> the editor:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">JBCefBrowser</span><span class="w"> </span><span class="n">myBrowser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JBCefBrowser</span><span class="p">(</span><span class="n">myUrl</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">return</span><span class="w"> </span><span class="n">myBrowser</span><span class="p">.</span><span class="na">getComponent</span><span class="p">();</span><span class="w"></span>

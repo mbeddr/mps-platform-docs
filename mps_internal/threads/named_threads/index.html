@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Threads</a>
+<a href="../">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -743,6 +743,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -840,7 +850,7 @@
 </li>
 <li>TimerQueue(<a href="https://resources.mpi-inf.mpg.de/d5/teaching/ss05/is05/javadoc/javax/swing/TimerQueue.html">java.swing.TimerQueue</a>)</li>
 <li>Timer(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Timer.html">java.util.Timer</a>)</li>
-<li>Common-Cleaner(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Cleaner.html">java.lang.ref.Cleaner</a>)</li>
+<li>Common-Cleaner(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Cleaner.html">java.<abbr title="language">lang</abbr>.<abbr title="reference">ref</abbr>.Cleaner</a>)</li>
 <li><a href="https://stackoverflow.com/a/8251753/16577108">Attach Listener</a></li>
 <li>GC Thread: <a href="https://www.baeldung.com/jvm-garbage-collectors">garbage collector</a> thread</li>
 <li>CMS Thread and CMD Main Thread: Thread of the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/cms.html">concurrent mark sweep collector</a>.</li>
@@ -881,9 +891,9 @@
 </ul>
 <h2 id="mps-threads-threads"><abbr title="Meta Programming System">MPS</abbr> Threads threads<a class="headerlink" href="#mps-threads-threads" title="Permanent link">¶</a></h2>
 <ul>
-<li>Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run for example inside this thread (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java">Highlighter</a>).</li>
-<li>HighlightUsages: highlights references to the node at the cursor position in the editor (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java">HighlightUsagesSupport</a>).</li>
-<li>CompletionHelper: automatically opens the code completion menu that was introduced in <abbr title="Meta Programming System">MPS</abbr> 2021.2 (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompletionHelper.java">CompletionHelper</a>).</li>
+<li>Highlighter: performs model checks <abbr title="input (stream)">in</abbr> update sessions and updates the editor. Checking rules are run for example inside this thread (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java">Highlighter</a>).</li>
+<li>HighlightUsages: highlights references to the node <abbr title="affine transform">at</abbr> the cursor position <abbr title="input (stream)">in</abbr> the editor (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java">HighlightUsagesSupport</a>).</li>
+<li>CompletionHelper: automatically opens the code completion menu that was introduced <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> 2021.2 (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompletionHelper.java">CompletionHelper</a>).</li>
 <li><abbr title="Meta Programming System">MPS</abbr> <abbr title="Event Dispatch Thread">EDT</abbr> Executor: invokes read/write/command task asynchronously on the <abbr title="Event Dispatch Thread">EDT</abbr> thread (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/smodel/EDTExecutorInternal.java">EDTExecutorInternal</a>).</li>
 <li><abbr title="Meta Programming System">MPS</abbr> interrupting thread: augments the IDEA Platform write action with functionality essential for <abbr title="Meta Programming System">MPS</abbr> (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/smodel/TryRunPlatformWriteHelper.java"></a>).</li>
 <li>ChangesManager command queue: queue for tasks of the <abbr title="Version Control System">VCS</abbr> changes manager (<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-vcs/vcs-platform/solutions/jetbrains.mps.ide.vcs.platform/source_gen/jetbrains/mps/vcs/changesmanager/CurrentDifferenceRegistry.java">CurrentDifferenceRegistry</a>)</li>
@@ -894,7 +904,7 @@
 </ul>
 <h2 id="other-threads">Other threads<a class="headerlink" href="#other-threads" title="Permanent link">¶</a></h2>
 <ul>
-<li>AnimatorThread (removed class of com.intellij.util.ui.Timer)</li>
+<li>AnimatorThread (removed class of com.intellij.util.<abbr title="user interface">ui</abbr>.Timer)</li>
 <li>Poller SunPKCS11-Darwin (macOS specific thread)</li>
 <li><a href="https://stackoverflow.com/a/3836230/16577108">process reaper</a> (Linux/macOS specific thread)</li>
 <li>Batik CleanerThread (<a href="https://xmlgraphics.apache.org/batik/javadoc/org/apache/batik/util/CleanerThread.html">org.apache.batik.util.CleanerThread</a>)</li>

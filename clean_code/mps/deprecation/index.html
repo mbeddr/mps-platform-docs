@@ -549,15 +549,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mps_internal/threads/">Threads</a>
+<a href="../../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -708,6 +708,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -766,10 +776,10 @@
 <li>Don’t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1960721196051541146">node.containingRole</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7504436213544206332">node.getContainmentLink</a> instead.</li>
 <li>Don’t use interface the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819">IDon’tSubstituteByDefault</a>. Create an empty default substitute menu for the concept instead.</li>
 <li>Don’t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208">print</a>, <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="w"></span></code> or <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="w"></span></code> for logging. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">log</a> for low-level logging or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325">message</a> for high-level logging instead.</li>
-<li>Use the explicit presentation of a node when used in a string. For example: <code class="highlight"><span class="s">"my node: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">getPresentation</span><span class="p">()</span><span class="w"></span></code> instead of <code class="highlight"><span class="s">"my node: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="w"></span></code>.</li>
-<li>Don’t use counter variable in LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> in code instead.</li>
-<li>Don’t use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more info in the attached comment of the interface.</li>
-<li>Avoid getting the repository from the opened project or using the global repository. The code might break in the future.</li>
+<li>Use the explicit presentation of a node when used <abbr title="input (stream)">in</abbr> a string. For example: <code class="highlight"><span class="s">"my node: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">getPresentation</span><span class="p">()</span><span class="w"></span></code> instead of <code class="highlight"><span class="s">"my node: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="w"></span></code>.</li>
+<li>Don’t use counter variable <abbr title="input (stream)">in</abbr> LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> <abbr title="input (stream)">in</abbr> code instead.</li>
+<li>Don’t use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more <abbr title="information">info</abbr> <abbr title="input (stream)">in</abbr> the attached comment of the interface.</li>
+<li>Avoid getting the repository from the opened project or using the global repository. The code might break <abbr title="input (stream)">in</abbr> the future.</li>
 </ul>
 <hr/>
 <div class="md-source-file">

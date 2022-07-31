@@ -549,15 +549,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mps_internal/threads/">Threads</a>
+<a href="../../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -708,6 +708,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -755,24 +765,24 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1>Java style guide</h1>
-<p>These are some points taken from the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> that make sense in <abbr title="Meta Programming System">MPS</abbr>.</p>
+<p>These are some points taken from the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> that make sense <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>.</p>
 <ul>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: write a comment why a fall-through is necessary in a switch statement.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: write a comment why a fall-through is necessary <abbr title="input (stream)">in</abbr> a switch statement.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Default case is present</a>: always write a default case for switch statements.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: identifiers use only ASCII letters and digits, and, in a few cases noted below, underscores. Don’t use prefixes or suffixes with particular meanings. For example, these names don’t adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em> and <em>kName</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: identifiers use only ASCII letters and digits, and, <abbr title="input (stream)">in</abbr> a few cases noted below, underscores. Don’t use prefixes or suffixes with particular meanings. For example, these names don’t adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em> and <em>kName</em>.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names</a>: package names are all lowercase, with consecutive words concatenated together (no underscores). For example, <em>com.example.deepspace</em>, not <em>com.example.deepSpace</em> or <em>com.example.deep_space</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases. For example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>), but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they’re testing, and ending with Test. For example, <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases. For example: <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodundertest>_<state>, for example <em>pop_emptyStack</em>. No correct way exists for naming test methods.</state></methodundertest></li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should <abbr title="binary expression">be</abbr> <abbr title="input (stream)">in</abbr> UpperCamelCase. Class names are typically nouns or noun phrases. For example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also <abbr title="binary expression">be</abbr> nouns or noun phrases (for example, <em>List</em>), but may sometimes <abbr title="binary expression">be</abbr> adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they’<abbr title="runtime exception">re</abbr> testing, and ending with Test. For example, <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should <abbr title="binary expression">be</abbr> <abbr title="input (stream)">in</abbr> lowerCamelCase. Method names are typically verbs or verb phrases. For example: <code>sendMessage or stop</code>. Underscores may appear <abbr title="input (stream)">in</abbr> JUnit test method names to separate logical components of the name, with each component written <abbr title="input (stream)">in</abbr> lowerCamelCase. One typical pattern is <methodundertest>_<state>, for example <em>pop_emptyStack</em>. No correct way exists for naming test methods.</state></methodundertest></li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names</a>: use all uppercase letters, with each word separated from the next by a single underscore</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases. For example, <em>computedValues</em> or <em>index</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names</a> should be <em>lowerCamelCase</em>. One-character parameter names in public methods should be avoided.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names</a> should be in lowerCamelCase. Even when final and immutable, local variables are not considered to be constants, and should not be styled as constants.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names</a>: each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>) or a name in the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: non-constant field names (static or otherwise) should <abbr title="binary expression">be</abbr> <em>lowerCamelCase</em>. These names are typically nouns or noun phrases. For example, <em>computedValues</em> or <em>index</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names</a> should <abbr title="binary expression">be</abbr> <em>lowerCamelCase</em>. One-character parameter names <abbr title="input (stream)">in</abbr> public methods should <abbr title="binary expression">be</abbr> avoided.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names</a> should <abbr title="binary expression">be</abbr> <abbr title="input (stream)">in</abbr> lowerCamelCase. Even when final and immutable, local variables are not considered to <abbr title="binary expression">be</abbr> constants, and should not <abbr title="binary expression">be</abbr> styled as constants.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names</a>: each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>) or a name <abbr title="input (stream)">in</abbr> the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Camel case: defined</a>: tutorial on how to write camelcase</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don’t ignore caught exceptions</a>
   (see also: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=16">Avoid empty catch blocks</a>)</li>
 </ul>
-<p>Additional java practises can be found at <a href="http://www.javapractices.com/home/HomeAction.do">javapractices.com</a>.</p>
+<p>Additional java practises can <abbr title="binary expression">be</abbr> found <abbr title="affine transform">at</abbr> <a href="http://www.javapractices.com/home/HomeAction.do">javapractices.com</a>.</p>
 <hr/>
 <div class="md-source-file">
 <small>

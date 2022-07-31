@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../mps_internal/threads/">Threads</a>
+<a href="../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -710,6 +710,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -786,11 +796,11 @@
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/build-script-errors/unsatisfied-dependency/">Build script error: “Unsatisfied dependency”</a></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Build script error: can’t find used language in dependencies.</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/build-script-errors/cannot-find-used-language-in-dependencies/">Build script error: “Cannot find used language in dependencies”</a></p>
+<p class="admonition-title">Build script error: can’t find used language <abbr title="input (stream)">in</abbr> dependencies.</p>
+<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/build-script-errors/cannot-find-used-language-in-dependencies/">Build script error: “Cannot find used language <abbr title="input (stream)">in</abbr> dependencies”</a></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Can’t find extended language in dependencies.</p>
+<p class="admonition-title">Can’t find extended language <abbr title="input (stream)">in</abbr> dependencies.</p>
 <p>Check <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360004407199/comments/360000679499">this answer</a>.</p>
 </div>
 <div class="admonition question">
@@ -800,12 +810,12 @@
 <div class="admonition question">
 <p class="admonition-title">How can you find out the supported <abbr title="Meta Programming System">MPS</abbr> version of a project?</p>
 <p>Search the readme for this information. If the project uses a gradle script, you can most likely find this information
-in the file build.gradle (for example in <a href="https://github.com/JetBrains/MPS-extensions/blob/3e137bcf269f8a2ac79589d4e4938f78900cf294/build.gradle#L81">this line</a>
-in mps-extension). For older <abbr title="Meta Programming System">MPS</abbr> projects there is no waying of finding out the version.</p>
+<abbr title="input (stream)">in</abbr> the file build.gradle (for example <abbr title="input (stream)">in</abbr> <a href="https://github.com/JetBrains/MPS-extensions/blob/3e137bcf269f8a2ac79589d4e4938f78900cf294/build.gradle#L81">this line</a>
+<abbr title="input (stream)">in</abbr> mps-extension). For older <abbr title="Meta Programming System">MPS</abbr> projects there is no waying of finding out the version.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What do you need to put into the <em>.gitignore</em> file?</p>
-<p>Have a look at this <a href="https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore">.gitignore</a> file.</p>
+<p>Have a look <abbr title="affine transform">at</abbr> this <a href="https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore">.gitignore</a> file.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Why is it possible to successfully build models with missing imports?</p>
@@ -816,7 +826,7 @@ in mps-extension). For older <abbr title="Meta Programming System">MPS</abbr> pr
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-02/17-errors-before-generation/">3358 errors before generation</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you clean the generated files in <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p class="admonition-title">How do you clean the generated files <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>?</p>
 <p>Possible solutions:</p>
 <ul>
 <li>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-01/17-mpsclean/">mpsclean</a></li>
@@ -828,21 +838,21 @@ in mps-extension). For older <abbr title="Meta Programming System">MPS</abbr> pr
 <p>As a workaround you can use <a href="https://app.slack.com/client/T3XHGU6G0/C3YUV3YK0/thread/C3YUV3YK0-1657543516.836299#:~:text=BuildLayout_Filemode">Buildlayout_Filemode</a> or unzip the files using Gradle.</p>
 </div>
 <h2 id="mps-build-script"><abbr title="Meta Programming System">MPS</abbr> build script<a class="headerlink" href="#mps-build-script" title="Permanent link">¶</a></h2>
-<p>The build-language is one of the oldest parts of <abbr title="Meta Programming System">MPS</abbr>, designed to generate the ant files in an easier way, but it isn’t refactored until today. The generator of the build language has to find out what, for example, “solution needs baselanguage” means at runtime-level. To execute code from the solution, the <abbr title="Java Virtual Machine">JVM</abbr> needs the baselanguage.jar on the classpath. The more dependencies the solution has, the more complex becomes the generated ant file, because the generator has to consider all these transitive dependencies. The generator needs to know what artefact a module generates and how the generated artefact/module is used at runtime. Therefore, the jars must be on the classpath.</p>
-<p>The modules in the mps-groups in the <abbr title="Meta Programming System">MPS</abbr> build script contain information from the serialized descriptors (.msd files, .mpl files, …). The <em>Reload all modules from disk</em> intention loads them explicitly. The descriptor files aren’t read before generation, so that you should always verify before you push if your <abbr title="Meta Programming System">MPS</abbr> build scripts are up-to-date. For every dependency added to a module or a changed reexport flag, this intention has to be triggered by hand.</p>
-<p>Problem: the current implementation of the build-language isn’t extensible, because it always looks into the original model. The main part of the ant file generation is the dependency analysis (for the modules), and for this it needs to access the original model for some technical reasons. These limit you to languages which are provided by <abbr title="Meta Programming System">MPS</abbr>. You can’t use your own patterns, for example, you can’t write an extension which picks all modules from a folder, generates an intellij-plugin out of them and stores the result in a zip file and generates all the code required for the command-line build. But this isn’t possible because of the build-language-inherent dependency analysis mechanism.</p>
-<p>The code generator of the build language has to verify for dependencies like jars in stub-models, jars at runtime etc., but the error messages aren’t well-designed. For example, you have a jar file xyz.jar entered as java runtime dependency of the language abc. Instead of something like “you have to enter xyz.jar to your build layout plugin-123, cause language abc specifies it as java runtime dependency” you get for example “jar stub library should be extracted into build-script: <code>${my.project}/very/long/path/lib/xyz.jar</code>”, which isn’t helpful.</p>
-<p>Many problems the generator finds could also be found by the model checker, but the checks are done at generation time and implemented as “gencontext.show error” in the generator.</p>
+<p>The build-language is one of the oldest parts of <abbr title="Meta Programming System">MPS</abbr>, designed to generate the ant files <abbr title="input (stream)">in</abbr> an easier way, but it isn’t refactored until today. The generator of the build language has to find out what, for example, “solution needs baselanguage” means <abbr title="affine transform">at</abbr> runtime-level. To execute code from the solution, the <abbr title="Java Virtual Machine">JVM</abbr> needs the baselanguage.jar on the classpath. The more dependencies the solution has, the more complex becomes the generated ant file, because the generator has to consider all these transitive dependencies. The generator needs to know what artefact a module generates and how the generated artefact/module is used <abbr title="affine transform">at</abbr> runtime. Therefore, the jars must <abbr title="binary expression">be</abbr> on the classpath.</p>
+<p>The modules <abbr title="input (stream)">in</abbr> the mps-groups <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr> build script contain information from the serialized descriptors (.msd files, .mpl files, …). The <em>Reload all modules from disk</em> intention loads them explicitly. The descriptor files aren’t read before generation, so that you should always verify before you push if your <abbr title="Meta Programming System">MPS</abbr> build scripts are up-to-date. For every dependency added to a module or a changed reexport flag, this intention has to <abbr title="binary expression">be</abbr> triggered by hand.</p>
+<p>Problem: the current implementation of the build-language isn’t extensible, because it always looks into the original model. The main part of the ant file generation is the dependency analysis (for the modules), and for this it needs to access the original model for some technical reasons. These limit you to languages which are provided by <abbr title="Meta Programming System">MPS</abbr>. You can’t use your own patterns, for example, you can’t write an extension which picks all modules from a folder, generates an intellij-plugin out of them and stores the result <abbr title="input (stream)">in</abbr> a zip file and generates all the code required for the command-line build. But this isn’t possible because of the build-language-inherent dependency analysis mechanism.</p>
+<p>The code generator of the build language has to verify for dependencies like jars <abbr title="input (stream)">in</abbr> stub-models, jars <abbr title="affine transform">at</abbr> runtime etc., but the error messages aren’t well-designed. For example, you have a jar file xyz.jar entered as java runtime dependency of the language abc. Instead of something like “you have to enter xyz.jar to your build layout plugin-123, cause language abc specifies it as java runtime dependency” you get for example “jar stub library should <abbr title="binary expression">be</abbr> extracted into build-script: <code>${my.project}/very/long/path/lib/xyz.jar</code>”, which isn’t helpful.</p>
+<p>Many problems the generator finds could also <abbr title="binary expression">be</abbr> found by the model checker, but the checks are done <abbr title="affine transform">at</abbr> generation time and implemented as “gencontext.show error” <abbr title="input (stream)">in</abbr> the generator.</p>
 <h2 id="generated-ant-scripts-buildxml">Generated ant scripts (<em>build.xml</em>)<a class="headerlink" href="#generated-ant-scripts-buildxml" title="Permanent link">¶</a></h2>
 <p>The mps build scripts are generated to ant scripts, which then generate the modules.
 The ant script starts a headless-<abbr title="Meta Programming System">MPS</abbr> with all required dependencies, puts jars on the classpath and does some further magic.
-Tasks can be passed to the ant script like the “generate” task.</p>
-<p>Modules have several models with dependencies. For example, for a language, the behavior uses the structure aspect; the type-system uses the behavior aspect etc. which can result in complex dependencies between these models. These have to be considered when the models are generated and compiled. The order is derived by the code generator of the build language and results in an execution plan where the “compile units” are grouped in “chunks”. Chunks with bootstrap-dependencies are explicitly marked, which means all modules in the chunk have to be compiled at the same time.</p>
-<p><abbr title="Meta Programming System">MPS</abbr> consists of hundreds of jar files which must be on the classpath for the code generation and compilation, which leads to giant ant scripts (with some thousand lines). Even simple mps build scripts, which only use <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> result into big ant scripts.</p>
-<p>The build layout in the <abbr title="Meta Programming System">MPS</abbr> build script defines how your modules are packaged e.g. as zip containing multiple plugins, as simple plugin-folder, as lib-folder with a flat list of jars, etc.</p>
-<p>The ant script needs to know where the local <abbr title="Meta Programming System">MPS</abbr> is installed and where your modules and dependencies are located. This is usually done using folder macros in the mps build script which are generated as “properties’‘ in the ant script. This makes the build independent of your local machine and the ant script can be executed on the CI or any other machine.</p>
-<p>The Headless-<abbr title="Meta Programming System">MPS</abbr>, which is started by the ant script, behaves differently  in some cases compared to an <abbr title="Integrated Development Environment">IDE</abbr>-<abbr title="Meta Programming System">MPS</abbr>. For example, circular dependencies can be resolved in the <abbr title="Integrated Development Environment">IDE</abbr> by just applying <em>Make Project</em> multiple times, which doesn’t work on the command line and thus also fails on the CI.
-Dependencies which are visible in the <abbr title="Integrated Development Environment">IDE</abbr> aren’t always visible in the <abbr title="Meta Programming System">MPS</abbr> build script/ ant script and can result in failing builds. <abbr title="Meta Programming System">MPS</abbr> holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the <abbr title="Integrated Development Environment">IDE</abbr> everything’s always visible and wrong dependencies can be resolved but on the command line the build can fail, because the referenced model isn’t loaded. The build language generator doesn’t check the nodes for e.g. references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.</p>
+Tasks can <abbr title="binary expression">be</abbr> passed to the ant script like the “generate” task.</p>
+<p>Modules have several models with dependencies. For example, for a language, the behavior uses the structure aspect; the type-system uses the behavior aspect etc. which can result <abbr title="input (stream)">in</abbr> complex dependencies between these models. These have to <abbr title="binary expression">be</abbr> considered when the models are generated and compiled. The order is derived by the code generator of the build language and results <abbr title="input (stream)">in</abbr> an execution plan where the “compile units” are grouped <abbr title="input (stream)">in</abbr> “chunks”. Chunks with bootstrap-dependencies are explicitly marked, which means all modules <abbr title="input (stream)">in</abbr> the chunk have to <abbr title="binary expression">be</abbr> compiled <abbr title="affine transform">at</abbr> the same time.</p>
+<p><abbr title="Meta Programming System">MPS</abbr> consists of hundreds of jar files which must <abbr title="binary expression">be</abbr> on the classpath for the code generation and compilation, which leads to giant ant scripts (with some thousand lines). Even simple mps build scripts, which only use <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> result into big ant scripts.</p>
+<p>The build layout <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr> build script defines how your modules are packaged e.g. as zip containing multiple plugins, as simple plugin-folder, as <abbr title="library">lib</abbr>-folder with a flat list of jars, etc.</p>
+<p>The ant script needs to know where the local <abbr title="Meta Programming System">MPS</abbr> is installed and where your modules and dependencies are located. This is usually done using folder macros <abbr title="input (stream)">in</abbr> the mps build script which are generated as “properties’‘ <abbr title="input (stream)">in</abbr> the ant script. This makes the build independent of your local machine and the ant script can <abbr title="binary expression">be</abbr> executed on the CI or any other machine.</p>
+<p>The Headless-<abbr title="Meta Programming System">MPS</abbr>, which is started by the ant script, behaves differently  <abbr title="input (stream)">in</abbr> some cases compared to an <abbr title="Integrated Development Environment">IDE</abbr>-<abbr title="Meta Programming System">MPS</abbr>. For example, circular dependencies can <abbr title="binary expression">be</abbr> resolved <abbr title="input (stream)">in</abbr> the <abbr title="Integrated Development Environment">IDE</abbr> by just applying <em>Make Project</em> multiple times, which doesn’t work on the command line and thus also fails on the CI.
+Dependencies which are visible <abbr title="input (stream)">in</abbr> the <abbr title="Integrated Development Environment">IDE</abbr> aren’t always visible <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr> build script/ ant script and can result <abbr title="input (stream)">in</abbr> failing builds. <abbr title="Meta Programming System">MPS</abbr> holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the <abbr title="Integrated Development Environment">IDE</abbr> everything’s always visible and wrong dependencies can <abbr title="binary expression">be</abbr> resolved but on the command line the build can fail, because the referenced model isn’t loaded. The build language generator doesn’t check the nodes for e.g. references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.</p>
 <hr/>
 <div class="md-source-file">
 <small>

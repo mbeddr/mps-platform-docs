@@ -588,15 +588,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -746,6 +746,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -823,15 +833,15 @@
 </a>
 <h1 id="misc-topics">Misc Topics<a class="headerlink" href="#misc-topics" title="Permanent link">¶</a></h1>
 <h2 id="limitations-to-product-line-engineering-when-generating-variant-aware-code">Limitations to product line engineering when generating variant aware code<a class="headerlink" href="#limitations-to-product-line-engineering-when-generating-variant-aware-code" title="Permanent link">¶</a></h2>
-<p>The current PLE approach only generates a single variant. The generated artifacts aren’t variant aware. We want to enable the that the generated code can contain <em>#if</em> statements to generate all variants at once. When we want to do this we have to limit variability to elements where we can represent this in the generated C code. The main problem is that presence conditions can’t be applied to all nodes in the model.</p>
+<p>The current PLE approach only generates a single variant. The generated artifacts aren’t variant aware. We want to enable the that the generated code can contain <em>#if</em> statements to generate all variants <abbr title="affine transform">at</abbr> once. When we want to do this we have to limit variability to elements where we can represent this <abbr title="input (stream)">in</abbr> the generated C code. The main problem is that presence conditions can’t <abbr title="binary expression">be</abbr> applied to all nodes <abbr title="input (stream)">in</abbr> the model.</p>
 <h3 id="what-doesnt-work">What doesn’t work?<a class="headerlink" href="#what-doesnt-work" title="Permanent link">¶</a></h3>
-<p>In addition to elements with a cardinality of 1, some other items can’t be removed from the <abbr title="Abstract Syntax Tree">AST</abbr> with presence conditions:</p>
+<p>In addition to elements with a cardinality of 1, some other items can’t <abbr title="binary expression">be</abbr> removed from the <abbr title="Abstract Syntax Tree">AST</abbr> with presence conditions:</p>
 <ul>
 <li>parameters of a function</li>
 <li>arguments from function calls</li>
 <li>extra declarations of for loops</li>
 <li>variable initializers</li>
-<li>expressions in array/user defined type initializers</li>
+<li>expressions <abbr title="input (stream)">in</abbr> array/user defined type initializers</li>
 <li>arguments of function macros (global function declarations)</li>
 </ul>
 <h4 id="code-smells">Code smells<a class="headerlink" href="#code-smells" title="Permanent link">¶</a></h4>

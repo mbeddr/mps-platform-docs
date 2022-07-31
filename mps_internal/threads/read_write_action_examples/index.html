@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Threads</a>
+<a href="../">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
@@ -776,6 +776,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -883,11 +893,11 @@
 </a>
 <h1>Example actions using locks</h1>
 <p>These actions use IntelliJ platforms or access <abbr title="Meta Programming System">MPS</abbr> models and need additional locks because of the location where they
-are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and write locks should be available in every language aspect and manually locking isn’t necessary.</p>
+are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and write locks should <abbr title="binary expression">be</abbr> available <abbr title="input (stream)">in</abbr> every language aspect and manually locking isn’t necessary.</p>
 <h2 id="example-of-actions-that-require-mps-locks">Example of actions that require <abbr title="Meta Programming System">MPS</abbr> locks<a class="headerlink" href="#example-of-actions-that-require-mps-locks" title="Permanent link">¶</a></h2>
 <h3 id="write-actions">Write actions<a class="headerlink" href="#write-actions" title="Permanent link">¶</a></h3>
 <ul>
-<li>reload/add/remove/modify<ul>
+<li>reload/<abbr title="addition">add</abbr>/remove/modify<ul>
 <li>projects</li>
 <li>modules</li>
 <li>models</li>
@@ -899,16 +909,16 @@ are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and w
 <li>resolve node references</li>
 <li>read nodes/models/modules</li>
 </ul>
-<h3 id="read-actions-in-edt">Read actions in <abbr title="Event Dispatch Thread">EDT</abbr><a class="headerlink" href="#read-actions-in-edt" title="Permanent link">¶</a></h3>
+<h3 id="read-actions-in-edt">Read actions <abbr title="input (stream)">in</abbr> <abbr title="Event Dispatch Thread">EDT</abbr><a class="headerlink" href="#read-actions-in-edt" title="Permanent link">¶</a></h3>
 <ul>
-<li>select a node in the tree view</li>
-<li>clear the marks in the highlight manager</li>
+<li>select a node <abbr title="input (stream)">in</abbr> the tree view</li>
+<li>clear the marks <abbr title="input (stream)">in</abbr> the highlight manager</li>
 <li>move nodes refactoring</li>
-<li>resolve node references and open them in the editor</li>
+<li>resolve node references and open them <abbr title="input (stream)">in</abbr> the editor</li>
 <li>run the model checker</li>
 <li>rebuild editor components</li>
 <li>paste nodes</li>
-<li>select nodes in the editor</li>
+<li>select nodes <abbr title="input (stream)">in</abbr> the editor</li>
 <li>recreate opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
 <li>show the completion menu</li>
 <li>rehighlight nodes</li>
@@ -938,11 +948,11 @@ are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and w
 <li>get a list of file editors</li>
 </ul>
 <h3 id="actions-executed-on-edt">Actions executed on <abbr title="Event Dispatch Thread">EDT</abbr><a class="headerlink" href="#actions-executed-on-edt" title="Permanent link">¶</a></h3>
-<p>They are executed in the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">invokeLater</span><span class="o">/</span><span class="n">invokeAndWait</span><span class="p">)</span><span class="w"></span></code>.</p>
+<p>They are executed <abbr title="input (stream)">in</abbr> the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">invokeLater</span><span class="o">/</span><span class="n">invokeAndWait</span><span class="p">)</span><span class="w"></span></code>.</p>
 <ul>
 <li>update tools</li>
 <li>show progress bars for a long running actions</li>
-<li>update text in swing components</li>
+<li>update text <abbr title="input (stream)">in</abbr> swing components</li>
 <li>dispose <abbr title="User Interface">UI</abbr> components</li>
 <li>rebuild components</li>
 <li>start a make process</li>
@@ -954,7 +964,7 @@ are used. Especially <abbr title="Meta Programming System">MPS</abbr> read and w
 <li>unload models</li>
 </ul>
 <h3 id="actions-that-are-executed-on-a-pooled-thread">Actions that are executed on a pooled thread<a class="headerlink" href="#actions-that-are-executed-on-a-pooled-thread" title="Permanent link">¶</a></h3>
-<p>They are executed in the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">executeOnPooledThread</span><span class="w"></span></code></p>
+<p>They are executed <abbr title="input (stream)">in</abbr> the lambda of <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">executeOnPooledThread</span><span class="w"></span></code></p>
 <ul>
 <li>set break points on startup</li>
 <li>preview the generated text for nodes</li>

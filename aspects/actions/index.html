@@ -553,15 +553,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -711,6 +711,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -761,11 +771,11 @@
 <p>The action aspect defines node factories and copy/paste related handlers.</p>
 <div class="admonition question">
 <p class="admonition-title">Are node factories used when calling new node<concept>?</concept></p>
-<p>No. More information can be found in <a href="https://www.jetbrains.com/help/mps/editor-actions.html#node_factories">Editor Actions | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p>No. More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/editor-actions.html#node_factories">Editor Actions | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you find all key mappings for the editor?</p>
-<p>Windows and mac shortcuts for editor actions can be found in <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">MPSEditorActions.xml</a>.</p>
+<p>Windows and mac shortcuts for editor actions can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">MPSEditorActions.xml</a>.</p>
 </div>
 <details class="question">
 <summary>Why is a custom action map not executed on a <em>CellModel_Collection</em>?</summary>
@@ -775,15 +785,15 @@
 <p>However it seems like my defined actions are never executed when the editor is used. Why is this so and how to fix it?</p>
 </blockquote>
 <p><strong>Reason for the Problem</strong></p>
-<p>In general the applied actions should be invoked and executed.
+<p>In general the applied actions should <abbr title="binary expression">be</abbr> invoked and executed.
 However depending on the content of the collection cells, <abbr title="Meta Programming System">MPS</abbr> might generate some default actions which will override your custom actions.</p>
 <p><strong>Example</strong></p>
 <p>You have a read only model access cell inside the collection cell:</p>
 <p><a class="glightbox" href="../../img/alias_and_ro_model_access.png"><img alt="alias and readonly modelaccess" src="../../img/alias_and_ro_model_access.png" width="600px"/></a></p>
-<p>In this case the internal <abbr title="Meta Programming System">MPS</abbr> generator for <code>CellModel_ReadOnlyModelAccessor</code> will automatically generate and register some default actions like <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029f%28jetbrains.mps.lang.editor.generator.baseLanguage.template.main%40generator%29%2F1225901389718">delete/backspace  </a> which in the end will prohibit your custom action to be applied.</p>
+<p>In this case the internal <abbr title="Meta Programming System">MPS</abbr> generator for <code>CellModel_ReadOnlyModelAccessor</code> will automatically generate and register some default actions like <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029f%28jetbrains.mps.lang.editor.generator.baseLanguage.template.main%40generator%29%2F1225901389718">delete/backspace  </a> which <abbr title="input (stream)">in</abbr> the end will prohibit your custom action to <abbr title="binary expression">be</abbr> applied.</p>
 <p><strong>Solution</strong></p>
-<p>You can use the  cell explorer (<em>Language Debug</em> → <em>Show Cell in Explorer</em>) to see which actions are defined for a cell.
-Deactivate the automatically applied action with the help of custom editor cells(<a href="http://127.0.0.1:63320/node?ref=r%3Af4f3736e-6da2-4bf6-9b34-06696f46bc70%28de.slisson.mps.richtext.customcell.structure%29%2F2490242408670732052">CellModel_CustomFactory</a>). You can use <code>CellModel_CustomFactory</code> to wrap the cells in your collection which generate unwanted actions and deactivate them.</p>
+<p>You can use the  cell explorer (<em>Language Debug</em> → <em>Show Cell <abbr title="input (stream)">in</abbr> Explorer</em>) to see which actions are defined for a cell.
+Deactivate the automatically applied action with the help of custom editor cells(<a href="http://127.0.0.1:63320/node?ref=r%3Af4f3736e-6da2-4bf6-9b34-06696f46bc70%28de.slisson.mps.richtext.customcell.structure%29%2F2490242408670732052">CellModel_CustomFactory</a>). You can use <code>CellModel_CustomFactory</code> to wrap the cells <abbr title="input (stream)">in</abbr> your collection which generate unwanted actions and deactivate them.</p>
 <p><a class="glightbox" href="../../img/custom_factory_cell_delete_actions.png"><img alt="custom factory cell delete actions" src="../../img/custom_factory_cell_delete_actions.png" width="600px"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arimer" title="GitHub User: arimer">@arimer</a><sub></sub></sub></p>
 </details>

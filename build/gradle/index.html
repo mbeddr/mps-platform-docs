@@ -613,15 +613,15 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threads</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -771,6 +771,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -875,7 +885,7 @@
 <h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">How do you set up a gradle build for an <abbr title="Meta Programming System">MPS</abbr> project?</p>
-<p>There is a gist for a <a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal build</a>. There is a <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>. For more complex projects look at build scripts of big projects such as <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+<p>There is a gist for a <a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal build</a>. There is a <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>. For more complex projects look <abbr title="affine transform">at</abbr> build scripts of big projects such as <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a Gradle plugin for downloading things?</p>
@@ -895,17 +905,17 @@
 </div>
 <details class="question">
 <summary>How to get dependencies from private GitHub repositories within a GitHub action?</summary>
-<p>Follow the default way for GitHub packages access, as described in <a href="https://docs.github.com/en/actions">GitHub Actions</a>.
+<p>Follow the default way for GitHub packages access, as described <abbr title="input (stream)">in</abbr> <a href="https://docs.github.com/en/actions">GitHub Actions</a>.
 It might simply work if the other private repository is part of the same organization.</p>
 <p>If not, ensure the <em>GITHUB_TOKEN</em> permissions are correct: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token">Permissions for the <em>GITHUB_TOKEN</em></a></p>
-<p>Depending on the organizational settings, it might be impossible to obtain the artifact via the generic <em>GITHUB_TOKEN</em>. In this case you need to create a new <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">personal access token</a> (PAT).</p>
-<p>Next, add this token as a secret to the project (e.g. as <em>PRIVATE_REPO_ACCESS_ACTOR</em> and <em>PRIVATE_REPO_ACCESS_TOKEN</em>): <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#granting-additional-permissions">Granting additional permissions</a></p>
+<p>Depending on the organizational settings, it might <abbr title="binary expression">be</abbr> impossible to obtain the artifact via the generic <em>GITHUB_TOKEN</em>. In this case you need to create a new <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">personal access token</a> (PAT).</p>
+<p>Next, <abbr title="addition">add</abbr> this token as a secret to the project (e.g. as <em>PRIVATE_REPO_ACCESS_ACTOR</em> and <em>PRIVATE_REPO_ACCESS_TOKEN</em>): <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#granting-additional-permissions">Granting additional permissions</a></p>
 <ul>
 <li>
-<p>Make sure that this secret is not in an environment but generally available.</p>
+<p>Make sure that this secret is not <abbr title="input (stream)">in</abbr> an environment but generally available.</p>
 <ul>
 <li>
-<p>Also add the username. Even though no username is required for token access, an error will occur if you leave it empty.</p>
+<p>Also <abbr title="addition">add</abbr> the username. Even though no username is required for token access, an error will occur if you leave it empty.</p>
 </li>
 <li>
 <p>Make sure you authorize the PAT for the SSO org (warning: this resets when changing permissions!)</p>
@@ -913,7 +923,7 @@ It might simply work if the other private repository is part of the same organiz
 </ul>
 </li>
 </ul>
-<p>Next you need to access this special token in your workflow yaml file, e.g:</p>
+<p>Next you need to access this special token <abbr title="input (stream)">in</abbr> your workflow yaml file, e.g:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1061,7 +1071,7 @@ private_token=YYY
 </details>
 <div class="admonition question">
 <p class="admonition-title">How to run a Gradle task from java code?</p>
-<p>Using the Gradle wrapper or the Gradle tooling API as described in this <a href="https://stackoverflow.com/a/49877200/16577108">StackOverflow answer</a>.</p>
+<p>Using the Gradle wrapper or the Gradle tooling API as described <abbr title="input (stream)">in</abbr> this <a href="https://stackoverflow.com/a/49877200/16577108">StackOverflow answer</a>.</p>
 </div>
 <h2 id="gradle-tips">Gradle Tips<a class="headerlink" href="#gradle-tips" title="Permanent link">¶</a></h2>
 <table>
@@ -1078,15 +1088,15 @@ private_token=YYY
 </tr>
 <tr>
 <td>buildAll scripts</td>
-<td>This is the meta build script (platforms only). This build model is generated and its artifact (ant-xml task) is committed to the gradle repo.</td>
+<td>This is the meta build script (platforms only). This build model is generated and its artifact (ant-xml task) is committed to the gradle <abbr title="repository">repo</abbr>.</td>
 </tr>
 <tr>
 <td>project properties</td>
-<td><ul><li>can be defined as <em>ext.myPropName</em></li><li>passed through: -<b>P</b>myPop_name from CL</li><li> can be access like variables in the build project</li><li>can be checked if the are set or not </li></ul></td>
+<td><ul><li>can <abbr title="binary expression">be</abbr> defined as <em><abbr title="extension">ext</abbr>.myPropName</em></li><li>passed through: -<b>P</b>myPop_name from CL</li><li> can <abbr title="binary expression">be</abbr> access like variables <abbr title="input (stream)">in</abbr> the build project</li><li>can <abbr title="binary expression">be</abbr> checked if the are set or not </li></ul></td>
 </tr>
 <tr>
 <td>System properties</td>
-<td><ul><li>passed through <b>-D</b> from CL</li><li>are available in the gradle build file though norma java mechanism: <i>System.getProperty();</i></li><li>Project properties can be specified as system properties. They need to be prefixed with <i>org.gradle.project.NAME</i></li></ul></td>
+<td><ul><li>passed through <b>-D</b> from CL</li><li>are available <abbr title="input (stream)">in</abbr> the gradle build file though norma java mechanism: <i>System.getProperty();</i></li><li>Project properties can <abbr title="binary expression">be</abbr> specified as system properties. They need to <abbr title="binary expression">be</abbr> prefixed with <i>org.gradle.project.NAME</i></li></ul></td>
 </tr>
 <tr>
 <td>gradle.properties</td>
@@ -1094,30 +1104,30 @@ private_token=YYY
 </tr>
 <tr>
 <td>configurations</td>
-<td>are also separated in the same way as dependencies</td>
+<td>are also separated <abbr title="input (stream)">in</abbr> the same way as dependencies</td>
 </tr>
 </tbody>
 </table>
 <h2 id="gradle-wrapper-gradlewgradlewbat">Gradle Wrapper (<em>gradlew/gradlew.bat</em>)<a class="headerlink" href="#gradle-wrapper-gradlewgradlewbat" title="Permanent link">¶</a></h2>
-<p>The gradle wrapper script downloads gradle in the specified version, independent of your local installed gradle, and then starts the downloaded gradle.
+<p>The gradle wrapper script downloads gradle <abbr title="input (stream)">in</abbr> the specified version, independent of your local installed gradle, and then starts the downloaded gradle.
 It consists of a small java program (located under <code>./gradle/wrapper/gradle-wrapper.jar</code>), an init-file which contains the gradle version (<code>./gradle/wrapper/gradle-wrapper.properties</code>) and start scripts for Windows, Mac and Linux (<code>./gradlew</code> and <code>./gradlew.bat</code>).</p>
 <p>Why do we use gradle? Gradle build scripts have the advantage that you write code instead of XML, like it’s the case using Maven or Ant.
-We use gradle to download <abbr title="Meta Programming System">MPS</abbr> and the dependencies in the correct version and put them in the right place, generate the Ant scripts from the mps build scripts using a <code>build-allScripts.xml</code> Ant scripts and then start Ant with correct parameters (where is <abbr title="Meta Programming System">MPS</abbr> on disc, where are the dependencies on disc, …). This is easier than doing it with and directly.
+We use gradle to download <abbr title="Meta Programming System">MPS</abbr> and the dependencies <abbr title="input (stream)">in</abbr> the correct version and put them <abbr title="input (stream)">in</abbr> the right place, generate the Ant scripts from the mps build scripts using a <code>build-allScripts.xml</code> Ant scripts and then start Ant with correct parameters (where is <abbr title="Meta Programming System">MPS</abbr> on disc, where are the dependencies on disc, …). This is easier than doing it with and directly.
 For defining the gradle scripts you can use groove (<code>build.gradle</code>) or kotlin (<code>build.gradle.kts</code>), both can do the same. Groovy is enough for smaller building scripts, but it’s dynamically typed and thus fails late when the gradle task is executed. Kotlin provides type-checking and the auto-completion works better compared to groovy (with Intellij); this makes it easier to use with complex scripts.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">¶</a></h2>
 <h3 id="dependencies-inside-the-buildscript-block">Dependencies inside the buildScript{…} block<a class="headerlink" href="#dependencies-inside-the-buildscript-block" title="Permanent link">¶</a></h3>
 <ul>
-<li>are placed on the classpath of the build script itself (for the current gradle file which will also be compiled (like java))</li>
-<li>To be able to compile the build script into bytecode, its dependencies need to be resolved</li>
+<li>are placed on the classpath of the build script itself (for the current gradle file which will also <abbr title="binary expression">be</abbr> compiled (like java))</li>
+<li>To <abbr title="binary expression">be</abbr> able to compile the build script into bytecode, its dependencies need to <abbr title="binary expression">be</abbr> resolved</li>
 </ul>
 <h3 id="dependencies-outside-the-buildscript-block">Dependencies outside the buildScript{…} block<a class="headerlink" href="#dependencies-outside-the-buildscript-block" title="Permanent link">¶</a></h3>
 <ul>
 <li>are project dependencies</li>
 <li>these dependencies are added to the project code’s classpath</li>
-<li>example: Gson is used inside a gradle project and needs to be on the classpath of the project to be able to compile the project.</li>
+<li>example: Gson is used inside a gradle project and needs to <abbr title="binary expression">be</abbr> on the classpath of the project to <abbr title="binary expression">be</abbr> able to compile the project.</li>
 </ul>
-<p>If the dependency in only used in the buildscript (i.e. only from the <code>build.gradle</code> file) then it should be in a <code>buildscript { }</code> block. Dependencies used in both project code and build scripts will effectively need to be listed twice.</p>
-<p>A good explanation of gradle configurations can be found in <a href="https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35">Gradle Configurations Explained: What is the difference between API and Implementation? | medium.com</a>.</p>
+<p>If the dependency <abbr title="input (stream)">in</abbr> only used <abbr title="input (stream)">in</abbr> the buildscript (i.e. only from the <code>build.gradle</code> file) then it should <abbr title="binary expression">be</abbr> <abbr title="input (stream)">in</abbr> a <code>buildscript { }</code> block. Dependencies used <abbr title="input (stream)">in</abbr> both project code and build scripts will effectively need to <abbr title="binary expression">be</abbr> listed twice.</p>
+<p>A good explanation of gradle configurations can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35">Gradle Configurations Explained: What is the difference between API and Implementation? | medium.com</a>.</p>
 <h2 id="creating-a-gradle-plugin">Creating a gradle plugin<a class="headerlink" href="#creating-a-gradle-plugin" title="Permanent link">¶</a></h2>
 <p>There are three choices:</p>
 <ul>
@@ -1127,9 +1137,9 @@ For defining the gradle scripts you can use groove (<code>build.gradle</code>) o
 </ul>
 <h3 id="standalone-project">Standalone project<a class="headerlink" href="#standalone-project" title="Permanent link">¶</a></h3>
 <ul>
-<li>define all dependencies in gradle file</li>
-<li>create a properties file in the resource folder with the same name as the plugin id<ul>
-<li>example:  <code>org.samples.greeting.properties</code> in <code>src/main/resources/META-INF/gradle-plugins/</code></li>
+<li>define all dependencies <abbr title="input (stream)">in</abbr> gradle file</li>
+<li>create a properties file <abbr title="input (stream)">in</abbr> the resource folder with the same name as the plugin <abbr title="identification">id</abbr><ul>
+<li>example:  <code>org.samples.greeting.properties</code> <abbr title="input (stream)">in</abbr> <code>src/main/resources/META-INF/gradle-plugins/</code></li>
 </ul>
 </li>
 <li>plugin IDs<ul>

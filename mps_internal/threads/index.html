@@ -552,15 +552,15 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Threads</a>
+<a href="./">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Threads" class="md-nav" data-md-level="2">
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
-          Threads
+          Threading
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -710,6 +710,16 @@
         Actions
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -779,44 +789,44 @@
 </a>
 <h1>Index</h1>
 <ul>
-<li><a href="https://www.baeldung.com/java-common-concurrency-pitfalls">Common Concurrency Pitfalls in Java</a></li>
+<li><a href="https://www.baeldung.com/java-common-concurrency-pitfalls">Common Concurrency Pitfalls <abbr title="input (stream)">in</abbr> Java</a></li>
 <li><a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model">IDEA threading model | developerlife.com</a></li>
 <li><a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">Modality and invokeLater() | IntelliJ Platform SDK</a></li>
 <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Event Dispatch Thread | Oracle Java documentation</a></li>
 </ul>
 <p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to performed holding an appropriate lock.
-IntelliJ IDEA also requires read and write locks in its platform. The IDEA’s lock is acquired first and only then the <abbr title="Meta Programming System">MPS</abbr>‘s lock is acquired when using
+IntelliJ IDEA also requires read and write locks <abbr title="input (stream)">in</abbr> its platform. The IDEA’s lock is acquired first and only then the <abbr title="Meta Programming System">MPS</abbr>‘s lock is acquired when using
 the <abbr title="Meta Programming System">MPS</abbr> access language.
-The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+The <abbr title="Meta Programming System">MPS</abbr> locks are described <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 <h2 id="main-thread">Main thread<a class="headerlink" href="#main-thread" title="Permanent link">¶</a></h2>
 <ul>
-<li>some operations need to be run there in order to keep race conditions from occurring</li>
-<li>the <abbr title="User Interface">UI</abbr> freezes when operations take a long time (run them in the background)</li>
+<li>some operations need to <abbr title="binary expression">be</abbr> run there <abbr title="input (stream)">in</abbr> order to keep race conditions from occurring</li>
+<li>the <abbr title="User Interface">UI</abbr> freezes when operations take a long time (run them <abbr title="input (stream)">in</abbr> the background)</li>
 <li>Write <abbr title="Meta Programming System">MPS</abbr> model: <code>write action with</code></li>
 <li>Read <abbr title="Meta Programming System">MPS</abbr> model: <code>read action with</code></li>
 </ul>
 <h2 id="awt-event-dispatch-thread-edt-ui-thread">AWT event dispatch thread (<abbr title="Event Dispatch Thread">EDT</abbr>) / <abbr title="User Interface">UI</abbr> Thread<a class="headerlink" href="#awt-event-dispatch-thread-edt-ui-thread" title="Permanent link">¶</a></h2>
 <ul>
-<li>drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Swing</a></li>
-<li>Swing isn’t thread safe, most of the Swing code runs in <abbr title="Event Dispatch Thread">EDT</abbr>.</li>
+<li>drawing of components <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Swing</a></li>
+<li>Swing isn’t thread safe, most of the Swing code runs <abbr title="input (stream)">in</abbr> <abbr title="Event Dispatch Thread">EDT</abbr>.</li>
 <li><abbr title="Event Dispatch Thread">EDT</abbr> = series of short tasks such as the <code>actionPerformed</code> method of a button.</li>
-<li>Tasks must be short or the <abbr title="User Interface">UI</abbr> becomes unresponsive.</li>
+<li>Tasks must <abbr title="binary expression">be</abbr> short or the <abbr title="User Interface">UI</abbr> becomes unresponsive.</li>
 <li>Synchronously write/read <abbr title="Meta Programming System">MPS</abbr> model: <code>command with</code>.</li>
 <li>Asynchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>execute command in EDT with</code>.</li>
 <li>Asynchronously read <abbr title="Meta Programming System">MPS</abbr> model: <code>execute in EDT with</code>.</li>
-<li>The <em>in <abbr title="Event Dispatch Thread">EDT</abbr></em> commands allow to read/write the <abbr title="Meta Programming System">MPS</abbr> model and perform <abbr title="Event Dispatch Thread">EDT</abbr>-related <abbr title="User Interface">UI</abbr> activities</li>
+<li>The <em><abbr title="input (stream)">in</abbr> <abbr title="Event Dispatch Thread">EDT</abbr></em> commands allow to read/write the <abbr title="Meta Programming System">MPS</abbr> model and perform <abbr title="Event Dispatch Thread">EDT</abbr>-related <abbr title="User Interface">UI</abbr> activities</li>
 <li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertIsDispatchThread</span><span class="p">()</span><span class="w"></span></code> or <code class="highlight"><span class="n">ThreadUtils</span><span class="p">.</span><span class="na">isInEDT</span><span class="p">()</span><span class="w"></span></code></li>
 </ul>
 <h2 id="background-threads">Background threads<a class="headerlink" href="#background-threads" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li>Extend class <em>Task</em> and run it in a modal dialog or in the background</li>
-<li>They must be invoked on <abbr title="Event Dispatch Thread">EDT</abbr> through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code></li>
+<li>Extend class <em>Task</em> and run it <abbr title="input (stream)">in</abbr> a modal dialog or <abbr title="input (stream)">in</abbr> the background</li>
+<li>They must <abbr title="binary expression">be</abbr> invoked on <abbr title="Event Dispatch Thread">EDT</abbr> through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code></li>
 <li>synchronous: <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeAndWait</span><span class="w"></span></code></li>
-<li>Don’t call it with <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code> in the Intellij platform/<abbr title="Meta Programming System">MPS</abbr> because it doesn’t respect the modality state.</li>
+<li>Don’t call it with <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code> <abbr title="input (stream)">in</abbr> the Intellij platform/<abbr title="Meta Programming System">MPS</abbr> because it doesn’t respect the modality state.</li>
 <li>modality state = background or an open dialog</li>
 <li>The class <code>ThreadUtils</code> contains <code>runInUIThreadAndWait</code> which takes a <code>Runnable</code> instance as a parameter and uses the right method based on the calling context</li>
-<li>When there are many tasks, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.com</a></li>
+<li>When there are many tasks, pooled threads can <abbr title="binary expression">be</abbr> used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools <abbr title="input (stream)">in</abbr> Java | baeldung.com</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
