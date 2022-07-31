@@ -9,7 +9,7 @@ These lists contains named threads from Java, the IntelliJ platform and MPS.
     - AWT-EventQueue: = EDT
     - [AWT-Windows](https://stackoverflow.com/a/21597955/16577108)
     - [AWT-Shutdown](http://srcrr.com/java/oracle/openjdk/6/reference/sun/awt/AWTAutoShutdown.html)
-- [Image Fetch/Image Animator]([sun.awt.image.ImageFetch](https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32))
+- Image Fetch/Image Animator([sun.awt.image.ImageFetch](https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32))
 - [Get All running JVM Threads | baeldung.com](https://www.baeldung.com/java-get-all-threads)
     - [Finalizer](https://www.baeldung.com/java-finalize)
     - Reference handler: a high-priority thread to enqueue pending references ([References](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Reference.html)).
