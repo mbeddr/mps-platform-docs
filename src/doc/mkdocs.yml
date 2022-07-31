@@ -58,6 +58,8 @@ plugins:
       exclude:
         - includes/abbreviations.md
         - reference/abbreviations.md
+        - includes/code_abbreviations.md
+        - reference/code_abbreviations.md
   - kroki
   - glightbox:
       width: 70vw
@@ -109,6 +111,7 @@ markdown_extensions:
   - pymdownx.snippets:
         auto_append:
            - docs/includes/abbreviations.md
+           - docs/includes/code_abbreviations.md
   - pymdownx.tabbed:
         alternate_style: true
   - pymdownx.keys
@@ -220,6 +223,7 @@ nav:
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
     - Abbreviations: reference/abbreviations.md 
+    - Code abbreviations: reference/code_abbreviations.md
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md

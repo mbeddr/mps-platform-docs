@@ -1,16 +1,18 @@
 import mkdocs_gen_files
 import re
 
-abbreviations_file = f"reference/abbreviations.md"
-abbreviations_inc_file = f"includes/abbreviations.md"
+definition_files = ["includes/abbreviations.md","includes/code_abbreviations.md"]
+generated_files = ["reference/abbreviations.md","reference/code_abbreviations.md"]
+headers = ["Abbreviations","Code abbreviations"]
 
 abbr_pattern = re.compile(r'\*\[(.*)\]:\s*(.*)')
 
-with mkdocs_gen_files.open(abbreviations_file, "w+") as f:
-    print("#Abbreviations", file=f)
+for index in range(len(definition_files)):
+    with mkdocs_gen_files.open(generated_files[index], "w+") as f:
+        print("#" + headers[index], file=f)
+        
+        for i, line in enumerate(mkdocs_gen_files.open(definition_files[index],"r")):
+            for match in re.finditer(abbr_pattern, line):
+                print("**" + match.group(1) + "**: " + match.group(2) + "\n", file=f)
     
-    for i, line in enumerate(mkdocs_gen_files.open(abbreviations_inc_file,"r")):
-        for match in re.finditer(abbr_pattern, line):
-            print("**" + match.group(1) + "**: " + match.group(2) + "\n", file=f)
-
-mkdocs_gen_files.set_edit_path(abbreviations_file, "gen_abbreviations.py")
+    mkdocs_gen_files.set_edit_path(generated_files[index], definition_files[index])
