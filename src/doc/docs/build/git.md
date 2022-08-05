@@ -24,7 +24,16 @@
 
     Assuming the concept is called `Foo`, search with Git Log in the corresponding structure model: `git log -SFoo -- path/to/structure.mps`
 
-## General GitHub publishing checklist
+## General
+
+- [Git cheat sheet](https://github.com/arslanbilal/git-cheat-sheet)
+- [git-tips](https://github.com/git-tips/tips)
+- [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (trouleshooting)
+- [On undoing, fixing, or removing commits in git](https://sethrobertson.github.io/GitFixUm/fixup.html)
+- [git-extras](https://github.com/tj/git-extras)(extra git commands)
+- [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
+
+## GitHub publishing checklist
 
 - Ready to use templates
     - [Template #1](https://github.com/cfpb/open-source-project-template)
