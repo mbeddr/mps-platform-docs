@@ -1,7 +1,7 @@
 # Editing this guide
 
 This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
-[This page](https://squidfunk.github.io/mkdocs-material/reference/) contains the reference for the material theme.
+The markdown version is [Python-Markdown](https://python-markdown.github.io/). [This page](https://squidfunk.github.io/mkdocs-material/reference/) contains the reference for the material theme.
 Install extra MkDocs plugins in build.gradle + mkdocs.yml.
 
 If you are using IntelliJ for editing, it is recommended to install the plugin [Grazie Professional](https://plugins.jetbrains.com/plugin/16136-grazie-professional) for spell checking. 
