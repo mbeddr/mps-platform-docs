@@ -301,6 +301,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/jcef/</loc>
+         <lastmod>2022-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/models/</loc>
          <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>

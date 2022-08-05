@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/reference/actions/" rel="canonical"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/jcef/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.4.0rc1" name="generator"/>
-<title>Actions - MPS Platform Docs</title>
+<title>Java Chromium Embedded Framework - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.476df7d4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,9 +25,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#commondatakeys">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -49,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Actions
+              Java Chromium Embedded Framework
             
           </span>
 </div>
@@ -133,7 +130,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Internal MPS
       </a>
 </li>
@@ -148,7 +145,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../reading_list/">
+<a class="md-tabs__link" href="../../reference/reading_list/">
         Reference
       </a>
 </li>
@@ -488,10 +485,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">Internal MPS</a>
+<a href="../">Internal MPS</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -503,14 +500,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+<a class="md-nav__link" href="../open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -522,22 +519,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+<a class="md-nav__link" href="../models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+<a class="md-nav__link" href="../recipes/">
         Recipes
       </a>
 </li>
@@ -545,14 +542,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+<a class="md-nav__link" href="../classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threading</a>
+<a href="../threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -564,12 +561,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+<a class="md-nav__link" href="../threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="../threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -577,27 +574,28 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+<a class="md-nav__link" href="../gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/jcef/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Java Chromium Embedded Framework
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+<a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
 </li>
@@ -688,8 +686,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_9">
           Reference
           <span class="md-nav__icon md-icon"></span>
@@ -701,55 +699,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reading_list/">
+<a class="md-nav__link" href="../../reference/reading_list/">
         Reading list
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../icons/">
+<a class="md-nav__link" href="../../reference/icons/">
         Icons
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../exceptions/">
+<a class="md-nav__link" href="../../reference/exceptions/">
         Exceptions
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Actions
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/actions/">
         Actions
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#commondatakeys">
-    CommonDataKeys
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#platformdatakeys">
-    PlatformDataKeys
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../abbreviations/">
+<a class="md-nav__link" href="../../reference/abbreviations/">
         Abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code_abbreviations/">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
         Code abbreviations
       </a>
 </li>
@@ -790,262 +765,68 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#commondatakeys">
-    CommonDataKeys
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#platformdatakeys">
-    PlatformDataKeys
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/reference/actions.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/jcef.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Actions</h1>
-<h2 id="commondatakeys">CommonDataKeys<a class="headerlink" href="#commondatakeys" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-<th>Available in <abbr title="Meta Programming System">MPS</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CARET</td>
-<td>Returns a caret instance (in host or injected editor, depending on context).</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>EDITOR</td>
-<td>Returns the currently focused editor instance.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>EDITOR_EVEN_IF_INACTIVE</td>
-<td>Returns an editor even if focus currently is in find bar.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>EDITOR_VIRTUAL_SPACE</td>
-<td>Returns whether the current location relates to a virtual space in an editor.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>HOST_EDITOR</td>
-<td>Returns a reference to host an editor instance, in case EDITOR key is referring to an injected editor.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>NAVIGATABLE</td>
-<td>Returns a <code>Navigatable</code> instance.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>NAVIGATABLE_ARRAY</td>
-<td>Returns several navigatables, e.g.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>PROJECT</td>
-<td>Returns a project if a project node is selected (in project view)</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>PSI_ELEMENT</td>
-<td>Returns a <code>PsiElement</code> instance.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>PSI_FILE</td>
-<td>Returns the currently selected <code>PsiFile</code> instance.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>VIRTUAL_FILE</td>
-<td>Returns a <code>VirtualFile</code> instance.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>VIRTUAL_FILE_ARRAY</td>
-<td>Returns several <code>VirtualFile</code> instances</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="platformdatakeys">PlatformDataKeys<a class="headerlink" href="#platformdatakeys" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-<th>Available in <abbr title="Meta Programming System">MPS</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ACTIONS_SORTER</td>
-<td>Deprecated. use ActionPromoter</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>CONTENT_MANAGER</td>
-<td>Returns the managing class that’s responsible for the current component’s content</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>CONTEXT_COMPONENT</td>
-<td>Returns the component that’s currently in focus.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>CONTEXT_MENU_POINT</td>
-<td>Returns a point to guess where to show context menu invoked by key.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>COPY_PROVIDER</td>
-<td>Returns the copy provider responsible for copying data.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>CUT_PROVIDER</td>
-<td>Returns the cut provider responsible for cutting data.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>DELETE_ELEMENT_PROVIDER</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>DOMINANT_HINT_AREA_RECTANGLE</td>
-<td>Returns the position and dimension of a hint.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>EXPORTER_TO_TEXT_FILE</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>FILE_EDITOR</td>
-<td>Returns the file</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>FILE_TEXT</td>
-<td>Returns the text of currently selected file/file revision</td>
-<td></td>
-</tr>
-<tr>
-<td>HELP_ID</td>
-<td>Returns help <abbr title="identification">id</abbr>.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>IS_MODAL_CONTEXT</td>
-<td>Returns Boolean. TRUE if action is executed in modal context and Boolean. FALSE if action is executed not in modal context.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>MODALITY_STATE</td>
-<td>See: <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">Modality and invokeLater() - IntelliJ Platform Plugin SDK</a></td>
-<td></td>
-</tr>
-<tr>
-<td>NONEMPTY_CONTENT_MANAGER</td>
-<td>Returns a non empty managing class that’s responsible for the current component’s content</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>PASTE_PROVIDER</td>
-<td>Returns the paste provider responsible for pasting data.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>PREDEFINED_TEXT</td>
-<td>Returns a predefined text value.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>PROJECT_CONTEXT</td>
-<td>Returns a project if a project node is selected (in theproject view).</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>PROJECT_FILE_DIRECTORY</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>SEARCH_INPUT_TEXT</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>SELECTED_ITEM</td>
-<td>Returns a single selection item.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>SELECTED_ITEMS</td>
-<td>Returns multi selection items.</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>SOURCE_NAVIGATION_LOCKED</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>SPEED_SEARCH_COMPONENT</td>
-<td>Returns the speed search component</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>STATUS_BAR</td>
-<td>Returns the status bar class</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>TOOL_WINDOW</td>
-<td>Returns the current tool window</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/2705.svg"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:"/></a></td>
-</tr>
-<tr>
-<td>TREE_EXPANDER</td>
-<td></td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-<tr>
-<td>UI_DISPOSABLE</td>
-<td>Returns the class responsible for disposing an <abbr title="User Interface">UI</abbr> component</td>
-<td><a class="glightbox" href="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg"><img alt="⛔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26d4.svg" title=":no_entry:"/></a></td>
-</tr>
-</tbody>
-</table>
+<h1>Java Chromium Embedded Framework</h1>
+<p>Start with the page <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> - Java Chromium Embedded Framework</a> of the IntelliJ platform plugin SDK.</p>
+<p>It should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in Intellij IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
+because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a swing component cell.
+For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTMl code. The code can be created by Java or by
+calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a href="http://localhost:8000/mps-platform-docs/aspects/textgen">TextGen</a>.</p>
+<p>Existing Java documentation and examples on the web:</p>
+<ul>
+<li><a href="https://github.com/viglucci/app-jcef-example">Java <abbr title="Java Chromium Embedded Framework">JCEF</abbr> example</a> that showcases all kinds of handlers and dialogs</li>
+<li><a href="https://github.com/JetBrains/intellij-community/blob/master/plugins/markdown/core/src/org/intellij/plugins/markdown/ui/preview/jcef/MarkdownJCEFHtmlPanel.kt">IntelliJ Markdown preview</a></li>
+<li><a href="https://stackoverflow.com/questions/65480681/how-do-i-use-jcef-with-intellij">How do I use <abbr title="Java Chromium Embedded Framework">JCEF</abbr> with Intellij?</a></li>
+<li><a href="https://bitbucket.org/chromiumembedded/cef/wiki/Home">CEF documentatation (non Java version)</a></li>
+</ul>
+<p>The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (<abbr title="Meta Programming System">MPS</abbr>): You have
+to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication is done through JS. You then have a <code>subscribe</code> method that you can use to
+listening to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
+<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the Intellij IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
+are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>‘ reloading capabilities, it is important to correctly dispose the browser when it isn’t needed anymore. The following code registers a listener for the editor component
+dispose event and also closes the browser:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">SwingComponent</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">create</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="n">EditorComponent</span><span class="w"> </span><span class="n">editorComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">EditorComponent</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="n">editorComponent</span><span class="p">.</span><span class="na">addDisposeListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EditorComponent</span><span class="p">.</span><span class="na">EditorDisposeListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="nd">@Override</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">editorWillBeDisposed</span><span class="p">(</span><span class="nd">@NotNull</span><span class="p">()</span><span class="w"> </span><span class="n">EditorComponent</span><span class="w"> </span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">                </span><span class="n">browser</span><span class="p">.</span><span class="na">getCefBrowser</span><span class="p">().</span><span class="na">close</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>When the browser is not correctly disposed, it might be drawn in different components, on top of <abbr title="Meta Programming System">MPS</abbr> editors etc. There are also
+some known issues where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 5, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1105,7 +886,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Exceptions" class="md-footer__link md-footer__link--prev" href="../exceptions/" rel="prev">
+<a aria-label="Previous: IntelliJ SDK" class="md-footer__link md-footer__link--prev" href="../intellij_sdk/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1114,17 +895,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Exceptions
+              IntelliJ SDK
             </div>
 </div>
 </a>
-<a aria-label="Next: Abbreviations" class="md-footer__link md-footer__link--next" href="../abbreviations/" rel="next">
+<a aria-label="Next: Navigating the MPS sources" class="md-footer__link md-footer__link--next" href="../navigating_mps_source/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Abbreviations
+              Navigating the MPS sources
             </div>
 </div>
 <div class="md-footer__button md-icon">
