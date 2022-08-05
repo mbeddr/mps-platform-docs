@@ -205,6 +205,7 @@ nav:
       - Utility classes: mps_internal/utility_classes.md
       - GUI: mps_internal/gui.md
       - IntelliJ SDK: mps_internal/intellij_sdk.md
+      - Java Chromium Embedded Framework: mps_internal/jcef.md
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
   - Clean code:
       - clean_code/mps/index.md
