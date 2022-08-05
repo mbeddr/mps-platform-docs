@@ -14,3 +14,5 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+src/doc/site/**
