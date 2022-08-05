@@ -714,6 +714,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1041,28 +1046,28 @@ type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically <abbr title="addition">add</abbr> a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageA</em>.</li>
 </ul>
 <h2 id="use-an-intention">Use an intention<a class="headerlink" href="#use-an-intention" title="Permanent link">¶</a></h2>
-<p>Make <em>IntentionC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available <abbr title="input (stream)">in</abbr> <em>ModelB</em> inside <em>ModuleB</em>.</p>
+<p>Make <em>IntentionC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, <abbr title="addition">add</abbr> <em>Used Language</em> to <em>LanguageC</em>.<br/>
   Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="use-a-type-system-rule">Use a type system rule<a class="headerlink" href="#use-a-type-system-rule" title="Permanent link">¶</a></h2>
-<p>Make <em>TypesystemRuleC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available <abbr title="input (stream)">in</abbr> <em>ModelB</em> inside <em>ModuleB</em>.</p>
+<p>Make <em>TypesystemRuleC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, <abbr title="addition">add</abbr> <em>Used Language</em> to <em>LanguageC</em>.<br/>
   Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="use-an-alternate-editor-with-a-hint">Use an alternate editor with a hint<a class="headerlink" href="#use-an-alternate-editor-with-a-hint" title="Permanent link">¶</a></h2>
-<p>Make <em>EditorC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> using <em>HintD</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageD</em> available <abbr title="input (stream)">in</abbr> <em>ModelB</em> inside <em>ModuleB</em>.</p>
+<p>Make <em>EditorC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> using <em>HintD</em> defined in <em>LanguageD</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, <abbr title="addition">add</abbr> <em>Used Language</em> to <em>LanguageC</em>.<br/>
   Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="make-sure-that-a-generator-is-executed-for-a-model">Make sure that a generator is executed for a model<a class="headerlink" href="#make-sure-that-a-generator-is-executed-for-a-model" title="Permanent link">¶</a></h2>
-<p>Make sure that <em>GeneratorC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> is executed for <em>ModelB</em> inside <em>ModuleB</em>.</p>
+<p>Make sure that <em>GeneratorC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> is executed for <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, <abbr title="addition">add</abbr> <em>LanguageC</em> to <em>Languages engaged on generation</em>.</li>
 <li>To <em>ModuleB</em>, <abbr title="addition">add</abbr> <em>Used Language</em> to <em>LanguageC</em>.</li>
@@ -1081,7 +1086,7 @@ type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>ModuleB</em> to <em>LanguageA</em>.</li>
 </ul>
 <p>Note: We could also <abbr title="addition">add</abbr> a dependency from <em>ModelB</em> to <em>LanguageA.behavior</em>. However, as we need
-to depend on <em>LanguageA.structure</em> anyway (to <abbr title="binary expression">be</abbr> able to access the type), the preceding recipe presented is preferred.</p>
+to depend on <em>LanguageA.structure</em> anyway (to be able to access the type), the preceding recipe presented is preferred.</p>
 <h2 id="use-a-concept-as-a-child-or-reference">Use a concept as a child or reference<a class="headerlink" href="#use-a-concept-as-a-child-or-reference" title="Permanent link">¶</a></h2>
 <p><em>ConceptB</em> inside <em>LanguageB</em> wants to have a child or reference of
 type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
@@ -1100,7 +1105,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
   setting it manually or by using the intention on the error appearing on <em>ConceptB</em>.</li>
 </ul>
 <h2 id="create-an-editor">Create an editor<a class="headerlink" href="#create-an-editor" title="Permanent link">¶</a></h2>
-<p><em>LanguageB</em> wants to define a new editor for <em>EditorHintC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for
+<p><em>LanguageB</em> wants to define a new editor for <em>EditorHintC</em> defined in <em>LanguageC</em> for
 <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.editor</em>, <abbr title="addition">add</abbr> dependency to <em>LanguageC.editor</em>.</li>
@@ -1119,7 +1124,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageA</em> has <em>Extends Scope</em>.</li>
 </ul>
 <h2 id="use-an-editor-component">Use an editor component<a class="headerlink" href="#use-an-editor-component" title="Permanent link">¶</a></h2>
-<p><em>LanguageB</em> wants to use <em>EditorComponentC</em> defined <abbr title="input (stream)">in</abbr> <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
+<p><em>LanguageB</em> wants to use <em>EditorComponentC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.editor</em>, <abbr title="addition">add</abbr> dependency to <em>LanguageC.editor</em>.</li>
 <li>To <em>LanguageB.editor</em>, <abbr title="addition">add</abbr> dependency to <em>LanguageA.structure</em>.
@@ -1136,7 +1141,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageA</em> has <em>Extends Scope</em>.</li>
 </ul>
-<p>Note: The <em>overrides</em> flag <abbr title="input (stream)">in</abbr> type system rules isn’t related to dependencies.
+<p>Note: The <em>overrides</em> flag in type system rules isn’t related to dependencies.
 This flag specifies if type system rules of concepts extended by the applicable concept are evaluated.</p>
 <p>Example:</p>
 <ul>
@@ -1155,7 +1160,7 @@ This flag specifies if type system rules of concepts extended by the applicable 
 <em>ConceptXTypeRule</em> get evaluated.<br/>
 <em>ConceptYTypeRule1</em> and <em>ConceptYTypeRule2</em> get included because no rule for <em>ConceptX</em>
   defines <em>[override=true]</em>.<br/>
-<em>ConceptZTypeRule*is not evaluated because the search for rules <abbr title="input (stream)">in</abbr> extended Concepts
+<em>ConceptZTypeRule*is not evaluated because the search for rules in extended Concepts
   stops <abbr title="affine transform">at</abbr> the first concept having <abbr title="affine transform">at</abbr> least one rule defining *[override=true]</em>.</li>
 </ul>
 <h2 id="create-an-intention">Create an intention<a class="headerlink" href="#create-an-intention" title="Permanent link">¶</a></h2>
@@ -1187,8 +1192,8 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 <p><em>Extend Generator</em> includes</p>
 <ul>
 <li>Making sure that another generator is always executed if this generator gets executed.</li>
-<li>Creating new reduction ruled to <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> another generator.</li>
-<li>Createing a new switch entry for a switch <abbr title="input (stream)">in</abbr> another generator.</li>
+<li>Creating new reduction ruled to be used in another generator.</li>
+<li>Createing a new switch entry for a switch in another generator.</li>
 </ul>
 <p><em>GeneratorB</em> inside <em>LanguageB</em> wants to extend <em>GeneratorA</em> inside <em>LanguageA</em>.<br/>
 <em>GeneratorA</em> transforms <em>ConceptC</em> inside <em>LanguageC</em> into <em>ConceptD</em> inside <em>LanguageD</em>.<br/>
@@ -1219,10 +1224,10 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 </ul>
 <p>Note: We don’t need any other relation, specifically, <strong>no</strong> dependency from <em>LanguageB</em> to <em>SolutionA</em>.</p>
 <h2 id="define-an-accessories-model-aka-make-concept-instances-available-everywhere-a-language-is-used">Define an accessories model (aka make concept instances available everywhere a language is used)<a class="headerlink" href="#define-an-accessories-model-aka-make-concept-instances-available-everywhere-a-language-is-used" title="Permanent link">¶</a></h2>
-<p><em>BuiltInNodeA</em> as instance of <em>BuiltInConcept</em> inside <em>LanguageA</em> should <abbr title="binary expression">be</abbr> available to <abbr title="binary expression">be</abbr> referenced anywhere <em>LanguageA</em>
+<p><em>BuiltInNodeA</em> as instance of <em>BuiltInConcept</em> inside <em>LanguageA</em> should be available to be referenced anywhere <em>LanguageA</em>
 is a <em>Used Language</em>.</p>
 <ul>
-<li>Create <em>AccessoryModel</em> as aspect <abbr title="input (stream)">in</abbr> <em>LanguageA</em></li>
+<li>Create <em>AccessoryModel</em> as aspect in <em>LanguageA</em></li>
 <li>To <em>AccessoryModel</em>, <abbr title="addition">add</abbr> <em>Used Language</em> to <em>LanguageA</em>.</li>
 <li>Create <em>BuiltInNodeA</em> inside <em>AccessoryModel</em>.</li>
 <li>To <em>LanguageA</em>, <abbr title="addition">add</abbr> an accessory Model to <em>AccessoryModel</em> (if not present already).</li>

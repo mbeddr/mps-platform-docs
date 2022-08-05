@@ -624,6 +624,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -836,7 +841,7 @@
 <li><a href="http://srcrr.com/java/oracle/openjdk/6/reference/sun/awt/AWTAutoShutdown.html">AWT-Shutdown</a></li>
 </ul>
 </li>
-<li><a href="[sun.awt.image.ImageFetch](https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32)">Image Fetch/Image Animator</a></li>
+<li>Image Fetch/Image Animator(<a href="https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32">sun.awt.image.ImageFetch</a>)</li>
 <li><a href="https://www.baeldung.com/java-get-all-threads">Get All running <abbr title="Java Virtual Machine">JVM</abbr> Threads | baeldung.com</a><ul>
 <li><a href="https://www.baeldung.com/java-finalize">Finalizer</a></li>
 <li>Reference handler: a high-priority thread to enqueue pending references (<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Reference.html">References</a>).</li>
@@ -891,9 +896,9 @@
 </ul>
 <h2 id="mps-threads-threads"><abbr title="Meta Programming System">MPS</abbr> Threads threads<a class="headerlink" href="#mps-threads-threads" title="Permanent link">¶</a></h2>
 <ul>
-<li>Highlighter: performs model checks <abbr title="input (stream)">in</abbr> update sessions and updates the editor. Checking rules are run for example inside this thread (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java">Highlighter</a>).</li>
-<li>HighlightUsages: highlights references to the node <abbr title="affine transform">at</abbr> the cursor position <abbr title="input (stream)">in</abbr> the editor (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java">HighlightUsagesSupport</a>).</li>
-<li>CompletionHelper: automatically opens the code completion menu that was introduced <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> 2021.2 (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompletionHelper.java">CompletionHelper</a>).</li>
+<li>Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run for example inside this thread (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java">Highlighter</a>).</li>
+<li>HighlightUsages: highlights references to the node <abbr title="affine transform">at</abbr> the cursor position in the editor (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java">HighlightUsagesSupport</a>).</li>
+<li>CompletionHelper: automatically opens the code completion menu that was introduced in <abbr title="Meta Programming System">MPS</abbr> 2021.2 (<a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompletionHelper.java">CompletionHelper</a>).</li>
 <li><abbr title="Meta Programming System">MPS</abbr> <abbr title="Event Dispatch Thread">EDT</abbr> Executor: invokes read/write/command task asynchronously on the <abbr title="Event Dispatch Thread">EDT</abbr> thread (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/smodel/EDTExecutorInternal.java">EDTExecutorInternal</a>).</li>
 <li><abbr title="Meta Programming System">MPS</abbr> interrupting thread: augments the IDEA Platform write action with functionality essential for <abbr title="Meta Programming System">MPS</abbr> (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/smodel/TryRunPlatformWriteHelper.java"></a>).</li>
 <li>ChangesManager command queue: queue for tasks of the <abbr title="Version Control System">VCS</abbr> changes manager (<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-vcs/vcs-platform/solutions/jetbrains.mps.ide.vcs.platform/source_gen/jetbrains/mps/vcs/changesmanager/CurrentDifferenceRegistry.java">CurrentDifferenceRegistry</a>)</li>
@@ -916,7 +921,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 31, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

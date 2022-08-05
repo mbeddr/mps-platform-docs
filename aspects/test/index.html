@@ -609,6 +609,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -817,7 +822,7 @@
 <div class="admonition warning">
 <p class="admonition-title">How to know if some <abbr title="Meta Programming System">MPS</abbr> code is inside a test?</p>
 <blockquote>
-<p>Given I <abbr title="abstract module">am</abbr> writing some code <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> that is supposed to run only if we’<abbr title="runtime exception">re</abbr> not running tests. How can I detect if I’m running a test?</p>
+<p>Given I <abbr title="abstract module">am</abbr> writing some code in <abbr title="Meta Programming System">MPS</abbr> that is supposed to run only if we’<abbr title="runtime exception">re</abbr> not running tests. How can I detect if I’m running a test?</p>
 </blockquote>
 <ol>
 <li>
@@ -857,8 +862,8 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <ul>
 <li>Each test case runs on its own copy of its model. </li>
 </ul>
-<p><abbr title="Meta Programming System">MPS</abbr> tries to keep tests reproducible and isolated even when being run <abbr title="input (stream)">in</abbr>-process. For that, <abbr title="Meta Programming System">MPS</abbr> copies the whole model into a temporary model. Modifications of one test case will then <abbr title="binary expression">be</abbr> invisible to the next test case, since it will work on a new temporary model. This prevents test-cases from interacting.</p>
-<p>Running tests <abbr title="input (stream)">in</abbr> a separate model ensures that they will never modify the original model (as long as you don’t explicitly start acting on other models).</p>
+<p><abbr title="Meta Programming System">MPS</abbr> tries to keep tests reproducible and isolated even when being run in-process. For that, <abbr title="Meta Programming System">MPS</abbr> copies the whole model into a temporary model. Modifications of one test case will then be invisible to the next test case, since it will work on a new temporary model. This prevents test-cases from interacting.</p>
+<p>Running tests in a separate model ensures that they will never modify the original model (as long as you don’t explicitly start acting on other models).</p>
 <ul>
 <li>Check-nodes per test</li>
 </ul>
@@ -870,19 +875,19 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <ul>
 <li>All tests of a test-case share their referenced nodes</li>
 </ul>
-<p>To save memory though, these check-nodes all lie <abbr title="input (stream)">in</abbr> the same model for each test case. References to other nodes outside the test case will only need to <abbr title="binary expression">be</abbr> copied once and <abbr title="binary expression">be</abbr> shared by all tests of that test case. As a result, the IDs of check-nodes change and the IDs of non-check-nodes are the same as <abbr title="input (stream)">in</abbr> the original model.</p>
+<p>To save memory though, these check-nodes all lie in the same model for each test case. References to other nodes outside the test case will only need to be copied once and be shared by all tests of that test case. As a result, the IDs of check-nodes change and the IDs of non-check-nodes are the same as in the original model.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// nodes in this model that are not check-nodes of this test case will only be there once</span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">assert</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">dataRef</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">nodes</span><span class="p">(</span><span class="n">Chunk</span><span class="p">).</span><span class="na">size</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Consequently, multiple tests of the same test case are not fully isolated. In the following example, both tests assert and do the same, yet <em>test3</em> passes while <em>test4</em> fails. The data element is now located <abbr title="input (stream)">in</abbr> a separate chunk outside the testcase and the check-node is a reference to it. As a result, <em>test4</em> is running red because <em>test3</em> already modified the referenced node.</p>
+<p>Consequently, multiple tests of the same test case are not fully isolated. In the following example, both tests assert and do the same, yet <em>test3</em> passes while <em>test4</em> fails. The data element is now located in a separate chunk outside the testcase and the check-node is a reference to it. As a result, <em>test4</em> is running red because <em>test3</em> already modified the referenced node.</p>
 <p><a class="glightbox" href="../../img/tests_share_non_check_nodes.png"><img alt="tests share non check nodes" src="../../img/tests_share_non_check_nodes.png" width="600px"/></a></p>
 <ul>
 <li>
 <p>Kinds of tests</p>
 </li>
 <li>
-<p>I checked this behavior <abbr title="input (stream)">in</abbr>-depth for node tests.</p>
+<p>I checked this behavior in-depth for node tests.</p>
 </li>
 <li>I think it is similar for editor tests.</li>
 <li>I <abbr title="abstract module">am</abbr> sure that this does not apply to baseLang-tests since they don’t prepare a temporary model for you.</li>
@@ -890,11 +895,11 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <h1 id="practical-effects-of-this">Practical effects of this<a class="headerlink" href="#practical-effects-of-this" title="Permanent link">¶</a></h1>
 <p>These are some rules of thumb that result from that:</p>
 <ul>
-<li>The tests of a test-case may interact, so you should inline all modified nodes into the testcase to <abbr title="binary expression">be</abbr> <em>check-nodes</em>.</li>
-<li>Whenever you modify many nodes <abbr title="input (stream)">in</abbr> the model, consider writing a migration and migration test instead.</li>
+<li>The tests of a test-case may interact, so you should inline all modified nodes into the testcase to be <em>check-nodes</em>.</li>
+<li>Whenever you modify many nodes in the model, consider writing a migration and migration test instead.</li>
 <li>Remember that the console and each test will output separate IDs for the conceptually same node. And they will change from run to run.</li>
-<li>Especially when stepping through tests, it is easy to <abbr title="binary expression">be</abbr> confused by that and draw false conclusions</li>
-<li>Whenever your code queries for the nodes of a model, <abbr title="binary expression">be</abbr> ready to see duplicates for each test (as <abbr title="input (stream)">in</abbr> the <em>dataRef</em> example). You may test this by asserting that something is included or excluded instead of asserting true equality of the expected and actual lists.</li>
+<li>Especially when stepping through tests, it is easy to be confused by that and draw false conclusions</li>
+<li>Whenever your code queries for the nodes of a model, be ready to see duplicates for each test (as in the <em>dataRef</em> example). You may test this by asserting that something is included or excluded instead of asserting true equality of the expected and actual lists.</li>
 <li>Another source for duplicates is if the test model imports itself.</li>
 <li>If you need full power on the temporary model, consider writing a baseLanguage test and creating your repository and model by hand. <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java">jetbrains.mps.smodel.TestModelFactory</a> allows to do that, e.g. the <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java">ModelListenerTest</a> uses that TestModelFactory. It is unfortunately not available as stubs, so that you’ll need to copy it to your project</li>
 </ul>
@@ -905,16 +910,16 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <summary>How to set up a generator smoke test?</summary>
 <blockquote>
 <p>I would like to write a generator smoke test.  Therefor, I have some solutions with models (regular one, not <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> models) which are build from command line and the generators invoked are generating some .c files.</p>
-<p>In addition, I also have  a <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> model <abbr title="input (stream)">in</abbr> the same solution with some unit tests which checks if the output directories of these models contain any generated files. I don’t invoke the generation of the models programatically but rely on the ant task which is generating the solution.</p>
+<p>In addition, I also have  a <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> model in the same solution with some unit tests which checks if the output directories of these models contain any generated files. I don’t invoke the generation of the models programatically but rely on the ant task which is generating the solution.</p>
 <p>Unfortunately this setup always leads to broken tests. It seems like the unit tests are executed before the models (which are build during CI run) and though the test fails.</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arimer" title="GitHub User: arimer">@arimer</a><sub></sub></sub></p>
 <p>When the tests work fine when run from within the <abbr title="Integrated Development Environment">IDE</abbr>, then the problem is most probably that when your tests are executed, they are running from the jars and not the sources. The generator output location points into the jar file that the tests are executed from and not to the real source location.</p>
 <p>You could change the packaging to include the <em>source_gen</em> folder for you specific test solution.</p>
-<p>This can <abbr title="binary expression">be</abbr> done the following way <abbr title="input (stream)">in</abbr> the default layout of your build model:</p>
+<p>This can be done the following way in the default layout of your build model:</p>
 <p><a class="glightbox" href="../../img/layout_module_myTestSolution.png"><img alt="layout: module myTestSolution" src="../../img/layout_module_myTestSolution.png"/></a></p>
-<p>In this case you would need to detect if you are running from sources or from jar <abbr title="input (stream)">in</abbr> CI and the change the location where you look for the generated files.</p>
-<p>This can <abbr title="binary expression">be</abbr> done by calculation a solution relative path for the test solution containing the packed sources.</p>
+<p>In this case you would need to detect if you are running from sources or from jar in CI and the change the location where you look for the generated files.</p>
+<p>This can be done by calculation a solution relative path for the test solution containing the packed sources.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -941,7 +946,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">relativePath</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The easier solution is to place the tests <abbr title="input (stream)">in</abbr> separate solution and then invoke the make process for the solution that contains your input programmatically, so you can assert over the output. An example implementation how the make process is invoked can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> the <a href="http://127.0.0.1:63320/node?ref=r%3A35144171-bbda-419f-9015-4d1f075e1db4%28com.mbeddr.core.runconfiguration.pluginSolution.plugin%29%2F7943990500389317776">mbeddr-c part</a>.</p>
+<p>The easier solution is to place the tests in separate solution and then invoke the make process for the solution that contains your input programmatically, so you can assert over the output. An example implementation how the make process is invoked can be found in the <a href="http://127.0.0.1:63320/node?ref=r%3A35144171-bbda-419f-9015-4d1f075e1db4%28com.mbeddr.core.runconfiguration.pluginSolution.plugin%29%2F7943990500389317776">mbeddr-c part</a>.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
 </details>
 <details class="question">
@@ -949,7 +954,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <blockquote>
 <p>I need to unit tests <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistants</a>, ideally with an EditorTestCase, but it is not supported out of the box, any idea?</p>
 </blockquote>
-<p>This snippet allows to automatically test context assistant <abbr title="input (stream)">in</abbr> the code section of the <code>EditorTestCase</code>:</p>
+<p>This snippet allows to automatically test context assistant in the code section of the <code>EditorTestCase</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -983,7 +988,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Note:<br/>
-- “Item Name” must <abbr title="binary expression">be</abbr> replaced with the name of the item as shown <abbr title="input (stream)">in</abbr> the editor<br/>
+- “Item Name” must be replaced with the name of the item as shown in the editor<br/>
 - “_this” is a concept from internalBaseLanguage <abbr title="Domain Specific Language">DSL</abbr>.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/cmoine" title="GitHub User: cmoine">@cmoine</a><sub></sub></sub></p>
 </details>
@@ -997,7 +1002,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <p>How do I name errors with dynamic messages?</p>
 </blockquote>
 <ol>
-<li>Go to your error statement <abbr title="input (stream)">in</abbr> your checking rule.</li>
+<li>Go to your error statement in your checking rule.</li>
 <li>Import the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.test</ins>.</li>
 <li>Run the intention <em>Add Message Annotation</em>.</li>
 <li>Type a nice name.</li>
@@ -1025,18 +1030,18 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <div class="admonition warning">
 <p class="admonition-title">Tests aren’t running <abbr title="affine transform">at</abbr> all.</p>
 <p>A <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F5097124989038916362">test <abbr title="information">info</abbr> node</a> has to
-<abbr title="binary expression">be</abbr> added to the model of the tests, so that the tests can find the path of the project. The project path also has to <abbr title="binary expression">be</abbr> set
-<abbr title="input (stream)">in</abbr> this node. Make sure that variables that are used <abbr title="input (stream)">in</abbr> this path are set <abbr title="input (stream)">in</abbr> <em>Preferences</em> → <em>Appearance &amp; Behavior</em> → <em>Path Variables</em>
+be added to the model of the tests, so that the tests can find the path of the project. The project path also has to be set
+in this node. Make sure that variables that are used in this path are set in <em>Preferences</em> → <em>Appearance &amp; Behavior</em> → <em>Path Variables</em>
 (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#testinfo">TestInfo | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Tests have a long warm up time and run slowly.</p>
-<p>When running the tests from a run configuration, enable <code>Execute in the same process</code> <abbr title="input (stream)">in</abbr> the configuration settings.
+<p>When running the tests from a run configuration, enable <code>Execute in the same process</code> in the configuration settings.
 Also check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="admonition error">
 <p class="admonition-title">Why does my test execution fail with “Test project ‘$…’ is not opened. Aborted”?</p>
-<p>This is happening because the used variable <abbr title="input (stream)">in</abbr> the <code>TestInfo</code> is not set. Go to <em>File</em> → <em>Settings</em> → <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
+<p>This is happening because the used variable in the <code>TestInfo</code> is not set. Go to <em>File</em> → <em>Settings</em> → <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
 </div>
 <hr/>
 <div class="md-source-file">

@@ -624,6 +624,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -842,7 +847,7 @@
 <ul>
 <li>Do not define dependencies on other facets.</li>
 <li>They are known to the <abbr title="Meta Programming System">MPS</abbr> make process and are available for user.</li>
-<li>You can define where you own facet should fit <abbr title="input (stream)">in</abbr> and decide if you require some facet.</li>
+<li>You can define where you own facet should fit in and decide if you require some facet.</li>
 </ul>
 <p>Usage:</p>
 <ul>
@@ -854,8 +859,8 @@
 <details class="question">
 <summary>How do I move a solution?</summary>
 <blockquote>
-<p>Given I have a project with a test solution open and the solution is stored <abbr title="input (stream)">in</abbr> <code>code/com.my/solutions/com.my.solution.to.move</code>, which is the wrong place. It should <abbr title="binary expression">be</abbr> <code>code/com.my/test/com.my.solution.to.move</code> instead.</p>
-<p>I want to move the solution <abbr title="input (stream)">in</abbr> the filesystem to its correct place. How can I move the solution without breaking the project?</p>
+<p>Given I have a project with a test solution open and the solution is stored in <code>code/com.my/solutions/com.my.solution.to.move</code>, which is the wrong place. It should be <code>code/com.my/test/com.my.solution.to.move</code> instead.</p>
+<p>I want to move the solution in the filesystem to its correct place. How can I move the solution without breaking the project?</p>
 </blockquote>
 <ol>
 <li>Move <code>code/com.my/solutions/com.my.solution.to.move</code> to <code>code/com.my.project/test/com.my.project.solution.to.move</code>.</li>
@@ -864,7 +869,7 @@
 <li>On the workspace root node, right-click and open <em>Project Paths</em> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>).</li>
 <li>Click on the red, old solution file and on <em>-</em>.</li>
 <li>Click on <em>+</em> and select the new location of this <em>.msd</em> file.</li>
-<li>Open your build script for CI tests and update the solution path <abbr title="input (stream)">in</abbr> the project structure.</li>
+<li>Open your build script for CI tests and update the solution path in the project structure.</li>
 </ol>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
@@ -874,17 +879,17 @@
 <p>Given I have a concept <code>Ball</code> and I have a reference <code>BallRef</code>.
 When I have a <code>Ball</code> node and I have <code>BallRef</code>s to it all over my model.
 When I delete the ball then I have a lot of dangling references.
-How may I get guidance <abbr title="input (stream)">in</abbr> cleaning up these dangling references?</p>
+How may I get guidance in cleaning up these dangling references?</p>
 </blockquote>
 <p>You can show a balloon that says for example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Deleting ball has left some dangling references
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>_Show_, _Ignore_
 </code></pre></div></td></tr></table></div>
-<p>When clicking <em>show</em>, it will open a usage search for the deleted node using <code class="highlight"><span class="n">ConsoleUtil</span><span class="p">.</span><span class="na">show</span><span class="w"></span></code>. This is implemented with a modellistener <abbr title="input (stream)">in</abbr> a quite generic fashion.</p>
+<p>When clicking <em>show</em>, it will open a usage search for the deleted node using <code class="highlight"><span class="n">ConsoleUtil</span><span class="p">.</span><span class="na">show</span><span class="w"></span></code>. This is implemented with a modellistener in a quite generic fashion.</p>
 <p>Here are a few insights:</p>
 <ul>
-<li>Make sure to not show the node <abbr title="input (stream)">in</abbr> the <em>searched for</em> part of the window. <abbr title="Version Control System">VCS</abbr> will try to highlight it and run into an <abbr title="NullPointerException">NPE</abbr> (<abbr title="Meta Programming System">MPS</abbr> 2019.3)</li>
+<li>Make sure to not show the node in the <em>searched for</em> part of the window. <abbr title="Version Control System">VCS</abbr> will try to highlight it and run into an <abbr title="NullPointerException">NPE</abbr> (<abbr title="Meta Programming System">MPS</abbr> 2019.3)</li>
 <li>Consider cut and paste, or moving elements: these operations yield a removal event as well. Hide the balloon again, once the node gets added again.</li>
 </ul>
 <p><a class="glightbox" href="../../img/DanglingReferenceHandler.png"><img alt="DanglingReferenceHandler" src="../../img/DanglingReferenceHandler.png"/></a></p>
@@ -893,33 +898,33 @@ How may I get guidance <abbr title="input (stream)">in</abbr> cleaning up these 
 <details class="question">
 <summary>How can you make sure that the <abbr title="Integrated Development Environment">IDE</abbr> loads a jar exactly once and then never again?</summary>
 <blockquote>
-<p>I have a .jar that depends on a native libray (.dll/.so/…). To use it <abbr title="input (stream)">in</abbr> an <abbr title="Meta Programming System">MPS</abbr> plugin I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> tries to reload the jar <abbr title="input (stream)">in</abbr> some cases (e.g. after a rebuild). This will fail, because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
+<p>I have a .jar that depends on a native libray (.dll/.so/…). To use it in an <abbr title="Meta Programming System">MPS</abbr> plugin I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> tries to reload the jar in some cases (e.g. after a rebuild). This will fail, because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
 <p>How can I avoid this problem?</p>
 </blockquote>
-<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (<abbr title="runtime exception">re</abbr>-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” <abbr title="input (stream)">in</abbr> the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `com.intellij.</p>
-<p>Now we just have to ensure that the .jars can <abbr title="binary expression">be</abbr> found <abbr title="affine transform">at</abbr> runtime (i.e. they must <abbr title="binary expression">be</abbr> on the classpath). The simplest approach would <abbr title="binary expression">be</abbr> to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
+<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (<abbr title="runtime exception">re</abbr>-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” in the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `com.intellij.</p>
+<p>Now we just have to ensure that the .jars can be found <abbr title="affine transform">at</abbr> runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></sub></sub></p>
 </details>
 <details class="question">
 <summary>How can you use an IntelliJ icon for an action?</summary>
 <blockquote>
-<p>I want to use one of the icons shipped with IntelliJ for my own action (<code>jetbrains.mps.lang.plugin.structure.ActionDeclaration</code>). How can I reference the icon? (note: this question might <abbr title="binary expression">be</abbr> deprecated for newer <abbr title="Meta Programming System">MPS</abbr> versions)</p>
+<p>I want to use one of the icons shipped with IntelliJ for my own action (<code>jetbrains.mps.lang.plugin.structure.ActionDeclaration</code>). How can I reference the icon? (note: this question might be deprecated for newer <abbr title="Meta Programming System">MPS</abbr> versions)</p>
 </blockquote>
-<p>You can use <code>IconLoader.getIcon(...)</code> <abbr title="input (stream)">in</abbr> the reflective editor. Right-click the editor for the icon, use <code>show reflective editor</code> and enter the expression as shown <abbr title="input (stream)">in</abbr> the screenshot:</p>
+<p>You can use <code>IconLoader.getIcon(...)</code> in the reflective editor. Right-click the editor for the icon, use <code>show reflective editor</code> and enter the expression as shown in the screenshot:</p>
 <p><a class="glightbox" href="../../img/IconLoader.png"><img alt="IconLoader" src="../../img/IconLoader.png"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></sub></sub></p>
 </details>
 <details class="question">
 <summary>How to use a projection mode switcher to alter an editor component?</summary>
 <blockquote>
-<p>I have a concept editor <abbr title="input (stream)">in</abbr> which I use an EditorComponent <span class="arithmatex">\(A\)</span>. Using the projection menu entry, I would like to switch to another editor component <span class="arithmatex">\(B\)</span> upon activation.</p>
+<p>I have a concept editor in which I use an EditorComponent <span class="arithmatex">\(A\)</span>. Using the projection menu entry, I would like to switch to another editor component <span class="arithmatex">\(B\)</span> upon activation.</p>
 </blockquote>
-<p>First <span class="arithmatex">\(B\)</span> must override <span class="arithmatex">\(A\)</span> and the <code>applicable concept</code> also must not differ.  Then for <span class="arithmatex">\(B\)</span> <abbr title="input (stream)">in</abbr> <code>applicable in context</code> we must provide a <em>concept editor context hint</em>.</p>
+<p>First <span class="arithmatex">\(B\)</span> must override <span class="arithmatex">\(A\)</span> and the <code>applicable concept</code> also must not differ.  Then for <span class="arithmatex">\(B\)</span> in <code>applicable in context</code> we must provide a <em>concept editor context hint</em>.</p>
 <p><a class="glightbox" href="../../img/context_hints_tree_layout.png"><img alt="context hints tree layout" src="../../img/context_hints_tree_layout.png"/></a></p>
-<p>This hint must also <abbr title="binary expression">be</abbr> referenced from a <em>Projection Mode Switcher</em>.</p>
+<p>This hint must also be referenced from a <em>Projection Mode Switcher</em>.</p>
 <p><a class="glightbox" href="../../img/projection_mode_switcher.png"><img alt="projection mode switcher" src="../../img/projection_mode_switcher.png"/></a></p>
-<p>Afterwards you will find a new entry <abbr title="input (stream)">in</abbr> the <em>Projection</em> menu.</p>
-<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em> which can <abbr title="binary expression">be</abbr> activated by an intention <abbr title="affine transform">at</abbr> the position where the include of <span class="arithmatex">\(A\)</span> happens. Also <abbr title="input (stream)">in</abbr> any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself we cannot use Grammar Cells.</p>
+<p>Afterwards you will find a new entry in the <em>Projection</em> menu.</p>
+<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em> which can be activated by an intention <abbr title="affine transform">at</abbr> the position where the include of <span class="arithmatex">\(A\)</span> happens. Also in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself we cannot use Grammar Cells.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></sub></sub></p>
 </details>
 <h2 id="languagesfeatures">Languages/features<a class="headerlink" href="#languagesfeatures" title="Permanent link">¶</a></h2>
@@ -954,7 +959,7 @@ How may I get guidance <abbr title="input (stream)">in</abbr> cleaning up these 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to you check if a model is a generator model, a test model etc.?</p>
-<p>Call the corresponding method <abbr title="input (stream)">in</abbr> <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESModelStereotype">SModelStereotype</a>.</p>
+<p>Call the corresponding method in <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESModelStereotype">SModelStereotype</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you <abbr title="addition">add</abbr> imports to a model?</p>
@@ -972,19 +977,19 @@ How may I get guidance <abbr title="input (stream)">in</abbr> cleaning up these 
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">A reference to a key <abbr title="input (stream)">in</abbr> an action context parameter is out of search scope.</p>
+<p class="admonition-title">A reference to a key in an action context parameter is out of search scope.</p>
 <p>You need to <abbr title="addition">add</abbr> a dependency to <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a>.
 This class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EPlatformDataKeys">PlatformDataKeys</a>
 and this class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7ECommonDataKeys">CommonDataKeys</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">An action isn’t visible.</p>
-<p>You have to <abbr title="addition">add</abbr> it to an <code>ActionGroup</code> that can <abbr title="binary expression">be</abbr> attached to differenct places such as the context menu or the build menu. 
-All of the action context parameters that are marked as required have to <abbr title="binary expression">be</abbr> available and the <code class="highlight"><span class="n">isApplicable</span><span class="w"></span></code> block must
-return true for an action to <abbr title="binary expression">be</abbr> visible. For debugging purposes you can set <em>always visible</em> to true to check if your
+<p>You have to <abbr title="addition">add</abbr> it to an <code>ActionGroup</code> that can be attached to differenct places such as the context menu or the build menu. 
+All of the action context parameters that are marked as required have to be available and the <code class="highlight"><span class="n">isApplicable</span><span class="w"></span></code> block must
+return true for an action to be visible. For debugging purposes you can set <em>always visible</em> to true to check if your
 action is registered <abbr title="affine transform">at</abbr> all. </p>
-<p>You also need to have a standalone descriptor <abbr title="input (stream)">in</abbr> your model for it to work. Additionaly,
-the solution kind should <abbr title="binary expression">be</abbr> set to <em>Other</em> <abbr title="input (stream)">in</abbr> the <em>Java</em> tab of the solution properties (<a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Plugin | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
+<p>You also need to have a standalone descriptor in your model for it to work. Additionaly,
+the solution kind should be set to <em>Other</em> in the <em>Java</em> tab of the solution properties (<a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Plugin | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="footnote">
 <hr/>

@@ -589,6 +589,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -770,24 +775,24 @@
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/who-is-mps-for/">Who is <abbr title="Meta Programming System">MPS</abbr> for?</a></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">What can you do if a problem occurs that isn’t <abbr title="input (stream)">in</abbr> this list?</p>
+<p class="admonition-title">What can you do if a problem occurs that isn’t in this list?</p>
 <p>Try <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/invalidate-caches.html">invalidating the cache<span><a class="glightbox" href="../../img/invalidate_cache.gif"><img alt="invalidate cache" src="../../img/invalidate_cache.gif"/></a></span></a></span> and restarting <abbr title="Meta Programming System">MPS</abbr> (same menu).
 Search the <a href="https://mps-support.jetbrains.com/hc/en-us/community/topics">forum</a> and <a href="https://youtrack.jetbrains.com/issues/MPS">issue tracker</a>. 
 Ask a question on <a href="http://slack-mps.jetbrains.com">Slack</a>.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I changed something <abbr title="input (stream)">in</abbr> a settings page and nothing changed.</p>
-<p>There might <abbr title="binary expression">be</abbr> a bug related to caching. Reopening the dialog, invalidating the cache or restarting the project might help.</p>
+<p class="admonition-title">I changed something in a settings page and nothing changed.</p>
+<p>There might be a bug related to caching. Reopening the dialog, invalidating the cache or restarting the project might help.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Which standard <abbr title="Integrated Development Environment">IDE</abbr> settings should you change?</p>
-<p>The <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options">maximum heap size<span><a class="glightbox" href="../../img/maximum_heap_size.gif"><img alt="maximum heap size" src="../../img/maximum_heap_size.gif"/></a></span></a></span> setting should <abbr title="binary expression">be</abbr> changed to a higher values such as 8 GB when using many languages or plugins.
-Another reason for high memory usage can <abbr title="binary expression">be</abbr> many (poorly) implemented checking rules. </p>
+<p>The <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options">maximum heap size<span><a class="glightbox" href="../../img/maximum_heap_size.gif"><img alt="maximum heap size" src="../../img/maximum_heap_size.gif"/></a></span></a></span> setting should be changed to a higher values such as 8 GB when using many languages or plugins.
+Another reason for high memory usage can be many (poorly) implemented checking rules. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">I <abbr title="abstract module">am</abbr> running low on memory or the <abbr title="Integrated Development Environment">IDE</abbr> is running slow. What can you do without restarting <abbr title="Meta Programming System">MPS</abbr>?</p>
-<p>When you have enabled the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons">loaded models indicator<span><a class="glightbox" href="../../img/memory_indicator.gif"><img alt="memory indicator" src="../../img/memory_indicator.gif"/></a></span></a></span> <abbr title="input (stream)">in</abbr> the lower right corner of the screen, you can click on the text to <a href="https://blog.jetbrains.com/mps/2019/12/[MPS-2019](https://youtrack.jetbrains.com/issue/MPS-2019)-3-is-released/#:~:text=Model%20unloading">unload not needed models</a>.
-The memory indicator <abbr title="affine transform">at</abbr> the same location can <abbr title="binary expression">be</abbr> used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><a class="glightbox" href="../../img/power_saving_mode.gif"><img alt="power saving mode" src="../../img/power_saving_mode.gif"/></a></span></a></span> can <abbr title="binary expression">be</abbr> enabled which disables background tasks such as the model checker (not recommended).</p>
+<p>When you have enabled the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons">loaded models indicator<span><a class="glightbox" href="../../img/memory_indicator.gif"><img alt="memory indicator" src="../../img/memory_indicator.gif"/></a></span></a></span> in the lower right corner of the screen, you can click on the text to <a href="https://blog.jetbrains.com/mps/2019/12/[MPS-2019](https://youtrack.jetbrains.com/issue/MPS-2019)-3-is-released/#:~:text=Model%20unloading">unload not needed models</a>.
+The memory indicator <abbr title="affine transform">at</abbr> the same location can be used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><a class="glightbox" href="../../img/power_saving_mode.gif"><img alt="power saving mode" src="../../img/power_saving_mode.gif"/></a></span></a></span> can be enabled which disables background tasks such as the model checker (not recommended).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What’s the difference between a module and a model?</p>
@@ -795,18 +800,18 @@ The memory indicator <abbr title="affine transform">at</abbr> the same location 
 </div>
 <div class="admonition question">
 <p class="admonition-title">What’s a <abbr title="Semantic Repository">SRepository</abbr> and how’s it structured?</p>
-<p>The answer can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> the <a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24"><abbr title="Meta Programming System">MPS</abbr> source code</a>.Multiple repositories could <abbr title="binary expression">be</abbr> available <abbr title="input (stream)">in</abbr> the feature. Given a repository, references to modules/models/nodes can <abbr title="binary expression">be</abbr> resolved.
-There’s no need <abbr title="input (stream)">in</abbr> making ids unique globally as each subsystem knows, which exact repository it needs to use <abbr title="affine transform">at</abbr> any moment.
+<p>The answer can be found in the <a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24"><abbr title="Meta Programming System">MPS</abbr> source code</a>.Multiple repositories could be available in the feature. Given a repository, references to modules/models/nodes can be resolved.
+There’s no need in making ids unique globally as each subsystem knows, which exact repository it needs to use <abbr title="affine transform">at</abbr> any moment.
 (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )</p>
 <p>A repository contains modules, modules have model roots, each model root can load models.
-Also a module can <abbr title="binary expression">be</abbr> a models container itself (without model root).
+Also a module can be a models container itself (without model root).
 A model is then a set of root nodes.
 Each root node is a root of a tree of nodes, So that overall, a repository is a tree structure.</p>
 <p><a class="glightbox" href="https://kroki.io/mermaid/svg/eNpljrEOgjAURXe_4i2kMDC8jpA44abVdAUGjI2QQEsKDobw7zYFCsLYc-67vQAAnjdUsuojGEhfikaQiDyLTpBx9LyT8fDWRVvClcf2xS-P1NeiVV3VK_0Ncktv9wTTtFGvTy0Acwepg3SFzEFp4NIKYXi2PfGe0ANhsftgQhzTzHSKGrRSPWCWzwk-BxIcJo_jbBK0hjP07Y00GjDYW7qx9GDZxsrgsIr-raJu1ZpgJrGJyCXyA5uIats="><img alt="Kroki" src="https://kroki.io/mermaid/svg/eNpljrEOgjAURXe_4i2kMDC8jpA44abVdAUGjI2QQEsKDobw7zYFCsLYc-67vQAAnjdUsuojGEhfikaQiDyLTpBx9LyT8fDWRVvClcf2xS-P1NeiVV3VK_0Ncktv9wTTtFGvTy0Acwepg3SFzEFp4NIKYXi2PfGe0ANhsftgQhzTzHSKGrRSPWCWzwk-BxIcJo_jbBK0hjP07Y00GjDYW7qx9GDZxsrgsIr-raJu1ZpgJrGJyCXyA5uIats="/></a> </p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there an existing expression/scripting language?</p>
-<p>There is the expressions sample project. For a full language that can also <abbr title="binary expression">be</abbr> evaluated, have a look <abbr title="affine transform">at</abbr>
+<p>There is the expressions sample project. For a full language that can also be evaluated, have a look <abbr title="affine transform">at</abbr>
 <a href="http://voelter.de/data/pub/kernelf-reference.pdf">KernelF</a> available <abbr title="affine transform">at</abbr> <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
@@ -814,8 +819,8 @@ Each root node is a root of a tree of nodes, So that overall, a repository is a 
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you organize large projects <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>?</p>
-<p>Read the two answers <abbr title="input (stream)">in</abbr> <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360010373120-How-to-organize-large-projects-in-MPS-">this thread</a>.</p>
+<p class="admonition-title">How do you organize large projects in <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p>Read the two answers in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360010373120-How-to-organize-large-projects-in-MPS-">this thread</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you debug <abbr title="Meta Programming System">MPS</abbr> projects?</p>
@@ -843,15 +848,15 @@ Each root node is a root of a tree of nodes, So that overall, a repository is a 
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/">Why is my project suddenly read-only?</a></p>
 </div>
 <details class="question">
-<summary>How do you work with more than one project <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>?</summary>
+<summary>How do you work with more than one project in <abbr title="Meta Programming System">MPS</abbr>?</summary>
 <blockquote>
-<p>Given I want to work on a <abbr title="Meta Programming System">MPS</abbr> project that uses other projects and I want to switch between tasks that sometimes need changes on both, <abbr title="input (stream)">in</abbr> the dependent project and the root project. I would like to switch back and forth between using the default prepackaged project dependencies and my own repository of them where I build them myself. How could I do that?</p>
+<p>Given I want to work on a <abbr title="Meta Programming System">MPS</abbr> project that uses other projects and I want to switch between tasks that sometimes need changes on both, in the dependent project and the root project. I would like to switch back and forth between using the default prepackaged project dependencies and my own repository of them where I build them myself. How could I do that?</p>
 </blockquote>
-<p><strong>Option 0</strong>: Open multiple projects <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> <abbr title="affine transform">at</abbr> the same time</p>
+<p><strong>Option 0</strong>: Open multiple projects in <abbr title="Meta Programming System">MPS</abbr> <abbr title="affine transform">at</abbr> the same time</p>
 <ul>
 <li>Works when doing small changes</li>
 <li>fast</li>
-<li>unreliable: when changing dependencies <abbr title="input (stream)">in</abbr> my source models, this leads to a reload operation on the repository, which sometimes messes up the loaded repository and caches</li>
+<li>unreliable: when changing dependencies in my source models, this leads to a reload operation on the repository, which sometimes messes up the loaded repository and caches</li>
 </ul>
 <p><strong>Option 1</strong>: Publish and pull from local maven (<span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -861,7 +866,7 @@ Each root node is a root of a tree of nodes, So that overall, a repository is a 
 <ul>
 <li>reliable</li>
 <li><a href="https://github.com/IETS3/iets3.opensource/wiki/Building-IETS3#building-against-local-mbeddr">example</a></li>
-<li>gradle script needs to <abbr title="binary expression">be</abbr> told to pull from local repository
+<li>gradle script needs to be told to pull from local repository
 – e.g. by providing <code>-PforceLocalDependencies</code> to <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr>
 – or use dependency overrides</li>
 </ul>
@@ -874,15 +879,15 @@ Each root node is a root of a tree of nodes, So that overall, a repository is a 
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
 </svg>
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>)
-We usually have a <code>./gradlew setup</code> task <abbr title="input (stream)">in</abbr> our projects that replaces your <code>.mps/libraries.xml</code>. When you want to change the project, you’ll need to change the configuration of that command line setup task and rerun it.</p>
-<p><strong>Option 3b</strong>: <abbr title="Meta Programming System">MPS</abbr> <em>Path variables</em> <abbr title="input (stream)">in</abbr> settings (deprecated)</p>
-<p>In the <abbr title="Meta Programming System">MPS</abbr> setttings, you can configure path variables that can <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> <code>.mps/libraries.xml</code> to pinpoint to the location of a target project.</p>
-<p>They will only configure the <abbr title="Meta Programming System">MPS</abbr> behavior and not affect the command line builds. So <abbr title="input (stream)">in</abbr> most cases, you don’t want to use them and instead let your build script setup these files.</p>
+We usually have a <code>./gradlew setup</code> task in our projects that replaces your <code>.mps/libraries.xml</code>. When you want to change the project, you’ll need to change the configuration of that command line setup task and rerun it.</p>
+<p><strong>Option 3b</strong>: <abbr title="Meta Programming System">MPS</abbr> <em>Path variables</em> in settings (deprecated)</p>
+<p>In the <abbr title="Meta Programming System">MPS</abbr> setttings, you can configure path variables that can be used in <code>.mps/libraries.xml</code> to pinpoint to the location of a target project.</p>
+<p>They will only configure the <abbr title="Meta Programming System">MPS</abbr> behavior and not affect the command line builds. So in most cases, you don’t want to use them and instead let your build script setup these files.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Why is <abbr title="Meta Programming System">MPS</abbr> shipped with <abbr title="JetBrains Runtime">JBR</abbr> instead of using an installed <abbr title="Java Development Kit">JDK</abbr>/<abbr title="Java Runtime Environment">JRE</abbr>?</p>
-<p><abbr title="JetBrains Runtime">JBR</abbr> is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More <abbr title="information">info</abbr> can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/JetBrainsRuntime" title="GitHub Repository: JetBrains/JetBrainsRuntime">JetBrains/JetBrainsRuntime</a>.</p>
+<p><abbr title="JetBrains Runtime">JBR</abbr> is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More <abbr title="information">info</abbr> can be found in <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/JetBrainsRuntime" title="GitHub Repository: JetBrains/JetBrainsRuntime">JetBrains/JetBrainsRuntime</a>.</p>
 </div>
 <hr/>
 <div class="md-source-file">

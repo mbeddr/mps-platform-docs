@@ -619,6 +619,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -816,19 +821,19 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="behavior-aspect">Behavior aspect<a class="headerlink" href="#behavior-aspect" title="Permanent link">¶</a></h1>
-<p>The behavior aspect can <abbr title="binary expression">be</abbr> use for defining methods for the concepts of the language.</p>
+<p>The behavior aspect can be use for defining methods for the concepts of the language.</p>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Can you use asynchronous code <abbr title="input (stream)">in</abbr> behaviour methods such as calling external tools?</p>
+<p class="admonition-title">Can you use asynchronous code in behaviour methods such as calling external tools?</p>
 <p>Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behaviour code. 
-It should always <abbr title="binary expression">be</abbr> assumed that you have the correct lock <abbr title="input (stream)">in</abbr> this methods. Move the code concerning the concurrent access for example into a background task.
-More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+It should always be assumed that you have the correct lock in this methods. Move the code concerning the concurrent access for example into a background task.
+More information can be found in <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you save temporary information about nodes?</p>
-<p>Consider saving temporay data about nodes <abbr title="input (stream)">in</abbr> annotations and user objects (<a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529">node/.putUserObject</a>, <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529">node/.getUserObject</a>)
+<p>Consider saving temporay data about nodes in annotations and user objects (<a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529">node/.putUserObject</a>, <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529">node/.getUserObject</a>)
 instead of introducing properties. 
-You can store and access Java-Objects <abbr title="input (stream)">in</abbr> <code>SNode::putUserObject()</code> as key-value pairs)where you normally could not access them <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr> context, e.g. storing it as node member and access it <abbr title="input (stream)">in</abbr> an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> exceptional cases.
+You can store and access Java-Objects in <code>SNode::putUserObject()</code> as key-value pairs)where you normally could not access them in the <abbr title="Meta Programming System">MPS</abbr> context, e.g. storing it as node member and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
 For the generator consult the section <code>Transferring User Data</code> of the <a href="https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference">generator documentation</a>.</p>
 </div>
 <details class="question">
@@ -839,9 +844,9 @@ For the generator consult the section <code>Transferring User Data</code> of the
 </blockquote>
 <p>Solutions:</p>
 <ul>
-<li>Initialize it with <code>null</code> <abbr title="input (stream)">in</abbr> the light quotation.</li>
+<li>Initialize it with <code>null</code> in the light quotation.</li>
 <li>Create it without light quotation.</li>
-<li>Allow the child to <abbr title="binary expression">be</abbr> optional (<code>[0..1]</code>).</li>
+<li>Allow the child to be optional (<code>[0..1]</code>).</li>
 </ul>
 </details>
 <div class="admonition question">
@@ -857,8 +862,8 @@ For the generator consult the section <code>Transferring User Data</code> of the
 <summary>Why does the virtual method have <em>isVirtual=false</em>?</summary>
 <blockquote>
 <p>Given there is a virtual behavior method <code>getPresentation</code>.
-When I override <code>getPresentation</code> <abbr title="input (stream)">in</abbr> a subconcept
-then I see it displays the overriding method to <abbr title="binary expression">be</abbr> virtual.</p>
+When I override <code>getPresentation</code> in a subconcept
+then I see it displays the overriding method to be virtual.</p>
 <p><a class="glightbox" href="../../img/virtual_getPresentation.png"><img alt="virtual getPresentation" src="../../img/virtual_getPresentation.png"/></a></p>
 <p>Yet, I see that <code>methodDeclNode.isVirtual</code> is <code>null</code>.</p>
 <p><a class="glightbox" href="../../img/methodDeclNode_isVirtual_null.png"><img alt="methodDeclNode isVirtual is null" src="../../img/methodDeclNode_isVirtual_null.png"/></a></p>
@@ -872,7 +877,7 @@ then I see it displays the overriding method to <abbr title="binary expression">
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>The editor shows that a method is <em>virtual</em> when <code>isVirtual()</code> is true. As a result, overriding methods of virtual methods are not necessarily having <code>isVirtual=true</code>, but will still display <em>virtual</em>.</p>
-<p>The rationale behind may <abbr title="binary expression">be</abbr> that if a method is overriding another one, both of them must <abbr title="binary expression">be</abbr> virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the <code>isVirtual</code> more precisely as „is explicitly virtual”, and <code>isVirtual()</code> as “is effectively virtual”.</p>
+<p>The rationale behind may be that if a method is overriding another one, both of them must be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the <code>isVirtual</code> more precisely as „is explicitly virtual”, and <code>isVirtual()</code> as “is effectively virtual”.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">¶</a></h2>
@@ -883,22 +888,22 @@ then I see it displays the overriding method to <abbr title="binary expression">
 <p>How can I ensure that all created node will have a non-null <code>HTMLDescription</code>?</p>
 </blockquote>
 <p><strong>Using a node factory</strong></p>
-<p>The node factory will <abbr title="binary expression">be</abbr> called when</p>
+<p>The node factory will be called when</p>
 <ul>
 <li>The code completion menu is invoked to create such a node or to replace another one.</li>
 <li><code>add new initialized</code>, <code>set new initialized</code>, or <code>replace new initialized</code> is called.</li>
-<li>Such a node is created as a root from the context menu <abbr title="input (stream)">in</abbr> the project view.</li>
+<li>Such a node is created as a root from the context menu in the project view.</li>
 </ul>
 <p>The node factory is <strong>not</strong> called when</p>
 <ul>
 <li>using quotations <code>&lt;Car()&gt;</code>.</li>
-<li>viewing the node <abbr title="input (stream)">in</abbr> the editor.</li>
+<li>viewing the node in the editor.</li>
 <li>adding it as a root with <code>model.add root(&lt;Car()&gt;)</code>.</li>
 <li>adding it as a root with <code>model.add new root(Car)</code>.</li>
 </ul>
 <p><a class="glightbox" href="../../img/node_factory_car.png"><img alt="node factory:car" src="../../img/node_factory_car.png" width="600px"/></a></p>
 <p><strong>Using a behavior constructor</strong></p>
-<p>Using a behavior constructor will only partially achieve this. Note that it will only <abbr title="binary expression">be</abbr> called when</p>
+<p>Using a behavior constructor will only partially achieve this. Note that it will only be called when</p>
 <ul>
 <li>creating nodes with <code>add new initialized()</code>, <code>set new initialized()</code> and similar methods from <code>j.m.lang.actions</code> and <code>j.m.lang.smodel</code>.</li>
 <li>creating a node with <code>new node&lt;Car&gt;()</code>.</li>
@@ -907,7 +912,7 @@ then I see it displays the overriding method to <abbr title="binary expression">
 <p><a class="glightbox" href="../../img/Car_behavior.png"><img alt="Behavior: car" src="../../img/Car_behavior.png" width="600px"/></a></p>
 <p><strong>Using a property getter</strong></p>
 <p>You could use an <code>initialized</code> variable and use a combination of property getters and setters.</p>
-<p>This would work only for properties though, not for children or references, and requires quotations to also set the <code>initialized</code> value if trying to override the default. Furthermore, your quotations will still <abbr title="binary expression">be</abbr> marked. </p>
+<p>This would work only for properties though, not for children or references, and requires quotations to also set the <code>initialized</code> value if trying to override the default. Furthermore, your quotations will still be marked. </p>
 <p><a class="glightbox" href="../../img/constraints_Car.png"><img alt="Constraints: Car" src="../../img/constraints_Car.png" width="500px"/></a></p>
 <p><figure markdown="">
 <a class="glightbox" href="../../img/car_usage.png"><img alt="Usage: Car" src="../../img/car_usage.png" width="500px"/></a>
@@ -915,17 +920,17 @@ then I see it displays the overriding method to <abbr title="binary expression">
 </figure></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">Can you access the parent <abbr title="input (stream)">in</abbr> the constructor?</p>
+<p class="admonition-title">Can you access the parent in the constructor?</p>
 <p>No, it doesn’t work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use for example a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory</a> to access the parent instead.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you query the context <abbr title="input (stream)">in</abbr> a node constructor?</p>
+<p class="admonition-title">How can you query the context in a node constructor?</p>
 <blockquote>
 <p>Does anyone know a way to find the contextExpression from the node constructor?</p>
 </blockquote>
 <p>Use a node factories instead of constructors and make use of the <code>enclosingNode</code> parameter. 
 Constructors are invoked always when creating a node. Node factories are invoked only by the editor and by the <code>new initialized ...</code> expression.</p>
-<p>Note: Node factories are invoked <abbr title="input (stream)">in</abbr> the inverse order of constructors. <abbr title="Meta Programming System">MPS</abbr> will first invoke the specific node factory and the more generic ones if the exist.</p>
+<p>Note: Node factories are invoked in the inverse order of constructors. <abbr title="Meta Programming System">MPS</abbr> will first invoke the specific node factory and the more generic ones if the exist.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a way to call the constructor of a super concept inside the constructor of a subconcept?</p>
@@ -948,11 +953,11 @@ superConcept()
 <p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-27720"><abbr title="Meta Programming System">MPS</abbr>-27720</a>).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can you use variable arguments (varArgs) <abbr title="input (stream)">in</abbr> behavior methods?</p>
+<p class="admonition-title">Can you use variable arguments (varArgs) in behavior methods?</p>
 <p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-31056"><abbr title="Meta Programming System">MPS</abbr>-31056</a>).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can you enter a <em>throws</em> clause <abbr title="input (stream)">in</abbr> behavior methods?</p>
+<p class="admonition-title">Can you enter a <em>throws</em> clause in behavior methods?</p>
 <p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22306"><abbr title="Meta Programming System">MPS</abbr>-22306</a>).</p>
 </div>
 <div class="footnote">

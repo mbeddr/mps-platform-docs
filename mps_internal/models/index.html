@@ -726,6 +726,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1030,48 +1035,48 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="model">Model<a class="headerlink" href="#model" title="Permanent link">¶</a></h1>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below module <abbr title="input (stream)">in</abbr> the logical view. They may <abbr title="binary expression">be</abbr> nested <abbr title="input (stream)">in</abbr> folders.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below module in the logical view. They may be nested in folders.</p>
 <ul>
 <li>Container for model contents limiting dependencies to other models.</li>
 <li>They are within the boundaries of the containing module.</li>
 </ul>
-<p>Models can <abbr title="binary expression">be</abbr> nested <abbr title="input (stream)">in</abbr> folders. Folders are only for visual organization, they don’t have any effect on storage location, generation or any other aspect.</p>
+<p>Models can be nested in folders. Folders are only for visual organization, they don’t have any effect on storage location, generation or any other aspect.</p>
 <h2 id="types-of-models">Types of models<a class="headerlink" href="#types-of-models" title="Permanent link">¶</a></h2>
-<p>The <abbr title="Integrated Development Environment">IDE</abbr> knows several types of models. They differ <abbr title="input (stream)">in</abbr> their semantics and sometimes presentation. They don’t differ from a technical point of view.</p>
+<p>The <abbr title="Integrated Development Environment">IDE</abbr> knows several types of models. They differ in their semantics and sometimes presentation. They don’t differ from a technical point of view.</p>
 <h3 id="regular-models">Regular models<a class="headerlink" href="#regular-models" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution <abbr title="input (stream)">in</abbr> the logical view</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution in the logical view</p>
 <p>They contain root nodes with no specific semantics or presentation.</p>
 <h3 id="language-aspects">Language aspects<a class="headerlink" href="#language-aspects" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language <abbr title="input (stream)">in</abbr> the logical view</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in the logical view</p>
 <p>Aspects are models within a language with a special meaning. They are recognized by their name.</p>
 <h4 id="plugin-aspect">Plugin aspect<a class="headerlink" href="#plugin-aspect" title="Permanent link">¶</a></h4>
 <p>Although this aspect adheres to the <a href="#mps-plugin-model">plugin model</a> naming convention, don’t use it. Use it only to define <abbr title="Meta Programming System">MPS</abbr> extension points (from language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins>).</p>
 <h3 id="test-model">Test model<a class="headerlink" href="#test-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution <abbr title="input (stream)">in</abbr> a specific folder named `tests? with specific icon <abbr title="input (stream)">in</abbr> the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution in a specific folder named `tests? with specific icon in the logical view.</p>
 <p>A model containing tests. Defined by the <em>@tests</em> stereotype.</p>
 <h3 id="generator-model">Generator model<a class="headerlink" href="#generator-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry with specific icon below generator <abbr title="input (stream)">in</abbr> the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry with specific icon below generator in the logical view.</p>
 <p>A model containing the generator, defined by the <em>@generator</em> stereotype.</p>
 <h3 id="transient-model">Transient model<a class="headerlink" href="#transient-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: last entry below project <abbr title="input (stream)">in</abbr> logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: last entry below project in logical view.</p>
 <p>Temporary models produced during generation, defined by <em>@transient«someNumber»</em> or <em>@«someNumber»</em> stereotype.</p>
 <h3 id="accessories-model">Accessories model<a class="headerlink" href="#accessories-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language <abbr title="input (stream)">in</abbr> a specific folder named <em>accessories</em> <abbr title="input (stream)">in</abbr> the logical view or entry below the solution <abbr title="input (stream)">in</abbr> the logical view.</p>
-<p>A model specially selected by a language. Nodes contained <abbr title="input (stream)">in</abbr> these models are implicitly available on the Java classpath and the <a href="#dependencies">dependencies</a> of any model using this language. A use case would <abbr title="binary expression">be</abbr> a default library of concept instances to <abbr title="binary expression">be</abbr> available <abbr title="affine transform">at</abbr> any place you use the Language.</p>
-<p>You can store accessory models <abbr title="input (stream)">in</abbr> two places: either as an aspect of a language (recommended), or as a regular model below a solution. In both cases, the model needs to <abbr title="binary expression">be</abbr> added to the module runtime language settings.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a specific folder named <em>accessories</em> in the logical view or entry below the solution in the logical view.</p>
+<p>A model specially selected by a language. Nodes contained in these models are implicitly available on the Java classpath and the <a href="#dependencies">dependencies</a> of any model using this language. A use case would be a default library of concept instances to be available <abbr title="affine transform">at</abbr> any place you use the Language.</p>
+<p>You can store accessory models in two places: either as an aspect of a language (recommended), or as a regular model below a solution. In both cases, the model needs to be added to the module runtime language settings.</p>
 <h3 id="utility-model">Utility model<a class="headerlink" href="#utility-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language <abbr title="input (stream)">in</abbr> a special folder named <em>util models</em> <abbr title="input (stream)">in</abbr> the logical view.</p>
-<p>It includes code required <abbr title="input (stream)">in</abbr> other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation or a generator needs to do complex model traversals. Create them as regular models within the language.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a special folder named <em>util models</em> in the logical view.</p>
+<p>It includes code required in other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation or a generator needs to do complex model traversals. Create them as regular models within the language.</p>
 <h3 id="build-model">Build model<a class="headerlink" href="#build-model" title="Permanent link">¶</a></h3>
-<p>**<abbr title="User Interface">UI</abbr>: entry below a solution <abbr title="input (stream)">in</abbr> the logical view</p>
+<p>**<abbr title="User Interface">UI</abbr>: entry below a solution in the logical view</p>
 <p>It includes nodes from the <a href="#build-language">build language</a>.</p>
 <h3 id="mps-plugin-model"><abbr title="Meta Programming System">MPS</abbr> plugin model<a class="headerlink" href="#mps-plugin-model" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: model within a solution <abbr title="input (stream)">in</abbr> the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: model within a solution in the logical view.</p>
 <p>It includes <abbr title="Meta Programming System">MPS</abbr> plugins. The model name needs to adhere to the naming convention <em>«moduleName».plugin</em>.</p>
 <h2 id="model-stereotype">Model stereotype<a class="headerlink" href="#model-stereotype" title="Permanent link">¶</a></h2>
 <p><strong><abbr title="User Interface">UI</abbr></strong>: attached to the model name, separated by <em>@</em>.</p>
 <p>A model may have a stereotype. To change, <abbr title="addition">add</abbr>, or remove a stereotype, use
-<em>Rename Model Refactoring</em> <abbr title="input (stream)">in</abbr> the context menu of a model.</p>
+<em>Rename Model Refactoring</em> in the context menu of a model.</p>
 <p>Using custom stereotypes interferes with lots of <abbr title="Meta Programming System">MPS</abbr> internals and thus isn’t advised to do.</p>
 <p>The <abbr title="Integrated Development Environment">IDE</abbr> knows some predefined Stereotypes with specific meanings:</p>
 <ul>
@@ -1083,37 +1088,37 @@
 <p><strong><abbr title="User Interface">UI</abbr></strong>: context menu of a model, model properties</p>
 <p>For both dependencies and used languages, the settings of models only restrict the settings from the containing module.</p>
 <h3 id="dependencies-model-settings">Dependencies model settings<a class="headerlink" href="#dependencies-model-settings" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: tab <abbr title="input (stream)">in</abbr> the model properties dialog</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: tab in the model properties dialog</p>
 <p>It lists other models this model contains references to.</p>
 <h3 id="used-languages-model-settings">Used languages model settings<a class="headerlink" href="#used-languages-model-settings" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: tab <abbr title="input (stream)">in</abbr> model properties dialog</p>
-<p>It lists languages used <abbr title="input (stream)">in</abbr> this Model. Any <em>Used Language</em> listed <abbr title="input (stream)">in</abbr> a model, needs to <abbr title="binary expression">be</abbr> <abbr title="input (stream)">in</abbr> the list of <em>Used Languages</em> of the containing module.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: tab in model properties dialog</p>
+<p>It lists languages used in this Model. Any <em>Used Language</em> listed in a model, needs to be in the list of <em>Used Languages</em> of the containing module.</p>
 <h3 id="advanced-model-settings">Advanced model settings<a class="headerlink" href="#advanced-model-settings" title="Permanent link">¶</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: tab <abbr title="input (stream)">in</abbr> the model properties dialog</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: tab in the model properties dialog</p>
 <p>It contains other settings for a model:</p>
 <ul>
-<li>languages engaged on generation: Generators contained <abbr title="input (stream)">in</abbr> languages listed here execute on this model <abbr title="input (stream)">in</abbr> any case.</li>
+<li>languages engaged on generation: Generators contained in languages listed here execute on this model in any case.</li>
 </ul>
 <h3 id="build-language">Build language<a class="headerlink" href="#build-language" title="Permanent link">¶</a></h3>
 <p>Abstracted <a href="https://ant.apache.org/">Apache Ant</a> files used to build and package <abbr title="Meta Programming System">MPS</abbr> Modules outside the <abbr title="Integrated Development Environment">IDE</abbr>.
-It’s used <abbr title="input (stream)">in</abbr> <a href="#build-model">build models</a>. <abbr title="Meta Programming System">MPS</abbr> can execute them via the <em>Run «Build Model name»</em> context menu entry of the build model <abbr title="input (stream)">in</abbr> the logical view.</p>
+It’s used in <a href="#build-model">build models</a>. <abbr title="Meta Programming System">MPS</abbr> can execute them via the <em>Run «Build Model name»</em> context menu entry of the build model in the logical view.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">¶</a></h2>
 <p><strong><abbr title="User Interface">UI</abbr></strong>: section within build model</p>
 <p>This is the scope import for all references to other build models.
 It provides access to resulting artifacts of other build models.</p>
 <h2 id="idea-plugin-dependencies">IDEA plugin dependencies<a class="headerlink" href="#idea-plugin-dependencies" title="Permanent link">¶</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>project structure</em> <abbr title="input (stream)">in</abbr> <em>Build Model</em>, subsection <em>idea plugin</em>, subsection <em>dependencies</em>.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>project structure</em> in <em>Build Model</em>, subsection <em>idea plugin</em>, subsection <em>dependencies</em>.</p>
 <p>It contains the contents of <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">IDEA plugin.xml</a> <em>depends</em> tags.</p>
 <p>This plugin only loads if all dependencies listed here load before. The contents of dependencies are available for this IDEA plugin.</p>
 <h2 id="module-dependencies">Module Dependencies<a class="headerlink" href="#module-dependencies" title="Permanent link">¶</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>mps group</em> <abbr title="input (stream)">in</abbr> <em>Build Model</em>, subsection <em>solution</em>/<em>module</em>, inspector section <em>dependencies</em>.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>mps group</em> in <em>Build Model</em>, subsection <em>solution</em>/<em>module</em>, inspector section <em>dependencies</em>.</p>
 <p>It contains a copy of relations of the described module.</p>
 <h2 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">¶</a></h2>
 <p>It contains a copy of module runtime language settings.</p>
 <h2 id="jars">Jars<a class="headerlink" href="#jars" title="Permanent link">¶</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>default layout</em> <abbr title="input (stream)">in</abbr> <em>Build Model</em></p>
-<p>You have to include all jars included <abbr title="input (stream)">in</abbr> any Java module settings somewhere <abbr title="input (stream)">in</abbr> this section.
-<em>.java</em> files (from Java source paths) need to <abbr title="binary expression">be</abbr> compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding <em>.class</em> files should <abbr title="binary expression">be</abbr> jared, .java files should <abbr title="binary expression">be</abbr> places <abbr title="input (stream)">in</abbr> corresponding location if they are referenced by java_source_stub model root.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>default layout</em> in <em>Build Model</em></p>
+<p>You have to include all jars included in any Java module settings somewhere in this section.
+<em>.java</em> files (from Java source paths) need to be compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding <em>.class</em> files should be jared, .java files should be places in corresponding location if they are referenced by java_source_stub model root.</p>
 <hr/>
 <div class="md-source-file">
 <small>

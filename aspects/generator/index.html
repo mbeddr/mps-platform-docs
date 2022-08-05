@@ -624,6 +624,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -827,7 +832,7 @@
 </a>
 <h1 id="generator-aspect">Generator aspect<a class="headerlink" href="#generator-aspect" title="Permanent link">¶</a></h1>
 <blockquote>
-<p>Generator is a part of language specification that defines the denotational semantics for the concepts <abbr title="input (stream)">in</abbr> the language.</p>
+<p>Generator is a part of language specification that defines the denotational semantics for the concepts in the language.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
@@ -839,7 +844,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you invoke the generator from an external tool?<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<p>Yes, it can <abbr title="binary expression">be</abbr> run from Ant.</p>
+<p>Yes, it can be run from Ant.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you copy the output to another location?</p>
@@ -850,7 +855,7 @@
 <p>Use the class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.tempmodel%28MPS.Core%2F%29%2F%7ETemporaryModels">TemporaryModels</a>.</p>
 </div>
 <details class="question">
-<summary>Which variable names aren’t available because they are used <abbr title="input (stream)">in</abbr> the generator?</summary>
+<summary>Which variable names aren’t available because they are used in the generator?</summary>
 <p><ins>Underlined</ins> variables are specific variables that are available.</p>
 <ul>
 <li>Console: ConsoleContext <strong>context</strong>, ConsoleStream <strong>console</strong></li>
@@ -884,39 +889,39 @@
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/">How <abbr title="Meta Programming System">MPS</abbr> collects generators to engage on a model</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">genplan (<abbr title="input (stream)">in</abbr> devkit) vs. generator priorities?</p>
-<p>The genplan is applied instead of the generator priorities. If your generator should <abbr title="binary expression">be</abbr> applied <abbr title="input (stream)">in</abbr> a model using a genplan, your generator has to <abbr title="binary expression">be</abbr> part of the genplan.
+<p class="admonition-title">genplan (in devkit) vs. generator priorities?</p>
+<p>The genplan is applied instead of the generator priorities. If your generator should be applied in a model using a genplan, your generator has to be part of the genplan.
 When developing a language, which is used within an aspect, e.g. typesystem, the <abbr title="Meta Programming System">MPS</abbr> aspect’s genplan can block the generator.</p>
 </div>
 <details class="question">
 <summary>How can you use generated classes which implement an extension-point?</summary>
 <blockquote>
-<p>Let <span class="arithmatex">\(L_A\)</span> <abbr title="binary expression">be</abbr> a language which offers an extension-point over class <span class="arithmatex">\(E\)</span>. Then it is quite simple to provide a static implementation for extension-point for <span class="arithmatex">\(E\)</span> for example <abbr title="input (stream)">in</abbr> another language. What if we have want map a concept <span class="arithmatex">\(Q\)</span> of <span class="arithmatex">\(B\)</span> to that extension-point? We want to <abbr title="binary expression">be</abbr> able to generated Code <span class="arithmatex">\(C\)</span> from a oncept instance of <span class="arithmatex">\(Q\)</span> which is a subclass of <span class="arithmatex">\(E\)</span>, such that we can use it for the extension-point over class <span class="arithmatex">\(E\)</span>.</p>
+<p>Let <span class="arithmatex">\(L_A\)</span> be a language which offers an extension-point over class <span class="arithmatex">\(E\)</span>. Then it is quite simple to provide a static implementation for extension-point for <span class="arithmatex">\(E\)</span> for example in another language. What if we have want map a concept <span class="arithmatex">\(Q\)</span> of <span class="arithmatex">\(B\)</span> to that extension-point? We want to be able to generated Code <span class="arithmatex">\(C\)</span> from a oncept instance of <span class="arithmatex">\(Q\)</span> which is a subclass of <span class="arithmatex">\(E\)</span>, such that we can use it for the extension-point over class <span class="arithmatex">\(E\)</span>.</p>
 </blockquote>
 <ul>
-<li>Create the extension point <abbr title="input (stream)">in</abbr> the plugin aspect of language <span class="arithmatex">\(L_A\)</span>.</li>
+<li>Create the extension point in the plugin aspect of language <span class="arithmatex">\(L_A\)</span>.</li>
 </ul>
 <p><a class="glightbox" href="../../img/extension_point_ModelMergeExt.png"><img alt="extension point ModelMergeExt" src="../../img/extension_point_ModelMergeExt.png" width="600px"/></a></p>
 <ul>
-<li>In generator main you need to create two root mapping rules for <span class="arithmatex">\(Q\)</span> (which is ModelMerge <abbr title="input (stream)">in</abbr> our case).</li>
+<li>In generator main you need to create two root mapping rules for <span class="arithmatex">\(Q\)</span> (which is ModelMerge in our case).</li>
 </ul>
 <p><a class="glightbox" href="../../img/ModelMergeExt_generator.png"><img alt="ModelMergeExt generator" src="../../img/ModelMergeExt_generator.png" width="600px"/></a></p>
 <ul>
 <li>map_ModelMerge maps <span class="arithmatex">\(Q\)</span> to a class which extends <span class="arithmatex">\(E\)</span> (here <code>ConceptMergeSpec</code>).</li>
-<li>map_ModelMerge_extension will generate an extension for <span class="arithmatex">\(Q\)</span>. It is a extension RootMapping which can <abbr title="binary expression">be</abbr> selected from the intention. </li>
+<li>map_ModelMerge_extension will generate an extension for <span class="arithmatex">\(Q\)</span>. It is a extension RootMapping which can be selected from the intention. </li>
 </ul>
 <p><a class="glightbox" href="../../img/ModelMergeExt_root_template.png"><img alt="ModelMergeExt root template" src="../../img/ModelMergeExt_root_template.png"/></a></p>
-<p>The code for the Reference-Macro <abbr title="input (stream)">in</abbr> the figure above should look like this.
+<p>The code for the Reference-Macro in the figure above should look like this.
 <a class="glightbox" href="../../img/ModelMergeExt_reference_macro.png"><img alt="../img/ModelMergeExt_reference_macro.png" src="../../img/ModelMergeExt_reference_macro.png"/></a></p>
-<p>Make sure you have <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins> included as language <abbr title="input (stream)">in</abbr> the plugin.</p>
+<p>Make sure you have <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins> included as language in the plugin.</p>
 <ul>
-<li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> <abbr title="input (stream)">in</abbr> the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now <abbr title="affine transform">at</abbr> your last transient model, there must <abbr title="binary expression">be</abbr> 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
+<li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now <abbr title="affine transform">at</abbr> your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
 </ul>
 <p>1.the generated class 
 2.the generated extension 
 3.an <code>ExtensionDescriptor</code> which provides all found extensions</p>
 <ul>
-<li>Now you should <abbr title="binary expression">be</abbr> able to locate your extension with a code fragment like this:</li>
+<li>Now you should be able to locate your extension with a code fragment like this:</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -927,14 +932,14 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">Where should you put classes that you need on the user side and <abbr title="input (stream)">in</abbr> the generator?</p>
-<p>Move the classes to a solution and <abbr title="addition">add</abbr> that solution as a runtime solution to the language (<abbr title="input (stream)">in</abbr> the module properties).</p>
+<p class="admonition-title">Where should you put classes that you need on the user side and in the generator?</p>
+<p>Move the classes to a solution and <abbr title="addition">add</abbr> that solution as a runtime solution to the language (in the module properties).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can you access the output model <abbr title="input (stream)">in</abbr> a property macro?</p>
+<p class="admonition-title">Can you access the output model in a property macro?</p>
 <blockquote>
-<p>In reference macros <abbr title="input (stream)">in</abbr> generators, I can use the provided “outputNode” parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will <abbr title="binary expression">be</abbr> contained <abbr title="input (stream)">in</abbr>.
-Can I do something similar <abbr title="input (stream)">in</abbr> property macros? For those, there obviously is no “outputNode”. I’d still like to find, for example, the Node <abbr title="input (stream)">in</abbr> my output model that my generated property belongs to. Is there a way to do that?</p>
+<p>In reference macros in generators, I can use the provided “outputNode” parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
+Can I do something similar in property macros? For those, there obviously is no “outputNode”. I’d still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></sub></sub></p>
 <p>You can try to use the <em>post-processing</em> function of a <code>$MAP_SRC$</code> macro.   </p>
@@ -950,20 +955,20 @@ Can I do something similar <abbr title="input (stream)">in</abbr> property macro
 </div>
 <h2 id="how-to-generate-xy">How to generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">¶</a></h2>
 <div class="admonition question">
-<p class="admonition-title">What can <abbr title="binary expression">be</abbr> generated?</p>
+<p class="admonition-title">What can be generated?</p>
 <p>Have a look <abbr title="affine transform">at</abbr> the <a href="https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository">language repository</a>. You
-might also find other languages on GitHub. In general there doesn’t have to <abbr title="binary expression">be</abbr> an existing language. Any text can <abbr title="binary expression">be</abbr>
+might also find other languages on GitHub. In general there doesn’t have to be an existing language. Any text can be
 generated with TextGen or Plaintextgen from <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,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"/>
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>. It’s also possible to generate code from an action or
-pre/post-processing script <abbr title="input (stream)">in</abbr> the generator by using an existing Java library such as Apache Poi. A tutorial for example 
-for excel can <abbr title="binary expression">be</abbr> found <a href="https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi">here</a>.</p>
+pre/post-processing script in the generator by using an existing Java library such as Apache Poi. A tutorial for example 
+for excel can be found <a href="https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi">here</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I want to create multi outputs for a language.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Use a dummy concept or a generation plan with a fork. This quesion is also answered <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
+<p>Use a dummy concept or a generation plan with a fork. This quesion is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you generate latex files?</p>
@@ -987,8 +992,8 @@ for excel can <abbr title="binary expression">be</abbr> found <a href="https://w
 </div>
 <div class="admonition question">
 <p class="admonition-title">Should you use generation plans or generator priorities?</p>
-<p>Have a look <abbr title="affine transform">at</abbr> the motivation for generation plans <abbr title="input (stream)">in</abbr> the <a href="https://www.jetbrains.com/help/mps/generation-plan.html">official documentation</a>.
-Generation plans should <abbr title="binary expression">be</abbr> used when the generation order is simple.</p>
+<p>Have a look <abbr title="affine transform">at</abbr> the motivation for generation plans in the <a href="https://www.jetbrains.com/help/mps/generation-plan.html">official documentation</a>.
+Generation plans should be used when the generation order is simple.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you generate language X from <abbr title="Meta Programming System">MPS</abbr>?</p>
@@ -998,11 +1003,11 @@ Generation plans should <abbr title="binary expression">be</abbr> used when the 
 <summary>How can you make sure that a generator B can use the output of a generator A?</summary>
 <ol>
 <li>Define priorities or a fixed genplan for <span class="arithmatex">\(B\)</span> (and maybe <span class="arithmatex">\(A\)</span>)</li>
-<li>If you can’t run / don’t want to run both generators <abbr title="input (stream)">in</abbr> the same “phase”, configure them to run one after each other.</li>
+<li>If you can’t run / don’t want to run both generators in the same “phase”, configure them to run one after each other.</li>
 </ol>
 <p>Solution <strong>1</strong>:</p>
 <ul>
-<li>Define a <span class="arithmatex">\(MM\)</span> (structure) (INFO-NODE) <abbr title="input (stream)">in</abbr> <span class="arithmatex">\(A\)</span> where you accumulate all required information and pass for all other generators.</li>
+<li>Define a <span class="arithmatex">\(MM\)</span> (structure) (INFO-NODE) in <span class="arithmatex">\(A\)</span> where you accumulate all required information and pass for all other generators.</li>
 <li>Configure <span class="arithmatex">\(A\)</span> to remove INFO-NODE if not required (separate mapping configuration).</li>
 </ul>
 <p>Solution <strong>2</strong>:</p>
@@ -1031,14 +1036,14 @@ What can I do?</p>
 <p><a class="glightbox" href="../../img/long_string_property_macro.png"><img alt="long string property macro" src="../../img/long_string_property_macro.png" width="600px"/></a></p>
 </blockquote>
 <p><strong>Option 1</strong>: Extract into a separate file</p>
-<p>Of course it would <abbr title="binary expression">be</abbr> better to not fill the java file too much and instead generate the string into a file that gets loaded <abbr title="affine transform">at</abbr> this place.</p>
+<p>Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded <abbr title="affine transform">at</abbr> this place.</p>
 <p><strong>Option 2</strong>: Split and join again</p>
 <p>The restriction only applies to the size of string literals. However, <abbr title="affine transform">at</abbr> runtime, it is allowed to have larger strings. So that we can split it into a concatenation that gets assembled <abbr title="affine transform">at</abbr> runtime then:</p>
 <ul>
 <li>Here we use the <a href="https://github.com/google/guava">Guiva</a> classes <a href="https://github.com/google/guava">Joiner</a> and <a href="https://github.com/google/guava">Splitter</a> from <code>MPS.Core/google.common.base</code> and <code>java.util.Arrays</code>.</li>
 <li>We use the splitter <abbr title="affine transform">at</abbr> generation time to split it into parts of maximal 50000 characters.</li>
 <li>Then we map it onto an arbitrary node that has a string property, as <code>$LOOP$</code> requires a node</li>
-<li>In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible <abbr title="input (stream)">in</abbr> the screenshot)</li>
+<li>In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible in the screenshot)</li>
 <li>It is just a coincidence that we create nodes of the same concept and use the same property for the loop content, than for the outside context node. You may light-quote anything of type string here.</li>
 </ul>
 <p><a class="glightbox" href="../../img/long_string_improved_macro.png"><img alt="long string improved macro" src="../../img/long_string_improved_macro.png"/></a></p>
@@ -1047,7 +1052,7 @@ What can I do?</p>
 <h2 id="open-api">Open API<a class="headerlink" href="#open-api" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you preview the generated text programmatically?</p>
-<p>Use the <abbr title="Meta Programming System">MPS</abbr> action <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769">TextPreviewModel</a> or call the methods <abbr title="input (stream)">in</abbr> <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine">TextGeneratorEngine</a> if you want to use the text generator.</p>
+<p>Use the <abbr title="Meta Programming System">MPS</abbr> action <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769">TextPreviewModel</a> or call the methods in <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine">TextGeneratorEngine</a> if you want to use the text generator.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get the output path for a solution?</p>
@@ -1061,7 +1066,7 @@ What can I do?</p>
 <blockquote>
 <p>The project view shows <code>generation required</code> if a model has been changed.
 What is the source of this information, and how reliable is it?</p>
-<p>(regarding the 2<sup>nd</sup> part of the question: sometimes the text <abbr title="input (stream)">in</abbr> the project view is not up to date, but pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> fixes it. Is it just the <abbr title="User Interface">UI</abbr> that is not updated when the underlying state changes, or is the state itself not updated properly until <span class="keys"><kbd class="key-f5">F5</kbd></span> is pressed?)</p>
+<p>(regarding the 2<sup>nd</sup> part of the question: sometimes the text in the project view is not up to date, but pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> fixes it. Is it just the <abbr title="User Interface">UI</abbr> that is not updated when the underlying state changes, or is the state itself not updated properly until <span class="keys"><kbd class="key-f5">F5</kbd></span> is pressed?)</p>
 </blockquote>
 <p><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EModelGenerationStatusManager">ModelGenerationStatusManager</a> provides a corresponding API. This is how to use it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1072,7 +1077,7 @@ What is the source of this information, and how reliable is it?</p>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">ModelGenerationStatusManager</span><span class="w"> </span><span class="n">statusManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="na">getComponent</span><span class="p">(</span><span class="n">ModelGenerationStatusManager</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">statusManager</span><span class="p">.</span><span class="na">generationRequired</span><span class="p">(</span><span class="n">model</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-<p>Unfortunately, it does’nt seem to <abbr title="binary expression">be</abbr> reliable, e.g. when changing something <abbr title="input (stream)">in</abbr> the model, the API behaves correctly <abbr title="input (stream)">in</abbr> the first place. But after executing the <em>Synchronize</em> action, <abbr title="Meta Programming System">MPS</abbr> for some reason believes that generation is not required any more (even though the change would have an effect on the output and <em>Synchronize</em> doesn’t execute the generation). This odd behavior can also <abbr title="binary expression">be</abbr> seen <abbr title="input (stream)">in</abbr> the project view (note: this might <abbr title="binary expression">be</abbr> outdated information).</p>
+<p>Unfortunately, it does’nt seem to be reliable, e.g. when changing something in the model, the API behaves correctly in the first place. But after executing the <em>Synchronize</em> action, <abbr title="Meta Programming System">MPS</abbr> for some reason believes that generation is not required any more (even though the change would have an effect on the output and <em>Synchronize</em> doesn’t execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">
@@ -1091,15 +1096,15 @@ What is the source of this information, and how reliable is it?</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> can’t resolve the import XY.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
-<p>The solution that contains the class has to <abbr title="binary expression">be</abbr> added as a runtime solution (see <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000">here</a>).</p>
+<p>The solution that contains the class has to be added as a runtime solution (see <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000">here</a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Why are root nodes generated more than once?</p>
-<p>Have you used one of your root nodes as a child of another node? It will still <abbr title="actual">act</abbr> as a root node <abbr title="input (stream)">in</abbr> this case.</p>
+<p>Have you used one of your root nodes as a child of another node? It will still <abbr title="actual">act</abbr> as a root node in this case.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">No output location for XY.</p>
-<p>Make sure that the Java facet is enabled <abbr title="input (stream)">in</abbr> the properties of the language or solution. This error can often <abbr title="binary expression">be</abbr> seen when opening an old <abbr title="Meta Programming System">MPS</abbr> project.</p>
+<p>Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old <abbr title="Meta Programming System">MPS</abbr> project.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I debug generators?</p>
@@ -1107,7 +1112,7 @@ What is the source of this information, and how reliable is it?</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The generated code has no debug symbols.</p>
-<p>Locate the build solution <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> that is building your languages and adjust the java settings:</p>
+<p>Locate the build solution in <abbr title="Meta Programming System">MPS</abbr> that is building your languages and adjust the java settings:</p>
 <div class="codehilite"><pre><span></span><code>java options &lt;project default&gt; 
   generate debug info false 
   generate no warnings false 
@@ -1118,26 +1123,26 @@ What is the source of this information, and how reliable is it?</p>
   copy resources false
 </code></pre></div>
 <p>Then set <em>generate debug <abbr title="information">info</abbr></em> to true.</p>
-<p>If no java options exist <abbr title="input (stream)">in</abbr> your build solution, simply <abbr title="addition">add</abbr> one <abbr title="input (stream)">in</abbr> the project structure.</p>
+<p>If no java options exist in your build solution, simply <abbr title="addition">add</abbr> one in the project structure.</p>
 </div>
 <details class="question">
 <summary>How can you debug the differences of generation between command line and <abbr title="Meta Programming System">MPS</abbr>?</summary>
 <blockquote>
-<p>Given I have an <abbr title="Meta Programming System">MPS</abbr> project and it compiles well <abbr title="input (stream)">in</abbr> my <abbr title="Meta Programming System">MPS</abbr>.
-When I run the same <abbr title="input (stream)">in</abbr> a command line then I see a compile error.
+<p>Given I have an <abbr title="Meta Programming System">MPS</abbr> project and it compiles well in my <abbr title="Meta Programming System">MPS</abbr>.
+When I run the same in a command line then I see a compile error.
 How can I debug this?</p>
 </blockquote>
-<p>The issue behind this kind of issues usually lies <abbr title="input (stream)">in</abbr> one of these three things:</p>
+<p>The issue behind this kind of issues usually lies in one of these three things:</p>
 <p><strong>Issue Area 1</strong>: Settings (inplace, threading)</p>
-<p>Try turning off <em>Apply transformations <abbr title="input (stream)">in</abbr> place</em> <abbr title="input (stream)">in</abbr> your <abbr title="Meta Programming System">MPS</abbr> settings under <em>Build, Execution, Deployment</em> → <em>Generator</em> → <em>General</em>, as this is unset <abbr title="input (stream)">in</abbr> the command line (note, that this setting doesn’t appear <abbr title="input (stream)">in</abbr> the search):</p>
+<p>Try turning off <em>Apply transformations in place</em> in your <abbr title="Meta Programming System">MPS</abbr> settings under <em>Build, Execution, Deployment</em> → <em>Generator</em> → <em>General</em>, as this is unset in the command line (note, that this setting doesn’t appear in the search):</p>
 <p><a class="glightbox" href="../../img/generator_settings.png"><img alt="generator settings" src="../../img/generator_settings.png" width="600px"/></a></p>
-<p>Also, disabling the build <abbr title="input (stream)">in</abbr> parallel threads may help.</p>
+<p>Also, disabling the build in parallel threads may help.</p>
 <p><strong>Issue Area 2</strong>: Dependencies</p>
-<p>A second issue may originate from the separate type of class loading and dependency loading <abbr title="input (stream)">in</abbr> the command line.</p>
+<p>A second issue may originate from the separate type of class loading and dependency loading in the command line.</p>
 <p><strong>Issue Area 3</strong>: Generation plans</p>
-<p>The command line build runs the generator plans that are included <abbr title="input (stream)">in</abbr> the devkits of a model, or that are explicitly added to the <em>generator</em> facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could <abbr title="binary expression">be</abbr> the culprit. (Remember, right-clicking a model and <em>Show Generation Plan</em> to see if all looks as expected).</p>
-<p>Remark 1: Inplace transformations are on or off depending on your build script, same applied to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that <abbr title="input (stream)">in</abbr> the command line build not project is opened, which means anything that tried to access the project including virtual files will fail.</p>
-<p>Remark 2: One potential source of problems could <abbr title="binary expression">be</abbr> packaging of languages and generators. Because <abbr title="input (stream)">in</abbr> the command line build generators might need to <abbr title="binary expression">be</abbr> loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation <abbr title="input (stream)">in</abbr> the command line.</p>
+<p>The command line build runs the generator plans that are included in the devkits of a model, or that are explicitly added to the <em>generator</em> facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could be the culprit. (Remember, right-clicking a model and <em>Show Generation Plan</em> to see if all looks as expected).</p>
+<p>Remark 1: Inplace transformations are on or off depending on your build script, same applied to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build not project is opened, which means anything that tried to access the project including virtual files will fail.</p>
+<p>Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
 <div class="footnote">

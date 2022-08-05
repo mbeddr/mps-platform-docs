@@ -634,6 +634,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -849,22 +854,22 @@
 <p>The editor aspect defines the projectional editor of a concept.</p>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
 <div class="admonition question">
-<p class="admonition-title">What happens when you press <span class="keys"><kbd class="key-f5">F5</kbd></span> <abbr title="input (stream)">in</abbr> the editor?</p>
-<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 <abbr title="input (stream)">in</abbr> editor</a></p>
+<p class="admonition-title">What happens when you press <span class="keys"><kbd class="key-f5">F5</kbd></span> in the editor?</p>
+<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
 <p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script</a> that can remove properties.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I’ve set a color of type java.awt.Color <abbr title="input (stream)">in</abbr> a style property query but the color is different when using the darcula theme.</p>
-<p>The return type of those functions indicate that they return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can <abbr title="binary expression">be</abbr> found <a href="../../patterns/user_experience#dark-theme">here</a>.</p>
+<p class="admonition-title">I’ve set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme.</p>
+<p>The return type of those functions indicate that they return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can be found <a href="../../patterns/user_experience#dark-theme">here</a>.</p>
 </div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Explain the different menu related terms.</p>
 <ul>
-<li><strong>Menu definitions</strong> have two flavours <em>named</em> and +default+ and can <abbr title="binary expression">be</abbr> defined <abbr title="input (stream)">in</abbr> transformation or substitute menus.</li>
+<li><strong>Menu definitions</strong> have two flavours <em>named</em> and +default+ and can be defined in transformation or substitute menus.</li>
 <li>
 <ul>
 <li>
@@ -875,28 +880,28 @@
 <p><strong>Default menu</strong></p>
 <ul>
 <li><strong>Transformation menus</strong>
-    define <abbr title="User Interface">UI</abbr> actions that will <abbr title="binary expression">be</abbr> shown <abbr title="input (stream)">in</abbr> various locations. The menu is defined as a list of sections.
+    define <abbr title="User Interface">UI</abbr> actions that will be shown in various locations. The menu is defined as a list of sections.
     Each section contains a list of menu parts for a set of locations. 
     At runtime the menu parts and locations are used to generate the content of the completion menu.
     The contents of the completion menu are called menu items.</li>
 <li><strong>Parameterized actions</strong>
-    allow to calculate a list of elements of a specific type to <abbr title="binary expression">be</abbr> shown <abbr title="input (stream)">in</abbr> the completion menu.
+    allow to calculate a list of elements of a specific type to be shown in the completion menu.
     They calculate all elements for the substitution menu and have an influence on the node creation.
-    Moreover, they definesthe selection where the cursor should <abbr title="binary expression">be</abbr> placed.</li>
+    Moreover, they definesthe selection where the cursor should be placed.</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find out where a substitute menu entry is coming from?</p>
-<p>Use the <em>Menu Trace Tool</em> window. More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p>Use the <em>Menu Trace Tool</em> window. More information can be found in <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 </div>
 <details class="question">
 <summary>What’s the best way to improve the autocomplete description of concepts?</summary>
 <blockquote>
-<p>As you can see <abbr title="input (stream)">in</abbr> the screenshot, the concepts of both opening braces are indistinguishable.</p>
+<p>As you can see in the screenshot, the concepts of both opening braces are indistinguishable.</p>
 <p><a class="glightbox" href="../../img/autocompletion_myUnion.png"><img alt="autocompletion myUnion" src="../../img/autocompletion_myUnion.png"/></a></p>
-<p>By changing the short description <abbr title="input (stream)">in</abbr> the concept structure, I can change the description.</p>
+<p>By changing the short description in the concept structure, I can change the description.</p>
 <ol>
 <li>What’s the best format to improve these descriptions?</li>
 <li>Is this way the correct/best one to change the autocomplete concept description?</li>
@@ -906,7 +911,7 @@
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/aquapp" title="GitHub User: aquapp">@aquapp</a><sub></sub></sub></p>
 <p>In general, it’s up to the users and specific context to decide what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.</p>
-<p>The short description <abbr title="input (stream)">in</abbr> the concept is the original, simple way to provide static description <abbr title="input (stream)">in</abbr> the code completion menu. You can also <abbr title="addition">add</abbr> your own substitute action <abbr title="input (stream)">in</abbr> the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to <abbr title="binary expression">be</abbr> able to generate the text dynamically based on the context.</p>
+<p>The short description in the concept is the original, simple way to provide static description in the code completion menu. You can also <abbr title="addition">add</abbr> your own substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
 <p><a class="glightbox" href="../../img/DataItem_substituteMenu.png"><img alt="DataItem SubstituteMenu" src="../../img/DataItem_substituteMenu.png" width="800px"/></a></p>
 <p><a class="glightbox" href="../../img/data_autocompletion.png"><img alt="data autocompletion" src="../../img/data_autocompletion.png" width="800px"/></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/wsafonov" title="GitHub User: wsafonov">@wsafonov</a><sub></sub></sub></p>
@@ -931,12 +936,12 @@
 <div class="admonition question">
 <p class="admonition-title">How do you create clickable links?</p>
 <ul>
-<li>Specific Languages Blog: <a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links <abbr title="input (stream)">in</abbr> the editor</a></li>
+<li>Specific Languages Blog: <a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a></li>
 <li>Specific Languages Blog: <a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a></li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you include non-child relations <abbr title="input (stream)">in</abbr> the editor?.</p>
+<p class="admonition-title">How can you include non-child relations in the editor?.</p>
 <p>Use the language <ins>com.mbeddr.mpsutil.editor.querylist</ins> from <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,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"/>
@@ -946,7 +951,7 @@
 <h2 id="editor-declaration">Editor declaration<a class="headerlink" href="#editor-declaration" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Is there a disadvantage by using the indent layout instead of the indent cell mode?</p>
-<p>No. There used to <abbr title="binary expression">be</abbr> performance issues with bigger models that were fixed <abbr title="input (stream)">in</abbr> <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1</a>.</p>
+<p>No. There used to be performance issues with bigger models that were fixed in <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use an empty text for empty cells?</p>
@@ -954,15 +959,15 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Explain all cell related variables.</p>
-<p>A cell takes up a specific amount of space <abbr title="input (stream)">in</abbr> the editor component (width and height).</p>
+<p>A cell takes up a specific amount of space in the editor component (width and height).</p>
 <ul>
-<li>padding-left/right/top/bottom: a floating point number, which specifies the padding of a text cell, i.e. how much space will <abbr title="binary expression">be</abbr> between cell’s text and cell’s left and right sides, respectively.</li>
+<li>padding-left/right/top/bottom: a floating point number, which specifies the padding of a text cell, i.e. how much space will be between cell’s text and cell’s left and right sides, respectively.</li>
 <li>inset: representation of the borders of an element. It specifies the space that an element must leave <abbr title="affine transform">at</abbr> each of its edges.</li>
 <li>baseline: the line upon which most letters sit. </li>
 <li>ascent: the recommended distance above the baseline for singled spaced text.</li>
 <li>descent: the recommended distance below the baseline for singled spaced text.</li>
 <li>height: ascent + descent</li>
-<li>gap: space between cells <abbr title="input (stream)">in</abbr> a collection. There is a left and right gap.</li>
+<li>gap: space between cells in a collection. There is a left and right gap.</li>
 </ul>
 </div>
 <div class="admonition hint">
@@ -977,10 +982,10 @@
 <p>via right-click: push editor hints and select a specific one.</p>
 </li>
 <li>
-<p>via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g. <abbr title="input (stream)">in</abbr> action declarations)</p>
+<p>via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g. in action declarations)</p>
 <ul>
-<li>They are not visible <abbr title="input (stream)">in</abbr> the push Editor hints menu.</li>
-<li>If you need the same behavior e.g. <abbr title="input (stream)">in</abbr> intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
+<li>They are not visible in the push Editor hints menu.</li>
+<li>If you need the same behavior e.g. in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
 </ul>
 </li>
 <li>Explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a>.
@@ -995,17 +1000,17 @@
 <li><strong>(A)</strong> What it looks like after creation</li>
 <li><strong>(B)</strong> Initial situation with cursor <abbr title="affine transform">at</abbr> <strong>(1)</strong>: pressing <span class="keys"><kbd class="key-enter">Enter</kbd></span> leads to <strong>(C)</strong></li>
 </ul>
-<p>The problem is, that <abbr title="input (stream)">in</abbr> <strong>(C)</strong> the cursor is <abbr title="affine transform">at</abbr> <strong>(2)</strong>, right before a read-only cell and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is <abbr title="affine transform">at</abbr> position <strong>(3)</strong>.</p>
-<p>Structure of the new node <abbr title="input (stream)">in</abbr> <strong>(C)</strong>:</p>
+<p>The problem is, that in <strong>(C)</strong> the cursor is <abbr title="affine transform">at</abbr> <strong>(2)</strong>, right before a read-only cell and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is <abbr title="affine transform">at</abbr> position <strong>(3)</strong>.</p>
+<p>Structure of the new node in <strong>(C)</strong>:</p>
 </blockquote>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp9jksKwkAQRPeeok8w4jaEIIgLF55AXCSTkgz0fOjJQFS8u6FjcCNuiu7i8SgiosH1IPg03snDd5C8mVvSsNzmTIfoUyxhPAU3upbdA3JWkp5KGVPbyFGqjgsaOzjuBaHeatkYo9AHSUUSo8GUZAUqOs4fcnYxXHbXH0rBDbPRIv-VLvO_2mXkqnxp7hH64lnvN0HNUZ8="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9jksKwkAQRPeeok8w4jaEIIgLF55AXCSTkgz0fOjJQFS8u6FjcCNuiu7i8SgiosH1IPg03snDd5C8mVvSsNzmTIfoUyxhPAU3upbdA3JWkp5KGVPbyFGqjgsaOzjuBaHeatkYo9AHSUUSo8GUZAUqOs4fcnYxXHbXH0rBDbPRIv-VLvO_2mXkqnxp7hH64lnvN0HNUZ8="/></a></p>
 <blockquote>
-<p>Editor of the new node <abbr title="input (stream)">in</abbr> <strong>(C)</strong>:</p>
+<p>Editor of the new node in <strong>(C)</strong>:</p>
 <p><a class="glightbox" href="../../img/example_c_node_editor.png"><img alt="example c:node editor" src="../../img/example_c_node_editor.png"/></a></p>
 </blockquote>
-<p>Usually, you would set the <em>attracts focus</em> property of the cell, where the cursor should <abbr title="binary expression">be</abbr> positioned, to <code>attractsFocus</code> or <code>FirstEditableCell</code>.
-But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behaviour is to set the cursor <abbr title="input (stream)">in</abbr> front of the first error cell, which is <strong>(C.2)</strong>.</p>
-<p>Therefore, change the first part of your editor to a querylist cell <strong>(A)</strong>, which references the “member” <abbr title="input (stream)">in</abbr> the cell properties <strong>(B)</strong> and set the read-only property on the querylist.</p>
+<p>Usually, you would set the <em>attracts focus</em> property of the cell, where the cursor should be positioned, to <code>attractsFocus</code> or <code>FirstEditableCell</code>.
+But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behaviour is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
+<p>Therefore, change the first part of your editor to a querylist cell <strong>(A)</strong>, which references the “member” in the cell properties <strong>(B)</strong> and set the read-only property on the querylist.</p>
 <p><a class="glightbox" href="../../img/CompoundInitializerMember_editor_new.png"><img alt="new editor for CompoundInitializerMember" src="../../img/CompoundInitializerMember_editor_new.png"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/aquapp" title="GitHub User: aquapp">@aquapp</a><sub></sub></sub></p>
 </details>
@@ -1014,7 +1019,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one swing component from inside another swing component? | <abbr title="Meta Programming System">MPS</abbr> forum</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you access an icon stored <abbr title="input (stream)">in</abbr> a concept?</p>
+<p class="admonition-title">How can you access an icon stored in a concept?</p>
 <p>Create a new <em>custom cell</em>: </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1050,11 +1055,11 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p>The second approach has a better performance, because the highlighter runs asynchronously and not during the editor rebuild.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you hide a custom cell <abbr title="input (stream)">in</abbr> the editor? (<em>show if</em> property)</p>
+<p class="admonition-title">How can you hide a custom cell in the editor? (<em>show if</em> property)</p>
 <blockquote>
-<p>Custom cells expect only a cell provider <abbr title="input (stream)">in</abbr> the inspector, but don’t offer the possibility to specify other attributes to set e.g. “show if”. How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
+<p>Custom cells expect only a cell provider in the inspector, but don’t offer the possibility to specify other attributes to set e.g. “show if”. How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
 </blockquote>
-<p>The meta model actually allows to specify the <em>show if</em> property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included <abbr title="input (stream)">in</abbr> the editor for the inspector. You can use the reflective editor to specify the condition.</p>
+<p>The meta model actually allows to specify the <em>show if</em> property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.</p>
 <p>Since these attributes are hidden and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/aquapp" title="GitHub User: aquapp">@aquapp</a><sub></sub></sub></p>
 </div>
@@ -1126,7 +1131,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you get the selection/ selected node <abbr title="input (stream)">in</abbr> the editor?</p>
+<p class="admonition-title">How to you get the selection/ selected node in the editor?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectedNode</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1152,14 +1157,14 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <div class="admonition question">
 <p class="admonition-title">Is there a callback/hook when an editor tab closes?</p>
 <blockquote>
-<p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes <abbr title="input (stream)">in</abbr> the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.</p>
+<p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.</p>
 <p>In my code, I want to react on this editor-close event. Is there are way to implement a callback or hook which is called when an editor tab is closed?</p>
 </blockquote>
 <p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a utility class related to editor hints?</p>
-<p>Yes, there is <abbr title="input (stream)">in</abbr> <span class="twemoji">
+<p>Yes, there is in <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="/>
 </svg>
@@ -1167,7 +1172,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <h2 id="bugs">Bugs<a class="headerlink" href="#bugs" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Highlighting of constraint errors <abbr title="input (stream)">in</abbr> inspector doesn’t work.</p>
+<p class="admonition-title">Highlighting of constraint errors in inspector doesn’t work.</p>
 <p>Known bug (<a href="https://youtrack.jetbrains.com/issue/MPS-32350"><abbr title="Meta Programming System">MPS</abbr>-32350</a>). Pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> helps.</p>
 </div>
 <div class="footnote">

@@ -589,6 +589,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -767,11 +772,11 @@
 <h1>Console</h1>
 <div class="admonition warning">
 <p class="admonition-title">I can’t enter the print statement.</p>
-<p>It can’t <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> nested structures. Use it <abbr title="affine transform">at</abbr> the top level instead.</p>
+<p>It can’t be used in nested structures. Use it <abbr title="affine transform">at</abbr> the top level instead.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you enter more than one statement into the console?</p>
-<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list <abbr title="input (stream)">in</abbr> baselanguage) and enter your statements.</p>
+<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list in baselanguage) and enter your statements.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find all System.out.println statements?</p>
@@ -780,14 +785,14 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">#nodes, #models, #usages etc. don’t show any result. What went wrong?</p>
-<p>Make sure that your query is correct. You also have to set a scope for these statements <abbr title="input (stream)">in</abbr> square brackets such as
-<code class="highlight"><span class="err">#</span><span class="n">nodes</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="w"></span></code> to find all the nodes <abbr title="input (stream)">in</abbr> the global scope.</p>
+<p>Make sure that your query is correct. You also have to set a scope for these statements in square brackets such as
+<code class="highlight"><span class="err">#</span><span class="n">nodes</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="w"></span></code> to find all the nodes in the global scope.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is the console a regular root node?</p>
 <p>Yes, it is of concept <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot</a>
-and is located <abbr title="input (stream)">in</abbr> a temporary model. It is possible to open it <abbr title="input (stream)">in</abbr> a normal tab. Right-click <abbr title="input (stream)">in</abbr> the console (for example <abbr title="affine transform">at</abbr> the top) and click 
-<em>Show Node <abbr title="input (stream)">in</abbr> Explorer</em>. Click the <em>ConsoleRoot</em> and it will open <abbr title="input (stream)">in</abbr> a new tab (keyboard shortcuts such as run line won’t work here).</p>
+and is located in a temporary model. It is possible to open it in a normal tab. Right-click in the console (for example <abbr title="affine transform">at</abbr> the top) and click 
+<em>Show Node in Explorer</em>. Click the <em>ConsoleRoot</em> and it will open in a new tab (keyboard shortcuts such as run line won’t work here).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">After executing the current line, an error says that the console class wasn’t found.</p>
@@ -797,20 +802,20 @@ or has a different solution kind such as <em>other</em>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What does the expression #internalMode do?</p>
-<p>It tells you if the internal mode is activated. It can <abbr title="binary expression">be</abbr> achieved by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
-or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or <abbr title="addition">add</abbr> <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom VM Options</em>. The exact functionality of this flag can <abbr title="binary expression">be</abbr> found by looking <abbr title="affine transform">at</abbr> the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
-One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu <abbr title="input (stream)">in</abbr> Intellij <abbr title="Integrated Development Environment">IDE</abbr>‘s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
+<p>It tells you if the internal mode is activated. It can be achieved by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
+or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or <abbr title="addition">add</abbr> <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom VM Options</em>. The exact functionality of this flag can be found by looking <abbr title="affine transform">at</abbr> the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
+One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu in Intellij <abbr title="Integrated Development Environment">IDE</abbr>‘s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
 for more <abbr title="information">info</abbr>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you open the selected node <abbr title="input (stream)">in</abbr> console?</p>
+<p class="admonition-title">How do you open the selected node in console?</p>
 <blockquote>
-<p>Given I have a node selected <abbr title="input (stream)">in</abbr> the editor. How can I select it to manipulate it <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr> console?</p>
+<p>Given I have a node selected in the editor. How can I select it to manipulate it in the <abbr title="Meta Programming System">MPS</abbr> console?</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/aquapp" title="GitHub User: aquapp">@aquapp</a><sub></sub></sub></p>
 <p>You can simply copy the node and paste it into the console:</p>
 <ol>
-<li>Copy a node <abbr title="input (stream)">in</abbr> the editor (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-c">C</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>)</li>
+<li>Copy a node in the editor (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-c">C</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>)</li>
 <li>Go to the console.</li>
 <li>Paste the content   (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</li>
 <li><abbr title="Meta Programming System">MPS</abbr> pastes a node reference that you can use to directly manipulate the node:</li>

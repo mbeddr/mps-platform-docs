@@ -2,392 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/about/editing_this_guide/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/about/original_authors/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/actions/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/behavior/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/constraints/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/dataflow/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/documentation/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/editor/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/feedback/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/findusages/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/generator/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/intentions/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/listener/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/migration/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/plugin/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/polyfun/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/refactorings/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/scripts/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/structure/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/test/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/textgen/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/transformations/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/typesystem/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/vcs/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/virtualinterfaces/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/build/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/build/ci/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/build/command_line_tool/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/build/git/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/build/gradle/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/java/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/java/java_style_guide/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/java/programming_principles/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/mps/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/mps/deprecation/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/clean_code/mps/readability_maintainability/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/console/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/debugging/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/external_files_and_tools/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/general/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/platform_specific_bugs/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/plugins/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/rcp/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/home/trouble_shooting_guide/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/includes/abbreviations/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/includes/code_abbreviations/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/languages/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/languages/baselanguage/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/languages/double_dispatch/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/languages/mps_extensions/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mbeddr/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mbeddr/big_project/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mbeddr/development_guide/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mbeddr/misc_topics/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/classloading/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/dependencies/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/gui/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/intellij_sdk/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/models/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/navigating_mps_source/</loc>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/open_api/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/recipes/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/terminology_and_ui_for_access/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/utility_classes/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/deps_and_classpath/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/threads/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/threads/named_threads/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/mps_internal/threads/read_write_action_examples/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/patterns/language_design/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/patterns/ui_patterns/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/patterns/user_experience/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/abbreviations/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/actions/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/code_abbreviations/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/exceptions/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/icons/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/reading_list/</loc>
-         <lastmod>2022-07-31</lastmod>
+         <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

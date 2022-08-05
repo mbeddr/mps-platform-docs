@@ -633,6 +633,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -847,15 +852,15 @@
 <h2 id="classloaders">Classloaders<a class="headerlink" href="#classloaders" title="Permanent link">¶</a></h2>
 <p>Different classloaders exist: bootstrap-class-loader, IDEA plugin classloaders and module class loaders.
 Loading a class into an <abbr title="Meta Programming System">MPS</abbr> module involves the module class loader, the class of its dependencies and the bootstrap-class-loader.
-If a class comes from a jar <abbr title="input (stream)">in</abbr> the <abbr title="Meta Programming System">MPS</abbr>/<abbr title="library">lib</abbr> folder (a bootstrap-loaded class), you practically can’t load another version of it.
+If a class comes from a jar in the <abbr title="Meta Programming System">MPS</abbr>/<abbr title="library">lib</abbr> folder (a bootstrap-loaded class), you practically can’t load another version of it.
 They also have different life cycles.</p>
 <p>Module class loaders can reload classes after rebuilding and are resilient towards hot reloading.
-IDEA plugin class loaders are just for the installed plugins and didn’t know what to do if a class needs reloading during runtime <abbr title="input (stream)">in</abbr> the past. New versions of the intelliJ platform know how to reload classes, but now we’<abbr title="runtime exception">re</abbr> with <abbr title="Meta Programming System">MPS</abbr>’ implementation.
+IDEA plugin class loaders are just for the installed plugins and didn’t know what to do if a class needs reloading during runtime in the past. New versions of the intelliJ platform know how to reload classes, but now we’<abbr title="runtime exception">re</abbr> with <abbr title="Meta Programming System">MPS</abbr>’ implementation.
 The IDEA plugin classloaders load jars from the /plugins/<plugin-name>/<abbr title="library">lib</abbr> directory.
 Jars from the /<abbr title="library">lib</abbr> directory of the <abbr title="Rich Client Platform">RCP</abbr> are loaded from the root class loader. For your <abbr title="Rich Client Platform">RCP</abbr>, you usually don’t want to put anything there.
 Code inside an IDEA plugin classloader may not access classes from module-class loaders but vice versa is fine
 If you pass a module-loaded class to an IDEA plugin-loaded class and reload the module-loaded class, and then try to access the stale class, you might get a <em>ClassNotFoundException</em>.
-If you register a class <abbr title="input (stream)">in</abbr> the plugin.xml, you should make sure it can <abbr title="binary expression">be</abbr> loaded from the IDEA plugin classloader. To do so, <abbr title="addition">add</abbr> its jar to the /<abbr title="library">lib</abbr> folder of your intellij-plugin.</plugin-name></p>
+If you register a class in the plugin.xml, you should make sure it can be loaded from the IDEA plugin classloader. To do so, <abbr title="addition">add</abbr> its jar to the /<abbr title="library">lib</abbr> folder of your intellij-plugin.</plugin-name></p>
 <table>
 <thead>
 <tr>
@@ -882,14 +887,14 @@ If you register a class <abbr title="input (stream)">in</abbr> the plugin.xml, y
 </tr>
 </tbody>
 </table>
-<h2 id="how-to-use-java-classes-shipped-in-mps-plugins">How to use Java classes shipped <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> plugins<a class="headerlink" href="#how-to-use-java-classes-shipped-in-mps-plugins" title="Permanent link">¶</a></h2>
+<h2 id="how-to-use-java-classes-shipped-in-mps-plugins">How to use Java classes shipped in <abbr title="Meta Programming System">MPS</abbr> plugins<a class="headerlink" href="#how-to-use-java-classes-shipped-in-mps-plugins" title="Permanent link">¶</a></h2>
 <p>For this example, assume that you want to use classes from the <em>git4idea</em> plugin inside your code.</p>
 <h3 id="solution-1">Solution 1<a class="headerlink" href="#solution-1" title="Permanent link">¶</a></h3>
 <ol>
 <li>Create a solution <em>MySolution</em>.</li>
 <li>Create a model ending with “.plugin,” for example <em>MySolution.plugin</em>.</li>
 <li>Add the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> to both the <em>MySolution.plugin</em> model and the <em>MySolution</em> solution.</li>
-<li>Create a <em>StandalonePluginDescriptor</em> <abbr title="input (stream)">in</abbr> the model <em>MySolution.plugin</em>.</li>
+<li>Create a <em>StandalonePluginDescriptor</em> in the model <em>MySolution.plugin</em>.</li>
 <li>Add the <em>MySolution</em> to a build model named <em>MySolution.build</em>.</li>
 <li>Create an idea plugin the build model with <abbr title="identification">id</abbr> <em>MySolution.IdeaPlugin</em>.</li>
 <li>Add <em>MySolution.build</em> to the idea plugin <em>MySolution.IdeaPlugin</em> content.</li>
@@ -988,7 +993,7 @@ If you register a class <abbr title="input (stream)">in</abbr> the plugin.xml, y
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>This prevents the exception but make sure to set the class loader back when you finish. Calling things written <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> like behavior methods when the class loader changes is also likely to not work and gives you all kinds of strange exceptions.</p>
+<p>This prevents the exception but make sure to set the class loader back when you finish. Calling things written in <abbr title="Meta Programming System">MPS</abbr> like behavior methods when the class loader changes is also likely to not work and gives you all kinds of strange exceptions.</p>
 <hr/>
 <div class="md-source-file">
 <small>

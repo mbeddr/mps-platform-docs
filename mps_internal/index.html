@@ -588,6 +588,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -797,26 +802,26 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a way to start two instances of <abbr title="Meta Programming System">MPS</abbr>, each with its own cache/state?</p>
-<p>You can create a copy of you <abbr title="Meta Programming System">MPS</abbr> installation and edit the idea.properties file <abbr title="input (stream)">in</abbr> the bin directory. 
+<p>You can create a copy of you <abbr title="Meta Programming System">MPS</abbr> installation and edit the idea.properties file in the bin directory. 
 Changing <em>idea.system.path</em> should allows you start a second instance with dedicated caches/state. 
 If you don’t want to share any configuration also update idea.config.path.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you find builtin icons?</p>
-<p>IntelliJ IDEA icons are declared <abbr title="input (stream)">in</abbr> the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons">AllIcons</a>.
-<abbr title="Meta Programming System">MPS</abbr> icons are declared <abbr title="input (stream)">in</abbr> the class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons">MPSIcons</a>.</p>
+<p>IntelliJ IDEA icons are declared in the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons">AllIcons</a>.
+<abbr title="Meta Programming System">MPS</abbr> icons are declared in the class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons">MPSIcons</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you have settings that get saved globally?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Preferences can <abbr title="binary expression">be</abbr> only used <abbr title="affine transform">at</abbr> the project level. Use the workaround described <abbr title="input (stream)">in</abbr> <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer</a>
-or save your values <abbr title="input (stream)">in</abbr> the global IntelliJ IDEA <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry">Registry</a>.
-More information about the Registry can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry">this Stack Overflow post</a>.
-It can also <abbr title="binary expression">be</abbr> shown programmatically by calling <code>new RegistryUi().show()</code>.</p>
+<p>Preferences can be only used <abbr title="affine transform">at</abbr> the project level. Use the workaround described in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer</a>
+or save your values in the global IntelliJ IDEA <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry">Registry</a>.
+More information about the Registry can be found in <a href="https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry">this Stack Overflow post</a>.
+It can also be shown programmatically by calling <code>new RegistryUi().show()</code>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you call make or rebuild?</p>
 <p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237">MakeActionImpl</a>. Example usages
-can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> the same model.</p>
+can be found in the same model.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to you <abbr title="addition">add</abbr> widgets to the status bar? (for example: memory indicator, save transient models)</p>
@@ -824,14 +829,14 @@ can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)"
 Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)">project plugin</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you display a message <abbr title="input (stream)">in</abbr> the status bar? (left bottom corner)</p>
-<p>Note: the message might not <abbr title="binary expression">be</abbr> visible when executing the code from the console, because the rebuild of the model overrides it with a new message:
+<p class="admonition-title">How do you display a message in the status bar? (left bottom corner)</p>
+<p>Note: the message might not be visible when executing the code from the console, because the rebuild of the model overrides it with a new message:
 <code>WindowManager.getInstance().getStatusBar(ProjectHelper.toIdeaProject(#project))</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I register an IntelliJ extension?</p>
 <p>Find the interface you want to <abbr title="addition">add</abbr> an extension on <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">this page</a>.
-The corresponding interface has a static field <code>EP_NAME</code>. If the interface is implemented <abbr title="input (stream)">in</abbr> Kotlin it might have a static field <code>Companion</code> with a <code>getEP_NAME()</code> method. Extend this interface (EX) and register it through the extension point.
+The corresponding interface has a static field <code>EP_NAME</code>. If the interface is implemented in Kotlin it might have a static field <code>Companion</code> with a <code>getEP_NAME()</code> method. Extend this interface (EX) and register it through the extension point.
 Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></p>
 </div>
 <div class="admonition question">
@@ -846,7 +851,7 @@ Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></
 <p class="admonition-title">How can you run some <abbr title="Meta Programming System">MPS</abbr> code from the command line/CI?</p>
 <ul>
 <li>Specific Languages blog: <a href="https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/">Running <abbr title="Meta Programming System">MPS</abbr> code from command line</a></li>
-<li>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/">Running code <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> on CI</a></li>
+<li>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/">Running code in <abbr title="Meta Programming System">MPS</abbr> on CI</a></li>
 </ul>
 </div>
 <div class="admonition question">
@@ -869,41 +874,41 @@ Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></
 <p class="admonition-title">How can you make an internal <abbr title="Meta Programming System">MPS</abbr> editor read-only?</p>
 <blockquote>
 <p>Given I want to make a contribution to a generator the <code>j.mps.lang.editor</code>.
-When I download the <a href="https://github.com/JetBrains/MPS"><abbr title="Meta Programming System">MPS</abbr> source</a>, open the project <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> under <code>code</code>
+When I download the <a href="https://github.com/JetBrains/MPS"><abbr title="Meta Programming System">MPS</abbr> source</a>, open the project in <abbr title="Meta Programming System">MPS</abbr> under <code>code</code>
 and open <code>j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare</code>, then I see the model being read-only. What can I do?</p>
 </blockquote>
-<p>You need to open <abbr title="Meta Programming System">MPS</abbr> <abbr title="input (stream)">in</abbr> IDEA (Community Edition is enough), compile and run it from there, then you can edit <abbr title="Meta Programming System">MPS</abbr> sources. There are instructions <abbr title="input (stream)">in</abbr> <a href="https://github.com/JetBrains/MPS">README</a>.</p>
+<p>You need to open <abbr title="Meta Programming System">MPS</abbr> in IDEA (Community Edition is enough), compile and run it from there, then you can edit <abbr title="Meta Programming System">MPS</abbr> sources. There are instructions in <a href="https://github.com/JetBrains/MPS">README</a>.</p>
 </div>
 <details class="question">
-<summary>How can you do a fulltext search <abbr title="input (stream)">in</abbr> the <abbr title="Integrated Development Environment">IDE</abbr>?</summary>
+<summary>How can you do a fulltext search in the <abbr title="Integrated Development Environment">IDE</abbr>?</summary>
 <blockquote>
 <p>I sometimes need a textual search which <abbr title="Meta Programming System">MPS</abbr> doesn’t provide out of the box.</p>
 <p>In that situation, I <abbr title="abstract module">am</abbr> unsure of the concept and type of what I see, so a top-down search is not an option. Instead I would like to search for that string to have a starting point for my investigation.</p>
 <p>Examples:</p>
 <ul>
-<li>I want to investigate <abbr title="input (stream)">in</abbr> an editor <abbr title="input (stream)">in</abbr> the user interface and don’t want to reverse engineer what hints, editors and concepts lead to what I see.</li>
+<li>I want to investigate in an editor in the user interface and don’t want to reverse engineer what hints, editors and concepts lead to what I see.</li>
 <li>Behavioral view code, like custom cells, swing cells or querylists make it hard to figure out where the source logic of that is located.</li>
 <li>when the console shows something I don’t understand, I’d like to see its context source code, so that I can figure out what to do next.</li>
 </ul>
 </blockquote>
 <p><strong>Option 0</strong>: Use Language Debugging facilities of <abbr title="Meta Programming System">MPS</abbr> instead.</p>
-<p>For built-<abbr title="input (stream)">in</abbr> languages, <abbr title="Meta Programming System">MPS</abbr> brings a load of dedicated debugging facilities:</p>
+<p>For built-in languages, <abbr title="Meta Programming System">MPS</abbr> brings a load of dedicated debugging facilities:</p>
 <ul>
-<li>Debugging editor cells and nodes: When you right-click an item <abbr title="input (stream)">in</abbr> the editor, you can find a submenu <em>Language Debug</em>.</li>
-<li>Debugging menu entries: Select an item that you’<abbr title="runtime exception">re</abbr> curious <abbr title="input (stream)">in</abbr> and press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span> to open the <em>Menu Trace</em> of it.</li>
+<li>Debugging editor cells and nodes: When you right-click an item in the editor, you can find a submenu <em>Language Debug</em>.</li>
+<li>Debugging menu entries: Select an item that you’<abbr title="runtime exception">re</abbr> curious in and press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span> to open the <em>Menu Trace</em> of it.</li>
 <li>Setup and an IntelliJ and connect it to step through java code.</li>
 </ul>
 <p><strong>Option 1</strong>: Search for literals from console.</p>
 <p><strong>Option 2</strong>: Search through serialized Java.</p>
 <ol>
 <li>Set up IntelliJ with your project.</li>
-<li>Hit <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span> to search <abbr title="input (stream)">in</abbr> path.</li>
-<li>When you found a class of interest, open it <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> via <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-n">N</kbd></span>. The source node usually has a similar name.</li>
+<li>Hit <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span> to search in path.</li>
+<li>When you found a class of interest, open it in <abbr title="Meta Programming System">MPS</abbr> via <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-n">N</kbd></span>. The source node usually has a similar name.</li>
 </ol>
 <p>This is great for finding editor nodes, for example, if that java class is named <em>Vehicle_EditorBuilder</em>, your source node was an editor for the <em>Vehicle</em> concept.</p>
 <p><strong>Last Resort</strong>: Search XML model directly.</p>
-<p>Use this only if you have no assembly and your project doesn’t open. The serialized API is subject to change and using this should <abbr title="binary expression">be</abbr> the last barrier.</p>
-<p>Then use <em>ack</em> (or a similar tool) on the command line to find the relevant models that contain this string. The output even contains the node <abbr title="identification">id</abbr> though, as <abbr title="input (stream)">in</abbr> this example:</p>
+<p>Use this only if you have no assembly and your project doesn’t open. The serialized API is subject to change and using this should be the last barrier.</p>
+<p>Then use <em>ack</em> (or a similar tool) on the command line to find the relevant models that contain this string. The output even contains the node <abbr title="identification">id</abbr> though, as in this example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -919,7 +924,7 @@ and open <code>j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare</code>, th
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>…
 </code></pre></div></td></tr></table></div>
 <p>Use <code class="highlight"><span class="k">new</span><span class="w"> </span><span class="n">IdEncoder</span><span class="p">().</span><span class="na">parseNodeId</span><span class="p">(</span><span class="s">"1aL6sVX49Cb"</span><span class="p">)</span><span class="w"></span></code> to get the node <abbr title="identification">id</abbr>.
-This will print the corresponding node to console. Clicking it will open <abbr title="input (stream)">in</abbr> <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr>:</p>
+This will print the corresponding node to console. Clicking it will open in in <abbr title="Meta Programming System">MPS</abbr>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -942,13 +947,13 @@ This will print the corresponding node to console. Clicking it will open <abbr t
 <details class="question">
 <summary>How to get rid of Error: shall specify a repository to lock?</summary>
 <blockquote>
-<p>When accessing model properties <abbr title="input (stream)">in</abbr> rendering code, you must encapsulate the model accessing code <abbr title="input (stream)">in</abbr> a read action:</p>
+<p>When accessing model properties in rendering code, you must encapsulate the model accessing code in a read action:</p>
 <p><a class="glightbox" href="../img/read_action_missing_repository.png"><img alt="read action missing repository" src="../img/read_action_missing_repository.png"/></a></p>
 <p>It always has an error “Error: shall specify a repository to lock”. How can I get rid of it?
 What is a ‘repository’ and is there any documentation that explains the concept and how to use it correctly?</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/cwalesch" title="GitHub User: cwalesch">@cwalesch</a><sub></sub></sub></p>
-<p>The repository is what is represented as the “modules pool” <abbr title="input (stream)">in</abbr> the <abbr title="User Interface">UI</abbr>. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. <abbr title="Meta Programming System">MPS</abbr> is slowly but steadily moving to project specific repositories. That would mean each project (window) of <abbr title="Meta Programming System">MPS</abbr> would have it’s own separate repository. </p>
+<p>The repository is what is represented as the “modules pool” in the <abbr title="User Interface">UI</abbr>. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. <abbr title="Meta Programming System">MPS</abbr> is slowly but steadily moving to project specific repositories. That would mean each project (window) of <abbr title="Meta Programming System">MPS</abbr> would have it’s own separate repository. </p>
 <p>To get the repository you will need access to the project. e.g. the editor context will give you access to the repository: <code>editorContext.getRepository()</code>.</p>
 <p>In other cases, for instance,  when you don’t have an editor context directly available you need to make sure that from <abbr title="User Interface">UI</abbr> (action) you pass the project or repository though to the place where you need it.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
@@ -977,10 +982,10 @@ How can I build such a thing?</p>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="err">#</span><span class="w"> </span><span class="n">then</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">myFoundNode</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Option 2</strong>: Url</p>
-<p>Import the <code>httpsupport</code> language and use <code>node.getURL</code>. This will <abbr title="binary expression">be</abbr> a url that you can use locally to open this node. It includes the node <abbr title="identification">id</abbr> and the model and thus is a pretty good globally unique <abbr title="identification">id</abbr>.</p>
+<p>Import the <code>httpsupport</code> language and use <code>node.getURL</code>. This will be a url that you can use locally to open this node. It includes the node <abbr title="identification">id</abbr> and the model and thus is a pretty good globally unique <abbr title="identification">id</abbr>.</p>
 <p>This <abbr title="identification">id</abbr> is a local URL and looks odd though: <code>http://127.0.0.1:63320/node?ref=r%3A4bc03cd1-b1e3-49da-84da-f27e7062f6f7%28integrityOfUpdate%29%2F2209769512593382448&amp;project=SecurityAnalyst</code>. Especially the code to find the node again based on this url contains some grepping then.</p>
 <p><strong>Option 3</strong>: Node Id</p>
-<p>Use <code class="highlight"><span class="n">node</span><span class="o">/</span><span class="p">.</span><span class="na">getNodeId</span><span class="p">().</span><span class="na">toString</span><span class="p">()</span><span class="w"></span></code> it will yield the nodes <abbr title="identification">id</abbr>. Note that a node ID is only unique within this model. If it should <abbr title="binary expression">be</abbr> globally unique, consider option 1.</p>
+<p>Use <code class="highlight"><span class="n">node</span><span class="o">/</span><span class="p">.</span><span class="na">getNodeId</span><span class="p">().</span><span class="na">toString</span><span class="p">()</span><span class="w"></span></code> it will yield the nodes <abbr title="identification">id</abbr>. Note that a node ID is only unique within this model. If it should be globally unique, consider option 1.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
 <details class="question">

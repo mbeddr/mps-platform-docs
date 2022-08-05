@@ -591,6 +591,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -807,21 +812,21 @@
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h2>
 <ul>
 <li>Specific Languages blog: <a href="https://specificlanguages.com/posts/prefer-composition-over-inheritance/">Prefer composition over inheritance</a></li>
-<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> <abbr title="input (stream)">in</abbr> concepts that have a name. The name property can <abbr title="binary expression">be</abbr> automatically used as the name for root nodes, references etc.</li>
+<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that have a name. The name property can be automatically used as the name for root nodes, references etc.</li>
 <li>Avoid deep nested call chains, for example: <code>nodea.nodeb.nodec.property</code>. Consider providing a method to access a property or method for the deeper levels.</li>
 <li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept.</li>
-<li>Use the built-<abbr title="input (stream)">in</abbr> collection classes such as collections, set, list, and map (<a href="https://www.jetbrains.com/help/mps/collections-language.html">documentation</a>). Use the correct type of collection<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</li>
+<li>Use the built-in collection classes such as collections, set, list, and map (<a href="https://www.jetbrains.com/help/mps/collections-language.html">documentation</a>). Use the correct type of collection<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</li>
 <li>Use the <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a> instead of directly calling <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EModelAccess">ModelAccess</a> methods.</li>
 <li>Write <a href="https://www.jetbrains.com/help/mps/testing-languages.html">tests</a> for new features and bugs that you have fixed that weren’t caught by a test.</li>
-<li>Don’t invoke specific features <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> <abbr title="affine transform">at</abbr> places that don’t officially support it, for example, invoking the generator <abbr title="input (stream)">in</abbr> type system rules. This might not work <abbr title="input (stream)">in</abbr> future versions of <abbr title="Meta Programming System">MPS</abbr>.</li>
+<li>Don’t invoke specific features in <abbr title="Meta Programming System">MPS</abbr> <abbr title="affine transform">at</abbr> places that don’t officially support it, for example, invoking the generator in type system rules. This might not work in future versions of <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ul>
 <h2 id="null-safety">Null safety<a class="headerlink" href="#null-safety" title="Permanent link">¶</a></h2>
 <ul>
 <li>Use language <a href="https://www.jetbrains.com/help/mps/other-languages.html">checkedDots</a> for saver access of possible null values. You can check nodes for null: <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870">node.isNull</a></li>
-<li>Use annotation <code class="highlight"><span class="nd">@NotNull</span><span class="w"></span></code> and <code class="highlight"><span class="nd">@Nullable</span><span class="w"></span></code> for baselanguage code. a specific type system rule <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> checks these annotations.</li>
+<li>Use annotation <code class="highlight"><span class="nd">@NotNull</span><span class="w"></span></code> and <code class="highlight"><span class="nd">@Nullable</span><span class="w"></span></code> for baselanguage code. a specific type system rule in <abbr title="Meta Programming System">MPS</abbr> checks these annotations.</li>
 <li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259">:eq:</a> (<abbr title="NullPointerException">NPE</abbr> safe equals operation) and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393">:<abbr title="not equals/expresison">ne</abbr>:</a>
 <abbr title="NullPointerException">NPE</abbr> safe not equals operation instead of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152">==</a> and <code class="highlight"><span class="n">equals</span><span class="w"></span></code>.</li>
-<li>Return optional values instead of null <abbr title="input (stream)">in</abbr> <code>baselanguage</code> code<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</li>
+<li>Return optional values instead of null in <code>baselanguage</code> code<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</li>
 </ul>
 <h2 id="exceptions-and-warnings">Exceptions and warnings<a class="headerlink" href="#exceptions-and-warnings" title="Permanent link">¶</a></h2>
 <ul>
@@ -829,20 +834,20 @@
 <li>Consider alternative ways of showing errors than throwing exceptions such as showing <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">notifications</a>. Examples for such notifications are balloons and dialogs.</li>
 <li>Attach throwable objects to logging statements if available:
   <code class="highlight"><span class="n">log</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="s">"This is an error"</span><span class="p">,</span><span class="n">errorObject</span><span class="w"></span></code></li>
-<li>Clean up <abbr title="input (stream)">in</abbr> the <em>finally block</em> of a try statement.</li>
-<li>Treat warnings <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> as errors<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> and also don’t ignore warnings and errors. Warnings might become errors or even make the compilation fail <abbr title="input (stream)">in</abbr> the future. Ignoring too many messages can hide real errors that you have to address.</li>
+<li>Clean up in the <em>finally block</em> of a try statement.</li>
+<li>Treat warnings in <abbr title="Meta Programming System">MPS</abbr> as errors<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> and also don’t ignore warnings and errors. Warnings might become errors or even make the compilation fail in the future. Ignoring too many messages can hide real errors that you have to address.</li>
 <li>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/">Warnings should not replace documentation</a></li>
 </ul>
 <h2 id="swing-components">Swing components<a class="headerlink" href="#swing-components" title="Permanent link">¶</a></h2>
 <ul>
 <li>Use components from the IntelliJ platform. <a href="https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html">here</a> describe some more components. Use the <a href="https://jetbrains.github.io/ui/">IntelliJ platform <abbr title="User Interface">UI</abbr> guidelines</a> to create consistent and usable user interfaces.</li>
 <li>Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (<em>a</em>, <em>an</em>, <em>the</em>, <em>and</em>, <em>or</em>, <em>so</em>, <em>yet</em>, etc.), and don’t appear as the first or last word.
-  If the text isn’t short, then you should use the capitalization used <abbr title="input (stream)">in</abbr> ordinary prose (sentence capitalization) instead.</li>
+  If the text isn’t short, then you should use the capitalization used in ordinary prose (sentence capitalization) instead.</li>
 <li>Read the <a href="https://docs.oracle.com/javase/tutorial/uiswing/index.html">Swing tutorials</a> to get a better understanding of the components.</li>
 </ul>
 <h2 id="multithreading-and-asynchronous-code">Multithreading and asynchronous code<a class="headerlink" href="#multithreading-and-asynchronous-code" title="Permanent link">¶</a></h2>
 <ul>
-<li>Be careful with multithreading code <abbr title="input (stream)">in</abbr> any of the language aspects. It’s better placed <abbr title="input (stream)">in</abbr> an action or background task.</li>
+<li>Be careful with multithreading code in any of the language aspects. It’s better placed in an action or background task.</li>
 <li>When asynchronous code freezes (for example: on the console), try to call it with <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.application%28MPS.IDEA%2F%29%2F%7EApplication.invokeLater%2528java.lang.Runnable%2529">ApplicationManager.getApplication().invokeLater(runnable)</a>.</li>
 <li>Use <a href="https://www.jetbrains.com/help/mps/progress-indicators.html#asynchronoustasks">tasks</a> for asynchronous work or work that takes a long time.</li>
 </ul>
@@ -850,7 +855,7 @@
 <ul>
 <li>Be careful when using unicode inside <abbr title="Meta Programming System">MPS</abbr>. It might break something (<a href="https://youtrack.jetbrains.com/issue/MPS-33687"><abbr title="Meta Programming System">MPS</abbr>-33687</a>, <a href="https://youtrack.jetbrains.com/issue/MPS-31835"><abbr title="Meta Programming System">MPS</abbr>-31835</a>).</li>
 <li>Use gradle for build scripts (<a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal example</a>).</li>
-<li>Do not leave debug statements <abbr title="input (stream)">in</abbr> production code (exception <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">debug log</a> statements).</li>
+<li>Do not leave debug statements in production code (exception <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">debug log</a> statements).</li>
 </ul>
 <div class="footnote">
 <hr/>
@@ -937,7 +942,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: IntelliJ SDK" class="md-footer__link md-footer__link--prev" href="../../mps_internal/intellij_sdk/" rel="prev">
+<a aria-label="Previous: Navigating the MPS sources" class="md-footer__link md-footer__link--prev" href="../../mps_internal/navigating_mps_source/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -946,7 +951,7 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              IntelliJ SDK
+              Navigating the MPS sources
             </div>
 </div>
 </a>

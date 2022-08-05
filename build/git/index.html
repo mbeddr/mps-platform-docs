@@ -609,6 +609,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -802,7 +807,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">How should you configure Git?</p>
-<p>Generated files should not <abbr title="binary expression">be</abbr> checked into Git (‘classes_gen’, ‘source_gen’) unless the output of generators should <abbr title="binary expression">be</abbr> checked.</p>
+<p>Generated files should not be checked into Git (‘classes_gen’, ‘source_gen’) unless the output of generators should be checked.</p>
 <p>Example from <a href="https://github.com/JetBrains/MPS-extensions">mps-extensions</a>:</p>
 <ul>
 <li><a href="https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore">.gitignore</a></li>
@@ -810,14 +815,14 @@
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Is there a hook <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> that will <abbr title="binary expression">be</abbr> called when switching branches?</p>
-<p>Register a <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.vcs%28MPS.IDEA%2F%29%2F%7EBranchChangeListener">BranchChangeListener</a> <abbr title="input (stream)">in</abbr> an application or project plugin. Example: 
+<p class="admonition-title">Is there a hook in <abbr title="Meta Programming System">MPS</abbr> that will be called when switching branches?</p>
+<p>Register a <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.vcs%28MPS.IDEA%2F%29%2F%7EBranchChangeListener">BranchChangeListener</a> in an application or project plugin. Example: 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">).</span><span class="na">getMessageBus</span><span class="p">().</span><span class="na">connect</span><span class="p">().</span><span class="na">subscribe</span><span class="p">(</span><span class="n">BranchChangeListener</span><span class="p">.</span><span class="na">VCS_BRANCH_CHANGED</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyListener</span><span class="p">()).</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find the Git commit that deleted a concept?</p>
-<p>Assuming the concept is called <code>Foo</code>, search with Git Log <abbr title="input (stream)">in</abbr> the corresponding structure model: <code>git log -SFoo -- path/to/structure.mps</code></p>
+<p>Assuming the concept is called <code>Foo</code>, search with Git Log in the corresponding structure model: <code>git log -SFoo -- path/to/structure.mps</code></p>
 </div>
 <h2 id="general-github-publishing-checklist">General GitHub publishing checklist<a class="headerlink" href="#general-github-publishing-checklist" title="Permanent link">¶</a></h2>
 <ul>
@@ -829,7 +834,7 @@
 <li>Necessary files/text<ul>
 <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">README.<abbr title="model">md</abbr></a></li>
 <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">LICENSE</a></li>
-<li>description <abbr title="input (stream)">in</abbr> about section of GitHub repository</li>
+<li>description in about section of GitHub repository</li>
 </ul>
 </li>
 <li>More extensive checklists<ul>

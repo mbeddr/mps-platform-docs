@@ -589,6 +589,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -767,8 +772,8 @@
 <h1>GUI</h1>
 <div class="admonition question">
 <p class="admonition-title">Where can you find an overview of the user interface?</p>
-<p>It can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> the IntelliJ IDEA <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html">documentation</a>.
-A more technical explanation can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> the <a href="https://plugins.jetbrains.com/docs/intellij/user-interface-components.html">IntelliJ Platform Plugin SDK</a>.</p>
+<p>It can be found in the IntelliJ IDEA <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html">documentation</a>.
+A more technical explanation can be found in the <a href="https://plugins.jetbrains.com/docs/intellij/user-interface-components.html">IntelliJ Platform Plugin SDK</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you show modal dialogs for inputting text?</p>
@@ -777,7 +782,7 @@ A more technical explanation can <abbr title="binary expression">be</abbr> found
 <div class="admonition question">
 <p class="admonition-title">How do you <abbr title="addition">add</abbr> messages to the right side of the window?</p>
 <p>In IntelliJ IDEA it is called <a href="https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html">error stripe</a>,
-<abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter">MessagesGutter</a>:
+in <abbr title="Meta Programming System">MPS</abbr> <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter">MessagesGutter</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">nodeEditor</span><span class="p">.</span><span class="na">EditorComponent</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">EditorComponent</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">());</span><span class="w"> </span>
@@ -788,15 +793,15 @@ A more technical explanation can <abbr title="binary expression">be</abbr> found
 <div class="admonition question">
 <p class="admonition-title">How can you <abbr title="addition">add</abbr> things to the left of the editor? (examples: breakpoints, go subclasses etc.)</p>
 <p>The component is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.leftHighlighter%28MPS.Editor%2F%29%2F%7ELeftEditorHighlighter">LeftEditorHighlighter</a>.
-A checker has to <abbr title="binary expression">be</abbr> implemented that can show messages <abbr title="input (stream)">in</abbr> this component (example: <a href="http://127.0.0.1:63320/node?ref=r%3Afa4569a3-1bd4-4159-97bc-db03b3aeff88%28jetbrains.mps.java.platform.highlighters%29%2F8432634623182578830">OverrideMethodsChecker</a>).</p>
+A checker has to be implemented that can show messages in this component (example: <a href="http://127.0.0.1:63320/node?ref=r%3Afa4569a3-1bd4-4159-97bc-db03b3aeff88%28jetbrains.mps.java.platform.highlighters%29%2F8432634623182578830">OverrideMethodsChecker</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to you <abbr title="addition">add</abbr> an icon to the status bar?</p>
 <p>Have a look <abbr title="affine transform">at</abbr> the the implementation of the <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsWidget.java#L26">transient models widget</a> and
-its initialisation <abbr title="input (stream)">in</abbr> <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsNotification.java#L34">TransientModelsNotification</a>.</p>
+its initialisation in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsNotification.java#L34">TransientModelsNotification</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What parts of the IntelliJ Platform SDK can’t <abbr title="binary expression">be</abbr> used <abbr title="input (stream)">in</abbr> <abbr title="Meta Programming System">MPS</abbr> because they are not supported?</p>
+<p class="admonition-title">What parts of the IntelliJ Platform SDK can’t be used in <abbr title="Meta Programming System">MPS</abbr> because they are not supported?</p>
 <p>Everything related to text files: <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">Documents</a>,
 <a href="https://plugins.jetbrains.com/docs/intellij/psi-files.html"><abbr title="Program Structure Interface">PSI</abbr> files</a>, <a href="https://plugins.jetbrains.com/docs/intellij/templates.html">Templates</a>, QuickDoc,
 <a href="https://plugins.jetbrains.com/plugin/8554-ide-features-trainer"><abbr title="Integrated Development Environment">IDE</abbr> Features Trainer</a>, CodeSmellDetector and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">Custom Language Support</a>.</p>
@@ -814,8 +819,8 @@ its initialisation <abbr title="input (stream)">in</abbr> <a href="https://githu
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you have clickable icons <abbr title="input (stream)">in</abbr> the left editor margin?</p>
-<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/">Clickable icons <abbr title="input (stream)">in</abbr> the left editor margin</a></p>
+<p class="admonition-title">How can you have clickable icons in the left editor margin?</p>
+<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/">Clickable icons in the left editor margin</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there alternatives to message boxes?</p>
@@ -830,7 +835,7 @@ its initialisation <abbr title="input (stream)">in</abbr> <a href="https://githu
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/">Extended actions: Checkboxes</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you retrieve all opened windows <abbr title="input (stream)">in</abbr> <a href="https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen">split screen mode</a>?</p>
+<p class="admonition-title">How can you retrieve all opened windows in <a href="https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen">split screen mode</a>?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">FileEditorManagerEx</span><span class="p">.</span><span class="na">getInstanceEx</span><span class="p">(</span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">)).</span><span class="na">getSplitters</span><span class="p">().</span><span class="na">getWindows</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>

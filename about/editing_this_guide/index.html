@@ -591,6 +591,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1020,16 +1025,16 @@
 <h1 id="editing-this-guide">Editing this guide<a class="headerlink" href="#editing-this-guide" title="Permanent link">¶</a></h1>
 <p>This guide uses <a href="https://www.mkdocs.org/">MkDocs</a> + <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>.
 <a href="https://squidfunk.github.io/mkdocs-material/reference/">This page</a> contains the reference for the material theme.
-Install extra MkDocs plugins <abbr title="input (stream)">in</abbr> build.gradle + mkdocs.yml.</p>
+Install extra MkDocs plugins in build.gradle + mkdocs.yml.</p>
 <p>If you are using IntelliJ for editing, it is recommended to install the plugin <a href="https://plugins.jetbrains.com/plugin/16136-grazie-professional">Grazie Professional</a> for spell checking. </p>
 <h2 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">¶</a></h2>
 <ul>
-<li>The first header should <abbr title="binary expression">be</abbr> <code>#</code>.</li>
+<li>The first header should be <code>#</code>.</li>
 <li>Inserted images with Markdown, not HTML: <code>![description](url){width="600px"}</code>. Set the with to 600px or 300px, depending on how big or small the image is</li>
 <li><a href="https://squidfunk.github.io/mkdocs-material/reference/footnotes/">footnotes syntax</a></li>
 <li>The <code>target=_blank</code> attribute and an icon for external links gets automatically added to links.</li>
 </ul>
-<p>The following symbols must <abbr title="binary expression">be</abbr> escaped:</p>
+<p>The following symbols must be escaped:</p>
 <ul>
 <li>$ is <code>&amp;#36;</code> because it collides with inline Latex blocks.</li>
 </ul>
@@ -1048,9 +1053,9 @@ Install extra MkDocs plugins <abbr title="input (stream)">in</abbr> build.gradle
 <li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/caret/">pymdownx.caret</a>: superscript text via caret</li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/mark/">pymdownx.mark</a>: enables marking words</li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/tilde/">pymdownx.tilde</a>: subscript text via tilde</li>
-<li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/emoji/">pymdownx.emoji</a>: support for custom Emojis. Some example icons are <abbr title="input (stream)">in</abbr> <a href="../../reference/icons/"><abbr title="Meta Programming System">MPS</abbr> Icons</a>.</li>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/emoji/">pymdownx.emoji</a>: support for custom Emojis. Some example icons are in <a href="../../reference/icons/"><abbr title="Meta Programming System">MPS</abbr> Icons</a>.</li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/">pymdownx.tasklist</a>: support for lists with checkboxes</li>
-<li><a href="https://python-markdown.github.io/extensions/md_in_html/">mk_in_html</a>: support for markdown <abbr title="input (stream)">in</abbr> HTML</li>
+<li><a href="https://python-markdown.github.io/extensions/md_in_html/">mk_in_html</a>: support for markdown in HTML</li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/">pymdownx.magiclink</a>: additional link related features </li>
 </ul>
 <h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">¶</a></h2>
@@ -1080,8 +1085,8 @@ You can <abbr title="addition">add</abbr> variables to the extra section of mkdo
 <li><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/iets3" title="GitHub User: iets3">@iets3</a></li>
 </ul>
 <p>The special identifiers get translated to the corresponding package names. Only the last part of the identifier has to
-<abbr title="binary expression">be</abbr> the correct name. The identifier can reference classes, interfaces, concept, and interface declarations <abbr title="input (stream)">in</abbr> baselanguage,
-mps-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn’t have to <abbr title="binary expression">be</abbr>
+be the correct name. The identifier can reference classes, interfaces, concept, and interface declarations in baselanguage,
+mps-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn’t have to be
 exact.</p>
 <p>Example: <code>@mps.ClassConcept</code> will find <code>jetbrains.mps.baseLanguage.structure.ClassConcept</code>. When the wrong node is
 selected, enter more parts of the full qualified name of the node.</p>
@@ -1113,7 +1118,7 @@ selected, enter more parts of the full qualified name of the node.</p>
 <li><a href="https://vega.github.io/vega-lite/">Vega-Lite</a></li>
 <li><a href="https://wavedrom.com/tutorial.html">WaveDrom</a></li>
 </ul>
-<p>They can <abbr title="binary expression">be</abbr> embedded by creating a code block and the text <code>kroki-[diagramtype]</code>.</p>
+<p>They can be embedded by creating a code block and the text <code>kroki-[diagramtype]</code>.</p>
 <p>The following sections contain ideas for diagrams.</p>
 <h3 id="blockdiag"><a href="http://blockdiag.com/en/blockdiag/index.html">blockdiag</a><a class="headerlink" href="#blockdiag" title="Permanent link">¶</a></h3>
 <h4 id="diagram-1">Diagram 1<a class="headerlink" href="#diagram-1" title="Permanent link">¶</a></h4>

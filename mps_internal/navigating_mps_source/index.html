@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/patterns/ui_patterns/" rel="canonical"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/navigating_mps_source/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.4.0rc1" name="generator"/>
-<title>UI patterns - MPS Platform Docs</title>
+<title>Navigating the MPS sources - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.476df7d4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#ui-patterns-and-anti-patterns">
+<a class="md-skip" href="#idea">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              UI patterns
+              Navigating the MPS sources
             
           </span>
 </div>
@@ -133,7 +133,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Internal MPS
       </a>
 </li>
@@ -143,7 +143,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../language_design/">
+<a class="md-tabs__link" href="../../patterns/language_design/">
         Language/UI patterns
       </a>
 </li>
@@ -488,10 +488,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">Internal MPS</a>
+<a href="../">Internal MPS</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -503,14 +503,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+<a class="md-nav__link" href="../open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -522,22 +522,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+<a class="md-nav__link" href="../models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+<a class="md-nav__link" href="../recipes/">
         Recipes
       </a>
 </li>
@@ -545,14 +545,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+<a class="md-nav__link" href="../classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threading</a>
+<a href="../threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -564,12 +564,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+<a class="md-nav__link" href="../threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="../threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -577,22 +577,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+<a class="md-nav__link" href="../gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Navigating the MPS sources
       </a>
 </li>
@@ -653,8 +654,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
@@ -666,18 +667,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../language_design/">
+<a class="md-nav__link" href="../../patterns/language_design/">
         Language design
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../user_experience/">
+<a class="md-nav__link" href="../../patterns/user_experience/">
         User experience
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/ui_patterns/">
         UI patterns
       </a>
 </li>
@@ -769,194 +769,150 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/patterns/ui_patterns.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/navigating_mps_source.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="ui-patterns-and-anti-patterns"><abbr title="User Interface">UI</abbr> Patterns and Anti patterns<a class="headerlink" href="#ui-patterns-and-anti-patterns" title="Permanent link">¶</a></h1>
-<p>Go through your editors and check the following list.</p>
-<details class="hint">
-<summary>Texts are readable.</summary>
-<p>The contrast ratio between the background color and the foreground text color should be <abbr title="affine transform">at</abbr> least 4.5:1 <a href="https://www.majesticsignstudio.com/blog/best-color-combinations-for-readability/">article</a>.
-<a href="https://webaim.org/resources/contrastchecker">Contrast checkers</a> can also help you.
-Here are some colors with a high contrast:</p>
-<p><a class="glightbox" href="../../img/languagePatterns/colors.png"><img alt="colors with good contrast ratio" src="../../img/languagePatterns/colors.png"/></a></p>
-<p>When using a gray scale color, make sure that the text color doesn’t exceed 48% brightness (<a href="https://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/">source</a>). Make also sure to provide different colors for different color schemes (e.g. darcula theme vs light theme).</p>
-<p><strong>Bad example #1</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/bad_readability_1.png"><img alt="bad readability" src="../../img/languagePatterns/bad_readability_1.png"/></a></p>
-<p><strong>Bad example #2</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/bad_readability_2.png"><img alt="bad readability" src="../../img/languagePatterns/bad_readability_2.png"/></a></p>
-</details>
-<details class="hint">
-<summary>Bold and underline aren’t used together.</summary>
-<p>This is an anti-pattern. More information can be found in <a href="https://blog.velocitymedia.agency/bold-italics-and-underlines-how-to-use-them-effectively">this article</a>.
-<abbr title="Meta Programming System">MPS</abbr> related summary:</p>
+<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked out with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
+More information can be found in the readme of the repository.</p>
+<h1 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h1>
+<p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
+in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
+such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
+<p><a class="glightbox" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
+<p>The directory also contains settings for code styles, copyright infos and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
+many other IntelliJ specific project settings,</p>
+<h1 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
+<p>This folder also contains run configurations and scopes but also other settings:</p>
 <ul>
-<li>Bold<ul>
-<li>important phrases</li>
-<li>highlighting keywords</li>
-<li>Italic/Emphasis</li>
-<li>Used to highlight quotes (some use blockquotes).</li>
-<li>Foreign words. </li>
+<li><em>codeStyleSettings.xml</em>: style settings used for baselanguage (e.g. default field and parameter prefix)</li>
+<li><em>compiler.xml</em>: the version of the Java compiler (currently: 11)</li>
+<li><em>encodings.xml</em>: encoding of the files (should be: UTF-8)</li>
+<li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in current project </li>
+<li><em>misc.xml</em>: miscellaneous settings (e.g. settings of favourites manager)</li>
+<li><em>modules.xml</em>: a list of modules of this project that are loaded in <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>vcs.xml</em>: version control settings</li>
+<li><em>version.xml</em>: project version (not used anymore)</li>
+<li><em>settings of different components</em> (e.g. console history, messages view tool, project view)</li>
+</ul>
+<h1 id="bin">bin<a class="headerlink" href="#bin" title="Permanent link">¶</a></h1>
+<p>This folder contains executable files that are needed for the different
+operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source">OS</abbr> specific files:</p>
+<ul>
+<li>
+<p>Linux</p>
+<ul>
+<li><em>libdgbm</em>: GNU dbm (‘gdbm’) is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm’</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
+<li><em>restart.<abbr title="position y">py</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
 </ul>
 </li>
-<li>Underline<ul>
-<li>Used for links</li>
+<li>
+<p>Mac</p>
+<ul>
+<li><em>libmacscreenmenu64.dylib</em>: native access to the <a href="https://support.apple.com/guide/mac-help/menu-bar-mchlp1446/mac">Apple menu bar</a>.</li>
+<li><em>libnst64.dlib</em>: native access to the Apple MacBook Pro <a href="https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac">Touch Bar</a>. The library is called NST(NextStep Touch Bar).</li>
+<li><em>printenv</em>: prints the environment variables</li>
 </ul>
 </li>
-<li>CAPS<ul>
-<li>Used for acronyms</li>
+<li>
+<p>Windows</p>
+<ul>
+<li><em>breakgen(64).dll</em>: gracefully shut down a running process (not possible with Java).</li>
+<li><em>elevator.<abbr title="executable">exe</abbr></em>: sudo-like tool for windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
+<li><em>IdeaWin32/64.dll</em>: native file system functions</li>
+<li><em>launcher.<abbr title="executable">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>restarter.<abbr title="executable">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>runnerw.<abbr title="executable">exe</abbr></em>: old library for Windows process management. Superceded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
+<li><em>WinProcessListHelper.<abbr title="executable">exe</abbr></em>: lists windows processes</li>
+<li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
+<li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Substystem for Linux</a></li>
+<li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Substystem for Linux</a></li>
 </ul>
 </li>
 </ul>
-</details>
-<details class="hint">
-<summary>You use buttons correctly.</summary>
-<p>(Swing) Buttons use appropriate symbols/text to make clear what they do. Buttons can alse be used as up and down keys. Buttons can also be hidden to not disrupt the text editing:
-<a class="glightbox" href="../../img/languagePatterns/hide_buttons.png"><img alt="hidable buttons" src="../../img/languagePatterns/hide_buttons.png"/></a></p>
-<p>Add option to hide buttons (checkbox, editor hint, action, etc.).</p>
-</details>
-<details class="hint">
-<summary>Clickable elements appear clickable.</summary>
-<p>When elements are clickable, they should appear clickable: They should use an indicator or different style (e.g. underlines and blue or styled like a button).</p>
-</details>
-<details class="hint">
-<summary>You align collections when possible.</summary>
-<p>Alignment is an important aspect in design (<a href="https://venngage.com/design-dictionary/alignment-design-principle-definition/">introduction</a>). Use vertical grids instead of vertical collections to align cells nicely.
-It is also very important for readability.</p>
-</details>
-<details class="hint">
-<summary>You use color for emphasis and to convey information.</summary>
-<p>Not only bold font can be used to emphasize words but also color. Make sure that the used color is correctly associated by the user.</p>
-<p><strong>Bad example</strong></p>
-<p>Greyscale editor + grey is associated with disabled content/meta information such as comments.
-<a class="glightbox" href="../../img/languagePatterns/grey_editor.png"><img alt="grey editor" src="../../img/languagePatterns/grey_editor.png"/></a></p>
-<p><strong>Good example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/use_of_color.png"><img alt="use of color" src="../../img/languagePatterns/use_of_color.png"/></a></p>
-<p>Color is used to distinguish different language features: BLUE for numbers, lila/green for CONSTANTS.</p>
-</details>
-<details class="hint">
-<summary>You use labels in a consistent way.</summary>
-<p>Labels should be used consistently in the design (e.g. always bold, colon after label), the same goes for key value pairs.
-There is no best practise for the separation between label and text. Some ideas and common guidelines can be found <a href="https://ux.stackexchange.com/questions/3611/should-label-and-field-be-separated-with-colon">here</a>.</p>
-<p><a class="glightbox" href="../../img/languagePatterns/key_value_pair.png"><img alt="key value pair" src="../../img/languagePatterns/key_value_pair.png"/></a></p>
-</details>
-<details class="hint">
-<summary>The context of <abbr title="User Interface">UI</abbr> elements is consistent.</summary>
-<p>Counterexample: There are 3 buttons next to each other that look similar: One opens an external documentation, the other navigates to a root node and the third one undos
-a change. This could be confusing and frustrating for the user.</p>
-</details>
-<details class="hint">
-<summary>A default empty statement exists.</summary>
-<p>There should always be a default concept that acts as an empty line or
-empty text. It should be editable and support autocompletion. They should have an indicator that they are editable. The easist way is to provide a placeholder value.</p>
-<p><strong>Bad example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/missing_empty_statement.png"><img alt="missing empty statement" src="../../img/languagePatterns/missing_empty_statement.png" width="500px"/></a></p>
-</details>
-<details class="hint">
-<summary>Different groups are distinguishable from each other.</summary>
-<p>Groups can be separated for example by whitespace, by drawing a border (box) or drawing brackets around the content.</p>
-</details>
-<details class="hint">
-<summary>You emphasize non-standard operations/literals.</summary>
-<p>Emphasize special operations or literals to make it clear that they are not. Another good examples in baselanguage are extension methods.</p>
-<p><a class="glightbox" href="../../img/languagePatterns/emphasize_special_operations.png"><img alt="emphasize special operations" src="../../img/languagePatterns/emphasize_special_operations.png"/></a></p>
-</details>
-<details class="hint">
-<summary>Enough paddings surround elements.</summary>
-<p>Make sure there is enough space between the content and its border (padding) otherwhise the editor looks too packed.
-More information from a design perspective can be found <a href="https://medium.com/wayfair-design/more-padding-please-b95e19422acc">here</a>.</p>
-</details>
-<details class="hint">
-<summary>You use existing stylesheets.</summary>
-<p>For <em>baselanguage</em> there is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c3%28jetbrains.mps.baseLanguage.editor%29%2F1186415538255">BaseLanguageStyle</a>.
-You can search globally for instances of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029e%28jetbrains.mps.lang.editor.structure%29%2F1186402211651">Stylesheet</a> to find more styles.</p>
-</details>
-<details class="hint">
-<summary>The font size conveys hierarchy.</summary>
-<p>More information can be found in this <a href="https://uxcel.com/blog/beginners-guide-to-typographic-hierarchy">beginner’s guide to typographic hierarchy</a>.</p>
-<p>Example hierarchy (source: <a href="https://type-ed.com/resources/rag-right/2017/11/13/font-weight-size">Font Size And Weight Matters</a>) : <a class="glightbox" href="https://images.squarespace-cdn.com/content/v1/577811363e00be9cc0da688a/1510632311898-TLJBKRTD7WC8J782TN3G/e553d9a7-19b7-47e2-8ce8-e8ef390d6e8b.gif"><img alt="example hierarchy" src="https://images.squarespace-cdn.com/content/v1/577811363e00be9cc0da688a/1510632311898-TLJBKRTD7WC8J782TN3G/e553d9a7-19b7-47e2-8ce8-e8ef390d6e8b.gif"/></a></p>
-</details>
-<details class="hint">
-<summary>You use the full window with for your editor.</summary>
-<p>Often times the space in editor components is not good used and a lot of space is left empty on the right side of the window. 
-This can be improved by using multiple groups next to each other or using the right hand side of the screen for some sort of legend for graphics or meta information about the (root) node (e.g. code review).</p>
-</details>
-<details class="hint">
-<summary>Headers follow general <abbr title="User Interface">UI</abbr> principles.</summary>
-<p>The following principles should be followed:</p>
+<h1 id="build">build<a class="headerlink" href="#build" title="Permanent link">¶</a></h1>
+<p>The used dependency manager is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
+<a href="https://ant.apache.org/">Apache Ant</a> is used as the build tool.
+The <code>artifacts</code> folder contains the generated jar files. An artifact might look like this:</p>
 <ul>
-<li>hierarchical relationship of ideas</li>
-<li>consistency</li>
-<li>readability</li>
-<li>specificity</li>
+<li><em>languages</em>: contains <abbr title="Meta Programming System">MPS</abbr> languages</li>
+<li><em>modules</em>: contains Java classes</li>
+<li><em><abbr title="library">lib</abbr></em>: Jar dependencies</li>
+<li><em>META-INF</em>: contains the <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a></li>
+<li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin that this artifact belongs to.</li>
 </ul>
-<p>More information can be found in <a href="https://pressbooks.bccampus.ca/technicalwriting/chapter/headings">Technical writing essentials - Headings</a>.</p>
-</details>
-<details class="hint">
-<summary>Headers are distinguishable from content.</summary>
-<p><strong>Bad example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/header_content_keyword_bold.png"><img alt="header_content keywordbold" src="../../img/languagePatterns/header_content_keyword_bold.png"/></a></p>
-<p>The header and the start of the child concepts use bold font and the same text.
-In this example the text “Output” is redundant. The header should be larger in size.</p>
-<p>A common layout is header-input-output: At the top is the header, then there are the
-inputs/declarations, followed by the output/body. Make sure to separated this
-three groups in some ways (such as horizontal lines or empty lines).</p>
-<p><strong>Mixed example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/header_input_output.png"><img alt="header-input-output" src="../../img/languagePatterns/header_input_output.png"/></a></p>
-</details>
-<details class="hint">
-<summary>Lines aren’t too thick and not textual.</summary>
-<p>A good maximum width for borders and other lines is 3 pixels. This is just a rough guideline but with thicker lines the design becomes overwhelming.</p>
-<p><strong>Bad example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/bad_lines.png"><img alt="bad lines" src="../../img/languagePatterns/bad_lines.png"/></a></p>
-</details>
-<details class="hint">
-<summary>You don’t emphasize meta/not important information.</summary>
-<p><strong>Good example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/meta_information_grey1.png"><img alt="state machine" src="../../img/languagePatterns/meta_information_grey1.png"/></a></p>
-<p>A smaller font, light gray color or maybe a different font seems to work well. Inherited value can also be shown this way: display them as placeholder values in a light gray color.
-Don’t emphasize comments by making them bold or stand out in any way.</p>
-<p><strong>Bad example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/emphasized_comments.png"><img alt="emphasized comments" src="../../img/languagePatterns/emphasized_comments.png"/></a></p>
-</details>
-<details class="hint">
-<summary>The reflective editor is never shown.</summary>
-<p>The reflective editor provides a default editor for nodes. The editor is
-only readonly and should only be used for debugging purposes.</p>
-<p><strong>Bad example</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/reflective_editor.png"><img alt="reflective editor" src="../../img/languagePatterns/reflective_editor.png" width="300px"/></a></p>
-</details>
-<details class="hint">
-<summary>You use The right form of projection for the task in the editor.</summary>
-<p>The right projections are used (text, tables, diagrams..) and different kind of projections are provided when necessary (switchable by menu or editor hints).</p>
-<p><strong>Example: multiple projections</strong></p>
-<p><a class="glightbox" href="../../img/languagePatterns/multiple_projections.png"><img alt="multiple projections" src="../../img/languagePatterns/multiple_projections.png"/></a></p>
-</details>
-<details class="hint">
-<summary>You didn’t forget to enable anti aliasing for custom swing components.</summary>
-<p>When you create a custom component and have a paint-Method, call <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent.turnOnAliasingIfPossible%2528java.awt.Graphics2D%2529">EditorComponent.turnOnAliasingIfPossible</a>
-to enable anti aliasing. More information can be found in the <a href="https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html">Java documentation</a>.</p>
-</details>
-<details class="hint">
-<summary>All usages of symbols are clear.</summary>
-<p>When using symbols, make sure that the user understands what it means. 
-A Plus symbol might be easy to understand (<abbr title="addition">add</abbr>, increase), a complex shape that is not usuable used might be not. Common icons can be found for example in the <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free">fontawesome icon pack</a>.</p>
-</details>
-<details class="hint">
-<summary>You abbreviate often used words and symbol.</summary>
-<p>Abbreviate words that are often used in the editor or use symbols.
-Examples:</p>
+<p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties</a>.</p>
+<p><code>home/.ant/lib</code> contains addtitional Java libraries that can be used with Ant.</p>
+<p>The <code>resources</code> folder contains image resources as well as the following files:</p>
 <ul>
-<li>The Letter “m” or a red star <em style="color: red">*</em> is often used to mark a field as mandatory.</li>
-<li>The plus sign ⊕ is used to indicate an “<abbr title="addition">add</abbr>” action.</li>
+<li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>mps-dmg.sh</em>: create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for Mac <abbr title="Open Source">OS</abbr></li>
+<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> Mac <abbr title="Open Source">OS</abbr> application</li>
 </ul>
-</details>
+<p>The <code>tests</code> folder contains Ant scripts for executing tests.
+The <code>tools</code> folder contains scripts for signing and creating DMGs and also
+a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
+The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc).
+The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
+on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
+<h1 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h1>
+<p>The <code>aspects</code> folder contains the languages for the language aspects.
+The <code>baselanguage</code> fodler contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
+<p>The folder <code>devkit</code> contains the four main devkits:</p>
+<ul>
+<li><ins>jetbrains.mps.devkit.bootstrap-languages</ins>: contains all the jetbrains.mps.<abbr title="language">lang</abbr> languages</li>
+<li><ins>jetbrains.mps.devkit.general-purpose</ins>: baselanguage + smodel + text +  quotation language</li>
+<li><ins>jetbrains.mps.devkit.language-design</ins> + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources</li>
+<li><ins>jetbrains.mps.devkit.templates</ins>: general-purpose + generator languages</li>
+</ul>
+<h2 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
+<p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
+make classes and and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
+<h2 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">¶</a></h2>
+<p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.</p>
+<h2 id="make">make<a class="headerlink" href="#make" title="Permanent link">¶</a></h2>
+<p>Everything related to the make facet is situated in this folder.</p>
+<h2 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">¶</a></h2>
+<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>. There are, for example, stubs for Aanotations (e.g. <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
+<h2 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">¶</a></h2>
+<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.</p>
+<h1 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">¶</a></h1>
+<p>This folder contains languages and solutions for the following platform features:</p>
+<ul>
+<li>build language</li>
+<li>console</li>
+<li>http server</li>
+<li>make</li>
+<li>migrations</li>
+<li>model checker</li>
+<li>Java to mps parsing</li>
+<li>spell checker</li>
+<li>debugging information (traceInfo)</li>
+<li>version control</li>
+<li>integrations with the IDEA platform</li>
+<li>integration for <abbr title="Meta Programming System">MPS</abbr> plugin into IntelliJ IDEA</li>
+</ul>
+<h1 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">¶</a></h1>
+<p>This folder contains the samples that are ship with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
+<h1 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h1>
+<p>This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.</p>
+<h1 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">¶</a></h1>
+<p>This folder contains subfolders for:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
+<li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions</a></li>
+<li>editor related actions</li>
+<li>run configurations + execution of baselanguage and othe languages</li>
+<li>refactorings</li>
+<li><abbr title="User Interface">UI</abbr> components and tools such as the dependency viewer, the new module dialog as well as different finders</li>
+<li>all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)</li>
+<li>editor tabs for the various language aspects</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 5, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1016,7 +972,7 @@ Examples:</p>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: User experience" class="md-footer__link md-footer__link--prev" href="../user_experience/" rel="prev">
+<a aria-label="Previous: IntelliJ SDK" class="md-footer__link md-footer__link--prev" href="../intellij_sdk/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1025,17 +981,17 @@ Examples:</p>
 <span class="md-footer__direction">
                 Previous
               </span>
-              User experience
+              IntelliJ SDK
             </div>
 </div>
 </a>
-<a aria-label="Next: Reading list" class="md-footer__link md-footer__link--next" href="../../reference/reading_list/" rel="next">
+<a aria-label="Next: Index" class="md-footer__link md-footer__link--next" href="../../clean_code/mps/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Reading list
+              Index
             </div>
 </div>
 <div class="md-footer__button md-icon">

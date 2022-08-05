@@ -644,6 +644,11 @@
         IntelliJ SDK
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -873,17 +878,17 @@
 <p>For a full list of <em>baselanguage</em> bugs and feature requests, have a look <abbr title="affine transform">at</abbr> <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage">this ticket search</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Paste as Java class doesn’t work.</p>
-<p>Not all newer Java features can <abbr title="binary expression">be</abbr> pasted such as the double colon operator(::) and static imports (fixed <abbr title="input (stream)">in</abbr> the newest <abbr title="Meta Programming System">MPS</abbr> versions). Loops with more
+<p>Not all newer Java features can be pasted such as the double colon operator(::) and static imports (fixed in the newest <abbr title="Meta Programming System">MPS</abbr> versions). Loops with more
 than one variable also don’t work.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Set the `Export flag <abbr title="affine transform">at</abbr> the moduleX import.</p>
-<p>You are using a class that extends another class that is situated <abbr title="input (stream)">in</abbr> another solution. That means that the export flag for the other
-solutions should <abbr title="binary expression">be</abbr> set <abbr title="input (stream)">in</abbr> the current module, so that there is automatically a dependency to this module.
-More information can <abbr title="binary expression">be</abbr> found <abbr title="input (stream)">in</abbr> <a href="../../mps_internal/dependencies/#export-flag">dependencies: export flag</a>.</p>
+<p>You are using a class that extends another class that is situated in another solution. That means that the export flag for the other
+solutions should be set in the current module, so that there is automatically a dependency to this module.
+More information can be found in <a href="../../mps_internal/dependencies/#export-flag">dependencies: export flag</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What Java language features aren’t supported <abbr title="input (stream)">in</abbr> <em>baselanguage</em>?</p>
+<p class="admonition-title">What Java language features aren’t supported in <em>baselanguage</em>?</p>
 <p>The following features are not supported (yet):</p>
 <ul>
 <li><a href="https://www.baeldung.com/java-nested-classes">local classes</a></li>
@@ -899,7 +904,7 @@ More information can <abbr title="binary expression">be</abbr> found <abbr title
 <p class="admonition-title">A function with <em>baselanguage</em> code doesn’t return anything when called.</p>
 <p><em>baselanguage</em> permits implicit returns. The last statement is automatically returned. In some
 places implicit returns aren’t supported, such as when returning a new <code>ListScope</code> class. Make sure to <abbr title="addition">add</abbr> a return
-statement <abbr title="input (stream)">in</abbr> such places.</p>
+statement in such places.</p>
 </div>
 <h2 id="var-variable">Var Variable<a class="headerlink" href="#var-variable" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -908,15 +913,15 @@ statement <abbr title="input (stream)">in</abbr> such places.</p>
 <div class="admonition warning">
 <p class="admonition-title">TextGen not found for concept of X language.</p>
 <p>Maybe a wrong generator order of languages. Example The generators of language x are executed first and then the generator of
-the <em><abbr title="variable">var</abbr></em> variable of the same language is called. It should <abbr title="binary expression">be</abbr> the other way around. You can specify a custom generation plan to fix this issue.</p>
+the <em><abbr title="variable">var</abbr></em> variable of the same language is called. It should be the other way around. You can specify a custom generation plan to fix this issue.</p>
 </div>
 <h2 id="closures">Closures<a class="headerlink" href="#closures" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage.closures</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Exception when passing closure literal as a parameter <abbr title="input (stream)">in</abbr> a behaviour method call</p>
-<p>Closures can’t <abbr title="binary expression">be</abbr> used for functional interface types such as <code>java.util.Runnable</code> <abbr title="input (stream)">in</abbr> behaviour methods (see <a href="https://youtrack.jetbrains.com/issue/MPS-31866"><abbr title="Meta Programming System">MPS</abbr>-31866</a>)</p>
+<p class="admonition-title">Exception when passing closure literal as a parameter in a behaviour method call</p>
+<p>Closures can’t be used for functional interface types such as <code>java.util.Runnable</code> in behaviour methods (see <a href="https://youtrack.jetbrains.com/issue/MPS-31866"><abbr title="Meta Programming System">MPS</abbr>-31866</a>)</p>
 </div>
 <h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">¶</a></h2>
 <div class="admonition question">
@@ -985,8 +990,8 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn�
 <ul>
 <li>An intention can mark a regular property-cell such as string, int, and boolean as transactional.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> updates the editor, when the cursor leaves the cell (= commit).</li>
-<li>You must define the commit handler <abbr title="input (stream)">in</abbr> the inspector. The benefit is that the editor isn’t permanently updated on every key typed.</li>
-<li>Can <abbr title="binary expression">be</abbr> useful, for example, if you set your text-color dynamically.</li>
+<li>You must define the commit handler in the inspector. The benefit is that the editor isn’t permanently updated on every key typed.</li>
+<li>Can be useful, for example, if you set your text-color dynamically.</li>
 </ul>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">¶</a></h2>
 <blockquote>
