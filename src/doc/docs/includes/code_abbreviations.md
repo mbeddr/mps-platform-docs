@@ -25,7 +25,6 @@
 *[bb]: byte buffer
 *[bc]: build configuration
 *[bd]: big decimal
-*[be]: binary expression
 *[bg]: background or button group
 *[bhvr]: behavior
 *[bim]: buffered image
@@ -135,7 +134,6 @@
 *[img]: image
 *[imp]: import
 *[impl]: implementation
-*[in]: input (stream)
 *[inc]: increase
 *[info]: information
 *[inst]: instance
