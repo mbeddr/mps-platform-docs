@@ -3,7 +3,6 @@
 *[acd]: abstract concept declaration
 *[act]: actual
 *[ad]: aspect descriptor
-*[add]: addition
 *[addr]: address
 *[agg]: aggregation
 *[am]: abstract module
@@ -16,7 +15,6 @@
 *[art]: artifact
 *[ass]: assessment
 *[ast]: abstract syntax tree
-*[at]: affine transform
 *[attr]: attribute
 *[aux]: auxiliary
 *[avg]: average
@@ -238,7 +236,6 @@
 *[ra]: read action
 *[rc]: rule consequence
 *[rd]: reference descriptor
-*[re]: runtime exception
 *[rec]: rectangle or record
 *[ref]: reference
 *[rel]: relative
