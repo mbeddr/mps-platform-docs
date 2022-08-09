@@ -658,6 +658,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -892,10 +897,12 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1>Gradle</h1>
+<p>Documentation for Gradle can be found on <a href="https://docs.gradle.org/current/userguide/what_is_gradle.html">gradle.org</a>.
+The used features of the Groovy languages are explained in <a href="https://docs.gradle.org/current/userguide/groovy_build_script_primer.html">A Groovy Build Script Primer</a>.</p>
 <h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">How do you set up a gradle build for an <abbr title="Meta Programming System">MPS</abbr> project?</p>
-<p>There is a gist for a <a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal build</a>. There is a <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>. For more complex projects look <abbr title="affine transform">at</abbr> build scripts of big projects such as <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+<p>There is a gist for a <a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal build</a>. There is a <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>. For more complex projects look at build scripts of big projects such as <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a Gradle plugin for downloading things?</p>
@@ -919,13 +926,13 @@
 It might simply work if the other private repository is part of the same organization.</p>
 <p>If not, ensure the <em>GITHUB_TOKEN</em> permissions are correct: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token">Permissions for the <em>GITHUB_TOKEN</em></a></p>
 <p>Depending on the organizational settings, it might be impossible to obtain the artifact via the generic <em>GITHUB_TOKEN</em>. In this case you need to create a new <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">personal access token</a> (PAT).</p>
-<p>Next, <abbr title="addition">add</abbr> this token as a secret to the project (e.g. as <em>PRIVATE_REPO_ACCESS_ACTOR</em> and <em>PRIVATE_REPO_ACCESS_TOKEN</em>): <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#granting-additional-permissions">Granting additional permissions</a></p>
+<p>Next, add this token as a secret to the project (e.g. as <em>PRIVATE_REPO_ACCESS_ACTOR</em> and <em>PRIVATE_REPO_ACCESS_TOKEN</em>): <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication#granting-additional-permissions">Granting additional permissions</a></p>
 <ul>
 <li>
 <p>Make sure that this secret is not in an environment but generally available.</p>
 <ul>
 <li>
-<p>Also <abbr title="addition">add</abbr> the username. Even though no username is required for token access, an error will occur if you leave it empty.</p>
+<p>Also add the username. Even though no username is required for token access, an error will occur if you leave it empty.</p>
 </li>
 <li>
 <p>Make sure you authorize the PAT for the SSO org (warning: this resets when changing permissions!)</p>
@@ -1168,7 +1175,7 @@ For defining the gradle scripts you can use groove (<code>build.gradle</code>) o
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

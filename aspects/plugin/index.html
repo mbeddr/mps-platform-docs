@@ -630,6 +630,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -906,8 +911,8 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>I have a .jar that depends on a native libray (.dll/.so/…). To use it in an <abbr title="Meta Programming System">MPS</abbr> plugin I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> tries to reload the jar in some cases (e.g. after a rebuild). This will fail, because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
 <p>How can I avoid this problem?</p>
 </blockquote>
-<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (<abbr title="runtime exception">re</abbr>-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” in the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `com.intellij.</p>
-<p>Now we just have to ensure that the .jars can be found <abbr title="affine transform">at</abbr> runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
+<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (re-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” in the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `com.intellij.</p>
+<p>Now we just have to ensure that the .jars can be found at runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></sub></sub></p>
 </details>
 <details class="question">
@@ -929,7 +934,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>This hint must also be referenced from a <em>Projection Mode Switcher</em>.</p>
 <p><a class="glightbox" href="../../img/projection_mode_switcher.png"><img alt="projection mode switcher" src="../../img/projection_mode_switcher.png"/></a></p>
 <p>Afterwards you will find a new entry in the <em>Projection</em> menu.</p>
-<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em> which can be activated by an intention <abbr title="affine transform">at</abbr> the position where the include of <span class="arithmatex">\(A\)</span> happens. Also in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself we cannot use Grammar Cells.</p>
+<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em> which can be activated by an intention at the position where the include of <span class="arithmatex">\(A\)</span> happens. Also in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself we cannot use Grammar Cells.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></sub></sub></p>
 </details>
 <h2 id="languagesfeatures">Languages/features<a class="headerlink" href="#languagesfeatures" title="Permanent link">¶</a></h2>
@@ -967,7 +972,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>Call the corresponding method in <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESModelStereotype">SModelStereotype</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you <abbr title="addition">add</abbr> imports to a model?</p>
+<p class="admonition-title">How do you add imports to a model?</p>
 <p>Use the class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.project%28MPS.Platform%2F%29%2F%7EModelImportHelper">ModelImportHelper</a> and call <code>addImport</code>.</p>
 </div>
 <div class="admonition question">
@@ -983,16 +988,16 @@ How may I get guidance in cleaning up these dangling references?</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">A reference to a key in an action context parameter is out of search scope.</p>
-<p>You need to <abbr title="addition">add</abbr> a dependency to <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a>.
+<p>You need to add a dependency to <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a>.
 This class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EPlatformDataKeys">PlatformDataKeys</a>
 and this class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7ECommonDataKeys">CommonDataKeys</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">An action isn’t visible.</p>
-<p>You have to <abbr title="addition">add</abbr> it to an <code>ActionGroup</code> that can be attached to differenct places such as the context menu or the build menu. 
+<p>You have to add it to an <code>ActionGroup</code> that can be attached to differenct places such as the context menu or the build menu. 
 All of the action context parameters that are marked as required have to be available and the <code class="highlight"><span class="n">isApplicable</span><span class="w"></span></code> block must
 return true for an action to be visible. For debugging purposes you can set <em>always visible</em> to true to check if your
-action is registered <abbr title="affine transform">at</abbr> all. </p>
+action is registered at all. </p>
 <p>You also need to have a standalone descriptor in your model for it to work. Additionaly,
 the solution kind should be set to <em>Other</em> in the <em>Java</em> tab of the solution properties (<a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Plugin | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>

@@ -650,6 +650,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -880,14 +885,14 @@
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage</ins></p>
 </blockquote>
-<p>For a full list of <em>baselanguage</em> bugs and feature requests, have a look <abbr title="affine transform">at</abbr> <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage">this ticket search</a>.</p>
+<p>For a full list of <em>baselanguage</em> bugs and feature requests, have a look at <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage">this ticket search</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Paste as Java class doesn’t work.</p>
 <p>Not all newer Java features can be pasted such as the double colon operator(::) and static imports (fixed in the newest <abbr title="Meta Programming System">MPS</abbr> versions). Loops with more
 than one variable also don’t work.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Set the `Export flag <abbr title="affine transform">at</abbr> the moduleX import.</p>
+<p class="admonition-title">Set the `Export flag at the moduleX import.</p>
 <p>You are using a class that extends another class that is situated in another solution. That means that the export flag for the other
 solutions should be set in the current module, so that there is automatically a dependency to this module.
 More information can be found in <a href="../../mps_internal/dependencies/#export-flag">dependencies: export flag</a>.</p>
@@ -908,7 +913,7 @@ More information can be found in <a href="../../mps_internal/dependencies/#expor
 <div class="admonition warning">
 <p class="admonition-title">A function with <em>baselanguage</em> code doesn’t return anything when called.</p>
 <p><em>baselanguage</em> permits implicit returns. The last statement is automatically returned. In some
-places implicit returns aren’t supported, such as when returning a new <code>ListScope</code> class. Make sure to <abbr title="addition">add</abbr> a return
+places implicit returns aren’t supported, such as when returning a new <code>ListScope</code> class. Make sure to add a return
 statement in such places.</p>
 </div>
 <h2 id="var-variable">Var Variable<a class="headerlink" href="#var-variable" title="Permanent link">¶</a></h2>
@@ -954,7 +959,7 @@ When I run it, then I expect the result <code>[0,1,2,3,4]</code> but unexpectedl
 What’s happening?</p>
 </blockquote>
 <p><code>Yield</code> does not work with <code>.select({…})</code>.
-It will do what you expected if you just call <code>.selectMany({…})</code> instead. That’ll also make it clear what happens if you <code>yield</code> multiple times during an iteration, and that the control flow doesn’t end when you’<abbr title="runtime exception">re</abbr> yielding.</p>
+It will do what you expected if you just call <code>.selectMany({…})</code> instead. That’ll also make it clear what happens if you <code>yield</code> multiple times during an iteration, and that the control flow doesn’t end when you’re yielding.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </div>
 <div class="admonition question">

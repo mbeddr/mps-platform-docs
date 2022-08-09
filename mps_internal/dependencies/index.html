@@ -663,6 +663,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -904,7 +909,7 @@
 <h1 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">¶</a></h1>
 <p>First of all: the number of languages can be very important: Many small languages are hard to maintain while big languages
 take a long time building in the <abbr title="Integrated Development Environment">IDE</abbr>. Many dependencies can create cycles which are described later on this page.</p>
-<p>By default, you can only reference nodes present in the current model. Dependencies <abbr title="addition">add</abbr> other models and modules that you can reference from the current model.</p>
+<p>By default, you can only reference nodes present in the current model. Dependencies add other models and modules that you can reference from the current model.</p>
 <p>Models listed as dependencies of Model <span class="arithmatex">\(A\)</span> need to be contained within modules listed in the dependencies (including transitive entries) of the module containing this model. Example:</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNqNVM2OgjAQvvcpJu5hk42QwNEYo-WwJ32BzR4qHYVsaQktMST78NsiFStK9oZ8PzPzzchWG9aYthJE4MmAUdCU58IALxvMTakkIblgWsNe8VbgDtbr_VI4yrlh3WYzoAsLo9jFSuICWM-2PxPLrq7so2hxZB8s3JNjJuqC9ZL-nVMclh0KoS4Tc3NRd-bpvLklP5qnoXkwGLXY58vBaDgYTUb2tDZ9MhhNZmpns6FmYe1sWpv43XxEkU9-BbmShpVSE78Lh15DDsEHaTqRpqP0HiQ-uZuWTp0pxO6w4t-Nv6AVcKxRcg32uHyc96Rr-09IvougzJDurIHnfL01yL9DZhowpTI4_AOUBFHKH6Ja-3wCnasaye0C3FKgYNoqBj3KvHMiMl4rsa_BWZJ3v-ko8pVp4hPMxgSzyeKyW99cXWT8dL7_dd1XetmyW83YLylKjoBVbTqosDpiY_e9tbD7UvwBmvNg3A=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqNVM2OgjAQvvcpJu5hk42QwNEYo-WwJ32BzR4qHYVsaQktMST78NsiFStK9oZ8PzPzzchWG9aYthJE4MmAUdCU58IALxvMTakkIblgWsNe8VbgDtbr_VI4yrlh3WYzoAsLo9jFSuICWM-2PxPLrq7so2hxZB8s3JNjJuqC9ZL-nVMclh0KoS4Tc3NRd-bpvLklP5qnoXkwGLXY58vBaDgYTUb2tDZ9MhhNZmpns6FmYe1sWpv43XxEkU9-BbmShpVSE78Lh15DDsEHaTqRpqP0HiQ-uZuWTp0pxO6w4t-Nv6AVcKxRcg32uHyc96Rr-09IvougzJDurIHnfL01yL9DZhowpTI4_AOUBFHKH6Ja-3wCnasaye0C3FKgYNoqBj3KvHMiMl4rsa_BWZJ3v-ko8pVp4hPMxgSzyeKyW99cXWT8dL7_dd1XetmyW83YLylKjoBVbTqosDpiY_e9tbD7UvwBmvNg3A=="/></a></p>
 <p>You can’t mark a model <em>internal</em> and hide it from outside access.</p>
@@ -956,7 +961,7 @@ take a long time building in the <abbr title="Integrated Development Environment
 Starting with <abbr title="Meta Programming System">MPS</abbr> 2021.1, there is a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn’t <abbr title="actual">act</abbr> as forgiving as the earlier one (ECJ).</p>
 <p>Distinctive cases are runtime solutions, accessory models, and utility models.</p>
 <p>In contrast to runtime solutions, utility models are used <em>while</em> accessing behavior or running a generator. Code within runtime solutions is used <em>after</em> the generator ran from the generated code. Thus, a runtime solution shouldn’t use or reference the language it is referenced from. A utility model can use or reference the language it is reference from.</p>
-<p>Accessory models can use or reference the language they’<abbr title="runtime exception">re</abbr> referenced from.</p>
+<p>Accessory models can use or reference the language they’re referenced from.</p>
 <p>For build scripts there is a flag that allows bootstrap dependencies. More information can be found in section <em><abbr title="Meta Programming System">MPS</abbr> Settings</em> of the <a href="https://www.jetbrains.com/help/mps/build-language.html?q=bootstrap%20%E2%80%93%20setting%20this%20flag#whatismpsbuildlanguage?">build language documentation</a>. </p>
 <hr/>
 <div class="md-source-file">

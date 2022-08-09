@@ -594,6 +594,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -818,7 +823,7 @@ If you don’t want to share any configuration also update idea.config.path.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you have settings that get saved globally?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Preferences can be only used <abbr title="affine transform">at</abbr> the project level. Use the workaround described in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer</a>
+<p>Preferences can be only used at the project level. Use the workaround described in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer</a>
 or save your values in the global IntelliJ IDEA <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry">Registry</a>.
 More information about the Registry can be found in <a href="https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry">this Stack Overflow post</a>.
 It can also be shown programmatically by calling <code>new RegistryUi().show()</code>.</p>
@@ -829,8 +834,8 @@ It can also be shown programmatically by calling <code>new RegistryUi().show()</
 can be found in the same model.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you <abbr title="addition">add</abbr> widgets to the status bar? (for example: memory indicator, save transient models)</p>
-<p>Have a look <abbr title="affine transform">at</abbr> <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120">this answer</a>. 
+<p class="admonition-title">How to you add widgets to the status bar? (for example: memory indicator, save transient models)</p>
+<p>Have a look at <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120">this answer</a>. 
 Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)">project plugin</a>.</p>
 </div>
 <div class="admonition question">
@@ -840,16 +845,16 @@ Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/p
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I register an IntelliJ extension?</p>
-<p>Find the interface you want to <abbr title="addition">add</abbr> an extension on <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">this page</a>.
+<p>Find the interface you want to add an extension on <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">this page</a>.
 The corresponding interface has a static field <code>EP_NAME</code>. If the interface is implemented in Kotlin it might have a static field <code>Companion</code> with a <code>getEP_NAME()</code> method. Extend this interface (EX) and register it through the extension point.
 Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you <abbr title="addition">add</abbr> a status bar widget?</p>
+<p class="admonition-title">How can you add a status bar widget?</p>
 <p>Implement the interface <code>StatusBarWidgetFactory</code> and register it through the StatusBarWidgetFactory.EP_NAME extension point.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you <abbr title="addition">add</abbr> model imports and used languages programmatically?</p>
+<p class="admonition-title">How do you add model imports and used languages programmatically?</p>
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/">Adding model imports and used languages programmatically</a></p>
 </div>
 <div class="admonition question">
@@ -900,7 +905,7 @@ and open <code>j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare</code>, th
 <p>For built-in languages, <abbr title="Meta Programming System">MPS</abbr> brings a load of dedicated debugging facilities:</p>
 <ul>
 <li>Debugging editor cells and nodes: When you right-click an item in the editor, you can find a submenu <em>Language Debug</em>.</li>
-<li>Debugging menu entries: Select an item that you’<abbr title="runtime exception">re</abbr> curious in and press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span> to open the <em>Menu Trace</em> of it.</li>
+<li>Debugging menu entries: Select an item that you’re curious in and press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span>/<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-b">B</kbd></span> to open the <em>Menu Trace</em> of it.</li>
 <li>Setup and an IntelliJ and connect it to step through java code.</li>
 </ul>
 <p><strong>Option 1</strong>: Search for literals from console.</p>

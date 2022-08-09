@@ -630,6 +630,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -920,7 +925,7 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 <a class="glightbox" href="../../img/ModelMergeExt_reference_macro.png"><img alt="../img/ModelMergeExt_reference_macro.png" src="../../img/ModelMergeExt_reference_macro.png"/></a></p>
 <p>Make sure you have <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins> included as language in the plugin.</p>
 <ul>
-<li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now <abbr title="affine transform">at</abbr> your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
+<li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
 </ul>
 <p>1.the generated class 
 2.the generated extension 
@@ -938,7 +943,7 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 </details>
 <div class="admonition question">
 <p class="admonition-title">Where should you put classes that you need on the user side and in the generator?</p>
-<p>Move the classes to a solution and <abbr title="addition">add</abbr> that solution as a runtime solution to the language (in the module properties).</p>
+<p>Move the classes to a solution and add that solution as a runtime solution to the language (in the module properties).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you access the output model in a property macro?</p>
@@ -961,7 +966,7 @@ Can I do something similar in property macros? For those, there obviously is no 
 <h2 id="how-to-generate-xy">How to generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">What can be generated?</p>
-<p>Have a look <abbr title="affine transform">at</abbr> the <a href="https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository">language repository</a>. You
+<p>Have a look at the <a href="https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository">language repository</a>. You
 might also find other languages on GitHub. In general there doesn’t have to be an existing language. Any text can be
 generated with TextGen or Plaintextgen from <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -977,7 +982,7 @@ for excel can be found <a href="https://www.codejava.net/coding/how-to-write-exc
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you generate latex files?</p>
-<p>The mbeddr documentation language can do this. Have a look <abbr title="affine transform">at</abbr> the <a href="http://mbeddr.com/files/documentationdocumentation.pdf">documentation</a>.</p>
+<p>The mbeddr documentation language can do this. Have a look at the <a href="http://mbeddr.com/files/documentationdocumentation.pdf">documentation</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you generate some text?</p>
@@ -997,7 +1002,7 @@ for excel can be found <a href="https://www.codejava.net/coding/how-to-write-exc
 </div>
 <div class="admonition question">
 <p class="admonition-title">Should you use generation plans or generator priorities?</p>
-<p>Have a look <abbr title="affine transform">at</abbr> the motivation for generation plans in the <a href="https://www.jetbrains.com/help/mps/generation-plan.html">official documentation</a>.
+<p>Have a look at the motivation for generation plans in the <a href="https://www.jetbrains.com/help/mps/generation-plan.html">official documentation</a>.
 Generation plans should be used when the generation order is simple.</p>
 </div>
 <div class="admonition question">
@@ -1041,12 +1046,12 @@ What can I do?</p>
 <p><a class="glightbox" href="../../img/long_string_property_macro.png"><img alt="long string property macro" src="../../img/long_string_property_macro.png" width="600px"/></a></p>
 </blockquote>
 <p><strong>Option 1</strong>: Extract into a separate file</p>
-<p>Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded <abbr title="affine transform">at</abbr> this place.</p>
+<p>Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.</p>
 <p><strong>Option 2</strong>: Split and join again</p>
-<p>The restriction only applies to the size of string literals. However, <abbr title="affine transform">at</abbr> runtime, it is allowed to have larger strings. So that we can split it into a concatenation that gets assembled <abbr title="affine transform">at</abbr> runtime then:</p>
+<p>The restriction only applies to the size of string literals. However, at runtime, it is allowed to have larger strings. So that we can split it into a concatenation that gets assembled at runtime then:</p>
 <ul>
 <li>Here we use the <a href="https://github.com/google/guava">Guiva</a> classes <a href="https://github.com/google/guava">Joiner</a> and <a href="https://github.com/google/guava">Splitter</a> from <code>MPS.Core/google.common.base</code> and <code>java.util.Arrays</code>.</li>
-<li>We use the splitter <abbr title="affine transform">at</abbr> generation time to split it into parts of maximal 50000 characters.</li>
+<li>We use the splitter at generation time to split it into parts of maximal 50000 characters.</li>
 <li>Then we map it onto an arbitrary node that has a string property, as <code>$LOOP$</code> requires a node</li>
 <li>In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible in the screenshot)</li>
 <li>It is just a coincidence that we create nodes of the same concept and use the same property for the loop content, than for the outside context node. You may light-quote anything of type string here.</li>
@@ -1128,7 +1133,7 @@ What is the source of this information, and how reliable is it?</p>
   copy resources false
 </code></pre></div>
 <p>Then set <em>generate debug <abbr title="information">info</abbr></em> to true.</p>
-<p>If no java options exist in your build solution, simply <abbr title="addition">add</abbr> one in the project structure.</p>
+<p>If no java options exist in your build solution, simply add one in the project structure.</p>
 </div>
 <details class="question">
 <summary>How can you debug the differences of generation between command line and <abbr title="Meta Programming System">MPS</abbr>?</summary>

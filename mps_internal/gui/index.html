@@ -595,6 +595,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -785,7 +790,7 @@ A more technical explanation can be found in the <a href="https://plugins.jetbra
 <p>Use the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.ui%28MPS.IDEA%2F%29%2F%7EMessages">com.intellij.openapi.<abbr title="user interface">ui</abbr>.Messages</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you <abbr title="addition">add</abbr> messages to the right side of the window?</p>
+<p class="admonition-title">How do you add messages to the right side of the window?</p>
 <p>In IntelliJ IDEA it is called <a href="https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html">error stripe</a>,
 in <abbr title="Meta Programming System">MPS</abbr> <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter">MessagesGutter</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -796,13 +801,13 @@ in <abbr title="Meta Programming System">MPS</abbr> <a href="http://127.0.0.1:63
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you <abbr title="addition">add</abbr> things to the left of the editor? (examples: breakpoints, go subclasses etc.)</p>
+<p class="admonition-title">How can you add things to the left of the editor? (examples: breakpoints, go subclasses etc.)</p>
 <p>The component is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.leftHighlighter%28MPS.Editor%2F%29%2F%7ELeftEditorHighlighter">LeftEditorHighlighter</a>.
 A checker has to be implemented that can show messages in this component (example: <a href="http://127.0.0.1:63320/node?ref=r%3Afa4569a3-1bd4-4159-97bc-db03b3aeff88%28jetbrains.mps.java.platform.highlighters%29%2F8432634623182578830">OverrideMethodsChecker</a>).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you <abbr title="addition">add</abbr> an icon to the status bar?</p>
-<p>Have a look <abbr title="affine transform">at</abbr> the the implementation of the <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsWidget.java#L26">transient models widget</a> and
+<p class="admonition-title">How to you add an icon to the status bar?</p>
+<p>Have a look at the the implementation of the <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsWidget.java#L26">transient models widget</a> and
 its initialisation in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsNotification.java#L34">TransientModelsNotification</a>.</p>
 </div>
 <div class="admonition question">
@@ -812,7 +817,7 @@ its initialisation in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a2
 <a href="https://plugins.jetbrains.com/plugin/8554-ide-features-trainer"><abbr title="Integrated Development Environment">IDE</abbr> Features Trainer</a>, CodeSmellDetector and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">Custom Language Support</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you <abbr title="addition">add</abbr> an action to the menu bar of a tool window?</p>
+<p class="admonition-title">How do you add an action to the menu bar of a tool window?</p>
 <p>Example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>

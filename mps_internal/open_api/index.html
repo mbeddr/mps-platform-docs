@@ -595,6 +595,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -903,7 +908,7 @@
 For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java">DeleteModeHelper</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you <abbr title="addition">add</abbr> a language to the <em>Used Languages</em> settings of a model programmatically?</p>
+<p class="admonition-title">How can you add a language to the <em>Used Languages</em> settings of a model programmatically?</p>
 <ul>
 <li>Module level: <code class="highlight"><span class="p">((</span><span class="n">AbstractModule</span><span class="p">)</span><span class="w"> </span><span class="n">moduleA</span><span class="p">).</span><span class="na">addDependency</span><span class="p">(</span><span class="n">moduleB</span><span class="p">.</span><span class="na">getModuleReference</span><span class="p">(),</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"></span></code></li>
 <li>Model level: <code class="highlight"><span class="k">new</span><span class="w"> </span><span class="n">ModelImports</span><span class="p">(</span><span class="n">model</span><span class="p">).</span><span class="na">addUsedLanguage</span><span class="p">(</span><span class="n">language</span><span class="p">)</span><span class="w"></span></code></li>
@@ -917,7 +922,7 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you create an <abbr title="Meta Programming System">MPS</abbr> Language programmatically and <abbr title="addition">add</abbr> it to the current project?</p>
+<p class="admonition-title">How can you create an <abbr title="Meta Programming System">MPS</abbr> Language programmatically and add it to the current project?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">NewModuleUtil</span><span class="p">.</span><span class="na">createLanguage</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span><span class="w"> </span><span class="n">rootPath</span><span class="p">,</span><span class="w"> </span><span class="n">project</span><span class="p">,</span><span class="w"> </span><span class="n">saveProject</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>

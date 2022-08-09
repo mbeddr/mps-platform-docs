@@ -597,6 +597,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -849,9 +854,9 @@ Other types of dependencies on modules include: <em>Java stubs</em> (in combinat
 <p><abbr title="Meta Programming System">MPS</abbr> Plugins are automatically loaded according to the solution Kind set in Java module settings.
 <abbr title="Meta Programming System">MPS</abbr> Plugins need to be contained in <abbr title="Meta Programming System">MPS</abbr> plugin models.</p>
 <h4 id="standaloneplugindescriptor">StandalonePluginDescriptor<a class="headerlink" href="#standaloneplugindescriptor" title="Permanent link">¶</a></h4>
-<p>We need to <abbr title="addition">add</abbr> a <em>StandalonePluginDescriptor</em> (defined in Language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins>) as a root node if a <abbr title="Meta Programming System">MPS</abbr> plugin model uses any concept from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. Other concepts from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> don’t need a <em>StandalonePluginDescriptor</em>.</p>
+<p>We need to add a <em>StandalonePluginDescriptor</em> (defined in Language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins>) as a root node if a <abbr title="Meta Programming System">MPS</abbr> plugin model uses any concept from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. Other concepts from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> don’t need a <em>StandalonePluginDescriptor</em>.</p>
 <h2 id="plugin-disambiguation">Plugin disambiguation<a class="headerlink" href="#plugin-disambiguation" title="Permanent link">¶</a></h2>
-<p>The term “plugin” is used <abbr title="affine transform">at</abbr> various places throughout <abbr title="Meta Programming System">MPS</abbr>. It describes different things:</p>
+<p>The term “plugin” is used at various places throughout <abbr title="Meta Programming System">MPS</abbr>. It describes different things:</p>
 <ul>
 <li>IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which <abbr title="Meta Programming System">MPS</abbr> is based upon.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> plugins: automatically loaded Models.</li>
@@ -875,7 +880,7 @@ As a rule of thumb, the classpath has all Java classes reachable through any kin
 The dependency relations on modules and models are completely separated from the used language relations on modules and models. Thus, no dependency requires a <em>Used Language</em> or vice versa.</p>
 <h2 id="used-languages">Used languages<a class="headerlink" href="#used-languages" title="Permanent link">¶</a></h2>
 <p>No implicitly <em>Used Languages</em> are available except described for generators. Specifically, if <em>LanguageB</em> has an <em>Extends Scope</em> dependency on <em>LanguageA</em> and <em>ModuleC</em> uses <em>LanguageB</em>, <em>LanguageA</em> isn’t a <em>Used Language</em> within <em>ModuleC</em>.</p>
-<p>You must <abbr title="addition">add</abbr> <em>LanguageA</em> (containing <em>ConceptA</em>) to <em>ModuleB’s</em> and contained <em>ModelB’s</em> used languages if and only if</p>
+<p>You must add <em>LanguageA</em> (containing <em>ConceptA</em>) to <em>ModuleB’s</em> and contained <em>ModelB’s</em> used languages if and only if</p>
 <ul>
 <li><em>ModelB</em> instantiates <em>ConceptA</em> within the <abbr title="Integrated Development Environment">IDE</abbr>.</li>
 <li><em>ModelB</em> executes intentions from <em>LanguageA</em>.</li>
@@ -897,7 +902,7 @@ The dependency relations on modules and models are completely separated from the
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp1ksFuwyAMhu88hc9T8gJRFVXboZdulx6nHmhwKBLBEZhVefuSbmMEdUfsz_4_S-wDS89xsmKwMgQ4Sqej1PgqA8Jud2wWtJZuff-kf0CXkENjjb6y9nLJVOqgl0w-r3kwFxsxM2_kBpx5JcRP6UQ2siH3t_zUwJchi5zH3kmhLdOhjBe130vr13a7VepgIMfSuCC2qt_0pyJmVOe2Ly07UDgahwEk-GgRRvJC1M45sBQt8jb-raKbK9JK-w5iME5XA3H-B3-kPJnIPh-pWt3-W6rWbm5OHMv0plGIq1EIOM28wITTBX0QYo9Ord_nDkHMzW8="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1ksFuwyAMhu88hc9T8gJRFVXboZdulx6nHmhwKBLBEZhVefuSbmMEdUfsz_4_S-wDS89xsmKwMgQ4Sqej1PgqA8Jud2wWtJZuff-kf0CXkENjjb6y9nLJVOqgl0w-r3kwFxsxM2_kBpx5JcRP6UQ2siH3t_zUwJchi5zH3kmhLdOhjBe130vr13a7VepgIMfSuCC2qt_0pyJmVOe2Ly07UDgahwEk-GgRRvJC1M45sBQt8jb-raKbK9JK-w5iME5XA3H-B3-kPJnIPh-pWt3-W6rWbm5OHMv0plGIq1EIOM28wITTBX0QYo9Ord_nDkHMzW8="/></a></p>
 <p><em>SolutionBaseGen</em> doesn’t change during generation either, as it doesn’t contain any instances from
 <em>LanguageBaseGen</em>, thus removing <em>LanguageBaseGen</em> from the list of applicable generators, ending up with
-no generators <abbr title="affine transform">at</abbr> all.</p>
+no generators at all.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNqNkbFuwzAMRHd9BefAXjIagRE0g5ckS8agg2qxigCZNCyqhf--MpoIVpshI4_vTqS4D6IniYNXvdchwFGTjdrimw4Iu92xmtF7_m7bJ_0OKSFd5Z29iZ30nKkDU4-jLJC6Sxf2URzT3bhNzksFX449Svad2KBfEV0F63D1L2RTT0u_Lp0N9EyiHQVVJtZxvBoWQfNet-tVGojBkX0VT90GkGwq_z6RJzon-Tc6D_OQiuD1ZzWQMNGp5k9VnOKRWsA5WN2cQcBhlBkGHD5wStoeySyH_QFDcai8"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqNkbFuwzAMRHd9BefAXjIagRE0g5ckS8agg2qxigCZNCyqhf--MpoIVpshI4_vTqS4D6IniYNXvdchwFGTjdrimw4Iu92xmtF7_m7bJ_0OKSFd5Z29iZ30nKkDU4-jLJC6Sxf2URzT3bhNzksFX449Svad2KBfEV0F63D1L2RTT0u_Lp0N9EyiHQVVJtZxvBoWQfNet-tVGojBkX0VT90GkGwq_z6RJzon-Tc6D_OQiuD1ZzWQMNGp5k9VnOKRWsA5WN2cQcBhlBkGHD5wStoeySyH_QFDcai8"/></a></p>
 <p><em>SolutionBaseGen2</em> ends up with a transformed <em>NodeBase</em>, as <em>Languages engaged in generation</em> are never removed.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNqVkzFrwzAQhXf9ipuLtXg0wYSWkiXpkrF0UK2zIpClIJ3bGvrjKzXElYkc6OinT_feO6xtIOFpHAwz2BOQA6_ViUBqjx1pZxnrjAgB9sKqUSh8FAFhs9lXExrjPtu2cL5D-_xFaGWI5K4yaaLyYprhCKAX5Hyi76NPznZ4pgTeKvU13dGZMaW9cT9W8KGdQZoHHpxEU0gJuTdbqcP5d7uo2gBejtZuPHBerNtA5ywJbQMrboO_SkeE8o23i8YNSOy1xQAC_GgQeucZW-mfzAt9M-_SNvjvL_Dnv-w7Bm3Vv-_l5mhVVMveKfFL1C9ed2PmaJ2xVy1bYb7BBiJEIn67fmbrFbhe0Is3kOwXY-cA97A8KDtpiYDDmSYYcHhHH7Vt7Jae4w89zkcE"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqVkzFrwzAQhXf9ipuLtXg0wYSWkiXpkrF0UK2zIpClIJ3bGvrjKzXElYkc6OinT_feO6xtIOFpHAwz2BOQA6_ViUBqjx1pZxnrjAgB9sKqUSh8FAFhs9lXExrjPtu2cL5D-_xFaGWI5K4yaaLyYprhCKAX5Hyi76NPznZ4pgTeKvU13dGZMaW9cT9W8KGdQZoHHpxEU0gJuTdbqcP5d7uo2gBejtZuPHBerNtA5ywJbQMrboO_SkeE8o23i8YNSOy1xQAC_GgQeucZW-mfzAt9M-_SNvjvL_Dnv-w7Bm3Vv-_l5mhVVMveKfFL1C9ed2PmaJ2xVy1bYb7BBiJEIn67fmbrFbhe0Is3kOwXY-cA97A8KDtpiYDDmSYYcHhHH7Vt7Jae4w89zkcE"/></a></p>

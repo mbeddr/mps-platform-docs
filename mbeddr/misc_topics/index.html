@@ -633,6 +633,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
@@ -843,7 +848,7 @@
 </a>
 <h1 id="misc-topics">Misc Topics<a class="headerlink" href="#misc-topics" title="Permanent link">¶</a></h1>
 <h2 id="limitations-to-product-line-engineering-when-generating-variant-aware-code">Limitations to product line engineering when generating variant aware code<a class="headerlink" href="#limitations-to-product-line-engineering-when-generating-variant-aware-code" title="Permanent link">¶</a></h2>
-<p>The current PLE approach only generates a single variant. The generated artifacts aren’t variant aware. We want to enable the that the generated code can contain <em>#if</em> statements to generate all variants <abbr title="affine transform">at</abbr> once. When we want to do this we have to limit variability to elements where we can represent this in the generated C code. The main problem is that presence conditions can’t be applied to all nodes in the model.</p>
+<p>The current PLE approach only generates a single variant. The generated artifacts aren’t variant aware. We want to enable the that the generated code can contain <em>#if</em> statements to generate all variants at once. When we want to do this we have to limit variability to elements where we can represent this in the generated C code. The main problem is that presence conditions can’t be applied to all nodes in the model.</p>
 <h3 id="what-doesnt-work">What doesn’t work?<a class="headerlink" href="#what-doesnt-work" title="Permanent link">¶</a></h3>
 <p>In addition to elements with a cardinality of 1, some other items can’t be removed from the <abbr title="Abstract Syntax Tree">AST</abbr> with presence conditions:</p>
 <ul>
