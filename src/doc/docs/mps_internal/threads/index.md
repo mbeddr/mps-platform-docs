@@ -17,7 +17,7 @@ The MPS locks are described in [Managing concurrent access | MPS](https://www.je
 - Write MPS model: `write action with`
 - Read MPS model: `read action with`
 
-## AWT event dispatch thread (EDT) / UI Thread
+## AWT event dispatch thread (EDT) / UI / Editor Thread
 
 - drawing of components in MPS/IntelliJ IDEA is done through [Swing](https://www.tutorialspoint.com/swing/swing_quick_guide.htm)
 - Swing isn't thread safe, most of the Swing code runs in EDT.
