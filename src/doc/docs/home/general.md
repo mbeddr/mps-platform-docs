@@ -124,4 +124,5 @@
 
 !!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
 
-    JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime.
+    JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime. In some of the platform build scripts the environment ariable `JB_JAVA11_HOME` can be used to set the JDK home.
+    For older MPS versions that used Java 8, there was the environment variable `JB_JAVA11_HOME``.

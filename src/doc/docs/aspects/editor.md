@@ -274,6 +274,14 @@ The editor aspect defines the projectional editor of a concept.
     editorComponent.getSelectionManager().getSelection() / editorContext.getSelectedNode()
     ```
 
+!!! question "How can you select a node in the editor?"
+
+    ```java
+    editorContext.getSelectionManager().setSelection/pushSelection
+    // or
+    editorContext.getNodeEditorComponent().selectNode()
+    ```
+
 !!! question "How to get the current MPS project from within the editor?"
 
     Specific Languages Blog: [How to get the current MPS project from within the editor](https://specificlanguages.com/posts/how-to-get-current-project-from-editor/)

@@ -1,3 +1,6 @@
+Documentation for Gradle can be found on [gradle.org](https://docs.gradle.org/current/userguide/what_is_gradle.html).
+The used features of the Groovy languages are explained in [A Groovy Build Script Primer](https://docs.gradle.org/current/userguide/groovy_build_script_primer.html).
+
 ## Questions
 
 !!! info "How do you set up a gradle build for an MPS project?"
