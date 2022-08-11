@@ -2,6 +2,14 @@
 
     Specific Languages blog: [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/)
 
+!!! hint "I am a MPS beginner. Where do I start?"
+
+    If you are new to MPS and want to learn more about MPS, start with the following links:
+
+    - [Learn MPS | official JetBrains landing page](https://www.jetbrains.com/mps/learn)
+    - [Get started with MPS | mps.rocks](https://mps.rocks/#get-started-with-mps)
+    - [Learning MPS | mps.rocks](https://mps.rocks/#learning-mps)
+
 !!! warning "What can you do if a problem occurs that isn't in this list?"
 
     Try {{ image_popup("https://www.jetbrains.com/help/mps/invalidate-caches.html", "invalidating the cache", "../../img/invalidate_cache.gif", "invalidate cache") }} and restarting MPS (same menu).
