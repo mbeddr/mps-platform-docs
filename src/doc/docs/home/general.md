@@ -126,3 +126,10 @@
 
     JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime. In some of the platform build scripts the environment ariable `JB_JAVA11_HOME` can be used to set the JDK home.
     For older MPS versions that used Java 8, there was the environment variable `JB_JAVA11_HOME``.
+
+!!! question "Are there any resources/communities about domain-specific languages and MPS?"
+
+    - [DSL & MPS books](https://voelter.de/books.html) from Markus Voelter
+    - [The complete guide to (external) Domain Specific Languages](https://tomassetti.me/domain-specific-languages/)
+    - [68 Resources To Help You To Create Programming Languages](https://tomassetti.me/resources-create-programming-languages/)
+    - [Strumenta Virtual Meetups](https://d.strumenta.community/t/new-link-for-virtual-meetups/1024)
