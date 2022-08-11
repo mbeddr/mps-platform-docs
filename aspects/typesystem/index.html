@@ -959,6 +959,7 @@ The concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000
     var href = a[i].host; // set the host of each link
     if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
       a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
     }
   }
 };

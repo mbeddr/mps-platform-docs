@@ -943,6 +943,7 @@ Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the
     var href = a[i].host; // set the host of each link
     if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
       a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
     }
   }
 };

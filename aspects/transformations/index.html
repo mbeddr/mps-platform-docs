@@ -850,6 +850,7 @@ When you use the transform keyword it will just copy the input and all its desce
     var href = a[i].host; // set the host of each link
     if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
       a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
     }
   }
 };
