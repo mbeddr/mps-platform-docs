@@ -49,6 +49,11 @@ See also: Specific Languages blog: [Debugging in MPS](https://specificlanguages.
 
 - [jstack.review - Java Thread Dump Analyzer](https://jstack.review/#tda_1_dump)
 
+# Decompiler
+
+Decompiling jar files usually shouldn't be necessary because the source code of [MPS](https://github.com/JetBrains/MPS), [IntelliJ Community](https://github.com/JetBrains/intellij-community), [JetBrainsRuntime](https://github.com/JetBrains/JetBrainsRuntime) ,and the MPS platforms is open source and available on GitHub. For all other cases,
+use the [JD Java Decompiler](http://java-decompiler.github.io/). There is also an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) for it.
+
 # General Blog posts
 
 - [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
