@@ -222,6 +222,7 @@ nav:
       - UI patterns: patterns/ui_patterns.md
   - Reference:
     - Reading list: reference/reading_list.md
+    - Tips for open source maintainers: reference/tips_for_os_maintainers.md
     - Icons: reference/icons.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
