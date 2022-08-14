@@ -17,6 +17,8 @@ The following symbols must be escaped:
 
   - &#36; is `&#36;` because it collides with inline Latex blocks.
 
+Trees can be created with the terminal command `tree`. It supports the `-I` parameter for excluding folders.
+
 ## Extensions
 
 Besides the Material extensions, the project used the following [Pymdown](https://facelessuser.github.io/pymdown-extensions/) extensions:
