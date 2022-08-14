@@ -121,3 +121,67 @@ title: Typsystem aspect
 
     It's the old name of the typesystem. The name is nowadays not used anymore.
 
+!!! question "How is the relation between null and other types?"
+
+    Null is a subtype of every [reference](https://www.javatpoint.com/reference-data-types-in-java) type in baselanguage/Java but not of primitive types.
+
+!!! question "What is variance?"
+
+    Detailed explanation:
+
+    - [StackOverflow answer](https://stackoverflow.com/a/8482091/16577108)
+    - [Covariance and Contravariance in Java](https://medium.com/@yuhuan/covariance-and-contravariance-in-java-6d9bfb7f6b8e)
+
+    > It is about the relationship between types and subtypes, 
+    > about type conversion and to decide whether a method is overwritten or overloaded.
+
+
+    Simple explanation:
+
+    - *covariance*
+        - subtypes are allowed instead of a type
+        - examples: method return type, parameter type, variable assignment
+    - *contravariance*:
+        - supertypes are allowed instead of a type
+        - [parameter of function types](https://www.jetbrains.com/help/mps/closures.html#functiontype)
+    - *Invariance*: neither covariance nor contravariance
+        - examples: generics (e.g `List<String>`is not a subtype of `List<Object>`)
+
+    For overriden methods, the signature has to be the same (name + parameters), the return type can be a subtype of the original return type:
+
+    ```java
+    class MyCollection {
+        Iterator iterator() {
+            null;
+        }
+    }
+
+    class MyList extends MyCollection {
+        @Override
+        *package* ListIterator iterator() {
+            null;
+        }
+    }
+    ```
+    
+    The class *MyList* is allowed to specify a different return type (*ListIterator*).
+
+!!! question "What's autoboxing in Base Language/Java?"
+
+        For some cases there is an automatic conversion between primitive types and reference types called [autoboxing/unboxing](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html).
+
+    ```java
+    Integer z1 = 1;
+    int z2 = new Integer(1);
+    ```
+
+    Autoboxing [doesn't apply to array types](https://stackoverflow.com/a/45918658/16577108) and the type checker behaves differently in Java (J) and *baselanguage (B)*:
+
+    ```java
+    Integer[] a = new int[]{1, 2}; // disallowed in both
+    Integer z = 1; // allowed in both
+    Integer[] b = {1}; // allowed in J, disallowed in B
+    int[] c = {new Integer(1)}; // allowed in J, disallowed in B
+    int[] d = new Integer[]{new Integer(1)}; // disallowed in both
+    Object d = new int[]{1}; // allowed in both
+    ```
