@@ -213,6 +213,7 @@ nav:
   - Platform essentials:
       - platform_essentials/index.md
       - Interpreter: platform_essentials/interpreter.md
+      - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md
