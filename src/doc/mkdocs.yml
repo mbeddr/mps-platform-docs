@@ -210,6 +210,9 @@ nav:
       - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md 
       - IntelliJ integration: mps_internal/intellij_integration.md 
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
+  - Platform essentials:
+      - platform_essentials/index.md
+      - Interpreter: platform_essentials/interpreter.md
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md
