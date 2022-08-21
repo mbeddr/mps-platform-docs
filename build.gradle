@@ -9,7 +9,7 @@ wrapper {
 mkdocs.publish.docPath = ''
 mkdocs.strict = false
 
-python.pip 'mkdocs-material:8.4.0rc1' // override version in mkdocs gradle plugin. We want the latest version.
+python.pip 'mkdocs-material:8.4.1' // override version in mkdocs gradle plugin. We want the latest version.
 
 python.pip 'mkdocs-git-revision-date-localized-plugin:0.11.1'
 python.pip 'mkdocs-kroki-plugin:0.2.1'
