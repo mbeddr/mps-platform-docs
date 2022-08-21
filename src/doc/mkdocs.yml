@@ -212,6 +212,7 @@ nav:
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
   - Platform essentials:
       - platform_essentials/index.md
+      - Contributing: platform_essentials/contributing.md
       - Interpreter: platform_essentials/interpreter.md
       - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
   - Clean code:
