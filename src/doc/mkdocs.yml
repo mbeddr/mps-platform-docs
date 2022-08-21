@@ -213,6 +213,7 @@ nav:
   - Platform essentials:
       - platform_essentials/index.md
       - Contributing: platform_essentials/contributing.md
+      - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter: platform_essentials/interpreter.md
       - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
   - Clean code:
