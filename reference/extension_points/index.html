@@ -772,6 +772,11 @@
         Icons
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../core_languages/">
+        Core languages
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -903,7 +908,74 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="extension-points">Extension Points<a class="headerlink" href="#extension-points" title="Permanent link">¶</a></h1>
-<p>For a list of IntelliJ extensions, have a look at <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html#intellij-platform-listeners">Extension Point and Listener List | IntelliJ SDK</a>.</p>
+<p>For a list of IntelliJ extensions, have a look at <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html#intellij-platform-listeners">Extension Point and Listener List | IntelliJ SDK</a>.
+The following table lists <abbr title="Meta Programming System">MPS</abbr> extension points that use the IntelliJ mechanism.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Qualified name</th>
+<th align="left">Interface</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">com.intellij.mps.VisibleModuleMask</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps%28MPS.Platform%2F%29%2F%7EVisibleModuleMask">VisibleModuleMask</a></td>
+<td align="left">controls the visibility of <abbr title="Meta Programming System">MPS</abbr> modules</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.modelRootFactory</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EModelRootFactory">ModelRootFactory</a></td>
+<td align="left">factory which creates model roots</td>
+</tr>
+<tr>
+<td align="left">jetbrains.mps.nodeStructureViewProvider</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor%28MPS.Editor%2F%29%2F%7ENodeStructureViewProvider">NodeStructureViewProvider</a></td>
+<td align="left">provider for the structure tool in the lower left corner</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.editorWarningsProvider</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor.warningPanel%28MPS.Editor%2F%29%2F%7EEditorWarningsProvider">EditorWarningsProvider</a></td>
+<td align="left">provider for warnings that are shown above the editor (e.g. the node is in a read-only model)</td>
+</tr>
+<tr>
+<td align="left">mps.CodeNavigationProvider</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.navigation%28MPS.Workbench%2F%29%2F%7ECodeNavigationProvider">CodeNavigationProvider</a></td>
+<td align="left">opener for generated code files</td>
+</tr>
+<tr>
+<td align="left">mps.ModelValidator</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.generator%28MPS.Workbench%2F%29%2F%7EModelValidator">ModelValidator</a></td>
+<td align="left">validate a list of models</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.modelRootEntry</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Aorg.jetbrains.mps.openapi.ui.persistence%28MPS.Platform%2F%29%2F%7EModelRootEntry">ModelRootEntry</a></td>
+<td align="left"><abbr title="User Interface">UI</abbr> entry in the module properties dialog corresponding to the specific model root</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.facetTabFactory</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.ui.dialogs.properties.persistence%28MPS.Platform%2F%29%2F%7EFacetTabEP">FacetTabEP</a></td>
+<td align="left">custom facets (e.g. ideaPlugin facet)</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.modelTemplateProvider</td>
+<td align="left"><a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-core/src/jetbrains/mps/idea/core/actions/ModelTemplateProvider.java">ModelTemplateProvider</a></td>
+<td align="left">create new models using a template</td>
+</tr>
+<tr>
+<td align="left">com.intellij.mps.renameRefactoringContributor</td>
+<td align="left"><a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-core/src/jetbrains/mps/idea/core/refactoring/RenameRefactoringContributor.java">RenameRefactoringContributor</a></td>
+<td align="left">contribution to the rename refactoring action</td>
+</tr>
+<tr>
+<td align="left">jetbrains.mps.debugger.PositionProvider</td>
+<td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A7e184eff-8349-496f-875b-1e3646bb06f3%28jetbrains.mps.debug.api.source%29%2F7048882195103545633">PositionProvider</a></td>
+<td align="left">source position of current debugger line</td>
+</tr>
+</tbody>
+</table>
 <p>The following sections are about <a href="https://www.jetbrains.com/help/mps/extension-support.html#extensionlanguage"><abbr title="Meta Programming System">MPS</abbr> extension points</a>.</p>
 <h2 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">¶</a></h2>
 <table>
@@ -1055,7 +1127,6 @@
 <tr>
 <th align="left">Name</th>
 <th align="left">Interface</th>
-<th align="left">Platform</th>
 <th align="left">Description</th>
 </tr>
 </thead>
@@ -1064,37 +1135,31 @@
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F3379970138989822475">IdentityCalculators</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F7848049006183172924">IdentityCalculator</a></td>
 <td align="left">identity calculators for the model merger</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5458251120638842458">GlobalDiagramMouseListener</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt.event%28JDK%2F%29%2F%7EMouseListener">MouseListener</a></td>
 <td align="left">mouse listeners for diagrams</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F9051847868919679035">diagramPaletteEntryProvider</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F9051847868920319006">IPaletteEntryExtensionProvider</a></td>
 <td align="left">entry provider for diagrams</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5480416882758526910">diagramConnectionTypesProvider</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F5480416882758527092">IConnectionTypesExtensionProvider</a></td>
 <td align="left">connection types provider for diagrams</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3Ab49d7b4c-a97a-4226-a59e-b10183eecf00%28de.itemis.mps.selection.runtime.plugin%29%2F8796340803746625121">DragSelectionHandlerEP</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A5c0390a8-12e2-407a-ba93-793107153436%28de.itemis.mps.selection.runtime.mouse%29%2F6971699915906411231">IDragSelectionHandler</a></td>
 <td align="left">drag selection handler</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3A00bd6c6e-8efd-4091-b9e4-76836a81d03e%28de.itemis.model.merge.plugin%29%2F6484388657781186528">ModelMergeExt</a></td>
 <td align="left"><a href="http://127.0.0.1:63320/node?ref=r%3Aa4055897-4d16-4474-96e9-a78cf2abfe5a%28de.itemis.model.merge.runtime.runtime%29%2F8750798999618173241">MergePolicySpec</a></td>
 <td align="left">merge policy specifications for model merger</td>
-<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1165,7 +1230,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1226,7 +1291,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Icons" class="md-footer__link md-footer__link--prev" href="../icons/" rel="prev">
+<a aria-label="Previous: Core languages" class="md-footer__link md-footer__link--prev" href="../core_languages/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1235,7 +1300,7 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Icons
+              Core languages
             </div>
 </div>
 </a>

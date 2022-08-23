@@ -426,6 +426,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mbeddr.github.io/mps-platform-docs/reference/core_languages/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/reference/exceptions/</loc>
          <lastmod>2022-08-23</lastmod>
          <changefreq>daily</changefreq>
