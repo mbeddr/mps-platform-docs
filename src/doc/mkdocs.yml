@@ -233,6 +233,7 @@ nav:
     - Reading list: reference/reading_list.md
     - Tips for open source maintainers: reference/tips_for_os_maintainers.md
     - Icons: reference/icons.md
+    - Core languages: reference/core_languages.md  
     - Extension points: reference/extension_points.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
