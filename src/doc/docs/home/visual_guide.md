@@ -4,8 +4,6 @@ When you click the shape, you are redirected to the corresponding documentation 
 
 ![imagemap: what is](what_is.png){usemap='#image-map' .off-glb width="1788" height="1033" .ignore_max_width .map }
 
-<img src="what_is.png" usemap="#image-map">
-
 <map name="image-map">
     <area target="_blank" alt="Presentation Assistant (IntelliJ plugin)" title="Presentation Assistant (IntelliJ plugin)" href="https://plugins.jetbrains.com/plugin/7345-presentation-assistant" coords="621,960,1163,998" shape="rect">
     <area target="_blank" alt="Code completion (CC)" title="Code completion (CC)" href="https://www.jetbrains.com/help/mps/auto-completing-code.html" coords="539,306,872,375" shape="rect">
