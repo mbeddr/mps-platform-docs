@@ -17,7 +17,7 @@ python.pip 'mkdocs-kroki-plugin:0.2.1'
 python.pip 'mkdocs-autolinks-plugin:0.5.0'
 python.pip 'mkdocs-macros-plugin:0.7.0'
 python.pip 'autolink-references-mkdocs-plugin:0.2.1'
-python.pip 'mkdocs-glightbox:0.1.6'
+python.pip 'mkdocs-glightbox:0.2.1'
 python.pip 'mkdocs-gen-files:0.3.4'
 python.pip 'mdx-spanner:0.0.5'
 

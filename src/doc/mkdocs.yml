@@ -147,6 +147,7 @@ nav:
     - OS-specific bugs: home/platform_specific_bugs.md
     - RCP: home/rcp.md
     - Trouble shooting guide: home/trouble_shooting_guide.md
+    - Visual guide: home/visual_guide.md
     - Debugging: home/debugging.md
   - Aspects:
     - Structure: aspects/structure.md
