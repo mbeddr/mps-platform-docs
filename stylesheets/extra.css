@@ -42,3 +42,7 @@ a:not([class^="md-"]):not(.glightbox)[href^="https://"]::after
 em {
     color: #237e90;
 }
+
+.ignore_max_width {
+    max-width: none !important;
+}
