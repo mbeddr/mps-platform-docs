@@ -25,6 +25,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - announce.dismiss
 
   custom_dir: overrides
   logo: assets/logo.png
@@ -242,3 +243,4 @@ nav:
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
+    - New pages: home/new_pages.md
