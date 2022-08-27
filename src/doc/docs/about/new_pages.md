@@ -2,6 +2,7 @@ This page lists all new pages since August 2022.
 
 ## August 2022
 
+- [Reference: Gitignore file](gitignore.md)
 - [Reference: Core languages](core_languages.md)
 - [Home: Visual guide](../home/visual_guide.md)
 - [Reference: MPS extension points](extension_points.md)
