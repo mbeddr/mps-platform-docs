@@ -218,6 +218,7 @@ nav:
       - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter: platform_essentials/interpreter.md
       - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
+      - Platform build scripts: platform_essentials/platform_build_scripts.md  
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md

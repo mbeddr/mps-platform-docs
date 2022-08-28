@@ -2,6 +2,7 @@ This page lists all new pages since August 2022.
 
 ## August 2022
 
+- [platform essentials: platform build scripts](platform_build_scripts.md)
 - [Reference: Gitignore file](gitignore.md)
 - [Reference: Core languages](core_languages.md)
 - [Home: Visual guide](../home/visual_guide.md)
