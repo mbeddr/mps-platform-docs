@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/clean_code/java/" rel="canonical"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/platform_build_scripts/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.4.1" name="generator"/>
-<title>Index - MPS Platform Docs</title>
+<title>Platform build scripts - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.69437709.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#utility-and-helper-classes">
+<a class="md-skip" href="#platform-build-scripts">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Index
+              Platform build scripts
             
           </span>
 </div>
@@ -150,12 +150,12 @@ If you are a returning visitor, make sure to check out the page about <a href="a
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../platform_essentials/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Platform essentials
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../mps/">
+<a class="md-tabs__link" href="../../clean_code/mps/">
         Clean code
       </a>
 </li>
@@ -636,10 +636,10 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../platform_essentials/">Platform essentials</a>
+<a href="../">Platform essentials</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -651,37 +651,65 @@ If you are a returning visitor, make sure to check out the page about <a href="a
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../platform_essentials/contributing/">
+<a class="md-nav__link" href="../contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../platform_essentials/common_concepts_and_interfaces/">
+<a class="md-nav__link" href="../common_concepts_and_interfaces/">
         Common concepts and interfaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../platform_essentials/interpreter/">
+<a class="md-nav__link" href="../interpreter/">
         Interpreter
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../platform_essentials/building_mbeddr_locally/">
+<a class="md-nav__link" href="../building_mbeddr_locally/">
         Building Mbeddr locally
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../platform_essentials/platform_build_scripts/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Platform build scripts
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Platform build scripts
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-extensionsbuildgradle">
+    MPS-extensions/build.gradle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iets3opensourcebuildgradle">
+    iets3.opensource/build.gradle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mbeddr-build-scripts">
+    Mbeddr build scripts
+  </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../mps/">Clean code</a>
+<a href="../../clean_code/mps/">Clean code</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -693,19 +721,19 @@ If you are a returning visitor, make sure to check out the page about <a href="a
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mps/readability_maintainability/">
+<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
         Readability/maintainability
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mps/deprecation/">
+<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
         Deprecation
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" id="__nav_8_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Java (Base Language)</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/java/">Java (Base Language)</a>
 <label for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -717,12 +745,12 @@ If you are a returning visitor, make sure to check out the page about <a href="a
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="programming_principles/">
+<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
         Programming principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java_style_guide/">
+<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
         Java style guide
       </a>
 </li>
@@ -866,67 +894,98 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-extensionsbuildgradle">
+    MPS-extensions/build.gradle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iets3opensourcebuildgradle">
+    iets3.opensource/build.gradle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mbeddr-build-scripts">
+    Mbeddr build scripts
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/clean_code/java/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/platform_build_scripts.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<p><a href="https://refactoring.guru/refactoring/smells">refactoring.guru</a> has information about general code smells.</p>
-<ul>
-<li>Be aware of common <a href="https://stackoverflow.com/questions/169815/java-common-gotchas">Java gotchas</a>.</li>
-<li>Avoid acronyms and abbreviations that may not be clear to others.</li>
-<li>Name methods and variables after what they mean. Before giving a name, consider the responsibility of that piece of code.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li>Return empty collections instead of returning null elements (<a href="http://www.javapractices.com/topic/TopicAction.do?Id=59">reference</a>). It saves the efforts needed for testing on null elements.</li>
-<li>Efficiency: use <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html">StringBuilder</a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuffer.html">StringBuffer</a> for String concatenation</li>
-<li>Refactor your code <a href="https://refactoring.guru/refactoring">regularly</a>, especially when your classes or methods become too big.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>^, ^<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</li>
-<li>Remember to test parameters of public methods for illegal values. These methods shouldn’t crash because of a NullPointer.</li>
-<li>Order class members by scope from private to public<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>^, ^<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> (the reverse order is also fine)</li>
-<li>Minimize the accessibility of class members. It enforces <a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#PrivateMembers">information hiding or encapsulation</a>.</li>
-<li>Avoid hardcoded values.</li>
-<li>Use lazy initialization if performance is <a href="http://www.javapractices.com/topic/TopicAction.do?Id=34">critical</a> or use <a href="https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/">caching</a> if necessary.</li>
-</ul>
-<h1 id="utility-and-helper-classes">Utility and helper classes<a class="headerlink" href="#utility-and-helper-classes" title="Permanent link">¶</a></h1>
-<ul>
-<li>Utility class: include only static methods and are stateless. Don’t create an instance of such a class.</li>
-<li>Helper class: they can be utility classes, or it can be stateful or require an instance. It can be any class whose design is to aid another class.</li>
-<li>Try to make the name of the utility or helper class more specific (for example: <em>AdministrationHelper</em>, <em>LoginHelper</em> instead of <em>Helper</em>).</li>
-</ul>
-<h1 id="more-tips">More tips<a class="headerlink" href="#more-tips" title="Permanent link">¶</a></h1>
-<ul>
-<li>If you use functional interfaces, use the <a href="http://www.javapractices.com/topic/TopicAction.do?Id=277">standard java ones</a>. If you want to understand the functional style, consult <a href="http://www.javapractices.com/topic/TopicAction.do?Id=274">Unterstand the functional style</a> page.</li>
-<li>If you want to use newer Java features, have a look at <a href="http://www.javapractices.com/topic/TopicAction.do?Id=225">Modernize old code</a> page.</li>
-<li>Have a look at common sources of <a href="http://www.javapractices.com/topic/TopicAction.do?Id=287">complexity</a>.</li>
-</ul>
-<div class="footnote">
-<hr/>
-<ol>
-<li id="fn:1">
-<p><a href="https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things">Naming 101: A Programmer’s Guide on How to Name Things</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or">Rule of 30 – When is a Method, Class or Subsystem Too Big?</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-<li id="fn:3">
-<p><a href="http://www.javapractices.com/topic/TopicAction.do?Id=227">Avoid basic style errors</a> <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering">Ordering Class Members by Scopes</a> <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
-</li>
-<li id="fn:5">
-<p><a href="http://www.javapractices.com/topic/TopicAction.do?Id=136">Separate public and private members</a> <a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<h1 id="platform-build-scripts">Platform build scripts<a class="headerlink" href="#platform-build-scripts" title="Permanent link">¶</a></h1>
+<p>This page describes the <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,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"/>
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a> and <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
+</svg>
+</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a> build scripts. They might look different in the future but this guide should still be helpful. The build scripts from <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="/>
+</svg>
+</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> work
+similar but there’s more than just one, so let’s focus on the other two platforms.</p>
+<h2 id="mps-extensionsbuildgradle"><a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle"><abbr title="Meta Programming System">MPS</abbr>-extensions/build.gradle</a><a class="headerlink" href="#mps-extensionsbuildgradle" title="Permanent link">¶</a></h2>
+<p>Let’s ignore <a href="https://modelix.github.io/">Modelix</a> related stuff. The script uses the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a> which already contains some useful tasks for Gradle-based builds with <abbr title="Meta Programming System">MPS</abbr>.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L2">Line 2</a>: the <a href="https://github.com/mbeddr/mps-gradle-plugin">build script block</a> lists the used dependency repositories: the new itemis nexus server (<a href="https://artifacts.itemis.cloud/repository/maven-mps/">https://artifacts.itemis.cloud</a>) and also the old one (<a href="https://projects.itemis.de/nexus/content/repositories/mbeddr">projects.itemis.de</a>).</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L8">Line 8</a>: the dependency block contains the reference to the mps-gradle-plugin.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L15">Line 15</a>: for publishing artifacts to GitHub, the plugin <a href="https://github.com/riiid/gradle-github-plugin">gradle-github-plugin</a> can be used. It’s important to import the classes from the mps-gradle-plugin: <code>import de.itemis.mps.gradle.*.</code></p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L28">Line 28</a>: the <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html">gradle wrapper</a> can be used to specify the Gradle version that 
+should be downloaded: it must be compatible with the used Java version (<a href="https://docs.gradle.org/current/userguide/compatibility.html">compatibility matrix</a>)</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L34">Line 34</a>: the variable <em>ciBuild</em> can affect the build, for example, by using a different version identifier for the artifacts.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L47">Line 47</a>: the path
+to the Java installation must be set. For the build it isn’t important if it’s a normal <abbr title="Java Development Kit">JDK</abbr> or a <abbr title="JetBrains Runtime">JBR</abbr>, only the Java version must
+be correct.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L71">Line 71</a>: there are
+a few ways to specify properties for the build. <a href="https://tomgregory.com/gradle-project-properties-best-practices/">This guide</a> explains them.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L77">Line 77</a>: this list contains the Nexus repositories that are used for fetching the dependencies. The actual declaration is done on <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle#L138">line 138</a>.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L83">Line 83-109</a>: the logic for deciding the version identifier. It uses hardcoded values, the branch name and <em>ciBuild</em> and the class <a href="https://github.com/mbeddr/mps-gradle-plugin/blob/9135418e30d9a5fe963d275410a91f3b595ddb7f/src/main/groovy/de/itemis/mps/gradle/GitBasedVersioning.groovy#L6">GitBasedVersioning</a> to create a suitable identifier. A local build gets the version <em>1.0-SNAPSHOT</em> as described in the <a href="https://maven.apache.org/guides/getting-started/index.html#What_is_a_SNAPSHOT_version">Maven guide</a>. More information can be found in <a href="https://stackoverflow.com/questions/5901378/what-exactly-is-a-maven-snapshot-and-why-do-we-need-it">this StackOverflow question</a>.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L112">Line 112-123</a>: the plugins directory varies dependening on the operating system (<a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#plugins-directory">Plugins directory | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L125">Line 125</a>: the following variables contain the Nexus repositories that are used for publishing the artifacts.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L130">Line 130-136</a>: a new <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.Configuration.html">configuration</a> named <em>mps</em> is declared. It’s used for declaring the dependency on <abbr title="Meta Programming System">MPS</abbr>. the dependencies block declares the dependency. The dependency isn’t automatically resolved because a custom configuration is used. The resolution task is created on <a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L150">line 150</a> and the following lines. <code>configurations.mps.resolve()</code> downloads the zip file, <code>zipTree</code>unzips it into the mps home directory.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L168">Line 168-174</a>: this dependency is needed, so that there is support for junit ant tasks.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L183">Line 183-199</a>: some system variables are set by prepending <code>-D</code> in front of the key-value pairs. These variables are actually declared in the build solution in the build script of the <abbr title="Meta Programming System">MPS</abbr> project. They can be overriden from the command line this way.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L204">Line 204-219</a>: the all script is a special <abbr title="Meta Programming System">MPS</abbr> build script that calls all other build scripts. This task has the type <em>BuildLanguages</em> as described in the gradle-plugin documentation and executes the xml file that was created by the <abbr title="Meta Programming System">MPS</abbr> build language. The next lines also declare tasks for building the languages and running the tests. They call the corresponding build scripts from the build module of this project (<ins>de.itemis.mps.extensions.build</ins>).</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L221">Line 221</a>: this task installs the nativlibs.loader plugin which can be used for loading native code(e.g. C code) that is needed for a Java library (e.g. C debugger). The reason why a special plugin is needed is that there are special methods for loading native code in Java. Normal
+<abbr title="Meta Programming System">MPS</abbr> solutions should’nt be used for this task because they can be reloaded in <abbr title="Meta Programming System">MPS</abbr> which isn’t possible with native libraries. This plugin is implemented as an IntelliJ plugin which is not affected by the <abbr title="Meta Programming System">MPS</abbr> reloading mechanism.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L250">Line 250</a>: this block declares the Junit ant dependency.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L260">Line 260-270</a>: these two tasks create zip files from the artifacts.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L272">Line 272</a>: the clean tasks removes the generated <abbr title="Meta Programming System">MPS</abbr> files, cleans the temporary folder and remove the content of the artifact folder.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L279">Line 279-317</a>: this block uses the <a href="https://docs.gradle.org/current/userguide/publishing_maven.html">Maven publishing plugin</a> to publish the generated artifacts to different repositories such as Nexus and GitHub maven repositories. The credentials can be stored
+on the build server (e.g. TeamCity) or in the GitHub project itself, when the project is build with <a href="https://docs.github.com/en/actions">GitHub actions</a>.</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L326">Line 319-339</a>: this block defines one single publication <em>de.itemis.mps:extensions</em>. It also publishes a Maven <a href="https://maven.apache.org/pom.html">pom file</a> that lists all the dependencies of this artifact (in this case: only <abbr title="Meta Programming System">MPS</abbr>).</p>
+<p><a href="https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L376">Line 376</a>: this block declares the publication for GitHub. <strong>Warning</strong>: it’s not possible to publish an artifact with the same name on GitHub, it won’t be overriden.</p>
+<p>The rest of the build script uses <a href="https://github.com/modelix/mpsbuild">modelix/mpsbuild</a>, a replacement for the <abbr title="Meta Programming System">MPS</abbr> build language. Visit <a href="https://specificlanguages.com/posts/2022-05/30-exploring-modelix-mpsbuild/">Exploring modelix/mpsbuild - Specific Languages</a> for some initial information on this project.</p>
+<h2 id="iets3opensourcebuildgradle"><a href="https://github.com/IETS3/iets3.opensource/blob/master/build.gradle">iets3.opensource/build.gradle</a><a class="headerlink" href="#iets3opensourcebuildgradle" title="Permanent link">¶</a></h2>
+<p>The build script looks very similar to the script from <abbr title="Meta Programming System">MPS</abbr>-extensions, so let’s focus only on the differences.</p>
+<p><a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L68">Line 68-112</a>: the project has a dependency on mbeddr which can be overriden with a local dependency by setting the project variable <em>forceLocalDependencies</em>.</p>
+<p><a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L134">Line 134-139</a>: a few configurations are declared in this block. The dependency of this configurations are resolved in different Gradle tasks, for example in the task <em>resolvePcollections</em> on <a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L179">line 179</a>.</p>
+<p><a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L259">Line 259-264</a>: additional to exporting the languages and solutions, the project also creates a <a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html.">standalone <abbr title="Integrated Development Environment">IDE</abbr> (<abbr title="Rich Client Platform">RCP</abbr>)</a></p>
+<p><a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L332">Line 332-406</a>: this time there a multiple publications. Not only the languages and tests are published but also some runtime Java libraries that are needed 
+by KernelF (e.g. <em>org.iets3.core.<abbr title="expression">expr</abbr>.datetime.runtime</em> for the datetime language).</p>
+<p><a href="https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L409">Line 409-421</a>: This task reads project libraries from projectlibraries.properties and generate libraries.xml in the <em>.mps</em> directory. Libraries are loaded in <abbr title="Meta Programming System">MPS</abbr> during start. A library is, for example, mbeddr. The task is used by the <em>setup</em> tasks which should be executed when cloning the project.</p>
+<h2 id="mbeddr-build-scripts">Mbeddr build scripts<a class="headerlink" href="#mbeddr-build-scripts" title="Permanent link">¶</a></h2>
+<p>The main <a href="https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle">build.gradle</a> can be found in the root directory. There is also a <em>build</em> subfolder. The most important build files are <a href="https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle">com.mbeddr/build.gradle</a> which build mbeddr itself and <a href="https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle">com.mbeddr/platform/build.gradle</a> which builds the mbeddr platform.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 28, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -987,7 +1046,7 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Deprecation" class="md-footer__link md-footer__link--prev" href="../mps/deprecation/" rel="prev">
+<a aria-label="Previous: Building Mbeddr locally" class="md-footer__link md-footer__link--prev" href="../building_mbeddr_locally/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -996,17 +1055,17 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <span class="md-footer__direction">
                 Previous
               </span>
-              Deprecation
+              Building Mbeddr locally
             </div>
 </div>
 </a>
-<a aria-label="Next: Programming principles" class="md-footer__link md-footer__link--next" href="programming_principles/" rel="next">
+<a aria-label="Next: Index" class="md-footer__link md-footer__link--next" href="../../clean_code/mps/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Programming principles
+              Index
             </div>
 </div>
 <div class="md-footer__button md-icon">
