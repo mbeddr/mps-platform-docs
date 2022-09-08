@@ -7,6 +7,11 @@ The used features of the Groovy languages are explained in [A Groovy Build Scrip
 
     There is a gist for a [minimal build](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75). There is a [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin). For more complex projects look at build scripts of big projects such as [MPS-extensions](https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle).
 
+!!! warning "I don't understand the dependencies between Gradle tasks."
+
+    Read the Gradle documentation about [authoring tasks](https://docs.gradle.org/current/userguide/more_about_tasks.html).
+    For visualizing task graphs to understand a task's dependencies, use the Gradle plugin [gradle-taskinfo](https://gitlab.com/barfuin/gradle-taskinfo).
+
 !!! question "Is there a Gradle plugin for downloading things?"
 
     Yes, [gradle-download-task](https://github.com/michel-kraemer/gradle-download-task).
