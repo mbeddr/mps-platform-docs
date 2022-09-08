@@ -1,5 +1,7 @@
 # Dependencies
 
+!!! warning "Some sections on this page were written a few years ago where an older MPS version was used. Please report anything that isn't true anymore."
+
 First of all: the number of languages can be very important: Many small languages are hard to maintain while big languages
 take a long time building in the IDE. Many dependencies can create cycles which are described later on this page.
 
