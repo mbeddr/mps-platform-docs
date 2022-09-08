@@ -3,7 +3,7 @@ This document lists some recommendations for code written it MPS.
 ## Implementation
 
 - Specific Languages blog: [Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/)
-- Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that have a name. The name property can be automatically used as the name for root nodes, references etc.
+- Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that should have a name. The name property can be automatically used as the name for root nodes, references etc.
 - Avoid deep nested call chains, for example: `nodea.nodeb.nodec.property`. Consider providing a method to access a property or method for the deeper levels.
 - Use [isInstanceOf](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865) to check if a node is an instance of a concept.
 - Use the built-in collection classes such as collections, set, list, and map ([documentation](https://www.jetbrains.com/help/mps/collections-language.html)). Use the correct type of collection[^4].
@@ -46,7 +46,7 @@ This document lists some recommendations for code written it MPS.
 
 - Be careful when using unicode inside MPS. It might break something (MPS-33687, MPS-31835).
 - Use gradle for build scripts ([minimal example](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75)).
-- Do not leave debug statements in production code (exception [debug log](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497) statements).
+- Do not leave debug statements in production code (exception: [debug log](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497) statements).
 
 [^1]:[Return Optional not null](http://www.javapractices.com/topic/TopicAction.do?Id=279)
 [^2]:[Java Best Practices Quick Reference](https://dzone.com/articles/java-best-practices-quick-reference)
