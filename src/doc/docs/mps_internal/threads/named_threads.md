@@ -54,7 +54,7 @@ These lists contains named threads from Java, the IntelliJ platform and MPS.
 - fsnotifier: native file system notifier
 - [DestroyJavaVM](https://stackoverflow.com/a/61063914/16577108)
 
-## MPS Threads threads
+## MPS threads
 
 - Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run for example inside this thread ([Highlighter](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java)).
 - HighlightUsages: highlights references to the node at the cursor position in the editor ([HighlightUsagesSupport](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java)).
