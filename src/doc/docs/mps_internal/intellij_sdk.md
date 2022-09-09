@@ -14,7 +14,7 @@
 
 - listens for IntelliJ events/messages
 - connection and subscription for different topics through listeners
-- Just disconnect, you have not to store and remove each listener you added.
+- Just disconnect, you don't have to store and remove each listener you added.
 - Reference
     - [IntelliJ Messaging Infrastructure](https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html)
     - [Declarative registration of Plugin Listeners](https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html)
