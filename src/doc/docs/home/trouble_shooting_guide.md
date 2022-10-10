@@ -26,13 +26,21 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
  
 !!! warning "The IDE doesn't let you enter some text / an intention isn't visible that should be there."
 
-    1. check: is the concept / intention visible in the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)
+    1. Check: was the intention disabled by the user by accident?
+
+    ![example:disable an intention](disable_intention_example.png)
+
+    In this case, the intention can be enabled through preferences --> MPS intentions and manually searching for the disabled intention:
+
+    ![preferences menu:MPS intentions](mps_intentions_preferences.png)
+
+    2. Check: is the concept / intention visible in the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)
         - :octicons-x-circle-16: --> Use *Edit* --> *Add Language Import* to import the language containing the concept / the intention.
-    2. check the concept: is the type of the concept suitable for the place where you want to create an instance? Does it implement the right interface?
-    3. check the tntention: is the `#!java isApplicable()`-method called? (add a `#!java System.err.println()` to the method and check what MPS outputs)
+    3. Check the concept: is the type of the concept suitable for the place where you want to create an instance? Does it implement the right interface?
+    4. Check the intention: is the `#!java isApplicable()`-method called? (add a `#!java System.err.println()` to the method and check what MPS outputs)
         - :octicons-x-circle-16: --> The intention is most probably not visible in the model --> see above
         - :octicons-check-circle-16: --> Make sure the method returns true
-    4. Concept: does a constraint on one of the ancestor-nodes prohibit you from creating it?
+    5. Concept: does a constraint on one of the ancestor-nodes prohibit you from creating it?
 
 !!! error "MPS build fails."
 
