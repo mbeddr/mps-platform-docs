@@ -242,6 +242,7 @@ nav:
     - Abbreviations: reference/abbreviations.md 
     - Code abbreviations: reference/code_abbreviations.md
     - Gitignore file: reference/gitignore.md
+    - Issue trackers: reference/issue_trackers.md
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
