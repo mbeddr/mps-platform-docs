@@ -852,6 +852,11 @@ If you are a returning visitor, make sure to check out the page about <a href="a
         Gitignore file
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -956,12 +961,18 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <div class="admonition warning">
 <p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> doesn’t let you enter some text / an intention isn’t visible that should be there.</p>
 <ol>
-<li>check: is the concept / intention visible in the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)<ul>
+<li>Check: was the intention disabled by the user by accident?</li>
+</ol>
+<p><a class="glightbox" href="../../img/disable_intention_example.png"><img alt="example:disable an intention" src="../../img/disable_intention_example.png"/></a></p>
+<p>In this case, the intention can be enabled through preferences → <abbr title="Meta Programming System">MPS</abbr> intentions and manually searching for the disabled intention:</p>
+<p><a class="glightbox" href="../../img/mps_intentions_preferences.png"><img alt="preferences menu:MPS intentions" src="../../img/mps_intentions_preferences.png"/></a></p>
+<ol>
+<li>Check: is the concept / intention visible in the model? (open a context menu where baselanguage code is allowed and search for classes / concepts from the same language)<ul>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → Use <em>Edit</em> → <em>Add Language Import</em> to import the language containing the concept / the intention.</li>
 </ul>
 </li>
-<li>check the concept: is the type of the concept suitable for the place where you want to create an instance? Does it implement the right interface?</li>
-<li>check the tntention: is the <code class="highlight"><span class="n">isApplicable</span><span class="p">()</span><span class="w"></span></code>-method called? (add a <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">()</span><span class="w"></span></code> to the method and check what <abbr title="Meta Programming System">MPS</abbr> outputs)<ul>
+<li>Check the concept: is the type of the concept suitable for the place where you want to create an instance? Does it implement the right interface?</li>
+<li>Check the intention: is the <code class="highlight"><span class="n">isApplicable</span><span class="p">()</span><span class="w"></span></code>-method called? (add a <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">()</span><span class="w"></span></code> to the method and check what <abbr title="Meta Programming System">MPS</abbr> outputs)<ul>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → The intention is most probably not visible in the model → see above</li>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z" fill-rule="evenodd"></path></svg></span> → Make sure the method returns true</li>
 </ul>
@@ -1059,7 +1070,7 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

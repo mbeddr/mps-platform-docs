@@ -824,6 +824,11 @@ If you are a returning visitor, make sure to check out the page about <a href="a
         Gitignore file
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -916,7 +921,7 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h2>
 <ul>
 <li>Specific Languages blog: <a href="https://specificlanguages.com/posts/prefer-composition-over-inheritance/">Prefer composition over inheritance</a></li>
-<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that have a name. The name property can be automatically used as the name for root nodes, references etc.</li>
+<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that should have a name. The name property can be automatically used as the name for root nodes, references etc.</li>
 <li>Avoid deep nested call chains, for example: <code>nodea.nodeb.nodec.property</code>. Consider providing a method to access a property or method for the deeper levels.</li>
 <li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept.</li>
 <li>Use the built-in collection classes such as collections, set, list, and map (<a href="https://www.jetbrains.com/help/mps/collections-language.html">documentation</a>). Use the correct type of collection<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</li>
@@ -959,7 +964,7 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <ul>
 <li>Be careful when using unicode inside <abbr title="Meta Programming System">MPS</abbr>. It might break something (<a href="https://youtrack.jetbrains.com/issue/MPS-33687"><abbr title="Meta Programming System">MPS</abbr>-33687</a>, <a href="https://youtrack.jetbrains.com/issue/MPS-31835"><abbr title="Meta Programming System">MPS</abbr>-31835</a>).</li>
 <li>Use gradle for build scripts (<a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal example</a>).</li>
-<li>Do not leave debug statements in production code (exception <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">debug log</a> statements).</li>
+<li>Do not leave debug statements in production code (exception: <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">debug log</a> statements).</li>
 </ul>
 <div class="footnote">
 <hr/>
@@ -986,7 +991,7 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
