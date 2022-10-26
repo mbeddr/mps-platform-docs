@@ -68,6 +68,14 @@ The structure aspect contains all the concept and interface declarations of a la
 
     No, more info can be found in MPS-17143.
 
+!!! question "How to get the name of a concept property?"
+
+    The easiest way to do this is via [PropertyIdRefExpression](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080). Then you can directly reference the property in question like this:
+    `property/MyConcept : myProperty/.getName()`
+    Whit this implementation, every changes in the property names are always calculated properly.
+
+    {{ contribution_by('abstraktor') }}
+
 ## References
 
 !!! question "How do you get the previous label of a reference?"
