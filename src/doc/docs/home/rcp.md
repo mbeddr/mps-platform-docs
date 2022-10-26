@@ -106,3 +106,13 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
     ApplicationEx app = ApplicationManagerEx.getApplicationEx(); 
     app.restart(true,true);
     ```
+
+!!! question "How can I install a custom editor color scheme?"
+
+    Follow the guideline [Export IntelliJ editor themes as plugins | JetBrains blog](https://blog.jetbrains.com/platform/2017/12/export-intellij-editor-themes-as-plugins/) to export a jar file. You can copy this JAR file to the
+    *plugins* folder of the RCP. You can enable the color scheme by default with the following code in an applicaiton plugin:
+    
+    ```
+    EditorColorsScheme colorScheme = EditorColorsManager.getInstance().getAllSchemes().asSequence.findFirst({~it => it.getDisplayName() :eq: "[NAME_OF_YOUR_SCHEME]"; }); 
+    EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
+    ```

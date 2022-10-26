@@ -4,6 +4,10 @@ This page lists all new pages since August 2022.
 
 - [Reference: Issue trackers](issue_trackers.md)
 
+## September 2022
+
+- [What happens on MPS startup (2021.1.4)](mps_internal/mps_startup.md)
+
 ## August 2022
 
 - [platform essentials: platform build scripts](platform_build_scripts.md)
