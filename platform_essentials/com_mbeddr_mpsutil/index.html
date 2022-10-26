@@ -1,0 +1,2568 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
+<meta content="MPS Platform Docs team" name="author"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/com_mbeddr_mpsutil/" rel="canonical"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.4.1" name="generator"/>
+<title>MPS utilities - MPS Platform Docs</title>
+<link href="../../assets/stylesheets/main.69437709.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#asynccell">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+            
+            
+If you are a returning visitor, make sure to check out the page about <a href='http://mbeddr.com/mps-platform-docs/about/new_pages"'>new pages</a>.
+
+          </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+</aside>
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MPS Platform Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              MPS utilities
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="light-green" data-md-color-scheme="" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="" id="__palette_2" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../aspects/structure/">
+        Aspects
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../languages/">
+        Languages
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mbeddr/">
+        Mbeddr
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../build/">
+        Build
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mps_internal/">
+        Internal MPS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        Platform essentials
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../clean_code/mps/">
+        Clean code
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../patterns/language_design/">
+        Language/UI patterns
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../reference/reading_list/">
+        Reference
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/editing_this_guide/">
+        About
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    MPS Platform Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/general/">
+        General
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/plugins/">
+        Plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/external_files_and_tools/">
+        External files and tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/console/">
+        Console
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/platform_specific_bugs/">
+        OS-specific bugs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/rcp/">
+        RCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
+        Trouble shooting guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/visual_guide/">
+        Visual guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/debugging/">
+        Debugging
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Aspects" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/structure/">
+        Structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/editor/">
+        Editor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/behavior/">
+        Behavior
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/feedback/">
+        Feedback
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/typesystem/">
+        Typesystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/refactorings/">
+        Refactorings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/scripts/">
+        Scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/intentions/">
+        Intentions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/findusages/">
+        Find Usages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/plugin/">
+        Plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/dataflow/">
+        Dataflow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/textgen/">
+        TextGen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/migration/">
+        Migration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/vcs/">
+        VCS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/generator/">
+        Generator
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_19">
+          Contributed aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributed aspects" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_19">
+<span class="md-nav__icon md-icon"></span>
+          Contributed aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/listener/">
+        Listener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/polyfun/">
+        Polyfun
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/virtualinterfaces/">
+        Virtual Interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/transformations/">
+        Transformations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../languages/">Languages</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Languages" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/baselanguage/">
+        Baselanguage and extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/mps_extensions/">
+        MPS-extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mbeddr/">Mbeddr</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Mbeddr" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Mbeddr
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/big_project/">
+        BigProject
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/development_guide/">
+        Development guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+        Miscellaneous topics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../build/">Build</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Build" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/ci/">
+        CI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/gradle/">
+        Gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/command_line_tool/">
+        Creating a command line tool
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/git/">
+        Git
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/">Internal MPS</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Internal MPS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Internal MPS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
+        Open API
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<label for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Dependencies and classpath" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Dependencies and classpath
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+        Terminology and UI for access
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/models/">
+        Models
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
+        Dependencies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
+        Recipes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
+        Classloading
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/threads/">Threading</a>
+<label for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Threading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+        Example actions using locks
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+        Named threads
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+        Utility classes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/gui/">
+        GUI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+        IntelliJ SDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
+        Java Chromium Embedded Framework
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
+        Writing an MPS plugin with Kotlin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Platform essentials</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Platform essentials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Platform essentials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common_concepts_and_interfaces/">
+        Common concepts and interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interpreter/">
+        Interpreter
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          MPS utilities
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        MPS utilities
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asynccell">
+    AsyncCell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dataflow">
+    Dataflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#favourites-plugin">
+    Favourites plugin
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameterized-menu">
+    Parameterized menu
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build-utilities">
+    Build utilities
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-completion-menu">
+    Code completion menu
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept-diagram">
+    Concept diagram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-actions">
+    Context actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies-diagram">
+    Dependencies diagram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ecore">
+    ECore
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-artifacts-review">
+    Generated artifacts review
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+    JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jung-framework">
+    JUNG framework
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lantest">
+    Lantest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multilingual">
+    Multilingual
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#richstring">
+    Richstring
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typesystem-trace">
+    Typesystem trace
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-util-library">
+    MPS util library
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bldoc">
+    BLDoc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framecell">
+    FrameCell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-stats">
+    Language stats
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icon-char">
+    Icon char
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-manager">
+    License manager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-values-for-properties">
+    Default values for properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suppress-warning">
+    Suppress warning
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-scope">
+    Test scope
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#var-scope">
+    Var scope
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlfix">
+    XML.fix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editor-utils">
+    Editor utils
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-picker">
+    File picker
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-filter">
+    Actions filter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparator">
+    Comparator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#date-picker">
+    Date picker
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-guide">
+    Editing guide
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extension-class">
+    Extension class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphstream">
+    Graphstream
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#http-support">
+    HTTP support
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperlink">
+    Hyperlink
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#incremental-computation">
+    Incremental computation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interpreter">
+    Interpreter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jfreechart">
+    JFreeChart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#margin-cell-review">
+    Margin cell / review
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placeholder-text-list">
+    Placeholder text list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plantuml">
+    PlantUML
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#postprocessgeneratedfiles">
+    postprocessGeneratedFiles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preferenceform">
+    preferenceform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#process">
+    process
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rcp">
+    RCP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#refactoring">
+    Refactoring
+  </a>
+<nav aria-label="Refactoring" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projection-mode-switcher">
+    Projection mode switcher
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#refactoring-action">
+    Refactoring action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#smodule">
+    SModule
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spreferences">
+    SPreferences
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trace-explorer">
+    Trace explorer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unique-names">
+    Unique names
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-styles">
+    User styles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mpsutil-common">
+    MPSutil common
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generator-facade">
+    Generator facade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generic-actions">
+    Generic actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#node-access">
+    Node access
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#node-difference">
+    Node difference
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#print">
+    Print
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rcp-configuration">
+    RCP configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmodel-actions">
+    XModel actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#genutil">
+    GenUtil
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+    Resources
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-configuration">
+    Run configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stubs">
+    Stubs
+  </a>
+<nav aria-label="Stubs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mockito">
+    Mockito
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-csv">
+    Open CSV
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batik">
+    Batik
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orgxml">
+    org.xml
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-chooser">
+    Target chooser
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wait-for">
+    Wait for
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build-assistant">
+    Build assistant
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#make">
+    Make
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool-runner">
+    Tool runner
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xml-import">
+    XML import
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forms">
+    Forms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lang-plugin-extension">
+    Lang plugin extension
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapping-labels">
+    Mapping labels
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gradle-support">
+    Gradle support
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../building_mbeddr_locally/">
+        Building Mbeddr locally
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../platform_build_scripts/">
+        Platform build scripts
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/mps/">Clean code</a>
+<label for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clean code" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Clean code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
+        Readability/maintainability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
+        Deprecation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/java/">Java (Base Language)</a>
+<label for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Java (Base Language)" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+          Java (Base Language)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
+        Programming principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
+        Java style guide
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Language/UI patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Language/UI patterns" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Language/UI patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/language_design/">
+        Language design
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/user_experience/">
+        User experience
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/ui_patterns/">
+        UI patterns
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/reading_list/">
+        Reading list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
+        Tips for open source maintainers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/icons/">
+        Icons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/core_languages/">
+        Core languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/extension_points/">
+        Extension points
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/exceptions/">
+        Exceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/gitignore/">
+        Gitignore file
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          About
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="About" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/editing_this_guide/">
+        Editing this guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/original_authors/">
+        Original authors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/new_pages.md">
+        New pages
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asynccell">
+    AsyncCell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dataflow">
+    Dataflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#favourites-plugin">
+    Favourites plugin
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameterized-menu">
+    Parameterized menu
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build-utilities">
+    Build utilities
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-completion-menu">
+    Code completion menu
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept-diagram">
+    Concept diagram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-actions">
+    Context actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies-diagram">
+    Dependencies diagram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ecore">
+    ECore
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-artifacts-review">
+    Generated artifacts review
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+    JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jung-framework">
+    JUNG framework
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lantest">
+    Lantest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multilingual">
+    Multilingual
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#richstring">
+    Richstring
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typesystem-trace">
+    Typesystem trace
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-util-library">
+    MPS util library
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bldoc">
+    BLDoc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framecell">
+    FrameCell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-stats">
+    Language stats
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icon-char">
+    Icon char
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-manager">
+    License manager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-values-for-properties">
+    Default values for properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suppress-warning">
+    Suppress warning
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-scope">
+    Test scope
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#var-scope">
+    Var scope
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlfix">
+    XML.fix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editor-utils">
+    Editor utils
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-picker">
+    File picker
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actions-filter">
+    Actions filter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparator">
+    Comparator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#date-picker">
+    Date picker
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-guide">
+    Editing guide
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extension-class">
+    Extension class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphstream">
+    Graphstream
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#http-support">
+    HTTP support
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperlink">
+    Hyperlink
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#incremental-computation">
+    Incremental computation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interpreter">
+    Interpreter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jfreechart">
+    JFreeChart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#margin-cell-review">
+    Margin cell / review
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placeholder-text-list">
+    Placeholder text list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plantuml">
+    PlantUML
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#postprocessgeneratedfiles">
+    postprocessGeneratedFiles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preferenceform">
+    preferenceform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#process">
+    process
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rcp">
+    RCP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#refactoring">
+    Refactoring
+  </a>
+<nav aria-label="Refactoring" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projection-mode-switcher">
+    Projection mode switcher
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#refactoring-action">
+    Refactoring action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#smodule">
+    SModule
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spreferences">
+    SPreferences
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trace-explorer">
+    Trace explorer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unique-names">
+    Unique names
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-styles">
+    User styles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mpsutil-common">
+    MPSutil common
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generator-facade">
+    Generator facade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generic-actions">
+    Generic actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#node-access">
+    Node access
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#node-difference">
+    Node difference
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#print">
+    Print
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rcp-configuration">
+    RCP configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmodel-actions">
+    XModel actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#genutil">
+    GenUtil
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+    Resources
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-configuration">
+    Run configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stubs">
+    Stubs
+  </a>
+<nav aria-label="Stubs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mockito">
+    Mockito
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-csv">
+    Open CSV
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batik">
+    Batik
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orgxml">
+    org.xml
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-chooser">
+    Target chooser
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wait-for">
+    Wait for
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build-assistant">
+    Build assistant
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#make">
+    Make
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool-runner">
+    Tool runner
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xml-import">
+    XML import
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forms">
+    Forms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lang-plugin-extension">
+    Lang plugin extension
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapping-labels">
+    Mapping labels
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gradle-support">
+    Gradle support
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/com_mbeddr_mpsutil.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1>MPS utilities</h1>
+<p>This documentation gives an introduction to the subproject <em>com.mbeddr.mpsutil</em> of <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="/>
+</svg>
+</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>. </p>
+<div class="admonition warning">
+<p class="admonition-title">Documentation in progress</p>
+<p>Some of the older languages are already documented here
+but might need some fixes to work with the latest version of the platform. Other languages are not documented at all.</p>
+</div>
+<p>The project contains a bunch of different utility languages and solutions:</p>
+<h2 id="asynccell">AsyncCell<a class="headerlink" href="#asynccell" title="Permanent link">¶</a></h2>
+<p>The async cell allows to display a text based loading indicator as long as the return string is null.</p>
+<p>Create a new <code>$custom cell$</code> editor cell and return a new AsyncCellProvider:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AsyncCellProvider</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// calculate or query your value here</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">Style</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="o">?</span><span class="n">getContextCell</span><span class="p">().</span><span class="o">?</span><span class="n">getStyle</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AsyncCellValue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">});</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><a class="glightbox" href="../gifs/async_cell.gif"><img alt="async cell" src="../gifs/async_cell.gif"/></a></p>
+<h2 id="dataflow">Dataflow<a class="headerlink" href="#dataflow" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.favourites</ins></p>
+</blockquote>
+<p><abbr title="Meta Programming System">MPS</abbr>-DF is a data-flow extension for <abbr title="Meta Programming System">MPS</abbr>. Please visit the following page for more information:</p>
+<p><a href="https://szabta89.github.io/projects/df.html">An Extensible Framework for Variable-precision Data-flow Analyses in <abbr title="Meta Programming System">MPS</abbr> | Tamás Szabó</a></p>
+<h2 id="favourites-plugin">Favourites plugin<a class="headerlink" href="#favourites-plugin" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.favourites.plugin</ins></p>
+</blockquote>
+<p>The favourites view is implemented using the language <ins>com.mbeddr.mpsutil.projectview</ins> from <a href="https://jetbrains.github.io/MPS-extensions/extensions/other/project-view/"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+<p><a class="glightbox" href="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"><img alt="project view: favourites" src="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"/></a></p>
+<p>There’s an action <code>Add to Favourites</code> to add a node to this view. The node can be removed by executing the action
+<code>Remove from Favourites</code>. Internally, the plugin is implemented using node annotations.</p>
+<h2 id="parameterized-menu">Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.parameterizedMenu</ins></p>
+</blockquote>
+<p>This language is an extension to the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
+iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or create a dynamic submenu based on
+the parameter object (<em>parameterized submenu</em>).</p>
+<h2 id="build-utilities">Build utilities<a class="headerlink" href="#build-utilities" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.buildutil</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">This language was an attempt to automatically update build scripts during the build. It will be removed in the future.</p>
+</div>
+<h2 id="code-completion-menu">Code completion menu<a class="headerlink" href="#code-completion-menu" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.ccmenu</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">This language isn’t used anymore and disabled.</p>
+</div>
+<p>This language added support for customizing the code completion menu with tabs and a special tab for creating reference
+targets. The contributions were made in a plugin solutions by creating a <a href="http://127.0.0.1:63320/node?ref=r%3A3d5b7b5d-2674-4caf-bdca-c100c5a0cb8e%28com.mbeddr.mpsutil.ccmenu.structure%29%2F6243347984996272104">CCMenuExtensions</a> root node.</p>
+<p><a class="glightbox" href="../images/ccmenu_example.png"><img alt="example:ccmenu" src="../images/ccmenu_example.png"/></a></p>
+<p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-[MPS-2019](https://youtrack.jetbrains.com/issue/MPS-2019)-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling</a> instead.</p>
+<h2 id="concept-diagram">Concept diagram<a class="headerlink" href="#concept-diagram" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.conceptdiagram</ins></p>
+</blockquote>
+<p><a class="glightbox" href="../images/conceptdiagram_example.png"><img alt="example:conceptdiagram" src="../images/conceptdiagram_example.png"/></a></p>
+<p>Create a new root node of type <a href="http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138">ConceptDiagram</a>. The editor should now contain an empty editor. Nodes can be dragged
+from the <em>Diagram Palette</em> to the diagram. If nodes from other languages are needed, add the language to the <em>languages</em>
+section.</p>
+<p>TODO: explain how it works</p>
+<h2 id="context-actions">Context actions<a class="headerlink" href="#context-actions" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.contextactions</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">There is a Context Actions (JetBrains) and Context Actions 2 (mbeddr) tool. Please use the one from JetBrains instead of this language.</p>
+</div>
+<p>This language adds a tool with context-specific editor actions that can be navigated by mouse. For more information about the
+JetBrains implementation, visit the page <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context acions tool | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<h2 id="dependencies-diagram">Dependencies diagram<a class="headerlink" href="#dependencies-diagram" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.dependenciesdiagram</ins></p>
+</blockquote>
+<h2 id="ecore">ECore<a class="headerlink" href="#ecore" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.ecore</ins></p>
+</blockquote>
+<p>This is an importer and exporter for the meta model(<a href="https://wiki.eclipse.org/Ecore">ECore</a>) of the Eclipse Modelling Framework.
+The conversion is between an XML file and a <abbr title="Meta Programming System">MPS</abbr> model. The improter can import Ecore and Ecore model files.</p>
+<p>The actions can be accessed through right-clicking a model and opening the <em>Ecore Transformation tools</em> group.</p>
+<h2 id="generated-artifacts-review">Generated artifacts review<a class="headerlink" href="#generated-artifacts-review" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.genreview</ins></p>
+</blockquote>
+<p>This tool can be used to view artifacts that where generated by a generator. It has a special color mapping for Java files.
+The button <code>Highlight lines not linked</code> should highlight the lines which are not related to any node. When there are multiple
+original nodes that can be traced to a certain file and line, the previous and next button can be used to navigate to these
+nodes (TODO: not working or can’t find example).</p>
+<p><a class="glightbox" href="../images/generated_artifacts_reviewer.png"><img alt="generated artifacts reviewer" src="../images/generated_artifacts_reviewer.png"/></a></p>
+<h2 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.json</ins></p>
+</blockquote>
+<p>This language implements a simple JSON language that can be used as a generator target. The <a href="http://127.0.0.1:63320/node?ref=r%3Abe665d13-1e1d-44cd-9817-8bd4d610f422%28com.mbeddr.mpsutil.json.structure%29%2F4342692121161094115">Json file</a> root node
+supports an additional package name which is used as the folder inside the generation folder where the file is generated
+into.</p>
+<p>An example for a file that can be generated:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a json file"</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"my json file"</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"this is an object"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">"And another object"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">      </span><span class="nt">"With a description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"object description"</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="nt">"An array"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="s2">"valu1"</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="s2">"value2"</span><span class="w"> </span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">      </span><span class="p">],</span><span class="w"> </span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">      </span><span class="nt">"withANumber"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1.232E+231231</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">      </span><span class="nt">"empty array"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">      </span><span class="nt">"empty object"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">      </span><span class="nt">"empty string"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w"> </span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="jung-framework">JUNG framework<a class="headerlink" href="#jung-framework" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.jung</ins></p>
+</blockquote>
+<p>As an additional means of displaying relationships between nodes (next to PlantUML and the tree views) we have integrated
+the <a href="http://jung.sourceforge.net/">JUNG</a> framework for graph display. As a language developer, you can implement an interface IJGraphProvider and implement a method that creates the graph:</p>
+<ul>
+<li>Programmable with high-level API</li>
+<li>Specify initial layout</li>
+<li>Configurable node size, color, line style and color, fill color, shape and label</li>
+<li>Configurable edge width, style, color and label</li>
+<li>Configurable tooltip text for nodes and edges</li>
+<li>Extensibility to plug in your own layouters (such as the one from yWorks)</li>
+</ul>
+<p>Once you have created a graph, your users have many options to view the graph in an <abbr title="Meta Programming System">MPS</abbr> tool window:</p>
+<ul>
+<li>Double-click selects node or edge in editor</li>
+<li>Zoom and Pan</li>
+<li>Tooltips</li>
+<li>Selectable Layouts</li>
+<li>Selection and highlighting of outgoing and incoming nodes and edges</li>
+<li>Filtering based on node and edge type</li>
+<li>Filtering along a continuous axis (for example, time)</li>
+<li>Incremental, node-based collapsing and expansion</li>
+</ul>
+<p><a class="glightbox" href="../images/jung2.png"><img alt="example: JUNG framework" src="../images/jung2.png"/></a></p>
+<p>The JUNG integration is available as part of mbeddr, but also as part of the mbeddr.platform, so you can use it for your own languages. Check out the Chunk node for an example of how to use it.</p>
+<p>A demo video of the viewer can be found <a href="http://youtu.be/-v1X0GhsLJ4">here</a>.</p>
+<p>To use it in your own language, implement the <a href="http://127.0.0.1:63320/node?ref=d09a16fb-1d68-4a92-a5a4-20b4b2f86a62%2Fr%3A6e32694b-6dd1-4530-b48f-4e3bf97b2744%28com.mbeddr.mpsutil.jung%2Fcom.mbeddr.mpsutil.jung.structure%29%2F6388491840914066147">IJGraphProvider</a> interface. Return a JNGraph from the getGraph() method. Check out the existing implementations, and in particular the DepGraphHelper (called from Chunk.getGraph()) to learn the details. In short, a graph is built in two steps: the first step actually adds the nodes and edges. The second step uses closures to style the graph. Examples can be seen from DepGraphHelper.</p>
+<h2 id="lantest">Lantest<a class="headerlink" href="#lantest" title="Permanent link">¶</a></h2>
+<div class="admonition error">
+<p class="admonition-title">This language isn’t working anymore.</p>
+</div>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.lantest</ins></p>
+</blockquote>
+<p>This language was an attempt to automatically test languages, for example, check if the generation of files finished successfully
+or check that existing models can be instantiated again via the editor (for example: discover bugs in constraints).</p>
+<h2 id="multilingual">Multilingual<a class="headerlink" href="#multilingual" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">This language might be removed in the future.</p>
+</div>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.multilingual</ins></p>
+</blockquote>
+<p>The idea behind this language was to store text translations in properties files and load the through the Java <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ResourceBundle.html">ResourceBundle</a> class. The documentation for the language
+can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is located in the virtual package <ins><abbr title="documentation">doc</abbr>.com.mbeddr.mpsutil</ins>.</p>
+<h2 id="richstring">Richstring<a class="headerlink" href="#richstring" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.richstring</ins></p>
+</blockquote>
+<p>This <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> extension simplifies usage of variables and <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">Java String.format()</a> inside <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> Strings. Just add the language com.mbeddr.mpsutil.richstring to your model.</p>
+<p>The following example shows referencing a simple variable, embedding an expression inside a string, and the equivalent of calling <code class="highlight"><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">()</span><span class="w"></span></code>:</p>
+<p><a class="glightbox" href="../images/richstring_example.png"><img alt="example: richstring" src="../images/richstring_example.png"/></a></p>
+<h2 id="typesystem-trace">Typesystem trace<a class="headerlink" href="#typesystem-trace" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.typesystem.trace</ins></p>
+</blockquote>
+<h2 id="mps-util-library"><abbr title="Meta Programming System">MPS</abbr> util library<a class="headerlink" href="#mps-util-library" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.test.util</ins></p>
+</blockquote>
+<h2 id="bldoc">BLDoc<a class="headerlink" href="#bldoc" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.bldoc</ins></p>
+</blockquote>
+<h2 id="framecell">FrameCell<a class="headerlink" href="#framecell" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.framecell</ins></p>
+</blockquote>
+<h2 id="language-stats">Language stats<a class="headerlink" href="#language-stats" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.langstats</ins></p>
+</blockquote>
+<h2 id="icon-char">Icon char<a class="headerlink" href="#icon-char" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.iconchar</ins></p>
+</blockquote>
+<h2 id="license-manager">License manager<a class="headerlink" href="#license-manager" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.licensemanager.common</ins></p>
+</blockquote>
+<h2 id="default-values-for-properties">Default values for properties<a class="headerlink" href="#default-values-for-properties" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.propertydefault</ins></p>
+</blockquote>
+<h2 id="suppress-warning">Suppress warning<a class="headerlink" href="#suppress-warning" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.suppresswarning</ins></p>
+</blockquote>
+<h2 id="test-scope">Test scope<a class="headerlink" href="#test-scope" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.testScope</ins></p>
+</blockquote>
+<h2 id="var-scope">Var scope<a class="headerlink" href="#var-scope" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.varscope</ins></p>
+</blockquote>
+<h2 id="xmlfix">XML.fix<a class="headerlink" href="#xmlfix" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.xml.fix</ins></p>
+</blockquote>
+<h2 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.editor.utils</ins></p>
+</blockquote>
+<h2 id="file-picker">File picker<a class="headerlink" href="#file-picker" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.filepicker</ins></p>
+</blockquote>
+<h2 id="actions-filter">Actions filter<a class="headerlink" href="#actions-filter" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
+</blockquote>
+<h2 id="comparator">Comparator<a class="headerlink" href="#comparator" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.comparator</ins></p>
+</blockquote>
+<h2 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.datepicker</ins></p>
+</blockquote>
+<h2 id="editing-guide">Editing guide<a class="headerlink" href="#editing-guide" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.editingGuide</ins></p>
+</blockquote>
+<h2 id="extension-class">Extension class<a class="headerlink" href="#extension-class" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.extensionclass</ins></p>
+</blockquote>
+<h2 id="graphstream">Graphstream<a class="headerlink" href="#graphstream" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.graphstream</ins></p>
+</blockquote>
+<h2 id="http-support"><abbr title="Hypertext Transfer Protocol">HTTP</abbr> support<a class="headerlink" href="#http-support" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.httpsupport</ins></p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">This was the old http support plugin. Please use the language jetbrains.mps.ide.httpsupport instead.</p>
+</div>
+<h2 id="hyperlink">Hyperlink<a class="headerlink" href="#hyperlink" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.hyperlink</ins></p>
+</blockquote>
+<p>Hyperlink cells can be used for references in <abbr title="Meta Programming System">MPS</abbr>. In contrast to normal reference cells they automatically become blue and underlined if the mouse hovers over them (no Ctrl is necessary). The following style attributes are supported:</p>
+<ul>
+<li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
+<li><strong>hyperlink-handler</strong>: a function that is called when the link is clicked. The <em>util</em> parameter object contains a method
+<em>openInBrowser</em> for opening an URL with the default web browser.</li>
+<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the use of ctrl to activate the hyperlink.</li>
+<li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
+<li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
+<li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
+</ul>
+<h2 id="incremental-computation">Incremental computation<a class="headerlink" href="#incremental-computation" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.incrementalcomputation</ins></p>
+</blockquote>
+<h2 id="interpreter">Interpreter<a class="headerlink" href="#interpreter" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.interpreter</ins></p>
+</blockquote>
+<p>The interpreter is described on the <a href="../interpreter/">interpreter</a> page.</p>
+<h2 id="jfreechart">JFreeChart<a class="headerlink" href="#jfreechart" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.jfreechart</ins></p>
+</blockquote>
+<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">jfreechart</a> library. The charts can be viewed in
+an extra tool <em>Chart</em> by calling the following code: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>where <code>createChart</code> return instance of <a href="http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart">JFreeChart</a>.</p>
+<h2 id="margin-cell-review">Margin cell / review<a class="headerlink" href="#margin-cell-review" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
+</blockquote>
+<p>Margin cells are editor cells that are shown beyond the right editor margin, a little bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
+<p><a class="glightbox" href="../images/margincell_example.png"><img alt="example: margin cell" src="../images/margincell_example.png"/></a></p>
+<p>To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.</p>
+<p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margincell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
+<h2 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.placeholderTextList</ins></p>
+</blockquote>
+<p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregation with a custom placeholder text.</p>
+<p>The placeholder can be specified in the inspector by creating a query function for the <em>placeholder text</em>.</p>
+<h2 id="plantuml">PlantUML<a class="headerlink" href="#plantuml" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.plantuml.node</ins></p>
+</blockquote>
+<p>This provides an integration of <a href="https://plantuml.com/">PlantUML</a> with <abbr title="Meta Programming System">MPS</abbr>. Watch <a href="https://www.youtube.com/watch?v=QjwXITp6fwg">this old video</a> to get an overview.</p>
+<p>To use it in your own languages, implement the <a href="http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880">IVisualizable</a> interface in your language concept. Each concept can have several visualizations, called categories. The <code>getCategories()</code> method returns the list (just strings). The <code>getVisualization()</code> method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The <code>getVisualization()</code> method then has to fill the VisGraph with the actual visualization. This is done simply by using the <code>add()</code> method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the deails; in particular, there is a helper method on VisGraph that creates a URL for users to click on in the graph: <code>createUrl(node)</code>.</p>
+<h2 id="postprocessgeneratedfiles">postprocessGeneratedFiles<a class="headerlink" href="#postprocessgeneratedfiles" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.postprocessGeneratedFiles</ins></p>
+</blockquote>
+<p>Add a new node <em>generated files postprocessor facet</em> to the plugin aspect of a language to declare a new facet that
+is executed after files are generated (textGen). It supports post processor functions that have a <em>node</em> parameter and 
+a <em>path</em> parameter that contains the path of the generate file. This method can be, for example, used to copy the generated
+files to a different folder:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">generated</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">postprocessor</span><span class="w"> </span><span class="n">facet</span><span class="w"> </span><span class="nf">testGen</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">Path</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"/var/tmp/testGen"</span><span class="p">).</span><span class="na">resolve</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="na">getFileName</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s">"Copying "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" to "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">project</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">throwable</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="n">Files</span><span class="p">.</span><span class="na">createDirectories</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="na">getParent</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">Files</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">StandardCopyOption</span><span class="p">.</span><span class="na">REPLACE_EXISTING</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>For simple duplicating the TextGen outcome, there is also the builtin JetBrains annotation <a href="http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F1223283106984741523">CopyOutcome</a>.</p>
+<h2 id="preferenceform">preferenceform<a class="headerlink" href="#preferenceform" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.preferenceform</ins></p>
+</blockquote>
+<p>This language allows adding new preference pages to <em>Preferences</em>→<em>Other Settings</em>. The language uses the IntelliJ platform
+mechanishm for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation</a>).</p>
+<p>Example:</p>
+<p><a class="glightbox" href="../images/preferenceform_example.png"><img alt="example: preference form" src="../images/preferenceform_example.png"/></a></p>
+<p>It supports the following options:</p>
+<ul>
+<li><strong>scope</strong>: save the preferences on application or project level</li>
+<li><strong>help topic</strong>: TODO: where is the help topic shown</li>
+</ul>
+<p>The preference form supports a few different input elements:</p>
+<ul>
+<li>password field</li>
+<li>checkbox</li>
+<li>dynamic combobox</li>
+<li>integer field</li>
+<li>predefined combobox</li>
+<li>text field</li>
+</ul>
+<p>The <em>before write</em> method is called, when the button <em>Apply</em> or <em>OK</em> is pressed. This method should update all tools or classes
+that reference the values of the preference form. The input fields can be accessed through the <em>this</em> object. Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="p">(((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">port</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">enabled</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">HttpServerConfig</span><span class="p">.</span><span class="na">setCurrentConfig</span><span class="p">(</span><span class="n">config</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">extensionPoint</span><span class="o">/</span><span class="n">HttpServerConfigChangeListener</span><span class="o">/</span><span class="p">.</span><span class="na">objects</span><span class="p">.</span><span class="na">forEach</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">serverChanged</span><span class="p">(</span><span class="n">config</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>The <em>after read</em> method is called, after the state is loaded (e.g. when the preference form is opened).</p>
+<h2 id="process">process<a class="headerlink" href="#process" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.process</ins></p>
+</blockquote>
+<p>This language allows creating wizards with multiple steps:</p>
+<p><a class="glightbox" href="../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../images/wizard_step_example.png"/></a></p>
+<p>Create a new node of instance <a href="http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068">Process</a>. The wizard can have input parameters and produces one output. After defining
+the wizard it can be invoked from an action. Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>wizard&lt;theProcess&gt; wiz = createWizard&lt;theProcess&gt;("This is my testdata");
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>boolean b = wiz.show;
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>System.out.println("show == " + b);
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>wiz.finish;
+</code></pre></div></td></tr></table></div>
+<p>The <em>show</em> method shows the modal dialog and checks if it was closed with the exit code <em>OK</em>. The <em>finish</em> method
+ executed the <em>onFinish</em> callback of every step. For more information, have at look the <a href="http://127.0.0.1:63320/node?ref=r%3A9aef0d3c-87c9-4ce3-ad67-def9817c1ab4%28com.mbeddr.mpsutil.process.sandbox.plugin%29%2F4724180912013515813">example</a>.</p>
+<h2 id="rcp"><abbr title="Rich Client Platform">RCP</abbr><a class="headerlink" href="#rcp" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.rcp</ins></p>
+</blockquote>
+<p>This language allows creating a new action for creating models similar to the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
+Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig</a>. The following settings are supported:</p>
+<ul>
+<li><strong>name</strong>: the name of the new action</li>
+<li><strong>caption</strong>: the text that is shown for the action</li>
+<li><strong>user can change persistence</strong>: boolean flag that decides if the user can change the model’s persistence type.</li>
+<li><strong>default persistence</strong>: the type of model persistence that is used when the model is created</li>
+<li><strong>optional devkits</strong>: devkits that are automatically added when the model is created</li>
+<li><strong>show model properties</strong>: open the model properties after the model was created</li>
+</ul>
+<h2 id="refactoring">Refactoring<a class="headerlink" href="#refactoring" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.refactoring</ins></p>
+</blockquote>
+<p>This language adds support for a projection mode switcher and refactoring actions.</p>
+<h3 id="projection-mode-switcher">Projection mode switcher<a class="headerlink" href="#projection-mode-switcher" title="Permanent link">¶</a></h3>
+<p>The mbeddr platform has a group <em>Projection</em> which is a top-level menu in <abbr title="Meta Programming System">MPS</abbr>:</p>
+<p><a class="glightbox" href="../images/projection_menu.png"><img alt="projection menu" src="../images/projection_menu.png"/></a></p>
+<p>A projection mode switcher can be declared containing push hint options where the hints are referenced from an existing ConceptEditor context hints container. The action
+can be added in the <em>Add to Menu/Button Group</em> section editor.</p>
+<p>This adds a toggle to this menu/button group that toggles the referenced editor hint in the editors. When it should only
+be enabled for a specific concept, add a concept to <em>only in editor with instance of</em>.</p>
+<p><a class="glightbox" href="../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../images/projection_mode_switcher_example.png"/></a></p>
+<h3 id="refactoring-action">Refactoring action<a class="headerlink" href="#refactoring-action" title="Permanent link">¶</a></h3>
+<p>The concept <a href="http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137">RefactoringAction</a> can create an action for a <a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">simple refactoring</a>. The title of the action can be specified with <em>caption</em> and the keyboard shortcut can
+be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>parameters</em>. There are a few different choosers which will be shown in
+the refactoring dialog for the value of the parameters:</p>
+<ul>
+<li><em>string</em>: chooser for selecting a text</li>
+<li>+node*: chooser for selecting a node using a filter. The filter is a function which has a list of nodes to refactor as a parameter and
+should return a new filtered sequence of nodes.</li>
+<li><em>project tree node</em>: chooser for selecting a node from the project tree</li>
+</ul>
+<h2 id="smodule">SModule<a class="headerlink" href="#smodule" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.smodule</ins></p>
+</blockquote>
+<p>This language adds new operations to modules:</p>
+<ul>
+<li><strong>add dependencies</strong>: adds dependencies to one or more models to the module</li>
+<li><strong>add DevKits</strong>: adds devkits to the modules</li>
+<li><strong>add languages to the module</strong>: adds used languages to the module</li>
+<li><strong>add model</strong>: adds a new model with the specified name to the module. The repository has to be specified as the second
+parameter. If you press enter after the name, you can also add devkits, references to models and languages to the newly created
+model. In the inspector, the storage type has to be declared: it can be per root or single file persistence.</li>
+<li><strong>add solution</strong>: adds a new solution to the module. The virtual package can be specified (subfolder).</li>
+</ul>
+<h2 id="spreferences">SPreferences<a class="headerlink" href="#spreferences" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.spreferences</ins></p>
+</blockquote>
+<h2 id="trace-explorer">Trace explorer<a class="headerlink" href="#trace-explorer" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.traceExplorer</ins></p>
+</blockquote>
+<p>This language contributes a new tool <em>Trace Explorer</em> than can show and navigate traces of a model e.g. from the interpreter.</p>
+<p>An example can be seen in the <a href="https://voelter.de/data/pub/kernelf-reference.pdf#page=14">KernelF paper</a>.</p>
+<h2 id="unique-names">Unique names<a class="headerlink" href="#unique-names" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.uniquenames</ins></p>
+</blockquote>
+<p><abbr title="Meta Programming System">MPS</abbr> references all nodes by their <abbr title="identification">id</abbr>, not their name. Still, as humans, we see only the name, and this might be ambiguous. The Unique Names hint can be activated in <abbr title="Meta Programming System">MPS</abbr> Preferences, Editor Hints. It shows as much of the full qualified name as required to render a name unique.</p>
+<p>Example concept:</p>
+<p><a class="glightbox" href="../images/uniquenames_concept_plain.png"><img alt="example: unique names in concept declaration" src="../images/uniquenames_concept_plain.png"/></a></p>
+<p>Example Base Language:</p>
+<p><a class="glightbox" href="../images/uniquenames_class_unique.png"><img alt="example: unique names in Base Language" src="../images/uniquenames_class_unique.png"/></a></p>
+<h2 id="user-styles">User styles<a class="headerlink" href="#user-styles" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.userstyles</ins></p>
+</blockquote>
+<p>This language provides a new annotation <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/userConfigurable" title="GitHub User: userConfigurable">@userConfigurable</a></em>, that can be added to a style class in a style sheet 
+(intention:<em>Make User Configurable</em>). After defining a name, the user can change the style in the preferences
+(<em>Preferences</em>→<em>Editor</em>→<em>Color Scheme</em>→<em>Code</em>). The following style class items are supported:</p>
+<ul>
+<li><strong>Foreground</strong>: equivalent to <em>text-foreground-color</em></li>
+<li><strong>Background</strong>: equivalent to <em>text-background-color</em></li>
+<li><strong>Bold</strong>: equivalent to <em>font-style: bold</em></li>
+<li><strong>Italic</strong>: equivalent to *font-style: italic</li>
+<li><strong>Effects: Dotted lines, bold underscored, underscored, underwaved</strong>: equivalent to <em>underlined</em></li>
+<li><strong>Effects: strikeout</strong>: equivalent to <em>strike-out</em></li>
+</ul>
+<p>Further useful links for developers:</p>
+<ul>
+<li><a href="https://blog.jetbrains.com/platform/2017/12/export-intellij-editor-themes-as-plugins/">Export IntelliJ editor themes as plugin | JetBrains blog</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/themes-extras.html"><abbr title="User Interface">UI</abbr> Themes - Editor Schemes and Background Images | IntelliJ Platform Plugin SDK</a></li>
+</ul>
+<h2 id="mpsutil-common">MPSutil common<a class="headerlink" href="#mpsutil-common" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.mpsutil.common</ins></p>
+</blockquote>
+<p>TODO: existing page?</p>
+<h2 id="generator-facade">Generator facade<a class="headerlink" href="#generator-facade" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.generatorfacade</ins></p>
+</blockquote>
+<p>This language contains a class <a href="http://127.0.0.1:63320/node?ref=r%3A00bd75cf-1225-4ef5-9a7e-390aed8718dd%28com.mbeddr.mpsutil.generatorfacade.runtime%29%2F5915735921188775088">GeneratorFacade</a> that helps with running the generator. In contains a method
+<code>runGenerator</code> with different signatures that can run the generator with a specific generation plan for a defined model
+with a custom handler for generator messages and custom generation parameters such as <em>save transient models</em> (default: <em>false</em>) or 
+<em>generate in parallel</em> (default: yes, 4 threads).</p>
+<h2 id="generic-actions">Generic actions<a class="headerlink" href="#generic-actions" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.genericactions</ins></p>
+</blockquote>
+<p>As the name already implies, this language adds some new generic actions:</p>
+<ul>
+<li><strong>Decrease <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>: decreases the font size in the editor settings and updates all editors (ctrl + -)</li>
+<li><strong>Increase <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>: increases the font size in the editor settings and updates all editors (ctrl + +)</li>
+<li><strong>Reset <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>:: reset the font size to the default size (ctrl + 0, 13 pixels)</li>
+<li><strong>File Manager in Output Folder</strong>: a new action in the context menu of models that opens the path of the generated files.
+ This action won’t work if the model doesn’t generate output files.</li>
+<li><strong>File Manager in Module Folder</strong>: a new action in the context menu of modules that opens the path of <abbr title="throwable">th</abbr> module.</li>
+</ul>
+<h2 id="node-access">Node access<a class="headerlink" href="#node-access" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.nodeaccess</ins></p>
+</blockquote>
+<p>TODO: remove copy node url to clipboard (superceded by “Copy node reference as URL”)</p>
+<p>This language adds a new group of actions called <em>Copy/Paste Special</em> to the editor popup that opens when right-clicking
+in the editor:</p>
+<ul>
+<li><strong>Copy Node as XML</strong>: serialize the selected node to XML and copy it to the system clipboard.</li>
+<li><strong>Paste XML Node</strong>: deserialize a previously copied node and insert it next to the currently selected node.</li>
+<li><strong>Copy Node Info to Clipboard</strong>: copies some information (project, module, model, node, url) about a node to the system
+ clipboard.</li>
+</ul>
+<h2 id="node-difference">Node difference<a class="headerlink" href="#node-difference" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.nodediff</ins></p>
+</blockquote>
+<p>TODO: remove language. Superceded by compared two nodes (JetBrains action)</p>
+<h2 id="print">Print<a class="headerlink" href="#print" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.print.pluginSolution</ins></p>
+</blockquote>
+<p>This language adds a new action to the general <abbr title="Meta Programming System">MPS</abbr> <em>File</em> menu. The action <em>Print Editor</em> can be used to print the current
+editor with a printer. If the operating system permits it, this action can also be used to create a PDF from the editor.</p>
+<h2 id="rcp-configuration"><abbr title="Rich Client Platform">RCP</abbr> configuration<a class="headerlink" href="#rcp-configuration" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.rcpconfig</ins></p>
+</blockquote>
+<h2 id="xmodel-actions">XModel actions<a class="headerlink" href="#xmodel-actions" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.xmodel.actions</ins></p>
+</blockquote>
+<p>This language adds actions for automatically deriving <a href="https://www.jetbrains.com/help/mps/generation-plan.html">generation plans</a>.
+For a single or list of modules there is the action <code>Generation Plan for Languages</code> which can be found in the context menu that
+opens when you right-click the modules in the logical view. There is also an action <em>Derive Generation Plan</em> which derives
+a generation plan for a model that has to be selected in a dialog that opens when executiing this action. It can be found
+in the same places as the text preview action (for example, in the context menu of models).</p>
+<h2 id="genutil">GenUtil<a class="headerlink" href="#genutil" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.genutil</ins></p>
+</blockquote>
+<p>This language helps with managing user objects and creating temporary nodes for them:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>createTempNode{hello -&gt; "world"};
+</code></pre></div></td></tr></table></div>
+<p>This expression creates a new node and assigns Base Language expressions to keys of it. The keys are set internally with
+the <em>setref</em> statement which takes a key, a context node (here: the newly created node) and a target expression, and creates
+a new user object for this node. For normal values, there are the <em>setref</em> and <em>getref</em> statements to set and retrieve
+values from the user object respectively. For int values there are the statements <em>setint</em> and <em>getint</em>.</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.resources</ins></p>
+</blockquote>
+<h2 id="run-configuration">Run configuration<a class="headerlink" href="#run-configuration" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.runconfiguration</ins></p>
+</blockquote>
+<h2 id="stubs">Stubs<a class="headerlink" href="#stubs" title="Permanent link">¶</a></h2>
+<h3 id="mockito">Mockito<a class="headerlink" href="#mockito" title="Permanent link">¶</a></h3>
+<h3 id="open-csv">Open CSV<a class="headerlink" href="#open-csv" title="Permanent link">¶</a></h3>
+<h3 id="batik">Batik<a class="headerlink" href="#batik" title="Permanent link">¶</a></h3>
+<h3 id="orgxml">org.xml<a class="headerlink" href="#orgxml" title="Permanent link">¶</a></h3>
+<h2 id="target-chooser">Target chooser<a class="headerlink" href="#target-chooser" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.targetchooser</ins></p>
+</blockquote>
+<p>The target chooser language provides a modal dialog for choosing nodes based on a predefined scope:</p>
+<p><a class="glightbox" href="../images/targetchooser_example.png"><img alt="example: target chooser" src="../images/targetchooser_example.png"/></a></p>
+<p>Example code:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">TargetChooserOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TargetChooserOptions</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">project</span><span class="p">.</span><span class="na">getModelAccess</span><span class="p">().</span><span class="na">runReadAction</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="na">setScope</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">arraylist</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="p">{</span><span class="n">node</span><span class="o">/</span><span class="n">TargetChooser</span><span class="o">/</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">TargetChooserDialog</span><span class="o">/</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">DefaultModuleScope</span><span class="o">/</span><span class="p">});</span><span class="w"> </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">});</span><span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">TargetChooser</span><span class="w"> </span><span class="n">chooser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TargetChooser</span><span class="p">(</span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">),</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">TargetChooserDialog</span><span class="p">.</span><span class="na">chooseTarget</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>The <em>options</em> object has the following setters:</p>
+<ul>
+<li><strong>setInitial</strong>: set the initial selected item. This can be a node or a model.</li>
+<li><strong>setSelectionValidator</strong>: the selection validator checks if the selected target is valid or shows an error message when
+there it is invalid. By default, no validation takes places (an empty validator is used).</li>
+<li><strong>setSNodeFilter</strong>: this filter decides which nodes should be visible in the dialog (within the selected scope).
+To show a node, you also have to return true for the root node, but not for all ancestors.</li>
+<li><strong>setModuleScope</strong>: this scope defines the available modules that will be the sources for the nodes that will be displayed.</li>
+<li><strong>addModuleFilter</strong>: an additional boolean filter for the modules of the module scope.</li>
+<li><strong>showModulesPool</strong>: a flag that decides if the modules pool (last entry in logical view) should also be displayed in the dialog.</li>
+<li><strong>setModelFilter</strong>: only keep the models of the specified scope where the filter returns true</li>
+<li><strong>setScope</strong>: sets the scope for the items that should be displayed in the dialog. This can be in instance of 
+<a href="http://127.0.0.1:63320/node?ref=r%3A24b43531-125c-4436-b4b0-f3444d2173fd%28com.mbeddr.mpsutil.targetchooser%29%2F7547442689028637169">TargetChooserScope</a> or a sequence of nodes (+ ancestor filter). By default, the specified modules scope
+with the specified model and node filers applied is used.</li>
+</ul>
+<h2 id="wait-for">Wait for<a class="headerlink" href="#wait-for" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.blutil.test.waitfor</ins></p>
+</blockquote>
+<p>This language contains a assert item <em>wait for</em> for tests, the waits for an expression to become true. If the condition
+evaluates to false, the check is repeated every <em>m</em> millisecond until the timeout of <em>n</em> milliseconds is reached. Both
+<em>m</em> and <em>n</em> can be set in the inspector of the statement. </p>
+<p>A usecase for this statement could be multi threaded code, where you have to wait for the result of a different thread:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>boolean enoughTimeHasElapsed; 
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>ApplicationManager.getApplication().executeOnPooledThread({ =&gt; 
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  try { 
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    Thread.sleep(50); 
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  } catch (InterruptedException e) { 
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    e.printStackTrace(); 
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>  } 
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>  enoughTimeHasElapsed = true; 
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>}); 
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>wait for enoughTimeHasElapsed;
+</code></pre></div></td></tr></table></div>
+<h2 id="build-assistant">Build assistant<a class="headerlink" href="#build-assistant" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.buildassistant</ins></p>
+</blockquote>
+<h2 id="make">Make<a class="headerlink" href="#make" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.make</ins></p>
+</blockquote>
+<h2 id="tool-runner">Tool runner<a class="headerlink" href="#tool-runner" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.toolruner.plugin</ins></p>
+</blockquote>
+<h2 id="xml-import">XML import<a class="headerlink" href="#xml-import" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.xmlImport.plugin</ins></p>
+</blockquote>
+<p>This plugin adds two actions for importing XML files into <abbr title="Meta Programming System">MPS</abbr>:</p>
+<ul>
+<li><em>Paste as XML Content</em>: this action is located in the editor context menu and parses XML code
+and adds it to the next xml node or root node.</li>
+<li><em>Import XML File(s)</em>: this actions parses on or multiple xml files and creates xml root nodes for them in the current
+selected model.</li>
+</ul>
+<h2 id="forms">Forms<a class="headerlink" href="#forms" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.forms</ins></p>
+</blockquote>
+<h2 id="lang-plugin-extension">Lang plugin extension<a class="headerlink" href="#lang-plugin-extension" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.<abbr title="language">lang</abbr>.plugin.extensions</ins></p>
+</blockquote>
+<h2 id="mapping-labels">Mapping labels<a class="headerlink" href="#mapping-labels" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.mappingLabels</ins></p>
+</blockquote>
+<h2 id="gradle-support">Gradle support<a class="headerlink" href="#gradle-support" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.gradlesupport</ins></p>
+</blockquote>
+<p>This language was an attempt to create Gradle files from <abbr title="Meta Programming System">MPS</abbr>. It has a concepts for
+text files, single lines and multi lines. If you want to generate text files, use one of the 
+<a href="https://jetbrains.github.io/MPS-extensions/extensions/generator/plaintext-gen/">text generator plugins</a> from <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAKVUlEQVR4nMxZC1RU1fr/9jlzZgYGBhiGl5AzSvQ3DahQlKRES0WCv+98dE0tWRT5yKxWXlu95FZeb1e7Zt3bSgXTUjMEH4hC0hXzgbgE00BeOjCMDAwwT2aYmTPnrnPmwQyiDAxk31qb2fuw97d/v/399uPsg4EHxkIIf3vs+I235q1qVyzONP+YlHoskMMVeuJzoIYG2/BhH//Ir+OnfxcXGJIAiLJ6wgCqVIrKuWeOPtdq0CuGFmrfNmACBMLw1x9+cv07Y+M/4uK4Nw3aSoACe75B1/77nOLjM6Rduubhgd1jAyIw1lc49ssnZux5PCA4vge0bfSdyohlgsYudUPqqRNTm3TaxuGD7yYBBIDWjB7/xsYxk//GxjEvZAfLyIbqAU+XCRMgnGTKEq26Lu1UwZQmnU72wAiM8vYX74hO3p0QGD7VARJRgHrJhkk0eMLcUwYKGnWa+rTCwmmN2uGJxD1XIQwQnimasO7sUyt+SwiImAoMHgTWXwCKySMAC4CZpIzXNC3lDvD2SogCka93ZEHKzLNRfvyo4SCA9/VwtJe/eP/j8/OWRcRkEBjGdg2Ua76LNGlXlB2f8+FvFzaF83hhMQJBnD0C9ijx2Sz/+ZGiBT83y0626Q1tw0aAhrYqPC4jO3ruEbF3wCP3A05bp8nQtvBi7vRShfQcHZSCpsZjABQ5OTR0GobZo2CVmDeB+84Z/dDCoibZSYWhe8hIOFBFcPjhX45J3f10gGiGs9bvlZcbtdJ5lw7PqNa2V/V2+sLo0Yt3JCbs4bAwrvN8AGSBVr3+ztyCX6be6FDdHDICC4IeW7T14eSv+ARb0B9wOv2ua6tYXJ6b1mzQSO/lOD5YOGnfc0m5wd6cMDt4e/vO7m75vBNnZ11t67zqMYFnAyKnHxy3pBAhekLfHzidL+2UFC2rODJfYzZq+nMu9uWJDs1MKngkgD/WQQCsc0NlMioXHD83s0zeUeYJAWzDQ4nvIYR6ViOnlcaRt3KFfPnN71+4cjjVHfC03dboJNOPnp5ceqflZ2useya2H4flnzc78XRCWGC8JwSQfPImAwvDODb0LhPPOQKXNPJzz1/eM4UC4NEKGUgnBIaxsibFbh0j8I12+AQKwn24EOLDUc7J/3XGFbny8qAI1E96q82f8HI6Qd5NQoMIUCIO/Hjnytd/r87fb6LIc4PprLelR4+CfyRFg8poUi0+dmnmeVnHpYH6wI4pqn66+zGybVYAamCDGrHBjBCkhse/9lHsXw4OBfgeo+WE+/00J/70tJHCqQNtjWVJSjZJ9J21LuCtamWA6xABZoQBiRBDwp/rF26vOWvWLCgqKoKrV69Cfn4+fPPNN1BTUwOlpaXg5+fXf++ODQ+AR+D8g/8/viB5VNCsARFQmLrap1fsmrRLdnm72tyttACACTBQYwQYMJwBTQJykLA4NSYIAvh8Pvj6+oLZbIa1a9eCRCKB9PR0UKlUbgFAtvlAE+GwEHdf2pO5KZHByW4ToP+0m/Ud79QXrn+sbHvEhvrCjAp9R6XRNuKkS7KSoG3JkiWQmZkJTU1NoNPpQCaTQURExEAGDw5WS/eelSqKezY6ADYLcbNTY3OnjxLOdMeHy1HCRJGmSo3syj5Z2b8vdDYUETibCPMOiqJwFmFCGJgxDORGNZxqusiM8O3btyEnJwcqKytBKpVCbW0tIymEELS3t4NIJGIipNVqITw8HIxGI0RFRUFXVxeYTCboJi2lh2tkL4X5cEJjQ/hxdiIsHIg5jwQvrO/sul7Vrqu+H4F+j9N+hHdA8ojxy1NFiZmBPGHUDVUTvH1+G+zYsQOEQiEkJiZCdXU1E4Ho6GjIysqCvXv3glgshuLiYgbsmTNnYOLEidDa2srIraSkBLZt20a7/xIA1tCZteNHrf/o6aitOEYPqlVSJEWZXzt546UDv7f84FYE+rJui8lwQyW5mCc5t7NWLS0zU5bga+01kSkpKRAcHAwYhgFFUcBms0GhUEBSUhLU19eDQCBgCNEjTZMZN24cZGdnM0Q4HA7k5eXR7uld+CSduSRTXqxSaCqSI4PSCBZi088wDLCUKOFsiVJfd71Nd70vfG7fSlBAWcpabxTsu3l8E102GAzA4/Eccvjiiy8gNDSUIXTixAlYunQp6PV6ZnKvXLmSIRcXFwdKpRJIkuyzj6N1rUdTDl2e0trVLbPLCceA9dXzY3IWjg1e2FebwdxKTLCN3FCYQ0LOJvLjig7Ni81/NMg71koEgKQs5jdP16TvqWjJdq7r0b3QcJlEZZA8u7888bxUWcI8QNZIbE+O2hUTwotxrvunJCDwYgW8P0304fiR3gnMKRYcGx4W5sMOda7LenAw7zY2joj0SWEZ704Z+YE/mxACPVUs9Oyz/v+nqtbvihs6i53b/GkILHxCuOCDZPEnYj43CkgEFGmboQigy0xq3i2qX5NdIc/p3W7QBHAcZ1acvoxeZSwWi1t+nn3Uf9rmNPFnMWE+E5gRpxNFAaIQc5gsa1L/mpFfs7yuQ1/fV/tBz4Ht27czO2tfad26dW75WDopaNnRNY/9HDvSZwLzSuWUTJSlO+uX2+/OyK585l7gwZNlNCQkBAICAvqsIJfLobOzs19HGVPD4J+LIsE+8oxsLAD1cn3Vy9/ffPGKVNvvO/OgJUSDpJPHhrncg8G+Mvm3G3Ib3tB2kzp3mg+GQAsAfO5uZS4bcRY9E7TE35sVyLwkWXretxMifR0E5Gpj89r9da8ev9ZxfCBgBv19oF/HCGBRknDR5uXizyIEHLFjgtqlwiTr1WR+ueLQ6zl1r3bozP3rrpcNyzKaGMtP3JIh3hIX6fsUA9gCTjcdPUlvJHXv7Lu1dldJy+7B9jWkBP5P5BW1ZbVoS3K8YC4zuqQT4F5av9qgLVu5s2bZzWZ9jSd9DgmBYAERuPGViPdWzQ7JZGMYmxl1ehG33Ssh2wUBLVj6jL/taPOnmw80fmw0U2ZP+/aIAN8H912/fMT6dS+OeJPHwf0cOsfulgtN4laLoS59W+3yczfU5z0F7hEBFg74qsWhL7+/+qGPhXwi1DExnQFjrlHIOSX/z1tf39qg0bu3PA4bgbkpgrSPN4z8dIzYaxzlpHOHTJwTAlCoTa2rP69blVfacWwogQ+YwMQ4n7gt74s+nxzHn+KQiu2wZZdMbxIll5WFKzfXrmhpNw3BjucBgU8+GJn19uoRm8DiurIgirJ9anIl06UntR/ubNz4rwN3dtJVhgs8uLORpSUHJB/5fsxJBobFeROyb0rIpVx+TXNxxV9rl9VIDHXDCdxu/Z5G588OfIHJ2EYYIddTI8KsXyotiCK37pZmTVl+/ek/Cjy4IyEfHsZzFJz07pAMAmhu7Za88lbdS2cuqM4ON+De1m8ESi9oeq7SkX3Urb8URsHe3NZvn5hVEfMgwLtlXC7ilP835qK5I4FiUnsCZVYkUIraCYr5qYLZDxpfvzdzZjOQPxxuO+DFxYhAAUuoVJGdxwo7jix+pWbRpSva8j8G5r3tfwEAAP//97SuDUC0StUAAAAASUVORK5CYII="/>
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2022</span>
+</small>
+</div>
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOHtFrws4CQY8v" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="mbeddr/mps-platform-docs" data-repo-id="R_kgDOHtFrwg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+      
+    targetBlank();
+    })
+   
+   function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
+    }
+  }
+};
+  </script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Interpreter" class="md-footer__link md-footer__link--prev" href="../interpreter/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Interpreter
+            </div>
+</div>
+</a>
+<a aria-label="Next: Building Mbeddr locally" class="md-footer__link md-footer__link--next" href="../building_mbeddr_locally/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Building Mbeddr locally
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

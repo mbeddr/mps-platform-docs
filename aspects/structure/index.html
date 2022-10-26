@@ -37,7 +37,7 @@
 </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="about/new_pages/">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href='http://mbeddr.com/mps-platform-docs/about/new_pages"'>new pages</a>.
 
           </div>
 <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
@@ -699,6 +699,11 @@ If you are a returning visitor, make sure to check out the page about <a href="a
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/com_mbeddr_mpsutil/">
+        MPS utilities
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../platform_essentials/building_mbeddr_locally/">
         Building Mbeddr locally
       </a>
@@ -992,6 +997,13 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 <p class="admonition-title">Can properties be overridden?</p>
 <p>No, more <abbr title="information">info</abbr> can be found in <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a>.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How to get the name of a concept property?</p>
+<p>The easiest way to do this is via <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080">PropertyIdRefExpression</a>. Then you can directly reference the property in question like this:
+<code>property/MyConcept : myProperty/.getName()</code>
+Whit this implementation, every changes in the property names are always calculated properly.</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
+</div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you get the previous label of a reference?</p>
@@ -1021,7 +1033,7 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

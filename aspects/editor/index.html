@@ -37,7 +37,7 @@
 </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="about/new_pages/">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href='http://mbeddr.com/mps-platform-docs/about/new_pages"'>new pages</a>.
 
           </div>
 <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
@@ -709,6 +709,11 @@ If you are a returning visitor, make sure to check out the page about <a href="a
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/com_mbeddr_mpsutil/">
+        MPS utilities
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../platform_essentials/building_mbeddr_locally/">
         Building Mbeddr locally
       </a>
@@ -969,6 +974,14 @@ If you are a returning visitor, make sure to check out the page about <a href="a
 <div class="admonition question">
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
 <p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script</a> that can remove properties.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Is there a way to prevent users from adding and removing elements in a list in the <abbr title="Meta Programming System">MPS</abbr> editor? The elements in the list should still be editable, but adding/removing shouldn’t be allowed?</p>
+<p>There are 2 solutions:</p>
+<ol>
+<li>Use a querylist with empty insert/delete handlers.</li>
+<li>Create an action map/inline action cell with empty blocks for the actions <code>INSERT</code> and <code>INSERT_BEFORE</code>.</li>
+</ol>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">I’ve set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme.</p>
@@ -1306,7 +1319,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
