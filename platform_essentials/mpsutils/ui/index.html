@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This website collects practical knowlege about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
+<meta content="MPS Platform Docs team" name="author"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/mpsutils/ui/" rel="canonical"/>
+<link href="../../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.4.1" name="generator"/>
+<title>Ui - MPS Platform Docs</title>
+<link href="../../../assets/stylesheets/main.69437709.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ui">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+            
+            
+If you are a returning visitor, make sure to check out the page about <a href='http://mbeddr.com/mps-platform-docs/about/new_pages"'>new pages</a>.
+
+          </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+</aside>
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MPS Platform Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Ui
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="light-green" data-md-color-scheme="" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="" id="__palette_2" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../aspects/structure/">
+        Aspects
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../languages/">
+        Languages
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../mbeddr/">
+        Mbeddr
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../build/">
+        Build
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../mps_internal/">
+        Internal MPS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../">
+        Platform essentials
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../clean_code/mps/">
+        Clean code
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../patterns/language_design/">
+        Language/UI patterns
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../reference/reading_list/">
+        Reference
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../about/editing_this_guide/">
+        About
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+    MPS Platform Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/general/">
+        General
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/plugins/">
+        Plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/external_files_and_tools/">
+        External files and tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/console/">
+        Console
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/platform_specific_bugs/">
+        OS-specific bugs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/rcp/">
+        RCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/trouble_shooting_guide/">
+        Trouble shooting guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/visual_guide/">
+        Visual guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/debugging/">
+        Debugging
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Aspects" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/structure/">
+        Structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/editor/">
+        Editor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/behavior/">
+        Behavior
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/feedback/">
+        Feedback
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/typesystem/">
+        Typesystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/refactorings/">
+        Refactorings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/scripts/">
+        Scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/intentions/">
+        Intentions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/findusages/">
+        Find Usages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/plugin/">
+        Plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/dataflow/">
+        Dataflow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/textgen/">
+        TextGen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/migration/">
+        Migration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/vcs/">
+        VCS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/generator/">
+        Generator
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_19">
+          Contributed aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributed aspects" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_19">
+<span class="md-nav__icon md-icon"></span>
+          Contributed aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/listener/">
+        Listener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/polyfun/">
+        Polyfun
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/virtualinterfaces/">
+        Virtual Interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../aspects/transformations/">
+        Transformations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../languages/">Languages</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Languages" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../languages/baselanguage/">
+        Baselanguage and extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../languages/mps_extensions/">
+        MPS-extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mbeddr/">Mbeddr</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Mbeddr" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Mbeddr
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mbeddr/big_project/">
+        BigProject
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mbeddr/development_guide/">
+        Development guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mbeddr/misc_topics/">
+        Miscellaneous topics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../build/">Build</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Build" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../build/ci/">
+        CI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../build/gradle/">
+        Gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../build/command_line_tool/">
+        Creating a command line tool
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../build/git/">
+        Git
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mps_internal/">Internal MPS</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Internal MPS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Internal MPS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/open_api/">
+        Open API
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<label for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Dependencies and classpath" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Dependencies and classpath
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/terminology_and_ui_for_access/">
+        Terminology and UI for access
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/models/">
+        Models
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/dependencies/">
+        Dependencies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/recipes/">
+        Recipes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/classloading/">
+        Classloading
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mps_internal/threads/">Threading</a>
+<label for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Threading" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Threading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/threads/read_write_action_examples/">
+        Example actions using locks
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/threads/named_threads/">
+        Named threads
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/utility_classes/">
+        Utility classes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/gui/">
+        GUI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/intellij_sdk/">
+        IntelliJ SDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/jcef/">
+        Java Chromium Embedded Framework
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/writing_mps_plugin_with_kotlin/">
+        Writing an MPS plugin with Kotlin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../">Platform essentials</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Platform essentials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Platform essentials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common_concepts_and_interfaces/">
+        Common concepts and interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../interpreter/">
+        Interpreter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../com_mbeddr_mpsutil/">
+        MPS utilities
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../building_mbeddr_locally/">
+        Building Mbeddr locally
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_build_scripts/">
+        Platform build scripts
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../clean_code/mps/">Clean code</a>
+<label for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clean code" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Clean code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../clean_code/mps/readability_maintainability/">
+        Readability/maintainability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../clean_code/mps/deprecation/">
+        Deprecation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../clean_code/java/">Java (Base Language)</a>
+<label for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Java (Base Language)" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+          Java (Base Language)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../clean_code/java/programming_principles/">
+        Programming principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../clean_code/java/java_style_guide/">
+        Java style guide
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Language/UI patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Language/UI patterns" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Language/UI patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../patterns/language_design/">
+        Language design
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../patterns/user_experience/">
+        User experience
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../patterns/ui_patterns/">
+        UI patterns
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/reading_list/">
+        Reading list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/tips_for_os_maintainers/">
+        Tips for open source maintainers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/icons/">
+        Icons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/core_languages/">
+        Core languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/extension_points/">
+        Extension points
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/exceptions/">
+        Exceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/gitignore/">
+        Gitignore file
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          About
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="About" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../about/editing_this_guide/">
+        Editing this guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../about/original_authors/">
+        Original authors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home/new_pages.md">
+        New pages
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ui">
+    UI
+  </a>
+<nav aria-label="UI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cells">
+    Cells
+  </a>
+<nav aria-label="Cells" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asynccell">
+    AsyncCell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framecell">
+    FrameCell
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#margin-cell-review">
+    Margin cell / review
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placeholder-text-list">
+    Placeholder text list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+    Diagrams
+  </a>
+<nav aria-label="Diagrams" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept-diagram">
+    Concept diagram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies-diagram">
+    Dependencies diagram
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#date-picker">
+    Date picker
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editor-utils">
+    Editor utils
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-picker">
+    File picker
+  </a>
+<nav aria-label="File picker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperlink">
+    Hyperlink
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jfreechart">
+    JFreeChart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-chooser">
+    Target chooser
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-styles">
+    User styles
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/mpsutils/ui.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1>Ui</h1>
+<h2 id="ui"><abbr title="User Interface">UI</abbr><a class="headerlink" href="#ui" title="Permanent link">¶</a></h2>
+<h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">¶</a></h3>
+<h4 id="asynccell">AsyncCell<a class="headerlink" href="#asynccell" title="Permanent link">¶</a></h4>
+<p>The async cell allows displaying a text based loading indicator as long as the return string is null.</p>
+<p>Create a new <code>$custom cell$</code> editor cell and return a new AsyncCellProvider:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AsyncCellProvider</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// calculate or query your value here</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">Style</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="o">?</span><span class="n">getContextCell</span><span class="p">().</span><span class="o">?</span><span class="n">getStyle</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AsyncCellValue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">});</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><a class="glightbox" href="../../gifs/async_cell.gif"><img alt="async cell" src="../../gifs/async_cell.gif"/></a></p>
+<h4 id="framecell">FrameCell<a class="headerlink" href="#framecell" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.framecell</ins></p>
+</blockquote>
+<p><a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
+<ul>
+<li><strong>frame-color</strong>: the color of the frame (default: black)</li>
+<li><strong>frame-width</strong>: the thickness of the frame (default: 1 pixel)</li>
+<li><strong>frame-padding</strong>: the space between the containting cell and the frame (default: 3 pixel)</li>
+</ul>
+<p>An example can be seen in the documentation language:</p>
+<p><a class="glightbox" href="../../images/framecell_example.png"><img alt="example: framecell" src="../../images/framecell_example.png"/></a></p>
+<p>In most cases, the language <ins>de.itemis.mps.editor.celllayout</ins> from <span class="twemoji">
+<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image height="32" width="32" xlink:href="data:image/png;base64,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"/>
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a> can also be used for customizing the border and margins around a cell. Its documentation can be found <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/">here</a>.</p>
+<h3 id="margin-cell-review">Margin cell / review<a class="headerlink" href="#margin-cell-review" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
+</blockquote>
+<p>Margin cells are editor cells that are shown beyond the right editor margin, a little bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
+<p><a class="glightbox" href="../../images/margincell_example.png"><img alt="example: margin cell" src="../../images/margincell_example.png"/></a></p>
+<p>To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.</p>
+<p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
+<h3 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.placeholderTextList</ins></p>
+</blockquote>
+<p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregation with a custom placeholder text.</p>
+<p>The placeholder can be specified in the inspector by creating a query function for the <em>placeholder text</em>.</p>
+<h3 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h3>
+<h4 id="concept-diagram">Concept diagram<a class="headerlink" href="#concept-diagram" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.conceptdiagram</ins></p>
+</blockquote>
+<p><a class="glightbox" href="../../images/conceptdiagram_example.png"><img alt="example:conceptdiagram" src="../../images/conceptdiagram_example.png"/></a></p>
+<p>Create a new root node of type <a href="http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138">ConceptDiagram</a>. The editor should now contain an empty editor. Nodes can be dragged
+from the <em>Diagram Palette</em> to the diagram. If nodes from other languages are needed, add the language to the <em>languages</em>
+section.</p>
+<h4 id="dependencies-diagram">Dependencies diagram<a class="headerlink" href="#dependencies-diagram" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.dependenciesdiagram</ins></p>
+</blockquote>
+<p>This language contains a concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870">DependenciesDiagram</a></p>
+<p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies is visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
+<p><a class="glightbox" href="../../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../../images/dependencydiagram_example.png"/></a></p>
+<h3 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.datepicker</ins></p>
+</blockquote>
+<p>A classic widget to select a date from a pop-up calendar.</p>
+<p><a class="glightbox" href="../../images/datepicker_example.png"><img alt="example: datepicker" src="../../images/datepicker_example.png"/></a></p>
+<div class="admonition warning">
+<p class="admonition-title">There’s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the datepicker doesn’t work when the theme is set to macOS light.</p>
+</div>
+<p>This is only the control, i.e. the developer is responsible for synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
+<h3 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.editor.utils</ins></p>
+</blockquote>
+<p>The class <a href="http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d-a811-70d97e847917%2Fr%3Af4ae6487-fb1d-418f-8dd3-759f9604156f%28com.mbeddr.mpsutil.editor.utils%2Fcom.mbeddr.mpsutil.editor.utils.runtime%29%2F4912572611769853192">EditorRuntimeUtil</a> contains a few helpful editor utility methods:</p>
+<ul>
+<li><strong>getErrorText(EditorContext)</strong>: returns the error text of the current selected cell in the editor</li>
+<li><strong>collectAllOpenEditors(Project)</strong>: returns all opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
+<li><strong>collectAllOpenEditorComponents(Project)</strong>: return all opened editor components</li>
+</ul>
+<h2 id="file-picker">File picker<a class="headerlink" href="#file-picker" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.filepicker</ins></p>
+</blockquote>
+<p>This language contains text-based file and folder pickers. The paths can be directly entered in
+the editor. There’s also an intention <code>Open File Chooser Dialog</code> that shows a file chooser dialog. The following file pickers are supported:</p>
+<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F4881264737620519319">file system <abbr title="directory">dir</abbr> picker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F1504214765033455826">file system file picker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F8297282968580444334">macro file picker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F4881264737614560289">macro folder picker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F2642765975824060179">solution relative <abbr title="directory">dir</abbr> picker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F6156524541423588207">solution relative file picker</a></li>
+</ul>
+<p>The macro pickers can contain <a href="https://www.jetbrains.com/help/mps/absolute-path-variables.html">path variables</a>.</p>
+<h3 id="hyperlink">Hyperlink<a class="headerlink" href="#hyperlink" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.hyperlink</ins></p>
+</blockquote>
+<p>Hyperlink cells can be used for references in <abbr title="Meta Programming System">MPS</abbr>. In contrast to normal reference cells they automatically become blue and underlined if the mouse hovers over them (no Ctrl is necessary). The following style attributes are supported:</p>
+<ul>
+<li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
+<li><strong>hyperlink-handler</strong>: a function that’s called when the link is clicked. The <em>util</em> parameter object contains a method
+  <em>openInBrowser</em> for opening an URL with the default web browser.</li>
+<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the use of ctrl to activate the hyperlink.</li>
+<li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
+<li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
+<li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
+</ul>
+<h3 id="jfreechart">JFreeChart<a class="headerlink" href="#jfreechart" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.jfreechart</ins></p>
+</blockquote>
+<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">jfreechart</a> library. The charts can be viewed in
+an extra tool <em>Chart</em> by calling the following code:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>where <code>createChart</code> return instance of <a href="http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart">JFreeChart</a>.</p>
+<p><a class="glightbox" href="../../images/jfreechart_example.png"><img alt="example: jfreechart" src="../../images/jfreechart_example.png"/></a></p>
+<h3 id="target-chooser">Target chooser<a class="headerlink" href="#target-chooser" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.targetchooser</ins></p>
+</blockquote>
+<p>The target chooser language provides a modal dialog for choosing nodes based on a predefined scope:</p>
+<p><a class="glightbox" href="../../images/targetchooser_example.png"><img alt="example: target chooser" src="../../images/targetchooser_example.png"/></a></p>
+<p>Example code:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">TargetChooserOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TargetChooserOptions</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">project</span><span class="p">.</span><span class="na">getModelAccess</span><span class="p">().</span><span class="na">runReadAction</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="na">setScope</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">arraylist</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="p">{</span><span class="n">node</span><span class="o">/</span><span class="n">TargetChooser</span><span class="o">/</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">TargetChooserDialog</span><span class="o">/</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">DefaultModuleScope</span><span class="o">/</span><span class="p">});</span><span class="w"> </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">});</span><span class="w"> </span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">TargetChooser</span><span class="w"> </span><span class="n">chooser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TargetChooser</span><span class="p">(</span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">),</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">TargetChooserDialog</span><span class="p">.</span><span class="na">chooseTarget</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>The <em>options</em> object has the following setters:</p>
+<ul>
+<li><strong>setInitial</strong>: set the initial selected item. This can be a node or a model.</li>
+<li><strong>setSelectionValidator</strong>: the selection validator checks if the selected target is valid or shows an error message when it’s invalid. By default, no validation takes places (an empty validator is used).</li>
+<li><strong>setSNodeFilter</strong>: this filter decides which nodes should be visible in the dialog (within the selected scope).
+  To show a node, you also have to return true for the root node, but not for all ancestors.</li>
+<li><strong>setModuleScope</strong>: this scope defines the available modules that will be the sources for the nodes that will be displayed.</li>
+<li><strong>addModuleFilter</strong>: an additional boolean filter for the modules of the module scope.</li>
+<li><strong>showModulesPool</strong>: a flag that decides if the modules pool (last entry in logical view) should also be displayed in the dialog.</li>
+<li><strong>setModelFilter</strong>: only keep the models of the specified scope where the filter returns true</li>
+<li><strong>setScope</strong>: sets the scope for the items that should be displayed in the dialog. This can be in instance of
+  <a href="http://127.0.0.1:63320/node?ref=r%3A24b43531-125c-4436-b4b0-f3444d2173fd%28com.mbeddr.mpsutil.targetchooser%29%2F7547442689028637169">TargetChooserScope</a> or a sequence of nodes (+ ancestor filter). By default, the specified modules scope
+  with the specified model and node filers applied is used.</li>
+</ul>
+<h3 id="user-styles">User styles<a class="headerlink" href="#user-styles" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>com.mbeddr.mpsutil.userstyles</ins></p>
+</blockquote>
+<p>This language provides a new annotation <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/userConfigurable" title="GitHub User: userConfigurable">@userConfigurable</a></em>, that can be added to a style class in a style sheet
+(intention:<em>Make User Configurable</em>). After defining a name, the user can change the style in the preferences
+(<em>Preferences</em>→<em>Editor</em>→<em>Color Scheme</em>→<em>Code</em>). The following style-class items are supported:</p>
+<ul>
+<li><strong>Foreground</strong>: equivalent to <em>text-foreground-color</em></li>
+<li><strong>Background</strong>: equivalent to <em>text-background-color</em></li>
+<li><strong>Bold</strong>: equivalent to <em>font-style: bold</em></li>
+<li><strong>Italic</strong>: equivalent to *font-style: italic</li>
+<li><strong>Effects: Dotted lines, bold underscored, underscored, underwaved</strong>: equivalent to <em>underlined</em></li>
+<li><strong>Effects: strikeout</strong>: equivalent to <em>strike-out</em></li>
+</ul>
+<p>Further useful links for developers:</p>
+<ul>
+<li><a href="https://blog.jetbrains.com/platform/2017/12/export-intellij-editor-themes-as-plugins/">Export IntelliJ editor themes as plugin | JetBrains blog</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/themes-extras.html"><abbr title="User Interface">UI</abbr> Themes — Editor Schemes and Background Images | IntelliJ Platform Plugin SDK</a></li>
+</ul>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+</small>
+</div>
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOHtFrws4CQY8v" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="mbeddr/mps-platform-docs" data-repo-id="R_kgDOHtFrwg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+      
+    targetBlank();
+    })
+   
+   function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
+    }
+  }
+};
+  </script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../javascripts/tablesort.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>
