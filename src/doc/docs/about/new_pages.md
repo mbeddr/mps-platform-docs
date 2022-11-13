@@ -1,5 +1,9 @@
 This page lists all new pages since August 2022.
 
+## November 2022
+
+- [Platform essentials: MPS utilities](com_mbeddr_mpsutil.md)
+
 ## October 2022
 
 - [Reference: Issue trackers](issue_trackers.md)
