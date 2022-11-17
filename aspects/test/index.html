@@ -958,6 +958,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </code></pre></div></td></tr></table></div>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How do I access the current project inside a node test case?</p>
+<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F1225467090849">project</a> expression that should be used?</p>
+</div>
 <details class="question">
 <summary>Why does the node ID change during a node test?</summary>
 <blockquote>
@@ -1154,15 +1158,20 @@ in this node. Make sure that variables that are used in this path are set in <em
 Also check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="admonition error">
-<p class="admonition-title">Why does my test execution fail with “Test project ‘$…’ is not opened. Aborted”?</p>
+<p class="admonition-title">Why does the test execution fail with “Test project ‘$…’ is not opened. Aborted”?</p>
 <p>This is happening because the used variable in the <code>TestInfo</code> is not set. Go to <em>File</em> → <em>Settings</em> → <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">java.<abbr title="language">lang</abbr>.IllegalStateException: The showAndGet() method is for modal dialogs only.</p>
+<p>One of the reason why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is no way to avoid this exception than not showing the dialog.
+According to the IntelliJ documentation in can also happen when the dialog is not shown on the <abbr title="Event Dispatch Thread">EDT</abbr> thread or the dialog is not modal.</p>
 </div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

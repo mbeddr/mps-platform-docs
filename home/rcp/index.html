@@ -1033,12 +1033,67 @@ How can I know?</p>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How to you disable an <abbr title="Meta Programming System">MPS</abbr>/Intellij tool window?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Project</span><span class="w"> </span><span class="n">ideaProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// MPS tool </span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">BaseTool</span><span class="w"> </span><span class="n">mpsTool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ideaProject</span><span class="p">.</span><span class="na">tool</span><span class="o">&lt;</span><span class="n">YourTool</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mpsTool</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mpsTool</span><span class="p">.</span><span class="na">isAvailable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="n">mpsTool</span><span class="p">.</span><span class="na">makeUnavailable</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="c1">// IntelliJ Tool</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="cm">/* The toolID can be found through ToolWindowManager.getInstance(ProjectHelper.toIdeaProject(#project)).getToolWindowIds().asSequence on the console*/</span><span class="w"></span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">ToolWindow</span><span class="w"> </span><span class="n">toolWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ToolWindowManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">ideaProject</span><span class="p">).</span><span class="na">getToolWindow</span><span class="p">(</span><span class="n">toolID</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="k">if</span><span class="p">(</span><span class="n">toolWindow</span><span class="p">.</span><span class="na">isAvailable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="n">toolWindow</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you add an action to the menu bar of an IntelliJ tool window?</p>
+<p>Example base on the project view:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">ToolWindow</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ToolWindowManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">myProject</span><span class="p">).</span><span class="na">getToolWindow</span><span class="p">(</span><span class="n">ToolWindowId</span><span class="p">.</span><span class="na">PROJECT_VIEW</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">window</span><span class="p">.</span><span class="na">setTitleActions</span><span class="p">(</span><span class="n">titleActions</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can you set the position of a tool window?</p>
+<p>Example based on the <abbr title="Meta Programming System">MPS</abbr> inspector:</p>
+<p>```Java
+InspectorTool inspectorTool = ideaProject.getComponent(InspectorTool.class); 
+if (inspectorTool != null) {
+    ToolWindow inspectorToolWindow = inspectorTool.getToolWindow();
+    inspectorToolWindow.setAnchor(ToolWindowAnchor.RIGHT, null);
+}</p>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

@@ -1030,12 +1030,25 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">NewModuleUtil</span><span class="p">.</span><span class="na">createLanguage</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span><span class="w"> </span><span class="n">rootPath</span><span class="p">,</span><span class="w"> </span><span class="n">project</span><span class="p">,</span><span class="w"> </span><span class="n">saveProject</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How do I save my project(s)?</p>
+<p>Use <code>SRepository.saveAll()</code>.</p>
+<p>For a single project, e.g. <code>ProjectHelper.getProjectRepository(project).saveAll();</code></p>
+<p>For all opened projects, e.g.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">foreach</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">intellij</span><span class="p">.</span><span class="na">openapi</span><span class="p">.</span><span class="na">project</span><span class="p">.</span><span class="na">ProjectManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getOpenProjects</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">ide</span><span class="p">.</span><span class="na">project</span><span class="p">.</span><span class="na">ProjectHelper</span><span class="p">.</span><span class="na">getProjectRepository</span><span class="p">(</span><span class="n">project</span><span class="p">).</span><span class="na">saveAll</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/aquapp" title="GitHub User: aquapp">@aquapp</a><sub></sub></sub></p>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
