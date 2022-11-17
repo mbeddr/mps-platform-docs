@@ -50,6 +50,10 @@ The editor aspect defines the projectional editor of a concept.
 
     Use the *Menu Trace Tool* window. More information can be found in [Menu Trace Tool Window | MPS](https://www.jetbrains.com/help/mps/menu-trace-tool-window.html).
 
+!!! question "How can you add smart references using the transformation menus?"
+
+    F1RE Blog: [Adding smart references using transformation menus](https://www.f1re.io/transformation-menu-for-smart-references)
+
 ??? question "What's the best way to improve the autocomplete description of concepts?"
 
     > As you can see in the screenshot, the concepts of both opening braces are indistinguishable.

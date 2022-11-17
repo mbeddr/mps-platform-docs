@@ -83,6 +83,10 @@
 
     After you found your issue and everything is shiny, remember to remove the step from your github workflow again and reset your ngrok auth token.
 
+!!! warning "The build fails with exit code 137"
+
+    Specific Languages blog: [Exit code 137](https://specificlanguages.com/posts/2022-07/14-exit-code-137)
+
 ## Docker
 
 {{ mbeddr() }}, {{ mps_extensions() }}, {{ iets3() }}

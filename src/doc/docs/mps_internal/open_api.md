@@ -119,3 +119,19 @@
     ```java
     NewModuleUtil.createLanguage(namespace, rootPath, project, saveProject)
     ```
+
+!!! question "How do I save my project(s)?"
+
+    Use `SRepository.saveAll()`.
+
+    For a single project, e.g. `ProjectHelper.getProjectRepository(project).saveAll();`
+
+    For all opened projects, e.g.
+    
+    ```Java
+    foreach project in com.intellij.openapi.project.ProjectManager.getInstance().getOpenProjects() { 
+      jetbrains.mps.ide.project.ProjectHelper.getProjectRepository(project).saveAll(); 
+    }
+    ```
+
+    {{ contribution_by('aquapp') }}

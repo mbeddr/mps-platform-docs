@@ -7,9 +7,11 @@ hide:
 This website collects practical knowledge about MPS and popular MPS platforms. It's written mainly in the form of a Q&A.
 It contains questions and answers for {{ mps() }} and the following platforms:
 
-- {{ mps_extensions() }}
-- {{ mbeddr() }}
-- {{ iets3() }}
+- {{ mps_extensions() }} [:material-help-box:](https://jetbrains.github.io/MPS-extensions/)
+- {{ mbeddr() }} [:material-help-box:](com_mbeddr_mpsutil.md)[:material-help-box:](https://github.com/mbeddr?type=source#documentation)
+- {{ iets3() }} [:material-help-box:](https://voelter.de/data/books/kernelf-designEvoUse.pdf)
+
+Click on one of the :material-help-box: buttons to go directly to one of the documentations.
 
 You can open links starting with http://127.0.0.1 with the builtin [HTTP support plugin](https://www.jetbrains.com/help/mps/http-support-plugin.html).
 Platform specific instructions are marked when possible. Long answers are collapsed by default.

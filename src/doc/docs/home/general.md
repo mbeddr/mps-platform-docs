@@ -10,6 +10,16 @@
     - [Get started with MPS | mps.rocks](https://mps.rocks/#get-started-with-mps)
     - [Learning MPS | mps.rocks](https://mps.rocks/#learning-mps)
 
+??? question "Is there a high level presentation that I can have a look at?"
+
+    Yes, there is a presentation from 2020 by [Václav Pech](https://github.com/vaclav).
+
+    <iframe src="https://drive.google.com/file/d/1ofeLyO4mGC9tkDN88xPedCCxp8cpflqK/preview" width="100%" height="640px" allow="autoplay" framborder="0"></iframe>
+
+!!! question "What are the most important shortcuts?"
+
+    F1RE blog: [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts)
+
 !!! warning "What can you do if a problem occurs that isn't in this list?"
 
     Try {{ image_popup("https://www.jetbrains.com/help/mps/invalidate-caches.html", "invalidating the cache", "../../img/invalidate_cache.gif", "invalidate cache") }} and restarting MPS (same menu).
@@ -133,7 +143,7 @@
 !!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
 
     JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime. In some of the platform build scripts the environment ariable `JB_JAVA11_HOME` can be used to set the JDK home.
-    For older MPS versions that used Java 8, there was the environment variable `JB_JAVA11_HOME``.
+    For older MPS versions that used Java 8, there was the environment variable `JB_JAVA11_HOME`.
 
 !!! question "Are there any resources/communities about domain-specific languages and MPS?"
 

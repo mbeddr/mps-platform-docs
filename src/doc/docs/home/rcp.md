@@ -116,3 +116,46 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
     EditorColorsScheme colorScheme = EditorColorsManager.getInstance().getAllSchemes().asSequence.findFirst({~it => it.getDisplayName() :eq: "[NAME_OF_YOUR_SCHEME]"; }); 
     EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
     ```
+
+!!! question "How to you disable an MPS/Intellij tool window?"
+
+    ```Java
+    Project ideaProject = ProjectHelper.toIdeaProject(project);
+
+    // MPS tool 
+    BaseTool mpsTool = ideaProject.tool<YourTool>; 
+    if (mpsTool != null && mpsTool.isAvailable()) {
+        mpsTool.makeUnavailable();
+    }
+
+    // IntelliJ Tool
+
+    /* The toolID can be found through ToolWindowManager.getInstance(ProjectHelper.toIdeaProject(#project)).getToolWindowIds().asSequence on the console*/
+    ToolWindow toolWindow = ToolWindowManager.getInstance(ideaProject).getToolWindow(toolID)
+    if(toolWindow.isAvailable()) {
+        toolWindow.remove();
+    }
+    ```
+
+
+!!! question "How do you add an action to the menu bar of an IntelliJ tool window?"
+
+    Example base on the project view:
+
+    ```Java
+    ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(ToolWindowId.PROJECT_VIEW);
+    if (window != null) {
+        window.setTitleActions(titleActions);
+    }
+    ```
+
+!!! question "How can you set the position of a tool window?"
+
+    Example based on the MPS inspector:
+    
+    ```Java
+    InspectorTool inspectorTool = ideaProject.getComponent(InspectorTool.class); 
+    if (inspectorTool != null) {
+        ToolWindow inspectorToolWindow = inspectorTool.getToolWindow();
+        inspectorToolWindow.setAnchor(ToolWindowAnchor.RIGHT, null);
+    }

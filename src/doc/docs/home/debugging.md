@@ -1,6 +1,11 @@
 # Debugging
 
-See also: Specific Languages blog: [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
+For more in-depth explanations, visit:
+
+- Specific Languages blog: [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
+- DSL Foundry: [Whitepaper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/)
+
+The following list shows some debugging tips:
 
 - The menu entry *Tools* --> *Internal Actions* provides many useful debugging features, for example, the UI Inspector (Swing debugging).
 - Right-click --> *Preview Generated Text*: show the result of the M2T transformation (for example generated code) for the current node

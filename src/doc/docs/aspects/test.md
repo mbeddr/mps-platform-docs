@@ -41,6 +41,10 @@ title: Test aspect
 
     {{ contribution_by('abstraktor') }}
 
+!!! question "How do I access the current project inside a node test case?"
+
+    There is a [project](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F1225467090849) expression that should be used?
+
 ??? question "Why does the node ID change during a node test?"
 
     > Given I have a node test case. My test case has a check node called *data* and my test case has a a test *test1* which prints the node ID of *data*
@@ -230,6 +234,11 @@ title: Test aspect
     When running the tests from a run configuration, enable `Execute in the same process` in the configuration settings.
     Also check the box *Allow parallel run* ([Running the tests | MPS](https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests)).
 
-!!! error "Why does my test execution fail with "Test project '$...' is not opened. Aborted"?"
+!!! error "Why does the test execution fail with "Test project '$...' is not opened. Aborted"?"
 
     This is happening because the used variable in the `TestInfo` is not set. Go to *File* --> *Settings* --> *Path Variables* and create an entry for your variable, with a path to the project location on your hard drive.
+
+!!!error "java.lang.IllegalStateException: The showAndGet() method is for modal dialogs only."
+
+    One of the reason why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is no way to avoid this exception than not showing the dialog.
+    According to the IntelliJ documentation in can also happen when the dialog is not shown on the EDT thread or the dialog is not modal.

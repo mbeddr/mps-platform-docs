@@ -7,7 +7,7 @@ open an issue in this repository.
 ![license](https://img.shields.io/github/license/mbeddr/mps-platform-docs)
 ![last commit](https://img.shields.io/github/last-commit/mbeddr/mps-platform-docs)
 
-<img width="1068" alt="mps-platform-docs homeepage" src="https://user-images.githubusercontent.com/88385944/180607116-2c61d660-7893-4ebb-a383-97b56ff94abb.png">
+<img width="1068" alt="mps-platform-docs homepage" src="https://user-images.githubusercontent.com/88385944/180607116-2c61d660-7893-4ebb-a383-97b56ff94abb.png">
 
 ## Local execution
 Run: `./gradlew mkdocsServe` (rebuilds everything on change -> slow)
@@ -17,4 +17,4 @@ Build: `./gradlew mkdocsBuild`
 
 ## Publishing
 
-`./gradlew mkdocsPublish` is automatically run on push (Github Actions). The secret key is just a ssh key from someone who has push permissions for this repository.
+`./gradlew mkdocsPublish` is automatically run on push (GitHub Actions). The secret key is just a ssh key from someone who has push permissions for this repository.
