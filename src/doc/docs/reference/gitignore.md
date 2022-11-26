@@ -30,10 +30,10 @@ This isn't a complete list
 
 ## Temporary files/folders
 
-- *tmp*
+- *tmp*: temporary files by the Java compiler
 - *build/generated*
 - *.mps-caches*
-- */system/*
+- */system/*: the [system directory](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#system-directory)
 
 ## Build tools
 

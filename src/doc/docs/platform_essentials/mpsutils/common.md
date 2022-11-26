@@ -7,10 +7,10 @@
 The graph model contains classes for working with [graphs](https://en.wikipedia.org/wiki/Graph_theory) as well as an implementation for the [AVL tree](https://en.wikipedia.org/wiki/AVL_tree) data structure, which is a [self-balancing binary search tree](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree).
 The [Graph](http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F176714188933282830) class can be used together with [GraphUtil](http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F5943598111404841931), which provides the following methods:
 
-- **computeSCC(Graph)**: computes the strongly connected components of the given graph
-- **isConnected(Graph, T initial)**: determines whether the given directed graph corresponds to a connected graph
-- **computeSCCSingle(T sought, Graph)**: returns the set of nodes in the [strongly connected component](https://en.wikipedia.org/wiki/Strongly_connected_component) that the node to find is in
-- **computeTopologicalSorting(Graph, boolean silent)**: returns the [topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) of the nodes of the given graph.
+- *computeSCC(Graph)*: computes the strongly connected components of the given graph
+- *isConnected(Graph, T initial)*: determines whether the given directed graph corresponds to a connected graph
+- *computeSCCSingle(T sought, Graph)*: returns the set of nodes in the [strongly connected component](https://en.wikipedia.org/wiki/Strongly_connected_component) that the node to find is in
+- *computeTopologicalSorting(Graph, boolean silent)*: returns the [topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) of the nodes of the given graph.
 
 ### Model
 

@@ -109,7 +109,7 @@ can be found [here as a PDF](../../files/multilingual.pdf) and is located in the
 
 ### Test scope
 
-> ^^com.mbeddr.mpsutil.testScope
+> ^^com.mbeddr.mpsutil.testScope^^
 
 !!! warning "This language is deprecated. Please use the official [testing scopes](https://www.jetbrains.com/help/mps/testing-languages.html#testingscopes) instead."
 

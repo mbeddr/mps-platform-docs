@@ -216,7 +216,7 @@ nav:
       - platform_essentials/index.md
       - Contributing: platform_essentials/contributing.md
       - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
-      - Interpreter: platform_essentials/interpreter.md
+      - Interpreter, coverage and tracing: platform_essentials/interpreter.md
       - MPS utilities: platform_essentials/com_mbeddr_mpsutil.md
       - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
       - Platform build scripts: platform_essentials/platform_build_scripts.md

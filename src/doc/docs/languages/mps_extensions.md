@@ -1,16 +1,4 @@
-## Checkboxes
-
-### Boolean checkboxes
-
-> ^^de.itemis.mps.editor.bool^^
-
-A boolean checkbox cell that provides custom icons for states.
-
-### Enumeration/Multi-value
-
-> ^^de.itemis.mps.editor.enumeration^^
-
-A checkbox cell with more than one state. You have to define states by an enumeration property.
+**The improved documentation is hosted on [GitHub](https://jetbrains.github.io/MPS-extensions/).**
 
 ## Richtext
 
@@ -23,11 +11,6 @@ The mbeddr doc language used it for generating xhtml, latex, and markdown.
 
     A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.
 
-## Multiline property cell
-
-> ^^de.slisson.mps.editor.multiline^^
-
-A cell for string properties over multiple lines.
 
 ## Diagram
 
@@ -45,14 +28,6 @@ A cell for string properties over multiple lines.
 
     It’s used in the map that contains the layout data. It can be any unique string.
     LayoutMapEntry.key is the property where this string is used ([source](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1634132395020500?thread_ts=1634127497.019400&cid=C99H1FR42)).
-
-## Conditional Editor
-
-> ^^de.slisson.mps.conditionalEditor^^
-
-!!! warning "Generation errors exist."
-
-    The condition of the conditional editor is not optional, it has to be set.
 
 ## Tables
 
@@ -84,21 +59,6 @@ Strumenta blog: [Tabular projections in Jetbrains MPS: let’s start building an
     - multi-column headers
     - annotations for cells
     - pagination + other UI buttons
-
-## Cell Layout
-
-> ^^de.itemis.mps.editor.celllayout^^
-
-!!! question "What does this language do?"
-
-    In the MPS layout algorithms the children decide about their width and height and the parent cell can only arrange the already layouted children. 
-    In the algorithms from the celllayout language are similar to the swing layouters where the child is asked for its min/max/preferred size, 
-    but the parent decides about the size of the child and the child then has to fit itself into these bounds. 
-    This is used in tables and diagram, but also for the styles defined in the ^^de.itemis.mps.celllayout^^ language ([source](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1626868877018500?thread_ts=1626861485.018300&cid=C99H1FR42)).
-
-!!! question "What does grow-x and push-x do?"
-
-    *Grow-x* grows the cell to the with of the parent. *Push-x* is like setting *grow-x* on the cell and all ancestor cells.
 
 ## Grammar Cells
 
@@ -157,24 +117,3 @@ You can have editor cells, which can have actions and all other normal cell feat
 
 This language is deprecated, use ^^jetbrains.mps.lang.editor.tooltips^^ instead. It provides tooltips on hover.
 You have to define a regular editor and a hover editor.
-
-## Dropdown
-
-> ^^de.itemis.mps.dropdown^^
-
-This language surrounds an editor cell with a dropdown cell with a button. 
-It opens the code completion menu whe you click on it.
-The language might not be very stable.
-
-## Collapsible cells
-
-> ^^de.itemis.mps.editor.collapsible^^
-
-This language defines collapsed/folded and expanded/unfolded editors. It provides plus(+) and minus(-) buttons in the editor.
-There is no need for foldable collections. Use them together with other languages such as query lists.
-
-## Mathematical operators
-
-> ^^de.itemis.mps.editor.math.notations^^
-
-This language embeds mathematical operators into the editor  and also provides a set of predefined operators.
