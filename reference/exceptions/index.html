@@ -662,7 +662,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../platform_essentials/interpreter/">
-        Interpreter
+        Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item">
@@ -678,6 +678,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../platform_essentials/platform_build_scripts/">
         Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/build_folder/">
+        Build folder
       </a>
 </li>
 </ul>
@@ -806,9 +811,31 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Exceptions
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Exceptions
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-validation">
+    Module validation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-of-exceptions">
+    Type of exceptions
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../actions/">
@@ -877,6 +904,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-validation">
+    Module validation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-of-exceptions">
+    Type of exceptions
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -897,6 +940,64 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li><a href="https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/">java.<abbr title="language">lang</abbr>.NullPointerException</a></li>
 </ul>
 <h1 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
+<h2 id="module-validation">Module validation<a class="headerlink" href="#module-validation" title="Permanent link">¶</a></h2>
+<div class="admonition error">
+<p class="admonition-title">Can’t find/Couldn’t load X (language, devkit…).</p>
+<p>X couldn’t be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
+Install the plugin/open the project containing the language/fetch the dependency.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Could not find generation plan associated with the devkit</p>
+<p>“The generation plan couldn’t be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
+Install the plugin/open the project containing the language/fetch the dependency.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">No generation plan in the model X</p>
+<p>The referenced model for the generation plan in the properties doesn’t contain a generation plan.</p>
+</div>
+<div class="admonition warning"></div>
+<div class="admonition warning">
+<p class="admonition-title">Cycle in extended language hierarchy.</p>
+<p>The languages extends each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
+Read the documentation section about <a href="https://www.jetbrains.com/help/mps/mps-dependencies.html">dependencies</a>. Use the <a href="https://www.jetbrains.com/help/mps/dependencies-analyzer-analyze-model-dependencies.html">dependency analyzer</a> to better understand the cycle.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Subconcepts for language x found, missing extends dependency.</p>
+<p>One or multiple concepts extend concepts from another language but don’t have an extends dependency on the other language. 
+<a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#dependencies-2">Add a extends dependecy</a> to the other language in the dependency section of the module properties.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Superfluous extended module x, not referenced from structure aspect.</p>
+<p>The dependency was accidental added or is needed for a custom aspect and not the structure or editor aspect. Remove the dependency in the first case, keep it for the second case.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing runtime module x.</p>
+<p>A <a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#addingexternaljavaclassesandjarstoaproject-runtimesolutions">runtime solution</a> couldn’t be loaded.
+The plugin containing the solution was not installed / the dependency was not fetched and added as a library.                                                                                       </p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Runtime module x is not a solution.</p>
+<p>The added runtime module is a language or other type of module. Add a module of type solution instead.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing accessory model x.</p>
+<p>The accessory model couldn’t be loaded. The plugin containing the model was not installed / the dependency was not fetched and added as a library.    | Install the plugin/open the project containing the language/fetch the dependency.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Accessory model x is not visible in the module.</p>
+<p>All modules visible from given modules include modules from dependencies, transitive, respecting reexports, including initial modules.
+ Make sure to only refer to one of those modules.
+                           |</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Accessory model x uses language it’s part of.</p>
+<p>Mark the model as ‘do not generate’ to avoid unnecessary bootstrap dependency. </p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Accessory models are deemed design-time facility </p>
+<p>The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as ‘do not generate’.</p>
+</div>
+<h2 id="type-of-exceptions">Type of exceptions<a class="headerlink" href="#type-of-exceptions" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -990,7 +1091,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

@@ -662,7 +662,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../platform_essentials/interpreter/">
-        Interpreter
+        Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item">
@@ -678,6 +678,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../platform_essentials/platform_build_scripts/">
         Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../platform_essentials/build_folder/">
+        Build folder
       </a>
 </li>
 </ul>
@@ -887,30 +892,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </a>
 <h1 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h1>
 <div class="admonition question">
-<p class="admonition-title">What languages are old/deprecated and should not be used anymore?</p>
-<ul>
-<li><ins>com.mbeddr.mpsutil.breadcrumb</ins> (removed in a recent version of <span class="twemoji">
-<svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="/>
-</svg>
-</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>)</li>
-<li><ins>com.mbeddr.mpsutil.buildutil</ins> (experimental)</li>
-<li><ins>com.mbeddr.mpsutil.contextactions</ins> (use <abbr title="Meta Programming System">MPS</abbr> <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions</a> instead)</li>
-<li><ins>com.mbeddr.mpsutil.multilingual</ins> (unused/unmaintained)</li>
-<li><ins>com.mbeddr.mpsutil.typesystem.trace</ins> (use <abbr title="Meta Programming System">MPS</abbr> <a href="https://www.jetbrains.com/help/mps/typesystem-debugging.html#type-systemtrace">Type system trace</a> instead)</li>
-<li><ins>com.mbeddr.mpsutil.test.util</ins> (not needed)</li>
-<li><ins>com.mbeddr.mpsutil.bldoc</ins> (obsolete since <abbr title="Meta Programming System">MPS</abbr> java <abbr title="documentation">doc</abbr> refactoring)</li>
-<li><ins>com.mbeddr.mpsutil.langstats</ins> (not needed)</li>
-<li><ins>com.mbeddr.mpsutil.javainterpreter</ins> (can only interpret expression, was build as a demo for the interpret framework) </li>
-<li><ins>com.mbeddr.mpsutil.spreferences</ins> (rarely used)</li>
-<li><ins>com.mbeddr.mpsutil.uniquenames</ins> (performance issues)</li>
-<li><ins>com.mbeddr.mpsutil.iconchar</ins> (replaced with <abbr title="Meta Programming System">MPS</abbr> concept)</li>
-<li><ins>com.mbeddr.mpsutil.propertydefault</ins> (not used)</li>
-<li><ins>com.mbeddr.mpsutil.testScope</ins> (not used)</li>
-<li><ins>com.mbeddr.mpsutil.varscope</ins> (replaced with <abbr title="Meta Programming System">MPS</abbr> scopes)</li>
-</ul>
-</div>
-<div class="admonition question">
 <p class="admonition-title">Why are there two context action tools?</p>
 <p>The context actions tool from <ins>com.mbeddr.mpsutil.contextactions</ins> was developed first. Later, JetBrains developed their own
 tool that works the same as the one from mpsutil. Nowadays both tool windows coexist.</p>
@@ -932,7 +913,7 @@ is necessary for the actionsfilter language.</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

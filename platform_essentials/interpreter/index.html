@@ -10,7 +10,7 @@
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/interpreter/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Interpreter - MPS Platform Docs</title>
+<title>Interpreter, coverage and tracing - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +61,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Interpreter
+              Interpreter, coverage and tracing
             
           </span>
 </div>
@@ -663,11 +663,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Interpreter
+          Interpreter, coverage and tracing
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Interpreter
+        Interpreter, coverage and tracing
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -726,6 +726,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../platform_build_scripts/">
         Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build_folder/">
+        Build folder
       </a>
 </li>
 </ul>
@@ -974,7 +979,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/interpreter.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Interpreter</h1>
+<h1>Interpreter, coverage and tracing</h1>
 <p>The interpreter let you interpret code on the fly. You can use it instead of the normal approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g. executing baselanguage code). The result of invoking the interpreter is a Java object.</p>
 <p><a class="glightbox" href="../gifs/interpreter_testcase.gif"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px"/></a></p>
 <p>In the GIF you can see the interpreter executing a test case that contains assertions that are writing with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn’t involved in the execution at all.</p>

@@ -662,7 +662,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../interpreter/">
-        Interpreter
+        Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
@@ -1225,6 +1225,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../platform_build_scripts/">
         Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build_folder/">
+        Build folder
       </a>
 </li>
 </ul>
@@ -1987,10 +1992,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>The graph model contains classes for working with <a href="https://en.wikipedia.org/wiki/Graph_theory">graphs</a> as well as an implementation for the <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree</a> data structure, which is a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">self-balancing binary search tree</a>.
 The <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F176714188933282830">Graph</a> class can be used together with <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F5943598111404841931">GraphUtil</a>, which provides the following methods:</p>
 <ul>
-<li><strong>computeSCC(Graph)</strong>: computes the strongly connected components of the given graph</li>
-<li><strong>isConnected(Graph, T initial)</strong>: determines whether the given directed graph corresponds to a connected graph</li>
-<li><strong>computeSCCSingle(T sought, Graph)</strong>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component</a> that the node to find is in</li>
-<li><strong>computeTopologicalSorting(Graph, boolean silent)</strong>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting</a> of the nodes of the given graph.</li>
+<li><em>computeSCC(Graph)</em>: computes the strongly connected components of the given graph</li>
+<li><em>isConnected(Graph, T initial)</em>: determines whether the given directed graph corresponds to a connected graph</li>
+<li><em>computeSCCSingle(T sought, Graph)</em>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component</a> that the node to find is in</li>
+<li><em>computeTopologicalSorting(Graph, boolean silent)</em>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting</a> of the nodes of the given graph.</li>
 </ul>
 <h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">¶</a></h3>
 <p>The class <a href="http://127.0.0.1:63320/node?ref=r%3A72bc3a97-6a66-47f6-8cf2-f88ab2ada651%28com.mbeddr.mpsutil.common.model%29%2F6573709714620204463">ConceptInstanceFinder</a> contains a few methods for finding instances (= nodes) of a concept:</p>
@@ -2918,7 +2923,7 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 </div>
 <h3 id="test-scope">Test scope<a class="headerlink" href="#test-scope" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>^^com.mbeddr.mpsutil.testScope</p>
+<p><ins>com.mbeddr.mpsutil.testScope</ins></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">This language is deprecated. Please use the official <a href="https://www.jetbrains.com/help/mps/testing-languages.html#testingscopes">testing scopes</a> instead.</p>
@@ -2996,7 +3001,7 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Interpreter" class="md-footer__link md-footer__link--prev" href="../interpreter/" rel="prev">
+<a aria-label="Previous: Interpreter, coverage and tracing" class="md-footer__link md-footer__link--prev" href="../interpreter/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -3005,7 +3010,7 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 <span class="md-footer__direction">
                 Previous
               </span>
-              Interpreter
+              Interpreter, coverage and tracing
             </div>
 </div>
 </a>

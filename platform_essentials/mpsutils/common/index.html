@@ -662,7 +662,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../interpreter/">
-        Interpreter
+        Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item">
@@ -678,6 +678,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../platform_build_scripts/">
         Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build_folder/">
+        Build folder
       </a>
 </li>
 </ul>
@@ -929,10 +934,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>The graph model contains classes for working with <a href="https://en.wikipedia.org/wiki/Graph_theory">graphs</a> as well as an implementation for the <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree</a> data structure, which is a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">self-balancing binary search tree</a>.
 The <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F176714188933282830">Graph</a> class can be used together with <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F5943598111404841931">GraphUtil</a>, which provides the following methods:</p>
 <ul>
-<li><strong>computeSCC(Graph)</strong>: computes the strongly connected components of the given graph</li>
-<li><strong>isConnected(Graph, T initial)</strong>: determines whether the given directed graph corresponds to a connected graph</li>
-<li><strong>computeSCCSingle(T sought, Graph)</strong>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component</a> that the node to find is in</li>
-<li><strong>computeTopologicalSorting(Graph, boolean silent)</strong>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting</a> of the nodes of the given graph.</li>
+<li><em>computeSCC(Graph)</em>: computes the strongly connected components of the given graph</li>
+<li><em>isConnected(Graph, T initial)</em>: determines whether the given directed graph corresponds to a connected graph</li>
+<li><em>computeSCCSingle(T sought, Graph)</em>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component</a> that the node to find is in</li>
+<li><em>computeTopologicalSorting(Graph, boolean silent)</em>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting</a> of the nodes of the given graph.</li>
 </ul>
 <h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">¶</a></h3>
 <p>The class <a href="http://127.0.0.1:63320/node?ref=r%3A72bc3a97-6a66-47f6-8cf2-f88ab2ada651%28com.mbeddr.mpsutil.common.model%29%2F6573709714620204463">ConceptInstanceFinder</a> contains a few methods for finding instances (= nodes) of a concept:</p>
@@ -957,7 +962,7 @@ for ignoring properties, ignored references and some more settings. The return o
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
