@@ -2,6 +2,7 @@
 *[AST]: Abstract Syntax Tree
 *[BaseLanguage]: a projectional clone of Java 6 (with optional extensions for Java 7 and 8)
 *[COW]: Copy On Write
+*[CBMC]: Bounded Model Checker for C and C++ programs
 *[DOM]: Document Object Model
 *[DSL]: Domain Specific Language
 *[EDT]: Event Dispatch Thread

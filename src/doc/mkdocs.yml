@@ -219,7 +219,8 @@ nav:
       - Interpreter: platform_essentials/interpreter.md
       - MPS utilities: platform_essentials/com_mbeddr_mpsutil.md
       - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
-      - Platform build scripts: platform_essentials/platform_build_scripts.md  
+      - Platform build scripts: platform_essentials/platform_build_scripts.md
+      - Build folder: platform_essentials/build_folder.md
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md
