@@ -10,6 +10,69 @@ Here is some more information for exceptions that often occur in MPS:
 - [java.lang.NullPointerException](https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/)
 
 # MPS
+
+## Module validation
+
+!!! error "Can't find/Couldn't load X (language, devkit...)."
+
+    X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
+    Install the plugin/open the project containing the language/fetch the dependency.
+
+!!! error "Could not find generation plan associated with the devkit"
+
+    "The generation plan couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
+    Install the plugin/open the project containing the language/fetch the dependency.
+
+!!! error "No generation plan in the model X"
+
+    The referenced model for the generation plan in the properties doesn't contain a generation plan.
+
+!!! warning ""
+
+!!! warning "Cycle in extended language hierarchy."
+
+    The languages extends each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
+    Read the documentation section about [dependencies](https://www.jetbrains.com/help/mps/mps-dependencies.html). Use the [dependency analyzer](https://www.jetbrains.com/help/mps/dependencies-analyzer-analyze-model-dependencies.html) to better understand the cycle.
+
+!!! warning "Subconcepts for language x found, missing extends dependency."
+
+    One or multiple concepts extend concepts from another language but don't have an extends dependency on the other language. 
+    [Add a extends dependecy](https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#dependencies-2) to the other language in the dependency section of the module properties.
+
+
+!!! warning "Superfluous extended module x, not referenced from structure aspect."
+
+    The dependency was accidental added or is needed for a custom aspect and not the structure or editor aspect. Remove the dependency in the first case, keep it for the second case.
+
+!!! warning "Missing runtime module x."
+
+    A [runtime solution](https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#addingexternaljavaclassesandjarstoaproject-runtimesolutions) couldn't be loaded.
+    The plugin containing the solution was not installed / the dependency was not fetched and added as a library.                                                                                       
+
+!!! error "Runtime module x is not a solution." 
+
+    The added runtime module is a language or other type of module. Add a module of type solution instead.
+
+!!! warning "Missing accessory model x."
+
+    The accessory model couldn't be loaded. The plugin containing the model was not installed / the dependency was not fetched and added as a library.    | Install the plugin/open the project containing the language/fetch the dependency.
+
+!!! error "Accessory model x is not visible in the module."
+
+     All modules visible from given modules include modules from dependencies, transitive, respecting reexports, including initial modules.
+     Make sure to only refer to one of those modules.
+                               |
+
+!!! error "Accessory model x uses language it's part of."
+
+    Mark the model as 'do not generate' to avoid unnecessary bootstrap dependency. 
+
+!!! error "Accessory models are deemed design-time facility "
+
+    The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as 'do not generate'.
+
+## Type of exceptions
+
 | name                                                                                                                                                                                                                                                  | example                                                                                           | description                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [ModuleLoaderException](https://github.com/JetBrains/MPS/blob/a704d1397ef7a04769a6c65fe4e257b3c4ce7303/plugins/mps-build/languages/build.mps/source_gen/jetbrains/mps/build/mps/util/ModuleLoaderException.java#L14)                                  | none                                                                                              | Deprecated exception that is not thrown anymore since 2017.                                                                                                   |
