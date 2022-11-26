@@ -11,3 +11,8 @@ title: Scripts aspect
 !!! question "Are enhancement scripts executed as part of the migration process?"
 
     No, they are not.
+
+!!! question "Where can I find all available enhancement scripts?"
+
+    Go to Tools --> Scripts --> Enhancements and select a script or go the *All scripts* page and select
+    a few of them to run.
