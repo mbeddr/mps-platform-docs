@@ -29,8 +29,8 @@
     <td class="bg-red header" colspan="60">jetbrains.mps.baselanguage</td>
   </tr>
   <tr>
-    <td class="bg-red" colspan="12">classifiers</td>
-    <td class="bg-red" colspan="12">javadoc</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/base-language.html" target="_blank">classifiers</a></td>
+    <td class="bg-red" colspan="12"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F3812443517665722909" target="_blank">javadoc</td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/closures.html" target="_blank">closures</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/testing-languages.html#unittestingwithbtestcase" target="_blank">unitTest</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/logging.html">logging</a></td>
@@ -50,11 +50,11 @@
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/tuples.html" target="_blank">tuples</a></td>
     <td class="bg-red" colspan="12">varVariable</td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/type-extension-methods.html" target="_blank">extensionMethods</a></td>
-    <td class="bg-red" colspan="12">doubleDispatch</td>
+    <td class="bg-red" colspan="12"><a href="http://mbeddr.com/mps-platform-docs/languages/double_dispatch/">doubleDispatch</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/other-languages.html#customconstructors" target="_blank">constructors</a></td>
   </tr>
   <tr>
-    <td class="bg-red" colspan="15">blTypes</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/structure.html#properties">blTypes</a></td>
     <td class="bg-red" colspan="15">baselanguageInternal</td>
     <td class="bg-red" colspan="15"><s>jdk7</s></td>
     <td class="bg-red" colspan="15"><s>jdk8</s></td>
@@ -63,14 +63,14 @@
     <td class="bg-purple header" colspan="60"><a href="https://www.jetbrains.com/help/mps/build-language.html" target="_blank">jetbrains.mps.build</a></td>
   </tr>
   <tr>
-    <td class="bg-purple" colspan="15">mps</td>
+    <td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#mpsplugin" target="_blank">mps</a></td>
     <td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#mps-runnerplugin" target="_blank">mps.runner</a></td>
     <td class="bg-purple" colspan="15">mps.testManifest</td>
-    <td class="bg-purple" colspan="15">mps.tests</td>
+    <td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#moduletestingplugin">mps.tests</a></td>
   </tr>
   <tr>
     <td class="bg-purple" colspan="20">startup</td>
-    <td class="bg-purple" colspan="20">tips</td>
+    <td class="bg-purple" colspan="20"><a hef="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#:~:text=folder%20by%20default%3A-,the,-Tips%20%26%20Tricks%20language" target="_blank">tips</a></td>
     <td class="bg-purple" colspan="20">workflow</td>
   </tr>
   <tr>
@@ -110,11 +110,11 @@
     <td class="bg-light-yellow header" colspan="60">jetbrains.mps.execution</td>
   </tr>
   <tr>
-    <td class="bg-light-yellow" colspan="12">commands</td>
+    <td class="bg-light-yellow" colspan="12"><a href="https://www.jetbrains.com/help/mps/run-configurations.html#commands" target="_blank">commands</a></td>
     <td class="bg-light-yellow" colspan="12">common</td>
-    <td class="bg-light-yellow" colspan="12">configurations</td>
-    <td class="bg-light-yellow" colspan="12">settings</td>
-    <td class="bg-light-yellow" colspan="12">util</td>
+    <td class="bg-light-yellow" colspan="12"><a href="https://www.jetbrains.com/help/mps/run-configurations.html#configurations" target="_blank"> configurations</a></td>
+    <td class="bg-light-yellow" colspan="12"><a href="https://www.jetbrains.com/help/mps/run-configurations.html#settings" target="_blank">settings</a></td>
+    <td class="bg-light-yellow" colspan="12"><a href="https://www.jetbrains.com/help/mps/run-configurations.html#runninganode,generatedintojavaclass">util</a></td>
   </tr>
   <tr>
     <td class="bg-green header" colspan="60">jetbrains.mps.ide</td>
@@ -129,32 +129,32 @@
   <tr>
     <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage" target="_blank">access</a></td>
     <td class="bg-red" colspan="15">checkedName</td>
-    <td class="bg-red" colspan="15">context</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">context</a></td>
     <td class="bg-red" colspan="15">context.defs</td>
   </tr>
   <tr>
-    <td class="bg-red" colspan="15">aspect</td>
-    <td class="bg-red" colspan="15">core</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/custom-aspect.html" target="_blank">aspect</a></td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces" target="_blank">core</a></td>
     <td class="bg-red" colspan="15">descriptor</td>
-    <td class="bg-red" colspan="15">extension</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/extension-support.html" target="_blank">extension</a></td>
   </tr>
   <tr>
-    <td class="bg-red" colspan="15">actions</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/editor-actions.html" target="_blank">actions</a></td>
     <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/behavior.html" target="_blank">behavior</a></td>
     <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/data-flow.html" target="_blank">dataFlow</a></td>
-    <td class="bg-red" colspan="15">dataFlow.analyzers</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/data-flow.html" target="_blank">dataFlow.analyzers</a></td>
   </tr>
   <tr>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/editor.html" target="_blank">editor</a></td>
-    <td class="bg-red" colspan="12">findUsages</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/find-usages.html#finders">findUsages</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/mps-intentions.html" target="_blank">intentions</a></td>
-    <td class="bg-red" colspan="12">makeup</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtocopygeneratedoutput?" target="_blank">makeup</a></td>
     <td class="bg-red" colspan="12">messages</td>
   </tr>
   <tr>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/migrations.html" target="_blank">migration</a></td>
     <td class="bg-red" colspan="12">migration.util</td>
-    <td class="bg-red" colspan="12">modelapi</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/smodel-language-queries.html" target="_blank">modelapi</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/pattern.html" target="_blank">pattern</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">refactoring</a></td>
   </tr>
@@ -163,12 +163,12 @@
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/quotations.html" target="_blank">quotation</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/icon-description.html">resources</a></td>
     <td class="bg-red" colspan="12">rulesAndMessages</td>
-    <td class="bg-red" colspan="12">scopes</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/scopes.html#inheritedscopes">scopes</a></td>
   </tr>
   <tr>
-    <td class="bg-red" colspan="12">script</td>
-    <td class="bg-red" colspan="12">sharedConcepts</td>
-    <td class="bg-red" colspan="12">slanguage</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/migrations.html#defininglanguagemigrations" target="_blank">script</a></td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/concept-functions.html" target="_blank">sharedConcepts</a></td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/smodel-language-queries.html#aspectcollectioncast">slanguage</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/smodel-language-queries.html" target="_blank">smodel</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/smodel-query-language.html#smodel.querylanguage" target="_blank">smodel.query</a></td>
   </tr>
@@ -177,11 +177,11 @@
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/structure.html" target="_blank">structure</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/testing-languages.html" target="_blank">test</a></td>
     <td class="bg-red" colspan="12">test.generator</td>
-    <td class="bg-red" colspan="12">text</td>
+    <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/generic-placeholders-and-generic-comments.html#thetextlanguage" target="_blank">text</a></td>
   </tr>
   <tr>
     <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/textgen.html" target="_blank">textGen</a></td>
-    <td class="bg-red" colspan="15">tracable</td>
+    <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/debugger.html#traceablenodes" target="_blank">traceable</a></td>
     <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/typesystem.html" target="_blank">typesystem</a></td>
     <td class="bg-red" colspan="15">util.order</td>
   </tr>
@@ -189,9 +189,9 @@
     <td class="bg-purple header" colspan="60">jetbrains.mps.make</td>
   </tr>
   <tr>
-    <td class="bg-purple" colspan="20">facet</td>
+    <td class="bg-purple" colspan="20"><a href="https://www.jetbrains.com/help/mps/howto-integrating-into-the-mps-make-framework.html#buildfacets" target="_blank">facet</a></td>
     <td class="bg-purple" colspan="20">reduced</td>
-    <td class="bg-purple" colspan="20">script</td>
+    <td class="bg-purple" colspan="20"><a href="https://www.jetbrains.com/help/mps/howto-integrating-into-the-mps-make-framework.html#buildfacets" target="_blank">script</a></td>
   </tr>
   <tr>
     <td class="bg-green header" colspan="60"><a href="https://www.jetbrains.com/help/mps/plugin.html" target="_blank">jetbrains.mps.lang.plugin</a></td>
@@ -204,29 +204,29 @@
     <td class="bg-gray header" colspan="60"><a hef="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">jetbrains.mps.lang.feedback</a></td>
   </tr>
   <tr>
-    <td class="bg-gray" colspan="15">messages</td>
-    <td class="bg-gray" colspan="15">problem</td>
-    <td class="bg-gray" colspan="15">problem.childAndProp</td>
-    <td class="bg-gray" colspan="15">problem.failingRule</td>
+    <td class="bg-gray" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">messages</a></td>
+    <td class="bg-gray" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">problem</a></td>
+    <td class="bg-gray" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">problem.childAndProp</a></td>
+    <td class="bg-gray" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">problem.failingRule</a></td>
   </tr>
   <tr>
-    <td class="bg-gray" colspan="20">problem.scopes</td>
-    <td class="bg-gray" colspan="20">problem.structural</td>
-    <td class="bg-gray" colspan="20">skeleton</td>
+    <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">problem.scopes</a></td>
+    <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">problem.structural</a></td>
+    <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">skeleton</a></td>
   </tr>
   <tr>
     <td class="bg-yellow header" colspan="60">jetbrains.mps.lang.editor</td>
   </tr>
   <tr>
     <td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/diagramming-editor.html" target="_blank"><s>diagram</s></a></td>
-    <td class="bg-yellow" colspan="15">figures</td>
+    <td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/diagramming-editor.html"><s>figures</s></a></td>
     <td class="bg-yellow" colspan="15">forms</td>
     <td class="bg-yellow" colspan="15">imageGen</td>
   </tr>
   <tr>
-    <td class="bg-yellow" colspan="20">menu.extras</td>
-    <td class="bg-yellow" colspan="20">table</td>
-    <td class="bg-yellow" colspan="20">tooltips</td>
+    <td class="bg-yellow" colspan="20"><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html#menuparts" target="_blank">menu.extras</a></td>
+    <td class="bg-yellow" colspan="20"><s>table</s></td>
+    <td class="bg-yellow" colspan="20"><a href="https://www.jetbrains.com/help/mps/editor.html#tooltipcell" target="_blank">tooltips</a></td>
   </tr>
   <tr>
     <td class="bg-blue header" colspan="60"><a href="https://www.jetbrains.com/help/mps/constraints.html" target="_blank">jetbrains.mps.lang.constraints</a></td>
@@ -241,8 +241,8 @@
     <td class="bg-gray header" colspan="60"><a href="https://www.jetbrains.com/help/mps/mps-generator.html">jetbrains.mps.generator</a></td>
   </tr>
   <tr>
-    <td class="bg-gray" colspan="20">generationContext</td>
-    <td class="bg-gray" colspan="20">generationParameters</td>
+    <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/generator-cookbook.html" target="_blank">generationContext</a></td>
+    <td class="bg-gray" colspan="20"><s>generationParameters</s></td>
     <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/generation-plan.html#verifyingthegenerationplan" target="_blank">plan</a></td>
   </tr>
   <tr>
