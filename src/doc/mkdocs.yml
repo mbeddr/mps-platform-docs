@@ -191,7 +191,7 @@ nav:
       - Gradle: build/gradle.md
       - Creating a command line tool: build/command_line_tool.md
       - Git: build/git.md
-  - Internal MPS:
+  - MPS internals:
       - mps_internal/index.md
       - Open API: mps_internal/open_api.md
       - Dependencies and classpath:
