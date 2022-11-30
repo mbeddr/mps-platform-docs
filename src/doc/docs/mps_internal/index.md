@@ -255,4 +255,16 @@
     - editor settings: *CONFIG_DIR/options/mpsEditor.xml*
     - migration trigger settings: *WORKSPACE_FILE/MigrationTrigger*
 
+!!! question "Where can you find information about environment/JVM variables that are set in MPS?"
+
+    - [Advanced configuration | jetbrains.com](https://www.jetbrains.com/help/idea/tuning-the-ide.html)
+    - [Configuring JVM options and platform properties](https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties)
+    - JVM
+        - [Intellij Jvm Options Explained](https://github.com/FoxxMD/intellij-jvm-options-explained)
+        - [Java HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
+    - system properties
+        - [Java system properties](https://docs.oracle.com/en/java/javase/18/docs/api/system-properties.html)
+        - [System Properties for Java 2D](https://docs.oracle.com/javase/7/docs/technotes/guides/2d/flags.html) for properties starting with `sun.java2d`.
+        - [Networking System properties](https://docs.oracle.com/en/java/javase/16/core/networking-properties.html) for properties starting with `java.net`.
+
 [^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects
