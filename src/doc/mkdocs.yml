@@ -44,7 +44,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-  mps_latest: MPS 2021.3.1
+  mps_latest: MPS 2021.3.2
   mps_author: MPS 2021.1.4
 
 plugins:
