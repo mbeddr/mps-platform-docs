@@ -207,6 +207,7 @@ nav:
           - Named threads: mps_internal/threads/named_threads.md
       - Utility classes: mps_internal/utility_classes.md
       - GUI: mps_internal/gui.md
+      - Editor development: mps_internal/editor_development.md  
       - IntelliJ SDK: mps_internal/intellij_sdk.md
       - Java Chromium Embedded Framework: mps_internal/jcef.md
       - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md 

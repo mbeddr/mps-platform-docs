@@ -110,17 +110,6 @@ The editor aspect defines the projectional editor of a concept.
 
     Specific Languages Blog: [Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/)
 
-!!! info "Explain all cell related variables."
-
-    A cell takes up a specific amount of space in the editor component (width and height).
-    
-    - padding-left/right/top/bottom: a floating point number, which specifies the padding of a text cell, i.e. how much space will be between cell's text and cell's left and right sides, respectively.
-    - inset: representation of the borders of an element. It specifies the space that an element must leave at each of its edges.
-    - baseline: the line upon which most letters sit. 
-    - ascent: the recommended distance above the baseline for singled spaced text.
-    - descent: the recommended distance below the baseline for singled spaced text.
-    - height: ascent + descent
-    - gap: space between cells in a collection. There is a left and right gap.
 
 !!! hint "How can you set editor hints?"
 
