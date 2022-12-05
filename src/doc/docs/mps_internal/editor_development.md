@@ -123,6 +123,39 @@ of the folded cells will stay the same in the folded state and will be recalcula
 
 There is in the [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} and the cell layouter in MPS. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
 different layouts first. The different layouts are described in the [MPS documentation](https://www.jetbrains.com/help/mps/editor.html#celllayouts).
+What are the advantages of the celllayout language with respect to the MPS layouts?
+
+Layouting happens from the root to the leafs. That means, children are
+asked for their preferred/min/max size, but the parent sets the size and
+the child has to fit itself into that size.
+
+This gives more control over the resulting layout, such as:
+
+- Richtext (or any ident layout) can be wrapped to fit into the size of
+  a table column. Indent layout always wrap at the right
+  margin line.
+- making a horizontal line as wide as the cell above/below or as the whole
+  page
+- having additional cells on the right of a richtext without them being
+  pushed over the right margin (the text wraps earlier).
+- In a diagram, the content of a box can fit to the size of the box.
+  This is especially useful is there are subdiagrams in the box. Before
+  this was possible only with some ugly hacks.
+
+There is also a CSS like box model that allows setting border sizes and
+margins on cells and respect them in the layout. MPS by default allows
+only borders of size 1.
+
+This framework is compatible with the existing layouts in MPS.
+That means, there're implementations for horizontal/vertical/
+vertical-grid/indent layouts, that support this new architecture. You
+don't need to change anything, and you can still use the MPS editor language.
+
+You can also have custom layouts based on the default MPS layout
+architecture. This framework is able to handle them in a parent cell
+(for example: margin comments) or in a child cell (e. g. math).
+
+{{ contribution_by('slisson') }}
 
 ### EditorCellContext
 
