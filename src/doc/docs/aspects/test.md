@@ -236,7 +236,7 @@ tags:
     When running the tests from a run configuration, enable `Execute in the same process` in the configuration settings.
     Also check the box *Allow parallel run* ([Running the tests | MPS](https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests)).
 
-!!! error "Why does the test execution fail with "Test project '$...' is not opened. Aborted"?"
+!!! failure "Why does the test execution fail with "Test project '$...' is not opened. Aborted"?"
 
     This is happening because the used variable in the `TestInfo` is not set. Go to *File* --> *Settings* --> *Path Variables* and create an entry for your variable, with a path to the project location on your hard drive.
 

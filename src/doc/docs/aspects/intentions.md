@@ -52,6 +52,6 @@ tags:
 
     {{ contribution_by('coolya') }}
 
-!!! error "Failed to evaluate isApplicable for XY."
+!!! failure "Failed to evaluate isApplicable for XY."
 
     Starting from 2021.1.4 JetBrains made a change to the *isApplicable* method of intentions ([commits](https://github.com/JetBrains/MPS/commits/2021.1?since=2021-10-29&until=2021-11-29)). After the changes they [regenerated](https://github.com/JetBrains/MPS/commit/d47b2380b5005a05cd02de3a59f34448daae18f6) all the intentions in the project. This change also affects 2020.3.6. The exception  happens, for example, when languages compiled with 2021.1.3 and 2021.1.4 are used together.

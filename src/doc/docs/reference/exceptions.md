@@ -18,17 +18,17 @@ Here is some more information for exceptions that often occur in MPS:
 
 ## Module validation
 
-!!! error "Can't find/Couldn't load X (language, devkit...)."
+!!! failure "Can't find/Couldn't load X (language, devkit...)."
 
     X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
     Install the plugin/open the project containing the language/fetch the dependency.
 
-!!! error "Could not find generation plan associated with the devkit"
+!!! failure "Could not find generation plan associated with the devkit"
 
     "The generation plan couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
     Install the plugin/open the project containing the language/fetch the dependency.
 
-!!! error "No generation plan in the model X"
+!!! failure "No generation plan in the model X"
 
     The referenced model for the generation plan in the properties doesn't contain a generation plan.
 
@@ -54,7 +54,7 @@ Here is some more information for exceptions that often occur in MPS:
     A [runtime solution](https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#addingexternaljavaclassesandjarstoaproject-runtimesolutions) couldn't be loaded.
     The plugin containing the solution was not installed / the dependency was not fetched and added as a library.                                                                                       
 
-!!! error "Runtime module x is not a solution." 
+!!! failure "Runtime module x is not a solution." 
 
     The added runtime module is a language or other type of module. Add a module of type solution instead.
 
@@ -62,17 +62,17 @@ Here is some more information for exceptions that often occur in MPS:
 
     The accessory model couldn't be loaded. The plugin containing the model was not installed / the dependency was not fetched and added as a library.    | Install the plugin/open the project containing the language/fetch the dependency.
 
-!!! error "Accessory model x is not visible in the module."
+!!! failure "Accessory model x is not visible in the module."
 
      All modules visible from given modules include modules from dependencies, transitive, respecting reexports, including initial modules.
      Make sure to only refer to one of those modules.
                                |
 
-!!! error "Accessory model x uses language it's part of."
+!!! failure "Accessory model x uses language it's part of."
 
     Mark the model as 'do not generate' to avoid unnecessary bootstrap dependency. 
 
-!!! error "Accessory models are deemed design-time facility "
+!!! failure "Accessory models are deemed design-time facility "
 
     The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as 'do not generate'.
 

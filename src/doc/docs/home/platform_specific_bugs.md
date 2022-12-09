@@ -19,7 +19,7 @@ For crashes on MacOS, have a look at [Identifying the Cause of Common Crashes | 
 
 ## Windows
 
-!!! error "Compilation from the command line might fail due to none ASCII chars."
+!!! failure "Compilation from the command line might fail due to none ASCII chars."
 
     The error message looks something like this:
 
@@ -55,7 +55,7 @@ For crashes on MacOS, have a look at [Identifying the Cause of Common Crashes | 
 
 ## Linux
 
-!!! error "Autocompleting doesn't work with MPS + i3 (linux window manager)."
+!!! failure "Autocompleting doesn't work with MPS + i3 (linux window manager)."
 
     No solution at the moment (MPS-30499).
 

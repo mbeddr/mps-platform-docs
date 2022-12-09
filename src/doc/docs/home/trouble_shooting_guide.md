@@ -23,7 +23,7 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
     3. *File* --> *Invalidate Caches*, then restart.
     4. *File* --> *Invalidate Caches*, shutdown MPS; in the repository in question: run `git clean -fxd -e build.properties -e gradle.properties`, rebuild with Gradle (`./gradlew`), restart MPS.
 
-!!! error "MPS cannot find languages / solutions."
+!!! failure "MPS cannot find languages / solutions."
 
     > For instance: "language X is not deployed" errors.
 
@@ -49,7 +49,7 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
         - :octicons-check-circle-16: --> Make sure the method returns true
     5. Concept: does a constraint on one of the ancestor-nodes prohibit you from creating it?
 
-!!! error "MPS build fails."
+!!! failure "MPS build fails."
 
     1. Does the MPS Model-Checker report problems? :octicons-check-circle-16: --> Fix identified problems.
     2. Does the build log report intelligible problems? :octicons-check-circle-16: --> Fix identified problems.
@@ -57,7 +57,7 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
 
 ## Gradle
 
-!!! error "Gradle build fails."
+!!! failure "Gradle build fails."
 
     1. Did you call `git clean -fxd -e build.properties` before `./gradlew`? :octicons-x-circle-16: --> Do it, retry.
     2. Did you call `./gradlew` with `--refresh-dependencies`? :octicons-x-circle-16: --> Retry with `--refresh-dependencies`.
