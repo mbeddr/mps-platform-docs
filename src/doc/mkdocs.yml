@@ -20,12 +20,14 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.indexes
+    - navigation.footer
     - header.autohide
     - content.code.annotate
     - search.suggest
     - search.highlight
     - search.share
     - announce.dismiss
+    - content.code.copy
 
   custom_dir: overrides
   logo: assets/logo.png
