@@ -140,3 +140,9 @@ tags:
     ```
 
     {{ contribution_by('aquapp') }}
+
+!!! question "How can you convert a quotation to an expression?"
+
+    ```Java
+    new QuotationConverter(quotation).convert()
+    ```

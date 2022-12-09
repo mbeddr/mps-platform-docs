@@ -2,7 +2,7 @@
 
 ### Lantest
 
-!!!error "This language isn't working anymore."
+!!! failure "This language isn't working anymore."
 
 > ^^com.mbeddr.mpsutil.lantest^^
 

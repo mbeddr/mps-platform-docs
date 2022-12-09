@@ -25,6 +25,14 @@ tags:
 
     Specific Languages Blog: [How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/)
 
+!!! question "Can you invoke an action by ID?"
+
+    Yes, use the statement *invoke action by id*.
+
+!!! question "When using the *type* statement in an editor test, how do you enter multiple words?"
+
+    Enter them as one long word without spaces inbetween, e.g. *publictransientclass*.
+
 !!! warning "How to know if some MPS code is inside a test?"
 
     > Given I am writing some code in MPS that is supposed to run only if we're not running tests. How can I detect if I'm running a test?
@@ -222,6 +230,55 @@ tags:
     assert actions.any({ it => it.getMatchingText().equals("something"); });
     ```
 
+!!! question "How do you test with two-step deletion enabled?"
+
+    Example:
+
+    ```java
+    EditorTestUtil.runWithTwoStepDeletion({ => 
+    invoke action -> Backspace 
+    editor component.getEditorContext().getRepository().getModelAccess().runReadAction({ => assert true DeletionApproverUtil.isApprovedForDeletion(editor component.getEditorContext(), node) ; }); 
+    invoke action -> Delete 
+    assert true DeletionApproverUtil.isApprovedForDeletion(editor component.getEditorContext(), editor component.getSelectedNode()) ; 
+    }, true)
+    ```
+
+!!! question "How do you test with typing over existing text enabled?"
+
+    Example:
+
+    ```java
+    EditorTestUtil.runWithTypeOverExistingText({ => type " final" }, false)
+    ```
+
+!!! question "How do you test that a language is used?"
+
+    Example:
+
+    ```java
+    UsedLanguagesUtils.assertLanguageUsed(editor component, language/jetbrains.mps.lang.editor.menus.extras.testLanguage/)
+    ```
+
+!!! question "How do you access the error cells in the inspector?"
+
+    ```java
+    EditorComponent inspector = project.getComponent(InspectorTool.class).getInspector();
+    Set<EditorCell> errorCells = inspector.getCellTracker().getErrorCells();
+    ```
+
+!!! question "How do you click on anything in a test?"
+
+    You can execute intentions and actions programmatically, for UI elements like buttons you can use the *press mouse(x,y)*
+    and *release mouse* statements.
+
+!!! question "How can you test that code completion works?"
+
+    You can use a scope test, to check if all items are visible in the menu. To check the number of actions in the menu call: 
+
+    ```java
+    assert true editor component.getNodeSubstituteChooser().isVisible() && editor component.getNodeSubstituteChooser().getNumberOfActions() == n;
+    ```
+
 ## Troubleshooting
 
 !!! warning "Tests aren't running at all."
@@ -240,7 +297,7 @@ tags:
 
     This is happening because the used variable in the `TestInfo` is not set. Go to *File* --> *Settings* --> *Path Variables* and create an entry for your variable, with a path to the project location on your hard drive.
 
-!!!error "java.lang.IllegalStateException: The showAndGet() method is for modal dialogs only."
+!!! failure "java.lang.IllegalStateException: The showAndGet() method is for modal dialogs only."
 
     One of the reason why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is no way to avoid this exception than not showing the dialog.
     According to the IntelliJ documentation in can also happen when the dialog is not shown on the EDT thread or the dialog is not modal.
