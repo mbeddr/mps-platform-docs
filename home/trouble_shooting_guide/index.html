@@ -9,9 +9,9 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/home/trouble_shooting_guide/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.1, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
 <title>Trouble shooting guide - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -274,6 +274,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ci">
     CI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanations">
+    Explanations
   </a>
 </li>
 </ul>
@@ -902,6 +907,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         New pages
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags/">
+        Tags
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -934,6 +944,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     CI
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanations">
+    Explanations
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -941,6 +956,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag" href="../../tags/#troubleshooting">troubleshooting</a>
+<a class="md-tag" href="../../tags/#settings">settings</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/home/trouble_shooting_guide.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
@@ -957,12 +976,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>For instance: claims that a method is missing, although it exists.*</p>
 </blockquote>
 <ol>
+<li>Check if you have mixed dependencies for different <abbr title="Meta Programming System">MPS</abbr> versions or are opening the project with the wrong <abbr title="Meta Programming System">MPS</abbr> version.</li>
 <li><em>Tools</em> → <em>Reload All Classes</em>.</li>
 <li><em>File</em> → <em>Invalidate Caches</em>, then restart.</li>
 <li><em>File</em> → <em>Invalidate Caches</em>, shutdown <abbr title="Meta Programming System">MPS</abbr>; in the repository in question: run <code>git clean -fxd -e build.properties -e gradle.properties</code>, rebuild with Gradle (<code>./gradlew</code>), restart <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ol>
 </div>
-<div class="admonition error">
+<div class="admonition failure">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> cannot find languages / solutions.</p>
 <blockquote>
 <p>For instance: “language X is not deployed” errors.</p>
@@ -995,7 +1015,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Concept: does a constraint on one of the ancestor-nodes prohibit you from creating it?</li>
 </ol>
 </div>
-<div class="admonition error">
+<div class="admonition failure">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> build fails.</p>
 <ol>
 <li>Does the <abbr title="Meta Programming System">MPS</abbr> Model-Checker report problems? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z" fill-rule="evenodd"></path></svg></span> → Fix identified problems.</li>
@@ -1004,7 +1024,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ol>
 </div>
 <h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">¶</a></h2>
-<div class="admonition error">
+<div class="admonition failure">
 <p class="admonition-title">Gradle build fails.</p>
 <ol>
 <li>Did you call <code>git clean -fxd -e build.properties</code> before <code>./gradlew</code>? <span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z" fill-rule="evenodd"></path></svg></span> → Do it, retry.</li>
@@ -1080,12 +1100,23 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 </li>
 </ul>
 </div>
+<h2 id="explanations">Explanations<a class="headerlink" href="#explanations" title="Permanent link">¶</a></h2>
+<ul>
+<li>git clean -xdf<ul>
+<li>removes untracked files from the working tree (= also files generated by <abbr title="Meta Programming System">MPS</abbr>)</li>
+<li><em>x</em>: remove only files ignored by Git. This may be useful to rebuild everything from scratch, but keep manually created files.</li>
+<li><em>d</em>: remove untracked directories in addition to untracked files.</li>
+<li><em>f</em>: If the Git configuration variable clean.requireForce is not set to false, git clean will refuse to delete files or directories unless given -f, -n or</li>
+<li><em>e</em>: Use the given exclude pattern in addition to the standard ignore rules.</li>
+</ul>
+</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1153,20 +1184,20 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
-                Previous
-              </span>
-              RCP
-            </div>
+                  Previous
+                </span>
+                RCP
+              </div>
 </div>
 </a>
 <a aria-label="Next: Visual guide" class="md-footer__link md-footer__link--next" href="../visual_guide/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
-                Next
-              </span>
-              Visual guide
-            </div>
+                  Next
+                </span>
+                Visual guide
+              </div>
 </div>
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
@@ -1190,8 +1221,8 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

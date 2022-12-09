@@ -9,9 +9,9 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/aspects/test/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.1, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
 <title>Test aspect - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -892,6 +892,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         New pages
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags/">
+        Tags
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -921,6 +926,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag" href="../../tags/#aspect">aspect</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/aspects/test.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
@@ -942,6 +950,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="admonition warning">
 <p class="admonition-title">How do node tests work?</p>
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/">How do node tests work?</a></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Can you invoke an action by ID?</p>
+<p>Yes, use the statement <em>invoke action by <abbr title="identification">id</abbr></em>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">When using the <em>type</em> statement in an editor test, how do you enter multiple words?</p>
+<p>Enter them as one long word without spaces inbetween, e.g. <em>publictransientclass</em>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">How to know if some <abbr title="Meta Programming System">MPS</abbr> code is inside a test?</p>
@@ -1154,6 +1170,52 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">assert</span><span class="w"> </span><span class="n">actions</span><span class="p">.</span><span class="na">any</span><span class="p">({</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">getMatchingText</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">"something"</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How do you test with two-step deletion enabled?</p>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">EditorTestUtil</span><span class="p">.</span><span class="na">runWithTwoStepDeletion</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">invoke</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Backspace</span><span class="w"> </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getEditorContext</span><span class="p">().</span><span class="na">getRepository</span><span class="p">().</span><span class="na">getModelAccess</span><span class="p">().</span><span class="na">runReadAction</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">assert</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="n">DeletionApproverUtil</span><span class="p">.</span><span class="na">isApprovedForDeletion</span><span class="p">(</span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getEditorContext</span><span class="p">(),</span><span class="w"> </span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"> </span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">invoke</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Delete</span><span class="w"> </span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="k">assert</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="n">DeletionApproverUtil</span><span class="p">.</span><span class="na">isApprovedForDeletion</span><span class="p">(</span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getEditorContext</span><span class="p">(),</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getSelectedNode</span><span class="p">())</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you test with typing over existing text enabled?</p>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">EditorTestUtil</span><span class="p">.</span><span class="na">runWithTypeOverExistingText</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="s">" final"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you test that a language is used?</p>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">UsedLanguagesUtils</span><span class="p">.</span><span class="na">assertLanguageUsed</span><span class="p">(</span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="o">/</span><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">editor</span><span class="p">.</span><span class="na">menus</span><span class="p">.</span><span class="na">extras</span><span class="p">.</span><span class="na">testLanguage</span><span class="o">/</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you access the error cells in the inspector?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">EditorComponent</span><span class="w"> </span><span class="n">inspector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="na">getComponent</span><span class="p">(</span><span class="n">InspectorTool</span><span class="p">.</span><span class="na">class</span><span class="p">).</span><span class="na">getInspector</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">Set</span><span class="o">&lt;</span><span class="n">EditorCell</span><span class="o">&gt;</span><span class="w"> </span><span class="n">errorCells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inspector</span><span class="p">.</span><span class="na">getCellTracker</span><span class="p">().</span><span class="na">getErrorCells</span><span class="p">();</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you click on anything in a test?</p>
+<p>You can execute intentions and actions programmatically, for <abbr title="User Interface">UI</abbr> elements like buttons you can use the <em>press mouse(x,y)</em>
+and <em>release mouse</em> statements.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can you test that code completion works?</p>
+<p>You can use a scope test, to check if all items are visible in the menu. To check the number of actions in the menu call: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">assert</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getNodeSubstituteChooser</span><span class="p">().</span><span class="na">isVisible</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getNodeSubstituteChooser</span><span class="p">().</span><span class="na">getNumberOfActions</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Tests aren’t running at all.</p>
@@ -1167,11 +1229,11 @@ in this node. Make sure that variables that are used in this path are set in <em
 <p>When running the tests from a run configuration, enable <code>Execute in the same process</code> in the configuration settings.
 Also check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
-<div class="admonition error">
+<div class="admonition failure">
 <p class="admonition-title">Why does the test execution fail with “Test project ‘$…’ is not opened. Aborted”?</p>
 <p>This is happening because the used variable in the <code>TestInfo</code> is not set. Go to <em>File</em> → <em>Settings</em> → <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
 </div>
-<div class="admonition error">
+<div class="admonition failure">
 <p class="admonition-title">java.<abbr title="language">lang</abbr>.IllegalStateException: The showAndGet() method is for modal dialogs only.</p>
 <p>One of the reason why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is no way to avoid this exception than not showing the dialog.
 According to the IntelliJ documentation in can also happen when the dialog is not shown on the <abbr title="Event Dispatch Thread">EDT</abbr> thread or the dialog is not modal.</p>
@@ -1181,7 +1243,7 @@ According to the IntelliJ documentation in can also happen when the dialog is no
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1249,20 +1311,20 @@ According to the IntelliJ documentation in can also happen when the dialog is no
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
-                Previous
-              </span>
-              Dataflow
-            </div>
+                  Previous
+                </span>
+                Dataflow
+              </div>
 </div>
 </a>
 <a aria-label="Next: TextGen" class="md-footer__link md-footer__link--next" href="../textgen/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
-                Next
-              </span>
-              TextGen
-            </div>
+                  Next
+                </span>
+                TextGen
+              </div>
 </div>
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
@@ -1286,8 +1348,8 @@ According to the IntelliJ documentation in can also happen when the dialog is no
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>
