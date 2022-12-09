@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 ## Tools
 
 ### Context actions

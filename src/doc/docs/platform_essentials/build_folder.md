@@ -1,3 +1,7 @@
+---
+tags:
+- infrastructure
+---
 This page describes the *build* folder of the different platforms that is located in the root folder of the corresponding project. The folder contains files that are checked into Git such as Gradle files as well as generated Ant build files and other temporary files.
 
 Some folders that are described in the IETS3 section, are located at the root level in the other repository. The are also described

@@ -1,3 +1,10 @@
+---
+tags:
+- internals
+- plugins
+- java_integration
+---
+
 # Classloading
 
 ## Classloaders

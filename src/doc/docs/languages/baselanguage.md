@@ -1,3 +1,9 @@
+---
+tags:
+- baselanguage
+- baselanguage-extension
+---
+
 ## Base Language
 > ^^jetbrains.mps.baselanguage^^
 

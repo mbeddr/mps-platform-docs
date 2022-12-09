@@ -1,5 +1,7 @@
 ---
 title: Documentation aspect
+tags:
+- aspect
 ---
 
 # Generator aspect

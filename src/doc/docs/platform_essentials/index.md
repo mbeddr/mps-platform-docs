@@ -1,3 +1,10 @@
+---
+tags:
+- mps_extensions
+- mbeddr
+- iets3
+---
+
 # Platform essentials
 
 The following pages give an introduction to the most important languages of the platforms.

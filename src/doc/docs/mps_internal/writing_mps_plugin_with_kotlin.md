@@ -1,3 +1,11 @@
+---
+tags:
+- internals
+- intellij
+- plugins
+- java_integration
+---
+
 When you are using Kotlin to write an MPS plugin, the guidelines for the [IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) apply.
 
 ## Folder structure

@@ -1,5 +1,7 @@
 ---
 title: Plugin aspect
+tags:
+- aspect
 ---
 
 # Plugin aspect

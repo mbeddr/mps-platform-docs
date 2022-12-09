@@ -1,3 +1,8 @@
+---
+tags:
+- best_practise
+---
+
 # Programming principles
 
 These are some general programming principles taken from [this article](https://dzone.com/articles/java-best-practices-quick-reference) which can also be applied to MPS:

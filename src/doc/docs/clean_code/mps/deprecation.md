@@ -1,3 +1,9 @@
+---
+tags:
+- baselanguage
+- best_practise
+---
+
 - Don't use commands from the access language without a repository (see: [access language](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage)).
 - Don't use [node/myNode](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532). Use [node-ptr](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413)(myNode).resolve(repository) instead.
 - Don't use [model/myModel](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698). Use [model-ptr](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879)(myModel).resolve(repository) instead.

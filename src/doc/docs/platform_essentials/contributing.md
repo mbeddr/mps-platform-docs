@@ -1,3 +1,9 @@
+---
+tags:
+- iets3
+---
+
+
 This guide shows how to make a contribution to one of the platforms. It takes {{ iets3() }} as an example. It mostly uses the MPS GUI for Git. If you want to do everything on the command line, checkout [An introduction to Git](https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/) or one of the [Git cheatsheets](https://education.github.com/git-cheat-sheet-education.pdf).
 
 1. Make sure that you have Git and Java 11 installed.

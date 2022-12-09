@@ -1,3 +1,10 @@
+---
+tags:
+- internals
+- reference
+- utility
+---
+
 # Utility classes
 
 | **Class**                                                                                                   | **Description**                                                                         |

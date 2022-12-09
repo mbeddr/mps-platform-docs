@@ -1,3 +1,8 @@
+---
+tags:
+- infrastructure
+---
+
 # Continuous integration
 
 ??? question "How to attach debugger to a CI build on GitHub actions?"

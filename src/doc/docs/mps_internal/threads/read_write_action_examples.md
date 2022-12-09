@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- examples
+---
+
 These actions use IntelliJ platforms or access MPS models and need additional locks because of the location where they
 are used. Especially MPS read and write locks should be available in every language aspect and manually locking isn't necessary.
 

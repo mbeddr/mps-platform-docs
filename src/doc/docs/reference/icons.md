@@ -1,3 +1,9 @@
+---
+tags:
+- reference
+- ui
+---
+
 ## Actions
 
 The icons can be used in this repository by inserting the corresponding code in a markdown file.

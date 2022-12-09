@@ -1,5 +1,7 @@
 ---
 title: Refactorings aspect
+tags:
+- aspect
 ---
 
 # Refactorings aspect

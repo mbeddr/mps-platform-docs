@@ -1,3 +1,9 @@
+---
+tags:
+- interactive
+- troubleshooting
+---
+
 !!! warning "I can't enter the print statement."
 
     It can't be used in nested structures. Use it at the top level instead.

@@ -1,3 +1,9 @@
+---
+tags:
+- reference
+- intellij
+---
+
 ## CommonDataKeys
 
 | name                    | description                                                                                            | Available in MPS   |

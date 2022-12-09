@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 !!! question "What does the dollar sign in error messages mean?"
 
     This indicates an anomyous class ([more information](https://stackoverflow.com/questions/11388840/java-compiled-classes-contain-dollar-signs)).

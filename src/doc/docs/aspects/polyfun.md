@@ -1,5 +1,7 @@
 ---
 title: Polyfun aspect
+tags:
+- aspect
 ---
 
 # Polyfun aspect

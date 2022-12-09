@@ -1,3 +1,8 @@
+---
+tags:
+- mps-extensions
+---
+
 **The improved documentation is hosted on [GitHub](https://jetbrains.github.io/MPS-extensions/).**
 
 ## Richtext

@@ -1,3 +1,9 @@
+---
+tags:
+- mbeddr
+- guide
+---
+
 # Development Guide
 
 This document describes how the mbeddr team uses Git for contributing changes. The guide was written some years ago, so it 

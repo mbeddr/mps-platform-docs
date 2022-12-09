@@ -1,3 +1,8 @@
+---
+tags:
+- troubleshooting
+---
+
 # Debugging
 
 For more in-depth explanations, visit:

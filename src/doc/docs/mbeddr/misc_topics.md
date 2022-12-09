@@ -1,3 +1,8 @@
+---
+tags:
+- mbeddr
+---
+
 # Misc Topics
 
 ## Limitations to product line engineering when generating variant aware code

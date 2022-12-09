@@ -64,6 +64,8 @@ plugins:
         - includes/code_abbreviations.md
         - reference/code_abbreviations.md
   - kroki
+  - tags:
+      tags_file: tags.md
   - glightbox:
       width: 70vw
       height: 20vw
@@ -252,3 +254,4 @@ nav:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
     - New pages: about/new_pages.md
+    - Tags: tags.md

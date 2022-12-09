@@ -1,3 +1,8 @@
+---
+tags:
+- internals
+---
+
 !!! warning "The project isn't a project."
 
     > I want to call `GenerationCheckHelper.checkModelsBeforeGenerationIfNeeded` to check my model. It that takes a `Project` but my `Project` that I get  as an action context isn't the correct project. The type system complains that it's not the correct class. 

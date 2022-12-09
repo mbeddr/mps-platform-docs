@@ -1,3 +1,8 @@
+---
+tags:
+- infrastructure
+---
+
 # Git
 
 !!! question "How do you compare Git branches?"

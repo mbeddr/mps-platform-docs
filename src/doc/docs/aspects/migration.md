@@ -1,5 +1,7 @@
 ---
 title: Migration aspect
+tags:
+- aspect
 ---
 
 # Migration aspect

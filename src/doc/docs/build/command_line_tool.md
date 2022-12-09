@@ -1,3 +1,9 @@
+---
+tags:
+- guide
+- java_integration
+---
+
 Basic code:
 
 ```java

@@ -1,4 +1,11 @@
-References:
+---
+tags:
+- internals
+- intellij
+- ui
+---
+
+## References
 
 - [Common Concurrency Pitfalls in Java](https://www.baeldung.com/java-common-concurrency-pitfalls)
 - [IDEA threading model | developerlife.com](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model)

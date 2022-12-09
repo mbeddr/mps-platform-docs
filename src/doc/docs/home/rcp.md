@@ -1,3 +1,9 @@
+---
+tags:
+- standalone
+- customization
+---
+
 RCP stands for Rich Client Platform. The topic is explained in [Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html).
 
 !!! warning "A plugin is incompatible with the current RCP version."

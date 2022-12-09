@@ -1,5 +1,7 @@
 ---
 title: Scripts aspect
+tags:
+- aspect
 ---
 
 # Scripts aspect

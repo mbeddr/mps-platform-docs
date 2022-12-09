@@ -1,3 +1,9 @@
+---
+tags:
+- baselanguage
+- baselanguage-extension
+---
+
 This article explains the language ^^jetbrains.mps.baselanguage.doubleDispatch^^. The example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
 
 Most OOP programming languages support single dispatch, more commonly known as virtual methods. For example, consider the following code:

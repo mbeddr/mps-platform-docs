@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- intellij
+---
+
 # IntelliJ SDK
 
 - [Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)

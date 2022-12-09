@@ -1,3 +1,9 @@
+---
+tags:
+- reference
+- infrastructure
+---
+
 There isn't only one correct *.gitignore* file for MPS. It's recommended to ignore generated files but there can also be cases
 where you can't execute your generated files, so you have to add them to version control and check the difference manually.
 This isn't a complete list 

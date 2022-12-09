@@ -1,3 +1,10 @@
+---
+tags:
+- baselanguage
+- best_practise
+- ui
+---
+
 This document lists some recommendations for code written it MPS.
 
 ## Implementation

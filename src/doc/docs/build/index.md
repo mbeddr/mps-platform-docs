@@ -1,3 +1,9 @@
+---
+tags:
+- mps_language
+- build
+---
+
 # Build language
 
 !!! question "How can you override the build directory name *build* to something different?"

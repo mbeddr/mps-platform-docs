@@ -1,3 +1,9 @@
+---
+tags:
+- java
+- best_practise
+---
+
 These are some points taken from the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) that make sense in MPS.
 
 - [Fall-through: commented](https://google.github.io/styleguide/javaguide.html#s4.8.4-switch): write a comment why a fall-through is necessary in a switch statement.

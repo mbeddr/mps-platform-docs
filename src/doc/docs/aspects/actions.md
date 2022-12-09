@@ -1,5 +1,7 @@
 ---
 title: Action aspect
+tags:
+- aspect
 ---
 
 # Action aspect

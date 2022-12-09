@@ -1,3 +1,9 @@
+---
+tags:
+- reference
+- troubleshooting
+---
+
 ## Reporting bugs
 
 This page should help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an

@@ -1,5 +1,7 @@
 ---
 title: Editor aspect
+tags:
+- aspect
 ---
 
 # Editor aspect

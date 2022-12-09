@@ -1,5 +1,7 @@
 ---
 title: Test aspect
+tags:
+- aspect
 ---
 
 # Test aspect

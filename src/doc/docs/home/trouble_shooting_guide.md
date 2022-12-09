@@ -1,3 +1,9 @@
+---
+tags:
+- troubleshooting
+- settings
+---
+
 # Troubleshooting guide
 
 This is a non-exhaustive list of common problems with MPS and platform projects. It is assumed that Gradle is used for building the project.

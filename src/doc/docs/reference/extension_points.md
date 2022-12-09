@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 # Extension Points
 
 For a list of IntelliJ extensions, have a look at [Extension Point and Listener List | IntelliJ SDK](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html#intellij-platform-listeners).

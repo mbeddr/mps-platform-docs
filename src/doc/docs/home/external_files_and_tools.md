@@ -1,3 +1,9 @@
+---
+tags:
+- files
+- tools
+---
+
 ## Import/export
 
 !!! question "How do you write an importer?"

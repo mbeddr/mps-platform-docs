@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- intellij
+---
+
 The different plugins of MPS are declared using a [plugin configuration file](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html). The functionality is split into [plugin components](https://plugins.jetbrains.com/docs/intellij/plugin-components.html). `application-components` are activated when MPS starts, `project-components`
 are activated when a project is opened.
 

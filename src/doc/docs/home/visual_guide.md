@@ -1,3 +1,8 @@
+---
+tags:
+- ui
+---
+
 Hover over a green rectangle to show a short description.
 
 When you click the shape, you are redirected to the corresponding documentation when it's available.

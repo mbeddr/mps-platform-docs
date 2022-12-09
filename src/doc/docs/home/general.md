@@ -1,3 +1,10 @@
+---
+tags:
+- general
+- beginner
+- troubleshooting
+---
+
 !!! question "Who is MPS for?"
 
     Specific Languages blog: [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/)

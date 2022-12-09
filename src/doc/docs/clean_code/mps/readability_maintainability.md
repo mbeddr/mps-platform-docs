@@ -1,3 +1,9 @@
+---
+tags:
+- baselanguage
+- best_practise
+---
+
 - Use enhanced for loops instead of for loops with counters:
   `#!java for(type variable:iterable)` and `#!java foreach variable in iterable`
 - Mark classes/concepts etc. as deprecated when you shouldn't use them.

@@ -1,3 +1,11 @@
+---
+tags:
+- infrastructure
+- mps_extensions
+- mbeddr
+- iets3
+---
+
 # Platform build scripts
 
 This page describes the {{ mps_extensions() }} and {{ iets3() }} build scripts. They might look different in the future but this guide should still be helpful. The build scripts from {{ mbeddr() }} work

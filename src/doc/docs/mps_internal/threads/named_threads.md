@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- reference
+---
+
 # Reference: Named threads
 
 These lists contains named threads from Java, the IntelliJ platform and MPS.

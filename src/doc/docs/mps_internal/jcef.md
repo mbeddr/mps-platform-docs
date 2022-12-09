@@ -1,3 +1,11 @@
+---
+tags:
+- internals
+- intellij
+- java
+---
+
+
 Start with the page [JCEF - Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html) of the IntelliJ platform plugin SDK.
 
 It should work with MPS 2021.1.4 and higher. Although it was introduced in Intellij IDEA 2020.1 it might not work in older MPS versions

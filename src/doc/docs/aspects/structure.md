@@ -1,5 +1,7 @@
 ---
 title: Structure aspect
+tags:
+- aspect
 ---
 
 # Structure aspect

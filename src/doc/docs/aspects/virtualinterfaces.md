@@ -1,5 +1,7 @@
 ---
 title: Virtual Interfaces aspect
+tags:
+- aspect
 ---
 
 # Virtual Interfaces aspect

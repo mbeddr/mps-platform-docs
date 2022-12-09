@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- ui
+---
+
 ## Terminology
 
 - *edited node*: the (root) node that the editor component was created for

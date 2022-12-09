@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 This page lists all new pages since August 2022.
 
 ## November 2022

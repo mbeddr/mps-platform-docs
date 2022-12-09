@@ -1,3 +1,8 @@
+---
+tags:
+- openapi
+---
+
 !!! question "How do you get an icon for a concept?"
 
     ```java

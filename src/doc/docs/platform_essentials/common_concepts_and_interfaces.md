@@ -1,3 +1,10 @@
+---
+tags:
+- mps_extensions
+- mbeddr
+- iets3
+---
+
 This list explains some common abstract concepts and interfaces that you can use to extend or use the funtionality of the platforms.
 
 ## Mbeddr

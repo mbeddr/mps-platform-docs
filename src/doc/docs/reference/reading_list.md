@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 # Reading list
 
 This page includes some more resources for working with MPS. This article is a bit dated but maybe still useful.

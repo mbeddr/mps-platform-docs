@@ -1,3 +1,12 @@
+---
+tags:
+- dependencies
+- classpath
+- plugins
+- generator
+- solution
+---
+
 # Dependencies and classpath in MPS
 
 This page describes the meaning and effect of different types of dependencies within MPS, including the effects on the applicable Java classpath. It describes both the expected state and all bugs deviating from the expectations.

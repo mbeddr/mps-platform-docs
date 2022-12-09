@@ -1,5 +1,7 @@
 ---
 title: Behavior aspect
+tags:
+- aspect
 ---
 
 # Behavior aspect

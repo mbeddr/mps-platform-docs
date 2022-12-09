@@ -1,3 +1,9 @@
+---
+tags:
+- best_practise
+- ui
+---
+
 # UI Patterns and Anti patterns
 
 Go through your editors and check the following list.

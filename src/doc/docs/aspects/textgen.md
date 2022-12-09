@@ -1,5 +1,7 @@
 ---
 title: TextGen aspect
+tags:
+- aspect
 ---
 
 # TextGen aspect

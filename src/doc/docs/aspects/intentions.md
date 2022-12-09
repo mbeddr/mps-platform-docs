@@ -1,5 +1,7 @@
 ---
 title: Intentions aspect
+tags:
+- aspect
 ---
 
 # Intentions aspect

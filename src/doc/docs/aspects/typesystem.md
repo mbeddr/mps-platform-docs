@@ -1,5 +1,7 @@
 ---
 title: Typsystem aspect
+tags:
+- aspect
 ---
 
 # Typstem aspect

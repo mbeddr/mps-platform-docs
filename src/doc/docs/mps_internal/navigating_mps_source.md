@@ -1,3 +1,9 @@
+---
+tags:
+- internals
+- sources
+---
+
 This page describes the folder structure of the MPS sources that can be checked out with Git from https://github.com/JetBrains/MPS.
 More information can be found in the readme of the repository.
 

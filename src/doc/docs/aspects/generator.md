@@ -1,5 +1,7 @@
 ---
 title: Generator aspect
+tags:
+- aspect
 ---
 
 # Generator aspect

@@ -1,3 +1,8 @@
+---
+tags:
+- reference
+---
+
 Best practices:
 
 - [Best practices for maintainers | opensource.guide](https://opensource.guide/best-practices/)

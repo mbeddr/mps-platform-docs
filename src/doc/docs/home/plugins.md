@@ -1,3 +1,8 @@
+---
+tags:
+- plugins
+---
+
 !!! question "Where can you use a created language?[^1]"
 
     They can be used in MPS itself, or in a custom IDE based on MPS (a so called RCP).
@@ -73,7 +78,7 @@
         - Select first node: *Set as First Node in Diff*.
         - Select second node: *Show Diff with First Node*.
 
-!!! error "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
+!!! failure "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
     
     Make sure that the solution kind is not set to none.
  [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)

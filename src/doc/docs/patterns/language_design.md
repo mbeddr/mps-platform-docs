@@ -1,3 +1,8 @@
+---
+tags:
+- best_practise
+---
+
 # Language design
 
 This page contains tips and articles for patterns regarding the design of MPS languages.

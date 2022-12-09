@@ -1,3 +1,9 @@
+---
+tags:
+- infrastructure
+- mbeddr
+---
+
 When trying to build [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, there are some stumblings blocks that you have to overcome. This article isn't a full build instruction but rather a rough guideline. It should make mbeddr build so far than you can make changes to the non C parts of the project. You probably need to install all tools from the page [Required Tools and Versions | mbeddr.com](http://mbeddr.com/download.html#RequiredToolsAndVersions), especially the C related tools, if you want to get everything build. Help for extending this guide is always appreciated.
 
 1. `git clone git@github.com:mbeddr/mbeddr.core.git`
