@@ -7,8 +7,9 @@ tags:
 # Troubleshooting guide
 
 This is a non-exhaustive list of common problems with MPS and platform projects. It is assumed that Gradle is used for building the project.
+For general MPS problems, read [Finding your way out | MPS documentation](https://www.jetbrains.com/help/mps/finding-your-way-out.html) first.
 
-## MPS
+## MPS and platforms
 
 !!! warning "The IDE is sluggish and doesn't work the way it should."
 
@@ -23,6 +24,11 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
     3. *File* --> *Invalidate Caches*, then restart.
     4. *File* --> *Invalidate Caches*, shutdown MPS; in the repository in question: run `git clean -fxd -e build.properties -e gradle.properties`, rebuild with Gradle (`./gradlew`), restart MPS.
 
+  Try [invalidating the cache](https://www.jetbrains.com/help/mps/invalidate-caches.html) and check what other non MPS
+  plugins you have installed. There are IntelliJ plugins that can be found on the marketplace that can interfere with
+  MPS plugins e.g. make the indexing break or through errors because they expect a text editor and not the projectional
+  editor from MPS. Firewalls and [proxies](https://www.jetbrains.com/help/mps/settings-http-proxy.html) could also affect MPS negatively.
+
 !!! failure "MPS cannot find languages / solutions."
 
     > For instance: "language X is not deployed" errors.
@@ -30,6 +36,19 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
     1. *File* --> *Invalidate Caches*, shutdown MPS.
     2. Run `./gradlew setup --refresh-dependencies`.
     3. Start MPS again.
+
+  There could also some other reasons:
+
+  - A wrong version of the platform is used e.g. MPS-Extensions 2021.1 with MPS 2021.2. The major and minor version have
+  to be the same one. Bug fix versions (e.g. 2021.1.4) should be compatible with the major/minor version of the platform.
+  In rare cases there can be an incompatibility because a bugfix/feature was backported from a newer MPS version and the change
+  is a breaking change.
+  - Make sure that MPS is started with the correct Java version (execute the *Choose Boot Runtime for the IDE* action) and check
+    that the bundled JBR or an external JBR/JRE is used. There are other runtimes that could be selected by accident (e.g. a [GraalVM](https://www.graalvm.org/) runtime)
+  - If you want to use [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html) it must be a JBR runtime which [includes
+    JCEF](https://github.com/JetBrains/JetBrainsRuntime/releases).
+  - An MPS plugin was disabled (e.g. Java Debugger for MPS) that a language depends on.
+  - For mbeddr, there are [three plugins that need to be installed](http://mbeddr.com/mps-platform-docs/mbeddr/?h=actionsfilter#:~:text=i%20am%20using%20some%20mbeddr%20languages%20in%20my%20project%20but%20some%20of%20them%20aren%E2%80%99t%20deployed.), otherwise some languages can be loaded
  
 !!! warning "The IDE doesn't let you enter some text / an intention isn't visible that should be there."
 
@@ -54,6 +73,29 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
     1. Does the MPS Model-Checker report problems? :octicons-check-circle-16: --> Fix identified problems.
     2. Does the build log report intelligible problems? :octicons-check-circle-16: --> Fix identified problems.
     3. Does it build in Gradle? :octicons-x-circle-16: --> See: [Gradle-Build fails](#gradle).
+
+!!! failure "MPS can't be started at all."
+
+  There could be multiple reasons:
+
+  - One reason could be a wrong Java version. That could be a different Java runtime like the GraalVM or an incorrect Java version.
+  MPS 2022.2 and newer need JDK 17, older ones need JDK 11 and very old versions of MPS need JDK 8.
+  - Through external changes, files of an MPS project could get deleted or corrupted by accident (such as deleting *model* files). There should be an
+  exception that show give a hint why the startup fails. The [log file](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory) should also contain an error message.
+
+!!! failure "Basic MPS functionality stops working (e.g. typing doesn't work, the editor has in incorrect layout, the window turns blank)."
+
+  If you are not using one of the platforms, you probably should report the issue to the [MPS issue tracker](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/). Most of the bugs are caused by languages or plugins in {{ mps_extensions() }}/{{ mbeddr_platform() }}.
+
+  For editor related issue first try pressing F5 and check if the relayout of the editor fixes the editor. If it does, report an issue in {{ mps_extensions() }}.
+  The most likely culprit is the [cellayout](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) language.
+  If another basic editor functionality like typing doesn't work anymore, the same language or another language in the same repository can cause such issues.
+  For all other issues, check if a fatal error was thrown in the lower right corner.
+
+  Visit the [issue tracker reference](issue_trackers.md) page to find the right issue tracker
+  when you can't identify the repository based on the package name in the error message. Please don't just report the issue to the
+  [JetBrains MPS issue tracker](https://youtrack.jetbrains.com/issues/MPS) because the issue will likely be marked as invalid and
+  doesn't land in the right issue tracker.
 
 ## Gradle
 
