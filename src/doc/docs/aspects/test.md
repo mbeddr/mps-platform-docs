@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/testing-languages.html)
+
 ## General
 
 !!! question "Can you add an annotation to skip tests the way it normally works with JUnit?"

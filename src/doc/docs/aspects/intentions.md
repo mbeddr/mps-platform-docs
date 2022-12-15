@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/mps-intentions.html)
+
 !!! question "How can you go to the declaration of an intention when you open the intention menu?"
     
     Select the intention and click the arrow/press right arrow key --> *Go to intention declaration*.

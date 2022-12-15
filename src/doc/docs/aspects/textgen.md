@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/textgen.html)
+
 !!! question "How do you get the TextGen for a node?"
     
     Use the class{{ mps_url("@mps.TextGeneratorEngine") }}.

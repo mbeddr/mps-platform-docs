@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/mps-generator.html)
+
 ## General
 
 !!! question "Are there any best practices for generators?"

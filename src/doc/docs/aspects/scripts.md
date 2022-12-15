@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/scripts.html)
+
 !!! question "Are enhancement scripts executed as part of the migration process?"
 
     No, they are not.

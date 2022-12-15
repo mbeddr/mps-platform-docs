@@ -6,6 +6,8 @@ tags:
 
 # FindUsages aspect
 
+- [official documentation](https://www.jetbrains.com/help/mps/find-usages.html#specificstatements)
+
 Custom finders for discovering related nodes can be implemented in this aspect.
 
 !!! warning "I click *Find usages* in the context menu of a node, and it doesn't find anything."

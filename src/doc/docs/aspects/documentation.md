@@ -4,12 +4,14 @@ tags:
 - aspect
 ---
 
-# Generator aspect
+# Documentation aspect
+
+- [documentation](http://mbeddr.com/files/documentationdocumentation.pdf)
 
 This aspect is contributed by the language ^^com.mbeddr.doc^^ in {{ mbeddr() }}. It allows to define a documentation node which can be exported to xhtml, latex
 and markdown. New targets can be implemented easily. When you invoke the intention *Add Reference to
 Documented Concept* while defining a new section as part of a chapter, the documention for this concept will be shown
-in the *Documentation* tool at the bottom part of the screen. The documentation for the language is provided as a PDF: [The mbeddr Documentation Language](http://mbeddr.com/files/documentationdocumentation.pdf)
+in the *Documentation* tool at the bottom part of the screen.
 
 !!! question "How do you export the documentation?"
 

@@ -8,6 +8,9 @@ tags:
 
 The editor aspect defines the projectional editor of a concept.
 
+- [official documentation](https://www.jetbrains.com/help/mps/editor.html)
+- [old cheatsheet](http://dsl-course.org/jetbrains-mps-editor-aspect/)
+
 ## General
 
 !!! question "What happens when you press ++f5++ in the editor?"

@@ -8,6 +8,8 @@ tags:
 
 The constraints aspect defines constraints for the concepts of the language.
 
+- [official documentation](https://www.jetbrains.com/help/mps/constraints.html)
+
 ## General
 
 !!! question "How do you hide inapplicable operands in dot expressions?"

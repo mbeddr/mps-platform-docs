@@ -8,6 +8,9 @@ tags:
 
 The structure aspect contains all the concept and interface declarations of a language.
 
+- [official documentation](https://www.jetbrains.com/help/mps/structure.html)
+- [old cheatsheet](http://dsl-course.org/jetbrains-mps-structure-aspect/)
+
 ## Concepts
 
 !!! question "How can you create an MPS concept declaration programmatically?"

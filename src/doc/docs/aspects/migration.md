@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/migrations.html)
+
 ## General
 
 !!! question "What are the best practises?[^1]"

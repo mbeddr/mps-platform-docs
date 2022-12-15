@@ -6,6 +6,8 @@ tags:
 
 # VCS aspect
 
+- [official documentation](https://www.jetbrains.com/help/mps/mergehints.html)
+
 > The VCS merge aspect language aspect defines strategies to automatically resolve merge conflicts for nodes, their children, references and properties.
 >
 > — <cite>MPS documentation</cite>

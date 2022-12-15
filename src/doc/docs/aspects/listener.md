@@ -6,6 +6,8 @@ tags:
 
 # Listener aspect
 
+- [documentation](https://jetbrains.github.io/MPS-extensions/extensions/utils/model-listener/)
+
 This aspects allows to create listeners that can react to changes in the model. It can react to different events such as
 adding and removing children or value changes of properties.
 

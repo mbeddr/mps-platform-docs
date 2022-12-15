@@ -10,6 +10,8 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/mps-refactoring.html)
+
 !!! question "Is this aspect widely used?"
 
     No, even in MPS languages there are just a few use cases.

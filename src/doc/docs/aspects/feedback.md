@@ -6,6 +6,8 @@ tags:
 
 # Feedback aspect
 
+- [official documentation](https://www.jetbrains.com/help/mps/feedback.html)
+
 The feedback aspect defines custom messages to show to the user when an error or a warning is detected in the model.
 
 !!! warning "Can I override error messages?"

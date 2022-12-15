@@ -10,6 +10,9 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+- [official documentation](https://www.jetbrains.com/help/mps/typesystem.html)
+- [old cheatsheet](http://dsl-course.org/jetbrains-mps-typesystem-aspect/)
+
 !!! warning "Type system rules aren't executing."
 
     Turn off the [power save mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode). Also make sure that the languages that contains the rules is used. Make sure that under *Tool* -->
