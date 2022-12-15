@@ -32,8 +32,6 @@ Here is some more information for exceptions that often occur in MPS:
 
     The referenced model for the generation plan in the properties doesn't contain a generation plan.
 
-!!! warning ""
-
 !!! warning "Cycle in extended language hierarchy."
 
     The languages extends each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
