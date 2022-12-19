@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#generator-aspect">
+<a class="md-skip" href="#documentation-aspect">
           Skip to content
         </a>
 </div>
@@ -430,13 +430,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -904,7 +909,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/aspects/documentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="generator-aspect">Generator aspect<a class="headerlink" href="#generator-aspect" title="Permanent link">¶</a></h1>
+<h1 id="documentation-aspect">Documentation aspect<a class="headerlink" href="#documentation-aspect" title="Permanent link">¶</a></h1>
+<ul>
+<li><a href="http://mbeddr.com/files/documentationdocumentation.pdf">documentation</a></li>
+</ul>
 <p>This aspect is contributed by the language <ins>com.mbeddr.<abbr title="documentation">doc</abbr></ins> in <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="/>
@@ -912,7 +920,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>. It allows to define a documentation node which can be exported to xhtml, latex
 and markdown. New targets can be implemented easily. When you invoke the intention <em>Add Reference to
 Documented Concept</em> while defining a new section as part of a chapter, the documention for this concept will be shown
-in the <em>Documentation</em> tool at the bottom part of the screen. The documentation for the language is provided as a PDF: <a href="http://mbeddr.com/files/documentationdocumentation.pdf">The mbeddr Documentation Language</a></p>
+in the <em>Documentation</em> tool at the bottom part of the screen.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you export the documentation?</p>
 <p>Click <em>make</em> or <em>rebuild</em> in the menu of the model that contains the documentation. A new folder <em>doc_gen</em> will get generated.</p>
@@ -955,7 +963,7 @@ in the <em>Documentation</em> tool at the bottom part of the screen. The documen
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

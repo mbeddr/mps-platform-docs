@@ -430,13 +430,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -909,6 +914,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>A type system is part of a language definition assigning types to the nodes in the models written using the language. The type system language is also used to check certain constraints on nodes and their types.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/typesystem.html">official documentation</a></li>
+<li><a href="http://dsl-course.org/jetbrains-mps-typesystem-aspect/">old cheatsheet</a></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Type system rules aren’t executing.</p>
 <p>Turn off the <a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode">power save mode</a>. Also make sure that the languages that contains the rules is used. Make sure that under <em>Tool</em> →
@@ -927,7 +936,7 @@ about this project. The new <abbr title="Meta Programming System">MPS</abbr> imp
 </div>
 <div class="admonition question">
 <p class="admonition-title">Type system vs constraints?</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/typesystem-vs-constraints/">Type system vs constraints</a></p>
+<p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/typesystem-vs-constraints/">Type system vs constraints</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Subtyping vs inheritance?</p>
@@ -935,7 +944,7 @@ about this project. The new <abbr title="Meta Programming System">MPS</abbr> imp
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you speed up model checks?</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/">Speeding up model checks with Scope Cache</a></p>
+<p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/">Speeding up model checks with Scope Cache</a></p>
 </div>
 <details class="question">
 <summary>How do you build a language extension for checking rules?</summary>
@@ -1023,7 +1032,7 @@ The concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">==</span><span class="p">:</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Given that you really need the operation type in the end. You most probably need to change the implementation of the rules contributing to the <code>operation type</code> to only use “one side”. If the type of the expression is simply the type of the variable <code>x</code> you can omit it.</p>
+<p>Given that you need the operation type in the end. You most probably need to change the implementation of the rules contributing to the <code>operation type</code> to only use “one side”. If the type of the expression is simply the type of the variable <code>x</code> you can omit it.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
 </details>
 <div class="admonition question">
@@ -1115,7 +1124,7 @@ about type conversion and to decide whether a method is overwritten or overloade
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

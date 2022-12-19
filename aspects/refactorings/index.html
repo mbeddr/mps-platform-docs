@@ -430,13 +430,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -909,6 +914,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Simple refactorings can be written using the <ins>jetbrains.mps.<abbr title="language">lang</abbr>.refactoring</ins> language.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">official documentation</a></li>
+</ul>
 <div class="admonition question">
 <p class="admonition-title">Is this aspect widely used?</p>
 <p>No, even in <abbr title="Meta Programming System">MPS</abbr> languages there are just a few use cases.</p>
@@ -917,14 +925,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p class="admonition-title">Can you change the concept of a node while keeping all properties, references, and children?</p>
 <p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept</a> with your node and new concept als parameters. 
 In this class there are also some othere useful methods such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink)</a>.</p>
-<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node</a></p>
+<p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node</a></p>
 </div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

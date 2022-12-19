@@ -430,13 +430,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -909,6 +914,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>The TextGen language aspect defines a model to text transformation.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/textgen.html">official documentation</a></li>
+</ul>
 <div class="admonition question">
 <p class="admonition-title">How do you get the TextGen for a node?</p>
 <p>Use the class<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine">TextGeneratorEngine</a>.
@@ -956,7 +964,7 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 <p>It’s not possible this way. So far the two ways I found to make this happen are:</p>
 <ol>
 <li>
-<p>Extend the original language (A.<abbr title="exception or executor">ex</abbr>) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do <abbr title="Model to Model">M2M</abbr> transformation to replace the extended concepts. You can do this in a very generic way by using a scrip the generator that searches for all node of concepts that are extended in A.<abbr title="exception or executor">ex</abbr> and replaces them by using the <code>RefactoringRuntime.replaceWithNewConcept</code> method.</p>
+<p>Extend the original language (A.<abbr title="exception or executor">ex</abbr>) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do <abbr title="Model to Model">M2M</abbr> transformation to replace the extended concepts. You can do this in a generic way by using a script the generator that searches for all node of concepts that are extended in A.<abbr title="exception or executor">ex</abbr> and replaces them by using the <code>RefactoringRuntime.replaceWithNewConcept</code> method.</p>
 </li>
 <li>
 <p>Create annotations that override the text gen of the concepts and attache them in a generator. Then <abbr title="Meta Programming System">MPS</abbr> will first call the text gen of the annotation and you can override it there. </p>
@@ -970,7 +978,7 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

@@ -429,13 +429,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -761,9 +766,79 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Language design
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Language design
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#patterns">
+    Patterns
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general">
+    General
+  </a>
+<nav aria-label="General" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introducing-dsls">
+    Introducing DSLs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspectives-on-dsl">
+    Perspectives on DSL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparisons">
+    Comparisons
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fachlichkeit">
+    Fachlichkeit
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming">
+    Programming
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safety">
+    Safety
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formal-methods">
+    Formal methods
+  </a>
+<nav aria-label="Formal methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z3-theorem-prover">
+    Z3 Theorem prover
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../user_experience/">
@@ -892,6 +967,70 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#patterns">
+    Patterns
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general">
+    General
+  </a>
+<nav aria-label="General" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introducing-dsls">
+    Introducing DSLs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspectives-on-dsl">
+    Perspectives on DSL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparisons">
+    Comparisons
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fachlichkeit">
+    Fachlichkeit
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming">
+    Programming
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safety">
+    Safety
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formal-methods">
+    Formal methods
+  </a>
+<nav aria-label="Formal methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z3-theorem-prover">
+    Z3 Theorem prover
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -900,26 +1039,99 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag" href="../../tags/#best_practise">best_practise</a>
+<a class="md-tag" href="../../tags/#dsl">dsl</a>
+<a class="md-tag" href="../../tags/#safety">safety</a>
+<a class="md-tag" href="../../tags/#z3">z3</a>
+<a class="md-tag" href="../../tags/#theory">theory</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/patterns/language_design.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="language-design">Language design<a class="headerlink" href="#language-design" title="Permanent link">¶</a></h1>
-<p>This page contains tips and articles for patterns regarding the design of <abbr title="Meta Programming System">MPS</abbr> languages.</p>
+<h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/articles/patterns/inline-definitions/">Inline Definitions</a> (Specific Languages Blog)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/">Escape hatch</a> (Specific Languages Blog)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/">Externalized names</a> (Specific Languages Blog)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/">Empty lines</a> (Specific Languages Blog)</li>
-<li><a href="https://www.f1re.io/externalized-names">Externalized names (and other common attributes)</a> (F1RE Blog)</li>
-<li><a href="https://www.f1re.io/multi-generators">Multiple generators for same language</a> (F1RE Blog)</li>
+<li><a href="https://specificlanguages.com/articles/patterns/inline-definitions/">Inline Definitions</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/">Escape hatch</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/">Externalized names</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/">Empty lines</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+<li><a href="https://www.f1re.io/externalized-names">Externalized names (and other common attributes)</a><small>(<em>F1RE’s blog</em>)</small></li>
+<li><a href="https://www.f1re.io/multi-generators">Multiple generators for same language</a>)<small>(<em>F1RE’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/high-level-structure-of-dsls-three-patterns-7375c8baa2d3">High-Level Structure of DSLs: Three Patterns</a>)<small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps-9e9c48d8e15b">The Philosophy behind Language Engineering with <abbr title="Meta Programming System">MPS</abbr></a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832">Thoughts on Declarativeness</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6">Why an Agile Process is not Enough</a><small>(<em>languageengineering.io’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99">What makes a good Business <abbr title="Domain Specific Language">DSL</abbr></a><small>(<em>languageengineering.io’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600">What goes into Language Design … Beyond the Domain</a><small>(<em>languageengineering.io’s blog</em>)</small></li>
+<li><a href="https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513">Categorising the Complexities in Programming</a><small>(<em>languageengineering.io’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7">Fusing Modeling and Programming into Language-Oriented Programming</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/">Context Boundaries in Language Engineering Projects</a><small>(<em>log verbose’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a">Why documents shouldn’t be the basis of a domain analysis</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4">When is something a (domain-specific) language?</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h3 id="introducing-dsls">Introducing DSLs<a class="headerlink" href="#introducing-dsls" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://markusvoelter.medium.com/why-it-is-so-hard-to-change-established-processes-in-organizations-ea78b4dfd090">Why it is so hard to change established processes in organizations</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/introducing-a-tool-successfully-30bcf59dd99">Introducing a tool successfully</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/the-minimum-infrastructure-for-running-languages-and-models-da922aa3b4b4">The minimum infrastructure for running languages and models</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/why-i-emphasize-dsls-for-domain-experts-ddd38860570a">Why I emphasize DSLs for Domain Experts</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/the-split-brain-of-dsls-9f396761ef1b">The split brain of DSLs</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/how-to-run-a-technical-workshop-b14e2fd0bda4">How to run a technical workshop</a></li>
+</ul>
+<h3 id="perspectives-on-dsl">Perspectives on <abbr title="Domain Specific Language">DSL</abbr><a class="headerlink" href="#perspectives-on-dsl" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-knowledge-management-7be0d6be3cdc">Knowledge Management</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-production-knowledge-eb314bf5864">Production Knowledge</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-software-architecture-fd20ee4bcc23">Software Architecture</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-software-quality-26515ce098a">Software Quality</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h3 id="comparisons">Comparisons<a class="headerlink" href="#comparisons" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9">DSLs vs. “Learning Languages”</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/">Low Code or Domain Specific Languages?</a><small>(<em>log verbose’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44">Tool Lock-in vs. Semantic Lock-in</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h3 id="fachlichkeit">Fachlichkeit<a class="headerlink" href="#fachlichkeit" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://languageengineering.io/an-argument-for-the-isolation-of-fachlichkeit-3a67a939d23b">An Argument for the Isolation of “Fachlichkeit”</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/the-hidden-complexities-in-fachlichkeit-23884a4d8d0a">The Hidden Complexities in Fachlichkeit</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/the-hidden-layer-between-the-fachlichkeit-and-the-ilities-7d850fde00bf">The hidden layer between the Fachlichkeit and the -ilities</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h2 id="programming">Programming<a class="headerlink" href="#programming" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86">Teaching the Basics of Programming to Domain Experts</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/thinking-vs-coding-9d11a77e7ac7">Thinking vs. Coding</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.github.io/ProgrammingBasics/">ProgrammingBasics - How to think like a programmer</a></li>
+</ul>
+<h2 id="safety">Safety<a class="headerlink" href="#safety" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://languageengineering.io/safety-and-security-from-a-language-engineering-perspective-24bb5fc92409">Safety and Security from a Language Engineering Perspective</a><small>(<em>languageengineering.io’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/testing-languages-generators-and-runtimes-in-a-safety-critical-system-2e8e8d34b62a">Testing Languages, Generators and Runtimes in a Safety-Critical System</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="http://voelter.de/data/pub/MPS-in-Safety-1.0.pdf">Using Language Workbenches and Domain-Specific Languages
+  for Safety-Critical Software Development</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h2 id="formal-methods">Formal methods<a class="headerlink" href="#formal-methods" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf">An Overview of Program Analysis using Formal Methods</a></li>
+<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48">Thoughts on Formal Verification and DSLs</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024">Thoughts on X-by-Construction</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
+</ul>
+<h3 id="z3-theorem-prover">Z3 Theorem prover<a class="headerlink" href="#z3-theorem-prover" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://theory.stanford.edu/~nikolaj/programmingz3.html">Programming Z3 (tutorial)</a></li>
+<li><a href="https://www.pm.inf.ethz.ch/education/courses/program-verification.html#:~:text=lec%C2%ADtures%20%26%20ex%C2%ADer%C2%ADcises">Program verification with Z3 (course slides)</a></li>
+<li><a href="https://github.com/sosy-lab/java-smt">JavaSMT</a></li>
+<li><a href="https://ericpony.github.io/z3py-tutorial/guide-examples.htm">Z3Py Guide</a></li>
+<li><a href="http://smtlib.cs.uiowa.edu/examples.shtml">SMT-Lib</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

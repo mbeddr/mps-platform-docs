@@ -427,13 +427,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
-        Double dispatch
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
       </a>
 </li>
 </ul>
@@ -906,7 +911,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h1>General</h1>
 <div class="admonition question">
 <p class="admonition-title">Who is <abbr title="Meta Programming System">MPS</abbr> for?</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/who-is-mps-for/">Who is <abbr title="Meta Programming System">MPS</abbr> for?</a></p>
+<p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/who-is-mps-for/">Who is <abbr title="Meta Programming System">MPS</abbr> for?</a></p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I <abbr title="abstract module">am</abbr> a <abbr title="Meta Programming System">MPS</abbr> beginner. Where do I start?</p>
@@ -947,8 +952,15 @@ Another reason for high memory usage can be many (poorly) implemented checking r
 The memory indicator at the same location can be used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><a class="glightbox" href="../../img/power_saving_mode.gif"><img alt="power saving mode" src="../../img/power_saving_mode.gif"/></a></span></a></span> can be enabled which disables background tasks such as the model checker (not recommended).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What’s the difference between a module and a model?</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/">Ambiguous terms: Modules and models</a></p>
+<p class="admonition-title">What is a module, model, node, concept…?</p>
+<ul>
+<li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/">Ambiguous terms: Modules and models</a></li>
+<li>log verbose’s blog: <a href="https://blog.logv.ws/2021/04/21/how-jetbrains-mps-identifies-things/">How <abbr title="Meta Programming System">MPS</abbr> Identifies Things</a></li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Can you explain the <abbr title="Meta Programming System">MPS</abbr> technology stack, project concepts, and OpenAPI relations?</p>
+<p>DSLFoundry blog: <a href="https://dslfoundry.com/mps-technology-stack-project-concepts-and-openapi-relations-explained-visually/"><abbr title="Meta Programming System">MPS</abbr> technology stack, project concepts, and OpenAPI relations explained visually</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What’s a <abbr title="Semantic Repository">SRepository</abbr> and how’s it structured?</p>
@@ -990,14 +1002,14 @@ Each root node is a root of a tree of nodes, So that overall, a repository is a 
 <div class="admonition question">
 <p class="admonition-title">How to you export data from <abbr title="Meta Programming System">MPS</abbr>?</p>
 <ul>
-<li>Specific Languages blog: <a href="https://specificlanguages.com/posts/simplest-export-from-mps/">The simplest way to export your data from <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li>Specific Languages blog: <a href="https://specificlanguages.com/posts/good-and-bad-ways-of-exporting-dsl-models/">Good and bad ways of exporting <abbr title="Domain Specific Language">DSL</abbr> models</a></li>
-<li>Specific Languages blog: <a href="https://specificlanguages.com/posts/translation-vs-export/">Translation vs export</a></li>
+<li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/simplest-export-from-mps/">The simplest way to export your data from <abbr title="Meta Programming System">MPS</abbr></a></li>
+<li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/good-and-bad-ways-of-exporting-dsl-models/">Good and bad ways of exporting <abbr title="Domain Specific Language">DSL</abbr> models</a></li>
+<li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/translation-vs-export/">Translation vs export</a></li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Why is a project read-only?</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/">Why is my project suddenly read-only?</a></p>
+<p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/">Why is my project suddenly read-only?</a></p>
 </div>
 <details class="question">
 <summary>How do you work with more than one project in <abbr title="Meta Programming System">MPS</abbr>?</summary>
@@ -1045,9 +1057,9 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
 <div class="admonition question">
 <p class="admonition-title">Are there any resources/communities about domain-specific languages and <abbr title="Meta Programming System">MPS</abbr>?</p>
 <ul>
-<li><a href="https://voelter.de/books.html"><abbr title="Domain Specific Language">DSL</abbr> &amp; <abbr title="Meta Programming System">MPS</abbr> books</a> from Markus Voelter</li>
-<li><a href="https://tomassetti.me/domain-specific-languages/">The complete guide to (external) Domain Specific Languages</a></li>
-<li><a href="https://tomassetti.me/resources-create-programming-languages/">68 Resources To Help You To Create Programming Languages</a></li>
+<li><a href="https://voelter.de/books.html"><abbr title="Domain Specific Language">DSL</abbr> &amp; <abbr title="Meta Programming System">MPS</abbr> books</a> by Markus Voelter</li>
+<li>Strumenta’s blog: <a href="https://tomassetti.me/domain-specific-languages/">The complete guide to (external) Domain Specific Languages</a></li>
+<li>Strumenta’s blog: <a href="https://tomassetti.me/resources-create-programming-languages/">68 Resources To Help You To Create Programming Languages</a></li>
 <li><a href="https://d.strumenta.community/t/new-link-for-virtual-meetups/1024">Strumenta Virtual Meetups</a></li>
 </ul>
 </div>
@@ -1056,7 +1068,7 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
