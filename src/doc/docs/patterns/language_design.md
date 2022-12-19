@@ -1,6 +1,10 @@
 ---
 tags:
 - best_practise
+- dsl
+- safety
+- z3
+- theory
 ---
 
 # Language design
@@ -22,24 +26,34 @@ tags:
 - [Why an Agile Process is not Enough](https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6){{ blog('langio') }}
 - [What makes a good Business DSL](https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99){{ blog('langio') }}
 - [What goes into Language Design … Beyond the Domain](https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600){{ blog('langio') }}
-- [Teaching the Basics of Programming to Domain Experts](https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86){{ blog('mv') }}
 - [Categorising the Complexities in Programming](https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513){{ blog('langio') }}
 - [Fusing Modeling and Programming into Language-Oriented Programming](https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7){{ blog('mv') }}
-- [DSLs vs. "Learning Languages"](https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9){{ blog('mv') }}
-- [Why I emphasize DSLs for Domain Experts](https://markusvoelter.medium.com/why-i-emphasize-dsls-for-domain-experts-ddd38860570a){{ blog('mv') }}
 - [Context Boundaries in Language Engineering Projects](https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/){{ blog('lv') }}
-- [Low Code or Domain Specific Languages?](https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/){{ blog('lv') }}
-- [Tool Lock-in vs. Semantic Lock-in](https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44){{ blog('mv') }}
-- [The split brain of DSLs](https://markusvoelter.medium.com/the-split-brain-of-dsls-9f396761ef1b){{ blog('mv') }}
 - [Why documents shouldn’t be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
+
+
+### Introducing DSLs
+
+- [Why it is so hard to change established processes in organizations](https://markusvoelter.medium.com/why-it-is-so-hard-to-change-established-processes-in-organizations-ea78b4dfd090){{ blog('mv') }}
+- [Introducing a tool successfully](https://markusvoelter.medium.com/introducing-a-tool-successfully-30bcf59dd99){{ blog('mv') }}
 - [The minimum infrastructure for running languages and models](https://markusvoelter.medium.com/the-minimum-infrastructure-for-running-languages-and-models-da922aa3b4b4){{ blog('mv') }}
+- [Why I emphasize DSLs for Domain Experts](https://markusvoelter.medium.com/why-i-emphasize-dsls-for-domain-experts-ddd38860570a){{ blog('mv') }}
+- [The split brain of DSLs](https://markusvoelter.medium.com/the-split-brain-of-dsls-9f396761ef1b){{ blog('mv') }}
+- [How to run a technical workshop](https://markusvoelter.medium.com/how-to-run-a-technical-workshop-b14e2fd0bda4)
 
 ### Perspectives on DSL
 
 - [Knowledge Management](https://markusvoelter.medium.com/perspectives-on-dsl-knowledge-management-7be0d6be3cdc){{ blog('mv') }}
 - [Production Knowledge](https://markusvoelter.medium.com/perspectives-on-dsls-production-knowledge-eb314bf5864){{ blog('mv') }}
 - [Software Architecture](https://markusvoelter.medium.com/perspectives-on-dsl-software-architecture-fd20ee4bcc23){{ blog('mv') }}
+- [Software Quality](https://markusvoelter.medium.com/perspectives-on-dsls-software-quality-26515ce098a){{ blog('mv') }}
+
+### Comparisons
+
+- [DSLs vs. "Learning Languages"](https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9){{ blog('mv') }}
+- [Low Code or Domain Specific Languages?](https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/){{ blog('lv') }}
+- [Tool Lock-in vs. Semantic Lock-in](https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44){{ blog('mv') }}
 
 ### Fachlichkeit
 
@@ -48,9 +62,9 @@ tags:
 - [The hidden layer between the Fachlichkeit and the -ilities](https://markusvoelter.medium.com/the-hidden-layer-between-the-fachlichkeit-and-the-ilities-7d850fde00bf){{ blog('mv') }}
 
 ## Programming
-
 - [Teaching the Basics of Programming to Domain Experts](https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86){{ blog('mv') }}
 - [Thinking vs. Coding](https://markusvoelter.medium.com/thinking-vs-coding-9d11a77e7ac7){{ blog('mv') }}
+- [ProgrammingBasics - How to think like a programmer](https://markusvoelter.github.io/ProgrammingBasics/)
 
 ## Safety
 
@@ -59,13 +73,17 @@ tags:
 - [Using Language Workbenches and Domain-Specific Languages
   for Safety-Critical Software Development](http://voelter.de/data/pub/MPS-in-Safety-1.0.pdf){{ blog('mv') }}
 
-## Quality
-
-- [Perspectives on DSLs: Software Quality](https://markusvoelter.medium.com/perspectives-on-dsls-software-quality-26515ce098a){{ blog('mv') }}
-
 ## Formal methods
 
 - [An Overview of Program Analysis using Formal	Methods](http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf)
 - [Thoughts on Formal Verification and DSLs](https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48){{ blog('mv') }}
 - [Thoughts on X-by-Construction](https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024){{ blog('mv') }}
+
+### Z3 Theorem prover
+
+- [Programming Z3 (tutorial)](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+- [Program verification with Z3 (course slides)](https://www.pm.inf.ethz.ch/education/courses/program-verification.html#:~:text=lec%C2%ADtures%20%26%20ex%C2%ADer%C2%ADcises)
+- [JavaSMT](https://github.com/sosy-lab/java-smt)
+- [Z3Py Guide](https://ericpony.github.io/z3py-tutorial/guide-examples.htm)
+- [SMT-Lib](http://smtlib.cs.uiowa.edu/examples.shtml)
 
