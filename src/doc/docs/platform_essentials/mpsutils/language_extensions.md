@@ -62,7 +62,7 @@ the parameter object (*parameterized submenu*).
 
 ![example:ccmenu](ccmenu_example.png)
 
-For completion styling and item priorities, use [completion styling](https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored) instead.
+For completion styling and item priorities, use [completion styling](https://blog.jetbrains.com/mps/2019/04/jetbrains-mps\-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored) instead
 
 ### Resources
 

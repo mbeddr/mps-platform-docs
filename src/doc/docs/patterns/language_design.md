@@ -15,14 +15,13 @@ tags:
 - [Multiple generators for same language](https://www.f1re.io/multi-generators)){{ blog('F1RE') }}
 - [High-Level Structure of DSLs: Three Patterns](https://languageengineering.io/high-level-structure-of-dsls-three-patterns-7375c8baa2d3)){{ blog('mv') }}
 
-## Language engineering
+## General
 
-- [The Philosophy behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps-9e9c48d8e15b){{ blog('mv') }}
+- [The Philosophy behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps\-9e9c48d8e15b){{ blog('mv') }}
 - [Thoughts on Declarativeness](https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832){{ blog('mv') }}
 - [Why an Agile Process is not Enough](https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6){{ blog('langio') }}
 - [What makes a good Business DSL](https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99){{ blog('langio') }}
 - [What goes into Language Design … Beyond the Domain](https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600){{ blog('langio') }}
-- [The Philosophy behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps-9e9c48d8e15b){{ blog('langio') }}
 - [Teaching the Basics of Programming to Domain Experts](https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86){{ blog('mv') }}
 - [Categorising the Complexities in Programming](https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513){{ blog('langio') }}
 - [Fusing Modeling and Programming into Language-Oriented Programming](https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7){{ blog('mv') }}
