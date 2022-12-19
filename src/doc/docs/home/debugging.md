@@ -7,7 +7,7 @@ tags:
 
 For more in-depth explanations, visit:
 
-- Specific Languages blog: [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
+- {{ blog('sl',false) }} [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
 - DSL Foundry: [Whitepaper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/)
 
 The following list shows some debugging tips:

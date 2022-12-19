@@ -8,11 +8,11 @@ tags:
 
 !!! question "How do you write an importer?"
 
-    - Specific Languages Blog: [Writing an importer: Introduction](https://specificlanguages.com/posts/2022-01/06-writing-an-importer-introduction/)
-    - Specific Languages Blog: [Writing an importer: Adding the action to a menu](https://specificlanguages.com/posts/2022-01/14-writing-an-importer-adding-action-to-menu/)
-    - Specific Languages Blog: [Writing an importer: Invoking from the editor](https://specificlanguages.com/posts/2022-01/18-writing-an-importer-invoking-from-editor/)
-    - Specific Languages Blog: [Writing an importer: Error handling considerations](https://specificlanguages.com/posts/2022-01/25-writing-an-importer-error-handling-considerations/)
-    - Specific Languages Blog: [Writing an importer: Updating existing nodes](https://specificlanguages.com/posts/2022-02/14-writing-an-importer-updating-existing-nodes/)
+    - {{ blog('sl',false) }}[Writing an importer: Introduction](https://specificlanguages.com/posts/2022-01/06-writing-an-importer-introduction/)
+    - {{ blog('sl',false) }}[Writing an importer: Adding the action to a menu](https://specificlanguages.com/posts/2022-01/14-writing-an-importer-adding-action-to-menu/)
+    - {{ blog('sl',false) }}[Writing an importer: Invoking from the editor](https://specificlanguages.com/posts/2022-01/18-writing-an-importer-invoking-from-editor/)
+    - {{ blog('sl',false) }}[Writing an importer: Error handling considerations](https://specificlanguages.com/posts/2022-01/25-writing-an-importer-error-handling-considerations/)
+    - {{ blog('sl',false) }}[Writing an importer: Updating existing nodes](https://specificlanguages.com/posts/2022-02/14-writing-an-importer-updating-existing-nodes/)
 
     Alternative solution: use [custom persistence](https://www.jetbrains.com/help/mps/custom-persistence-cookbook.html).
 
@@ -38,7 +38,7 @@ tags:
 !!! question "How can you use databases in MPS?"
 
     - MPS doesn't have any special support for databases or for frameworks such as Spring Boot (unlike IntelliJ IDEA) .
-    - Specific Languages blog: [MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/)
+    - {{ blog('sl',false) }}[MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/)
 
 !!! question "How can you create a standalone utility (not a complete IDE) for language generation with MPS?[^2]"
 

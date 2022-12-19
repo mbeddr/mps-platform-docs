@@ -19,4 +19,4 @@ tags:
 
 !!! question "How do you avoid merge conflicts?"
     
-    Specific Languages blog: [Avoiding merge conflicts](https://specificlanguages.com/posts/2022-02/01-avoiding-merge-conflicts/)
+    {{ blog('sl',false) }}[Avoiding merge conflicts](https://specificlanguages.com/posts/2022-02/01-avoiding-merge-conflicts/)

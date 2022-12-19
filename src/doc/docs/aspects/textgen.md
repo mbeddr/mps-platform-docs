@@ -46,7 +46,7 @@ tags:
 
     It's not possible this way. So far the two ways I found to make this happen are:
 
-    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this in a very generic way by using a scrip the generator that searches for all node of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
+    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this in a generic way by using a script the generator that searches for all node of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
 
     2. Create annotations that override the text gen of the concepts and attache them in a generator. Then MPS will first call the text gen of the annotation and you can override it there. 
 

@@ -37,11 +37,11 @@ tags:
 
 !!! question "How can you make intentions visible?"
     
-    Specific Languages blog: [Making intentions visible](https://specificlanguages.com/posts/2021-02/10-making-intentions-visible/)
+    {{ blog('sl',false) }}[Making intentions visible](https://specificlanguages.com/posts/2021-02/10-making-intentions-visible/)
 
 !!! question "How can you show a submenu in the intention menu?"
     
-    Specific Languages blog: [Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/)
+    {{ blog('sl',false) }}[Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/)
 
 !!! question "An Intention isn't visible, although it should be. What can you do?"
 

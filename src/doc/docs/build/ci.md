@@ -5,6 +5,8 @@ tags:
 
 # Continuous integration
 
+- [The Business-DSL DevOps Process](https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50){{ blog('mv') }}
+
 ??? question "How to attach debugger to a CI build on GitHub actions?"
 
     Note: GitHub actions can be run locally with [act](https://github.com/nektos/act).

@@ -23,7 +23,7 @@ They are essentially a beginner's guide to language development with MPS. Whenev
 
 The documentation page also contains videos and tutorials on a variety of specific MPS-related topics.
 
-Over the years we have built a lot of useful extensions and utilities to MPS. They are described on the {{ mbeddr_platform() }} page. Most of those are not really documented, but you can find examples for all (relevant and stable) utilities in mbeddr itself.
+Over the years we have built a lot of useful extensions and utilities to MPS. They are described on the {{ mbeddr_platform() }} page. Most of those are not documented, but you can find examples for all (relevant and stable) utilities in mbeddr itself.
 
 Finally, to understand the experiences we have made with MPS over the years, you may want to read this draft paper: [Lessons Learned from Developing mbeddr](http://voelter.de/data/pub/BuildingMbeddr-Experiences.pdf).
 

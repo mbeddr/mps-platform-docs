@@ -48,7 +48,7 @@ Features:
 - partial tables
 - grid queries
 
-Strumenta blog: [Tabular projections in Jetbrains MPS: let’s start building an accounting system](https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/)
+{{ blog('Strumenta',false) }}[Tabular projections in Jetbrains MPS: let’s start building an accounting system](https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/)
 
 ??? question "How do you get rid of the small little extra grid lines on the outside of the table rows? ([original question](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700))"
 
@@ -82,7 +82,7 @@ Strumenta blog: [Tabular projections in Jetbrains MPS: let’s start building an
 
 !!! question "How can you enter enumerations easier?"
     
-    Specific Languages blog: [Entering enumerations easier with grammar cells](https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/)
+    {{ blog('sl',false) }}[Entering enumerations easier with grammar cells](https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/)
 
 ## Querylist
 

@@ -51,7 +51,7 @@ tags:
 
 !!! question "How does the IDE collect generators to engage on a model?"
 
-    Specific Languages Blog: [How MPS collects generators to engage on a model](https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/)
+    {{ blog('sl',false) }}[How MPS collects generators to engage on a model](https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/)
 
 !!! question "genplan (in devkit) vs. generator priorities?"
 
@@ -262,7 +262,7 @@ tags:
 
 !!! question "How do I debug generators?"
     
-    Specific Languages Blog: [Debugging generators](https://specificlanguages.com/posts/debugging-generators/)
+    {{ blog('sl',false) }}[Debugging generators](https://specificlanguages.com/posts/debugging-generators/)
 
 !!! warning "The generated code has no debug symbols."
 

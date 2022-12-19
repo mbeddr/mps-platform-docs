@@ -26,7 +26,7 @@ tags:
 
 !!! question "Which kinds of plugins are there?"
 
-    Specific Languages Blog: [Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/)
+    {{ blog('sl',false) }}[Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/)
 
 !!! question "How do I disable notifications for fatal errors?"
 
@@ -36,8 +36,8 @@ tags:
 
     Have a look at [deployment options for MPS](https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options), [this list](https://mps.rocks/#other-projects) and [WebMPS](https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628) by JetBrains.
     
-    - Specific Languages Blog: [Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/)
-    - Specific Languages Blog: [MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/)
+    - {{ blog('sl',false) }}[Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/)
+    - {{ blog('sl',false) }}[MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/)
 
 !!! question "How do you translate every part of MPS?[^2]"
 

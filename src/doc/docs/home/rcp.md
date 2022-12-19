@@ -8,16 +8,16 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
 !!! warning "A plugin is incompatible with the current RCP version."
     
-    Specific Languages blog: [Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/)
+    {{ blog('sl',false) }}[Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/)
 
 !!! question "How can you customize the welcome screen in an RCP?"
 
-    - Specific Languages blog: [Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/)
+    - {{ blog('sl',false) }}[Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/)
     
     The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. A cheat sheet for the syntax can be found [here](https://devhints.io/xpath). 
     
-    - Specific Languages blog: [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/)
-    - Specific Languages blog: [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/)
+    - {{ blog('sl',false) }}[Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/)
+    - {{ blog('sl',false) }}[A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/)
 
 !!! question "How can you reduce the size of an RCP?"
 

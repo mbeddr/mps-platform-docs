@@ -40,16 +40,16 @@ tags:
     [IDE Features Trainer](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer), CodeSmellDetector and [Custom Language Support](https://plugins.jetbrains.com/docs/intellij/custom-language-support.html).
 
 !!! question "How can you have clickable icons in the left editor margin?"
-    Specific Languages Blog: [Clickable icons in the left editor margin](https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/)
+    {{ blog('sl',false) }}[Clickable icons in the left editor margin](https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/)
 
 !!! question "Are there alternatives to message boxes?"
-    Specific Languages Blog: [Use notification balloons instead of message boxes](https://specificlanguages.com/posts/notification-balloons-instead-of-message-boxes/)
+    {{ blog('sl',false) }}[Use notification balloons instead of message boxes](https://specificlanguages.com/posts/notification-balloons-instead-of-message-boxes/)
 
 !!! question "What IDEA UI elements are available?"
-    Specific Languages Blog: [Polished UI for free: IDEA UI components](https://specificlanguages.com/posts/2022-02/09-idea-ui-components/)
+    {{ blog('sl',false) }}[Polished UI for free: IDEA UI components](https://specificlanguages.com/posts/2022-02/09-idea-ui-components/)
 
 !!! question "How do you create menu items with checkboxes?"
-    Specific Languages Blog: [Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/)
+    {{ blog('sl',false) }}[Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/)
 
 !!! question "How can you retrieve all opened windows in [split screen mode](https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen)?"
 

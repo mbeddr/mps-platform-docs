@@ -15,7 +15,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "What happens when you press ++f5++ in the editor?"
 
-    Specific Languages Blog: [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/)
+    {{ blog('sl',false) }}[F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/)
 
 !!! question "How can you delete non-existing children, references, or properties from a node?"
 
@@ -98,8 +98,8 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How do you create clickable links?"
 
-    - Specific Languages Blog: [Creating clickable URL links in the editor](https://specificlanguages.com/posts/basic-editors/clickable-url-links/)
-    - Specific Languages Blog: [More clickable URL links](https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/)
+    - {{ blog('sl',false) }}[Creating clickable URL links in the editor](https://specificlanguages.com/posts/basic-editors/clickable-url-links/)
+    - {{ blog('sl',false) }}[More clickable URL links](https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/)
 
 !!! question "How can you include non-child relations in the editor?."
 
@@ -113,7 +113,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How do you use an empty text for empty cells?"
 
-    Specific Languages Blog: [Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/)
+    {{ blog('sl',false) }}[Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/)
 
 
 !!! hint "How can you set editor hints?"
@@ -218,9 +218,9 @@ The editor aspect defines the projectional editor of a concept.
     editorContext.openInspector()
     ```
 
-    - Specific Languages Blog: [Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/)
-    - Specific Languages Blog: [Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/)
-    - Specific Languages Blog: [Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/)
+    - {{ blog('sl',false) }}[Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/)
+    - {{ blog('sl',false) }}[Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/)
+    - {{ blog('sl',false) }}[Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/)
 
 !!! question "How can you open the editor for a node programmatically?"
 
@@ -293,7 +293,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How do you find all open editors?"
 
-    Specific Languages Blog: [Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/)
+    {{ blog('sl',false) }}[Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/)
 
 !!! question "How do you programmatically collapse editor cells?"
 

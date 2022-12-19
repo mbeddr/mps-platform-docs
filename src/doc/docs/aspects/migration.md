@@ -11,12 +11,9 @@ tags:
 > — <cite>MPS documentation</cite>
 
 - [official documentation](https://www.jetbrains.com/help/mps/migrations.html)
+- [MPS, Feature Branches and Language Migrations: DOs and DON’Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d)(languageengineering.io)
 
 ## General
-
-!!! question "What are the best practises?[^1]"
-
-    Have a look at [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810/comments/4403173175826).
 
 !!! question "I want to migrate an MPS project that's many years old. How do you do that?"
 

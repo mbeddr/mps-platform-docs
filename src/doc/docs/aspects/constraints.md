@@ -14,7 +14,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How do you hide inapplicable operands in dot expressions?"
 
-    Specific Languages blog: [Dot expressions: hiding inapplicable operands](https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/)
+    {{ blog('sl',false) }}[Dot expressions: hiding inapplicable operands](https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/)
 
 !!! question "Are there any useful helper classes?"
 
@@ -34,7 +34,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How can you emulate references?"
 
-    Specific Languages blog: [Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/)
+    {{ blog('sl',false) }}[Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/)
 
 ## Scopes
 

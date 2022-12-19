@@ -12,15 +12,15 @@ tags:
 
 !!! warning "Dependencies on a module not visible from the current *build* project."
 
-    Specific Languages blog: [Build script error: "Dependency on a module not visible from current build project"](https://specificlanguages.com/posts/build-script-errors/dependency-on-a-module-not-visible-from-current-build-project/)
+    {{ blog('sl',false) }}[Build script error: "Dependency on a module not visible from current build project"](https://specificlanguages.com/posts/build-script-errors/dependency-on-a-module-not-visible-from-current-build-project/)
 
 !!! warning "Build script error: unsatisfied dependency."
 
-    Specific Languages blog: [Build script error: "Unsatisfied dependency"](https://specificlanguages.com/posts/build-script-errors/unsatisfied-dependency/)
+    {{ blog('sl',false) }}[Build script error: "Unsatisfied dependency"](https://specificlanguages.com/posts/build-script-errors/unsatisfied-dependency/)
 
 !!! warning "Build script error: can't find used language in dependencies."
     
-    Specific Languages blog: [Build script error: "Cannot find used language in dependencies"](https://specificlanguages.com/posts/build-script-errors/cannot-find-used-language-in-dependencies/)
+    {{ blog('sl',false) }}[Build script error: "Cannot find used language in dependencies"](https://specificlanguages.com/posts/build-script-errors/cannot-find-used-language-in-dependencies/)
 
 !!! warning "Can't find extended language in dependencies."
     
@@ -42,11 +42,11 @@ tags:
 
 !!! question "Why is it possible to successfully build models with missing imports?"
 
-    Specific Languages blog: [Why can I successfully build models with missing imports?](https://specificlanguages.com/posts/2022-02/11-successfully-build-models-with-errors/)
+    {{ blog('sl',false) }}[Why can I successfully build models with missing imports?](https://specificlanguages.com/posts/2022-02/11-successfully-build-models-with-errors/)
 
 !!! warning "X errors before generation."
     
-    Specific Languages blog: [3358 errors before generation](https://specificlanguages.com/posts/2022-02/17-errors-before-generation/)
+    {{ blog('sl',false) }}[3358 errors before generation](https://specificlanguages.com/posts/2022-02/17-errors-before-generation/)
 
 !!! question "How do you clean the generated files in MPS?"
 

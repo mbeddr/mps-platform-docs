@@ -11,6 +11,7 @@ tags:
 > — <cite>MPS documentation</cite>
 
 - [official documentation](https://www.jetbrains.com/help/mps/testing-languages.html)
+- [Testing in MPS: What and Why](https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236)(languageengineering.io)
 
 ## General
 
@@ -21,11 +22,11 @@ tags:
 
 !!! question "What's the *TestInfo* node used for?"
 
-    Specific Languages Blog: [How to create a TestInfo node for your tests](https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/)
+    {{ blog('sl',false) }}[How to create a TestInfo node for your tests](https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/)
 
 !!! warning "How do node tests work?"
 
-    Specific Languages Blog: [How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/)
+    {{ blog('sl',false) }}[How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/)
 
 !!! question "Can you invoke an action by ID?"
 
@@ -41,7 +42,7 @@ tags:
 
     1. Don't. Consider mocking something out instead or ensuring that you are testing on a low-enough level.
 
-    2. here are two options, if you really need to to this:
+    2. Here are two options, if you need to to this:
 
     ```java
     // true if running tests from inside the MPS process or from command line

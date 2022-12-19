@@ -31,7 +31,7 @@ tags:
 
 !!! question "Type system vs constraints?"
     
-    Specific Languages blog: [Type system vs constraints](https://specificlanguages.com/posts/typesystem-vs-constraints/)
+    {{ blog('sl',false) }}[Type system vs constraints](https://specificlanguages.com/posts/typesystem-vs-constraints/)
 
 !!! question "Subtyping vs inheritance?"
     
@@ -39,7 +39,7 @@ tags:
 
 !!! question "How can you speed up model checks?"
     
-    Specific Languages blog: [Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/)
+    {{ blog('sl',false) }}[Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/)
 
 ??? question "How do you build a language extension for checking rules?"
 
@@ -118,7 +118,7 @@ tags:
     typeof(self) :==: operation type(self, x, null);
     ```
 
-    Given that you really need the operation type in the end. You most probably need to change the implementation of the rules contributing to the `operation type` to only use "one side". If the type of the expression is simply the type of the variable `x` you can omit it.
+    Given that you need the operation type in the end. You most probably need to change the implementation of the rules contributing to the `operation type` to only use "one side". If the type of the expression is simply the type of the variable `x` you can omit it.
 
     {{ answer_by('coolya') }}
 

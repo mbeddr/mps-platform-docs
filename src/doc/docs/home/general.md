@@ -7,7 +7,7 @@ tags:
 
 !!! question "Who is MPS for?"
 
-    Specific Languages blog: [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/)
+    {{ blog('sl',false) }}[Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/)
 
 !!! hint "I am a MPS beginner. Where do I start?"
 
@@ -47,9 +47,14 @@ tags:
     When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models indicator", "../../img/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
     The memory indicator at the same location can be used to free memory. As a last resort the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power saving mode", "../../img/power_saving_mode.gif", "power saving mode") }} can be enabled which disables background tasks such as the model checker (not recommended).
 
-!!! question "What's the difference between a module and a model?"
+!!! question "What is a module, model, node, concept...?"
 
-    Specific Languages blog: [Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/)
+    - {{ blog('sl',false) }}[Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/)
+    - {{ blog('lv',false) }}[How MPS Identifies Things](https://blog.logv.ws/2021/04/21/how-jetbrains-mps-identifies-things/)
+
+!!! question "Can you explain the MPS technology stack, project concepts, and OpenAPI relations?"
+
+    DSLFoundry blog: [MPS technology stack, project concepts, and OpenAPI relations explained visually](https://dslfoundry.com/mps-technology-stack-project-concepts-and-openapi-relations-explained-visually/)
 
 !!! question "What's a SRepository and how's it structured?"
 
@@ -106,13 +111,13 @@ tags:
 
 !!! question "How to you export data from MPS?"
 
-    - Specific Languages blog: [The simplest way to export your data from MPS](https://specificlanguages.com/posts/simplest-export-from-mps/)
-    - Specific Languages blog: [Good and bad ways of exporting DSL models](https://specificlanguages.com/posts/good-and-bad-ways-of-exporting-dsl-models/)
-    - Specific Languages blog: [Translation vs export](https://specificlanguages.com/posts/translation-vs-export/)
+    - {{ blog('sl',false) }}[The simplest way to export your data from MPS](https://specificlanguages.com/posts/simplest-export-from-mps/)
+    - {{ blog('sl',false) }}[Good and bad ways of exporting DSL models](https://specificlanguages.com/posts/good-and-bad-ways-of-exporting-dsl-models/)
+    - {{ blog('sl',false) }}[Translation vs export](https://specificlanguages.com/posts/translation-vs-export/)
 
 !!! question "Why is a project read-only?"
 
-    Specific Languages blog: [Why is my project suddenly read-only?](https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/)
+    {{ blog('sl',false) }}[Why is my project suddenly read-only?](https://specificlanguages.com/posts/2022-03/11-why-is-my-project-read-only/)
 
 ??? question "How do you work with more than one project in MPS?"
 
@@ -154,7 +159,7 @@ tags:
 
 !!! question "Are there any resources/communities about domain-specific languages and MPS?"
 
-    - [DSL & MPS books](https://voelter.de/books.html) from Markus Voelter
-    - [The complete guide to (external) Domain Specific Languages](https://tomassetti.me/domain-specific-languages/)
-    - [68 Resources To Help You To Create Programming Languages](https://tomassetti.me/resources-create-programming-languages/)
+    - [DSL & MPS books](https://voelter.de/books.html) by Markus Voelter
+    - {{ blog('Strumenta',false) }}[The complete guide to (external) Domain Specific Languages](https://tomassetti.me/domain-specific-languages/)
+    - {{ blog('Strumenta',false) }}[68 Resources To Help You To Create Programming Languages](https://tomassetti.me/resources-create-programming-languages/)
     - [Strumenta Virtual Meetups](https://d.strumenta.community/t/new-link-for-virtual-meetups/1024)

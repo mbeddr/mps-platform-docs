@@ -15,15 +15,15 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "How can you create an MPS concept declaration programmatically?"
 
-    Specific Languages blog: [Create a MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/)
+    {{ blog('sl',false) }}[Create a MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/)
 
 !!! warning "Concept XY wasn't found in the language."
 
-    Specific Languages blog: [Concept not found](https://specificlanguages.com/posts/2022-03/14-concept-not-found/)
+    {{ blog('sl',false) }}[Concept not found](https://specificlanguages.com/posts/2022-03/14-concept-not-found/)
 
 !!! question "How do you find examples of MPS concepts?"
 
-    Specific Languages blog: [Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/)
+    {{ blog('sl',false) }}[Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/)
 
 !!! question "When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?"
 

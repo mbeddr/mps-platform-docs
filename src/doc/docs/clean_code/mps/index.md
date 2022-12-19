@@ -9,7 +9,7 @@ This document lists some recommendations for code written it MPS.
 
 ## Implementation
 
-- Specific Languages blog: [Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/)
+- {{ blog('sl',false) }}[Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/)
 - Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that should have a name. The name property can be automatically used as the name for root nodes, references etc.
 - Avoid deep nested call chains, for example: `nodea.nodeb.nodec.property`. Consider providing a method to access a property or method for the deeper levels.
 - Use [isInstanceOf](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865) to check if a node is an instance of a concept.

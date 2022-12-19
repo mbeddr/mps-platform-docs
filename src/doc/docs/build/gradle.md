@@ -31,7 +31,7 @@ The used features of the Groovy languages are explained in [A Groovy Build Scrip
 
 !!! question "How can you fetch dependencies using Gradle?"
 
-    Specific Languages blog: [Fetching dependencies with Gradle](https://specificlanguages.com/posts/2022-01/31-fetching-dependencies-with-gradle/)
+    {{ blog('sl',false) }}[Fetching dependencies with Gradle](https://specificlanguages.com/posts/2022-01/31-fetching-dependencies-with-gradle/)
 
 ??? question "How to get dependencies from private GitHub repositories within a GitHub action?"
 

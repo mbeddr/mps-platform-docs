@@ -23,7 +23,7 @@ tags:
 
 !!! question "How to you get started using MPS' Open API?"
     
-    Specific Languages blog: [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/)
+    {{ blog('sl',false) }}[The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/)
 
 !!! question "How to you get MPS core components from code?"
 
@@ -83,24 +83,24 @@ tags:
     Implement the interface `StatusBarWidgetFactory` and register it through the StatusBarWidgetFactory.EP_NAME extension point.
 
 !!! question "How do you add model imports and used languages programmatically?"
-    Specific Languages Blog: [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/)
+    {{ blog('sl',false) }}[Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/)
 
 !!! question "How can you run some MPS code from the command line/CI?"
     
-    - Specific Languages blog: [Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/)
-    - Specific Languages blog: [Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/)
+    - {{ blog('sl',false) }}[Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/)
+    - {{ blog('sl',false) }}[Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/)
 
 !!! question "How can you render a node as a text?"
     
-    Specific Languages blog: [Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/)
+    {{ blog('sl',false) }}[Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/)
 
 !!! question "How can you associate more information with a node?"
      
-    Specific Languages blog: [Associating additional information with a node](https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/)
+    {{ blog('sl',false) }}[Associating additional information with a node](https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/)
 
 !!! question "How does shrinking of absolute paths work?"
     
-    Specific Languages blog: [Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/)
+    {{ blog('sl',false) }}[Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/)
 
 !!! question "How can you retrieve nodes of other models and modules?"
 
