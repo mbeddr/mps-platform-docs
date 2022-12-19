@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## Dezember 2022
+
+- [Languages: KernelF](kernelf.md)
+
 ## November 2022
 
 - [MPS internals: Editor development](editor_development.md)

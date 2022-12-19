@@ -182,8 +182,9 @@ nav:
   - Languages:
       - languages/index.md
       - Baselanguage and extensions: languages/baselanguage.md
-      - MPS-extensions: languages/mps_extensions.md
       - Double dispatch: languages/double_dispatch.md
+      - MPS-extensions: languages/mps_extensions.md
+      - KernelF: languages/kernelf.md
   - Mbeddr:
       - mbeddr/index.md
       - BigProject: mbeddr/big_project.md
