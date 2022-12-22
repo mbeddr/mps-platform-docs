@@ -11,7 +11,8 @@ tags:
 > — <cite>MPS documentation</cite>
 
 - [official documentation](https://www.jetbrains.com/help/mps/testing-languages.html)
-- [Testing in MPS: What and Why](https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236)(languageengineering.io)
+- [Testing in MPS: What and Why](https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236){{ blog('langio') }}
+- [The Language Testing Triangle](https://markusvoelter.medium.com/the-language-testing-triangle-917214826e93){{ blog('mv') }}
 
 ## General
 
