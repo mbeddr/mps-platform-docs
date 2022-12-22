@@ -696,16 +696,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tracing-in-kernelf">
-    Tracing in KernelF
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nix-handling-in-kernelf">
-    Nix handling in KernelF
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#calling-the-interpreter">
     Calling the interpreter
   </a>
@@ -960,16 +950,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tracing-in-kernelf">
-    Tracing in KernelF
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nix-handling-in-kernelf">
-    Nix handling in KernelF
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#calling-the-interpreter">
     Calling the interpreter
   </a>
@@ -1026,15 +1006,6 @@ The <em>$</em> expression returns the type of a concept. It can be used for type
 <p><a class="glightbox" href="../images/example_coverage.png"><img alt="example: code coverage" src="../images/example_coverage.png"/></a></p>
 <p>There’s support for coverage of single nodes but also branches. An example for branches would be, for example, the if and else block of an if statement. To register branches use the <em>register branches</em> statement. To visit a branch, use the <em>branch</em> statement. When visiting a node, the node, the node’s concept and the evaluator are automatically marked as covered. For the children of the node, there’s the <em>list coverage</em> statement which visits a list of nodes and there’s also the simple <em>cover</em> statement. The former is, for example, used for the elements of a map literal. The coverage information can be accessed and set through the <em>coverage</em> variable.</p>
 <p><a class="glightbox" href="../images/if_evaluator.png"><img alt="evaluator of if expression" src="../images/if_evaluator.png"/></a></p>
-<h2 id="tracing-in-kernelf">Tracing in KernelF<a class="headerlink" href="#tracing-in-kernelf" title="Permanent link">¶</a></h2>
-<p>To follow the executing of an interpreter, the execution trace is helpful. Right-click an interpreted node and click <em>Show Trace</em>. The Trace explorer now opens in the lower left corner. When you click onww of the lines in the trace explorer, the node in the editor gets replaced by the trace. The trace can be manipulated through the <em>trace expression</em>.</p>
-<p><a class="glightbox" href="../gifs/trace_tool.gif"><img alt="trace tool" src="../gifs/trace_tool.gif"/></a></p>
-<h2 id="nix-handling-in-kernelf">Nix handling in KernelF<a class="headerlink" href="#nix-handling-in-kernelf" title="Permanent link">¶</a></h2>
-<p>KernelF doesn’t allow returning null values
-(intermediate null values that are caught by the same or other evaluators are fine).
-Instead it supports so called nix handlers (there’s an <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483934994140">nixHandler extension point</a>). The default handler for KernelF is <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483935015244">DefaultNixHandler</a>.
-A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62d-4841-a421-11bb7269799d%28org.iets3.core.expr.base.shared.runtime%29%2F3889855429449824409">INixValue</a>) repesents an empty (nothing) value. There is, for example, a <a href="http://127.0.0.1:63320/node?ref=r%3Aac28053f-2041-47f6-806b-ecfaca05a64a%28org.iets3.core.expr.base.runtime.runtime%29%2F3889855429449859911">DefaultNix</a> class, for dates there’s <a href="http://127.0.0.1:63320/node?ref=r%3Aa9ac3767-b241-4aa4-a973-d04bb5ce184c%28org.iets3.core.expr.datetime.runtime%29%2F5551088970758352208">EmptyDateRangeValue</a>. The handler has a method <em>process</em> that can be used to handle values that might be nix. To use this feature. To use this feature call <code>new NixSupport(Object value node&lt;&gt; node {NixSupport =&gt; Object} calculator).run()</code> where the calculator returns the value:</p>
-<p><a class="glightbox" href="../images/nix_support_examples.png"><img alt="examples: nix support" src="../images/nix_support_examples.png"/></a></p>
 <h2 id="calling-the-interpreter">Calling the interpreter<a class="headerlink" href="#calling-the-interpreter" title="Permanent link">¶</a></h2>
 <p>For <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> use the class <code>IETS3ExprEvalHelper</code>. If you can’t use this class, use the following code:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1067,7 +1038,7 @@ A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 20, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
