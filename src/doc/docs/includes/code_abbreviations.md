@@ -111,6 +111,7 @@
 *[fr]: file reader
 *[frac]: fraction
 *[freq]: frequence
+*[fs]: file system
 *[fsm]: file status manager
 *[ft]: float type or file tracker
 *[fun]: function
@@ -317,6 +318,7 @@
 *[ver]: version
 *[vert]: vertical
 *[vf]: virtual file
+*[vfs]: virtual file system
 *[vp]: view port or virtual package
 *[wa]: write action
 *[wiz]: wizard

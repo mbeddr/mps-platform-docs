@@ -219,6 +219,7 @@ nav:
       - IntelliJ integration: mps_internal/intellij_integration.md 
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
       - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
+      - What happens on MPS startup : mps_internal/mps_startup.md
   - Platform essentials:
       - platform_essentials/index.md
       - Contributing: platform_essentials/contributing.md
