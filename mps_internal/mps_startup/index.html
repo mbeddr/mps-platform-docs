@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/reference/exceptions/" rel="canonical"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/mps_startup/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
-<title>Exceptions - MPS Platform Docs</title>
+<title>What happens on MPS startup - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mps">
+<a class="md-skip" href="#mps-platform">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Exceptions
+              What happens on MPS startup
             
           </span>
 </div>
@@ -145,7 +145,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         MPS internals
       </a>
 </li>
@@ -165,7 +165,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../reading_list/">
+<a class="md-tabs__link" href="../../reference/reading_list/">
         Reference
       </a>
 </li>
@@ -515,10 +515,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">MPS internals</a>
+<a href="../">MPS internals</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -530,14 +530,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+<a class="md-nav__link" href="../open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -549,22 +549,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+<a class="md-nav__link" href="../models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+<a class="md-nav__link" href="../recipes/">
         Recipes
       </a>
 </li>
@@ -572,14 +572,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+<a class="md-nav__link" href="../classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threading</a>
+<a href="../threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -591,12 +591,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+<a class="md-nav__link" href="../threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="../threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -604,54 +604,77 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+<a class="md-nav__link" href="../gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/editor_development/">
+<a class="md-nav__link" href="../editor_development/">
         Editor development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/jcef/">
+<a class="md-nav__link" href="../jcef/">
         Java Chromium Embedded Framework
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
+<a class="md-nav__link" href="../writing_mps_plugin_with_kotlin/">
         Writing an MPS plugin with Kotlin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+<a class="md-nav__link" href="../intellij_integration/">
         IntelliJ integration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+<a class="md-nav__link" href="../navigating_mps_source/">
         Navigating the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
+<a class="md-nav__link" href="../java_design_patterns_in_mps_sources/">
         Java design patterns in the MPS sources
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/mps_startup/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          What happens on MPS startup
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         What happens on MPS startup
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-platform">
+    MPS platform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mpscore">
+    MPSCore
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -792,8 +815,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_10">
           Reference
           <span class="md-nav__icon md-icon"></span>
@@ -805,80 +828,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reading_list/">
+<a class="md-nav__link" href="../../reference/reading_list/">
         Reading list
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tips_for_os_maintainers/">
+<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
         Tips for open source maintainers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../icons/">
+<a class="md-nav__link" href="../../reference/icons/">
         Icons
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../core_languages/">
+<a class="md-nav__link" href="../../reference/core_languages/">
         Core languages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../extension_points/">
+<a class="md-nav__link" href="../../reference/extension_points/">
         Extension points
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Exceptions
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/exceptions/">
         Exceptions
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#module-validation">
-    Module validation
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-of-exceptions">
-    Type of exceptions
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../actions/">
+<a class="md-nav__link" href="../../reference/actions/">
         Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../abbreviations/">
+<a class="md-nav__link" href="../../reference/abbreviations/">
         Abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code_abbreviations/">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
         Code abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore/">
+<a class="md-nav__link" href="../../reference/gitignore/">
         Gitignore file
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../issue_trackers/">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
         Issue trackers
       </a>
 </li>
@@ -935,13 +935,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#module-validation">
-    Module validation
+<a class="md-nav__link" href="#mps-platform">
+    MPS platform
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-of-exceptions">
-    Type of exceptions
+<a class="md-nav__link" href="#mpscore">
+    MPSCore
   </a>
 </li>
 </ul>
@@ -951,174 +951,105 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag" href="../../tags/#reference">reference</a>
-</nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/reference/exceptions.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/mps_startup.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<div class="admonition question">
-<p class="admonition-title">What does the dollar sign in error messages mean?</p>
-<p>This indicates an anomyous class (<a href="https://stackoverflow.com/questions/11388840/java-compiled-classes-contain-dollar-signs">more information</a>).</p>
-</div>
-<p>For a list of common Java exceptions have a look at <a href="https://docstore.mik.ua/orelly/java/langref/ch09_04.htm">The Exception Hierarchy</a> and <a href="https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/">Types of Exception in Java with Examples</a>. <a href="https://docs.oracle.com/javase/7/docs/api/allclasses-noframe.html">This list</a> includes documentation for all kinds of exceptions.</p>
-<p>Here is some more information for exceptions that often occur in <abbr title="Meta Programming System">MPS</abbr>:</p>
+<h1>What happens on MPS startup</h1>
+<p>This page looks behind the hood of the startup process of <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and newer. For most parts, similar code will be executed
+for other <abbr title="Meta Programming System">MPS</abbr> versions.</p>
+<p>The application starts with <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/bootstrap/src/com/intellij/idea/Main.kt">Main.kt</a> where it sets some flags about the execution environment such as the headless
+mode or if the application is invoked from the command line. The system properties are also loaded and populated with data.
+The classloader is also loaded in <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/bootstrap/src/com/intellij/idea/BootstrapClassLoaderUtil.java#L56">BootstrapClassLoaderUtil#initClassLoader()</a>. Afterwards, <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/platform-main/src/com/intellij/idea/MainImpl.kt">MainImpl.kt</a> is looked up
+and executed. It mainly redirects the initialization of the application to the <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/platform-impl/src/com/intellij/idea/ApplicationLoader.kt#L63">ApplicationLoader#initApplication</a> method.
+The phase from this method to <code>ApplicationLoader.run</code> is called <em><abbr title="application">app</abbr> initialization</em>. Here, the command line arguments are
+first processed: a special method looks for <code>-Dkey=value</code> program arguments and stores some of them in system properties.
+The GUI is also initialized in a task on the event dispatch thread and system fonts are loaded. Plugins are also initialized
+and loaded.</p>
+<p><abbr title="Meta Programming System">MPS</abbr> can be started from <abbr title="Meta Programming System">MPS</abbr> itself through <a href="https://github.com/JetBrains/MPS/blob/master/core/tool/environment/source_gen/jetbrains/mps/tool/environment/MpsEnvironment.java">MPSEnvironment.java</a> or <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/jetbrains.mps.ide.platform/source_gen/jetbrains/mps/tool/environment/IdeaEnvironment.java">IdeaEnvironment.java</a> from outside. Both classes are initialized through <a href="http://127.0.0.1:63320/node?ref=r%3A2876f1ee-0b45-4db5-8c09-0682cdee5c67%28jetbrains.mps.tool.environment%29%2F7413225496542992777">EnvironmentConfig</a> which lets you specify the plugins, macros and libraries that should be loaded. In <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/jetbrains.mps.ide.platform/source_gen/jetbrains/mps/tool/environment/IdeaEnvironment.java#L157">IdeaEnvironment#createIdeaApplication</a> some IntelliJ specific properties are also set. Both environments can be used to manage <abbr title="Meta Programming System">MPS</abbr> projects (creating, opening and closing them).</p>
+<p>For the integration with the IntelliJ platform, <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/MPSCoreComponents.java">MPSCoreComponents</a> plays an important role: it contains references to the following core components:</p>
 <ul>
-<li><a href="https://techvidvan.com/tutorials/java-concurrentmodificationexception/">java.util.ConcurrentModificationException</a></li>
-<li><a href="https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/">java.<abbr title="language">lang</abbr>.NullPointerException</a></li>
+<li><abbr title="Meta Programming System">MPS</abbr> platform with the base class <a href="https://github.com/JetBrains/MPS/blob/11da1e6afdcb2a174684ca1a9efaa611da7d3393/core/platform/src-full/jetbrains/mps/core/platform/PlatformBase.java">PlatformBase</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.persistence%28MPS.Core%2F%29%2F%7EPersistenceRegistry">PersistenceRegistry.java</a> as the core component implementation of <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EPersistenceFacade">PersistenceFacade</a>. The PersistenceFacade represents a singleton registry of model, model root factories, find usages and navigation participants.
+  It also provides a bunch of methods to transform string to model refs/module refs/node ids and vice versa.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ELibraryInitializer">LibraryInitializer.java</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ELibraryContributor">library</a> contributions (loading, unloading, updating). It creates instances of <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ESLibrary">SLibrary</a> for each path  <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ERepositoryContributor.getPaths%2528%2529">RepositoryContributor#getPaths()</a> returns. SLibrary tracks a path with modules inside. It listens to file system events and reloads modules from disk if necessary.  It is actually the layer between <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository"><abbr title="Semantic Repository">SRepository</abbr></a> and <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESModule">SModule</a> in the repository hierarchy (as well as the Project).
+  The repository consists of library modules, project modules and several special modules.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F%7EClassLoaderManager">ClassLoaderManager.java</a> which is responsible for loading classes within <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ul>
-<h1 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
-<h2 id="module-validation">Module validation<a class="headerlink" href="#module-validation" title="Permanent link">¶</a></h2>
-<div class="admonition failure">
-<p class="admonition-title">Can’t find/Couldn’t load X (language, devkit…).</p>
-<p>X couldn’t be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
-Install the plugin/open the project containing the language/fetch the dependency.</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Could not find generation plan associated with the devkit</p>
-<p>“The generation plan couldn’t be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
-Install the plugin/open the project containing the language/fetch the dependency.</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">No generation plan in the model X</p>
-<p>The referenced model for the generation plan in the properties doesn’t contain a generation plan.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cycle in extended language hierarchy.</p>
-<p>The languages extends each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
-Read the documentation section about <a href="https://www.jetbrains.com/help/mps/mps-dependencies.html">dependencies</a>. Use the <a href="https://www.jetbrains.com/help/mps/dependencies-analyzer-analyze-model-dependencies.html">dependency analyzer</a> to better understand the cycle.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Subconcepts for language x found, missing extends dependency.</p>
-<p>One or multiple concepts extend concepts from another language but don’t have an extends dependency on the other language. 
-<a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#dependencies-2">Add a extends dependecy</a> to the other language in the dependency section of the module properties.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Superfluous extended module x, not referenced from structure aspect.</p>
-<p>The dependency was accidental added or is needed for a custom aspect and not the structure or editor aspect. Remove the dependency in the first case, keep it for the second case.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing runtime module x.</p>
-<p>A <a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#addingexternaljavaclassesandjarstoaproject-runtimesolutions">runtime solution</a> couldn’t be loaded.
-The plugin containing the solution was not installed / the dependency was not fetched and added as a library.                                                                                       </p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Runtime module x is not a solution.</p>
-<p>The added runtime module is a language or other type of module. Add a module of type solution instead.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing accessory model x.</p>
-<p>The accessory model couldn’t be loaded. The plugin containing the model was not installed / the dependency was not fetched and added as a library.    | Install the plugin/open the project containing the language/fetch the dependency.</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Accessory model x is not visible in the module.</p>
-<p>All modules visible from given modules include modules from dependencies, transitive, respecting reexports, including initial modules.
- Make sure to only refer to one of those modules.
-                           |</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Accessory model x uses language it’s part of.</p>
-<p>Mark the model as ‘do not generate’ to avoid unnecessary bootstrap dependency. </p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Accessory models are deemed design-time facility </p>
-<p>The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as ‘do not generate’.</p>
-</div>
-<h2 id="type-of-exceptions">Type of exceptions<a class="headerlink" href="#type-of-exceptions" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>example</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/JetBrains/MPS/blob/a704d1397ef7a04769a6c65fe4e257b3c4ce7303/plugins/mps-build/languages/build.mps/source_gen/jetbrains/mps/build/mps/util/ModuleLoaderException.java#L14">ModuleLoaderException</a></td>
-<td>none</td>
-<td>Deprecated exception that is not thrown anymore since 2017.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/JetBrains/MPS/blob/6f2f932bd21b581cce437a253414c46ce4cbe5f4/core/persistence/source/jetbrains/mps/smodel/persistence/def/ModelReadException.java#L25">ModelReadException</a></td>
-<td>*.mps file is corrupt</td>
-<td>Indicates failure to read model. Is not specific to ‘default’ persistence.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/smodel/source/jetbrains/mps/smodel/IllegalModelAccessException.java#L25">IllegalModelAccessException</a></td>
-<td>Accessing a model from a swing button handler (e.g. you can read model only inside read actions).</td>
-<td>Indicates forbidden operations over a SModel/<abbr title="Semantic Node">SNode</abbr> (<a href="https://www.jetbrains.com/help/mps/2021.3/smodel-language.html#accesslanguage">official documentation</a>).</td>
-</tr>
-<tr>
-<td><a href="https://github.com/JetBrains/MPS/blob/6f2f932bd21b581cce437a253414c46ce4cbe5f4/core/kernel/source/jetbrains/mps/smodel/DynamicReference.java#L116">AssertionError: Taking target node of dynamic reference<br/>whose source node is not in a model</a></td>
-<td>a node is in detached state</td>
-<td>The source of a dynamic reference doesn’t belong to a model.</td>
-</tr>
-<tr>
-<td>Position n is not allowed for X</td>
-<td>The caret is the first position but the first position was disabled in the style.</td>
-<td>The caret is at a position that is not allowed.</td>
-</tr>
-<tr>
-<td>ModuleClassLoaderIsDisposedException</td>
-<td>A module couldn’t be disposed and it is loaded again.</td>
-<td>The classloader of a module is disposed.</td>
-</tr>
-<tr>
-<td>ClassLoader of module could not be found</td>
-<td></td>
-<td>A module can’t be loaded because the classloader can’t be found.</td>
-</tr>
-</tbody>
-</table>
-<h1 id="intellij-platform">Intellij Platform<a class="headerlink" href="#intellij-platform" title="Permanent link">¶</a></h1>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>example</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/JetBrains/intellij-community/blob/9c46ff89dad4fc9a3e1db98ef0d0a735d4d89da2/platform/core-api/src/com/intellij/diagnostic/PluginException.java#L23">PluginException</a></td>
-<td>Usage of deprecated Intellij SDK methods</td>
-<td>Represents an internal error caused by a plugin. It may happen if the plugin’s code fails with an exception, or if the plugin violates some contract of IntelliJ Platform.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/JetBrains/intellij-community/blob/e4473f80a9d86ed179a41341f40796f18d254113/platform/core-api/src/com/intellij/serviceContainer/AlreadyDisposedException.java#L10">AlreadyDisposedException</a></td>
-<td></td>
-<td>An already disposed objects gets disposed again (e.g. a Project)</td>
-</tr>
-<tr>
-<td>Exception from class <a href="https://github.com/JetBrains/intellij-community/blob/6985bb671272813dca262fdd751da5d038fe582b/platform/core-api/src/com/intellij/util/SlowOperations.java#L34">SlowOperations</a></td>
-<td><a href="https://youtrack.jetbrains.com/issue/MPS-34029"><abbr title="Meta Programming System">MPS</abbr>-34029</a></td>
-<td>If you get an exception from this method, then you need to move the computation to the background while also trying to avoid blocking the <abbr title="User Interface">UI</abbr> thread as well.</td>
-</tr>
-<tr>
-<td>Argument for <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a> parameter must not be null</td>
-<td>method with <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a> Annotation is called with null</td>
-<td>A null check failed (<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">official documentation</a>).</td>
-</tr>
-<tr>
-<td>Action dispatch failed.</td>
-<td></td>
-<td>The execution of an <a href="https://plugins.jetbrains.com/docs/intellij/plugin-actions.html">action</a> failed.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/JetBrains/intellij-community/blob/96b435d8d06965a2751c1d308ceb2240df26b656/platform/extensions/src/com/intellij/openapi/extensions/ExtensionInstantiationException.java#L13">ExtensionInstantiationException</a></td>
-<td></td>
-<td>This exception is thrown if some extension (service, extension point) failed to initialize.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="mps-platform"><abbr title="Meta Programming System">MPS</abbr> platform<a class="headerlink" href="#mps-platform" title="Permanent link">¶</a></h2>
+<p>The <abbr title="Meta Programming System">MPS</abbr> platform contains so-called component plugins that are registered through PlatformBase:</p>
+<ul>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/source/jetbrains/mps/core/platform/MPSCore.java">MPSCore.java</a>, the Core <abbr title="Meta Programming System">MPS</abbr> functionality layer.</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/core/platform/MPSProjectValidation.java">MPSProjectValidation.java</a> which provides validation code for project modules. It contains the following core checkers:<ul>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java">structure checker</a> checks the structure aspect for errors (e.g. missing reference, properties)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ModelPropertiesChecker.java">model properties checker</a> implemented in <a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/ModelValidator.java">ModelValidator.java</a>.</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ModuleChecker.java">module checker</a> which shows errors in the logical view.</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ConstraintsChecker.java">constraints checker</a> checks parent/child, can be root/ancestor and property constraints.</li>
+</ul>
+</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/make-runtime/solutions/jetbrains.mps.make/source_gen/jetbrains/mps/make/facets/MPSMake.java">MPSMake.java</a> which provides the components.<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3Ab25dd364-bc3f-4a66-97d1-262009610c5e%28jetbrains.mps.make%29%2F5600956479087952114">MakeServiceComponent</a> gives access to active facility to perform project make</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A71895ceb-c89d-4545-aa38-89d1cd891f17%28jetbrains.mps.make.facet%29%2F6168415856807659069">FacetRegistry</a> provides methods for registering/unregistering and looking up <a href="https://www.jetbrains.com/help/mps/howto-integrating-into-the-mps-make-framework.html">facades</a>.</li>
+</ul>
+</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/typechecking/source/jetbrains/mps/typechecking/internal/MPSTypechecking.java">MPSTypechecking</a> which provides the components<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typechecking.internal%28MPS.Core%2F%29%2F%7ETypecheckingFacadeComponent">TypecheckingFacadeComponent</a>, </li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.languageScope%28MPS.Core%2F%29%2F%7ELanguageScopeFactory">LanguageScopeFactory</a> </li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typechecking.backend%28MPS.Core%2F%29%2F%7ETypecheckingBackend">TypecheckingBackend.java</a> which is used to install and uninstall <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typechecking.backend%28MPS.Core%2F%29%2F%7ETypecheckingProvider">TypecheckingProvider</a>s.</li>
+</ul>
+</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typesystem%28MPS.Core%2F%29%2F%7EMPSTypesystem">MPSTypesystem.java</a> which provides the components<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typesystem.inference%28MPS.Core%2F%29%2F%7ETypeChecker">TypeChecker</a></li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typesystem.inference%28MPS.Core%2F%29%2F%7ETypeContextManager">TypeContextManager</a>, a deprecated class that shouldn’t be used anymore (use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typechecking%28MPS.Core%2F%29%2F%7ETypecheckingFacade">TypecheckingFacade</a> instead)</li>
+</ul>
+</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.typesystem.inference%28MPS.Core%2F%29%2F%7ETypeContextManager">MPSGenerator</a> which provides the components<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EModelGenerationStatusManager">ModelGenerationStatusManager</a> which allows querying the generation status of models and listening to changes in the generated files through a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EModelGenerationStatusListener">ModelGenerationStatusListener</a> .</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EGenerationSettingsProvider">GenerationSettingsProvider</a> manages the <a href="https://www.jetbrains.com/help/mps/generator.html">generation settings</a>.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator.trace%28MPS.Core%2F%29%2F%7ETraceRegistry">TraceRegistry</a>, the entry component for the <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#canidebugthegenerationprocess?">generator trace</a> mechanism.</li>
+</ul>
+</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/findUsages-runtime/source_gen/jetbrains/mps/ide/findusages/MPSFindUsages.java">MPSFindUsages</a> which provides the components<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EFindUsagesFacade">FindUsagesFacade</a>, an  effective (usually index-based) implementation of find usages routines.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A78f1dc30-d9c6-41ba-bc9c-1e73f8bda079%28jetbrains.mps.ide.findusages%29%2F8568892084424438073">FindersManager</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/textgen/source/jetbrains/mps/text/impl/MPSTextGenerator.java">MPSTextGenerator</a> which provides the component <ul>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/textgen/source/jetbrains/mps/text/TextGenSettings.java">TextGenSettings</a>, the <a href="https://www.jetbrains.com/help/mps/generator.html#:~:text=in%20the%20generators.-,textgen%20options,-Fail%20if%20textgen">settings</a> that are used by text generation.</li>
+</ul>
+</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/aspects/feedback/feedback-api/source/jetbrains/mps/core/aspects/feedback/api/MPSFeedbackPlugin.java">MPSFeedbackPlugin</a> which provides the component<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=9e9ef4e2-decf-4e97-bf80-9109e8b759bb%2Fjava%3Ajetbrains.mps.core.aspects.feedback.api%28jetbrains.mps.lang.feedback.api%2F%29%2F%7EFeedbackAspectRegistry">FeedbackAspectRegistry</a> which manages the descriptors of the <a href="https://www.jetbrains.com/help/mps/feedback.html#feedbackaspect">feedback language aspect</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="mpscore">MPSCore<a class="headerlink" href="#mpscore" title="Permanent link">¶</a></h2>
+<p>This class provides the following core components:</p>
+<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ELibraryInitializer">LibraryInitializer</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ELibraryContributor">library</a> contributions (loading, unloading, updating).</li>
+<li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EPersistenceFacade">PersistenceFacade</a> which represents a singleton registry of model, model root factories, find usages and navigation participants.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F%7EClassLoaderManager">ClassLoaderManager</a> which is responsible for loading classes within <abbr title="Meta Programming System">MPS</abbr>.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EMPSModuleRepository">MPSModuleRepository</a> is a repository with modules visible in <abbr title="Meta Programming System">MPS</abbr>. It is used by the class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProjectRepository">ProjectRepository</a>.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7ELanguageRegistry">LanguageRegistry</a> which manages languages and their generators.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.persistence%28MPS.Core%2F%29%2F%7EModelFactoryRegistry">ModelFactoryRegistry</a> which
+  stores default associations between <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EModelFactory">ModelFactory</a> and <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence.datasource%28MPS.OpenAPI%2F%29%2F%7EDataSourceType">DataSourceType</a> (many-to-many mapping). Examples fo DataSourceTypes are the bundles data source types <em>.mps</em>, <em>.model</em> and <em>.mpsr</em>. The class also stores a mapping between model factory types and model factories which allows user to replace
+  the bundled persistence we provide.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.module%28MPS.Core%2F%29%2F%7ESRepositoryRegistry">SRepositoryRegistry</a> which manages <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository"><abbr title="Semantic Repository">SRepository</abbr></a> instances (they are storages for modules).</li>
+<li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EFacetsFacade">FacetsFacade</a> manages language facades.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EPathMacros">PathMacros</a> manages <a href="https://www.jetbrains.com/help/mps/absolute-path-variables.html">path variables</a> and also some builtin macros such as <em>USER_HOME</em>, <em>MODULE_DIR</em>, <em>PROJECT_DIR</em>, <em>APPLICATION_PLUGINS_DIR</em> and <em>MODULE_WORKING_DIR</em>.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7EExtensionRegistry">ExtensionRegistry</a>  which manages extensions populated by classes loaded from compiled and deployed modules</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7EConceptRegistry">ConceptRegistry</a> manages concept descriptors.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.persistence.datasource%28MPS.Core%2F%29%2F%7EDataSourceFactoryRuleService">DataSourceFactoryRuleService</a>  which is a service provider for defining own data source factories.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3Ac7bbaee3-030a-4940-995f-2174babaf670%28jetbrains.mps.project.io%29%2F557142600900286111">DescriptorIOFacade</a> which returns <a href="http://127.0.0.1:63320/node?ref=r%3Ac7bbaee3-030a-4940-995f-2174babaf670%28jetbrains.mps.project.io%29%2F557142600900286148">DescriptorIO</a> instances which are responsible for reading and writing descriptors to/from a file.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EModelsAutoImportsManager">ModelsAutoImportsManager</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EModelsAutoImportsManager%24AutoImportsContributor">AutoImportContributor</a>. Classes that extend this class can automatically add languages to a model. For example: <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/project/listener/TestsModelAutoImports.java">TestsModelAutoImports</a> automatically add the languages <em>jetbrains.mps.<abbr title="language">lang</abbr>.test</em> and <em>jetbrains.mps.baseLanguage.unitTest</em> to test models.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.vfs%28MPS.Core%2F%29%2F%7EVFSManager">VFSManager</a> is an entry point to access various file system protocols available in <abbr title="Meta Programming System">MPS</abbr>. More information about <abbr title="virtual file system">vfs</abbr> can be found in <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">Virtual File System - IntelliJ Platform Plugin SDK</a>.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProjectManager">ProjectManager</a> manages <abbr title="Meta Programming System">MPS</abbr> projects. Events send while opening and closing a project can be received through a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProjectManagerListener">ProjectManagerListener</a>.</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1179,7 +1110,7 @@ The plugin containing the solution was not installed / the dependency was not fe
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Extension points" class="md-footer__link md-footer__link--prev" href="../extension_points/" rel="prev">
+<a aria-label="Previous: Java design patterns in the MPS sources" class="md-footer__link md-footer__link--prev" href="../java_design_patterns_in_mps_sources/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1188,17 +1119,17 @@ The plugin containing the solution was not installed / the dependency was not fe
 <span class="md-footer__direction">
                   Previous
                 </span>
-                Extension points
+                Java design patterns in the MPS sources
               </div>
 </div>
 </a>
-<a aria-label="Next: Actions" class="md-footer__link md-footer__link--next" href="../actions/" rel="next">
+<a aria-label="Next: Platform essentials" class="md-footer__link md-footer__link--next" href="../../platform_essentials/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Actions
+                Platform essentials
               </div>
 </div>
 <div class="md-footer__button md-icon">
