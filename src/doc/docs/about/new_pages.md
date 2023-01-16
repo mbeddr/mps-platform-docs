@@ -5,7 +5,11 @@ tags:
 
 This page lists all new pages since August 2022.
 
-## Dezember 2022
+## January 2023
+
+- [Java design patterns in MPS sources](java_design_patterns_in_mps_sources.md)
+
+## December 2022
 
 - [Languages: KernelF](kernelf.md)
 

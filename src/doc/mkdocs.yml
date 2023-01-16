@@ -218,6 +218,7 @@ nav:
       - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md 
       - IntelliJ integration: mps_internal/intellij_integration.md 
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
+      - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
   - Platform essentials:
       - platform_essentials/index.md
       - Contributing: platform_essentials/contributing.md
