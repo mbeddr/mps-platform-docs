@@ -8,6 +8,7 @@ This page lists all new pages since August 2022.
 ## January 2023
 
 - [Java design patterns in MPS sources](java_design_patterns_in_mps_sources.md)
+- [Platform essentials: How everything is connected](how_everything_is_connected.md)
 
 ## December 2022
 

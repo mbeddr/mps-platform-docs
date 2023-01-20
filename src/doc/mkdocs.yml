@@ -222,6 +222,7 @@ nav:
       - What happens on MPS startup : mps_internal/mps_startup.md
   - Platform essentials:
       - platform_essentials/index.md
+      - How everything is connected: platform_essentials/how_everything_is_connected.md
       - Contributing: platform_essentials/contributing.md
       - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter, coverage and tracing: platform_essentials/interpreter.md
