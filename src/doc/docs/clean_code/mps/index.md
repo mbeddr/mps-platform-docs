@@ -32,7 +32,7 @@ This document lists some recommendations for code written it MPS.
 - Consider alternative ways of showing errors than throwing exceptions such as showing [notifications](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons). Examples for such notifications are balloons and dialogs.
 - Attach throwable objects to logging statements if available:
   `#!java log error "This is an error",errorObject`
-- Clean up in the *finally block* of a try statement.
+- Clean up in the *finally-block* of a try statement.
 - Treat warnings in MPS as errors[^5] and also don't ignore warnings and errors. Warnings might become errors or even make the compilation fail in the future. Ignoring too many messages can hide real errors that you have to address.
 - Specific Languages blog: [Warnings should not replace documentation](https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/)
 

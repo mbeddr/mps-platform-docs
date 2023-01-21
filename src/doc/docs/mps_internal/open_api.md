@@ -57,7 +57,7 @@ tags:
 
     Note: `action<…>` comes from the ^^jetbrains.mps.lang.plugin^^ language.
 
-!!! question "How to shutdown MPS programmatically?"
+!!! question "How to shut down MPS programmatically?"
 
     In normal conditions one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, an exception
      can be thrown on purpose. 

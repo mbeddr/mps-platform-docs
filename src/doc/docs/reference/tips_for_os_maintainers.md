@@ -15,7 +15,7 @@ Code reviews:
 
 Tools (general):
 
-- [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin):Gradle plugin to build & test langauges and to support various tasks related to custom RCP packaging.
+- [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin):Gradle plugin to build & test languages and to support various tasks related to custom RCP packaging.
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material): static documentation generator which uses Markdown
 - [Badges for your repository](https://shields.io/)
 

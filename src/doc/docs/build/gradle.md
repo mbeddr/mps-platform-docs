@@ -180,7 +180,7 @@ A good explanation of gradle configurations can be found in [Gradle Configuratio
 
 ## Creating a gradle plugin
 
-There are three choices:
+You have to decide between three choices:
 
 - build script
 - buildSrc project

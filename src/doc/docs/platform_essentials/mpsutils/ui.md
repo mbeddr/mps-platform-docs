@@ -14,7 +14,7 @@ A classic widget to select a date from a pop-up calendar.
 
 !!! warning "There's a [known issue](https://github.com/mbeddr/mbeddr.core/issues/2203) where the datepicker doesn't work when the theme is set to macOS light."
 
-This is only the control, i.e. the developer is responsible for synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.
+This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.
 
 ### Editor utils
 
@@ -50,8 +50,8 @@ Hyperlink cells can be used for references in MPS. In contrast to normal referen
 
 - **hyperlink-reference**: make a reference a hyperlink
 - **hyperlink-handler**: a function that's called when the link is clicked. The *util* parameter object contains a method
-  *openInBrowser* for opening an URL with the default web browser.
-- **hyperlink-style**: can be URl or reference. The reference style forces the use of ctrl to activate the hyperlink.
+  *openInBrowser* for opening a URL with the default web browser.
+- **hyperlink-style**: can be URl or reference. The reference style forces the usage of the key *ctrl* to activate the hyperlink.
 - **hyperlink-node**: the node that should be displayed after the link was clicked
 - **hyperlink-focus**: focus the target node of the hyperlink after navigating to it.
 - **hyperlink-select**: select the target node of the hyperlink after navigating to it.
@@ -60,7 +60,7 @@ Hyperlink cells can be used for references in MPS. In contrast to normal referen
 
 > ^^com.mbeddr.mpsutil.jfreechart^^
 
-This module contains stubs for the [jfreechart](https://www.jfree.org/jfreechart/) library. The charts can be viewed in
+This module contains stubs for the [JFreeChart](https://www.jfree.org/jfreechart/) library. The charts can be viewed in
 an extra tool *Chart* by calling the following code:
 
 ```java

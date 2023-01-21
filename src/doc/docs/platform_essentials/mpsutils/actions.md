@@ -64,7 +64,7 @@ be enabled for a specific concept, add a concept to *only in editor with instanc
 #### Refactoring action
 
 The concept [RefactoringAction](http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137) can create an action for a [simple refactoring](https://www.jetbrains.com/help/mps/mps-refactoring.html). The title of the action can be specified with *caption,* and the keyboard shortcut can
-be defined in *shortcut*. Refactoring parameters can be specified in *parameters*. There are a few different choosers which will be shown in
+be defined in *shortcut*. Refactoring parameters can be specified in *parameters*. A few different choosers will be shown in
 the refactoring dialog for the value of the parameters:
 
 - *string*: chooser for selecting a text

@@ -34,11 +34,11 @@ Settings applied to one project. Stored in *${project}/.mps/*.
 
 ## Modules pool
 
-**UI**: second root entry in logical Vvew
+**UI**: second root entry in logical view
 
 All content known to MPS is contained in its modules pool. This modules pool is shared between all windows of the same MPS installation. In some future MPS version, every window should have its independent modules pool.
 
-If a module is contained more than once in the Mmdules Pool (e.g. present both in the current project and in a global Library), the behavior is undefined (i.e. will mess up badly, don't do this).
+If a module is contained more than once in the modules pool (e.g. present both in the current project and in a global Library), the behavior is undefined (i.e. will mess up badly, don't do this).
 
 
 ## MPS window

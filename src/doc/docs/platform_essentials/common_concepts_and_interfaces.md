@@ -5,15 +5,15 @@ tags:
 - iets3
 ---
 
-This list explains some common abstract concepts and interfaces that you can use to extend or use the funtionality of the platforms.
+This list explains some common abstract concepts and interfaces that you can use to extend or use the functionality of the platforms.
 
 ## Mbeddr
 
 ### Base
 
-#### [Assessement](http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814)
+#### [Assessment](http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814)
 
-To extend assessements, extend the class [AssessmentQuery](AssessmentQuery) to create a new query. The result of the query has to extend the class [AssessmentResult](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F865293814733133833). The interface [AssessmentSummary](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F671216505796427448) must also be extended to provide an summary of the results.
+To extend assessments, extend the class [AssessmentQuery](AssessmentQuery) to create a new query. The result of the query has to extend the class [AssessmentResult](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F865293814733133833). The interface [AssessmentSummary](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F671216505796427448) must also be extended to provide a summary of the results.
 
 Example:
 
@@ -34,7 +34,7 @@ Concepts or interfaces that implement [ICommentable](http://127.0.0.1:63320/node
 
 #### IDocumentable
 
-Add support for documentating nodes when implementing the [IDocumentable](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F3857533489766146432) interface. The text node is using the language `de.slisson.mps.richtext` and supported text and embedded nodes.
+Add support for documenting nodes when implementing the [IDocumentable](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F3857533489766146432) interface. The text node is using the language `de.slisson.mps.richtext` and supported text and embedded nodes.
 
 #### ITreeViewable
 
@@ -54,17 +54,17 @@ The interface [IDetectCycle](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4
 
 #### IEmpty
 
-The interface [IEmpty](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067) can be implemented to support empty lines. Error messages are automatically supressed and the node is also not shown in the outline.
+The interface [IEmpty](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067) can be implemented to support empty lines. Error messages are automatically suppressed and the node is also not shown in the outline.
 
 #### Name related interfaces
 
-The interface [IIdentifierNamedConcept](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291) can be used for concept that should have a valid identifier. Check the [property constraint](http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296) to unterstand how it works.
+The interface [IIdentifierNamedConcept](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291) can be used for concept that should have a valid identifier. Check the [property constraint](http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296) to understand how it works.
 
 The interface [INameAllUpperCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193612), [INameFirstCharLowerCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224192794) and [INameFirstCharUpperCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193610) can be used to further constraint the identifier name.
 
 #### IMbeddrIDERoot
 
-Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829) show up in the *New Roots* menu thats shown above the normal *new* menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.
+Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829) show up in the *New Roots* menu that's shown above the normal *new* menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.
 
 ## IETS3
 
@@ -102,7 +102,7 @@ Implement the interface [ICanBeLValue](http://127.0.0.1:63320/node?ref=r%3A66e07
 
 #### IDotTarget
 
-Implement the interface [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, statemachines and many more.
+Implement the interface [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines and many more.
 
 #### IEmptyLiteral
 
@@ -114,7 +114,7 @@ Implement the interface [ILiteral](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-
 
 #### Effects
 
-Since KernelF is by default immutable, there are some language extensions that allow side effects such as the language *org.iets3.core.expr.mutable*. To add custom concepts that have affects, implement the interfaces [IMayAllowEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116) and [IMayHaveEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166).
+Since KernelF is by default immutable, some language extensions allow side effects such as the language *org.iets3.core.expr.mutable*. To add custom concepts that have affects, implement the interfaces [IMayAllowEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116) and [IMayHaveEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166).
 
 #### IOptionallyTyped
 

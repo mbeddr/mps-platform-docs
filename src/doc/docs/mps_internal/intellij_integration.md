@@ -38,7 +38,7 @@ Link to different MPS plugin.xml files:
 - [Migration Support](https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/META-INF/plugin.xml) (+[plugin base](https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/migration-platform/pluginBase.xml))
 - [Debugger API for MPS](https://github.com/JetBrains/MPS/blob/master/plugins/debugger-api/META-INF/plugin.xml)
 - [Java Debugger for MPS](https://github.com/JetBrains/MPS/blob/master/plugins/debugger-java/META-INF/plugin.xml)
-- [Jetpad](https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml)
+- [JetPad](https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml)
 - [Idea Integration for MPS](https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/META-INF/plugin.xml)
 - [MPS Java Integration](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml)(+[Java platform](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml))
 - [MPS console](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml)(+[actions](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml))
@@ -52,11 +52,11 @@ Included in other plugins:
 
 - [editor actions](https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml)
 - [editor](https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source/META-INF/MPSEditor.xml)
-- [Java platform acitons](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml)
+- [Java platform actions](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml)
 - [MPSCore](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/META-INF/MPSCore.xml)
 - [PlatformActions](https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml)
 
-All of the plugins use the [charisma reporter](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java) for error reporting.
+All the plugins use the [charisma reporter](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java) for error reporting.
 This allows reporting errors to YouTrack. Another notable extension is the declaration of the mps language library. For example:
 ```xml
 <mps.LanguageLibrary dir="/languages" />

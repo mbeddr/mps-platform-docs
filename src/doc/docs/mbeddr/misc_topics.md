@@ -13,7 +13,7 @@ The current PLE approach only generates a single variant. The generated artifact
 
 ### What doesn't work?
 
-In addition to elements with a cardinality of 1, some other items can't be removed from the AST with presence conditions:
+Besides elements with a cardinality of 1, some other items can't be removed from the AST with presence conditions:
 
 - parameters of a function
 - arguments from function calls

@@ -19,7 +19,7 @@ targets. The contributions were made in a plugin solutions by creating a [CCMenu
 
 > ^^com.mbeddr.mpsutil.forms^^
 
-!!! warning "This is an unfinished language that was probably intented  to be used in ^^com.mbeddr.mpsutil.process^^. This language will be removed soon."
+!!! warning "This is an unfinished language that was probably intended to be used in ^^com.mbeddr.mpsutil.process^^. This language will be removed soon."
 
 
 ### Gradle support
@@ -72,7 +72,7 @@ LOC: 1962.1999999999998
 
 > ^^com.mbeddr.mpsutil.licensemanager.common^^
 
-!!! warning "This language contains some classes of an old mbeddr licensemanager and will probably be removed in the future."
+!!! warning "This language contains some classes of an old mbeddr license manager and will probably be removed in the future."
 
 ### Make
 
@@ -105,7 +105,7 @@ can be found [here as a PDF](../../files/multilingual.pdf) and is located in the
 
 > ^^com.mbeddr.mpsutil.runconfiguration^^
 
-!!! warning "This language was used as a workaround for accessing the debuggle node in [breakpoint creators](http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892). The expression is now officially supported, this language is deprecated and will be removed soon."
+!!! warning "This language was used as a workaround for accessing the debugged node in [breakpoint creators](http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892). The expression is now officially supported, this language is deprecated and will be removed soon."
 
 ### Test scope
 

@@ -75,7 +75,7 @@ This language extends the language ^^jetbrains.mps.lang.resources^^ by providing
 
 > ^^com.mbeddr.mpsutil.suppresswarning^^
 
-This language allows attaching an annotation to nodes to disable all or certain type system warnings by invoking the intention `Toggle Suppress Warnings`. There are different kinds of warnings that can be suppressed:
+This language allows attaching an annotation to nodes to disable all or certain type system warnings by invoking the intention `Toggle Suppress Warnings`. Different kinds of warnings can be suppressed:
 
 - [all](http://127.0.0.1:63320/node?ref=r%3Ad5deda81-7a35-4c2b-bda1-1fdc1db99e3b%28com.mbeddr.mpsutil.suppresswarning.structure%29%2F9116320848000879251): suppress all warnings
 

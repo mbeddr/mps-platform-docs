@@ -21,8 +21,8 @@ createTempNode{hello -> "world"};
 
 This expression creates a new node and assigns Base Language expressions to keys of it. The keys are set internally with
 the *setref* statement which takes a key, a context node (here: the newly created node) and a target expression, and creates
-a new user object for this node. For normal values, there are the *setref* and *getref* statements to set and retrieve
-values from the user object respectively. For int values, there are the statements *setint* and *getint*.
+a new user object for this node. For normal values, *setref* and *getref* should be used to set and retrieve
+values from the user object respectively. For int values, *setint* and *getint* can be used.
 
 ### Mapping labels
 

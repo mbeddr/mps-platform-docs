@@ -16,6 +16,6 @@ section.
 
 This language contains a concept [DependenciesDiagram](http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870)
 
-Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies is visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. *uses* if the language is imported).
+Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. *uses* if the language is imported).
 
 ![example: dependency diagram](dependencydiagram_example.png)

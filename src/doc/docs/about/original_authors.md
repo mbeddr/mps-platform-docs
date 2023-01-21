@@ -9,7 +9,7 @@ This site includes documents and contributions from different sites. If you have
 please add yourself. This repository includes knowledge of the following people (and probably more) in alphabetical order:
 
 - @abstraktor (*internal knowledge base*)
-- @AlexeiQ (*mbeddr wiki*,*internal knowledge base*)
+- @AlexeiQ (*mbeddr wiki*, *internal knowledge base*)
 - @arimer (*internal knowledge base*)
 - @coolya (*mbeddr wiki*,*internal knowledge base*)
 - @dbinkele (internal knowledge base)
@@ -25,7 +25,7 @@ please add yourself. This repository includes knowledge of the following people 
 - @krinara86 (*mbeddr wiki*)
 - @markusvoelter (*mbeddr wiki*)
 - @sergej-koscejev (*mbeddr wiki*,*answered questions*)
-- @slisson (*answers to many questions*,*internal knowledge base*)
+- @slisson (*answers to many questions*, *internal knowledge base*)
 - @szabta89 (*mbeddr wiki*)
 - @till-f (*mbeddr wiki*)
 - @wsafonov (internal knowledge base, answered questions)

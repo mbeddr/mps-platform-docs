@@ -29,7 +29,7 @@ Although this aspect adheres to the [plugin model](#mps-plugin-model) naming con
 
 ### Test model
 
-**UI**: entry below solution in a specific folder named `tests? with specific icon in the logical view.
+**UI**: entry below solution in a specific folder named `tests` with specific icon in the logical view.
 
 A model containing tests. Defined by the *&commat;tests* stereotype.
 

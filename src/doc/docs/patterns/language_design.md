@@ -29,7 +29,7 @@ tags:
 - [Categorising the Complexities in Programming](https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513){{ blog('langio') }}
 - [Fusing Modeling and Programming into Language-Oriented Programming](https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7){{ blog('mv') }}
 - [Context Boundaries in Language Engineering Projects](https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/){{ blog('lv') }}
-- [Why documents shouldn’t be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
+- [Why documents shouldn't be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
 
 

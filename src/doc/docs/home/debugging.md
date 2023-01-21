@@ -61,8 +61,8 @@ The following list shows some debugging tips:
 
 # Decompiler
 
-Decompiling jar files usually shouldn't be necessary because the source code of [MPS](https://github.com/JetBrains/MPS), [IntelliJ Community](https://github.com/JetBrains/intellij-community), [JetBrainsRuntime](https://github.com/JetBrains/JetBrainsRuntime) ,and the MPS platforms is open source and available on GitHub. For all other cases,
-use the [JD Java Decompiler](http://java-decompiler.github.io/). There is also an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) for it.
+Decompiling jar files usually shouldn't be necessary because the source code of [MPS](https://github.com/JetBrains/MPS), [IntelliJ Community](https://github.com/JetBrains/intellij-community), [JetBrainsRuntime](https://github.com/JetBrains/JetBrainsRuntime), and the MPS platforms is open source and available on GitHub. For all other cases,
+use the [JD Java Decompiler](http://java-decompiler.github.io/). The [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) can also be used for this task.
 
 # General Blog posts
 

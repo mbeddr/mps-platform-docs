@@ -36,7 +36,7 @@ tags:
   </tr>
   <tr>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/base-language.html" target="_blank">classifiers</a></td>
-    <td class="bg-red" colspan="12"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F3812443517665722909" target="_blank">javadoc</td>
+    <td class="bg-red" colspan="12"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F3812443517665722909" target="_blank">javadoc</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/closures.html" target="_blank">closures</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/testing-languages.html#unittestingwithbtestcase" target="_blank">unitTest</a></td>
     <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/logging.html">logging</a></td>
@@ -76,7 +76,7 @@ tags:
   </tr>
   <tr>
     <td class="bg-purple" colspan="20">startup</td>
-    <td class="bg-purple" colspan="20"><a hef="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#:~:text=folder%20by%20default%3A-,the,-Tips%20%26%20Tricks%20language" target="_blank">tips</a></td>
+    <td class="bg-purple" colspan="20"><a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#:~:text=folder%20by%20default%3A-,the,-Tips%20%26%20Tricks%20language" target="_blank">tips</a></td>
     <td class="bg-purple" colspan="20">workflow</td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ tags:
     <td class="bg-green header" colspan="60">jetbrains.mps.ide</td>
   </tr>
   <tr>
-    <td class="bg-green" colspan="30"><a href="https://www.jetbrains.com/help/mps/http-support-plugin.html"h target="_blank">httpsupport</a></td>
+    <td class="bg-green" colspan="30"><a href="https://www.jetbrains.com/help/mps/http-support-plugin.html" target="_blank">httpsupport</a></td>
     <td class="bg-green" colspan="30">vcs.modelmetadata</td>
   </tr>
   <tr>
@@ -207,7 +207,7 @@ tags:
     <td class="bg-green" colspan="30"><a href="https://www.jetbrains.com/help/mps/plugin.html" target="_blank">standalone</a></td>
   </tr>
   <tr>
-    <td class="bg-gray header" colspan="60"><a hef="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">jetbrains.mps.lang.feedback</a></td>
+    <td class="bg-gray header" colspan="60"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">jetbrains.mps.lang.feedback</a></td>
   </tr>
   <tr>
     <td class="bg-gray" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">messages</a></td>

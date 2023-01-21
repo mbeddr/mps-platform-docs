@@ -10,7 +10,7 @@ tags:
 
 This aspect is contributed by the language ^^com.mbeddr.doc^^ in {{ mbeddr() }}. It allows to define a documentation node which can be exported to xhtml, latex
 and markdown. New targets can be implemented easily. When you invoke the intention *Add Reference to
-Documented Concept* while defining a new section as part of a chapter, the documention for this concept will be shown
+Documented Concept* while defining a new section as part of a chapter, the documentation for this concept will be shown
 in the *Documentation* tool at the bottom part of the screen.
 
 !!! question "How do you export the documentation?"

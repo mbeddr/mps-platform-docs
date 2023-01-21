@@ -5,7 +5,7 @@
 > ^^com.mbeddr.mpsutil.bldoc^^
 
 This language can be used to attach a documentation via the intention `Attach Documentation` to any node. The richtext language
-provides the concept `Text` for writing the documentation. There are also two interfaces that implement [IWord](http://127.0.0.1:63320/node?ref=r%3Aca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3%28de.slisson.mps.richtext.structure%29%2F2557074442922392300) so that any
+provides the concept `Text` for writing the documentation. Two interfaces implement [IWord](http://127.0.0.1:63320/node?ref=r%3Aca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3%28de.slisson.mps.richtext.structure%29%2F2557074442922392300) so that any
 node can be referenced in the ^^com.mbeddr.doc^^ language: [@child](http://127.0.0.1:63320/node?ref=r%3Acd485f95-5a84-4e95-8a53-480ef712b00a%28com.mbeddr.mpsutil.bldoc.structure%29%2F5358654548920859832) and
 [@root](http://127.0.0.1:63320/node?ref=r%3Acd485f95-5a84-4e95-8a53-480ef712b00a%28com.mbeddr.mpsutil.bldoc.structure%29%2F5358654548920954071)
 for referencing any child nodes and named nodes respectively.

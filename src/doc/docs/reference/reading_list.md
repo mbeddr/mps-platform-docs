@@ -14,7 +14,7 @@ If you want to become proficient with language engineering based on MPS, the bes
 
 I suggest you start with the book on DSL Engineering. It's available as a free PDF from [voelter.de/books](http://voelter.de/books/).
 
-In the first part, it discusses some general characterizations of DSLs. Part two is on language design; you should become proficient in the design concerns discussed there. Part three is about language implementation with different tools; you can skip the non-MPS parts, if you want to. The MPS-specific explanations are not quite up to date, but the concepts and approaches explained there are still relevant.
+In the first part, it discusses some general characterizations of DSLs. Part two is on language design; you should become proficient in the design concerns discussed there. Part three is about language implementation with different tools; you can skip the non-MPS parts, if you want to. The MPS-specific explanations are not up-to-date, but the concepts and approaches explained are still relevant.
 
 One recent extension to MPS we use all the time now is grammar cells, a way to more easily build usable editors for textual notation. We strongly suggest reading this paper: [GrammarCells](http://voelter.de/data/pub/SLE2016-GrammarCells.pdf).
 
@@ -29,7 +29,7 @@ Finally, to understand the experiences we have made with MPS over the years, you
 
 ## Working on (extending) mbeddr
 
-If, in addition to working with MPS in general, you plan to work on the mbeddr languages, there is more reading we suggest. We suggest reading parts of Markus' thesis, because it is the most comprehensive and up-to-date description of mbeddr: [Generic Tools, Specific Languages](http://voelter.de/data/books/GenericToolsSpecificLanguages-1.0-web.pdf).
+If, besides working with MPS in general, you plan to work on the mbeddr languages, more material should be read. We suggest reading parts of Markus' thesis, because it is the most comprehensive and up-to-date description of mbeddr: [Generic Tools, Specific Languages](http://voelter.de/data/books/GenericToolsSpecificLanguages-1.0-web.pdf).
 
 To get a general overview over mbeddr, please read chapter 3.
 

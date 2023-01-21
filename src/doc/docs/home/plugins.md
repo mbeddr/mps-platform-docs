@@ -81,6 +81,6 @@ tags:
 !!! failure "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
     
     Make sure that the solution kind is not set to none.
- [^2]:[Any way to translate the whole MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
+ [^2]:[Any way to translate all of MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
 
 [^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)

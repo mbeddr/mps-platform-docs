@@ -142,7 +142,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     
     Note: Node factories are invoked in the inverse order of constructors. MPS will first invoke the specific node factory and the more generic ones if the exist.
 
-!!! question "Is there a way to call the constructor of a super concept inside the constructor of a subconcept?"
+!!! question "Is there a way to call the constructor of a super concept inside the constructor of a sub-concept?"
     > Something like:
     > ```java
     constructor {

@@ -27,7 +27,7 @@ MPS Plugins need to be contained in MPS plugin models.
 
 #### StandalonePluginDescriptor
 
-We need to add a *StandalonePluginDescriptor* (defined in Language ^^jetbrains.mps.lang.plugin.standalone^^) as a root node if a MPS plugin model uses any concept from the language ^^jetbrains.mps.lang.plugin^^. Other concepts from the language ^^jetbrains.mps.lang.plugin.standalone^^ don't need a *StandalonePluginDescriptor*.
+We need to add a *StandalonePluginDescriptor* (defined in Language ^^jetbrains.mps.lang.plugin.standalone^^) as a root node if an MPS plugin model uses any concept from the language ^^jetbrains.mps.lang.plugin^^. Other concepts from the language ^^jetbrains.mps.lang.plugin.standalone^^ don't need a *StandalonePluginDescriptor*.
 
 ## Plugin disambiguation
 
@@ -35,7 +35,7 @@ The term "plugin" is used at various places throughout MPS. It describes differe
 
 - IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which MPS is based upon.
 - MPS plugins: automatically loaded Models.
-- Plugin language aspect: model inside a aanguage defining extension points.
+- Plugin language aspect: model inside a language defining extension points.
 - Build model plugins: part of the build model language providing new entries for build models.
 
 ## Non-project sources
@@ -80,7 +80,7 @@ You must add *LanguageA* (containing *ConceptA*) to *ModuleB's* and contained *M
 
 For discussion, we establish a continued scenario:
 
-(The Relations listed here are not complete in order to reduce clutter. The [complete example](https://github.com/enikao/mps-dependencies) is available.)
+(The Relations listed here are not complete to reduce clutter. The [complete example](https://github.com/enikao/mps-dependencies) is available.)
 
 ```kroki-plantuml
 @startuml
@@ -230,7 +230,7 @@ hide empty members
 ```
 
 In *SolutionBaseGenExtends2* both *NodeBase* and *NodeBase2* will be transformed, as *LanguageBaseGenExtends2*
-is listed in  *Languages engaged in generation* and *GeneratorBaseExtends2* extends *GeneratorBase*.
+is listed in *Languages engaged in generation* and *GeneratorBaseExtends2* extends *GeneratorBase*.
 
 ```kroki-plantuml
 @startuml

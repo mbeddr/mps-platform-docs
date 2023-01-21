@@ -18,7 +18,7 @@ Here is some more information for exceptions that often occur in MPS:
 
 ## Module validation
 
-!!! failure "Can't find/Couldn't load X (language, devkit...)."
+!!! failure "Can't find/couldn't load X (language, devkit...)."
 
     X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
     Install the plugin/open the project containing the language/fetch the dependency.

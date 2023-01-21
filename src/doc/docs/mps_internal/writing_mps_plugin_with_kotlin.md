@@ -73,7 +73,7 @@ tasks.getByName("buildSearchableOptions").enabled = false
 
 ```
 
-The gradle plugin *org.jetbrains.intellij* is needed for the IntelliJ plugin development, *org.jetbrains.kotlin.jvm* is needed for Kotlin support. We also add the itemis repository for the MPS dependencies. The dependency section contains dependencies for Kotlin and MPS. The available MPS dependencies can be found in the group JetBrains on [ mvnrepository.com](https://mvnrepository.com/artifact/com.jetbrains). The rest of the code is boilerplate code for setting the right versions.
+The gradle plugin *org.jetbrains.intellij* is needed for the IntelliJ plugin development, *org.jetbrains.kotlin.jvm* is needed for Kotlin support. We also add the itemis repository for the MPS dependencies. The dependency section contains dependencies for Kotlin and MPS. The available MPS dependencies can be found in the group JetBrains on [mvnrepository.com](https://mvnrepository.com/artifact/com.jetbrains). The rest of the code is boilerplate code for setting the right versions.
 
 ## plugin.xml
 

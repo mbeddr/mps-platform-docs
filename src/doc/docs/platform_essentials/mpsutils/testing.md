@@ -19,7 +19,7 @@ The class [ModelAsserter](http://127.0.0.1:63320/node?ref=fdfc256f-c0b4-4ea1-9ad
 
 > ^^com.mbeddr.mpsutil.blutil.test.waitfor^^
 
-This language contains a assert item *wait for* for tests, the waits for an expression to become true. If the condition
+This language contains an assert item *wait for* for tests, the waits for an expression to become true. If the condition
 evaluates to false, the check is repeated every *m* millisecond until the timeout of *n* milliseconds is reached. Both
 *m* and *n* can be set in the inspector of the statement.
 

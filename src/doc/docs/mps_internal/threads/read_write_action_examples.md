@@ -63,7 +63,7 @@ Useful methods:
 They are executed in the lambda of `#!java ApplicationManager.getApplication().invokeLater/invokeAndWait)`.
 
 - update tools
-- show progress bars for a long running actions
+- show progress bars for a long-running actions
 - update text in swing components
 - dispose UI components
 - rebuild components

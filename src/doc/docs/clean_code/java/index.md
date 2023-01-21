@@ -24,7 +24,7 @@ tags:
 - Try to make the name of the utility or helper class more specific (for example: *AdministrationHelper*, *LoginHelper* instead of *Helper*).
 
 # More tips
-- If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult [Unterstand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274) page.
+- If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult [Understand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274) page.
 - If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
 - Have a look at common sources of [complexity](http://www.javapractices.com/topic/TopicAction.do?Id=287).
 

@@ -15,7 +15,7 @@ such as `mps-core.jar` and `vcs-core.jar`:
 
 ![mps artifacts dialog](mps_artifacts.png)
 
-The directory also contains settings for code styles, copyright infos and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
+The directory also contains settings for code styles, copyright info and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
 many other IntelliJ specific project settings,
 
 # .mps
@@ -38,7 +38,7 @@ This folder contains executable files that are needed for the different
 operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS specific files:
 
 - Linux
-    - *libdgbm*: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX *dbm'* function [source](https://packages.debian.org/de/sid/libgdbm-dev)
+    - *libdgbm*: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX *dbm* function [source](https://packages.debian.org/de/sid/libgdbm-dev)
     - *restart.py*: restarts MPS
 
 - Mac
@@ -77,13 +77,13 @@ The `dependencies` folder contains the [Gradle configuration properties](https:/
 The `resources` folder contains image resources as well as the following files:
 
 - *mps*: executable file to start MPS
-- *mps-dmg.sh*: create an [Apple Disk image](https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/) for Mac OS
-- *mps-sign.sh*: [signs](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) the MPS Mac OS application
+- *mps-dmg.sh*: create an [Apple Disk image](https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/) for macOS
+- *mps-sign.sh*: [signs](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) the MPS macOS application
 
 The `tests` folder contains Ant scripts for executing tests.
 The `tools` folder contains scripts for signing and creating DMGs and also
 a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
-The other XML files are also Ant scripts for different tasks (getting dependencies, building MPS languages, migration projects etc).
+The other XML files are also Ant scripts for different tasks (getting dependencies, building MPS languages, migration projects etc.).
 The `run_build.sh` and `run_test.sh` can be used to run the build and tests
 on Linux/Mac respectively. `update.xml` lists all MPS versions and is used to show automatic updates for MPS.
 
@@ -102,7 +102,7 @@ The folder `devkit` contains the four main devkits:
 ## kernel
 
 It contains core languages of MPS such as loaders for Java stubs, classes for persistence, language checkers,
-make classes and and runtime classes for smodel such as `SConceptOperations.java` and `SModelOperations.java`.  
+make classes and runtime classes for smodel such as `SConceptOperations.java` and `SModelOperations.java`.  
 
 ## languages
 
@@ -114,7 +114,7 @@ Everything related to the make facet is situated in this folder.
 
 ## stub
 
-This folder contains all stub models provided by MPS. There are, for example, stubs for Aanotations (e.g. [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g. `java.util.List`) and all MPS related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g. MPS.Core).
+This folder contains all stub models provided by MPS, e.g. stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g. `java.util.List`) and all MPS related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g. MPS.Core).
 
 ## tool
 

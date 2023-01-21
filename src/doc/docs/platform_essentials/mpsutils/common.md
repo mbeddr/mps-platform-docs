@@ -28,5 +28,5 @@ The class [ApplicationHelper](http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186
 
 > ^^com.mbeddr.mpsutil.comparator^^
 
-The class [MPSNodeComparator](http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369) can be used to compare two nodes programmatically. There are overloaded methods
-for ignoring properties, ignored references and some more settings. The return object of class [MPSNodeComparison](http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595) contains the list of differences and can also pre pretty printed by called the method `getDescription()`.
+The class [MPSNodeComparator](http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369) can be used to compare two nodes programmatically. Overloaded methods
+for ignoring properties, ignored references and some more settings exist. The return object of class [MPSNodeComparison](http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595) contains the list of differences and can also pre pretty printed by called the method `getDescription()`.

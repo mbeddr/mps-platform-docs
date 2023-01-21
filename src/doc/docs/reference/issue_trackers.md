@@ -81,13 +81,13 @@ This issue tracker contains issue for IntelliJ IDEA/[the IntelliJ platform SDK](
 [MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consistss
 of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, the IntelliJ platform version is 213.7172 which
 can be checked by visiting the [IntelliJ IDEA download page](https://www.jetbrains.com/de-de/idea/download/other.html).
-If a MPS issue is related to the platform, it is forwarded by the MPS team to the platform team.
+If an MPS issue is related to the platform, it is forwarded by the MPS team to the platform team.
 
 - [open IntelliJ IDEA issues](https://youtrack.jetbrains.com/issues/IDEA?q=%23Open%20)
 
 ## JetBrains Runtime
 
-> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes a number of enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and bugfixes.
+> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and bugfixes.
 
 !!!info "It's very unlikely that you have to submit an issue to this tracker yourself."
 

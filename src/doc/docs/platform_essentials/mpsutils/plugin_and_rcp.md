@@ -5,7 +5,7 @@
 > ^^com.mbeddr.mpsutil.actionsfilter^^
 
 MPS contains a lot of actions that might be not needed by end users such as actions for language development and actions of the IDE platform. This language allows disabling
-actions inside a MPS plugin solution by defining an actions profile. **active by default** can
+actions inside an MPS plugin solution by defining an actions profile. **active by default** can
 be set including an activation condition to make this profile the active profile when opening the project or RCP. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention `Use allow actions` on the
 actions profile. Actions in the section `specify toolbar` are displayed in the main toolbar
 that's located at the top left of the window.
@@ -35,7 +35,7 @@ It supports the following options:
 
 - **scope**: save the preferences on application or project level
 - **help topic**: The help topic is an internal identifier that can link a page in the MPS documentation.
-  Example: `preferences.intentionPowerPack` links to https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack which redirects to https://www.jetbrains.com/help/mps/intentions-settings.html. The base URL in MPS is defined the [XML configuration](https://github.com/JetBrains/MPS/search?q=webhelp-url) of a few plugins. To get the other internal names search for `getHelpTopic` in the [MPS repository](https://github.com/JetBrains/MPS/search?q=getHelpTopic)) and/or the [IntelliJ Community repository](https://github.com/JetBrains/intellij-community/search?q=getHelpTopic).
+  Example: `preferences.intentionPowerPack` links to https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack which redirects to https://www.jetbrains.com/help/mps/intentions-settings.html. The base URL in MPS is defined the [XML configuration](https://github.com/JetBrains/MPS/search?q=webhelp-url) of a few plugins. To get the other internal names search for `getHelpTopic` in the [MPS repository](https://github.com/JetBrains/MPS/search?q=getHelpTopic) and/or the [IntelliJ Community repository](https://github.com/JetBrains/intellij-community/search?q=getHelpTopic).
 
 The preference form supports a few different input elements:
 
@@ -47,7 +47,7 @@ The preference form supports a few different input elements:
 - text field
 
 The *before write* method is called, when the button *Apply* or *OK* is pressed. This method should update all tools or classes
-that reference the values of the preference form. The input fields can be accessed through the *this* object. Example:
+that reference the values of the preference form. The input fields can be accessed through *this*. Example:
 
 ```java
 final HttpServerConfig config = new HttpServerConfig(((int) this.port), this.enabled); 
@@ -83,7 +83,7 @@ executed the *onFinish* callback of every step. For more information, have at lo
 
 > ^^com.mbeddr.mpsutil.rcp^^
 
-This language allows creating a new action for creating models similar to the action [New model](http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693) of mbeddr.
+This language allows creating a new action for creating models like the action [New model](http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693) of mbeddr.
 Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034). The following settings are supported:
 
 - **name**: the name of the new action

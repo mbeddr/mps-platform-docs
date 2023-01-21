@@ -43,20 +43,20 @@ The following items are cited from different UX guidelines from the web:
 
 > - Remove unnecessary redundancy. There might be several effective ways to perform a task. To achieve simplicity, make the hard decision and choose the best one for your target users instead of providing all of them and making the choice an option.
 
-> - Make it "just work" automatically. The element is necessary, but any user interaction to get it to work is not because there is an acceptable default behavior or configuration. To achieve simplicity, make it work automatically and either hide it from the user completely or reduce its exposure significantly.
+> - Make it "just work" automatically. The element is necessary, but any user interaction to get it to work is not because an acceptable default behavior or configuration exists. To achieve simplicity, make it work automatically and either hide it from the user completely or reduce its exposure significantly.
 
 > - Combine what should be combined. Put the essential features that support a task together so that a task can be performed in one place. The task's steps should have a unified, streamlined flow. Break down complex tasks into a set of easy, clear steps, so that "one" place might consist of several UI surfaces, such as a wizard.
 
-> - Separate what should be separated. Not everything can be presented in one place, so always have clear, well-chosen boundaries. Make features that support core scenarios central and obvious, and hide optional functionality or make it peripheral. Separate individual tasks and provide links to related tasks. For example, tasks related to manipulating photos should be clearly separated from tasks related to managing collections of photos, but they should be readily accessible from each other.
+> - Separate what should be separated. Not everything can be presented in one place, so always have clear, well-chosen boundaries. Make features that support core scenarios central and obvious, and hide optional functionality or make it peripheral. Separate individual tasks and provide links to related tasks. For example, tasks related to manipulating photos should be separated from tasks related to managing collections of photos, but they should be readily accessible from each other.
 
 > - Eliminate what can be eliminated. Take a printout of your design and highlight the elements used to perform the most important tasks. Even highlight the individual words in the UI text that communicate useful information. Now review what isn't highlighted and consider removing it from the design. If you remove the item, would anything bad happen? If not, remove it!
-  Consistency, configurability, and generalization are often desirable qualities, but they can lead to unnecessary complexity. Review your design for misguided efforts in consistency (such as having redundant text), generalization (such as having any number of time zones when two is sufficient), and configurability (such as options that users aren't likely to change), and eliminate what can be eliminated.
+  Consistency, configurability, and generalization are often desirable qualities, but they can lead to unnecessary complexity. Review your design for misguided efforts in consistency (such as having redundant text), generalization (such as having any several time zones when two is enough), and configurability (such as options that users aren't likely to change), and eliminate what can be eliminated.
 
-> - Put the elements in the right place. Within a window, an element's location should follow its utility. Essential controls, instructions, and explanations should all be in context in logical order. If more options are needed, expose them in context by clicking a chevron or similar mechanism; if more information is needed, display an infotip on mouse hover. Place less important tasks, options, and Help information outside the main flow in a separate window or page. The technique of displaying additional detail as needed is called progressive disclosure.
+> - Put the elements in the right place. Within a window, an element's location should follow its utility. Essential controls, instructions, and explanations should all be in context in logical order. If more options are needed, expose them in context by clicking a chevron or similar mechanism; if more information is needed, display an info-tip on mouse hover. Place less important tasks, options, and Help information outside the main flow in a separate window or page. The technique of displaying additional detail as needed is called progressive disclosure.
 
 > - Use meaningful high-level combinations. It is often simpler and more scalable to select and manipulate groups of related elements than individual elements. Examples of high-level combinations include folders, themes, styles, and user groups. Such combinations often map to a user goal or intention that isn't apparent from the individual elements. For example, the intention behind the High Contrast Black color scheme is far more apparent than that of a black window background.
 
-> - Select the right controls. Design elements are embodied by the controls you use to represent them, so selecting the right control is crucial to efficient presentation. For example, the font selection box used by Microsoft Word shows both a preview of the font as well as the most recently used fonts. Similarly, the way Word shows potential spelling and grammar errors in place is much simpler than the dialog box alternative, as shown in the beginning of this article.
+> - Select the right controls. Design elements are embodied by the controls you use to represent them, so selecting the right control is crucial to efficient presentation. For example, the font selection box used by Microsoft Word shows both a preview of the font and also the most recently used fonts. Similarly, the way Word shows potential spelling and grammar errors in place is much simpler than the dialog box alternative.
 
 > - Make tasks discoverable and visible. All tasks, but especially frequent tasks, should be readily discoverable within the user interface. The steps required to perform tasks should be visible and should not rely on memorization.
 
@@ -68,11 +68,11 @@ The following items are cited from different UX guidelines from the web:
 
 > - Use safe, secure, probable defaults. If a setting has a value that applies to most users in most circumstances, and that setting is both safe and secure, use it as the default value. Make users specify values only when necessary.
 
-> - Use constraints. If there are many ways to perform a task, but only some are correct, constrain the task to those correct ways. Users should not be allowed to make readily preventable mistakes.
+> - Use constraints. If many ways to perform a task exist, but only some are correct, constrain the task to those correct ways. Users should not be allowed to make readily preventable mistakes.
 
 [Window UX Top Violations](https://docs.microsoft.com/en-us/windows/win32/uxguide/top-violations):
 
-> - Use ordinary, conversational terms when you can. Focus on the user goals, not technology. This is especially effective if you are explaining a complex technical concept or action. Imagine yourself looking over the user's shoulder and explaining how to accomplish the task. IN CONFLICT WITH Domain
+> - Use ordinary, conversational terms when you can. Focus on the user goals, not technology. This is especially effective if you are explaining a complex technical concept or action. Imagine yourself looking over the user's shoulder and explaining how to do the task. IN CONFLICT WITH Domain
 
 > - Be polite, supportive, and encouraging. The user should never feel condescended to, blamed, or intimidated.
 
@@ -106,7 +106,7 @@ Use notifications only if you need to. When you display a notification, you are 
 Use notifications for non-critical events or situations that don't require immediate user action. For critical events or situations that require immediate user action, use an alternative UI element (such as a modal dialog box).
 Don't use notifications for feature advertisements!
 
-> - Never require users to click an object to determine if it is clickable. Users must be able to determine clickability by visual inspection alone.
+> - Never require users to click an object to determine if it is clickable. Users must be able to determine the clickability by visual inspection alone.
 
 > - Whenever possible, propose a solution so users can fix the problem. However, make sure the proposed solution is likely to solve the problem. Don't waste users' time by suggesting possible, but improbable, solutions.
 
@@ -125,7 +125,7 @@ Catastrophic, fatal (use serious instead)
 
 ## Dark theme
 
-Use the predefined colors in MPS or define your own colors using the class  [JBColor](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor) with the constructor `JBColor(light theme color, dark theme color)`. By using this class, it shouldn't be necessary to verify if the user is [using the Darcula theme](https://stackoverflow.com/c/itemis-mps/questions/426). The MPS colors already support the light and dark theme because they inherit from `JBColor`. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don't use hard-coded hex colors or the class [Color](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor).
+Use the predefined colors in MPS or define your own colors using the class [JBColor](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor) with the constructor `JBColor(light theme color, dark theme color)`. By using this class, it shouldn't be necessary to verify if the user is [using the Darcula theme](https://stackoverflow.com/c/itemis-mps/questions/426). The MPS colors already support the light and dark theme because they inherit from `JBColor`. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don't use hard-coded hex colors or the class [Color](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor).
 
 <figure markdown>
   ![light theme](light_theme_colors.png)

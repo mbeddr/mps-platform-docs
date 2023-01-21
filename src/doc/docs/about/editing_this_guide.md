@@ -44,7 +44,7 @@ Besides the Material extensions, the project used the following [Pymdown](https:
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
 - [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 
-- [mdx-spanner](https://pypi.org/project/mdx-spanner):enables rowspan and colspan in markdown tables
+- [mdx-spanner](https://pypi.org/project/mdx-spanner):enables rowspan and colspan in Markdown tables
 
 ## Macros
 

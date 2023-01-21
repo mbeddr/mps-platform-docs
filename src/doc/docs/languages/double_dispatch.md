@@ -99,7 +99,7 @@ public class DoubleDispatch {
 7. Asteroid hit an ApolloSpacecraft
 8. ExplodingAsteroid hit a SpaceShip
 
-The desired result here would be *ExplodingAsteroid hit an ApolloSpacecraft* but instead you get *ExplodingAsteroid hit a SpaceShip*.
+The desired result here would be *ExplodingAsteroid hit an ApolloSpacecraft*, but instead you get *ExplodingAsteroid hit a SpaceShip*.
 To support double dispatch, import the dispatch language and include dispatch modifiers in ExplodingAsteroid:
 
 ``` java

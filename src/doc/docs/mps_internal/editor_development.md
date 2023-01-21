@@ -9,12 +9,12 @@ tags:
 - *edited node*: the (root) node that the editor component was created for
 - *cell*: the MPS editor consists of cells which themselves can contain other cells or UI elements like texts or buttons.
 - *root cell*: the topmost cell of the editor component
-- *big cell*: a cell is big if it's the top-most cell available in the editor for an associated node. Example: in the plus expression [left + right] the surrounding collection would be the big cell for the plus expression node.
+- *big cell*: a cell is big if it's the top-most cell available in the editor for an associated node. Example: in the plus expression[left + right] the surrounding collection would be the big cell for the plus expression node.
 
 A few terms are also common in typography or are encountered in web development.
 
 - *padding-left/right/top/bottom*: a floating point number, which specifies the padding of a text cell, that's how much space is between the cell's text and cell's left and right sides, respectively.
-- *inset*: size of the elements' borders. It specifies the space that an element must leave at each of its edges. In some editor cells, it corresponds to the so-called padding of the editor cell.
+- *inset*: size of the elements' borders. It specifies the space that an element must leave at its edges. In some editor cells, it corresponds to the so-called padding of the editor cell.
 - *baseline*: the line upon which most letters sit ([other explanation](https://fonts.google.com/knowledge/glossary/baseline)).
 - *ascent*: the recommended distance above the baseline for a single spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
 - *descent*: the recommended distance below the baseline for a single spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
@@ -34,14 +34,14 @@ to render the node tree as a projection-specific text, render the node tree as a
 and other use cases ([source](http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F8425027850913231105)).
 
 When initializing an editor component, an [editor configuration](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.configuration%28MPS.Editor%2F%29%2F%7EEditorConfiguration) can be provided. The property *notifies* tells the editor component to send out
-[EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener) notifications. The property is set to true for MPS IDE editors and the inspector, and false for other scenarios. There are some languages in {{ mps_extensions() }} that need this flag to be true, so that the languages get activated.
+[EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener) notifications. The property is set to true for MPS IDE editors and the inspector, and false for other scenarios. Some languages in {{ mps_extensions() }} need this flag to be true, so that the languages get activated.
 
 The editor component itself extends [JComponent](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/JComponent.html), has [antialiasing enabled](https://github.com/JetBrains/MPS/blob/e5db64ce7b7a419b0ea746dfa0d2f1e7bfabcf72/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L224) and has a left margin of 15 pixels, and top margin of 10 pixels. The gap between the content and the scrollbars is 15 pixels. The editor contains objects of type [EditorCell](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell), arranged in a tree structure. You can right-click in the editor and select *Language Debug* --> *Show Cell in Explorer* to show the current selected cell in the cell explorer tool. The editor component is not only responsible for the editor content but also interacts with the type checking thread, the highlighter (left highlighter column but also the message gutter on the right side).
 
 ## Left highlighter
 
 The left editor highlighter contains the buttons for folding editor cells and other buttons such as *implements interface* and
-*overrides method*. There are two different ways of adding new information to the highlighter:
+*overrides method*. Two different ways of adding new information to the highlighter exist:
 
 1. Add a new checker to the highlighter ([example](http://127.0.0.1:63320/node?ref=r%3A59f5b892-a6eb-4a9b-9c81-ecffc10026ee%28jetbrains.mps.ide.highlighters.behavior%29%2F1401464578585771758)). The checker can only contribute an icon and tooltip to the main column.
 2. Add a new column ([example](http://127.0.0.1:63320/node?ref=r%3Af509a650-cbd9-47e7-b2a0-79f49c562c0b%28jetbrains.mps.vcs.annotate%29%2F5393486658546720417)). It's more difficult to implement but the column can be fully customized.
@@ -51,7 +51,7 @@ The left editor highlighter contains the buttons for folding editor cells and ot
 ### UpdateSession
 
 As the name already implies, the class updates the editor. It registers dependencies between nodes, registers big cells, update child cells
-and can return attributed cells. It also gives access to the EditorCellFactory through *getCellFactory()*. It be accessed through
+and can return attributed cells. It also gives access to the EditorCellFactory through *getCellFactory()*. It can accessed through
 *Updater.getCurrentUpdateSession*. Read the [JavaDoc](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/update/UpdateSession.java) to understand
 how dependencies in the editor work.
 
@@ -89,7 +89,7 @@ one to customize the behavior.
 When a node is copied to the clipboard, the node itself and a textual representation are copied. The method *renderText()*
 is used for the latter case as it renders the cell and its descendants as text.
 
-There is also an EditorCellContext that can be modified by calling *getCellContext* and *setReferenceCell*. The first method returns non-null values for any big cell
+The EditorCellContext can be modified by calling *getCellContext* and *setReferenceCell*. The first method returns non-null values for any big cell
 and also for any non-big cell if the context was changed by its parent (e.g. parent collection cell pushes down some additional hints)
 The CellInfo instance can be used to remember the cell to find it later in (another instance of) the editor.
 
@@ -113,7 +113,7 @@ myHeight = myImages.getWidth();
 
 ### Manipulation/traversal
 
-- [CellTraversalUtil](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellTraversalUtil): navigation of the editor cell tree. There is the method *iterateTree* that returns an iterator, that can be used to iterate through a tree.
+- [CellTraversalUtil](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellTraversalUtil): navigation of the editor cell tree. The method *iterateTree* returns an iterator, that can be used to iterate through a tree.
 - [CellFinderUtil](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7ECellFinderUtil)
 - [CellFinder](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.messageTargets%28MPS.Editor%2F%29%2F%7ECellFinder)
 - [EditorUtil](http://127.0.0.1:63320/node?ref=r%3A2a70cba0-4dc5-4697-986d-5cba44622d22%28de.itemis.mps.editor.diagram.runtime%29%2F1670655850626359511) in {{ mps_extensions() }}.
@@ -127,7 +127,7 @@ of the folded cells will stay the same in the folded state and will be recalcula
 
 ### CellLayout
 
-There is in the [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} and the cell layouter in MPS. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
+The [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} has its own layouter and there is also the MPS layouter. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
 different layouts first. The different layouts are described in the [MPS documentation](https://www.jetbrains.com/help/mps/editor.html#celllayouts).
 What are the advantages of the celllayout language with respect to the MPS layouts?
 
@@ -140,26 +140,23 @@ This gives more control over the resulting layout, such as:
 - Richtext (or any ident layout) can be wrapped to fit into the size of
   a table column. Indent layout always wrap at the right
   margin line.
-- making a horizontal line as wide as the cell above/below or as the whole
-  page
+- making a horizontal line as wide as the cell above/below or as wide as the page
 - having additional cells on the right of a richtext without them being
   pushed over the right margin (the text wraps earlier).
 - In a diagram, the content of a box can fit to the size of the box.
-  This is especially useful is there are subdiagrams in the box. Before
+  This is especially useful if sub-diagrams exist in the box. Before
   this was possible only with some ugly hacks.
 
-There is also a CSS like box model that allows setting border sizes and
-margins on cells and respect them in the layout. MPS by default allows
-only borders of size 1.
+A CSS like box model can be use for setting border sizes and
+margins on cells and respect them in the layout. MPS by default allows only borders of size 1.
 
 This framework is compatible with the existing layouts in MPS.
-That means, there're implementations for horizontal/vertical/
-vertical-grid/indent layouts, that support this new architecture. You
-don't need to change anything, and you can still use the MPS editor language.
+That means, implementations for horizontal, vertical,
+vertical-grid and indent layouts exist, that support this new architecture. You don't need to change anything, and you can still use the MPS editor language.
 
 You can also have custom layouts based on the default MPS layout
-architecture. This framework is able to handle them in a parent cell
-(for example: margin comments) or in a child cell (e. g. math).
+architecture. This framework can handle them in a parent cell
+(for example: margin comments) or in a child cell (e.g. math).
 
 {{ contribution_by('slisson') }}
 
@@ -181,14 +178,14 @@ editorContext.getEditorComponent().getUpdater().getCurrentUpdateSession().getCel
 
 The [selection manager](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.selection%28MPS.Editor%2F%29%2F%7ESelectionManagerImpl) handles the selection stack. When [extending the selection](https://www.jetbrains.com/help/mps/selecting-text-in-the-editor.html#select-text) in the editor, a new selection object is pushed onto the stack.
 When [shrinking the selection](https://www.jetbrains.com/help/mps/selecting-text-in-the-editor.html#select-text), the selection is removed (pop selection)
-from the stack. The deepest selection refers to the top of the stack. To get the current selection, call *getSelection*, to unselect everything call *clearSelection*. There are a few different setSelection methods that are explained in the [JavaDoc](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/selection/SelectionManager.java) that work with nodes or cells.
+from the stack. The deepest selection refers to the top of the stack. To get the current selection, call *getSelection*, to unselect everything call *clearSelection*. A few different *setSelection* methods exist that are explained in the [JavaDoc](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/selection/SelectionManager.java) that work with nodes or cells.
 A selection contains the following information and methods:
 
  - the selection info (*getSelectionInfo()*) that is persisted and is used to restore the selection when the editor is reopened.
  - *canExecuteAction* and executeAction to execute an action for the selected cells. The available actions are listed in the enum
 [CellActionType](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType). The different types are implemented as actions in plugin solutions, e.g., the action [SelectLocalHome](http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003) calls `#!java editorComponent.getSelectionManager().getSelection().executeAction(CellActionType.SELECT_LOCAL_HOME)`.
 
-There are a few builtin selections:
+A few builtin selections exist:
 
 - [EditorCellLabelSelection](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.selection%28MPS.Editor%2F%29%2F%7EEditorCellLabelSelection): a selection for EditorCell_Label cells, that supports ranges. A trivial selection in this context is a selection instance where the start equals the end of the selection.
 - [EditorCellSelection](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.selection%28MPS.Editor%2F%29%2F%7EEditorCellSelection): a selection of a single editor cell. The caret position is also saved in the selection.
@@ -283,7 +280,7 @@ lead to class reloading issues and memory leaks.
 
 [EditorCell_Basic](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Basic) overwrites *paintComponent* and calls *paintCell* to paint the cell itself + *paintDecorations* to draw
 borders and messages in the editor. *paintCell* fills the background of the cell and paints the selection if necessary.
-Afterwards, the method *paintContent* is called which is the method that gets overriden most of the time. All of the paintX
+Afterwards, the method *paintContent* is called which is the method that gets overridden most of the time. All the *paintX*
 methods have a [Graphics](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html) that can be cast to a [Graphics2D](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html) if necessary. The old documentation at Oracle is still a good starting point
 to learn more about [2d Graphics in Java](https://docs.oracle.com/javase/tutorial/2d/index.html). To find examples in MPS,
 search for global usages of the [Graphics](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EGraphics) class.

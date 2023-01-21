@@ -13,7 +13,7 @@ In the GIF you can see the interpreter executing a test case that contains asser
 ## Creating an interpreter
 
 First you have to import the language `com.mbeddr.mpsutil.interpreter`.
-Now create a new interpreter and give it a name. The category should be `arithmetic` so that other interpreters of this category can also use this interpreter but you can also use other categories. There is, for example a [demo Java interpreter](http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048) in mpsutils(mbeddr) that uses its own category `java`. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.
+Now create a new interpreter and give it a name. The category should be `arithmetic` so that other interpreters of this category can also use this interpreter, but you can also use other categories. A [demo Java interpreter](http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048) exists in mpsutils (mbeddr) that uses its own category `java`. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.
 
 In the related interpreter section, you can define that the current interpret should run before or after another interpreter. [An example](http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270) from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.
 
@@ -21,27 +21,27 @@ The type mappings section can declare mappings from types that implement the [IT
 
 ![KernelF: expression simple interpreter](exprSimpleInterpreter.png)
 
-An evalutator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set *cacheValues* to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking *Tools*-->*Enable Interpreter Cache* in the main menu.
+An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set *cacheValues* to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking *Tools* --> *Enable Interpreter Cache* in the main menu.
 
 ![evaluator of literals concept](literals_evaluator.png){width="600px"}
 
-The right side contains is an expression or a block and must return a value. The *node* expression refers to the currently evaluated expression. There are a few expressions starting with '#', that are explained in their corresponding short descriptions. The '#->' expression is used to call functions (search for usages globally).
-The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the *env* expression. It's an array that can be used to save values for other evalulators. The key must be a node. If you don't have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. `"hello".startswith("he")`. `startswith()` is the operation, `"hello"` is the operand:
+The right side contains is an expression or a block and must return a value. The *node* expression refers to the current evaluated expression. A few expressions start with *#*, that are explained in their corresponding short descriptions. The *#->* expression is used to call functions (search for usages globally).
+The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the *env* expression. It's an array that can be used to save values for other evaluators. The key must be a node. If you don't have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. `"hello".startswith("he")`. `startswith()` is the operation, `"hello"` is the operand:
 
 ![evaluator of startswith concept](startswith_evaluator.png)
 
-In case that the current interpreter is not suitable for interpreting the current node, the expression *tryOtherInterpreter* can be used to use the next interpreter to interpret the current node:
+When the current interpreter is not suitable for interpreting the current node, the expression *tryOtherInterpreter* can be used to use the next interpreter to interpret the current node:
 
 ![try other interpreter expression](tryOtherInterpreter.png)
 
 The *castUp* expression can be used to case a Java (baselanguage) expression to a type.
 For example, if the expression is of type Number (numberInput) and the target type is float,
 `numberInput.floatValue()` would be called.
-The *$* expression returns the type of a concept. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evalator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn't be used:
+The *$* expression returns the concept's type. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evaluator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn't be used:
 
 ![evaluator of modulus](mod_evaluator.png){width="600px"}
 
-The *context* expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling `context.getEnvironment()`. The environment can be nested by calling `push` and `pop`. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if there is an evaluator available for a specific node.
+The *context* expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling `context.getEnvironment()`. The environment can be nested by calling `push` and `pop`. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if an evaluator for a specific node is available.
 
 ## Code coverage
 
@@ -67,7 +67,7 @@ class Coverage {
 }
 ```
 
-There are also methods which don't need coverage, a context object and so forth. The easiest method is `helper.evaluate` which returns a Java expression.
+Other methods don't need coverage, a context object and so forth. The easiest method is `helper.evaluate` which returns a Java expression.
 
 ## Final notes
 

@@ -30,10 +30,10 @@ core,ext: Lorem ipsum dolor sit amet.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 ```
 
-The optional paragraph at the end of your commit message contains further information about the change. Tests were added or describe why the fix was necessary, maybe there are special conditions when the issue surfaces.
+The optional paragraph at the end of the commit message contains further information about the change. Tests were added or describe why the fix was necessary, maybe there are special conditions when the issue surfaces.
 This is also the place where you can put GitHub [issue commands](https://help.github.com/articles/closing-issues-via-commit-messages/) to close or reference other issues.
 
-Further information and ideas on  how to write good commit messages can be found [here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) and [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+Further information and ideas on how to write good commit messages can be found [here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) and [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 ## Branches
 
@@ -41,7 +41,7 @@ We make heavy use of branches in the development process. If your task requires 
 
 Two types of branches exist: *feature* and *refactor*: the first is used for new features, the second for bug fixes or code refactorings. They are distinguished by prefix: a feature branch my-awesome-stuff would be named *feature/my-awesome-stuff* or *refactor/my-awesome-stuff*, if it's a refactoring branch. Both kinds of branches should be short living (a couple of days) to reduce the risk of diverting to far from master and causing huge afford to merge. Ideally, no commits happen directly to *master* and every commit is first evaluated on a feature/refactoring branch.
 
-Note: Nowadays we mostly do merging instead of rebasing. The following sections might therefore not accurately reflect the current workflow.
+Nowadays, we mostly do merging instead of rebasing. The following sections might therefore not accurately reflect the current workflow.
 
 ### Merging
 
@@ -117,7 +117,7 @@ Now Git history looks like this:
 * 5cee848        initial commit
 ```
 
-You haven't created a merge commit, and all commits from your branch appear as a single commit in the Git history. You are good to go to push back to the repo. But wait, what if somebody has changes things in the meantime on the remote, wouldn't the pull create a new merge? Yes it would! Therefor don't use a plain `git pull` but use `git pull --rebase` in case you are pulling from the repo into your local *master* branch. This way, Git doesn't produce a new merge commit but rebase your local changes on top of the remote changes.
+You haven't created a merge commit, and all commits from your branch appear as a single commit in the Git history. You are good to go to push back to the repo. But wait, what if somebody has changes things in the meantime on the remote, wouldn't the pull create a new merge? Yes it would! Therefor don't use a plain `git pull` but use `git pull --rebase` for when you are pulling from the repo into your local *master* branch. This way, Git doesn't produce a new merge commit but rebase your local changes on top of the remote changes.
 
 ## Test Organization
 
@@ -158,8 +158,8 @@ folder "${PROJECT_HOME}" {
 
 ### Build script setup
 
-In mbeddr there are different build scripts. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
-This documentation guides you in following the mbeddr standards for setting up your *BuildProject* and integrating it into Mbeddr's build infrastructure.
+In mbeddr different build scripts exist. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
+This documentation guides you to following the mbeddr standards for setting up your *BuildProject* and integrating it into Mbeddr's build infrastructure.
 
 #### Required BuildFolderMacros
 

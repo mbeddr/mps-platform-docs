@@ -42,7 +42,7 @@ tags:
 | NONEMPTY_CONTENT_MANAGER     | Returns a non empty managing class that's responsible for the current component's content                                                                           | :no_entry:         |
 | PASTE_PROVIDER               | Returns the paste provider responsible for pasting data.                                                                                                            | :white_check_mark: |
 | PREDEFINED_TEXT              | Returns a predefined text value.                                                                                                                                    | :no_entry:         |
-| PROJECT_CONTEXT              | Returns a project if a project node is selected (in theproject view).                                                                                               | :no_entry:         |
+| PROJECT_CONTEXT              | Returns a project if a project node is selected (in the project view).                                                                                              | :no_entry:         |
 | PROJECT_FILE_DIRECTORY       || :white_check_mark:                                                                                                                                                  |
 | SEARCH_INPUT_TEXT            || :no_entry:                                                                                                                                                          |
 | SELECTED_ITEM                | Returns a single selection item.                                                                                                                                    | :white_check_mark: |

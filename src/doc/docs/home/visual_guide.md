@@ -40,7 +40,7 @@ When you click the shape, you are redirected to the corresponding documentation 
     <area target="_blank" alt="Editor aspect" title="Editor aspect" href="https://www.jetbrains.com/help/mps/editor.html" coords="76,325,177,340" shape="rect">
     <area target="_blank" alt="Constraints aspect" title="Constraints aspect" href="https://www.jetbrains.com/help/mps/constraints.html" coords="76,344,177,364" shape="rect">
     <area target="_blank" alt="Behavior aspect" title="Behavior aspect" href="https://www.jetbrains.com/help/mps/behavior.html" coords="76,368,177,383" shape="rect">
-    <area target="_blank" alt="Typesystem aspect" title="Typesystem aspect" href="https://www.jetbrains.com/help/mps/typesystem.html" coords="74,387,177,401" shape="rect">
+    <area target="_blank" alt="Type system aspect" title="Type system aspect" href="https://www.jetbrains.com/help/mps/typesystem.html" coords="74,387,177,401" shape="rect">
     <area target="_blank" alt="Intentions aspect" title="Intentions aspect" href="https://www.jetbrains.com/help/mps/mps-intentions.html" coords="74,406,177,419" shape="rect">
     <area target="_blank" alt="Dataflow aspect" title="Dataflow aspect" href="https://www.jetbrains.com/help/mps/data-flow.html" coords="74,423,177,440" shape="rect">
     <area target="_blank" alt="Migrations aspect" title="Migrations aspect" href="https://www.jetbrains.com/help/mps/migrations.html" coords="74,445,177,459" shape="rect">
@@ -91,9 +91,9 @@ When you click the shape, you are redirected to the corresponding documentation 
     <area target="" alt="Separator" title="Separator" href="https://jetbrains.github.io/ui/controls/toolbar_drop_down/#how-to-use" coords="1558,29,1570,50" shape="rect">
     <area target="_blank" alt="Stop process (run configuration)" title="Stop process (run configuration)" href="https://www.jetbrains.com/help/mps/run-tool-window.html#run-toolbar" coords="1540,32,1553,51" shape="rect">
     <area target="" alt="Project name" title="Project name" href="" coords="637,6,744,19" shape="rect">
-    <area target="_blank" alt="Typesystem tests" title="Typesystem tests" href="https://www.jetbrains.com/help/mps/testing-languages.html#testingaspectsoflanguagedefinitions" coords="59,263,221,278" shape="rect">
+    <area target="_blank" alt="Typesystem tests" title="Type system tests" href="https://www.jetbrains.com/help/mps/testing-languages.html#testingaspectsoflanguagedefinitions" coords="59,263,221,278" shape="rect">
     <area target="_blank" alt="Java package name" title="Java package name" href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html" coords="84,605,172,619" shape="rect">
-    <area target="_blank" alt="Typesystem warning in project view" title="Typesystem warning in project view" href="https://www.jetbrains.com/help/mps/typesystem.html#severity" coords="338,921,360,938" shape="rect">
+    <area target="_blank" alt="Type system warning in project view" title="Type system warning in project view" href="https://www.jetbrains.com/help/mps/typesystem.html#severity" coords="338,921,360,938" shape="rect">
     <area target="_blank" alt="Root node of current editor" title="Root node of current editor" href="" coords="3,30,122,49" shape="rect">
     <area target="_blank" alt="Constant cell (EditorCell_Constant)" title="Constant cell (EditorCell_Constant)" href="https://www.jetbrains.com/help/mps/editor.html#constant%C2%A0cell" coords="" shape="rect">
     <area target="_blank" alt="Child list cell (as an EditorCell_Collection)" title="Child list cell (as an EditorCell_Collection)" href="https://www.jetbrains.com/help/mps/editor.html#childlistcell" coords="697,286,1038,300" shape="rect">

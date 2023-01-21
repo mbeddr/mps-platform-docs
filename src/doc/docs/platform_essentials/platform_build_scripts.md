@@ -30,27 +30,25 @@ should be downloaded: it must be compatible with the used Java version ([compati
 to the Java installation must be set. For the build it isn't important if it's a normal JDK or a JBR, only the Java version must
 be correct.
 
-[Line 71](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L71): there are
-a few ways to specify properties for the build. [This guide](https://tomgregory.com/gradle-project-properties-best-practices/) explains them.
+[Line 71](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L71): a few different ways exist to specify properties for the build. [This guide](https://tomgregory.com/gradle-project-properties-best-practices/) explains them.
 
 [Line 77](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L77): this list contains the Nexus repositories that are used for fetching the dependencies. The actual declaration is done on [line 138](https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle#L138).
 
 [Line 83-109](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L83): the logic for deciding the version identifier. It uses hardcoded values, the branch name and *ciBuild* and the class [GitBasedVersioning](https://github.com/mbeddr/mps-gradle-plugin/blob/9135418e30d9a5fe963d275410a91f3b595ddb7f/src/main/groovy/de/itemis/mps/gradle/GitBasedVersioning.groovy#L6) to create a suitable identifier. A local build gets the version *1.0-SNAPSHOT* as described in the [Maven guide](https://maven.apache.org/guides/getting-started/index.html#What_is_a_SNAPSHOT_version). More information can be found in [this StackOverflow question](https://stackoverflow.com/questions/5901378/what-exactly-is-a-maven-snapshot-and-why-do-we-need-it).
 
-[Line 112-123](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L112): the plugins directory varies dependening on the operating system ([Plugins directory | MPS](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#plugins-directory)).
+[Line 112-123](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L112): the plugins directory varies depending on the operating system ([Plugins directory | MPS](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#plugins-directory)).
 
 [Line 125](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L125): the following variables contain the Nexus repositories that are used for publishing the artifacts.
 
-[Line 130-136](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L130): a new [configuration](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.Configuration.html) named *mps* is declared. It's used for declaring the dependency on MPS. the dependencies block declares the dependency. The dependency isn't automatically resolved because a custom configuration is used. The resolution task is created on [line 150](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L150) and the following lines. `configurations.mps.resolve()` downloads the zip file, `zipTree`unzips it into the mps home directory.
+[Line 130-136](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L130): a new [configuration](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.Configuration.html) named *mps* is declared. It's used for declaring the dependency on MPS. The dependencies block declares the dependency. The dependency isn't automatically resolved because a custom configuration is used. The resolution task is created on [line 150](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L150) and the following lines. `configurations.mps.resolve()` downloads the zip file, `zipTree`unzips it into the mps home directory.
 
-[Line 168-174](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L168): this dependency is needed, so that there is support for junit ant tasks.
-
-[Line 183-199](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L183): some system variables are set by prepending `-D` in front of the key-value pairs. These variables are actually declared in the build solution in the build script of the MPS project. They can be overriden from the command line this way.
+[Line 168-174](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L168): this dependency is needed to support Junit ant tasks.
+[Line 183-199](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L183): some system variables are set by prepending `-D` in front of the key-value pairs. These variables are actually declared in the build solution in the build script of the MPS project. They can be overridden from the command line this way.
 
 [Line 204-219](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L204): the all script is a special MPS build script that calls all other build scripts. This task has the type *BuildLanguages* as described in the gradle-plugin documentation and executes the xml file that was created by the MPS build language. The next lines also declare tasks for building the languages and running the tests. They call the corresponding build scripts from the build module of this project (^^de.itemis.mps.extensions.build^^).
 
-[Line 221](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L221): this task installs the nativlibs.loader plugin which can be used for loading native code(e.g. C code) that is needed for a Java library (e.g. C debugger). The reason why a special plugin is needed is that there are special methods for loading native code in Java. Normal
-MPS solutions should'nt be used for this task because they can be reloaded in MPS which isn't possible with native libraries. This plugin is implemented as an IntelliJ plugin which is not affected by the MPS reloading mechanism.
+[Line 221](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L221): this task installs the nativlibs.loader plugin which can be used for loading native code(e.g. C code) that is needed for a Java library (e.g. C debugger). A special plugin is needed because there are special methods for loading native code in Java. Normal
+MPS solutions shouldn't be used for this task because they can be reloaded in MPS which isn't possible with native libraries. This plugin is implemented as an IntelliJ plugin which is not affected by the MPS reloading mechanism.
 
 [Line 250](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L250): this block declares the Junit ant dependency.
 
@@ -63,17 +61,17 @@ on the build server (e.g. TeamCity) or in the GitHub project itself, when the pr
 
 [Line 319-339](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L326): this block defines one single publication *de.itemis.mps:extensions*. It also publishes a Maven [pom file](https://maven.apache.org/pom.html) that lists all the dependencies of this artifact (in this case: only MPS).
 
-[Line 376](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L376): this block declares the publication for GitHub. **Warning**: it's not possible to publish an artifact with the same name on GitHub, it won't be overriden.
+[Line 376](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L376): this block declares the publication for GitHub. **Warning**: it's not possible to publish an artifact with the same name on GitHub, it won't be overridden.
 
 The rest of the build script uses [modelix/mpsbuild](https://github.com/modelix/mpsbuild), a replacement for the MPS build language. Visit [Exploring modelix/mpsbuild - Specific Languages](https://specificlanguages.com/posts/2022-05/30-exploring-modelix-mpsbuild/) for some initial information on this project.
 
 ##[iets3.opensource/build.gradle](https://github.com/IETS3/iets3.opensource/blob/master/build.gradle)
 
-The build script looks very similar to the script from MPS-extensions, so let's focus only on the differences.
+The build script looks like the script from MPS-extensions, so let's focus only on the differences.
 
-[Line 68-112](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L68): the project has a dependency on mbeddr which can be overriden with a local dependency by setting the project variable *forceLocalDependencies*.
+[Line 68-112](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L68): the project has a dependency on mbeddr which can be overridden with a local dependency by setting the project variable *forceLocalDependencies*.
 
-[Line 134-139](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L134): a few configurations are declared in this block. The dependency of this configurations are resolved in different Gradle tasks, for example in the task *resolvePcollections* on [line 179](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L179).
+[Line 134-139](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L134): a few configurations are declared in this block. The dependency of these configurations are resolved in different Gradle tasks, for example in the task *resolvePcollections* on [line 179](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L179).
 
 [Line 259-264](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L259): additional to exporting the languages and solutions, the project also creates a [standalone IDE (RCP)](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html.)
 
@@ -84,4 +82,4 @@ by KernelF (e.g. *org.iets3.core.expr.datetime.runtime* for the datetime languag
 
 ## Mbeddr build scripts
 
-The main [build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle) can be found in the root directory. There is also a *build* subfolder. The most important build files are [com.mbeddr/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle) which build mbeddr itself and [com.mbeddr/platform/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle) which builds the mbeddr platform.
+The main [build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle) can be found in the root directory. A *build* subfolder exists. The most important build files are [com.mbeddr/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle) which build mbeddr itself and [com.mbeddr/platform/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle) which builds the mbeddr platform.

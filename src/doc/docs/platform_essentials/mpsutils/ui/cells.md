@@ -21,7 +21,7 @@ return new AsyncCellProvider(node, { =>
 
 > ^^com.mbeddr.mpsutil.framecell^^
 
-[frame](http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790) is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:
+The [frame](http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790) cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:
 
 - **frame-color**: the color of the frame (default: black)
 - **frame-width**: the thickness of the frame (default: 1 pixel)
@@ -37,7 +37,7 @@ In most cases, the language ^^de.itemis.mps.editor.celllayout^^ from {{ mps_exte
 
 > ^^com.mbeddr.mpsutil.margincell^^ and ^^com.mbeddr.mpsutil.review^^
 
-Margin cells are editor cells that are shown beyond the right editor margin, a little bit like comments in Word. In fact, the ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
+Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word. In fact, the ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
 
 ![example: margin cell](margincell_example.png)
 

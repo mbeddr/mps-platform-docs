@@ -163,8 +163,7 @@ Then:
 
 - For *ConceptZ*, type system rule *ConceptZTypeRule* gets evaluated.
 - For *ConceptY*, type system rules *ConceptYTypeRule1* and *ConceptYTypeRule2* get evaluated.  
-  *ConceptZTypeRule* is not evaluated, as at least one Rule for *ConceptY* defines
-  *[override=true]*.
+  *ConceptZTypeRule* is not evaluated, as at least one rule for *ConceptY* defines *[override=true]*.
 - For *ConceptX*, type system rules *ConceptYTypeRule1*, *ConceptYTypeRule2* and  
   *ConceptXTypeRule* get evaluated.  
   *ConceptYTypeRule1* and *ConceptYTypeRule2* get included because no rule for *ConceptX*
@@ -205,7 +204,7 @@ into *ConceptC* inside *LanguageC*.
 
 - Making sure that another generator is always executed if this generator gets executed.
 - Creating new reduction ruled to be used in another generator.
-- Createing a new switch entry for a switch in another generator.
+- Creating a new switch entry for a switch in another generator.
 
 *GeneratorB* inside *LanguageB* wants to extend *GeneratorA* inside *LanguageA*.  
 *GeneratorA* transforms *ConceptC* inside *LanguageC* into *ConceptD* inside *LanguageD*.  
@@ -250,7 +249,7 @@ is a *Used Language*.
 
 Note: We don't need any other relation, specifically, no dependency from *LanguageA* to *AccessorySolution*.
 
-## Create an utility Model (aka create complex implementations for Behavior Methods or Generators)
+## Create a utility Model (aka create complex implementations for Behavior Methods or Generators)
 
 *complexBehavior()* defined for *ConceptA* inside *LanguageA* needs *ComplexBehaviorInternalJavaClass* for its implementation or
 *GeneratorA* inside *LanguageA* needs *ComplexGeneratorInternalJavaClass* for its execution (e.g. for a complex condition or *macro*).

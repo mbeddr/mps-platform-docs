@@ -2,8 +2,8 @@
 
 !!! warning "Some sections on this page were written a few years ago where an older MPS version was used. Please report anything that isn't true anymore."
 
-First of all: the number of languages can be very important: Many small languages are hard to maintain while big languages
-take a long time building in the IDE. Many dependencies can create cycles which are described later on this page.
+The amount of languages can be important: many small languages are hard to maintain while big languages
+take a long time building in the IDE. Many dependencies can create cycles which are described later.
 
 By default, you can only reference nodes present in the current model. Dependencies add other models and modules that you can reference from the current model.
 
@@ -264,7 +264,7 @@ A Generator inherits some dependencies from the language where it's defined in:
 - The language's module is added to the generator module dependencies.
 - The language is added to the generator *Used languages*.
 
-Except the case of generating a concept of a language that has a runtime solution, there is no requirement on the language's dependencies or *Used Languages* stemming from the generator.
+Except the case of generating a concept of a language that has a runtime solution, there's no requirement on the language's dependencies or *Used Languages* stemming from the generator.
 
 ### Implicit exports of used language and language structure aspect
 
@@ -288,7 +288,7 @@ Neither runtime solutions nor accessory models constitute a dependency from the 
 ## Cyclic dependencies
 
 Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic *Extends Scope* dependency. Cycles between models in the same module are fine.
-Starting with MPS 2021.1, there is a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn't act as forgiving as the earlier one (ECJ).
+Starting with MPS 2021.1, there's a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn't act as forgiving as the earlier one (ECJ).
 
 Distinctive cases are runtime solutions, accessory models, and utility models.
 
@@ -296,4 +296,4 @@ In contrast to runtime solutions, utility models are used *while* accessing beha
 
 Accessory models can use or reference the language they're referenced from.
 
-For build scripts there is a flag that allows bootstrap dependencies. More information can be found in section *MPS Settings* of the [build language documentation](https://www.jetbrains.com/help/mps/build-language.html?q=bootstrap%20%E2%80%93%20setting%20this%20flag#whatismpsbuildlanguage?). 
+For build scripts there's a flag that allows bootstrap dependencies. More information can be found in section *MPS Settings* of the [build language documentation](https://www.jetbrains.com/help/mps/build-language.html?q=bootstrap%20%E2%80%93%20setting%20this%20flag#whatismpsbuildlanguage?). 

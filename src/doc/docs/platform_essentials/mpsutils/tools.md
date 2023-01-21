@@ -12,13 +12,13 @@ tags:
 !!! warning "There's a Context Actions (JetBrains) and Context Actions 2 (mbeddr) tool. Please use the one from JetBrains instead of this language."
 
 This language adds a tool with context-specific editor actions that can be navigated by mouse. For more information about the
-JetBrains implementation, visit the page [Context acions tool | MPS](https://www.jetbrains.com/help/mps/context-actions-tool.html)
+JetBrains implementation, visit the page [Context actions tool | MPS](https://www.jetbrains.com/help/mps/context-actions-tool.html)
 
 ### Editing guide
 
 > ^^com.mbeddr.mpsutil.editingGuide^^
 
-This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains a number of tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
+This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains several tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
 shown in the exercise. The monitor function checks the completion status of the task. The variable `program` refers to the code section, the `editorContext` can be used, for example,
 to get the selected cell by calling `editorContext.getSelectedCell()`. The following objects can be returned:
 
@@ -111,7 +111,7 @@ To use it in your own language, implement the [IJGraphProvider](http://127.0.0.1
 
 This provides an integration of [PlantUML](https://plantuml.com/) with MPS. Watch [this old video](https://www.youtube.com/watch?v=QjwXITp6fwg) to get an overview.
 
-To use it in your own languages, implement the [IVisualizable](http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880) interface in your language concept. Each concept can have several visualizations, called categories. The `getCategories()` method returns the list (just strings). The `getVisualization()` method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The `getVisualization()` method then has to fill the VisGraph with the actual visualization. This is done simply by using the `add()` method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the deails; in particular, There's a helper method on VisGraph that creates a URL for users to click in the graph: `createUrl(node)`.
+To use it in your own languages, implement the [IVisualizable](http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880) interface in your language concept. Each concept can have several visualizations, called categories. The `getCategories()` method returns the list (just strings). The `getVisualization()` method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The `getVisualization()` method then has to fill the VisGraph with the actual visualization. This is done simply by using the `add()` method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the details; in particular, There's a helper method on VisGraph that creates a URL for users to click in the graph: `createUrl(node)`.
 
 
 ### Tool runner

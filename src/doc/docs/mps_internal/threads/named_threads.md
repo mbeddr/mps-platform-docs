@@ -6,7 +6,7 @@ tags:
 
 # Reference: Named threads
 
-These lists contains named threads from Java, the IntelliJ platform and MPS.
+These lists contain named threads from Java, the IntelliJ platform and MPS.
 
 ## Java Threads
 

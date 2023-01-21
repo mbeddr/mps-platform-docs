@@ -15,7 +15,7 @@ Native crashes are crashes where MPS crashes internally (C/C++ code) and shows a
 - [IntelliJ IDEA](https://youtrack.jetbrains.com/issues/IDEA): IntelliJ (platform) related crashes
 - [JetBrains Runtime](https://youtrack.jetbrains.com/issues/JBR): mostly UI and JCEF related issues
 
-For crashes on MacOS, have a look at [Identifying the Cause of Common Crashes | developer.apple.com](https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes).
+For crashes on macOS, have a look at [Identifying the Cause of Common Crashes | developer.apple.com](https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes).
 
 ## Windows
 

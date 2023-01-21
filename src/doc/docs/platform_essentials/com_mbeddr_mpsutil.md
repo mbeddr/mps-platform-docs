@@ -26,7 +26,7 @@ The interpreter is described on the [interpreter](interpreter.md) page.
 
 ## Stubs
 
-There are stub models for the following Java libraries:
+Stub models for the following Java libraries exist:
 
 - [Mockito](https://site.mockito.org/): a framework for unit tests
 - [Open CSV](https://opencsv.sourceforge.net/)jav: a CSV (comma-separated values) parser library
@@ -36,7 +36,7 @@ There are stub models for the following Java libraries:
     - [XML Commons Resolver Component](https://mvnrepository.com/artifact/xml-resolver/xml-resolver)
     - [Xerces2 J](https://mvnrepository.com/artifact/xerces/xercesImpl)
 
-!!! warning "The included versions might be quite old."
+!!! warning "The included versions might be old."
 
 {% include 'platform_essentials/mpsutils/actions.md' %}
 
