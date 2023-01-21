@@ -9,9 +9,9 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/mpsutils/tools/" rel="canonical"/>
 <link href="../../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Tools - MPS Platform Docs</title>
-<link href="../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +99,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +266,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +368,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -799,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -869,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -980,9 +980,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <nav class="md-tags">
 <a class="md-tag" href="../../../tags/#reference">reference</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/mpsutils/tools.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>Tools</h1>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">¶</a></h2>
 <h3 id="context-actions">Context actions<a class="headerlink" href="#context-actions" title="Permanent link">¶</a></h3>
@@ -993,12 +990,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p class="admonition-title">There’s a Context Actions (JetBrains) and Context Actions 2 (mbeddr) tool. Please use the one from JetBrains instead of this language.</p>
 </div>
 <p>This language adds a tool with context-specific editor actions that can be navigated by mouse. For more information about the
-JetBrains implementation, visit the page <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context acions tool | <abbr title="Meta Programming System">MPS</abbr></a></p>
+JetBrains implementation, visit the page <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions tool | <abbr title="Meta Programming System">MPS</abbr></a></p>
 <h3 id="editing-guide">Editing guide<a class="headerlink" href="#editing-guide" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.editingGuide</ins></p>
 </blockquote>
-<p>This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains a number of tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
+<p>This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains several tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
 shown in the exercise. The monitor function checks the completion status of the task. The variable <code>program</code> refers to the code section, the <code>editorContext</code> can be used, for example,
 to get the selected cell by calling <code>editorContext.getSelectedCell()</code>. The following objects can be returned:</p>
 <ul>
@@ -1075,7 +1072,7 @@ As a language developer, you can implement an interface IJGraphProvider and impl
 <p><ins>com.mbeddr.mpsutil.plantuml.node</ins></p>
 </blockquote>
 <p>This provides an integration of <a href="https://plantuml.com/">PlantUML</a> with <abbr title="Meta Programming System">MPS</abbr>. Watch <a href="https://www.youtube.com/watch?v=QjwXITp6fwg">this old video</a> to get an overview.</p>
-<p>To use it in your own languages, implement the <a href="http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880">IVisualizable</a> interface in your language concept. Each concept can have several visualizations, called categories. The <code>getCategories()</code> method returns the list (just strings). The <code>getVisualization()</code> method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The <code>getVisualization()</code> method then has to fill the VisGraph with the actual visualization. This is done simply by using the <code>add()</code> method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the deails; in particular, There’s a helper method on VisGraph that creates a URL for users to click in the graph: <code>createUrl(node)</code>.</p>
+<p>To use it in your own languages, implement the <a href="http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880">IVisualizable</a> interface in your language concept. Each concept can have several visualizations, called categories. The <code>getCategories()</code> method returns the list (just strings). The <code>getVisualization()</code> method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The <code>getVisualization()</code> method then has to fill the VisGraph with the actual visualization. This is done simply by using the <code>add()</code> method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the details; in particular, There’s a helper method on VisGraph that creates a URL for users to click in the graph: <code>createUrl(node)</code>.</p>
 <h3 id="tool-runner">Tool runner<a class="headerlink" href="#tool-runner" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.toolrunner.plugin</ins></p>
@@ -1093,7 +1090,7 @@ This interface checks the availability of external tools and their proper config
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1170,8 +1167,8 @@ This interface checks the availability of external tools and their proper config
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../javascripts/tablesort.js"></script>

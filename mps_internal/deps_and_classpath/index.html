@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/deps_and_classpath/" rel="canonical"/>
+<link href="../open_api/" rel="prev"/>
+<link href="../terminology_and_ui_for_access/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>General - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -769,7 +771,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -799,7 +801,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -869,7 +871,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -984,9 +986,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#generator">generator</a>
 <a class="md-tag" href="../../tags/#solution">solution</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/deps_and_classpath/index.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="dependencies-and-classpath-in-mps">Dependencies and classpath in <abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#dependencies-and-classpath-in-mps" title="Permanent link">¶</a></h1>
 <p>This page describes the meaning and effect of different types of dependencies within <abbr title="Meta Programming System">MPS</abbr>, including the effects on the applicable Java classpath. It describes both the expected state and all bugs deviating from the expectations.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
@@ -1000,13 +999,13 @@ Other types of dependencies on modules include: <em>Java stubs</em> (in combinat
 <p><abbr title="Meta Programming System">MPS</abbr> Plugins are automatically loaded according to the solution Kind set in Java module settings.
 <abbr title="Meta Programming System">MPS</abbr> Plugins need to be contained in <abbr title="Meta Programming System">MPS</abbr> plugin models.</p>
 <h4 id="standaloneplugindescriptor">StandalonePluginDescriptor<a class="headerlink" href="#standaloneplugindescriptor" title="Permanent link">¶</a></h4>
-<p>We need to add a <em>StandalonePluginDescriptor</em> (defined in Language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins>) as a root node if a <abbr title="Meta Programming System">MPS</abbr> plugin model uses any concept from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. Other concepts from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> don’t need a <em>StandalonePluginDescriptor</em>.</p>
+<p>We need to add a <em>StandalonePluginDescriptor</em> (defined in Language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins>) as a root node if an <abbr title="Meta Programming System">MPS</abbr> plugin model uses any concept from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. Other concepts from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> don’t need a <em>StandalonePluginDescriptor</em>.</p>
 <h2 id="plugin-disambiguation">Plugin disambiguation<a class="headerlink" href="#plugin-disambiguation" title="Permanent link">¶</a></h2>
 <p>The term “plugin” is used at various places throughout <abbr title="Meta Programming System">MPS</abbr>. It describes different things:</p>
 <ul>
 <li>IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which <abbr title="Meta Programming System">MPS</abbr> is based upon.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> plugins: automatically loaded Models.</li>
-<li>Plugin language aspect: model inside a aanguage defining extension points.</li>
+<li>Plugin language aspect: model inside a language defining extension points.</li>
 <li>Build model plugins: part of the build model language providing new entries for build models.</li>
 </ul>
 <h2 id="non-project-sources">Non-project sources<a class="headerlink" href="#non-project-sources" title="Permanent link">¶</a></h2>
@@ -1042,7 +1041,7 @@ The dependency relations on modules and models are completely separated from the
 <li>The preceding conditions match <em>LanguageB</em> containing <em>GeneratorB</em> extending <em>GeneratorA</em></li>
 </ul>
 <p>For discussion, we establish a continued scenario:</p>
-<p>(The Relations listed here are not complete in order to reduce clutter. The <a href="https://github.com/enikao/mps-dependencies">complete example</a> is available.)</p>
+<p>(The Relations listed here are not complete to reduce clutter. The <a href="https://github.com/enikao/mps-dependencies">complete example</a> is available.)</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp9kbFuwzAMRHd-BefCXjoagRE0a5oMGYsMikUrAmTRkKgGBvrxlRA3jjN0pO4dD0dto6ggaXDgqBcUxmDNVVDbQJ1Y9gCdUzHiXnmTlKEPFQk3m301kXN8a1uAlfRW17hj39EoZW5QU289xX-p9wWb407sUomf404Vflt2JCXvTnyyJjfLxwpNUNMiHrI4a4cKXalkApEvxGKs0_ilWYT0uf5pVxUbTNF6A49FL-yqovX5innm_ml5qfjnbrBjLypzsCpWmIfjCYKr1YQ0jDLhQMOFQn7bktflo-AXCp6Ubg=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9kbFuwzAMRHd-BefCXjoagRE0a5oMGYsMikUrAmTRkKgGBvrxlRA3jjN0pO4dD0dto6ggaXDgqBcUxmDNVVDbQJ1Y9gCdUzHiXnmTlKEPFQk3m301kXN8a1uAlfRW17hj39EoZW5QU289xX-p9wWb407sUomf404Vflt2JCXvTnyyJjfLxwpNUNMiHrI4a4cKXalkApEvxGKs0_ilWYT0uf5pVxUbTNF6A49FL-yqovX5innm_ml5qfjnbrBjLypzsCpWmIfjCYKr1YQ0jDLhQMOFQn7bktflo-AXCp6Ubg=="/></a></p>
 <p><em>SolutionBase</em> doesn’t change during generation, as <em>LanguageBase</em> doesn’t define any generators.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp1ksFuwyAMhu88hc9T8gJRFVXboZdulx6nHmhwKBLBEZhVefuSbmMEdUfsz_4_S-wDS89xsmKwMgQ4Sqej1PgqA8Jud2wWtJZuff-kf0CXkENjjb6y9nLJVOqgl0w-r3kwFxsxM2_kBpx5JcRP6UQ2siH3t_zUwJchi5zH3kmhLdOhjBe130vr13a7VepgIMfSuCC2qt_0pyJmVOe2Ly07UDgahwEk-GgRRvJC1M45sBQt8jb-raKbK9JK-w5iME5XA3H-B3-kPJnIPh-pWt3-W6rWbm5OHMv0plGIq1EIOM28wITTBX0QYo9Ord_nDkHMzW8="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1ksFuwyAMhu88hc9T8gJRFVXboZdulx6nHmhwKBLBEZhVefuSbmMEdUfsz_4_S-wDS89xsmKwMgQ4Sqej1PgqA8Jud2wWtJZuff-kf0CXkENjjb6y9nLJVOqgl0w-r3kwFxsxM2_kBpx5JcRP6UQ2siH3t_zUwJchi5zH3kmhLdOhjBe130vr13a7VepgIMfSuCC2qt_0pyJmVOe2Ly07UDgahwEk-GgRRvJC1M45sBQt8jb-raKbK9JK-w5iME5XA3H-B3-kPJnIPh-pWt3-W6rWbm5OHMv0plGIq1EIOM28wITTBX0QYo9Ord_nDkHMzW8="/></a></p>
@@ -1056,7 +1055,7 @@ no generators at all.</p>
 <em>GeneratorBaseExtends</em> gets executed, because <em>LanguageBaseGenExtends</em> is listed in <em>Languages engaged in generation</em>. However, the Dependencies of the Language aren’t considered for selecting the running Generators.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNqVkzFrwzAQhXf9ipuLtXg0wYSWkiXtkrF0UK2zI5ClIJ3bBvrjKyXEkYic0tF3391797DWnoSjadRMY09AFpwa9gRSOexIWcNYp4X3sBVmmMSAj8IjrFbb6oha26-2LfQ3aJ6_CY30dUA3lY4rByeOMx0IdIKsi_gf7JM1HR4okreV-uJvZ_UU_d7q7yr4VFYjzRtfrERdMgqpOls6ifOfNru3ATz3FkceOC_f3EBnDQllPCtnchLLWle1hYk3aYlQvvM2S6oBib0y6EGAmzRCbx1jS7lFx6WcEsPFGPnp_7layHOavDLD_wczfTRDKC_IR9uvoXGWu281ZdO7LrUkyTTIBgJEInzbfmbrBbjO6OwRRfls7WzgHpYaZXslEXA80BFGHD_Qhdo6HBff8y8ANlv2"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqVkzFrwzAQhXf9ipuLtXg0wYSWkiXtkrF0UK2zI5ClIJ3bBvrjKyXEkYic0tF3391797DWnoSjadRMY09AFpwa9gRSOexIWcNYp4X3sBVmmMSAj8IjrFbb6oha26-2LfQ3aJ6_CY30dUA3lY4rByeOMx0IdIKsi_gf7JM1HR4okreV-uJvZ_UU_d7q7yr4VFYjzRtfrERdMgqpOls6ifOfNru3ATz3FkceOC_f3EBnDQllPCtnchLLWle1hYk3aYlQvvM2S6oBib0y6EGAmzRCbx1jS7lFx6WcEsPFGPnp_7layHOavDLD_wczfTRDKC_IR9uvoXGWu281ZdO7LrUkyTTIBgJEInzbfmbrBbjO6OwRRfls7WzgHpYaZXslEXA80BFGHD_Qhdo6HBff8y8ANlv2"/></a></p>
 <p>In <em>SolutionBaseGenExtends2</em> both <em>NodeBase</em> and <em>NodeBase2</em> will be transformed, as <em>LanguageBaseGenExtends2</em>
-is listed in  <em>Languages engaged in generation</em> and <em>GeneratorBaseExtends2</em> extends <em>GeneratorBase</em>.</p>
+is listed in <em>Languages engaged in generation</em> and <em>GeneratorBaseExtends2</em> extends <em>GeneratorBase</em>.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNqNk8FuwyAMhu88hc9VeYFqqqpNUy_dLj1OO7DgpEgEV-Csq7SHH7RKRQjbeiR8tn__f9gEVp6H3gqLLQMTeNMdGLTx2LAhJ0RjVQiwU64bVIePKiA8POyWZ7SWTut1cf_8xeh02KKL1HZpU7fOq_MNjDfoFZP_l3wi1-CR7-WSslHtnuyQ1E9q90v4NGSRb5UvpNEW_WE-4DVif1FCTNxZyIuHMhe2goYcK-OCqDglNZ2c_F5PXF4BXgkxN0ImeNJ-ZGvdL3LeNDGjfpezbivQ2BqH1eJxmUps2U61UOUdE0GBHyxCS16ISmgLKcuQsqllfIlOWRWGz7GbssLwIRjX3cXneq5V4-Bs72lCUQqreKZWFD_UvCJvn9X9tnDVHXEwGgH7I5-hx_4Dffy2iVx67T_bTGu4"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqNk8FuwyAMhu88hc9VeYFqqqpNUy_dLj1OO7DgpEgEV-Csq7SHH7RKRQjbeiR8tn__f9gEVp6H3gqLLQMTeNMdGLTx2LAhJ0RjVQiwU64bVIePKiA8POyWZ7SWTut1cf_8xeh02KKL1HZpU7fOq_MNjDfoFZP_l3wi1-CR7-WSslHtnuyQ1E9q90v4NGSRb5UvpNEW_WE-4DVif1FCTNxZyIuHMhe2goYcK-OCqDglNZ2c_F5PXF4BXgkxN0ImeNJ-ZGvdL3LeNDGjfpezbivQ2BqH1eJxmUps2U61UOUdE0GBHyxCS16ISmgLKcuQsqllfIlOWRWGz7GbssLwIRjX3cXneq5V4-Bs72lCUQqreKZWFD_UvCJvn9X9tnDVHXEwGgH7I5-hx_4Dffy2iVx67T_bTGu4"/></a></p>
 <p>Only <em>NodeExtendsGen</em> will be transformed in <em>SolutionExtendsGen</em>, as the only active Generator is
 <em>GeneratorExtendsGen</em>. The reason is that we found an instance of <em>ConceptExtendsGen</em> contained in
@@ -1086,7 +1085,7 @@ languages used in applied Generators) are not added to the output model. Implici
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1191,8 +1190,8 @@ languages used in applied Generators) are not added to the output model. Implici
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

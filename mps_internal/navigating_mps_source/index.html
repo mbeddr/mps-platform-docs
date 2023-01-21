@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/navigating_mps_source/" rel="canonical"/>
+<link href="../intellij_integration/" rel="prev"/>
+<link href="../java_design_patterns_in_mps_sources/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Navigating the MPS sources - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -770,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -800,7 +802,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -870,7 +872,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -922,9 +924,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#internals">internals</a>
 <a class="md-tag" href="../../tags/#sources">sources</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/navigating_mps_source.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked out with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
 More information can be found in the readme of the repository.</p>
 <h1 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h1>
@@ -932,7 +931,7 @@ More information can be found in the readme of the repository.</p>
 in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
 <p><a class="glightbox" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
-<p>The directory also contains settings for code styles, copyright infos and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
+<p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr> and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
 many other IntelliJ specific project settings,</p>
 <h1 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
 <p>This folder also contains run configurations and scopes but also other settings:</p>
@@ -954,7 +953,7 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 <li>
 <p>Linux</p>
 <ul>
-<li><em>libdgbm</em>: GNU dbm (‘gdbm’) is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm’</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
+<li><em>libdgbm</em>: GNU dbm (‘gdbm’) is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
 <li><em>restart.<abbr title="position y">py</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
 </ul>
 </li>
@@ -998,13 +997,13 @@ The <code>artifacts</code> folder contains the generated jar files. An artifact 
 <p>The <code>resources</code> folder contains image resources as well as the following files:</p>
 <ul>
 <li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>mps-dmg.sh</em>: create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for Mac <abbr title="Open Source">OS</abbr></li>
-<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> Mac <abbr title="Open Source">OS</abbr> application</li>
+<li><em>mps-dmg.sh</em>: create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for macOS</li>
+<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> macOS application</li>
 </ul>
 <p>The <code>tests</code> folder contains Ant scripts for executing tests.
 The <code>tools</code> folder contains scripts for signing and creating DMGs and also
 a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
-The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc).
+The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc.).
 The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
 on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
 <h1 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h1>
@@ -1019,13 +1018,13 @@ The <code>baselanguage</code> fodler contains the baselanguage implementation an
 </ul>
 <h2 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
 <p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
-make classes and and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
+make classes and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
 <h2 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">¶</a></h2>
 <p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.</p>
 <h2 id="make">make<a class="headerlink" href="#make" title="Permanent link">¶</a></h2>
 <p>Everything related to the make facet is situated in this folder.</p>
 <h2 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">¶</a></h2>
-<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>. There are, for example, stubs for Aanotations (e.g. <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
+<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g. stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
 <h2 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">¶</a></h2>
 <p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.</p>
 <h1 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">¶</a></h1>
@@ -1065,7 +1064,7 @@ make classes and and runtime classes for smodel such as <code>SConceptOperations
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1170,8 +1169,8 @@ make classes and and runtime classes for smodel such as <code>SConceptOperations
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

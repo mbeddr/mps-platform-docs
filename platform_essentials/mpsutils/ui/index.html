@@ -9,9 +9,9 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/mpsutils/ui/" rel="canonical"/>
 <link href="../../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Ui - MPS Platform Docs</title>
-<link href="../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +99,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +266,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +368,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -799,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -869,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1019,9 +1019,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/mpsutils/ui.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>Ui</h1>
 <h2 id="ui"><abbr title="User Interface">UI</abbr><a class="headerlink" href="#ui" title="Permanent link">¶</a></h2>
 <h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">¶</a></h3>
@@ -1045,7 +1042,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.framecell</ins></p>
 </blockquote>
-<p><a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
+<p>The <a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
 <ul>
 <li><strong>frame-color</strong>: the color of the frame (default: black)</li>
 <li><strong>frame-width</strong>: the thickness of the frame (default: 1 pixel)</li>
@@ -1062,7 +1059,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
 </blockquote>
-<p>Margin cells are editor cells that are shown beyond the right editor margin, a little bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
+<p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
 <p><a class="glightbox" href="../../images/margincell_example.png"><img alt="example: margin cell" src="../../images/margincell_example.png"/></a></p>
 <p>To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.</p>
 <p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
@@ -1086,7 +1083,7 @@ section.</p>
 <p><ins>com.mbeddr.mpsutil.dependenciesdiagram</ins></p>
 </blockquote>
 <p>This language contains a concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870">DependenciesDiagram</a></p>
-<p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies is visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
+<p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
 <p><a class="glightbox" href="../../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../../images/dependencydiagram_example.png"/></a></p>
 <h3 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -1097,7 +1094,7 @@ section.</p>
 <div class="admonition warning">
 <p class="admonition-title">There’s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the datepicker doesn’t work when the theme is set to macOS light.</p>
 </div>
-<p>This is only the control, i.e. the developer is responsible for synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
+<p>This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
 <h3 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.editor.utils</ins></p>
@@ -1131,8 +1128,8 @@ the editor. There’s also an intention <code>Open File Chooser Dialog</code> th
 <ul>
 <li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
 <li><strong>hyperlink-handler</strong>: a function that’s called when the link is clicked. The <em>util</em> parameter object contains a method
-  <em>openInBrowser</em> for opening an URL with the default web browser.</li>
-<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the use of ctrl to activate the hyperlink.</li>
+  <em>openInBrowser</em> for opening a URL with the default web browser.</li>
+<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the usage of the key <em>ctrl</em> to activate the hyperlink.</li>
 <li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
 <li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
 <li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
@@ -1141,7 +1138,7 @@ the editor. There’s also an intention <code>Open File Chooser Dialog</code> th
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.jfreechart</ins></p>
 </blockquote>
-<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">jfreechart</a> library. The charts can be viewed in
+<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">JFreeChart</a> library. The charts can be viewed in
 an extra tool <em>Chart</em> by calling the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -1205,7 +1202,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1282,8 +1279,8 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../javascripts/tablesort.js"></script>

@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/patterns/user_experience/" rel="canonical"/>
+<link href="../language_design/" rel="prev"/>
+<link href="../ui_patterns/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>User experience - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -769,7 +771,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="true" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -837,7 +839,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -907,7 +909,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -990,9 +992,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#best_practise">best_practise</a>
 <a class="md-tag" href="../../tags/#ui">ui</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/patterns/user_experience.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="user-experience-and-user-interfaces">User experience and user interfaces<a class="headerlink" href="#user-experience-and-user-interfaces" title="Permanent link">¶</a></h1>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">¶</a></h2>
 <ul>
@@ -1035,26 +1034,26 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Remove unnecessary redundancy. There might be several effective ways to perform a task. To achieve simplicity, make the hard decision and choose the best one for your target users instead of providing all of them and making the choice an option.</p>
 </li>
 <li>
-<p>Make it “just work” automatically. The element is necessary, but any user interaction to get it to work is not because there is an acceptable default behavior or configuration. To achieve simplicity, make it work automatically and either hide it from the user completely or reduce its exposure significantly.</p>
+<p>Make it “just work” automatically. The element is necessary, but any user interaction to get it to work is not because an acceptable default behavior or configuration exists. To achieve simplicity, make it work automatically and either hide it from the user completely or reduce its exposure significantly.</p>
 </li>
 <li>
 <p>Combine what should be combined. Put the essential features that support a task together so that a task can be performed in one place. The task’s steps should have a unified, streamlined flow. Break down complex tasks into a set of easy, clear steps, so that “one” place might consist of several <abbr title="User Interface">UI</abbr> surfaces, such as a wizard.</p>
 </li>
 <li>
-<p>Separate what should be separated. Not everything can be presented in one place, so always have clear, well-chosen boundaries. Make features that support core scenarios central and obvious, and hide optional functionality or make it peripheral. Separate individual tasks and provide links to related tasks. For example, tasks related to manipulating photos should be clearly separated from tasks related to managing collections of photos, but they should be readily accessible from each other.</p>
+<p>Separate what should be separated. Not everything can be presented in one place, so always have clear, well-chosen boundaries. Make features that support core scenarios central and obvious, and hide optional functionality or make it peripheral. Separate individual tasks and provide links to related tasks. For example, tasks related to manipulating photos should be separated from tasks related to managing collections of photos, but they should be readily accessible from each other.</p>
 </li>
 <li>
 <p>Eliminate what can be eliminated. Take a printout of your design and highlight the elements used to perform the most important tasks. Even highlight the individual words in the <abbr title="User Interface">UI</abbr> text that communicate useful information. Now review what isn’t highlighted and consider removing it from the design. If you remove the item, would anything bad happen? If not, remove it!
-  Consistency, configurability, and generalization are often desirable qualities, but they can lead to unnecessary complexity. Review your design for misguided efforts in consistency (such as having redundant text), generalization (such as having any number of time zones when two is sufficient), and configurability (such as options that users aren’t likely to change), and eliminate what can be eliminated.</p>
+  Consistency, configurability, and generalization are often desirable qualities, but they can lead to unnecessary complexity. Review your design for misguided efforts in consistency (such as having redundant text), generalization (such as having any several time zones when two is enough), and configurability (such as options that users aren’t likely to change), and eliminate what can be eliminated.</p>
 </li>
 <li>
-<p>Put the elements in the right place. Within a window, an element’s location should follow its utility. Essential controls, instructions, and explanations should all be in context in logical order. If more options are needed, expose them in context by clicking a chevron or similar mechanism; if more information is needed, display an infotip on mouse hover. Place less important tasks, options, and Help information outside the main flow in a separate window or page. The technique of displaying additional detail as needed is called progressive disclosure.</p>
+<p>Put the elements in the right place. Within a window, an element’s location should follow its utility. Essential controls, instructions, and explanations should all be in context in logical order. If more options are needed, expose them in context by clicking a chevron or similar mechanism; if more information is needed, display an <abbr title="information">info</abbr>-tip on mouse hover. Place less important tasks, options, and Help information outside the main flow in a separate window or page. The technique of displaying additional detail as needed is called progressive disclosure.</p>
 </li>
 <li>
 <p>Use meaningful high-level combinations. It is often simpler and more scalable to select and manipulate groups of related elements than individual elements. Examples of high-level combinations include folders, themes, styles, and user groups. Such combinations often map to a user goal or intention that isn’t apparent from the individual elements. For example, the intention behind the High Contrast Black color scheme is far more apparent than that of a black window background.</p>
 </li>
 <li>
-<p>Select the right controls. Design elements are embodied by the controls you use to represent them, so selecting the right control is crucial to efficient presentation. For example, the font selection box used by Microsoft Word shows both a preview of the font as well as the most recently used fonts. Similarly, the way Word shows potential spelling and grammar errors in place is much simpler than the dialog box alternative, as shown in the beginning of this article.</p>
+<p>Select the right controls. Design elements are embodied by the controls you use to represent them, so selecting the right control is crucial to efficient presentation. For example, the font selection box used by Microsoft Word shows both a preview of the font and also the most recently used fonts. Similarly, the way Word shows potential spelling and grammar errors in place is much simpler than the dialog box alternative.</p>
 </li>
 <li>
 <p>Make tasks discoverable and visible. All tasks, but especially frequent tasks, should be readily discoverable within the user interface. The steps required to perform tasks should be visible and should not rely on memorization.</p>
@@ -1072,7 +1071,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Use safe, secure, probable defaults. If a setting has a value that applies to most users in most circumstances, and that setting is both safe and secure, use it as the default value. Make users specify values only when necessary.</p>
 </li>
 <li>
-<p>Use constraints. If there are many ways to perform a task, but only some are correct, constrain the task to those correct ways. Users should not be allowed to make readily preventable mistakes.</p>
+<p>Use constraints. If many ways to perform a task exist, but only some are correct, constrain the task to those correct ways. Users should not be allowed to make readily preventable mistakes.</p>
 </li>
 </ul>
 </blockquote>
@@ -1080,7 +1079,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <ul>
 <li>
-<p>Use ordinary, conversational terms when you can. Focus on the user goals, not technology. This is especially effective if you are explaining a complex technical concept or action. Imagine yourself looking over the user’s shoulder and explaining how to accomplish the task. IN CONFLICT WITH Domain</p>
+<p>Use ordinary, conversational terms when you can. Focus on the user goals, not technology. This is especially effective if you are explaining a complex technical concept or action. Imagine yourself looking over the user’s shoulder and explaining how to do the task. IN CONFLICT WITH Domain</p>
 </li>
 <li>
 <p>Be polite, supportive, and encouraging. The user should never feel condescended to, blamed, or intimidated.</p>
@@ -1129,7 +1128,7 @@ Use notifications for non-critical events or situations that don’t require imm
 Don’t use notifications for feature advertisements!</p>
 </li>
 <li>
-<p>Never require users to click an object to determine if it is clickable. Users must be able to determine clickability by visual inspection alone.</p>
+<p>Never require users to click an object to determine if it is clickable. Users must be able to determine the clickability by visual inspection alone.</p>
 </li>
 <li>
 <p>Whenever possible, propose a solution so users can fix the problem. However, make sure the proposed solution is likely to solve the problem. Don’t waste users’ time by suggesting possible, but improbable, solutions.</p>
@@ -1154,7 +1153,7 @@ Catastrophic, fatal (use serious instead)</p>
 </ul>
 </blockquote>
 <h2 id="dark-theme">Dark theme<a class="headerlink" href="#dark-theme" title="Permanent link">¶</a></h2>
-<p>Use the predefined colors in <abbr title="Meta Programming System">MPS</abbr> or define your own colors using the class  <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor">JBColor</a> with the constructor <code>JBColor(light theme color, dark theme color)</code>. By using this class, it shouldn’t be necessary to verify if the user is <a href="https://stackoverflow.com/c/itemis-mps/questions/426">using the Darcula theme</a>. The <abbr title="Meta Programming System">MPS</abbr> colors already support the light and dark theme because they inherit from <code>JBColor</code>. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don’t use hard-coded hex colors or the class <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor">Color</a>.</p>
+<p>Use the predefined colors in <abbr title="Meta Programming System">MPS</abbr> or define your own colors using the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor">JBColor</a> with the constructor <code>JBColor(light theme color, dark theme color)</code>. By using this class, it shouldn’t be necessary to verify if the user is <a href="https://stackoverflow.com/c/itemis-mps/questions/426">using the Darcula theme</a>. The <abbr title="Meta Programming System">MPS</abbr> colors already support the light and dark theme because they inherit from <code>JBColor</code>. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don’t use hard-coded hex colors or the class <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor">Color</a>.</p>
 <figure>
 <p><a class="glightbox" href="../../img/light_theme_colors.png"><img alt="light theme" src="../../img/light_theme_colors.png"/></a>
 </p>
@@ -1207,7 +1206,7 @@ Catastrophic, fatal (use serious instead)</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1312,8 +1311,8 @@ Catastrophic, fatal (use serious instead)</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

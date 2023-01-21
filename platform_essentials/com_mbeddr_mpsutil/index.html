@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/com_mbeddr_mpsutil/" rel="canonical"/>
+<link href="../interpreter/" rel="prev"/>
+<link href="../building_mbeddr_locally/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>MPS utilities - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1316,7 +1318,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1346,7 +1348,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1416,7 +1418,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2007,9 +2009,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <nav class="md-tags">
 <a class="md-tag" href="../../tags/#mbeddr">mbeddr</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/com_mbeddr_mpsutil.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>MPS utilities</h1>
 <p>This documentation gives an introduction to the subproject <em>com.mbeddr.mpsutil</em> of <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2046,8 +2045,8 @@ The <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1af
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.comparator</ins></p>
 </blockquote>
-<p>The class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369">MPSNodeComparator</a> can be used to compare two nodes programmatically. There are overloaded methods
-for ignoring properties, ignored references and some more settings. The return object of class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595">MPSNodeComparison</a> contains the list of differences and can also pre pretty printed by called the method <code>getDescription()</code>.</p>
+<p>The class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369">MPSNodeComparator</a> can be used to compare two nodes programmatically. Overloaded methods
+for ignoring properties, ignored references and some more settings exist. The return object of class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595">MPSNodeComparison</a> contains the list of differences and can also pre pretty printed by called the method <code>getDescription()</code>.</p>
 <h2 id="incremental-computation">Incremental computation<a class="headerlink" href="#incremental-computation" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.incrementalcomputation</ins></p>
@@ -2066,7 +2065,7 @@ from <span class="twemoji">
 </blockquote>
 <p>The interpreter is described on the <a href="../interpreter/">interpreter</a> page.</p>
 <h2 id="stubs">Stubs<a class="headerlink" href="#stubs" title="Permanent link">¶</a></h2>
-<p>There are stub models for the following Java libraries:</p>
+<p>Stub models for the following Java libraries exist:</p>
 <ul>
 <li><a href="https://site.mockito.org/">Mockito</a>: a framework for unit tests</li>
 <li><a href="https://opencsv.sourceforge.net/">Open CSV</a>jav: a CSV (comma-separated values) parser library</li>
@@ -2079,7 +2078,7 @@ from <span class="twemoji">
 </li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">The included versions might be quite old.</p>
+<p class="admonition-title">The included versions might be old.</p>
 </div>
 <h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">¶</a></h2>
 <h3 id="build-assistant">Build assistant<a class="headerlink" href="#build-assistant" title="Permanent link">¶</a></h3>
@@ -2137,7 +2136,7 @@ be enabled for a specific concept, add a concept to <em>only in editor with inst
 <p><a class="glightbox" href="../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../images/projection_mode_switcher_example.png"/></a></p>
 <h4 id="refactoring-action">Refactoring action<a class="headerlink" href="#refactoring-action" title="Permanent link">¶</a></h4>
 <p>The concept <a href="http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137">RefactoringAction</a> can create an action for a <a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">simple refactoring</a>. The title of the action can be specified with <em>caption,</em> and the keyboard shortcut can
-be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>parameters</em>. There are a few different choosers which will be shown in
+be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>parameters</em>. A few different choosers will be shown in
 the refactoring dialog for the value of the parameters:</p>
 <ul>
 <li><em>string</em>: chooser for selecting a text</li>
@@ -2151,7 +2150,7 @@ the refactoring dialog for the value of the parameters:</p>
 <p><ins>com.mbeddr.mpsutil.bldoc</ins></p>
 </blockquote>
 <p>This language can be used to attach a documentation via the intention <code>Attach Documentation</code> to any node. The richtext language
-provides the concept <code>Text</code> for writing the documentation. There are also two interfaces that implement <a href="http://127.0.0.1:63320/node?ref=r%3Aca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3%28de.slisson.mps.richtext.structure%29%2F2557074442922392300">IWord</a> so that any
+provides the concept <code>Text</code> for writing the documentation. Two interfaces implement <a href="http://127.0.0.1:63320/node?ref=r%3Aca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3%28de.slisson.mps.richtext.structure%29%2F2557074442922392300">IWord</a> so that any
 node can be referenced in the <ins>com.mbeddr.<abbr title="documentation">doc</abbr></ins> language: <a href="http://127.0.0.1:63320/node?ref=r%3Acd485f95-5a84-4e95-8a53-480ef712b00a%28com.mbeddr.mpsutil.bldoc.structure%29%2F5358654548920859832">@child</a> and
 <a href="http://127.0.0.1:63320/node?ref=r%3Acd485f95-5a84-4e95-8a53-480ef712b00a%28com.mbeddr.mpsutil.bldoc.structure%29%2F5358654548920954071">@root</a>
 for referencing any child nodes and named nodes respectively.</p>
@@ -2194,8 +2193,8 @@ with a custom handler for generator messages and custom generation parameters su
 </code></pre></div></td></tr></table></div>
 <p>This expression creates a new node and assigns Base Language expressions to keys of it. The keys are set internally with
 the <em>setref</em> statement which takes a key, a context node (here: the newly created node) and a target expression, and creates
-a new user object for this node. For normal values, there are the <em>setref</em> and <em>getref</em> statements to set and retrieve
-values from the user object respectively. For int values, there are the statements <em>setint</em> and <em>getint</em>.</p>
+a new user object for this node. For normal values, <em>setref</em> and <em>getref</em> should be used to set and retrieve
+values from the user object respectively. For int values, <em>setint</em> and <em>getint</em> can be used.</p>
 <h3 id="mapping-labels">Mapping labels<a class="headerlink" href="#mapping-labels" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.mappingLabels</ins></p>
@@ -2248,8 +2247,8 @@ in the same places as the text preview action (for example, in the context menu 
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.ecore</ins></p>
 </blockquote>
-<p>This is an importer and exporter for the meta model(<a href="https://wiki.eclipse.org/Ecore">ECore</a>) of the Eclipse Modelling Framework.
-The conversion is between an XML file and a <abbr title="Meta Programming System">MPS</abbr> model. The importer can import Ecore and Ecore model files.</p>
+<p>This is an importer and exporter for the metamodel(<a href="https://wiki.eclipse.org/Ecore">ECore</a>) of the Eclipse Modelling Framework.
+The conversion is between an XML file and an <abbr title="Meta Programming System">MPS</abbr> model. The importer can import Ecore and Ecore model files.</p>
 <p>Access the action through right-clicking a model and opening the <em>Ecore Transformation tools</em> group.</p>
 <h3 id="xml-import">XML import<a class="headerlink" href="#xml-import" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2378,7 +2377,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.suppresswarning</ins></p>
 </blockquote>
-<p>This language allows attaching an annotation to nodes to disable all or certain type system warnings by invoking the intention <code>Toggle Suppress Warnings</code>. There are different kinds of warnings that can be suppressed:</p>
+<p>This language allows attaching an annotation to nodes to disable all or certain type system warnings by invoking the intention <code>Toggle Suppress Warnings</code>. Different kinds of warnings can be suppressed:</p>
 <ul>
 <li><a href="http://127.0.0.1:63320/node?ref=r%3Ad5deda81-7a35-4c2b-bda1-1fdc1db99e3b%28com.mbeddr.mpsutil.suppresswarning.structure%29%2F9116320848000879251">all</a>: suppress all warnings</li>
 </ul>
@@ -2422,12 +2421,12 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <p class="admonition-title">There’s a Context Actions (JetBrains) and Context Actions 2 (mbeddr) tool. Please use the one from JetBrains instead of this language.</p>
 </div>
 <p>This language adds a tool with context-specific editor actions that can be navigated by mouse. For more information about the
-JetBrains implementation, visit the page <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context acions tool | <abbr title="Meta Programming System">MPS</abbr></a></p>
+JetBrains implementation, visit the page <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions tool | <abbr title="Meta Programming System">MPS</abbr></a></p>
 <h3 id="editing-guide">Editing guide<a class="headerlink" href="#editing-guide" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.editingGuide</ins></p>
 </blockquote>
-<p>This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains a number of tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
+<p>This language allows creating interactive exercises for the end users that can be checked on the fly. An exercise contains several tasks and contain a reference to a following exercise. A single task contains a name, a description as well as the code block that should be
 shown in the exercise. The monitor function checks the completion status of the task. The variable <code>program</code> refers to the code section, the <code>editorContext</code> can be used, for example,
 to get the selected cell by calling <code>editorContext.getSelectedCell()</code>. The following objects can be returned:</p>
 <ul>
@@ -2504,7 +2503,7 @@ As a language developer, you can implement an interface IJGraphProvider and impl
 <p><ins>com.mbeddr.mpsutil.plantuml.node</ins></p>
 </blockquote>
 <p>This provides an integration of <a href="https://plantuml.com/">PlantUML</a> with <abbr title="Meta Programming System">MPS</abbr>. Watch <a href="https://www.youtube.com/watch?v=QjwXITp6fwg">this old video</a> to get an overview.</p>
-<p>To use it in your own languages, implement the <a href="http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880">IVisualizable</a> interface in your language concept. Each concept can have several visualizations, called categories. The <code>getCategories()</code> method returns the list (just strings). The <code>getVisualization()</code> method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The <code>getVisualization()</code> method then has to fill the VisGraph with the actual visualization. This is done simply by using the <code>add()</code> method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the deails; in particular, There’s a helper method on VisGraph that creates a URL for users to click in the graph: <code>createUrl(node)</code>.</p>
+<p>To use it in your own languages, implement the <a href="http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880">IVisualizable</a> interface in your language concept. Each concept can have several visualizations, called categories. The <code>getCategories()</code> method returns the list (just strings). The <code>getVisualization()</code> method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The <code>getVisualization()</code> method then has to fill the VisGraph with the actual visualization. This is done simply by using the <code>add()</code> method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the details; in particular, There’s a helper method on VisGraph that creates a URL for users to click in the graph: <code>createUrl(node)</code>.</p>
 <h3 id="tool-runner">Tool runner<a class="headerlink" href="#tool-runner" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.toolrunner.plugin</ins></p>
@@ -2539,7 +2538,7 @@ This interface checks the availability of external tools and their proper config
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.framecell</ins></p>
 </blockquote>
-<p><a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
+<p>The <a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
 <ul>
 <li><strong>frame-color</strong>: the color of the frame (default: black)</li>
 <li><strong>frame-width</strong>: the thickness of the frame (default: 1 pixel)</li>
@@ -2556,7 +2555,7 @@ This interface checks the availability of external tools and their proper config
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
 </blockquote>
-<p>Margin cells are editor cells that are shown beyond the right editor margin, a little bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
+<p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
 <p><a class="glightbox" href="../images/margincell_example.png"><img alt="example: margin cell" src="../images/margincell_example.png"/></a></p>
 <p>To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.</p>
 <p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
@@ -2580,7 +2579,7 @@ section.</p>
 <p><ins>com.mbeddr.mpsutil.dependenciesdiagram</ins></p>
 </blockquote>
 <p>This language contains a concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870">DependenciesDiagram</a></p>
-<p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies is visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
+<p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
 <p><a class="glightbox" href="../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../images/dependencydiagram_example.png"/></a></p>
 <h3 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2591,7 +2590,7 @@ section.</p>
 <div class="admonition warning">
 <p class="admonition-title">There’s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the datepicker doesn’t work when the theme is set to macOS light.</p>
 </div>
-<p>This is only the control, i.e. the developer is responsible for synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
+<p>This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
 <h3 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.editor.utils</ins></p>
@@ -2625,8 +2624,8 @@ the editor. There’s also an intention <code>Open File Chooser Dialog</code> th
 <ul>
 <li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
 <li><strong>hyperlink-handler</strong>: a function that’s called when the link is clicked. The <em>util</em> parameter object contains a method
-  <em>openInBrowser</em> for opening an URL with the default web browser.</li>
-<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the use of ctrl to activate the hyperlink.</li>
+  <em>openInBrowser</em> for opening a URL with the default web browser.</li>
+<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the usage of the key <em>ctrl</em> to activate the hyperlink.</li>
 <li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
 <li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
 <li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
@@ -2635,7 +2634,7 @@ the editor. There’s also an intention <code>Open File Chooser Dialog</code> th
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.jfreechart</ins></p>
 </blockquote>
-<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">jfreechart</a> library. The charts can be viewed in
+<p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">JFreeChart</a> library. The charts can be viewed in
 an extra tool <em>Chart</em> by calling the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -2713,7 +2712,7 @@ or check that existing models can be instantiated again via the editor (for exam
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.blutil.test.waitfor</ins></p>
 </blockquote>
-<p>This language contains a assert item <em>wait for</em> for tests, the waits for an expression to become true. If the condition
+<p>This language contains an assert item <em>wait for</em> for tests, the waits for an expression to become true. If the condition
 evaluates to false, the check is repeated every <em>m</em> millisecond until the timeout of <em>n</em> milliseconds is reached. Both
 <em>m</em> and <em>n</em> can be set in the inspector of the statement.</p>
 <p>A use case for this statement could be a multithreaded code, where you have to wait for the result of a different thread:</p>
@@ -2743,7 +2742,7 @@ evaluates to false, the check is repeated every <em>m</em> millisecond until the
 <p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> contains a lot of actions that might be not needed by end users such as actions for language development and actions of the <abbr title="Integrated Development Environment">IDE</abbr> platform. This language allows disabling
-actions inside a <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
+actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
 be set including an activation condition to make this profile the active profile when opening the project or <abbr title="Rich Client Platform">RCP</abbr>. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention <code>Use allow actions</code> on the
 actions profile. Actions in the section <code>specify toolbar</code> are displayed in the main toolbar
 that’s located at the top left of the window.</p>
@@ -2768,7 +2767,7 @@ mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/do
 <ul>
 <li><strong>scope</strong>: save the preferences on application or project level</li>
 <li><strong>help topic</strong>: The help topic is an internal identifier that can link a page in the <abbr title="Meta Programming System">MPS</abbr> documentation.
-  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a>) and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
+  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
 </ul>
 <p>The preference form supports a few different input elements:</p>
 <ul>
@@ -2780,7 +2779,7 @@ mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/do
 <li>text field</li>
 </ul>
 <p>The <em>before write</em> method is called, when the button <em>Apply</em> or <em>OK</em> is pressed. This method should update all tools or classes
-that reference the values of the preference form. The input fields can be accessed through the <em>this</em> object. Example:</p>
+that reference the values of the preference form. The input fields can be accessed through <em>this</em>. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="p">(((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">port</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">enabled</span><span class="p">);</span><span class="w"> </span>
@@ -2810,7 +2809,7 @@ executed the <em>onFinish</em> callback of every step. For more information, hav
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.rcp</ins></p>
 </blockquote>
-<p>This language allows creating a new action for creating models similar to the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
+<p>This language allows creating a new action for creating models like the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
 Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig</a>. The following settings are supported:</p>
 <ul>
 <li><strong>name</strong>: the name of the new action</li>
@@ -2850,7 +2849,7 @@ targets. The contributions were made in a plugin solutions by creating a <a href
 <p><ins>com.mbeddr.mpsutil.forms</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">This is an unfinished language that was probably intented  to be used in <ins>com.mbeddr.mpsutil.process</ins>. This language will be removed soon.</p>
+<p class="admonition-title">This is an unfinished language that was probably intended to be used in <ins>com.mbeddr.mpsutil.process</ins>. This language will be removed soon.</p>
 </div>
 <h3 id="gradle-support">Gradle support<a class="headerlink" href="#gradle-support" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2919,7 +2918,7 @@ text files, single lines and multi lines. If you want to generate text files, us
 <p><ins>com.mbeddr.mpsutil.licensemanager.common</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">This language contains some classes of an old mbeddr licensemanager and will probably be removed in the future.</p>
+<p class="admonition-title">This language contains some classes of an old mbeddr license manager and will probably be removed in the future.</p>
 </div>
 <h3 id="make">Make<a class="headerlink" href="#make" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2956,7 +2955,7 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 <p><ins>com.mbeddr.mpsutil.runconfiguration</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">This language was used as a workaround for accessing the debuggle node in <a href="http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892">breakpoint creators</a>. The expression is now officially supported, this language is deprecated and will be removed soon.</p>
+<p class="admonition-title">This language was used as a workaround for accessing the debugged node in <a href="http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892">breakpoint creators</a>. The expression is now officially supported, this language is deprecated and will be removed soon.</p>
 </div>
 <h3 id="test-scope">Test scope<a class="headerlink" href="#test-scope" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2977,7 +2976,7 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -3082,8 +3081,8 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

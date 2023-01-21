@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/jcef/" rel="canonical"/>
+<link href="../intellij_sdk/" rel="prev"/>
+<link href="../writing_mps_plugin_with_kotlin/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Java Chromium Embedded Framework - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -96,7 +98,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -263,7 +265,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -365,7 +367,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -767,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -797,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -867,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -920,12 +922,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#intellij">intellij</a>
 <a class="md-tag" href="../../tags/#java">java</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/jcef.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
-<h1>Java Chromium Embedded Framework</h1>
 <p>Start with the page <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> - Java Chromium Embedded Framework</a> of the IntelliJ platform plugin SDK.</p>
-<p>It should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in Intellij IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
+<p>It should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
 because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a swing component cell.
 For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTMl code. The code can be created by Java or by
 calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a href="http://localhost:8000/mps-platform-docs/aspects/textgen">TextGen</a>.</p>
@@ -934,12 +932,12 @@ calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a hre
 <li><a href="https://github.com/viglucci/app-jcef-example">Java <abbr title="Java Chromium Embedded Framework">JCEF</abbr> example</a> that showcases all kinds of handlers and dialogs</li>
 <li><a href="https://github.com/JetBrains/intellij-community/blob/master/plugins/markdown/core/src/org/intellij/plugins/markdown/ui/preview/jcef/MarkdownJCEFHtmlPanel.kt">IntelliJ Markdown preview</a></li>
 <li><a href="https://stackoverflow.com/questions/65480681/how-do-i-use-jcef-with-intellij">How do I use <abbr title="Java Chromium Embedded Framework">JCEF</abbr> with Intellij?</a></li>
-<li><a href="https://bitbucket.org/chromiumembedded/cef/wiki/Home">CEF documentatation (non Java version)</a></li>
+<li><a href="https://bitbucket.org/chromiumembedded/cef/wiki/Home">CEF documentation (non Java version)</a></li>
 </ul>
 <p>The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (<abbr title="Meta Programming System">MPS</abbr>): You have
 to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication is done through JS. You then have a <code>subscribe</code> method that you can use to
 listening to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
-<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the Intellij IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
+<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
 are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>‘ reloading capabilities, it is important to correctly dispose the browser when it isn’t needed anymore. The following code registers a listener for the editor component
 dispose event and also closes the browser:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -968,14 +966,13 @@ dispose event and also closes the browser:</p>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>When the browser is not correctly disposed, it might be drawn in different components, on top of <abbr title="Meta Programming System">MPS</abbr> editors etc. There are also
-some known issues where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
+<p>When the browser is not correctly disposed, it might be drawn in different components, on top of <abbr title="Meta Programming System">MPS</abbr> editors etc. Some issues are known where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1080,8 +1077,8 @@ some known issues where <abbr title="Java Chromium Embedded Framework">JCEF</abb
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

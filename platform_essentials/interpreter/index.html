@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/interpreter/" rel="canonical"/>
+<link href="../common_concepts_and_interfaces/" rel="prev"/>
+<link href="../com_mbeddr_mpsutil/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Interpreter, coverage and tracing - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -807,7 +809,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -837,7 +839,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -907,7 +909,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -990,32 +992,29 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#mbeddr">mbeddr</a>
 <a class="md-tag" href="../../tags/#iets3">iets3</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/interpreter.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>Interpreter, coverage and tracing</h1>
 <p>The interpreter let you interpret code on the fly. You can use it instead of the normal approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g. executing baselanguage code). The result of invoking the interpreter is a Java object.</p>
 <p><a class="glightbox" href="../gifs/interpreter_testcase.gif"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px"/></a></p>
 <p>In the GIF you can see the interpreter executing a test case that contains assertions that are writing with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn’t involved in the execution at all.</p>
 <h2 id="creating-an-interpreter">Creating an interpreter<a class="headerlink" href="#creating-an-interpreter" title="Permanent link">¶</a></h2>
 <p>First you have to import the language <code>com.mbeddr.mpsutil.interpreter</code>.
-Now create a new interpreter and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter but you can also use other categories. There is, for example a <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> in mpsutils(mbeddr) that uses its own category <code>java</code>. You don’t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
+Now create a new interpreter and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use other categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses its own category <code>java</code>. You don’t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
 <p>In the related interpreter section, you can define that the current interpret should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.</p>
 <p>The type mappings section can declare mappings from types that implement the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface to either a java type or another custom type that implements the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface.</p>
 <p><a class="glightbox" href="../images/exprSimpleInterpreter.png"><img alt="KernelF: expression simple interpreter" src="../images/exprSimpleInterpreter.png"/></a></p>
-<p>An evalutator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking <em>Tools</em>→<em>Enable Interpreter Cache</em> in the main menu.</p>
+<p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking <em>Tools</em> → <em>Enable Interpreter Cache</em> in the main menu.</p>
 <p><a class="glightbox" href="../images/literals_evaluator.png"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px"/></a></p>
-<p>The right side contains is an expression or a block and must return a value. The <em>node</em> expression refers to the currently evaluated expression. There are a few expressions starting with ‘#’, that are explained in their corresponding short descriptions. The ‘#-&gt;’ expression is used to call functions (search for usages globally).
-The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the <em><abbr title="environment">env</abbr></em> expression. It’s an array that can be used to save values for other evalulators. The key must be a node. If you don’t have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
+<p>The right side contains is an expression or a block and must return a value. The <em>node</em> expression refers to the current evaluated expression. A few expressions start with <em>#</em>, that are explained in their corresponding short descriptions. The <em>#-&gt;</em> expression is used to call functions (search for usages globally).
+The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the <em><abbr title="environment">env</abbr></em> expression. It’s an array that can be used to save values for other evaluators. The key must be a node. If you don’t have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
 <p><a class="glightbox" href="../images/startswith_evaluator.png"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png"/></a></p>
-<p>In case that the current interpreter is not suitable for interpreting the current node, the expression <em>tryOtherInterpreter</em> can be used to use the next interpreter to interpret the current node:</p>
+<p>When the current interpreter is not suitable for interpreting the current node, the expression <em>tryOtherInterpreter</em> can be used to use the next interpreter to interpret the current node:</p>
 <p><a class="glightbox" href="../images/tryOtherInterpreter.png"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png"/></a></p>
 <p>The <em>castUp</em> expression can be used to case a Java (baselanguage) expression to a type.
 For example, if the expression is of type Number (numberInput) and the target type is float,
 <code>numberInput.floatValue()</code> would be called.
-The <em>$</em> expression returns the type of a concept. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evalator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn’t be used:</p>
+The <em>$</em> expression returns the concept’s type. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evaluator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn’t be used:</p>
 <p><a class="glightbox" href="../images/mod_evaluator.png"><img alt="evaluator of modulus" src="../images/mod_evaluator.png" width="600px"/></a></p>
-<p>The <em>context</em> expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if there is an evaluator available for a specific node.</p>
+<p>The <em>context</em> expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if an evaluator for a specific node is available.</p>
 <h2 id="code-coverage">Code coverage<a class="headerlink" href="#code-coverage" title="Permanent link">¶</a></h2>
 <p>There’s also support for coverage that’s displayed inside the editor. Code coverage checks which part of the code was executed by the interpreter. For more information, consult the <a href="https://en.wikipedia.org/wiki/Code_coverage">Wikipedia page</a>. This way you can, for example, find out which parts of the code aren’t covered by tests:</p>
 <p><a class="glightbox" href="../images/example_coverage.png"><img alt="example: code coverage" src="../images/example_coverage.png"/></a></p>
@@ -1039,7 +1038,7 @@ The <em>$</em> expression returns the type of a concept. It can be used for type
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
-<p>There are also methods which don’t need coverage, a context object and so forth. The easiest method is <code>helper.evaluate</code> which returns a Java expression.</p>
+<p>Other methods don’t need coverage, a context object and so forth. The easiest method is <code>helper.evaluate</code> which returns a Java expression.</p>
 <h2 id="final-notes">Final notes<a class="headerlink" href="#final-notes" title="Permanent link">¶</a></h2>
 <p>The interpreter doesn’t support multithreading. It can also be slow when called too many times. </p>
 <p>It’s also recommended to not call the interpreter from the generator because when searching for interpreters, <abbr title="Meta Programming System">MPS</abbr> might deadlock because it starts indexing. You might get away with it by calling the interpreter inside the runnable of <code>DumbService.getInstance(project).suspendIndexingAndRun()</code>. You can’t return the value from the runnable, but you can assign it in a method of an object that’s outside the runnable.</p>
@@ -1053,7 +1052,7 @@ The <em>$</em> expression returns the type of a concept. It can be used for type
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 20, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1158,8 +1157,8 @@ The <em>$</em> expression returns the type of a concept. It can be used for type
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

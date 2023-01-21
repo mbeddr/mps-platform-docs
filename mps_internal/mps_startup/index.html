@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/mps_startup/" rel="canonical"/>
+<link href="../java_design_patterns_in_mps_sources/" rel="prev"/>
+<link href="../../platform_essentials/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>What happens on MPS startup - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -792,7 +794,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -822,7 +824,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -892,7 +894,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -956,9 +958,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/mps_startup.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>What happens on MPS startup</h1>
 <p>This page looks behind the hood of the startup process of <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and newer. For most parts, similar code will be executed
 for other <abbr title="Meta Programming System">MPS</abbr> versions.</p>
@@ -976,7 +975,7 @@ and loaded.</p>
 <li><abbr title="Meta Programming System">MPS</abbr> platform with the base class <a href="https://github.com/JetBrains/MPS/blob/11da1e6afdcb2a174684ca1a9efaa611da7d3393/core/platform/src-full/jetbrains/mps/core/platform/PlatformBase.java">PlatformBase</a></li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.persistence%28MPS.Core%2F%29%2F%7EPersistenceRegistry">PersistenceRegistry.java</a> as the core component implementation of <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EPersistenceFacade">PersistenceFacade</a>. The PersistenceFacade represents a singleton registry of model, model root factories, find usages and navigation participants.
   It also provides a bunch of methods to transform string to model refs/module refs/node ids and vice versa.</li>
-<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ELibraryInitializer">LibraryInitializer.java</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ELibraryContributor">library</a> contributions (loading, unloading, updating). It creates instances of <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ESLibrary">SLibrary</a> for each path  <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ERepositoryContributor.getPaths%2528%2529">RepositoryContributor#getPaths()</a> returns. SLibrary tracks a path with modules inside. It listens to file system events and reloads modules from disk if necessary.  It is actually the layer between <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository"><abbr title="Semantic Repository">SRepository</abbr></a> and <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESModule">SModule</a> in the repository hierarchy (as well as the Project).
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ELibraryInitializer">LibraryInitializer.java</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ELibraryContributor">library</a> contributions (loading, unloading, updating). It creates instances of <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library%28MPS.Core%2F%29%2F%7ESLibrary">SLibrary</a> for each path <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.library.contributor%28MPS.Core%2F%29%2F%7ERepositoryContributor.getPaths%2528%2529">RepositoryContributor#getPaths()</a> returns. SLibrary tracks a path with modules inside. It listens to file system events and reloads modules from disk if necessary.  It is actually the layer between <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository"><abbr title="Semantic Repository">SRepository</abbr></a> and <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESModule">SModule</a> in the repository hierarchy (as well as the Project).
   The repository consists of library modules, project modules and several special modules.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F%7EClassLoaderManager">ClassLoaderManager.java</a> which is responsible for loading classes within <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ul>
@@ -985,10 +984,10 @@ and loaded.</p>
 <ul>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/source/jetbrains/mps/core/platform/MPSCore.java">MPSCore.java</a>, the Core <abbr title="Meta Programming System">MPS</abbr> functionality layer.</li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/core/platform/MPSProjectValidation.java">MPSProjectValidation.java</a> which provides validation code for project modules. It contains the following core checkers:<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java">structure checker</a> checks the structure aspect for errors (e.g. missing reference, properties)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java">structure checker</a> inspects the structure aspect for errors (e.g. missing reference, properties)</li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ModelPropertiesChecker.java">model properties checker</a> implemented in <a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/ModelValidator.java">ModelValidator.java</a>.</li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ModuleChecker.java">module checker</a> which shows errors in the logical view.</li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ConstraintsChecker.java">constraints checker</a> checks parent/child, can be root/ancestor and property constraints.</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/checkers/ConstraintsChecker.java">constraints checker</a> inspects parent/child, can be root/ancestor and property constraints.</li>
 </ul>
 </li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/make-runtime/solutions/jetbrains.mps.make/source_gen/jetbrains/mps/make/facets/MPSMake.java">MPSMake.java</a> which provides the components.<ul>
@@ -1014,7 +1013,7 @@ and loaded.</p>
 </ul>
 </li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/core/findUsages-runtime/source_gen/jetbrains/mps/ide/findusages/MPSFindUsages.java">MPSFindUsages</a> which provides the components<ul>
-<li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EFindUsagesFacade">FindUsagesFacade</a>, an  effective (usually index-based) implementation of find usages routines.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EFindUsagesFacade">FindUsagesFacade</a>, an effective (usually index-based) implementation of find usages routines.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=r%3A78f1dc30-d9c6-41ba-bc9c-1e73f8bda079%28jetbrains.mps.ide.findusages%29%2F8568892084424438073">FindersManager</a></li>
 </ul>
 </li>
@@ -1041,9 +1040,9 @@ and loaded.</p>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.module%28MPS.Core%2F%29%2F%7ESRepositoryRegistry">SRepositoryRegistry</a> which manages <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository"><abbr title="Semantic Repository">SRepository</abbr></a> instances (they are storages for modules).</li>
 <li><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EFacetsFacade">FacetsFacade</a> manages language facades.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EPathMacros">PathMacros</a> manages <a href="https://www.jetbrains.com/help/mps/absolute-path-variables.html">path variables</a> and also some builtin macros such as <em>USER_HOME</em>, <em>MODULE_DIR</em>, <em>PROJECT_DIR</em>, <em>APPLICATION_PLUGINS_DIR</em> and <em>MODULE_WORKING_DIR</em>.</li>
-<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7EExtensionRegistry">ExtensionRegistry</a>  which manages extensions populated by classes loaded from compiled and deployed modules</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7EExtensionRegistry">ExtensionRegistry</a> which manages extensions populated by classes loaded from compiled and deployed modules</li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7EConceptRegistry">ConceptRegistry</a> manages concept descriptors.</li>
-<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.persistence.datasource%28MPS.Core%2F%29%2F%7EDataSourceFactoryRuleService">DataSourceFactoryRuleService</a>  which is a service provider for defining own data source factories.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.persistence.datasource%28MPS.Core%2F%29%2F%7EDataSourceFactoryRuleService">DataSourceFactoryRuleService</a> which is a service provider for defining own data source factories.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=r%3Ac7bbaee3-030a-4940-995f-2174babaf670%28jetbrains.mps.project.io%29%2F557142600900286111">DescriptorIOFacade</a> which returns <a href="http://127.0.0.1:63320/node?ref=r%3Ac7bbaee3-030a-4940-995f-2174babaf670%28jetbrains.mps.project.io%29%2F557142600900286148">DescriptorIO</a> instances which are responsible for reading and writing descriptors to/from a file.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EModelsAutoImportsManager">ModelsAutoImportsManager</a> which manages <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EModelsAutoImportsManager%24AutoImportsContributor">AutoImportContributor</a>. Classes that extend this class can automatically add languages to a model. For example: <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/project/listener/TestsModelAutoImports.java">TestsModelAutoImports</a> automatically add the languages <em>jetbrains.mps.<abbr title="language">lang</abbr>.test</em> and <em>jetbrains.mps.baseLanguage.unitTest</em> to test models.</li>
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.vfs%28MPS.Core%2F%29%2F%7EVFSManager">VFSManager</a> is an entry point to access various file system protocols available in <abbr title="Meta Programming System">MPS</abbr>. More information about <abbr title="virtual file system">vfs</abbr> can be found in <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">Virtual File System - IntelliJ Platform Plugin SDK</a>.</li>
@@ -1054,7 +1053,7 @@ and loaded.</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1159,8 +1158,8 @@ and loaded.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

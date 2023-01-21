@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/home/visual_guide/" rel="canonical"/>
+<link href="../trouble_shooting_guide/" rel="prev"/>
+<link href="../debugging/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Visual guide - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -96,7 +98,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -264,7 +266,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -366,7 +368,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -767,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -797,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -867,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -918,10 +920,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <nav class="md-tags">
 <a class="md-tag" href="../../tags/#ui">ui</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/home/visual_guide.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
-<h1>Visual guide</h1>
 <p>Hover over a green rectangle to show a short description.</p>
 <p>When you click the shape, you are redirected to the corresponding documentation when it’s available.</p>
 <p><img alt="imagemap: what is" class="off-glb ignore_max_width map" height="1033" src="../../img/what_is.png" usemap="#image-map" width="1788"/></p>
@@ -956,7 +954,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <area alt="Editor aspect" coords="76,325,177,340" href="https://www.jetbrains.com/help/mps/editor.html" shape="rect" target="_blank" title="Editor aspect"/>
 <area alt="Constraints aspect" coords="76,344,177,364" href="https://www.jetbrains.com/help/mps/constraints.html" shape="rect" target="_blank" title="Constraints aspect"/>
 <area alt="Behavior aspect" coords="76,368,177,383" href="https://www.jetbrains.com/help/mps/behavior.html" shape="rect" target="_blank" title="Behavior aspect"/>
-<area alt="Typesystem aspect" coords="74,387,177,401" href="https://www.jetbrains.com/help/mps/typesystem.html" shape="rect" target="_blank" title="Typesystem aspect"/>
+<area alt="Type system aspect" coords="74,387,177,401" href="https://www.jetbrains.com/help/mps/typesystem.html" shape="rect" target="_blank" title="Type system aspect"/>
 <area alt="Intentions aspect" coords="74,406,177,419" href="https://www.jetbrains.com/help/mps/mps-intentions.html" shape="rect" target="_blank" title="Intentions aspect"/>
 <area alt="Dataflow aspect" coords="74,423,177,440" href="https://www.jetbrains.com/help/mps/data-flow.html" shape="rect" target="_blank" title="Dataflow aspect"/>
 <area alt="Migrations aspect" coords="74,445,177,459" href="https://www.jetbrains.com/help/mps/migrations.html" shape="rect" target="_blank" title="Migrations aspect"/>
@@ -1007,9 +1005,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <area alt="Separator" coords="1558,29,1570,50" href="https://jetbrains.github.io/ui/controls/toolbar_drop_down/#how-to-use" shape="rect" target="" title="Separator"/>
 <area alt="Stop process (run configuration)" coords="1540,32,1553,51" href="https://www.jetbrains.com/help/mps/run-tool-window.html#run-toolbar" shape="rect" target="_blank" title="Stop process (run configuration)"/>
 <area alt="Project name" coords="637,6,744,19" href="" shape="rect" target="" title="Project name"/>
-<area alt="Typesystem tests" coords="59,263,221,278" href="https://www.jetbrains.com/help/mps/testing-languages.html#testingaspectsoflanguagedefinitions" shape="rect" target="_blank" title="Typesystem tests"/>
+<area alt="Typesystem tests" coords="59,263,221,278" href="https://www.jetbrains.com/help/mps/testing-languages.html#testingaspectsoflanguagedefinitions" shape="rect" target="_blank" title="Type system tests"/>
 <area alt="Java package name" coords="84,605,172,619" href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html" shape="rect" target="_blank" title="Java package name"/>
-<area alt="Typesystem warning in project view" coords="338,921,360,938" href="https://www.jetbrains.com/help/mps/typesystem.html#severity" shape="rect" target="_blank" title="Typesystem warning in project view"/>
+<area alt="Type system warning in project view" coords="338,921,360,938" href="https://www.jetbrains.com/help/mps/typesystem.html#severity" shape="rect" target="_blank" title="Type system warning in project view"/>
 <area alt="Root node of current editor" coords="3,30,122,49" href="" shape="rect" target="_blank" title="Root node of current editor"/>
 <area alt="Constant cell (EditorCell_Constant)" coords="" href="https://www.jetbrains.com/help/mps/editor.html#constant%C2%A0cell" shape="rect" target="_blank" title="Constant cell (EditorCell_Constant)"/>
 <area alt="Child list cell (as an EditorCell_Collection)" coords="697,286,1038,300" href="https://www.jetbrains.com/help/mps/editor.html#childlistcell" shape="rect" target="_blank" title="Child list cell (as an EditorCell_Collection)"/>
@@ -1044,7 +1042,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1149,8 +1147,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

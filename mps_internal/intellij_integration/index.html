@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/intellij_integration/" rel="canonical"/>
+<link href="../writing_mps_plugin_with_kotlin/" rel="prev"/>
+<link href="../navigating_mps_source/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>IntelliJ integration - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -96,7 +98,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -263,7 +265,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -365,7 +367,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -767,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -797,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -867,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -919,10 +921,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#internals">internals</a>
 <a class="md-tag" href="../../tags/#intellij">intellij</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/intellij_integration.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
-<h1>IntelliJ integration</h1>
 <p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components</a>. <code>application-components</code> are activated when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code>
 are activated when a project is opened.</p>
 <p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. For a list of all extension points and listener have a look at
@@ -957,7 +955,7 @@ declaration. Example:</p>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/META-INF/plugin.xml">Migration Support</a> (+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/migration-platform/pluginBase.xml">plugin base</a>)</li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-api/META-INF/plugin.xml">Debugger API for <abbr title="Meta Programming System">MPS</abbr></a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-java/META-INF/plugin.xml">Java Debugger for <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml">Jetpad</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml">JetPad</a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/META-INF/plugin.xml">Idea Integration for <abbr title="Meta Programming System">MPS</abbr></a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Java Integration</a>(+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml">Java platform</a>)</li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> console</a>(+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml">actions</a>)</li>
@@ -971,11 +969,11 @@ declaration. Example:</p>
 <ul>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">editor actions</a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source/META-INF/MPSEditor.xml">editor</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml">Java platform acitons</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml">Java platform actions</a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/META-INF/MPSCore.xml">MPSCore</a></li>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml">PlatformActions</a></li>
 </ul>
-<p>All of the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter</a> for error reporting.
+<p>All the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter</a> for error reporting.
 This allows reporting errors to YouTrack. Another notable extension is the declaration of the mps language library. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;mps.LanguageLibrary</span> <span class="na">dir=</span><span class="s">"/languages"</span> <span class="nt">/&gt;</span>
 </code></pre></div></td></tr></table></div></p>
@@ -985,7 +983,7 @@ This allows reporting errors to YouTrack. Another notable extension is the decla
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1090,8 +1088,8 @@ This allows reporting errors to YouTrack. Another notable extension is the decla
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>

@@ -9,9 +9,9 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/mpsutils/plugin_and_rcp/" rel="canonical"/>
 <link href="../../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Plugin and rcp - MPS Platform Docs</title>
-<link href="../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +99,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +266,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +368,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -799,7 +799,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -869,7 +869,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -957,9 +957,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/platform_essentials/mpsutils/plugin_and_rcp.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1>Plugin and rcp</h1>
 <h2 id="plugin-and-rcp">Plugin and <abbr title="Rich Client Platform">RCP</abbr><a class="headerlink" href="#plugin-and-rcp" title="Permanent link">¶</a></h2>
 <h3 id="actions-filter">Actions filter<a class="headerlink" href="#actions-filter" title="Permanent link">¶</a></h3>
@@ -967,7 +964,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> contains a lot of actions that might be not needed by end users such as actions for language development and actions of the <abbr title="Integrated Development Environment">IDE</abbr> platform. This language allows disabling
-actions inside a <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
+actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
 be set including an activation condition to make this profile the active profile when opening the project or <abbr title="Rich Client Platform">RCP</abbr>. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention <code>Use allow actions</code> on the
 actions profile. Actions in the section <code>specify toolbar</code> are displayed in the main toolbar
 that’s located at the top left of the window.</p>
@@ -992,7 +989,7 @@ mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/do
 <ul>
 <li><strong>scope</strong>: save the preferences on application or project level</li>
 <li><strong>help topic</strong>: The help topic is an internal identifier that can link a page in the <abbr title="Meta Programming System">MPS</abbr> documentation.
-  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a>) and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
+  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
 </ul>
 <p>The preference form supports a few different input elements:</p>
 <ul>
@@ -1004,7 +1001,7 @@ mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/do
 <li>text field</li>
 </ul>
 <p>The <em>before write</em> method is called, when the button <em>Apply</em> or <em>OK</em> is pressed. This method should update all tools or classes
-that reference the values of the preference form. The input fields can be accessed through the <em>this</em> object. Example:</p>
+that reference the values of the preference form. The input fields can be accessed through <em>this</em>. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpServerConfig</span><span class="p">(((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">port</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">enabled</span><span class="p">);</span><span class="w"> </span>
@@ -1034,7 +1031,7 @@ executed the <em>onFinish</em> callback of every step. For more information, hav
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.rcp</ins></p>
 </blockquote>
-<p>This language allows creating a new action for creating models similar to the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
+<p>This language allows creating a new action for creating models like the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
 Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig</a>. The following settings are supported:</p>
 <ul>
 <li><strong>name</strong>: the name of the new action</li>
@@ -1057,7 +1054,7 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1134,8 +1131,8 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../javascripts/tablesort.js"></script>

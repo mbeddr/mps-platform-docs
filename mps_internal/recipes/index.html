@@ -8,10 +8,12 @@
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/recipes/" rel="canonical"/>
+<link href="../dependencies/" rel="prev"/>
+<link href="../classloading/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Recipes - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -99,7 +101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -266,7 +268,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -368,7 +370,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_19">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -684,8 +686,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-an-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">
-    Create an utility Model (aka create complex implementations for Behavior Methods or Generators)
+<a class="md-nav__link" href="#create-a-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">
+    Create a utility Model (aka create complex implementations for Behavior Methods or Generators)
   </a>
 </li>
 </ul>
@@ -892,7 +894,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9">
+<label aria-expanded="false" class="md-nav__link" for="__nav_9" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -922,7 +924,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10">
+<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -992,7 +994,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_11" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1145,8 +1147,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-an-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">
-    Create an utility Model (aka create complex implementations for Behavior Methods or Generators)
+<a class="md-nav__link" href="#create-a-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">
+    Create a utility Model (aka create complex implementations for Behavior Methods or Generators)
   </a>
 </li>
 </ul>
@@ -1156,9 +1158,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/mbeddr/mps-platform-docs/edit/main/src/doc/docs/mps_internal/recipes.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="recipes">Recipes<a class="headerlink" href="#recipes" title="Permanent link">¶</a></h1>
 <p>This section lists all relations required for a specific task.</p>
 <p>If not specified otherwise, you should add all dependencies.</p>
@@ -1303,8 +1302,7 @@ This flag specifies if type system rules of concepts extended by the applicable 
 <ul>
 <li>For <em>ConceptZ</em>, type system rule <em>ConceptZTypeRule</em> gets evaluated.</li>
 <li>For <em>ConceptY</em>, type system rules <em>ConceptYTypeRule1</em> and <em>ConceptYTypeRule2</em> get evaluated.<br/>
-<em>ConceptZTypeRule</em> is not evaluated, as at least one Rule for <em>ConceptY</em> defines
-  <em>[override=true]</em>.</li>
+<em>ConceptZTypeRule</em> is not evaluated, as at least one rule for <em>ConceptY</em> defines <em>[override=true]</em>.</li>
 <li>For <em>ConceptX</em>, type system rules <em>ConceptYTypeRule1</em>, <em>ConceptYTypeRule2</em> and<br/>
 <em>ConceptXTypeRule</em> get evaluated.<br/>
 <em>ConceptYTypeRule1</em> and <em>ConceptYTypeRule2</em> get included because no rule for <em>ConceptX</em>
@@ -1342,7 +1340,7 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 <ul>
 <li>Making sure that another generator is always executed if this generator gets executed.</li>
 <li>Creating new reduction ruled to be used in another generator.</li>
-<li>Createing a new switch entry for a switch in another generator.</li>
+<li>Creating a new switch entry for a switch in another generator.</li>
 </ul>
 <p><em>GeneratorB</em> inside <em>LanguageB</em> wants to extend <em>GeneratorA</em> inside <em>LanguageA</em>.<br/>
 <em>GeneratorA</em> transforms <em>ConceptC</em> inside <em>LanguageC</em> into <em>ConceptD</em> inside <em>LanguageD</em>.<br/>
@@ -1382,7 +1380,7 @@ is a <em>Used Language</em>.</p>
 <li>To <em>LanguageA</em>, add an accessory Model to <em>AccessoryModel</em> (if not present already).</li>
 </ul>
 <p>Note: We don’t need any other relation, specifically, no dependency from <em>LanguageA</em> to <em>AccessorySolution</em>.</p>
-<h2 id="create-an-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">Create an utility Model (aka create complex implementations for Behavior Methods or Generators)<a class="headerlink" href="#create-an-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators" title="Permanent link">¶</a></h2>
+<h2 id="create-a-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators">Create a utility Model (aka create complex implementations for Behavior Methods or Generators)<a class="headerlink" href="#create-a-utility-model-aka-create-complex-implementations-for-behavior-methods-or-generators" title="Permanent link">¶</a></h2>
 <p><em>complexBehavior()</em> defined for <em>ConceptA</em> inside <em>LanguageA</em> needs <em>ComplexBehaviorInternalJavaClass</em> for its implementation or
 <em>GeneratorA</em> inside <em>LanguageA</em> needs <em>ComplexGeneratorInternalJavaClass</em> for its execution (e.g. for a complex condition or <em>macro</em>).</p>
 <ul>
@@ -1396,7 +1394,7 @@ is a <em>Used Language</em>.</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1501,8 +1499,8 @@ is a <em>Used Language</em>.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../javascripts/tablesort.js"></script>
