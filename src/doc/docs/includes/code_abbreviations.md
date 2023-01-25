@@ -34,7 +34,7 @@
 *[bt]: base type
 *[btn]: button
 *[buff]: buffer
-*[ca]: concept argument
+*[ca]: concept argument or child adopter
 *[cat]: category
 *[cc]: class concept
 *[cd]: concept declaration
@@ -116,8 +116,12 @@
 *[ft]: float type or file tracker
 *[fun]: function
 *[fw]: file writer
+*[fwiw]: for whomever is wondering
+*[fyi]: for your information
 *[gd]: graphics device or generator descriptor
 *[ge]: graphics environment or greater equals
+*[gen]: generation
+*[gm]: generator module or generator mappings
 *[gms]: generator module scanner or model generation status manager
 *[gp]: generation plan/partitioner
 *[gr]: generator
@@ -141,6 +145,8 @@
 *[ir]: icon resource
 *[isr]: input stream reader
 *[iter]: iterator
+*[qec]: query execution context
+*[jftr]: just for the record
 *[jc]: Java compiler
 *[jmf]: Java module facet
 *[km]: keymap
@@ -156,6 +162,7 @@
 *[lf]: line feed
 *[lhs]: left hand side
 *[lib]: library
+*[lm]: labeled mappings
 *[lnk]: link
 *[loc]: location
 *[lr]: language registry/runtime
@@ -165,6 +172,7 @@
 *[lvd]: local variable declaration
 *[lvl]: level
 *[ma]: model access
+*[mat]: ?
 *[mah]: model access helper
 *[max]: maximum
 *[mc]: mapping configuration
@@ -181,7 +189,7 @@
 *[mi]: model imports or internal model
 *[min]: minimum
 *[mis]: model input stream
-*[ml]: module loader
+*[ml]: module loader or model
 *[mm]: modules miner
 *[mn]: model name
 *[mo]: module options
@@ -201,10 +209,12 @@
 *[nl]: new line or number literal
 *[nm]: nodes matcher
 *[np]: null pointer or node pointer
+*[nr]: number or node reference
 *[ns]: name source/space
 *[nuli]: number literal
 *[num]: number
 *[nut]: node under test
+*[nwf] node weave support
 *[obj]: object
 *[ois]: object input stream
 *[oos]: object output stream
@@ -212,6 +222,7 @@
 *[opt]: option or optional
 *[orig]: origin
 *[os]: operation system
+*[otoh]: on the other hand
 *[pa]: property attribute
 *[pb]: popup builder
 *[pd]: parameter declaration or property descriptor
@@ -231,6 +242,7 @@
 *[prop]: property
 *[psc]: package scope control
 *[pt]: primitive type or pointer type or performance tracer
+*[ptg]: parallel template generator
 *[pw]: print writer
 *[px]: pixel or position x
 *[py]: position y
@@ -287,6 +299,8 @@
 *[ta]: text area
 *[tc]: teamcity or template context or template call
 *[td]: table data or type definition or target declaration
+*[tee]: template execution environment
+*[teei]: template execution environment implementation
 *[tf]: template fragment
 *[tg]: template generator or thread group
 *[tgs]: text generation support
@@ -303,6 +317,7 @@
 *[trd]: thread
 *[trf]: transferable
 *[tsc]: type size configuration
+*[tt]: transition trace
 *[tv]: text value
 *[tvr]: type variable reference
 *[txt]: text
@@ -320,6 +335,7 @@
 *[vf]: virtual file
 *[vfs]: virtual file system
 *[vp]: view port or virtual package
+*[vv]: ? value
 *[wa]: write action
 *[wiz]: wizard
 *[wrk]: worker
