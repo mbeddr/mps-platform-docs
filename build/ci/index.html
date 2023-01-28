@@ -1063,6 +1063,7 @@ If still asked for a password, check which user is running the build. On GitHub,
 These images are built from a Dockerfile.</p>
 <p>Essentially, everything in the infrastructure is provisioning using docker from the teamcity frontend over the database to the build agent. For the building agent, this approach allows us to keep the building agents consistent with their installed software and their versions. The Dockerfile for our general purpose agents can be found at GitHub. The docker image build from the docker file is published to docker hub, hosting service for images, and then used in our build server.</p>
 <p>The complete docker configuration for our build server is hosted on GitLab. It also included the scripts that download/update the docker image and run the agent. Since our teamcity setup uses multiple containers, a separate container for the database or the webserver that handles the encrypted connection, we are using docker-compose as an orchestration tool. </p>
+<p>*[nwf] node weave support</p>
 <hr/>
 <div class="md-source-file">
 <small>

@@ -981,12 +981,13 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 <p>Extend the original language (A.<abbr title="exception or executor">ex</abbr>) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do <abbr title="Model to Model">M2M</abbr> transformation to replace the extended concepts. You can do this in a generic way by using a script the generator that searches for all node of concepts that are extended in A.<abbr title="exception or executor">ex</abbr> and replaces them by using the <code>RefactoringRuntime.replaceWithNewConcept</code> method.</p>
 </li>
 <li>
-<p>Create annotations that override the text gen of the concepts and attache them in a generator. Then <abbr title="Meta Programming System">MPS</abbr> will first call the text gen of the annotation and you can override it there. </p>
+<p>Create annotations that override the text <abbr title="generation">gen</abbr> of the concepts and attache them in a generator. Then <abbr title="Meta Programming System">MPS</abbr> will first call the text <abbr title="generation">gen</abbr> of the annotation and you can override it there. </p>
 </li>
 </ol>
 <p>There is <a href="https://youtrack.jetbrains.com/issue/MPS-22092"><abbr title="Meta Programming System">MPS</abbr>-22092</a> which describes this request.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
 </details>
+<p>*[nwf] node weave support</p>
 <hr/>
 <div class="md-source-file">
 <small>
