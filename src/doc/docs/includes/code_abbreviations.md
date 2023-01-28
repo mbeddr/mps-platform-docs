@@ -214,7 +214,7 @@
 *[nuli]: number literal
 *[num]: number
 *[nut]: node under test
-*[nwf] node weave support
+*[nwf]: node weave support
 *[obj]: object
 *[ois]: object input stream
 *[oos]: object output stream
