@@ -205,7 +205,7 @@
 *[nb]: node builder
 *[nbn]: node builder node
 *[nc]: named concept
-*[ne]: not equals/expresison
+*[ne]: not equals/expression
 *[nl]: new line or number literal
 *[nm]: nodes matcher
 *[np]: null pointer or node pointer
