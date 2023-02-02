@@ -283,6 +283,39 @@ tags:
     assert true editor component.getNodeSubstituteChooser().isVisible() && editor component.getNodeSubstituteChooser().getNumberOfActions() == n;
     ```
 
+!!! question "How do I run some checks of the model checker?"
+
+    Example code:
+
+    ```java
+    IChecker<SNode, NodeReportItem> structureChecker = new  StructureChecker();
+    IAbstractChecker<ModelCheckerBuilder.ItemsToCheck, IssueKindReportItem> checker = new  ModelCheckerBuilder(false).createChecker(new arraylist<IChecker<?, ? extends IssueKindReportItem>>{structureChecker, new SuppressErrorsChecker()});
+    checker.check(ModelCheckerBuilder.ItemsToCheck.forSingleModel(modelToCheck), modelToCheck/.getRepository(), new  CollectConsumer<IssueKindReportItem>(), new  EmptyProgressMonitor());
+    ```
+
+!!! question "How do I run unit tests through a run configuration?"
+
+    Example code:
+
+    ```java
+    command process<jUnit> process = jUnit(project = project,tests = allTests, 
+        virtualMachineParameter = vmParams
+        workingDirectory = workingDir);
+    int exitcode = process.startAndWait(TimeUnit.MINUTES.toMillis(1));
+    ```
+
+!!! question "Can I test the actions menu?"
+
+    For internally tests in MPS, there is the following code:
+
+    ```java
+    list<TransformationMenuItem> items = MenuLoadingUtils.loadNamedMenu(editor component, node-ptr/WithExecutableAction/, "test location");
+    ActionItem item = (ActionItem) items.get(0);
+    item.execute("");
+    ```
+
+    [MenuLoadingUtils.java](https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/editor.menus.tests/test_gen/jetbrains/mps/lang/editor/menus/tests/MenuLoadingUtils.java) and [WithExecutableAction](https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/testlangs/editor.menus.testLanguage/source_gen/jetbrains/mps/lang/editor/menus/testLanguage/editor/WithExecutableAction.java) are not public, so they have to be created manually.
+
 ## Troubleshooting
 
 !!! warning "Tests aren't running at all."
