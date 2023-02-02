@@ -35,6 +35,8 @@ The following list shows some debugging tips:
 
 # Free Java debugging tools
 
+!!! warning "Especially VisualVM tends to freeze MPS. A better profiler is [YourKit](https://www.yourkit.com/java/profiler/features/) which is a commercial product."
+
 - [VisualVM](https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a)
     - display process configuration and environment (e.g. Java/MPS version, JVM arguments, system properties)
     - monitor process performance And memory (e.g. CPU/heap usage, loaded classes, threads)
