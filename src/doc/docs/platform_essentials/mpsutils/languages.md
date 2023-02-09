@@ -29,3 +29,5 @@ An example for a file that can be generated:
   } 
 }
 ```
+
+No importer and exporter exist for the language yet (there is a draft in [feature/json_importer](https://github.com/mbeddr/mbeddr.core/tree/feature/json_importer)).
