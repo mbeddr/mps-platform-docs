@@ -32,6 +32,16 @@ The editor aspect defines the projectional editor of a concept.
 
     The return type of those functions indicate that they return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found [here](../../patterns/user_experience#dark-theme).
 
+!!! question "What is the difference between an empty cell and a simple constant cell without any content?"
+
+    Both cell work with an internal text line, but the `constant cell` supports more styling for the text line. This also results in different-looking cursors, I believe.
+    
+    `constant cell` supports the cell actions `LEFT, RIGHT, LOCAL`*`HOME/END,SELECT`*`RIGHT/LEFT, SELECT`*`LOCAL`*`HOME/END, COPY, PASTE, CUT` and `CLEAR_SELECTION` which it inherits from the internal label cell class. It has methods to validate the text (well, the only correct text is the specified text in the editor) and to synchronize the cell with the model (that means going back to the original text after editing the text).
+    
+    `empty cell` inherits from the internal basic cell which supports only left and right transformations (`LEFT_TRANSFORM`, `RIGHT_TRANSFORM`). It also doesn't support the `editable` style sheet item which means no support for editing the text.
+    
+    In a nutshell, `empty cell` is a very stripped-down version of a `constant cell` and also has a somewhat different implementation because of the different base class.
+
 ## Menus
 
 !!! hint "Explain the different menu related terms."
