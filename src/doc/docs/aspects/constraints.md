@@ -38,6 +38,10 @@ The constraints aspect defines constraints for the concepts of the language.
 
 ## Scopes
 
+!!! question "How do you filter scopes? Which scopes are available?"
+
+    [FilteringScope](http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664) takes an existing scope and can therefore be used for filtering. Some other scope implementations are also listed in [Using reference scope | MPS documentation](https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope).
+
 ??? question "What's the best way to wrap a list of nodes into a *Scope*?"
 
     > I have a list of nodes and want to wrap them into a scope
