@@ -557,6 +557,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         Git
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/teamcity/">
+        TeamCity
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -696,6 +701,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../mps_internal/mps_startup/">
         What happens on MPS startup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
+        File format
       </a>
 </li>
 </ul>
@@ -1028,6 +1038,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p class="admonition-title">I’ve set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme.</p>
 <p>The return type of those functions indicate that they return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can be found <a href="../../patterns/user_experience#dark-theme">here</a>.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What is the difference between an empty cell and a simple constant cell without any content?</p>
+<p>Both cell work with an internal text line, but the <code>constant cell</code> supports more styling for the text line. This also results in different-looking cursors, I believe.</p>
+<p><code>constant cell</code> supports the cell actions <code>LEFT, RIGHT, LOCAL</code><em><code>HOME/END,SELECT</code></em><code>RIGHT/LEFT, SELECT</code><em><code>LOCAL</code></em><code>HOME/END, COPY, PASTE, CUT</code> and <code>CLEAR_SELECTION</code> which it inherits from the internal label cell class. It has methods to validate the text (well, the only correct text is the specified text in the editor) and to synchronize the cell with the model (that means going back to the original text after editing the text).</p>
+<p><code>empty cell</code> inherits from the internal basic cell which supports only left and right transformations (<code>LEFT_TRANSFORM</code>, <code>RIGHT_TRANSFORM</code>). It also doesn’t support the <code>editable</code> style sheet item which means no support for editing the text.</p>
+<p>In a nutshell, <code>empty cell</code> is a very stripped-down version of a <code>constant cell</code> and also has a somewhat different implementation because of the different base class.</p>
+</div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Explain the different menu related terms.</p>
@@ -1351,7 +1368,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
