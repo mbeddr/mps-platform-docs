@@ -316,6 +316,32 @@ tags:
 
     [MenuLoadingUtils.java](https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/editor.menus.tests/test_gen/jetbrains/mps/lang/editor/menus/tests/MenuLoadingUtils.java) and [WithExecutableAction](https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/testlangs/editor.menus.testLanguage/source_gen/jetbrains/mps/lang/editor/menus/testLanguage/editor/WithExecutableAction.java) are not public, so they have to be created manually.
 
+!!! question "How can I run a baselanguage test ([BTestCase](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902d7%28jetbrains.mps.baseLanguage.unitTest.structure%29%2F1171931851043)) in a MPS environment?"
+
+    Add the [MPSLaunch](http://127.0.0.1:63320/node?ref=920eaa0e-ecca-46bc-bee7-4e5c59213dd6%2Fjava%3Ajetbrains.mps%28Testbench%2F%29%2F%7EMPSLaunch) annotation to the test case and extend the class [EnvironmentAwareTestCase](http://127.0.0.1:63320/node?ref=920eaa0e-ecca-46bc-bee7-4e5c59213dd6%2Fjava%3Ajetbrains.mps.testbench%28Testbench%2F%29%2F%7EEnvironmentAwareTestCase).
+
+    Example:
+
+    ```java
+    @MPSLaunch 
+    test case Test extends EnvironmentAwareTestCase {
+        <<members>>
+        
+        <<before test>>
+        
+        <<after test>>
+        
+        
+        test test {
+            read action with MPSModuleRepository.getInstance() {
+                foreach module in MPSModuleRepository.getInstance().getModules() {
+                    System.out.println(module.getModuleName());
+                }
+            }
+        }
+    }
+    ```
+
 ## Troubleshooting
 
 !!! warning "Tests aren't running at all."
