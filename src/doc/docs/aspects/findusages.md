@@ -30,3 +30,20 @@ Custom finders for discovering related nodes can be implemented in this aspect.
     ```java    
     SearchResults results = execute finders(NodeUsages, node, new ProjectScope(project), <default>);
     ```
+
+!!! question "How can I invoke the find usages manager programmatically without UI?"
+
+    Use one of the methods in `#project.getComponent(FindUsagesmanager.class)`. If no project is available, you can use the deprecated method
+    `FindUsagesManager.getInstance()`. If the method needs a Consumer, just use the class
+    [CollectConsumer](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.util%28MPS.Core%2F%29%2F~CollectConsumer) which adds the results to the provided collection. There is also the method `getResults()` to get back
+    the collection.
+
+!!! warning "Fast usages search is not supported for model."
+
+    When specifying the scope, make sure to exclude models that don't support fast usages search (e.g. temporary models such as the console model).
+    Models are only loaded when they are accessed, so make sure to keep the scope of the find usages call at a minimum.
+    If you are filtering a global or similar scope, the following methods might be useful: 
+    
+    - `#!java module.isPackaged()` to check for installed languages/solutions/devkits
+    - `#!java model.isReadOnly()` to check if a model allows updates
+    - `#!java SModelStereotype.isX()` to check if the model has a specific stereotype e.g. the model is a test model

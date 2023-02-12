@@ -46,3 +46,20 @@ The action aspect defines node factories and copy/paste related handlers.
     ![custom factory cell delete actions](custom_factory_cell_delete_actions.png){width="600px"}
 
     {{ contribution_by('arimer') }}
+
+!!! question "Can you create a copy-paste handler/paste wrapper for an arbitrary concepts?"
+
+    Yes, the handlers can be created for any concept, e.g. ClassConcept. The language containing the handler doesn't even have to be used in the model.
+
+!!! question "How can I call the copy and paste handler programmatically?"
+
+    - Copy: `#!java DataTransferManager.getInstance().preProcessNode()`
+    - Paste: `#!java DataTransferManager.getInstance().postProcessNode()`
+
+    [CopyPasteUtil](http://127.0.0.1:63320/node?ref=r%3A84719e1a-99f6-4297-90ba-8ad2a947fa4a%28jetbrains.mps.ide.datatransfer%29%2F6299533519672638253) can help you with those two actions.
+
+!!! warning "I have an interface `IStatement `and two concepts `StatementA` and `StatementB` that implement the interface. I paste a node of concept `StatementA` into a node of concept`StatementB` into a role that accepts `IStatement`. Why is the paste wrapper not called?"
+
+    A paste wrapper only modifies the pasted node if it can change the source concept to the target concept
+    and if the pasted node is not already an instance of the target concept. In the described case, the node of concept `StatementA` is already
+    an instance of `IStatement`, that's why the paste wrapper is not called.
