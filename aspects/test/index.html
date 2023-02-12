@@ -363,6 +363,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     General
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-test">
+    How to test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+    Troubleshooting
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -951,6 +961,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     General
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-test">
+    How to test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+    Troubleshooting
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1070,7 +1090,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <li>I think it is similar for editor tests.</li>
 <li>I <abbr title="abstract module">am</abbr> sure that this does not apply to baseLang-tests since they don’t prepare a temporary model for you.</li>
 </ul>
-<h1 id="practical-effects-of-this">Practical effects of this<a class="headerlink" href="#practical-effects-of-this" title="Permanent link">¶</a></h1>
+<p><strong>Practical effects of this</strong></p>
 <p>These are some rules of thumb that result from that:</p>
 <ul>
 <li>The tests of a test-case may interact, so you should inline all modified nodes into the testcase to be <em>check-nodes</em>.</li>
@@ -1283,6 +1303,45 @@ and <em>release mouse</em> statements.</p>
 </code></pre></div></td></tr></table></div>
 <p><a href="https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/editor.menus.tests/test_gen/jetbrains/mps/lang/editor/menus/tests/MenuLoadingUtils.java">MenuLoadingUtils.java</a> and <a href="https://github.com/JetBrains/MPS/blob/master/testbench/testsolutions/testlangs/editor.menus.testLanguage/source_gen/jetbrains/mps/lang/editor/menus/testLanguage/editor/WithExecutableAction.java">WithExecutableAction</a> are not public, so they have to be created manually.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can I run a baselanguage test (<a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902d7%28jetbrains.mps.baseLanguage.unitTest.structure%29%2F1171931851043">BTestCase</a>) in a <abbr title="Meta Programming System">MPS</abbr> environment?</p>
+<p>Add the <a href="http://127.0.0.1:63320/node?ref=920eaa0e-ecca-46bc-bee7-4e5c59213dd6%2Fjava%3Ajetbrains.mps%28Testbench%2F%29%2F%7EMPSLaunch">MPSLaunch</a> annotation to the test case and extend the class <a href="http://127.0.0.1:63320/node?ref=920eaa0e-ecca-46bc-bee7-4e5c59213dd6%2Fjava%3Ajetbrains.mps.testbench%28Testbench%2F%29%2F%7EEnvironmentAwareTestCase">EnvironmentAwareTestCase</a>.</p>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nd">@MPSLaunch</span><span class="w"> </span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">test</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">EnvironmentAwareTestCase</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="o">&lt;&lt;</span><span class="n">members</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="o">&lt;&lt;</span><span class="n">before</span><span class="w"> </span><span class="n">test</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="o">&lt;&lt;</span><span class="n">after</span><span class="w"> </span><span class="n">test</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="n">test</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">        </span><span class="n">read</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">MPSModuleRepository</span><span class="p">.</span><span class="na">getInstance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">            </span><span class="n">foreach</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">MPSModuleRepository</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getModules</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="na">getModuleName</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Tests aren’t running at all.</p>
@@ -1310,7 +1369,7 @@ According to the IntelliJ documentation in can also happen when the dialog is no
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
 </small>
 </div>
 <!-- Giscus -->

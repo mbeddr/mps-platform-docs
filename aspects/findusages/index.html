@@ -957,12 +957,30 @@ you are using the correcting finders in the <em>Finders</em> section of the sett
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">SearchResults</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="nf">finders</span><span class="p">(</span><span class="n">NodeUsages</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProjectScope</span><span class="p">(</span><span class="n">project</span><span class="p">),</span><span class="w"> </span><span class="o">&lt;</span><span class="k">default</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can I invoke the find usages manager programmatically without <abbr title="User Interface">UI</abbr>?</p>
+<p>Use one of the methods in <code>#project.getComponent(FindUsagesmanager.class)</code>. If no project is available, you can use the deprecated method
+<code>FindUsagesManager.getInstance()</code>. If the method needs a Consumer, just use the class
+<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.util%28MPS.Core%2F%29%2F~CollectConsumer">CollectConsumer</a> which adds the results to the provided collection. There is also the method <code>getResults()</code> to get back
+the collection.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Fast usages search is not supported for model.</p>
+<p>When specifying the scope, make sure to exclude models that don’t support fast usages search (e.g. temporary models such as the console model).
+Models are only loaded when they are accessed, so make sure to keep the scope of the find usages call at a minimum.
+If you are filtering a global or similar scope, the following methods might be useful: </p>
+<ul>
+<li><code class="highlight"><span class="n">module</span><span class="p">.</span><span class="na">isPackaged</span><span class="p">()</span><span class="w"></span></code> to check for installed languages/solutions/devkits</li>
+<li><code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">isReadOnly</span><span class="p">()</span><span class="w"></span></code> to check if a model allows updates</li>
+<li><code class="highlight"><span class="n">SModelStereotype</span><span class="p">.</span><span class="na">isX</span><span class="p">()</span><span class="w"></span></code> to check if the model has a specific stereotype e.g. the model is a test model</li>
+</ul>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
 </small>
 </div>
 <!-- Giscus -->

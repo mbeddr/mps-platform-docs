@@ -963,12 +963,30 @@ Deactivate the automatically applied action with the help of custom editor cells
 <p><a class="glightbox" href="../../img/custom_factory_cell_delete_actions.png"><img alt="custom factory cell delete actions" src="../../img/custom_factory_cell_delete_actions.png" width="600px"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arimer" title="GitHub User: arimer">@arimer</a><sub></sub></sub></p>
 </details>
+<div class="admonition question">
+<p class="admonition-title">Can you create a copy-paste handler/paste wrapper for an arbitrary concepts?</p>
+<p>Yes, the handlers can be created for any concept, e.g. ClassConcept. The language containing the handler doesn’t even have to be used in the model.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can I call the copy and paste handler programmatically?</p>
+<ul>
+<li>Copy: <code class="highlight"><span class="n">DataTransferManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">preProcessNode</span><span class="p">()</span><span class="w"></span></code></li>
+<li>Paste: <code class="highlight"><span class="n">DataTransferManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">postProcessNode</span><span class="p">()</span><span class="w"></span></code></li>
+</ul>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A84719e1a-99f6-4297-90ba-8ad2a947fa4a%28jetbrains.mps.ide.datatransfer%29%2F6299533519672638253">CopyPasteUtil</a> can help you with those two actions.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">I have an interface <code>IStatement</code>and two concepts <code>StatementA</code> and <code>StatementB</code> that implement the interface. I paste a node of concept <code>StatementA</code> into a node of concept<code>StatementB</code> into a role that accepts <code>IStatement</code>. Why is the paste wrapper not called?</p>
+<p>A paste wrapper only modifies the pasted node if it can change the source concept to the target concept
+and if the pasted node is not already an instance of the target concept. In the described case, the node of concept <code>StatementA</code> is already
+an instance of <code>IStatement</code>, that’s why the paste wrapper is not called.</p>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
