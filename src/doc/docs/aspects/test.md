@@ -109,7 +109,7 @@ tags:
     * I think it is similar for editor tests.
     * I am sure that this does not apply to baseLang-tests since they don't prepare a temporary model for you.
 
-    # Practical effects of this
+    **Practical effects of this**
 
     These are some rules of thumb that result from that:
 
