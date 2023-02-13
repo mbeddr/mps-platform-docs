@@ -480,6 +480,49 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     Images
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#baselanguage-internal">
+    Baselanguage internal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sax-parser">
+    Sax parser
+  </a>
+<nav aria-label="Sax parser" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules">
+    Rules
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-references">
+    Property references
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties-file">
+    Properties file
+  </a>
+<nav aria-label="Properties file" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forms-checkbox">
+    Forms (Checkbox)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-generation-for-nodes">
+    Image generation for nodes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1021,6 +1064,49 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     Images
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#baselanguage-internal">
+    Baselanguage internal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sax-parser">
+    Sax parser
+  </a>
+<nav aria-label="Sax parser" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules">
+    Rules
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-references">
+    Property references
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties-file">
+    Properties file
+  </a>
+<nav aria-label="Properties file" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forms-checkbox">
+    Forms (Checkbox)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-generation-for-nodes">
+    Image generation for nodes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -1072,9 +1158,14 @@ statement in such places.</p>
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage.varVariable</ins></p>
 </blockquote>
+<p>This extension allows to declare local variables with the type automatically inferred from the initializer which must not be empty. Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ISimple</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="kd">var</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="n">c710</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">TextGen not found for concept of X language.</p>
-<p>Maybe a wrong generator order of languages. Example The generators of language x are executed first and then the generator of
+<p>Maybe a wrong generator order of languages is the issue. Example: The generators of language x are executed first and then the generator of
 the <em><abbr title="variable">var</abbr></em> variable of the same language is called. It should be the other way around. You can specify a custom generation plan to fix this issue.</p>
 </div>
 <h2 id="closures">Closures<a class="headerlink" href="#closures" title="Permanent link">¶</a></h2>
@@ -1089,13 +1180,13 @@ the <em><abbr title="variable">var</abbr></em> variable of the same language is 
 <div class="admonition question">
 <p class="admonition-title">How can you create a sequence with one element?</p>
 <p>Use the singleton constructor:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">new</span><span class="w"> </span><span class="n">singleton</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"single"</span><span class="p">)</span><span class="err">`</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">new</span><span class="w"> </span><span class="n">singleton</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"single"</span><span class="p">)</span><span class="err">`</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you convert from a Java <em>ArrayList</em> to a <em>baselanguage</em> list?</p>
 <p>Use the copy constructor: 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">new</span><span class="w"> </span><span class="n">arraylist</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">copy</span><span class="p">:</span><span class="w"> </span><span class="n">yourArrayList</span><span class="p">)</span><span class="err">`</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">new</span><span class="w"> </span><span class="n">arraylist</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">copy</span><span class="p">:</span><span class="w"> </span><span class="n">yourArrayList</span><span class="p">)</span><span class="err">`</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
@@ -1122,11 +1213,11 @@ How do I sort them by their <code>toString()</code>?
 I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn’t do anything. Stepping revealed that it seems to create a copy of that list and sort that one.</p>
 </blockquote>
 <p>Use the bold sort, call <code>toList</code> to materialize the result, and then <code>.clear</code> and <code>.addAll</code> it:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">sort</span><span class="p">({</span><span class="o">~</span><span class="n">a</span><span class="p">,</span><span class="o">~</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ORDERING</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">asc</span><span class="p">).</span><span class="na">toList</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">list</span><span class="p">.</span><span class="na">clear</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">list</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">sorted</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">sort</span><span class="p">({</span><span class="o">~</span><span class="n">a</span><span class="p">,</span><span class="o">~</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ORDERING</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">asc</span><span class="p">).</span><span class="na">toList</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">list</span><span class="p">.</span><span class="na">clear</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">list</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">sorted</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </div>
@@ -1167,12 +1258,167 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn�
 </p>
 <figcaption>example: image cell</figcaption>
 </figure>
+<h2 id="baselanguage-internal">Baselanguage internal<a class="headerlink" href="#baselanguage-internal" title="Permanent link">¶</a></h2>
+<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/">Poor man’s cross-model generation: baseLanguageInternal</a></p>
+<h2 id="sax-parser">Sax parser<a class="headerlink" href="#sax-parser" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>jetbrains.mps.core.xml.sax</ins></p>
+</blockquote>
+<p><a href="https://www.baeldung.com/java-sax-parser">SAX</a>, also known as the Simple API for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the <em>root</em> element and then at <em>rules</em> for XML tags.</p>
+<h3 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">¶</a></h3>
+<p>The rule can have an optional <em>creator</em> which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (<em><abbr title="attribute">attr</abbr></em>) and children which take can have an optional handler. It has two arguments: the <em>result</em> which has the same type as the type of the rule and the <em>child</em> which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The <em>default</em> child block can be used for children with any tags. Next there can be a <em>text</em> handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the <em>validate</em> method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the <em>global text handler text</em>. 
+Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span>
+<span class="normal"><a href="#__codelineno-4-42">42</a></span>
+<span class="normal"><a href="#__codelineno-4-43">43</a></span>
+<span class="normal"><a href="#__codelineno-4-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">sax</span><span class="w"> </span><span class="n">parser</span><span class="w"> </span><span class="n">ModelReader8</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="n">parameters</span><span class="w"> </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">interfaceOnly</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="n">variables</span><span class="w"> </span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DefaultSModel</span><span class="w"> </span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="n">root</span><span class="w"> </span><span class="n">model</span><span class="w"> </span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span><span class="n">rule</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="nf">model</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ModelLoadResult</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="n">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">ModelLoadResult</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SAXException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">      </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w">  </span><span class="n">DefaultSModel</span><span class="p">(</span><span class="n">PersistenceFacade</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createModelReference</span><span class="p">(</span><span class="n">modelUID</span><span class="p">),</span><span class="w"> </span><span class="n">header</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">      </span><span class="n">hasSkippedNodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">      </span><span class="n">helper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w">  </span><span class="n">ReadHelper</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="na">getReference</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w">  </span><span class="n">ModelLoadResult</span><span class="p">((</span><span class="n">SModel</span><span class="p">)</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">ModelLoadingState</span><span class="p">.</span><span class="na">NOT_LOADED</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="n">required</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="n">modelUID</span><span class="w"> </span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">    </span><span class="n">child</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="n">devkit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">module_reference</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">      </span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">child</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">void</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SAXException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">        </span><span class="n">model</span><span class="p">.</span><span class="na">addDevKit</span><span class="p">(</span><span class="n">child</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">    </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">    </span><span class="n">validate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">boolean</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SAXException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="na">setState</span><span class="p">(</span><span class="n">hasSkippedNodes</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="n">interfaceOnly</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ModelLoadingState</span><span class="p">.</span><span class="na">INTERFACE_LOADED</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ModelLoadingState</span><span class="p">.</span><span class="na">NO_IMPLEMENTATION</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ModelLoadingState</span><span class="p">.</span><span class="na">FULLY_LOADED</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">  </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">  </span><span class="n">compact</span><span class="w"> </span><span class="n">rule</span><span class="w"> </span><span class="n">ignoredLink</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="nf">link</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">type</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">creator</span><span class="o">&gt;</span><span class="w"> </span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">    </span><span class="n">attr</span><span class="w"> </span><span class="n">role</span><span class="w"> </span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">    </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">  </span><span class="n">global</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">globalText</span><span class="o">&gt;</span><span class="w"> </span>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>To use the generated parser, you have to use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024">InternalClassCreator</a> from Baselanguage Internal. Example:</p>
+<p><code class="highlight"><span class="k">new</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="n">XMLSAXHandler</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">smodel</span><span class="p">.</span><span class="na">persistence</span><span class="p">.</span><span class="na">def</span><span class="p">.</span><span class="na">v8</span><span class="p">.</span><span class="na">LineToContentMapReader8Handler</span><span class="w"> </span><span class="p">(</span><span class="n">withPropertyValues</span><span class="p">,</span><span class="w"> </span><span class="n">withAssociationTarget</span><span class="p">)</span><span class="w"></span></code></p>
+<h2 id="property-references">Property references<a class="headerlink" href="#property-references" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.checkedName</ins></p>
+</blockquote>
+<p>This language can be used to reference properties. <code>property/&lt;node&gt;,&lt;role&gt;/</code>is the main expression which has the type <code>propRef&lt;&gt;</code>. To access the value use <code>.value</code>. Example: 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">propRef</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">property</span><span class="o">/</span><span class="n">node</span><span class="o">/</span><span class="n">Class</span><span class="o">/</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">name</span><span class="o">/</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">property</span><span class="p">.</span><span class="na">value</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+This expression is the node pendant for the <code>property/&lt;concept&gt;:&lt;name&gt;/</code> expression from <code>jetbrains.mps.lang.smodel</code> which takes a concept as an argument and returns an instance of class <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.language%28MPS.OpenAPI%2F%29%2F~SProperty">SProperty</a>.</p>
+<h2 id="properties-file">Properties file<a class="headerlink" href="#properties-file" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><ins>jetbrains.mps.core.properties</ins></p>
+</blockquote>
+<p>This language adds support for <a href="https://en.wikipedia.org/wiki/.properties">Java .properties</a> files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
+Example:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="na">mps_home</span><span class="o">=</span><span class="s">/Applications/MPS.app </span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="na">deploy.dir</span><span class="o">=</span><span class="s">./artifacts </span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c"># locale </span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="na">encoding</span><span class="o">=</span><span class="s">utf-8 </span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="na">locale</span><span class="o">=</span><span class="s">en_US</span><span class="w"></span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="forms-checkbox">Forms (Checkbox)<a class="headerlink" href="#forms-checkbox" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.forms</ins></p>
+</blockquote>
+<p>This language add support for checkboxes. There is a text based checkbox (text checkbox <abbr title="User Interface">UI</abbr>) and an image checkbox (platform checkbox <abbr title="User Interface">UI</abbr>). The text-based checkbox can be styled like any other constant text. The checkbox cell has an <em><abbr title="user interface">ui</abbr></em> parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the <em>label</em>. The checkbox can be toggled through clicking and pressing space. The</p>
+<p><a class="glightbox" href="../../img/forms_checkbox.png"><img alt="forms: checkbox" src="../../img/forms_checkbox.png"/></a></p>
+<h3 id="image-generation-for-nodes">Image generation for nodes<a class="headerlink" href="#image-generation-for-nodes" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.imageGen</ins></p>
+</blockquote>
+<p>The single concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484">ImageGenerator</a> can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node <abbr title="identification">id</abbr> must be provided. The image is generated through the facet <a href="http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862">GenerateImages</a> which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">IIORegistry</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IIORegistry</span><span class="p">.</span><span class="na">getDefaultInstance</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">StringBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w">  </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">ImageWriterSpi</span><span class="o">&gt;</span><span class="w"> </span><span class="n">serviceProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="na">getServiceProviders</span><span class="p">(</span><span class="n">ImageWriterSpi</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">serviceProviders</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="n">ImageWriterSpi</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serviceProviders</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">"description: %-27s   format names: %s%n"</span><span class="p">,</span><span class="w"> </span><span class="n">next</span><span class="p">.</span><span class="na">getDescription</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">ENGLISH</span><span class="p">),</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">next</span><span class="p">.</span><span class="na">getFormatNames</span><span class="p">())));</span><span class="w"> </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w"></span>
+</code></pre></div></td></tr></table></div></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2023</span>
 </small>
 </div>
 <!-- Giscus -->

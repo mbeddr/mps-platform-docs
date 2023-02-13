@@ -931,6 +931,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#reference">reference</a>
 <a class="md-tag" href="../../tags/#mps_language">mps_language</a>
 </nav>
+<p>This table contains all languages shipped with <abbr title="Meta Programming System">MPS</abbr>. Languages in gray color are test languages that
+are only used internally by <abbr title="Meta Programming System">MPS</abbr>. Languages that are crossed out, are deprecated or unused languages.</p>
 <style type="text/css">
 
     .tg  {border-collapse:collapse;border-spacing:0; text-align:center}
@@ -946,7 +948,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     .bg-yellow{background-color:#ffce93}
     .bg-gray{background-color:#ecf4ff}
     .bg-blue{background-color:#96fffb}
-
+    .test { color: gray }
     table {
       table-layout: fixed ;
       width: 100% ;
@@ -981,14 +983,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </tr>
 <tr>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/tuples.html" target="_blank">tuples</a></td>
-<td class="bg-red" colspan="12">varVariable</td>
+<td class="bg-red" colspan="12"><a href="../../languages/baselanguage/#var-variable" target="_blank">varVariable</a></td>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/type-extension-methods.html" target="_blank">extensionMethods</a></td>
 <td class="bg-red" colspan="12"><a href="http://mbeddr.com/mps-platform-docs/languages/double_dispatch/">doubleDispatch</a></td>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/other-languages.html#customconstructors" target="_blank">constructors</a></td>
 </tr>
 <tr>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/structure.html#properties">blTypes</a></td>
-<td class="bg-red" colspan="15">baselanguageInternal</td>
+<td class="bg-red" colspan="15"><a href="../../languages/baselanguage/#baselanguage-internal" target="_blank">baselanguageInternal</a></td>
 <td class="bg-red" colspan="15"><s>jdk7</s></td>
 <td class="bg-red" colspan="15"><s>jdk8</s></td>
 </tr>
@@ -998,11 +1000,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <tr>
 <td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#mpsplugin" target="_blank">mps</a></td>
 <td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#mps-runnerplugin" target="_blank">mps.runner</a></td>
-<td class="bg-purple" colspan="15">mps.testManifest</td>
-<td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#moduletestingplugin">mps.tests</a></td>
+<td class="bg-purple test" colspan="15">mps.testManifest</td>
+<td class="bg-purple" colspan="15"><a href="https://www.jetbrains.com/help/mps/build-language.html#moduletestingplugin" target="_blank">mps.tests</a></td>
 </tr>
 <tr>
-<td class="bg-purple" colspan="20">startup</td>
+<td class="bg-purple" colspan="20"><a href="https://www.jetbrains.com/help/mps/migration-guide.html#mps20213_migration">startup</a></td>
 <td class="bg-purple" colspan="20"><a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#:~:text=folder%20by%20default%3A-,the,-Tips%20%26%20Tricks%20language" target="_blank">tips</a></td>
 <td class="bg-purple" colspan="20">workflow</td>
 </tr>
@@ -1010,24 +1012,24 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <td class="bg-blue header" colspan="60"><span style="font-style:normal"><a href="https://www.jetbrains.com/help/mps/mps-console.html" target="_blank">jetbrains.mps.console</a></span></td>
 </tr>
 <tr>
-<td class="bg-blue" colspan="15">base</td>
-<td class="bg-blue" colspan="15">ideCommands</td>
-<td class="bg-blue" colspan="15">internalCommands</td>
+<td class="bg-blue" colspan="15"><a href="https://www.jetbrains.com/help/mps/mps-console.html">base</a></td>
+<td class="bg-blue" colspan="15"><a href="https://www.jetbrains.com/help/mps/mps-console.html#consolecommands">ideCommands</a></td>
+<td class="bg-blue" colspan="15"><a href="https://www.jetbrains.com/help/mps/mps-console.html#consolecommands">internalCommands</a></td>
 <td class="bg-blue" colspan="15"><a href="https://www.jetbrains.com/help/mps/scripts.html">scripts</a></td>
 </tr>
 <tr>
 <td class="bg-gray header" colspan="60">jetbrains.mps.core</td>
 </tr>
 <tr>
-<td class="bg-gray" colspan="20">properties</td>
+<td class="bg-gray" colspan="20"><a href="../../languages/baselanguage/#properties-file">properties</a></td>
 <td class="bg-gray" colspan="20"><a href="https://www.jetbrains.com/help/mps/xml-language.html" target="_blank">xml</a></td>
-<td class="bg-gray" colspan="20">xml.sax</td>
+<td class="bg-gray" colspan="20"><a href="../../languages/baselanguage/#sax-parser">xml.sax</a></td>
 </tr>
 <tr>
 <td class="bg-yellow header" colspan="60"><span style="font-weight:bold">jetbrains.mps.debugger</span></td>
 </tr>
 <tr>
-<td class="bg-yellow" colspan="15">api.lang</td>
+<td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/debugger.html#thefundamentals">api.lang</a></td>
 <td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/debugger.html#customviewers" target="_blank">java.customViewers</a></td>
 <td class="bg-yellow" colspan="15">java.evaluation</td>
 <td class="bg-yellow" colspan="15">java.privateMembers</td>
@@ -1060,14 +1062,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </tr>
 <tr>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage" target="_blank">access</a></td>
-<td class="bg-red" colspan="15">checkedName</td>
+<td class="bg-red" colspan="15"><a href="../../languages/baselanguage/#property-references">checkedName</a></td>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/feedback.html" target="_blank">context</a></td>
 <td class="bg-red" colspan="15">context.defs</td>
 </tr>
 <tr>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/custom-aspect.html" target="_blank">aspect</a></td>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces" target="_blank">core</a></td>
-<td class="bg-red" colspan="15">descriptor</td>
+<td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/custom-language-aspect-cookbook.html#languageruntime">descriptor</a></td>
 <td class="bg-red" colspan="15"><a href="https://www.jetbrains.com/help/mps/extension-support.html" target="_blank">extension</a></td>
 </tr>
 <tr>
@@ -1105,10 +1107,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/smodel-query-language.html#smodel.querylanguage" target="_blank">smodel.query</a></td>
 </tr>
 <tr>
-<td class="bg-red" colspan="12">smodelTests</td>
+<td class="bg-red test" colspan="12">smodelTests</td>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/structure.html" target="_blank">structure</a></td>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/testing-languages.html" target="_blank">test</a></td>
-<td class="bg-red" colspan="12">test.generator</td>
+<td class="bg-red test" colspan="12">test.generator</td>
 <td class="bg-red" colspan="12"><a href="https://www.jetbrains.com/help/mps/generic-placeholders-and-generic-comments.html#thetextlanguage" target="_blank">text</a></td>
 </tr>
 <tr>
@@ -1152,8 +1154,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <tr>
 <td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/diagramming-editor.html" target="_blank"><s>diagram</s></a></td>
 <td class="bg-yellow" colspan="15"><a href="https://www.jetbrains.com/help/mps/diagramming-editor.html"><s>figures</s></a></td>
-<td class="bg-yellow" colspan="15">forms</td>
-<td class="bg-yellow" colspan="15">imageGen</td>
+<td class="bg-yellow" colspan="15"><a href="../../languages/baselanguage/#forms-checkbox">forms</a></td>
+<td class="bg-yellow" colspan="15"><a href="../../languages/baselanguage/#image-generation-for-nodes">imageGen</a></td>
 </tr>
 <tr>
 <td class="bg-yellow" colspan="20"><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html#menuparts" target="_blank">menu.extras</a></td>
@@ -1181,8 +1183,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <td class="bg-green header" colspan="60">misc</td>
 </tr>
 <tr>
-<td class="bg-green" colspan="20">jetbrains.mps.refactoring.participant</td>
-<td class="bg-green" colspan="20">jetbrains.mps.tool.gentest</td>
+<td class="bg-green" colspan="20"><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html" target="blank">jetbrains.mps.refactoring.participant</a></td>
+<td class="bg-green test" colspan="20">jetbrains.mps.tool.gentest</td>
 <td class="bg-green" colspan="20"><a href="https://www.jetbrains.com/help/mps/mergehints.html" target="_blank">jetbrains.mps.vcs.mergehints</a></td>
 </tr>
 </tbody>
@@ -1192,7 +1194,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
