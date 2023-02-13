@@ -43,9 +43,16 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
 
 > ^^jetbrains.mps.baselanguage.varVariable^^
 
+This extension allows to declare local variables with the type automatically inferred from the initializer which must not be empty. Example:
+
+```java
+var value = (ISimple) {var input => return 1; }
+var x=0c710
+```
+
 !!! warning "TextGen not found for concept of X language."
 
-    Maybe a wrong generator order of languages. Example The generators of language x are executed first and then the generator of
+    Maybe a wrong generator order of languages is the issue. Example: The generators of language x are executed first and then the generator of
     the *var* variable of the same language is called. It should be the other way around. You can specify a custom generation plan to fix this issue.
 
 ## Closures
@@ -136,3 +143,119 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
   ![image cell](image_cell.png)
   <figcaption>example: image cell</figcaption>
 </figure>
+
+## Baselanguage internal
+
+Specific Languages blog: [Poor man's cross-model generation: baseLanguageInternal](https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/)
+
+## Sax parser
+
+> ^^jetbrains.mps.core.xml.sax^^
+
+[SAX](https://www.baeldung.com/java-sax-parser), also known as the Simple API for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the *root* element and then at *rules* for XML tags.
+
+### Rules
+
+The rule can have an optional *creator* which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (*attr*) and children which take can have an optional handler. It has two arguments: the *result* which has the same type as the type of the rule and the *child* which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The *default* child block can be used for children with any tags. Next there can be a *text* handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the *validate* method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the *global text handler text*. 
+Example:
+
+```java
+sax parser ModelReader8 { 
+  parameters 
+    interfaceOnly : boolean 
+    ...
+  variables 
+    model : DefaultSModel 
+    ...
+   
+  root model 
+   
+  rule model for tag model() -> ModelLoadResult { 
+    create()->ModelLoadResult throws SAXException { 
+      model = new  DefaultSModel(PersistenceFacade.getInstance().createModelReference(modelUID), header); 
+      hasSkippedNodes = false; 
+      helper = new  ReadHelper(model.getReference()); 
+      return new  ModelLoadResult((SModel) model, ModelLoadingState.NOT_LOADED); 
+    } 
+     
+    required attr modelUID 
+       
+    ...
+      
+    child with tag devkit => module_reference() 
+      (result, child)->void throws SAXException { 
+        model.addDevKit(child); 
+      } 
+
+    ...
+     
+    validate(result)->boolean throws SAXException { 
+      result.setState(hasSkippedNodes ? (interfaceOnly ? ModelLoadingState.INTERFACE_LOADED : ModelLoadingState.NO_IMPLEMENTATION) : ModelLoadingState.FULLY_LOADED); 
+      return true; 
+    } 
+  } 
+  ...
+    
+  compact rule ignoredLink for tag link() -> <no type> { 
+    <no creator> 
+    attr role 
+    ...
+  } 
+   
+  global text handler <no globalText> 
+}
+```
+
+To use the generated parser, you have to use [InternalClassCreator](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024) from Baselanguage Internal. Example:
+
+`#!java new [ XMLSAXHandler ] jetbrains.mps.smodel.persistence.def.v8.LineToContentMapReader8Handler (withPropertyValues, withAssociationTarget)`
+
+## Property references
+
+> ^^jetbrains.mps.lang.checkedName^^
+
+This language can be used to reference properties. `property/<node>,<role>/`is the main expression which has the type `propRef<>`. To access the value use `.value`. Example: 
+```java
+propRef<string> property = property/node/Class/ | name/;
+#print property.value;
+```
+This expression is the node pendant for the `property/<concept>:<name>/` expression from `jetbrains.mps.lang.smodel` which takes a concept as an argument and returns an instance of class [SProperty](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.language%28MPS.OpenAPI%2F%29%2F~SProperty).
+
+## Properties file
+
+> ^^jetbrains.mps.core.properties^^
+
+This language adds support for [Java .properties](https://en.wikipedia.org/wiki/.properties) files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
+Example:
+```properties 
+mps_home=/Applications/MPS.app 
+deploy.dir=./artifacts 
+ 
+# locale 
+encoding=utf-8 
+locale=en_US
+```
+
+### Forms (Checkbox)
+
+> ^^jetbrains.mps.lang.editor.forms^^
+
+This language add support for checkboxes. There is a text based checkbox (text checkbox UI) and an image checkbox (platform checkbox UI). The text-based checkbox can be styled like any other constant text. The checkbox cell has an *ui* parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the *label*. The checkbox can be toggled through clicking and pressing space. The
+
+![forms: checkbox](forms_checkbox.png)
+
+### Image generation for nodes
+
+> ^^jetbrains.mps.lang.editor.imageGen^^
+
+The single concept [ImageGenerator](http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484) can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node id must be provided. The image is generated through the facet [GenerateImages](http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862) which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
+```java
+IIORegistry registry = IIORegistry.getDefaultInstance(); 
+StringBuilder builder = new  StringBuilder(); 
+Iterator<ImageWriterSpi> serviceProviders = registry.getServiceProviders(ImageWriterSpi.class, false); 
+while (serviceProviders.hasNext()) { 
+  ImageWriterSpi next = serviceProviders.next(); 
+  builder.append(String.format("description: %-27s   format names: %s%n", next.getDescription(Locale.ENGLISH), Arrays.toString(next.getFormatNames()))); 
+} 
+#print builder.toString();
+```
