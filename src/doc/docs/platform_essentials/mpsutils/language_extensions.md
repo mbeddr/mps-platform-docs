@@ -52,7 +52,7 @@ This language contains extensions for ^^jetbrains.mps.lang.plugin^^. It mainly a
 `add to NewProjectOrModuleGroup after position NewProject`
 
 
-### #Parameterized menu
+### Parameterized menu
 
 > ^^com.mbeddr.mpsutil.parameterizedMenu^^
 
