@@ -16,6 +16,7 @@ tags:
     - [Learn MPS | official JetBrains landing page](https://www.jetbrains.com/mps/learn)
     - [Get started with MPS | mps.rocks](https://mps.rocks/#get-started-with-mps)
     - [Learning MPS | mps.rocks](https://mps.rocks/#learning-mps)
+    - Getting Started: [Part I](https://www.f1re.io/getting-started){{ blog('F1RE') }}, [Part II](https://www.f1re.io/getting-started-pt2){{ blog('F1RE') }}
 
 ??? question "Is there a high level presentation that I can have a look at?"
 

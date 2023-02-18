@@ -311,6 +311,10 @@ tags:
 
     {{ contribution_by('abstraktor') }}
 
+## Blog posts
+
+- [Introduction MPS Generators](https://www.f1re.io/mps-generators){{ blog('F1RE') }}
+
 [^1]:[MPS forum - I want to export multiple languages from MPS](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
 [^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)
 [^3]:[MPS forum - Generator error: uncaught exception ?no classifier?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260-Generator-error-uncaught-exception-no-classifier-)

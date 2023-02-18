@@ -31,7 +31,7 @@ tags:
 - [Context Boundaries in Language Engineering Projects](https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/){{ blog('lv') }}
 - [Why documents shouldn't be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
-
+- [What is Model Driven Engineering](https://www.f1re.io/model-driven-engineering){{ blog('F1RE') }}
 
 ### Introducing DSLs
 
