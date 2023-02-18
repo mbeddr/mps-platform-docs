@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mbeddr.github.io/mps-platform-docs/aspects/accessory_models/</loc>
+         <lastmod>2023-02-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mbeddr.github.io/mps-platform-docs/aspects/actions/</loc>
          <lastmod>2023-02-18</lastmod>
          <changefreq>daily</changefreq>

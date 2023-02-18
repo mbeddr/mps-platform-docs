@@ -9,7 +9,7 @@
 <meta content="MPS Platform Docs team" name="author"/>
 <link href="https://mbeddr.github.io/mps-platform-docs/aspects/generator/" rel="canonical"/>
 <link href="../vcs/" rel="prev"/>
-<link href="../documentation/" rel="next"/>
+<link href="../accessory_models/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Generator aspect - MPS Platform Docs</title>
@@ -417,14 +417,19 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../accessory_models/">
+        Accessory models
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_20" id="__nav_2_20" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_20" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Contributed aspects" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_19">
+<label class="md-nav__title" for="__nav_2_20">
 <span class="md-nav__icon md-icon"></span>
           Contributed aspects
         </label>
@@ -1019,6 +1024,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </blockquote>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/mps-generator.html">official documentation</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/">Getting started with generation in <abbr title="Meta Programming System">MPS</abbr>: extracting a generator</a><small>(<em>Specific Languages’ blog</em>)</small></li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
 <div class="admonition question">
@@ -1136,6 +1142,12 @@ Can I do something similar in property macros? For those, there obviously is no 
 <li>Devkits: first, <abbr title="Meta Programming System">MPS</abbr> looks if any devkit specifies a <abbr title="Generation Plan">GP</abbr>. The first devKit with an associated plan is consulted, if any, and no further lookup is done.
   If there are no devkits with associated plans, <abbr title="Meta Programming System">MPS</abbr> checks the facets of the devkit modules if any is an <abbr title="Generation Plan">GP</abbr> provider.
   The first found facet serves as a provider.</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What is cross-model generation?</p>
+<ul>
+<li><a href="https://specificlanguages.com/posts/2022-04/22-cross-model-generation/">What is cross-model generation and why do you care?</a><small>(<em>Specific Languages’ blog</em>)</small></li>
 </ul>
 </div>
 <h2 id="how-to-generate-xy">How to generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">¶</a></h2>
@@ -1291,6 +1303,12 @@ What is the source of this information, and how reliable is it?</p>
 <p class="admonition-title">No output location for XY.</p>
 <p>Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old <abbr title="Meta Programming System">MPS</abbr> project.</p>
 </div>
+<div class="admonition failure">
+<p class="admonition-title">java.<abbr title="language">lang</abbr>.NoSuchMethodError</p>
+<ul>
+<li><a href="https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/">NoSuchMethodError</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+</ul>
+</div>
 <div class="admonition question">
 <p class="admonition-title">How do I debug generators?</p>
 <p>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators</a></p>
@@ -1427,13 +1445,13 @@ How can I debug this?</p>
               </div>
 </div>
 </a>
-<a aria-label="Next: Documentation" class="md-footer__link md-footer__link--next" href="../documentation/" rel="next">
+<a aria-label="Next: Accessory models" class="md-footer__link md-footer__link--next" href="../accessory_models/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Documentation
+                Accessory models
               </div>
 </div>
 <div class="md-footer__button md-icon">

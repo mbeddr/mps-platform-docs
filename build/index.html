@@ -379,14 +379,19 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         Generator
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aspects/accessory_models/">
+        Accessory models
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_19" id="__nav_2_19" type="checkbox"/>
-<label aria-expanded="false" class="md-nav__link" for="__nav_2_19" tabindex="0">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_20" id="__nav_2_20" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_20" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Contributed aspects" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_19">
+<label class="md-nav__title" for="__nav_2_20">
 <span class="md-nav__icon md-icon"></span>
           Contributed aspects
         </label>
@@ -960,6 +965,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../tags/#mps_language">mps_language</a>
 <a class="md-tag" href="../tags/#build">build</a>
 </nav>
+<ul>
+<li><a href="https://www.jetbrains.com/help/mps/build-language.html">official documentation</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-03/24-escaping-to-ant-from-build-language/">Escaping to Ant from the build language</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+</ul>
 <h1 id="build-language">Build language<a class="headerlink" href="#build-language" title="Permanent link">¶</a></h1>
 <div class="admonition question">
 <p class="admonition-title">How can you override the build directory name <em>build</em> to something different?</p>
@@ -1014,6 +1023,18 @@ in mps-extension). For older <abbr title="Meta Programming System">MPS</abbr> pr
 <div class="admonition warning">
 <p class="admonition-title">The <a href="http://127.0.0.1:63320/node?ref=r%3Ae9081cad-d8c3-45f2-b4ad-1dabd5ff82af%28jetbrains.mps.build.structure%29%2F2750015747481074431">files from</a> operation from the <abbr title="Meta Programming System">MPS</abbr> build model, changes the access permissions of the copied over files.</p>
 <p>As a workaround you can use <a href="https://app.slack.com/client/T3XHGU6G0/C3YUV3YK0/thread/C3YUV3YK0-1657543516.836299#:~:text=BuildLayout_Filemode">Buildlayout_Filemode</a> or unzip the files using Gradle.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can you unpack <abbr title="Java Archive">JAR</abbr> files?</p>
+<ul>
+<li><a href="https://specificlanguages.com/posts/2022-03/28-build-language-tricks-unpacking-jar-files/">Build language tricks: Unpacking <abbr title="Java Archive">JAR</abbr> files</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can you measure code coverage?</p>
+<ul>
+<li><a href="https://specificlanguages.com/posts/2022-06/25-measuring-code-coverage-with-mps-build-language/">Measuring code coverage with the <abbr title="Meta Programming System">MPS</abbr> build language</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+</ul>
 </div>
 <h2 id="mps-build-script"><abbr title="Meta Programming System">MPS</abbr> build script<a class="headerlink" href="#mps-build-script" title="Permanent link">¶</a></h2>
 <p>The build-language is one of the oldest parts of <abbr title="Meta Programming System">MPS</abbr>, designed to generate the ant files in an easier way, but it isn’t refactored until today. The generator of the build language has to find out what, for example, “solution needs baselanguage” means at runtime-level. To execute code from the solution, the <abbr title="Java Virtual Machine">JVM</abbr> needs the baselanguage.jar on the classpath. The more dependencies the solution has, the more complex becomes the generated ant file, because the generator has to consider all these transitive dependencies. The generator needs to know what artefact a module generates and how the generated artefact/module is used at runtime. Therefore, the jars must be on the classpath.</p>
