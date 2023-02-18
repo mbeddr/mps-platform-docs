@@ -67,8 +67,8 @@ plugins:
   - tags:
       tags_file: tags.md
   - glightbox:
-      width: 70vw
-      height: 20vw
+      width: 100%
+      height: auto
       selector: .glightbox
   - autolinks
   - autolink_references:
