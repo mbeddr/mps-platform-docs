@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -931,11 +942,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#infrastructure">infrastructure</a>
 <a class="md-tag" href="../../tags/#mbeddr">mbeddr</a>
 </nav>
-<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumblings blocks. This article isn’t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.com</a>, especially the C related tools, if you want to get everything build. Help for extending this guide is always appreciated.</p>
+<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn’t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.com</a>, especially the C related tools, if you want to get everything build. Help for extending this guide is always appreciated.</p>
 <ol>
 <li><code>git clone git@github.com:mbeddr/mbeddr.core.git</code></li>
 <li>Switch to the branch that you need, if it isn’t the master branch e.g. <abbr title="Meta Programming System">MPS</abbr> 2021.1.4: <code>git checkout maintenance/mps20211</code></li>
-<li>Open the <em>com.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don’t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actionsfilter language, that needs to be installed to be able to use the language.</li>
+<li>Open the <em>com.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don’t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, that needs to be installed to be able to use the language.</li>
 <li>If not also set, open <abbr title="Meta Programming System">MPS</abbr>, go to preferences → <em>Appearance&amp;Behavior</em>→<em>Path Variables</em> and set <em>mbeddr.github.core.home</em> to the root directory of the mbeddr.core repository.</li>
 <li>
 <p>You can now build all projects. Start with these projects in this order:</p>
@@ -957,7 +968,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1069,5 +1080,5 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

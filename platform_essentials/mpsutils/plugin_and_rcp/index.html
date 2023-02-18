@@ -18,7 +18,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -974,11 +985,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> contains a lot of actions that might be not needed by end users such as actions for language development and actions of the <abbr title="Integrated Development Environment">IDE</abbr> platform. This language allows disabling
-actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
+actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>Active by default</strong> can
 be set including an activation condition to make this profile the active profile when opening the project or <abbr title="Rich Client Platform">RCP</abbr>. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention <code>Use allow actions</code> on the
 actions profile. Actions in the section <code>specify toolbar</code> are displayed in the main toolbar
 that’s located at the top left of the window.</p>
-<p><a class="glightbox" href="../../images/actionsfilter_example.png"><img alt="example: actions filter" src="../../images/actionsfilter_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/actionsfilter_example.png"><img alt="example: actions filter" src="../../images/actionsfilter_example.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">To use the language, not only the language has to be installed but also the corresponding Intellij plugin. <code>./gradlew install</code> can install this plugin. Without the plugin the language won’t load at all.</p>
 </div>
@@ -986,7 +997,7 @@ that’s located at the top left of the window.</p>
 <p class="admonition-title">Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not readonly. Execute <code>./gradlew install</code> to install the plugin after making a change and restart <abbr title="Meta Programming System">MPS</abbr> to test it.</p>
 </div>
 <p>The predefined actions profiles can be customized by the user in <em>preferences</em> → <em>Appearance &amp; Behavior</em> → <em>Actions</em>. New profiles can be created by clicking the <em>+</em> button and deleted by clicking the <em>-</em> button.</p>
-<p><a class="glightbox" href="../../images/actionsfilter_preferences.png"><img alt="actions filter preferences" src="../../images/actionsfilter_preferences.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/actionsfilter_preferences.png"><img alt="actions filter preferences" src="../../images/actionsfilter_preferences.png"/></a></p>
 <h3 id="preference-form">Preference form<a class="headerlink" href="#preference-form" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.preferenceform</ins></p>
@@ -994,7 +1005,7 @@ that’s located at the top left of the window.</p>
 <p>This language allows adding new preference pages to <em>Preferences</em>→<em>Other Settings</em>. The language uses the IntelliJ platform
 mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation</a>).</p>
 <p>Example:</p>
-<p><a class="glightbox" href="../../images/preferenceform_example.png"><img alt="example: preference form" src="../../images/preferenceform_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/preferenceform_example.png"><img alt="example: preference form" src="../../images/preferenceform_example.png"/></a></p>
 <p>It supports the following options:</p>
 <ul>
 <li><strong>scope</strong>: save the preferences on application or project level</li>
@@ -1024,7 +1035,7 @@ that reference the values of the preference form. The input fields can be access
 <p><ins>com.mbeddr.mpsutil.process</ins></p>
 </blockquote>
 <p>This language allows creating wizards with multiple steps:</p>
-<p><a class="glightbox" href="../../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../../images/wizard_step_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../../images/wizard_step_example.png"/></a></p>
 <p>Create a new node of instance <a href="http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068">Process</a>. The wizard can have input parameters and produces one output. After defining
 the wizard it can be invoked from an action. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1056,15 +1067,15 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <p><ins>com.mbeddr.mpsutil.spreferences</ins></p>
 </blockquote>
 <p>This extension allows the definition of preference pages by using <abbr title="Meta Programming System">MPS</abbr> models; so in the preference page you get a normal <abbr title="Meta Programming System">MPS</abbr> editor, as exemplified by mbeddr’s platform templates preference page:</p>
-<p><a class="glightbox" href="../../images/spreference_example.png"><img alt="example: spreferences" src="../../images/spreference_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/spreference_example.png"><img alt="example: spreferences" src="../../images/spreference_example.png"/></a></p>
 <p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check out the root “Platform Templates” as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
-<p><a class="glightbox" href="../../images/spreferences_query.png"><img alt="spreferences: query" src="../../images/spreferences_query.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/spreferences_query.png"><img alt="spreferences: query" src="../../images/spreferences_query.png"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1148,5 +1159,5 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <script src="../../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

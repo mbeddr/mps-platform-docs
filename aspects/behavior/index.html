@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1004,7 +1015,7 @@ For the generator consult the section <code>Transferring User Data</code> of the
 <summary>How to mark a constructor-created child optional? (created by a light quotation)</summary>
 <blockquote>
 <p>Example:</p>
-<p><a class="glightbox" href="../../img/required_link_is_not_initialized.png"><img alt="required link is not initialized" src="../../img/required_link_is_not_initialized.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/required_link_is_not_initialized.png"><img alt="required link is not initialized" src="../../img/required_link_is_not_initialized.png" width="600px"/></a></p>
 </blockquote>
 <p>Solutions:</p>
 <ul>
@@ -1028,9 +1039,9 @@ For the generator consult the section <code>Transferring User Data</code> of the
 <p>Given there is a virtual behavior method <code>getPresentation</code>.
 When I override <code>getPresentation</code> in a subconcept
 then I see it displays the overriding method to be virtual.</p>
-<p><a class="glightbox" href="../../img/virtual_getPresentation.png"><img alt="virtual getPresentation" src="../../img/virtual_getPresentation.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/virtual_getPresentation.png"><img alt="virtual getPresentation" src="../../img/virtual_getPresentation.png"/></a></p>
 <p>Yet, I see that <code>methodDeclNode.isVirtual</code> is <code>null</code>.</p>
-<p><a class="glightbox" href="../../img/methodDeclNode_isVirtual_null.png"><img alt="methodDeclNode isVirtual is null" src="../../img/methodDeclNode_isVirtual_null.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/methodDeclNode_isVirtual_null.png"><img alt="methodDeclNode isVirtual is null" src="../../img/methodDeclNode_isVirtual_null.png"/></a></p>
 <p>Why is that?</p>
 </blockquote>
 <p>Note that <code>isVirtual</code> and <code>isVirtual()</code> on a method have different semantics.</p>
@@ -1047,7 +1058,7 @@ then I see it displays the overriding method to be virtual.</p>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">¶</a></h2>
 <details class="question">
 <summary>How do you initialize a node?</summary>
-<p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZwTixSqwXyb5Pyc_CKrgtKigpxUu5TU4uSizIKSzPw8G32wjJ2VgkeIr48LQkIh2jAWrLUWTDqk5qXADAcAovgiCw=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZwTixSqwXyb5Pyc_CKrgtKigpxUu5TU4uSizIKSzPw8G32wjJ2VgkeIr48LQkIh2jAWrLUWTDqk5qXADAcAovgiCw=="/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZwTixSqwXyb5Pyc_CKrgtKigpxUu5TU4uSizIKSzPw8G32wjJ2VgkeIr48LQkIh2jAWrLUWTDqk5qXADAcAovgiCw=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpTUFBQcCguSSwqKc3N4QJyFJJzEouLFZwTixSqwXyb5Pyc_CKrgtKigpxUu5TU4uSizIKSzPw8G32wjJ2VgkeIr48LQkIh2jAWrLUWTDqk5qXADAcAovgiCw=="/></a></p>
 <blockquote>
 <p>How can I ensure that all created node will have a non-null <code>HTMLDescription</code>?</p>
 </blockquote>
@@ -1065,7 +1076,7 @@ then I see it displays the overriding method to be virtual.</p>
 <li>adding it as a root with <code>model.add root(&lt;Car()&gt;)</code>.</li>
 <li>adding it as a root with <code>model.add new root(Car)</code>.</li>
 </ul>
-<p><a class="glightbox" href="../../img/node_factory_car.png"><img alt="node factory:car" src="../../img/node_factory_car.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/node_factory_car.png"><img alt="node factory:car" src="../../img/node_factory_car.png" width="600px"/></a></p>
 <p><strong>Using a behavior constructor</strong></p>
 <p>Using a behavior constructor will only partially achieve this. Note that it will only be called when</p>
 <ul>
@@ -1073,13 +1084,13 @@ then I see it displays the overriding method to be virtual.</p>
 <li>creating a node with <code>new node&lt;Car&gt;()</code>.</li>
 </ul>
 <p>Using a quotation will <strong>not</strong> call this constructor.</p>
-<p><a class="glightbox" href="../../img/Car_behavior.png"><img alt="Behavior: car" src="../../img/Car_behavior.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/Car_behavior.png"><img alt="Behavior: car" src="../../img/Car_behavior.png" width="600px"/></a></p>
 <p><strong>Using a property getter</strong></p>
 <p>You could use an <code>initialized</code> variable and use a combination of property getters and setters.</p>
 <p>This would work only for properties though, not for children or references, and requires quotations to also set the <code>initialized</code> value if trying to override the default. Furthermore, your quotations will still be marked. </p>
-<p><a class="glightbox" href="../../img/constraints_Car.png"><img alt="Constraints: Car" src="../../img/constraints_Car.png" width="500px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/constraints_Car.png"><img alt="Constraints: Car" src="../../img/constraints_Car.png" width="500px"/></a></p>
 <p><figure markdown="">
-<a class="glightbox" href="../../img/car_usage.png"><img alt="Usage: Car" src="../../img/car_usage.png" width="500px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/car_usage.png"><img alt="Usage: Car" src="../../img/car_usage.png" width="500px"/></a>
 <figcaption>Usage</figcaption>
 </figure></p>
 </details>
@@ -1249,5 +1260,5 @@ superConcept()
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

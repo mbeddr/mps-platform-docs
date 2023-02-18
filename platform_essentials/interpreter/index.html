@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1004,32 +1015,32 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 <h1>Interpreter, coverage and tracing</h1>
 <p>The interpreter let you interpret code on the fly. You can use it instead of the normal approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g. executing baselanguage code). The result of invoking the interpreter is a Java object.</p>
-<p><a class="glightbox" href="../gifs/interpreter_testcase.gif"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../gifs/interpreter_testcase.gif"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px"/></a></p>
 <p>In the GIF you can see the interpreter executing a test case that contains assertions that are writing with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn’t involved in the execution at all.</p>
 <h2 id="creating-an-interpreter">Creating an interpreter<a class="headerlink" href="#creating-an-interpreter" title="Permanent link">¶</a></h2>
 <p>First you have to import the language <code>com.mbeddr.mpsutil.interpreter</code>.
 Now create a new interpreter and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use other categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses its own category <code>java</code>. You don’t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
 <p>In the related interpreter section, you can define that the current interpret should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.</p>
 <p>The type mappings section can declare mappings from types that implement the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface to either a java type or another custom type that implements the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface.</p>
-<p><a class="glightbox" href="../images/exprSimpleInterpreter.png"><img alt="KernelF: expression simple interpreter" src="../images/exprSimpleInterpreter.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/exprSimpleInterpreter.png"><img alt="KernelF: expression simple interpreter" src="../images/exprSimpleInterpreter.png"/></a></p>
 <p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking <em>Tools</em> → <em>Enable Interpreter Cache</em> in the main menu.</p>
-<p><a class="glightbox" href="../images/literals_evaluator.png"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/literals_evaluator.png"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px"/></a></p>
 <p>The right side contains is an expression or a block and must return a value. The <em>node</em> expression refers to the current evaluated expression. A few expressions start with <em>#</em>, that are explained in their corresponding short descriptions. The <em>#-&gt;</em> expression is used to call functions (search for usages globally).
 The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the <em><abbr title="environment">env</abbr></em> expression. It’s an array that can be used to save values for other evaluators. The key must be a node. If you don’t have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
-<p><a class="glightbox" href="../images/startswith_evaluator.png"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/startswith_evaluator.png"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png"/></a></p>
 <p>When the current interpreter is not suitable for interpreting the current node, the expression <em>tryOtherInterpreter</em> can be used to use the next interpreter to interpret the current node:</p>
-<p><a class="glightbox" href="../images/tryOtherInterpreter.png"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/tryOtherInterpreter.png"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png"/></a></p>
 <p>The <em>castUp</em> expression can be used to case a Java (baselanguage) expression to a type.
 For example, if the expression is of type Number (numberInput) and the target type is float,
 <code>numberInput.floatValue()</code> would be called.
 The <em>$</em> expression returns the concept’s type. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evaluator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn’t be used:</p>
-<p><a class="glightbox" href="../images/mod_evaluator.png"><img alt="evaluator of modulus" src="../images/mod_evaluator.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/mod_evaluator.png"><img alt="evaluator of modulus" src="../images/mod_evaluator.png" width="600px"/></a></p>
 <p>The <em>context</em> expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if an evaluator for a specific node is available.</p>
 <h2 id="code-coverage">Code coverage<a class="headerlink" href="#code-coverage" title="Permanent link">¶</a></h2>
 <p>There’s also support for coverage that’s displayed inside the editor. Code coverage checks which part of the code was executed by the interpreter. For more information, consult the <a href="https://en.wikipedia.org/wiki/Code_coverage">Wikipedia page</a>. This way you can, for example, find out which parts of the code aren’t covered by tests:</p>
-<p><a class="glightbox" href="../images/example_coverage.png"><img alt="example: code coverage" src="../images/example_coverage.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/example_coverage.png"><img alt="example: code coverage" src="../images/example_coverage.png"/></a></p>
 <p>There’s support for coverage of single nodes but also branches. An example for branches would be, for example, the if and else block of an if statement. To register branches use the <em>register branches</em> statement. To visit a branch, use the <em>branch</em> statement. When visiting a node, the node, the node’s concept and the evaluator are automatically marked as covered. For the children of the node, there’s the <em>list coverage</em> statement which visits a list of nodes and there’s also the simple <em>cover</em> statement. The former is, for example, used for the elements of a map literal. The coverage information can be accessed and set through the <em>coverage</em> variable.</p>
-<p><a class="glightbox" href="../images/if_evaluator.png"><img alt="evaluator of if expression" src="../images/if_evaluator.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/if_evaluator.png"><img alt="evaluator of if expression" src="../images/if_evaluator.png"/></a></p>
 <h2 id="calling-the-interpreter">Calling the interpreter<a class="headerlink" href="#calling-the-interpreter" title="Permanent link">¶</a></h2>
 <p>For <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> use the class <code>IETS3ExprEvalHelper</code>. If you can’t use this class, use the following code:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1174,5 +1185,5 @@ The <em>$</em> expression returns the concept’s type. It can be used for type 
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

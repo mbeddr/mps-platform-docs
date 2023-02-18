@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -986,7 +997,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="null-safety">Null safety<a class="headerlink" href="#null-safety" title="Permanent link">¶</a></h2>
 <ul>
 <li>Use language <a href="https://www.jetbrains.com/help/mps/other-languages.html">checkedDots</a> for saver access of possible null values. You can check nodes for null: <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870">node.isNull</a></li>
-<li>Use annotation <code class="highlight"><span class="nd">@NotNull</span><span class="w"></span></code> and <code class="highlight"><span class="nd">@Nullable</span><span class="w"></span></code> for baselanguage code. a specific type system rule in <abbr title="Meta Programming System">MPS</abbr> checks these annotations.</li>
+<li>Use annotation <code class="highlight"><span class="nd">@NotNull</span><span class="w"></span></code> and <code class="highlight"><span class="nd">@Nullable</span><span class="w"></span></code> for baselanguage code. A specific type system rule in <abbr title="Meta Programming System">MPS</abbr> checks these annotations.</li>
 <li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259">:eq:</a> (<abbr title="NullPointerException">NPE</abbr> safe equals operation) and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393">:<abbr title="not equals/expression">ne</abbr>:</a>
 <abbr title="NullPointerException">NPE</abbr> safe not equals operation instead of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152">==</a> and <code class="highlight"><span class="n">equals</span><span class="w"></span></code>.</li>
 <li>Return optional values instead of null in <code>baselanguage</code> code<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</li>
@@ -1045,7 +1056,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1157,5 +1168,5 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

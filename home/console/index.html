@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -942,7 +953,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="admonition question">
 <p class="admonition-title">How can you find all System.out.println statements?</p>
 <p><a href="https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc">Code snippet:</a></p>
-<p><a class="glightbox" href="../../img/find_print_statement.png"><img alt="find print statements" src="../../img/find_print_statement.png"/></a>]</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/find_print_statement.png"><img alt="find print statements" src="../../img/find_print_statement.png"/></a>]</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">#nodes, #models, #usages etc. don’t show any result. What went wrong?</p>
@@ -981,7 +992,7 @@ for more <abbr title="information">info</abbr>.</p>
 <li>Paste the content   (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</li>
 <li><abbr title="Meta Programming System">MPS</abbr> pastes a node reference that you can use to directly manipulate the node:</li>
 </ol>
-<p><a class="glightbox" href="../../img/console_node_reference.png"><img alt="console_node_reference" src="../../img/console_node_reference.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/console_node_reference.png"><img alt="console_node_reference" src="../../img/console_node_reference.png" width="600px"/></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></sub></sub></p>
 </div>
 <hr/>
@@ -1101,5 +1112,5 @@ for more <abbr title="information">info</abbr>.</p>
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

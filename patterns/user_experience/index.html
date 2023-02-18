@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1165,18 +1176,18 @@ Catastrophic, fatal (use serious instead)</p>
 <h2 id="dark-theme">Dark theme<a class="headerlink" href="#dark-theme" title="Permanent link">¶</a></h2>
 <p>Use the predefined colors in <abbr title="Meta Programming System">MPS</abbr> or define your own colors using the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor">JBColor</a> with the constructor <code>JBColor(light theme color, dark theme color)</code>. By using this class, it shouldn’t be necessary to verify if the user is <a href="https://stackoverflow.com/c/itemis-mps/questions/426">using the Darcula theme</a>. The <abbr title="Meta Programming System">MPS</abbr> colors already support the light and dark theme because they inherit from <code>JBColor</code>. As seen in the screenshot below, the colors can be different when using the dark theme (for example: the white and black colors). Don’t use hard-coded hex colors or the class <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor">Color</a>.</p>
 <figure>
-<p><a class="glightbox" href="../../img/light_theme_colors.png"><img alt="light theme" src="../../img/light_theme_colors.png"/></a>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/light_theme_colors.png"><img alt="light theme" src="../../img/light_theme_colors.png"/></a>
 </p>
 <figcaption>Light theme</figcaption>
 </figure>
 <figure>
-<p><a class="glightbox" href="../../img/dark_theme_colors.png"><img alt="dark theme" src="../../img/dark_theme_colors.png"/></a>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/dark_theme_colors.png"><img alt="dark theme" src="../../img/dark_theme_colors.png"/></a>
 </p>
 <figcaption>Dark theme</figcaption>
 </figure>
 <p>Make sure that the foreground color is readable for the chosen background (see preceding screenshots). You can use an online <a href="https://webaim.org/resources/contrastchecker/">contrast checker tool</a> to verify that the color combination is readable.</p>
 <p>Example for colors with a good contrast ratio (foreground: black, the ratio can be found after the hex code):</p>
-<p><a class="glightbox" href="../../img/colors_good_contrast_ratio.png"><img alt="good color ratio" src="../../img/colors_good_contrast_ratio.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/colors_good_contrast_ratio.png"><img alt="good color ratio" src="../../img/colors_good_contrast_ratio.png"/></a></p>
 <p>If this change isn’t feasible, you can switch to the default theme (useful for RCPs):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1328,5 +1339,5 @@ Catastrophic, fatal (use serious instead)</p>
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

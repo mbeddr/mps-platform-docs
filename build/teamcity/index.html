@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -927,11 +938,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. There is an <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">extensive official documentation</a> available for TeamCity on the web. The TeamCity server can be reached at <a href="https://build.mbeddr.com">build.mbeddr.com</a>. When a new commit is pushed to a branch in one the Git repositories, the platforms are build on the server, tested and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis nexus server</a>.
+<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">Extensive official documentation</a> is available for TeamCity on the web. The TeamCity server can be reached at <a href="https://build.mbeddr.com">build.mbeddr.com</a>. When a new commit is pushed to a branch in one the Git repositories, the platforms are build on the server, tested and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis nexus server</a>.
 This is configured through <a href="https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html"><abbr title="Version Control System">VCS</abbr> triggers</a>.</p>
 <p>The test results are collected from <a href="https://ant.apache.org/manual/Tasks/junitreport.html">Ant JUnit reports</a> and make the builds fail if not all tests pass. Tests can be <a href="https://www.jetbrains.com/help/teamcity/investigating-and-muting-build-failures.html">muted</a>. This might be necessary when tests return both passes and failures despite no changes (<a href="https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/">flake tests</a>). This can happen, for example, if the test is timing-dependent, an algorithm is not <a href="https://en.wikipedia.org/wiki/Deterministic_system">deterministic</a> or a timeout happens.</p>
 <p>All GitHub repositories are connected directly to TeamCity and show the build status at the bottom of pull requests and next to pushed commits with the help of the <a href="https://www.jetbrains.com/help/teamcity/commit-status-publisher.html">Commit Status Publisher</a>. The main repositories require the build to succeed before a pull request can be merged:</p>
-<p><a class="glightbox" href="../../platform_essentials/images/GitHub_build_status.png"><img alt="GitHub build status" src="../../platform_essentials/images/GitHub_build_status.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../platform_essentials/images/GitHub_build_status.png"><img alt="GitHub build status" src="../../platform_essentials/images/GitHub_build_status.png"/></a></p>
 <p>One or multiple <a href="https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html">build configurations</a> exist per platform. They are described here only superficially because they might change in the future. Each <abbr title="subtraction">sub</abbr>-item is a separate build configuration. Some configurations depend on other configurations (<a href="https://www.jetbrains.com/help/teamcity/snapshot-dependencies.html">snapshot dependencies</a>).</p>
 <ul>
 <li>
@@ -988,7 +999,7 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 </li>
 </ul>
 <p>The following diagram show a simplified version of the <a href="https://www.jetbrains.com/help/teamcity/build-chain.html">build chain</a> that shows the dependencies between the projects/configurations:</p>
-<p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp1kLEOgzAMRPd8hX-Aia1DxcLQoVIluqEOKTE0auJEsavC35dCw4DUzT4_3Z1csegkL-8UPy1FnbSHLvgYCEkamRxCwk40DQ6Vas-XpqhHQWIbiG-gGXAU1fo7GpMgOi19SH455EW1p_ralItmUbjM-KKs4-agSbuJkUGQZQ3IklJzFBTJDg8pjps9HMBgRDJI3QShV9uhMOFNM7mE_qey4dpgz_16bVRus-eqef6-8QNRRXha"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1kLEOgzAMRPd8hX-Aia1DxcLQoVIluqEOKTE0auJEsavC35dCw4DUzT4_3Z1csegkL-8UPy1FnbSHLvgYCEkamRxCwk40DQ6Vas-XpqhHQWIbiG-gGXAU1fo7GpMgOi19SH455EW1p_ralItmUbjM-KKs4-agSbuJkUGQZQ3IklJzFBTJDg8pjps9HMBgRDJI3QShV9uhMOFNM7mE_qey4dpgz_16bVRus-eqef6-8QNRRXha"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNp1kLEOgzAMRPd8hX-Aia1DxcLQoVIluqEOKTE0auJEsavC35dCw4DUzT4_3Z1csegkL-8UPy1FnbSHLvgYCEkamRxCwk40DQ6Vas-XpqhHQWIbiG-gGXAU1fo7GpMgOi19SH455EW1p_ralItmUbjM-KKs4-agSbuJkUGQZQ3IklJzFBTJDg8pjps9HMBgRDJI3QShV9uhMOFNM7mE_qey4dpgz_16bVRus-eqef6-8QNRRXha"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1kLEOgzAMRPd8hX-Aia1DxcLQoVIluqEOKTE0auJEsavC35dCw4DUzT4_3Z1csegkL-8UPy1FnbSHLvgYCEkamRxCwk40DQ6Vas-XpqhHQWIbiG-gGXAU1fo7GpMgOi19SH455EW1p_ralItmUbjM-KKs4-agSbuJkUGQZQ3IklJzFBTJDg8pjps9HMBgRDJI3QShV9uhMOFNM7mE_qey4dpgz_16bVRus-eqef6-8QNRRXha"/></a></p>
 <p>Although all these repositories use Gradle for the build management, TeamCity has a lot of bundled plugins. Many are described in <a href="https://www.jetbrains.com/help/teamcity/configuring-build-steps.html">Configuring Build steps | TeamCity On-Premises</a>. The builds are executed by <a href="https://www.jetbrains.com/help/teamcity/build-agent.html">build agents</a>. The Docker image of the agents can be found in the <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">mbeddr.build.docker</a> repository.</p>
 <p>9 agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and in the cloud). They agents are running Linux, except one agent which is running
 Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open Source">OS</abbr> X, version 10.15.7.</p>
@@ -997,7 +1008,7 @@ Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open So
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1109,5 +1120,5 @@ Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open So
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

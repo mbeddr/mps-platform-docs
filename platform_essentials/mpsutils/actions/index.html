@@ -18,7 +18,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1002,7 +1013,7 @@ dependencies.</p>
 <li><strong>Increase <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>: increases the font size in the editor settings and updates all editors (ctrl + +)</li>
 <li><strong>Reset <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>:: reset the font size to the default size (ctrl + 0, 13 pixels)</li>
 <li><strong>File Manager in Output Folder</strong>: a new action in the context menu of models that opens the path of the generated files.
-  This action won’t work if the model doesn’t generate output files.</li>
+  This action won’t work if the model does not generate output files.</li>
 <li><strong>File Manager in Module Folder</strong>: a new action in the context menu of modules that opens the path of <abbr title="throwable">th</abbr> module.</li>
 </ul>
 <h3 id="node-access">Node access<a class="headerlink" href="#node-access" title="Permanent link">¶</a></h3>
@@ -1030,12 +1041,12 @@ editor with a printer. If the operating system permits it, this action can also 
 <p>This language adds support for a projection mode switcher and refactoring actions.</p>
 <h4 id="projection-mode-switcher">Projection mode switcher<a class="headerlink" href="#projection-mode-switcher" title="Permanent link">¶</a></h4>
 <p>The mbeddr platform has a group <em>Projection</em> which is a top-level menu in <abbr title="Meta Programming System">MPS</abbr>:</p>
-<p><a class="glightbox" href="../../images/projection_menu.png"><img alt="projection menu" src="../../images/projection_menu.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/projection_menu.png"><img alt="projection menu" src="../../images/projection_menu.png"/></a></p>
 <p>A projection mode switcher can be declared containing push hint options where the hints are referenced from an existing ConceptEditor context hints container. The action
 can be added in the <em>Add to Menu/Button Group</em> section editor.</p>
 <p>This adds a toggle to this menu/button group that toggles the referenced editor hint in the editors. When it should only
 be enabled for a specific concept, add a concept to <em>only in editor with instance of</em>.</p>
-<p><a class="glightbox" href="../../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../../images/projection_mode_switcher_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../../images/projection_mode_switcher_example.png"/></a></p>
 <h4 id="refactoring-action">Refactoring action<a class="headerlink" href="#refactoring-action" title="Permanent link">¶</a></h4>
 <p>The concept <a href="http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137">RefactoringAction</a> can create an action for a <a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">simple refactoring</a>. The title of the action can be specified with <em>caption,</em> and the keyboard shortcut can
 be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>parameters</em>. A few different choosers will be shown in
@@ -1051,7 +1062,7 @@ the refactoring dialog for the value of the parameters:</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1135,5 +1146,5 @@ the refactoring dialog for the value of the parameters:</p>
 <script src="../../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

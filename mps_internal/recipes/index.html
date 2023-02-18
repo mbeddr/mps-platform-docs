@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1312,13 +1323,13 @@ This flag specifies if type system rules of concepts extended by the applicable 
 <ul>
 <li>For <em>ConceptZ</em>, type system rule <em>ConceptZTypeRule</em> gets evaluated.</li>
 <li>For <em>ConceptY</em>, type system rules <em>ConceptYTypeRule1</em> and <em>ConceptYTypeRule2</em> get evaluated.<br/>
-<em>ConceptZTypeRule</em> is not evaluated, as at least one rule for <em>ConceptY</em> defines <em>[override=true]</em>.</li>
+<em>ConceptZTypeRule</em> is not evaluated, as at least one rule for <em>ConceptY</em> defines:<em>[override=true]</em>.</li>
 <li>For <em>ConceptX</em>, type system rules <em>ConceptYTypeRule1</em>, <em>ConceptYTypeRule2</em> and<br/>
 <em>ConceptXTypeRule</em> get evaluated.<br/>
 <em>ConceptYTypeRule1</em> and <em>ConceptYTypeRule2</em> get included because no rule for <em>ConceptX</em>
-  defines <em>[override=true]</em>.<br/>
+  defines:<em>[override=true]</em>.<br/>
 <em>ConceptZTypeRule*is not evaluated because the search for rules in extended Concepts
-  stops at the first concept having at least one rule defining *[override=true]</em>.</li>
+  stops at the first concept having at least one rule defining:</em>[override=true]*.</li>
 </ul>
 <h2 id="create-an-intention">Create an intention<a class="headerlink" href="#create-an-intention" title="Permanent link">¶</a></h2>
 <p><em>LanguageB</em> wants to define a new intention for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
@@ -1404,7 +1415,7 @@ is a <em>Used Language</em>.</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1516,5 +1527,5 @@ is a <em>Used Language</em>.</p>
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

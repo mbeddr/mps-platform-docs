@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -940,11 +951,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Clone the repository: <code>git clone https://github.com/IETS3/iets3.opensource.git</code> or <a href="https://www.jetbrains.com/help/mps/set-up-a-git-repository.html#clone-repo">Check out a project from a remote host</a> for the GUI way.</li>
 <li>Decide which branch you want to use as the template for the contribution. The supported <abbr title="Meta Programming System">MPS</abbr> version should be listed in the README. Older branches are named maintenance/mpsX, e.g. maintenance/mps20203, the main branch is the <em>master</em> branch.</li>
 <li>If you have already checked out the repository before, make sure to <a href="https://www.jetbrains.com/help/mps/manage-branches.html#checkout-branch">fetch</a> all the changes from the remote repository.</li>
-<li><a href="https://www.jetbrains.com/help/mps/manage-branches.html#create-branch-from-selected">Create a new branch from the selected branch</a>. Some common names are feature/X, bugfix/X and refactoring/X where X stands for a description of the branch and maybe the targeted <abbr title="Meta Programming System">MPS</abbr> version such as feature/myfeature_20211.</li>
+<li><a href="https://www.jetbrains.com/help/mps/manage-branches.html#create-branch-from-selected">Create a new branch from the selected branch</a>. Some common names are feature/X, bugfix/X and refactoring/X where X stands for a description of the branch and maybe the targeted <abbr title="Meta Programming System">MPS</abbr> version such as feature/my_feature_20211.</li>
 <li><a href="https://www.jetbrains.com/help/mps/commit-and-push-changes.html">Push the changes</a> to the repository. Editing the <a href="https://www.jetbrains.com/help/mps/edit-project-history.html">repository history</a> is only allowed on your on branch.</li>
 <li>Create a new <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">pull request</a> in the remote repository. </li>
 <li>Optionally, <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review">request a pull request review</a> if the repository requires reviewing. Make sure that the build runs on <a href="https://build.mbeddr.com">https://build.mbeddr.com</a>. The status can be viewed in the <a href="https://blog.jetbrains.com/teamcity/2019/08/building-github-pull-requests-with-teamcity/"><abbr title="Pull Request or Public Relations">PR</abbr></a>.</li>
-<li>If the reviewer requires a change, make the change and click the rerequest review button.</li>
+<li>If the reviewer requires a change, make the change and click the re-request review button.</li>
 <li>If the reviewer approves the change, you can merge the changes (or he has already merged your changes). If you have a lot of commits, that you want to merge into one commit or several commits, you can either use <a href="https://www.jetbrains.com/help/mps/work-on-several-features-simultaneously.html#rebase-option">interactive rebase in <abbr title="Meta Programming System">MPS</abbr></a> or <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#squash-and-merge-your-commits">squash your commits</a> into one single commit when merging the pull request.</li>
 </ol>
 <p>Some more tips:</p>
@@ -957,7 +968,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1069,5 +1080,5 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

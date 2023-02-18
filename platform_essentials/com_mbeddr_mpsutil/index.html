@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -928,7 +939,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameterized-menu">
-    #Parameterized menu
+    Parameterized menu
   </a>
 </li>
 <li class="md-nav__item">
@@ -1686,7 +1697,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameterized-menu">
-    #Parameterized menu
+    Parameterized menu
   </a>
 </li>
 <li class="md-nav__item">
@@ -2110,7 +2121,7 @@ dependencies.</p>
 <li><strong>Increase <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>: increases the font size in the editor settings and updates all editors (ctrl + +)</li>
 <li><strong>Reset <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>:: reset the font size to the default size (ctrl + 0, 13 pixels)</li>
 <li><strong>File Manager in Output Folder</strong>: a new action in the context menu of models that opens the path of the generated files.
-  This action won’t work if the model doesn’t generate output files.</li>
+  This action won’t work if the model does not generate output files.</li>
 <li><strong>File Manager in Module Folder</strong>: a new action in the context menu of modules that opens the path of <abbr title="throwable">th</abbr> module.</li>
 </ul>
 <h3 id="node-access">Node access<a class="headerlink" href="#node-access" title="Permanent link">¶</a></h3>
@@ -2138,12 +2149,12 @@ editor with a printer. If the operating system permits it, this action can also 
 <p>This language adds support for a projection mode switcher and refactoring actions.</p>
 <h4 id="projection-mode-switcher">Projection mode switcher<a class="headerlink" href="#projection-mode-switcher" title="Permanent link">¶</a></h4>
 <p>The mbeddr platform has a group <em>Projection</em> which is a top-level menu in <abbr title="Meta Programming System">MPS</abbr>:</p>
-<p><a class="glightbox" href="../images/projection_menu.png"><img alt="projection menu" src="../images/projection_menu.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/projection_menu.png"><img alt="projection menu" src="../images/projection_menu.png"/></a></p>
 <p>A projection mode switcher can be declared containing push hint options where the hints are referenced from an existing ConceptEditor context hints container. The action
 can be added in the <em>Add to Menu/Button Group</em> section editor.</p>
 <p>This adds a toggle to this menu/button group that toggles the referenced editor hint in the editors. When it should only
 be enabled for a specific concept, add a concept to <em>only in editor with instance of</em>.</p>
-<p><a class="glightbox" href="../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../images/projection_mode_switcher_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/projection_mode_switcher_example.png"><img alt="example: projection mode switcher" src="../images/projection_mode_switcher_example.png"/></a></p>
 <h4 id="refactoring-action">Refactoring action<a class="headerlink" href="#refactoring-action" title="Permanent link">¶</a></h4>
 <p>The concept <a href="http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137">RefactoringAction</a> can create an action for a <a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">simple refactoring</a>. The title of the action can be specified with <em>caption,</em> and the keyboard shortcut can
 be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>parameters</em>. A few different choosers will be shown in
@@ -2168,9 +2179,9 @@ for referencing any child nodes and named nodes respectively.</p>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.richstring</ins></p>
 </blockquote>
-<p>This <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> extension simplifies usage of variables and <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">Java String.format()</a> inside <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> Strings. Just add the language com.mbeddr.mpsutil.richstring to your model.</p>
+<p>This <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> extension simplifies usage of variables and <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">Java String#format</a> inside <abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> Strings. Just add the language com.mbeddr.mpsutil.richstring to your model.</p>
 <p>The following example shows referencing a simple variable, embedding an expression inside a string, and the equivalent of calling <code class="highlight"><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">()</span><span class="w"></span></code>:</p>
-<p><a class="glightbox" href="../images/richstring_example.png"><img alt="example: richstring" src="../images/richstring_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/richstring_example.png"><img alt="example: richstring" src="../images/richstring_example.png"/></a></p>
 <h3 id="smodule">SModule<a class="headerlink" href="#smodule" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.smodule</ins></p>
@@ -2314,7 +2325,7 @@ into.</p>
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>No importer and exporter exist for the language yet (there is a draft in <a href="https://github.com/mbeddr/mbeddr.core/tree/feature/json_importer">feature/json_importer</a>).</p>
+<p>No importer and exporter exist for the language yet. A draft was made in the branch <a href="https://github.com/mbeddr/mbeddr.core/tree/feature/json_importer">feature/json_importer</a>.</p>
 <h2 id="language-extensions">Language extensions<a class="headerlink" href="#language-extensions" title="Permanent link">¶</a></h2>
 <h3 id="dataflow">Dataflow<a class="headerlink" href="#dataflow" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2363,27 +2374,27 @@ The default value can be set by invoking the code completion on an existing prop
 <p><abbr title="Meta Programming System">MPS</abbr> already provides a language for <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">defining extension methods</a>, for example, methods to be called on an object without being part of the Object’s class. This language extends this mechanism to provide all static methods of a class as extension methods. They can be invoked on the type of the method’s first parameter.</p>
 <p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass</a> root node. Reference the Java class containing the static methods. Method annotations can be added to overwrite parameter names, so that they’re more elaborate than “p0” or “p2”.</p>
 <p>As a starting point, create a dependency to the model <ins>com.mbeddr.mpsutil.extensionclass.annotation.apache.commons.lang3</ins> which provides extension methods with useful parameter names for Apache Commons StringUtils, ObjectUtils, and StringEscapeUtils.</p>
-<p><a class="glightbox" href="../images/extensionclass_example.png"><img alt="example: extension class" src="../images/extensionclass_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/extensionclass_example.png"><img alt="example: extension class" src="../images/extensionclass_example.png"/></a></p>
 <h3 id="language-plugin-extensions">Language plugin extensions<a class="headerlink" href="#language-plugin-extensions" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.<abbr title="language">lang</abbr>.plugin.extensions</ins></p>
 </blockquote>
 <p>This language contains extensions for <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. It mainly adds support for adding actions not only at a specific position but also supports the anchors first, last, before and after. Example:
 <code>add to NewProjectOrModuleGroup after position NewProject</code></p>
-<h3 id="parameterized-menu">#Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">¶</a></h3>
+<h3 id="parameterized-menu">Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.parameterizedMenu</ins></p>
 </blockquote>
 <p>This language is an extension to the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
 iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or create a dynamic submenu based on
 the parameter object (<em>parameterized submenu</em>).</p>
-<p><a class="glightbox" href="../images/ccmenu_example.png"><img alt="example:ccmenu" src="../images/ccmenu_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ccmenu_example.png"><img alt="example:ccmenu" src="../images/ccmenu_example.png"/></a></p>
 <p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling</a> instead</p>
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.resources</ins></p>
 </blockquote>
-<p>This language extends the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable</a> adds support for specificing the font style (plain, bold, italic), font family and offsets for the text.</p>
+<p>This language extends the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable</a> adds support for specifying the font style (plain, bold, italic), font family and offsets for the text.</p>
 <h3 id="suppress-warning">Suppress warning<a class="headerlink" href="#suppress-warning" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.suppresswarning</ins></p>
@@ -2402,7 +2413,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <p><ins>com.mbeddr.mpsutil.typesystem.trace</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">This language currently doesn’t work anymore.</p>
+<p class="admonition-title">This language doesn’t work anymore.</p>
 </div>
 <p>This language modifies the different typesystem concepts like comparison rule, non typesystem rules etc. to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem</a> into a typesystem aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens a tool named <code>Type System Performance Data</code> that shows the collected information.</p>
 <h3 id="xml-fix">XML fix<a class="headerlink" href="#xml-fix" title="Permanent link">¶</a></h3>
@@ -2416,9 +2427,9 @@ the parameter object (<em>parameterized submenu</em>).</p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> references all nodes by their <abbr title="identification">id</abbr>, not their name. Still, as humans, we see only the name, and this might be ambiguous. The Unique Names hint can be activated in <abbr title="Meta Programming System">MPS</abbr> Preferences, Editor Hints. It shows as much of the full qualified name as required rendering a name unique.</p>
 <p>Example concept:</p>
-<p><a class="glightbox" href="../images/uniquenames_concept_plain.png"><img alt="example: unique names in concept declaration" src="../images/uniquenames_concept_plain.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/uniquenames_concept_plain.png"><img alt="example: unique names in concept declaration" src="../images/uniquenames_concept_plain.png"/></a></p>
 <p>Example Base Language:</p>
-<p><a class="glightbox" href="../images/uniquenames_class_unique.png"><img alt="example: unique names in Base Language" src="../images/uniquenames_class_unique.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/uniquenames_class_unique.png"><img alt="example: unique names in Base Language" src="../images/uniquenames_class_unique.png"/></a></p>
 <hr/>
 <p>tags:
 - reference</p>
@@ -2445,16 +2456,16 @@ to get the selected cell by calling <code>editorContext.getSelectedCell()</code>
 <li><strong>MonitorResultError</strong>: the task was completed with an error.</li>
 <li><strong>MonitorResultHint</strong>: the task was not completed successfully, and a hint is shown.</li>
 </ul>
-<p><a class="glightbox" href="../images/editingguide_definition.png"><img alt="editing guide: declaration of an exercise" src="../images/editingguide_definition.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/editingguide_definition.png"><img alt="editing guide: declaration of an exercise" src="../images/editingguide_definition.png"/></a></p>
 <p>The task can’t be started by clicking the play button next to the name of a task. A new
 temporary model is created which contains the editable task.</p>
-<p><a class="glightbox" href="../images/editingguide_exercise.png"><img alt="editing guide: exercise" src="../images/editingguide_exercise.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/editingguide_exercise.png"><img alt="editing guide: exercise" src="../images/editingguide_exercise.png"/></a></p>
 <h3 id="favourites-plugin">Favourites plugin<a class="headerlink" href="#favourites-plugin" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.favourites.plugin</ins></p>
 </blockquote>
 <p>The favourites view is implemented using the language <ins>com.mbeddr.mpsutil.projectview</ins> from <a href="https://jetbrains.github.io/MPS-extensions/extensions/other/project-view/"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
-<p><a class="glightbox" href="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"><img alt="project view: favourites" src="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"><img alt="project view: favourites" src="https://jetbrains.github.io/MPS-extensions/extensions/img/favourites.png"/></a></p>
 <p>There’s an action <code>Add to Favourites</code> to add a node to this view. The node can be removed by executing the action
 <code>Remove from Favourites</code>. Internally, the plugin is implemented using node annotations.</p>
 <h3 id="generated-artifacts-review">Generated artifacts review<a class="headerlink" href="#generated-artifacts-review" title="Permanent link">¶</a></h3>
@@ -2467,7 +2478,7 @@ temporary model is created which contains the editable task.</p>
 <p>This tool can be used to view artifacts that where generated by a generator. It has a special color mapping for Java files.
 The button <code>Highlight lines not linked</code> should highlight the lines which aren’t related to any node. When multiple
 original nodes can be traced to a certain file and line, the previous and next button can be used to navigate to these nodes.</p>
-<p><a class="glightbox" href="../images/generated_artifacts_reviewer.png"><img alt="generated artifacts reviewer" src="../images/generated_artifacts_reviewer.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/generated_artifacts_reviewer.png"><img alt="generated artifacts reviewer" src="../images/generated_artifacts_reviewer.png"/></a></p>
 <h3 id="graphstream">Graphstream<a class="headerlink" href="#graphstream" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.graphstream</ins></p>
@@ -2478,7 +2489,7 @@ implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Ae5f563f0-33
 a new menu <em>View Graph</em> appears in the editor context menu.</p>
 <p>The tool itself has support for history, zooming, fitting the view and rendering the graph as
 a <a href="https://graphviz.org/">GraphViz</a> SVG.</p>
-<p><a class="glightbox" href="../images/graphstream_example.png"><img alt="example: graphstream" src="../images/graphstream_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/graphstream_example.png"><img alt="example: graphstream" src="../images/graphstream_example.png"/></a></p>
 <h3 id="jung-framework">JUNG framework<a class="headerlink" href="#jung-framework" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.jung</ins></p>
@@ -2505,7 +2516,7 @@ As a language developer, you can implement an interface IJGraphProvider and impl
 <li>filtering along a continuous axis (for example, time)</li>
 <li>incremental, node-based collapsing and expansion</li>
 </ul>
-<p><a class="glightbox" href="../images/jung2.png"><img alt="example: JUNG framework" src="../images/jung2.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/jung2.png"><img alt="example: JUNG framework" src="../images/jung2.png"/></a></p>
 <p>The JUNG integration is available as part of mbeddr, but also as part of the mbeddr.platform, so you can use it for your own languages. Check out the Chunk node for an example of how to use it.</p>
 <p>A demo video of the viewer can be found <a href="http://youtu.be/-v1X0GhsLJ4">here</a>.</p>
 <p>To use it in your own language, implement the <a href="http://127.0.0.1:63320/node?ref=d09a16fb-1d68-4a92-a5a4-20b4b2f86a62%2Fr%3A6e32694b-6dd1-4530-b48f-4e3bf97b2744%28com.mbeddr.mpsutil.jung%2Fcom.mbeddr.mpsutil.jung.structure%29%2F6388491840914066147">IJGraphProvider</a> interface. Return a JNGraph from the getGraph() method. Check out the existing implementations, and in particular the DepGraphHelper (called from Chunk.getGraph()) to learn the details. In short, a graph is built in two steps: the first step actually adds the nodes and edges. The second step uses closures to style the graph. Examples can be seen from DepGraphHelper.</p>
@@ -2544,7 +2555,7 @@ This interface checks the availability of external tools and their proper config
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AsyncCellValue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">});</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p><a class="glightbox" href="../gifs/async_cell.gif"><img alt="async cell" src="../gifs/async_cell.gif"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../gifs/async_cell.gif"><img alt="async cell" src="../gifs/async_cell.gif"/></a></p>
 <h4 id="framecell">FrameCell<a class="headerlink" href="#framecell" title="Permanent link">¶</a></h4>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.framecell</ins></p>
@@ -2553,10 +2564,10 @@ This interface checks the availability of external tools and their proper config
 <ul>
 <li><strong>frame-color</strong>: the color of the frame (default: black)</li>
 <li><strong>frame-width</strong>: the thickness of the frame (default: 1 pixel)</li>
-<li><strong>frame-padding</strong>: the space between the containting cell and the frame (default: 3 pixel)</li>
+<li><strong>frame-padding</strong>: the space between the containing cell and the frame (default: 3 pixel)</li>
 </ul>
 <p>An example can be seen in the documentation language:</p>
-<p><a class="glightbox" href="../images/framecell_example.png"><img alt="example: framecell" src="../images/framecell_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/framecell_example.png"><img alt="example: framecell" src="../images/framecell_example.png"/></a></p>
 <p>In most cases, the language <ins>de.itemis.mps.editor.celllayout</ins> from <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,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"/>
@@ -2567,7 +2578,7 @@ This interface checks the availability of external tools and their proper config
 <p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
 </blockquote>
 <p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word. In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
-<p><a class="glightbox" href="../images/margincell_example.png"><img alt="example: margin cell" src="../images/margincell_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/margincell_example.png"><img alt="example: margin cell" src="../images/margincell_example.png"/></a></p>
 <p>To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.</p>
 <p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
 <h3 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">¶</a></h3>
@@ -2581,7 +2592,7 @@ This interface checks the availability of external tools and their proper config
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.conceptdiagram</ins></p>
 </blockquote>
-<p><a class="glightbox" href="../images/conceptdiagram_example.png"><img alt="example:conceptdiagram" src="../images/conceptdiagram_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/conceptdiagram_example.png"><img alt="example:conceptdiagram" src="../images/conceptdiagram_example.png"/></a></p>
 <p>Create a new root node of type <a href="http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138">ConceptDiagram</a>. The editor should now contain an empty editor. Nodes can be dragged
 from the <em>Diagram Palette</em> to the diagram. If nodes from other languages are needed, add the language to the <em>languages</em>
 section.</p>
@@ -2591,13 +2602,13 @@ section.</p>
 </blockquote>
 <p>This language contains a concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870">DependenciesDiagram</a></p>
 <p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
-<p><a class="glightbox" href="../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../images/dependencydiagram_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../images/dependencydiagram_example.png"/></a></p>
 <h3 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.datepicker</ins></p>
 </blockquote>
 <p>A classic widget to select a date from a pop-up calendar.</p>
-<p><a class="glightbox" href="../images/datepicker_example.png"><img alt="example: datepicker" src="../images/datepicker_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/datepicker_example.png"><img alt="example: datepicker" src="../images/datepicker_example.png"/></a></p>
 <div class="admonition warning">
 <p class="admonition-title">There’s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the datepicker doesn’t work when the theme is set to macOS light.</p>
 </div>
@@ -2650,13 +2661,13 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>where <code>createChart</code> return instance of <a href="http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart">JFreeChart</a>.</p>
-<p><a class="glightbox" href="../images/jfreechart_example.png"><img alt="example: jfreechart" src="../images/jfreechart_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/jfreechart_example.png"><img alt="example: jfreechart" src="../images/jfreechart_example.png"/></a></p>
 <h3 id="target-chooser">Target chooser<a class="headerlink" href="#target-chooser" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.targetchooser</ins></p>
 </blockquote>
 <p>The target chooser language provides a modal dialog for choosing nodes based on a predefined scope:</p>
-<p><a class="glightbox" href="../images/targetchooser_example.png"><img alt="example: target chooser" src="../images/targetchooser_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/targetchooser_example.png"><img alt="example: target chooser" src="../images/targetchooser_example.png"/></a></p>
 <p>Example code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
@@ -2723,7 +2734,7 @@ or check that existing models can be instantiated again via the editor (for exam
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.blutil.test.waitfor</ins></p>
 </blockquote>
-<p>This language contains an assert item <em>wait for</em> for tests, the waits for an expression to become true. If the condition
+<p>For tests, this language contains an assert item <em>wait for</em> the waits for an expression to become true. If the condition
 evaluates to false, the check is repeated every <em>m</em> millisecond until the timeout of <em>n</em> milliseconds is reached. Both
 <em>m</em> and <em>n</em> can be set in the inspector of the statement.</p>
 <p>A use case for this statement could be a multithreaded code, where you have to wait for the result of a different thread:</p>
@@ -2753,11 +2764,11 @@ evaluates to false, the check is repeated every <em>m</em> millisecond until the
 <p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> contains a lot of actions that might be not needed by end users such as actions for language development and actions of the <abbr title="Integrated Development Environment">IDE</abbr> platform. This language allows disabling
-actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>active by default</strong> can
+actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>Active by default</strong> can
 be set including an activation condition to make this profile the active profile when opening the project or <abbr title="Rich Client Platform">RCP</abbr>. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention <code>Use allow actions</code> on the
 actions profile. Actions in the section <code>specify toolbar</code> are displayed in the main toolbar
 that’s located at the top left of the window.</p>
-<p><a class="glightbox" href="../images/actionsfilter_example.png"><img alt="example: actions filter" src="../images/actionsfilter_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/actionsfilter_example.png"><img alt="example: actions filter" src="../images/actionsfilter_example.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">To use the language, not only the language has to be installed but also the corresponding Intellij plugin. <code>./gradlew install</code> can install this plugin. Without the plugin the language won’t load at all.</p>
 </div>
@@ -2765,7 +2776,7 @@ that’s located at the top left of the window.</p>
 <p class="admonition-title">Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not readonly. Execute <code>./gradlew install</code> to install the plugin after making a change and restart <abbr title="Meta Programming System">MPS</abbr> to test it.</p>
 </div>
 <p>The predefined actions profiles can be customized by the user in <em>preferences</em> → <em>Appearance &amp; Behavior</em> → <em>Actions</em>. New profiles can be created by clicking the <em>+</em> button and deleted by clicking the <em>-</em> button.</p>
-<p><a class="glightbox" href="../images/actionsfilter_preferences.png"><img alt="actions filter preferences" src="../images/actionsfilter_preferences.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/actionsfilter_preferences.png"><img alt="actions filter preferences" src="../images/actionsfilter_preferences.png"/></a></p>
 <h3 id="preference-form">Preference form<a class="headerlink" href="#preference-form" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.preferenceform</ins></p>
@@ -2773,7 +2784,7 @@ that’s located at the top left of the window.</p>
 <p>This language allows adding new preference pages to <em>Preferences</em>→<em>Other Settings</em>. The language uses the IntelliJ platform
 mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation</a>).</p>
 <p>Example:</p>
-<p><a class="glightbox" href="../images/preferenceform_example.png"><img alt="example: preference form" src="../images/preferenceform_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/preferenceform_example.png"><img alt="example: preference form" src="../images/preferenceform_example.png"/></a></p>
 <p>It supports the following options:</p>
 <ul>
 <li><strong>scope</strong>: save the preferences on application or project level</li>
@@ -2803,7 +2814,7 @@ that reference the values of the preference form. The input fields can be access
 <p><ins>com.mbeddr.mpsutil.process</ins></p>
 </blockquote>
 <p>This language allows creating wizards with multiple steps:</p>
-<p><a class="glightbox" href="../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../images/wizard_step_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../images/wizard_step_example.png"/></a></p>
 <p>Create a new node of instance <a href="http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068">Process</a>. The wizard can have input parameters and produces one output. After defining
 the wizard it can be invoked from an action. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
@@ -2835,9 +2846,9 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <p><ins>com.mbeddr.mpsutil.spreferences</ins></p>
 </blockquote>
 <p>This extension allows the definition of preference pages by using <abbr title="Meta Programming System">MPS</abbr> models; so in the preference page you get a normal <abbr title="Meta Programming System">MPS</abbr> editor, as exemplified by mbeddr’s platform templates preference page:</p>
-<p><a class="glightbox" href="../images/spreference_example.png"><img alt="example: spreferences" src="../images/spreference_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/spreference_example.png"><img alt="example: spreferences" src="../images/spreference_example.png"/></a></p>
 <p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check out the root “Platform Templates” as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
-<p><a class="glightbox" href="../images/spreferences_query.png"><img alt="spreferences: query" src="../images/spreferences_query.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/spreferences_query.png"><img alt="spreferences: query" src="../images/spreferences_query.png"/></a></p>
 <h2 id="deprecated">Deprecated<a class="headerlink" href="#deprecated" title="Permanent link">¶</a></h2>
 <h3 id="build-utilities">Build utilities<a class="headerlink" href="#build-utilities" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -3099,5 +3110,5 @@ can be found <a href="../../files/multilingual.pdf">here as a PDF</a> and is loc
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

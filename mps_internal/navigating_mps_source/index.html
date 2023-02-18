@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -940,7 +951,7 @@ More information can be found in the readme of the repository.</p>
 <p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
 in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
-<p><a class="glightbox" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
 <p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr> and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
 many other IntelliJ specific project settings,</p>
 <h1 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
@@ -983,11 +994,11 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 <li><em>IdeaWin32/64.dll</em>: native file system functions</li>
 <li><em>launcher.<abbr title="executable">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
 <li><em>restarter.<abbr title="executable">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>runnerw.<abbr title="executable">exe</abbr></em>: old library for Windows process management. Superceded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
+<li><em>runnerw.<abbr title="executable">exe</abbr></em>: old library for Windows process management. Superseded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
 <li><em>WinProcessListHelper.<abbr title="executable">exe</abbr></em>: lists windows processes</li>
 <li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
-<li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Substystem for Linux</a></li>
-<li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Substystem for Linux</a></li>
+<li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
+<li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
 </ul>
 </li>
 </ul>
@@ -1003,7 +1014,7 @@ The <code>artifacts</code> folder contains the generated jar files. An artifact 
 <li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin that this artifact belongs to.</li>
 </ul>
 <p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties</a>.</p>
-<p><code>home/.ant/lib</code> contains addtitional Java libraries that can be used with Ant.</p>
+<p><code>home/.ant/lib</code> contains additional Java libraries that can be used with Ant.</p>
 <p>The <code>resources</code> folder contains image resources as well as the following files:</p>
 <ul>
 <li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
@@ -1018,7 +1029,7 @@ The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run th
 on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
 <h1 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h1>
 <p>The <code>aspects</code> folder contains the languages for the language aspects.
-The <code>baselanguage</code> fodler contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
+The <code>baselanguage</code> folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
 <p>The folder <code>devkit</code> contains the four main devkits:</p>
 <ul>
 <li><ins>jetbrains.mps.devkit.bootstrap-languages</ins>: contains all the jetbrains.mps.<abbr title="language">lang</abbr> languages</li>
@@ -1063,7 +1074,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
 <li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions</a></li>
 <li>editor related actions</li>
-<li>run configurations + execution of baselanguage and othe languages</li>
+<li>run configurations + execution of baselanguage and other languages</li>
 <li>refactorings</li>
 <li><abbr title="User Interface">UI</abbr> components and tools such as the dependency viewer, the new module dialog as well as different finders</li>
 <li>all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)</li>
@@ -1074,7 +1085,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1186,5 +1197,5 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

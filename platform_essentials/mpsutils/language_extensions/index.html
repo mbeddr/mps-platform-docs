@@ -18,7 +18,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -954,7 +965,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameterized-menu">
-    #Parameterized menu
+    Parameterized menu
   </a>
 </li>
 <li class="md-nav__item">
@@ -1041,27 +1052,27 @@ The default value can be set by invoking the code completion on an existing prop
 <p><abbr title="Meta Programming System">MPS</abbr> already provides a language for <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">defining extension methods</a>, for example, methods to be called on an object without being part of the Object’s class. This language extends this mechanism to provide all static methods of a class as extension methods. They can be invoked on the type of the method’s first parameter.</p>
 <p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass</a> root node. Reference the Java class containing the static methods. Method annotations can be added to overwrite parameter names, so that they’re more elaborate than “p0” or “p2”.</p>
 <p>As a starting point, create a dependency to the model <ins>com.mbeddr.mpsutil.extensionclass.annotation.apache.commons.lang3</ins> which provides extension methods with useful parameter names for Apache Commons StringUtils, ObjectUtils, and StringEscapeUtils.</p>
-<p><a class="glightbox" href="../../images/extensionclass_example.png"><img alt="example: extension class" src="../../images/extensionclass_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/extensionclass_example.png"><img alt="example: extension class" src="../../images/extensionclass_example.png"/></a></p>
 <h3 id="language-plugin-extensions">Language plugin extensions<a class="headerlink" href="#language-plugin-extensions" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.<abbr title="language">lang</abbr>.plugin.extensions</ins></p>
 </blockquote>
 <p>This language contains extensions for <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. It mainly adds support for adding actions not only at a specific position but also supports the anchors first, last, before and after. Example:
 <code>add to NewProjectOrModuleGroup after position NewProject</code></p>
-<h3 id="parameterized-menu">#Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">¶</a></h3>
+<h3 id="parameterized-menu">Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.parameterizedMenu</ins></p>
 </blockquote>
 <p>This language is an extension to the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
 iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or create a dynamic submenu based on
 the parameter object (<em>parameterized submenu</em>).</p>
-<p><a class="glightbox" href="../../images/ccmenu_example.png"><img alt="example:ccmenu" src="../../images/ccmenu_example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/ccmenu_example.png"><img alt="example:ccmenu" src="../../images/ccmenu_example.png"/></a></p>
 <p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling</a> instead</p>
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.resources</ins></p>
 </blockquote>
-<p>This language extends the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable</a> adds support for specificing the font style (plain, bold, italic), font family and offsets for the text.</p>
+<p>This language extends the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable</a> adds support for specifying the font style (plain, bold, italic), font family and offsets for the text.</p>
 <h3 id="suppress-warning">Suppress warning<a class="headerlink" href="#suppress-warning" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><ins>com.mbeddr.mpsutil.suppresswarning</ins></p>
@@ -1080,7 +1091,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <p><ins>com.mbeddr.mpsutil.typesystem.trace</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">This language currently doesn’t work anymore.</p>
+<p class="admonition-title">This language doesn’t work anymore.</p>
 </div>
 <p>This language modifies the different typesystem concepts like comparison rule, non typesystem rules etc. to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem</a> into a typesystem aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens a tool named <code>Type System Performance Data</code> that shows the collected information.</p>
 <h3 id="xml-fix">XML fix<a class="headerlink" href="#xml-fix" title="Permanent link">¶</a></h3>
@@ -1094,15 +1105,15 @@ the parameter object (<em>parameterized submenu</em>).</p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> references all nodes by their <abbr title="identification">id</abbr>, not their name. Still, as humans, we see only the name, and this might be ambiguous. The Unique Names hint can be activated in <abbr title="Meta Programming System">MPS</abbr> Preferences, Editor Hints. It shows as much of the full qualified name as required rendering a name unique.</p>
 <p>Example concept:</p>
-<p><a class="glightbox" href="../../images/uniquenames_concept_plain.png"><img alt="example: unique names in concept declaration" src="../../images/uniquenames_concept_plain.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/uniquenames_concept_plain.png"><img alt="example: unique names in concept declaration" src="../../images/uniquenames_concept_plain.png"/></a></p>
 <p>Example Base Language:</p>
-<p><a class="glightbox" href="../../images/uniquenames_class_unique.png"><img alt="example: unique names in Base Language" src="../../images/uniquenames_class_unique.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/uniquenames_class_unique.png"><img alt="example: unique names in Base Language" src="../../images/uniquenames_class_unique.png"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1186,5 +1197,5 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <script src="../../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

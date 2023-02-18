@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1020,7 +1031,7 @@ There is a path that is too long for Windows in the build script.
 Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the issue (<a href="https://youtrack.jetbrains.com/issue/MPS-24137"><abbr title="Meta Programming System">MPS</abbr>-24137</a>).</p>
 </div>
 <h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">¶</a></h2>
-<p>You might ran into issues with newer macOS versions One of the is <a href="https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution">notarizing macOS software before distribution</a> which is currently not supported by the <a href="https://github.com/mbeddr/mps-gradle-plugin/issues/99">mps-gradle-plugin</a>. There were also changes introduced with the M1 chips (new architecture: arm64). <abbr title="Meta Programming System">MPS</abbr> already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found <a href="https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2">here</a>. If you want to provide your own <abbr title="Rich Client Platform">RCP</abbr> you might want to look at this commit. There is also a separate <abbr title="JetBrains Runtime">JBR</abbr> called jbr-osx-aarch64 that you might need to use.</p>
+<p>You might run into issues with newer macOS versions One of the is <a href="https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution">notarizing macOS software before distribution</a> which is not supported by the <a href="https://github.com/mbeddr/mps-gradle-plugin/issues/99">mps-gradle-plugin</a>. There were also changes introduced with the M1 chips (new architecture: arm64). <abbr title="Meta Programming System">MPS</abbr> already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found <a href="https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2">here</a>. If you want to provide your own <abbr title="Rich Client Platform">RCP</abbr> you might want to look at this commit. A separate version of <abbr title="JetBrains Runtime">JBR</abbr> called jbr-osx-aarch64 might also be needed.</p>
 <div class="admonition question">
 <p class="admonition-title">How do I get my defined environment variables?</p>
 <p>Execute <code>printenv</code> on a shell.</p>
@@ -1053,7 +1064,7 @@ Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1165,5 +1176,5 @@ Choose the option <em>compressArgs</em> in <em>test modules</em> node to fix the
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

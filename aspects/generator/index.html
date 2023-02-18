@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -396,6 +407,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item">
 <a class="md-nav__link" href="#troubleshooting">
     Troubleshooting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blog-posts">
+    Blog posts
   </a>
 </li>
 </ul>
@@ -981,6 +997,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     Troubleshooting
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blog-posts">
+    Blog posts
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1065,18 +1086,18 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 <ul>
 <li>Create the extension point in the plugin aspect of language <span class="arithmatex">\(L_A\)</span>.</li>
 </ul>
-<p><a class="glightbox" href="../../img/extension_point_ModelMergeExt.png"><img alt="extension point ModelMergeExt" src="../../img/extension_point_ModelMergeExt.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/extension_point_ModelMergeExt.png"><img alt="extension point ModelMergeExt" src="../../img/extension_point_ModelMergeExt.png" width="600px"/></a></p>
 <ul>
 <li>In generator main you need to create two root mapping rules for <span class="arithmatex">\(Q\)</span> (which is ModelMerge in our case).</li>
 </ul>
-<p><a class="glightbox" href="../../img/ModelMergeExt_generator.png"><img alt="ModelMergeExt generator" src="../../img/ModelMergeExt_generator.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/ModelMergeExt_generator.png"><img alt="ModelMergeExt generator" src="../../img/ModelMergeExt_generator.png" width="600px"/></a></p>
 <ul>
 <li>map_ModelMerge maps <span class="arithmatex">\(Q\)</span> to a class which extends <span class="arithmatex">\(E\)</span> (here <code>ConceptMergeSpec</code>).</li>
 <li>map_ModelMerge_extension will generate an extension for <span class="arithmatex">\(Q\)</span>. It is a extension RootMapping which can be selected from the intention. </li>
 </ul>
-<p><a class="glightbox" href="../../img/ModelMergeExt_root_template.png"><img alt="ModelMergeExt root template" src="../../img/ModelMergeExt_root_template.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/ModelMergeExt_root_template.png"><img alt="ModelMergeExt root template" src="../../img/ModelMergeExt_root_template.png"/></a></p>
 <p>The code for the Reference-Macro in the figure above should look like this.
-<a class="glightbox" href="../../img/ModelMergeExt_reference_macro.png"><img alt="../img/ModelMergeExt_reference_macro.png" src="../../img/ModelMergeExt_reference_macro.png"/></a></p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/ModelMergeExt_reference_macro.png"><img alt="../img/ModelMergeExt_reference_macro.png" src="../../img/ModelMergeExt_reference_macro.png"/></a></p>
 <p>Make sure you have <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins> included as language in the plugin.</p>
 <ul>
 <li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
@@ -1197,7 +1218,7 @@ Generation plans should be used when the generation order is simple.</p>
 That property holds a string of more than 64000 characters and the java compiler gives me a <em>constant string too long</em> error.
 What can I do?</p>
 <p>This is how it looks like so far:</p>
-<p><a class="glightbox" href="../../img/long_string_property_macro.png"><img alt="long string property macro" src="../../img/long_string_property_macro.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/long_string_property_macro.png"><img alt="long string property macro" src="../../img/long_string_property_macro.png" width="600px"/></a></p>
 </blockquote>
 <p><strong>Option 1</strong>: Extract into a separate file</p>
 <p>Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.</p>
@@ -1210,7 +1231,7 @@ What can I do?</p>
 <li>In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible in the screenshot)</li>
 <li>It is just a coincidence that we create nodes of the same concept and use the same property for the loop content, than for the outside context node. You may light-quote anything of type string here.</li>
 </ul>
-<p><a class="glightbox" href="../../img/long_string_improved_macro.png"><img alt="long string improved macro" src="../../img/long_string_improved_macro.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/long_string_improved_macro.png"><img alt="long string improved macro" src="../../img/long_string_improved_macro.png"/></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
 <h2 id="open-api">Open API<a class="headerlink" href="#open-api" title="Permanent link">¶</a></h2>
@@ -1299,7 +1320,7 @@ How can I debug this?</p>
 <p>The issue behind this kind of issues usually lies in one of these three things:</p>
 <p><strong>Issue Area 1</strong>: Settings (inplace, threading)</p>
 <p>Try turning off <em>Apply transformations in place</em> in your <abbr title="Meta Programming System">MPS</abbr> settings under <em>Build, Execution, Deployment</em> → <em>Generator</em> → <em>General</em>, as this is unset in the command line (note, that this setting doesn’t appear in the search):</p>
-<p><a class="glightbox" href="../../img/generator_settings.png"><img alt="generator settings" src="../../img/generator_settings.png" width="600px"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/generator_settings.png"><img alt="generator settings" src="../../img/generator_settings.png" width="600px"/></a></p>
 <p>Also, disabling the build in parallel threads may help.</p>
 <p><strong>Issue Area 2</strong>: Dependencies</p>
 <p>A second issue may originate from the separate type of class loading and dependency loading in the command line.</p>
@@ -1309,6 +1330,10 @@ How can I debug this?</p>
 <p>Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
+<h2 id="blog-posts">Blog posts<a class="headerlink" href="#blog-posts" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://www.f1re.io/mps-generators">Introduction <abbr title="Meta Programming System">MPS</abbr> Generators</a><small>(<em>F1RE’s blog</em>)</small></li>
+</ul>
 <div class="footnote">
 <hr/>
 <ol>
@@ -1328,7 +1353,7 @@ How can I debug this?</p>
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1440,5 +1465,5 @@ How can I debug this?</p>
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

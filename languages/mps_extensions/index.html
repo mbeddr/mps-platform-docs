@@ -20,7 +20,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1062,7 +1073,7 @@ Features:</p>
 <details class="question">
 <summary>How do you get rid of the small little extra grid lines on the outside of the table rows? (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700">original question</a>)</summary>
 <p>Change these properties to true. </p>
-<p><a class="glightbox" href="../../img/table_lines_properties.png"><img alt="Set Properties to true" src="../../img/table_lines_properties.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/table_lines_properties.png"><img alt="Set Properties to true" src="../../img/table_lines_properties.png"/></a></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">How can I improve my tables?</p>
@@ -1117,7 +1128,7 @@ You can have editor cells, which can have actions and all other normal cell feat
 </blockquote>
 <p>The <code>navigatable-node</code> style attribute won’t allow you to point directly to the node from the querylist’s query. <br/>
 Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsutil) to make the navigation work, and the <code>hyperlink-style</code> attribute to make it look like a regular reference:</p>
-<p><a class="glightbox" href="../../img/external_questions/hyperlink_node.png"><img alt="hyperlink node" src="../../img/external_questions/hyperlink_node.png"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/external_questions/hyperlink_node.png"><img alt="hyperlink node" src="../../img/external_questions/hyperlink_node.png"/></a> </p>
 <p>A common workaround to get similar behavior with <em>navigatable-node</em> is to point it to a child or parent of the desired node instead of that node itself.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></sub></sub></p>
 </details>
@@ -1244,5 +1255,5 @@ You have to define a regular editor and a hover editor.</p>
 <script src="../../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "70vw", "height": "20vw", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
