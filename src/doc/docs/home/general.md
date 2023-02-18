@@ -24,6 +24,10 @@ tags:
 
     <iframe src="https://drive.google.com/file/d/1ofeLyO4mGC9tkDN88xPedCCxp8cpflqK/preview" width="100%" height="640px" allow="autoplay" framborder="0"></iframe>
 
+!!! question "Are there any video tutorials besides the official videos?"
+
+    Yes, there is [Heavy Meta TV](https://heavymeta.tv) which hosts an in depth tutorial for JetBrains Meta Programming System (MPS) of about 20 hours. The tutorial were filmed as part of a series of live streams in 2018/2019.
+
 !!! question "What are the most important shortcuts?"
 
     F1RE blog: [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts)
