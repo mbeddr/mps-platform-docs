@@ -5,6 +5,8 @@ tags:
 
 # Continuous integration
 
+- [Setting up CI with MPS: self-contained projects](https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/){{ blog('sl') }}
+- [Maturity levels of MPS deployment](https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/){{ blog('sl') }}
 - [The Business-DSL DevOps Process](https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50){{ blog('mv') }}
 
 ??? question "How to attach debugger to a CI build on GitHub actions?"

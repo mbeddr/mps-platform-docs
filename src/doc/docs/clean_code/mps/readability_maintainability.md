@@ -4,6 +4,7 @@ tags:
 - best_practise
 ---
 
+- [Avoid strict node casts](https://specificlanguages.com/posts/2022-06/02-avoid-strict-node-casts/){{ blog('sl') }}
 - Use enhanced for loops instead of for loops with counters:
   `#!java for(type variable:iterable)` and `#!java foreach variable in iterable`
 - Mark classes/concepts etc. as deprecated when you shouldn't use them.

@@ -125,6 +125,10 @@ tags:
 
 ## How to test
 
+!!! question "How do you implement custom tests?"
+
+     {{ blog('sl',false) }}[Implementing custom tests](https://specificlanguages.com/posts/2022-03/23-custom-tests/)
+
 ??? question "How to set up a generator smoke test?"
 
     > I would like to write a generator smoke test.  Therefor, I have some solutions with models (regular one, not *@test* models) which are build from command line and the generators invoked are generating some .c files.

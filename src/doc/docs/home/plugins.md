@@ -26,7 +26,8 @@ tags:
 
 !!! question "Which kinds of plugins are there?"
 
-    {{ blog('sl',false) }}[Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/)
+    - {{ blog('sl',false) }}[Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/)
+    - {{ blog('sl',false) }}[MPS plugins vs IDEA plugins](https://specificlanguages.com/posts/2022-05/09-mps-plugins-vs-idea-plugins/)
 
 !!! question "How do I disable notifications for fatal errors?"
 
@@ -77,6 +78,10 @@ tags:
     - Use the language ^^com.mbeddr.mpsutil.nodediff^^:
         - Select first node: *Set as First Node in Diff*.
         - Select second node: *Show Diff with First Node*.
+
+!!! question "How do I access the current project from anywhere?"
+
+    - [How to get the current project from anywhere](https://specificlanguages.com/posts/2022-04/27-how-to-get-the-current-project-from-anywhere/){{ blog('sl') }}
 
 !!! failure "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
     

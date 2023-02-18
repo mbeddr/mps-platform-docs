@@ -220,8 +220,13 @@ The editor aspect defines the projectional editor of a concept.
 
     {{ contribution_by('aquapp') }}
 
+!!! question "How to you split child collections?"
 
-## Open API
+    [Advanced editors: splitting child collection in editor](https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/){{ blog('sl') }}
+
+## Inspector
+
+- [Move rarely needed information to the Inspector](https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/){{ blog('sl') }}
 
 !!! question "How can you open the inspector programmatically?"
     ```java
@@ -231,6 +236,17 @@ The editor aspect defines the projectional editor of a concept.
     - {{ blog('sl',false) }}[Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/)
     - {{ blog('sl',false) }}[Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/)
     - {{ blog('sl',false) }}[Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/)
+
+!!! question "How can you focus on a node in the inspector?"
+
+    - [Focusing on a node in the inspector](https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/){{ blog('sl') }}
+
+!!! warning "Highlighting of constraint errors in inspector doesn't work."
+
+    Known bug (MPS-32350). Pressing ++f5++ helps.
+
+
+## Open API
 
 !!! question "How can you open the editor for a node programmatically?"
 
@@ -325,11 +341,5 @@ The editor aspect defines the projectional editor of a concept.
 !!! question "Is there a utility class related to editor hints?"
 
     Yes, there is in {{ mbeddr() }}: {{ mps_url("@mbeddr.EditorHintHelper") }}.
-
-## Bugs
-
-!!! warning "Highlighting of constraint errors in inspector doesn't work."
-
-    Known bug (MPS-32350). Pressing ++f5++ helps.
 
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

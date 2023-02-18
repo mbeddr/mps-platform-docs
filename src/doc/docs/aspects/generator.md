@@ -11,6 +11,7 @@ tags:
 > — <cite>MPS documentation</cite>
 
 - [official documentation](https://www.jetbrains.com/help/mps/mps-generator.html)
+- [Getting started with generation in MPS: extracting a generator](https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/){{ blog('sl') }}
 
 ## General
 
@@ -115,6 +116,10 @@ tags:
     - Devkits: first, MPS looks if any devkit specifies a GP. The first devKit with an associated plan is consulted, if any, and no further lookup is done.
       If there are no devkits with associated plans, MPS checks the facets of the devkit modules if any is an GP provider.
       The first found facet serves as a provider.
+
+!!! question "What is cross-model generation?"
+
+    - [What is cross-model generation and why do you care?](https://specificlanguages.com/posts/2022-04/22-cross-model-generation/){{ blog('sl') }}
 
 ## How to generate XY
 
@@ -259,6 +264,10 @@ tags:
 
     Make sure that the Java facet is enabled in the properties of the language or solution. This error can often be seen when opening an old MPS project.
 
+
+!!! failure "java.lang.NoSuchMethodError"
+
+    - [NoSuchMethodError](https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/){{ blog('sl') }}
 
 !!! question "How do I debug generators?"
     

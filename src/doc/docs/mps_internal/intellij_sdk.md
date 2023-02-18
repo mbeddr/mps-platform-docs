@@ -6,6 +6,7 @@ tags:
 
 # IntelliJ SDK
 
+- [IntelliJ Platform SDK documentation](https://plugins.jetbrains.com/docs/intellij/welcome.html)
 - [Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)
 - [Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)
     - IDEA thread modeling (for example: `invokeLater`), PSI, Virtual Files, Dynamic plugins, UI
@@ -13,6 +14,10 @@ tags:
 !!! question "Where can you find a list of all IntelliJ registry entries?"
 
     They can be found in [registry.properties](https://github.com/JetBrains/intellij-community/blob/master/platform/util/resources/misc/registry.properties).
+
+!!! question "How can I access the recent projects list more easily?"
+
+    - [A better "Recent Projects" menu](https://specificlanguages.com/posts/2022-03/22-better-recent-projects/){{ blog('sl') }}
 
 ## Listeners and message bus
 

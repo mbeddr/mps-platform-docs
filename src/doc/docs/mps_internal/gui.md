@@ -5,6 +5,9 @@ tags:
 - intellij
 ---
 
+- [Fixing ugly trees](https://specificlanguages.com/posts/2022-05/18-fixing-ugly-trees){{ blog('sl') }}
+- [Centering dialogs](https://specificlanguages.com/posts/2022-05/24-centering-dialogs/){{ blog('sl') }}
+
 !!! question "Where can you find an overview of the user interface?"
     It can be found in the IntelliJ IDEA [documentation](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html).
     A more technical explanation can be found in the [IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
@@ -48,8 +51,11 @@ tags:
 !!! question "What IDEA UI elements are available?"
     {{ blog('sl',false) }}[Polished UI for free: IDEA UI components](https://specificlanguages.com/posts/2022-02/09-idea-ui-components/)
 
-!!! question "How do you create menu items with checkboxes?"
-    {{ blog('sl',false) }}[Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/)
+!!! question "How do you create menu items with checkboxes or combo boxes and make the actions findable?"
+    
+    - {{ blog('sl',false) }}[Extended actions: Checkboxes](https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/)
+    - {{ blog('sl',false) }}[Extended actions: Combo boxes](https://specificlanguages.com/posts/2022-03/17-extended-actions-combo-boxes/)
+    - {{ blog('sl',false) }}[Extended actions: Making actions findable](https://specificlanguages.com/posts/2022-03/18-extended-actions-making-actions-findable/)
 
 !!! question "How can you retrieve all opened windows in [split screen mode](https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen)?"
 

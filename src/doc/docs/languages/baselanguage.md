@@ -9,6 +9,11 @@ tags:
 
 For a full list of *baselanguage* bugs and feature requests, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
 
+### Blog posts
+
+- [Get feedback from users with generic comments](https://specificlanguages.com/posts/get-feedback-from-users-with-generic-comments/){{ blog('sl') }}
+- [Empty lines and comments](https://specificlanguages.com/posts/2022-04/06-empty-lines-and-comments/){{ blog('sl') }}
+
 !!! warning "Paste as Java class doesn't work."
 
     Not all newer Java features can be pasted such as the double colon operator(::) and static imports (fixed in the newest MPS versions). Loops with more

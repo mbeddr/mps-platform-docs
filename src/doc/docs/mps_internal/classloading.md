@@ -108,4 +108,13 @@ class ClassLoading {
 }
 ```
 
+## Questions
+
+!!! question "How can you load resources from modules?"
+
+    - [Adding resources to MPS modules](https://specificlanguages.com/posts/2022-05/16-adding-resources-to-mps-modules/){{ blog('sl') }}
+
 This prevents the exception but make sure to set the class loader back when you finish. Calling things written in MPS like behavior methods when the class loader changes is also likely to not work and gives you all kinds of strange exceptions.
+
+- [Making Apache POI work with MPS 2020.3: solving class loader hell](https://specificlanguages.com/posts/2022-03/15-apache-poi-classloader-hell/){{ blog('sl') }}
+- [A weird ClassCastException](https://specificlanguages.com/posts/2022-04/20-a-weird-class-cast-exception/){{ blog('sl') }}

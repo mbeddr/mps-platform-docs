@@ -10,6 +10,7 @@ The structure aspect contains all the concept and interface declarations of a la
 
 - [official documentation](https://www.jetbrains.com/help/mps/structure.html)
 - [old cheatsheet](http://dsl-course.org/jetbrains-mps-structure-aspect/)
+- [Finding examples of MPS features: Link instances](https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/){{ blog('sl') }}
 
 ## Concepts
 
@@ -40,6 +41,10 @@ The structure aspect contains all the concept and interface declarations of a la
 
     - Short one: `#!java new IdEncoder().toText(node.getNodeId())`
     - Long one: `#!java new IdEncoder().parseNodeId(nodeId)`
+
+!!! question "How can I assign node IDs manually?"
+
+    [Assigning node IDs explicitly](https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/){{ blog('sl') }}
 
 ## Interfaces
 

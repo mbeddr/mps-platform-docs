@@ -173,6 +173,7 @@ nav:
     - Migration: aspects/migration.md
     - VCS: aspects/vcs.md
     - Generator: aspects/generator.md
+    - Accessory models: aspects/accessory_models.md
     - Contributed aspects:
       - Documentation: aspects/documentation.md
       - Listener: aspects/listener.md

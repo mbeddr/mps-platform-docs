@@ -13,6 +13,7 @@ tags:
 
 - [Inline Definitions](https://specificlanguages.com/articles/patterns/inline-definitions/){{ blog('sl') }}
 - [Escape hatch](https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/){{ blog('sl') }}
+- [Another form of escape hatch](https://specificlanguages.com/posts/2022-05/23-another-form-of-escape-hatch/){{ blog('sl') }}
 - [Externalized names](https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/){{ blog('sl') }}
 - [Empty lines](https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/){{ blog('sl') }}
 - [Externalized names (and other common attributes)](https://www.f1re.io/externalized-names){{ blog('F1RE') }}
@@ -21,6 +22,11 @@ tags:
 
 ## General
 
+- [On language design](https://specificlanguages.com/posts/2022-03/08-on-language-design/){{ blog('sl') }}
+- [My DSL development process](https://specificlanguages.com/posts/my-dsl-development-process/){{ blog('sl') }}
+- [Evolving your language gracefully](https://specificlanguages.com/posts/evolving-your-language-gracefully/){{ blog('sl') }}
+- [Making distinctions](https://specificlanguages.com/posts/2022-01/21-making-distinctions/){{ blog('sl') }}
+- [DSLs vs business rules](https://specificlanguages.com/posts/2022-01/28-dsls-vs-business-rules/){{ blog('sl') }}
 - [The Philosophy behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps\-9e9c48d8e15b){{ blog('mv') }}
 - [Thoughts on Declarativeness](https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832){{ blog('mv') }}
 - [Why an Agile Process is not Enough](https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6){{ blog('langio') }}
@@ -32,6 +38,7 @@ tags:
 - [Why documents shouldn't be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
 - [What is Model Driven Engineering](https://www.f1re.io/model-driven-engineering){{ blog('F1RE') }}
+- [Domain-driven design vs. language engineering](https://specificlanguages.com/posts/2022-04/19-ddd-vs-le/){{ blog('sl') }}
 
 ### Introducing DSLs
 

@@ -89,5 +89,10 @@ tags:
     JBCefBrowser myBrowser = new JBCefBrowser(myUrl);
     return myBrowser.getComponent();
     ```
+
+!!! question "What is the future of MPS especially regarding the cloud?"
+
+    - [What is the future of MPS?](https://specificlanguages.com/posts/2022-06/22-what-is-the-future-of-mps/){{ blog('sl') }}
+
  [^1]:[MPS forum - How to migrate existing data into MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010855700-How-to-migrate-existing-data-into-MPS-)
 [^2]:[MPS forum - Standalone language generator](https://mps-support.jetbrains.com/hc/en-us/community/posts/360006153579-Standalone-language-generator)

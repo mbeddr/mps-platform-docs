@@ -12,8 +12,18 @@ tags:
 
 - [official documentation](https://www.jetbrains.com/help/mps/migrations.html)
 - [MPS, Feature Branches and Language Migrations: DOs and DON’Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d)(languageengineering.io)
+- [Preparing migrations with Git rebase](https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/){{ blog('sl') }}
+- [Checking for pending migrations](https://specificlanguages.com/posts/2022-05/02-checking-for-pending-){{ blog('sl') }}
 
 ## General
+
+!!! question "How do I search for instances of a deprecated concept?"
+
+    - [Migrations: Searching for instances](https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/){{ blog('sl') }}
+
+!!! question "How do I remove migrations?"
+
+    - [Removing migrations](https://specificlanguages.com/posts/2022-03/21-removing-migrations/){{ blog('sl') }}
 
 !!! question "I want to migrate an MPS project that's many years old. How do you do that?"
 
@@ -69,6 +79,8 @@ tags:
     }
     ```
 ## Troubleshooting
+
+- [The migration frustration](https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/){{ blog('sl') }}
 
 !!! failure "When creating root nodes as part of language migration via *java model\.add root(someRoot)*, it throws the exception *UnsupportedOperationException*."
 

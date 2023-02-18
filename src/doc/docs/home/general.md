@@ -32,6 +32,10 @@ tags:
 
     F1RE blog: [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts)
 
+!!! question "Which directory contains the MPS project?"
+
+    [Which directory contains the MPS project?](https://specificlanguages.com/posts/2022-08/08-which-directory-contains-the-mps-project/){{ blog('sl') }}
+
 !!! warning "What can you do if a problem occurs that isn't in this list?"
 
     Try {{ image_popup("https://www.jetbrains.com/help/mps/invalidate-caches.html", "invalidating the cache", "../../img/invalidate_cache.gif", "invalidate cache") }} and restarting MPS (same menu).
@@ -54,6 +58,7 @@ tags:
 
 !!! question "What is a module, model, node, concept...?"
 
+    - {{ blog('sl',false) }}[What goes where: the basic architecture of MPS projects](https://specificlanguages.com/posts/2022-04/28-what-goes-where/)
     - {{ blog('sl',false) }}[Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/)
     - {{ blog('lv',false) }}[How MPS Identifies Things](https://blog.logv.ws/2021/04/21/how-jetbrains-mps-identifies-things/)
 

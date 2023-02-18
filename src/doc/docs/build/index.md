@@ -4,6 +4,9 @@ tags:
 - build
 ---
 
+- [official documentation](https://www.jetbrains.com/help/mps/build-language.html)
+- [Escaping to Ant from the build language](https://specificlanguages.com/posts/2022-03/24-escaping-to-ant-from-build-language/){{ blog('sl') }}
+
 # Build language
 
 !!! question "How can you override the build directory name *build* to something different?"
@@ -58,6 +61,14 @@ tags:
 !!! warning "The [files from](http://127.0.0.1:63320/node?ref=r%3Ae9081cad-d8c3-45f2-b4ad-1dabd5ff82af%28jetbrains.mps.build.structure%29%2F2750015747481074431) operation from the MPS build model, changes the access permissions of the copied over files."
 
     As a workaround you can use [Buildlayout_Filemode](https://app.slack.com/client/T3XHGU6G0/C3YUV3YK0/thread/C3YUV3YK0-1657543516.836299#:~:text=BuildLayout_Filemode) or unzip the files using Gradle.
+
+!!! question "How can you unpack JAR files?"
+
+    - [Build language tricks: Unpacking JAR files](https://specificlanguages.com/posts/2022-03/28-build-language-tricks-unpacking-jar-files/){{ blog('sl') }}
+
+!!! question "How can you measure code coverage?"
+
+    - [Measuring code coverage with the MPS build language](https://specificlanguages.com/posts/2022-06/25-measuring-code-coverage-with-mps-build-language/){{ blog('sl') }}
 
 ## MPS build script
 

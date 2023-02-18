@@ -90,6 +90,10 @@ tags:
     - {{ blog('sl',false) }}[Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/)
     - {{ blog('sl',false) }}[Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/)
 
+!!! question "How can you run generated code from within MPS?"
+
+    {{ blog('sl',false) }}[Run generated code from within MPS](https://specificlanguages.com/posts/2022-03/29-run-generated-code-from-within-mps/)
+
 !!! question "How can you render a node as a text?"
     
     {{ blog('sl',false) }}[Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/)
