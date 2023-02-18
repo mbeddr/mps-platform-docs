@@ -71,12 +71,12 @@ section in the inspector of the editor (wrt stands for "with respect to").
 - *flushEvents()*: processes all pending model events such as property changes, adding/removing children etc. This method is called
 at the start of the selectX methods and sometimes has to be called when not all changes to the model are visible.
 - *getContextCell()*: returns the cell of *runWithContextCell* or the current select cell
-- *getSelectionmanager()*: returns the class that's responsible for handling editor selections
+- *getSelectionManager()*: returns the class that's responsible for handling editor selections
 - *getEditorPanelManager()*: returns a class that can open MPS editors for nodes through *openEditor(node)*
 
 ## EditorCell
 
-An EditorCell can be seen as a rectangle that has a position(*x* and *y*) and a dimension (*width* and *height*) that can draw anything in the editor (overwrite *paintContent*).
+An EditorCell is a rectangle that has a position(*x* and *y*) and a dimension (*width* and *height*) that can draw anything in the editor (overwrite *paintContent*).
 To request a relayout of the cell, call *requestRelayout* or call *relayout* to relayout it directly. Editor cells support saving additional information (user objects)
 by calling the methods *putUserObject(key, value)* and *getUserObject()*. [Cell actions](https://www.jetbrains.com/help/mps/editor.html#cellactions) for action maps.
 
@@ -101,7 +101,7 @@ saved in a [sideTransformInfo](http://127.0.0.1:63320/node?ref=r%3A00000000-0000
 
 Extend one of the existing EditorCell implementations like EditorCell_Collection or EditorCell_Constant to use as the basis for the new
 cell. Override the *paintContent* method, to draw custom stuff in the editor ([EditorCell_DropDown](http://127.0.0.1:63320/node?ref=r%3A2da81fb8-b6c6-47b8-8c70-4c760b6faf63%28de.itemis.mps.editor.dropdown.runtime%29%2F8584963402264447319) in {{ mps_extensions() }}).
-If you need to do custom relayouting, you can override *relayoutImpl* from EditorCell_Basic, for example:
+If you need to do custom re-layouting, you can override *relayoutImpl* from EditorCell_Basic, for example:
 
 ```java
 @Override
@@ -127,7 +127,7 @@ of the folded cells will stay the same in the folded state and will be recalcula
 
 ### CellLayout
 
-The [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} has its own layouter and there is also the MPS layouter. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
+The [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} has its own layout engine and replaces the MPS layout engine when styles of the languages are used. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
 different layouts first. The different layouts are described in the [MPS documentation](https://www.jetbrains.com/help/mps/editor.html#celllayouts).
 What are the advantages of the celllayout language with respect to the MPS layouts?
 
@@ -262,7 +262,7 @@ delete a referenced editor component in the listener when it is not needed anymo
 
 ### Disposing resources
 
-Register a dispose listener for the editor component and execute your *uninstall* method in the body:
+Register a dispose-listener for the editor component and execute your *uninstall* method in the body:
 
 ```java
 editorComponent.addDisposeListener(new EditorComponent.EditorDisposeListener() {

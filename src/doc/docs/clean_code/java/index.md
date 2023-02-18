@@ -4,7 +4,7 @@ tags:
 - best_practise
 ---
 
-[refactoring.guru](https://refactoring.guru/refactoring/smells) has information about general code smells.
+[Refactoring.guru](https://refactoring.guru/refactoring/smells) has information about general code smells.
 
 - Be aware of common [Java gotchas](https://stackoverflow.com/questions/169815/java-common-gotchas).
 - Avoid acronyms and abbreviations that may not be clear to others.

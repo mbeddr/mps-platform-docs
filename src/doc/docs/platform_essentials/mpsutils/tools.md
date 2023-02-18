@@ -99,7 +99,7 @@ Once you have created a graph, your users have many options for viewing the grap
 
 ![example: JUNG framework](jung2.png)
 
-The JUNG integration is available as part of mbeddr, but also as part of the mbeddr.platform, so you can use it for your own languages. Check out the Chunk node for an example of how to use it.
+The JUNG integration is available as part of mbeddr, but also as part of the mbeddr\.platform, so you can use it for your own languages. Check out the Chunk node for an example of how to use it.
 
 A demo video of the viewer can be found [here](http://youtu.be/-v1X0GhsLJ4).
 

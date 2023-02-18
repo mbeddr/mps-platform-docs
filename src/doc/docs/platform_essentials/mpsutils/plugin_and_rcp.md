@@ -5,7 +5,7 @@
 > ^^com.mbeddr.mpsutil.actionsfilter^^
 
 MPS contains a lot of actions that might be not needed by end users such as actions for language development and actions of the IDE platform. This language allows disabling
-actions inside an MPS plugin solution by defining an actions profile. **active by default** can
+actions inside an MPS plugin solution by defining an actions profile. **Active by default** can
 be set including an activation condition to make this profile the active profile when opening the project or RCP. All actions are disabled in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention `Use allow actions` on the
 actions profile. Actions in the section `specify toolbar` are displayed in the main toolbar
 that's located at the top left of the window.

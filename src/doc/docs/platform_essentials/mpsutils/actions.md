@@ -19,7 +19,7 @@ As the name already implies, this language adds some new generic actions:
 - **Increase MPS Editor Font Size**: increases the font size in the editor settings and updates all editors (ctrl + +)
 - **Reset MPS Editor Font Size**:: reset the font size to the default size (ctrl + 0, 13 pixels)
 - **File Manager in Output Folder**: a new action in the context menu of models that opens the path of the generated files.
-  This action won't work if the model doesn't generate output files.
+  This action won't work if the model does not generate output files.
 - **File Manager in Module Folder**: a new action in the context menu of modules that opens the path of th module.
 
 ### Node access

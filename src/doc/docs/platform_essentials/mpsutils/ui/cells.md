@@ -25,7 +25,7 @@ The [frame](http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33
 
 - **frame-color**: the color of the frame (default: black)
 - **frame-width**: the thickness of the frame (default: 1 pixel)
-- **frame-padding**: the space between the containting cell and the frame (default: 3 pixel)
+- **frame-padding**: the space between the containing cell and the frame (default: 3 pixel)
 
 An example can be seen in the documentation language:
 

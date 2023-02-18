@@ -150,4 +150,4 @@ For general MPS problems, read [Finding your way out](https://www.jetbrains.com/
     - *x*: remove only files ignored by Git. This may be useful to rebuild everything from scratch, but keep manually created files.
     - *d*: remove untracked directories and untracked files.
     - *f*: If the Git configuration variable clean.requireForce is not set to false, git clean will refuse to delete files or directories unless given -f, -n or
-    - *e*: Use the given exclude pattern ibesides the standard ignore rules.
+    - *e*: Use the given exclude pattern besides the standard ignore rules.

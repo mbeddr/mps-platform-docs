@@ -4,7 +4,7 @@ tags:
 - aspect
 ---
 
-# Type sytem aspect
+# Type system aspect
 
 > A type system is part of a language definition assigning types to the nodes in the models written using the language. The type system language is also used to check certain constraints on nodes and their types.
 >

@@ -163,15 +163,15 @@ This documentation guides you to following the mbeddr standards for setting up y
 
 #### Required BuildFolderMacros
 
-In your *BuildProject* (the build script's model representation in MPS) you first need a *BuildFolderMacro* (a _folder_) named *mps.home* (see code snippet below).
-If you want to run the generated ant script in your MPS, then you should specify the location of your MPS installation in a relative way, otherwise you don't need a path for *mps.home*.
-At script execution time, you will redefine *mps.home*, to point to the folder where your MPS installation is located at.
+In your *BuildProject* (the build script's model representation in MPS) you first need a *BuildFolderMacro* (a _folder_) named *mps\.home* (see code snippet below).
+If you want to run the generated ant script in your MPS, then you should specify the location of your MPS installation in a relative way, otherwise you don't need a path for *mps\.home*.
+At script execution time, you will redefine *mps\.home*, to point to the folder where your MPS installation is located at.
 
 ```
 folder mps.home = <no defaultPath>
 ```
 
-Next, you need a *BuildFolderMacro* named *artifacts.root* that doesn't require a path (see snippet below).
+Next, you need a *BuildFolderMacro* named *artifacts\.root* that doesn't require a path (see snippet below).
 When executing the ant script, generated from your *BuildProject*, define this macro from outside to point to the folder where all your plugin dependencies (for example: `mbeddr.platform`) are located.
 
 ```
@@ -190,7 +190,7 @@ folder platform.artifacts = $artifacts.root/com.mbeddr.platform
 #### Type system tests
 
 When you want to build type system tests that require a specific path macro (for example: for specifying the project location inside your `TestInfo`), then you must create a *BuildFolderMacro* for this path macro.
-The name of this *BuildFolderMacro* should start with *mps.macro*, followed by the name of the respective path macro.
+The name of this *BuildFolderMacro* should start with *mps\.macro*, followed by the name of the respective path macro.
 In the example below, you instruct MPS via *mps.macro.mbeddr.github.core.home* to create a path macro *mbeddr.github.core.home* that points to the relative path location specified in the other *BuildFolderMacro* *mbeddr.github.core.home*.
 
 ```
@@ -232,7 +232,7 @@ java options <project default>
 
 ### Building a release
 
-For preparing a mbeddr release, you can modify the version number that is set for the mbeddr plugins by overwriting the values of *major.version*, *minor.version* and *build*(see screenshot below).
+For preparing a mbeddr release, you can modify the version number that is set for the mbeddr plugins by overwriting the values of *major\.version*, *minor.version* and *build*(see screenshot below).
 However, you don't change these values inside the MPS build scripts, instead, either you change them in the global gradle script (*mbeddr.core/build.gradle*), or you overwrite them via the command line while spawning a new release build:
 
 ``` -PmajorVersion=1 -PbuildVersion=0 -PminorVersion=0000 build_mbeddr publishMbeddrAllInOnePublicationToMavenRepository```

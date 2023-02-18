@@ -36,15 +36,15 @@ For this example, assume that you want to use classes from the *git4idea* plugin
 
 1. Create a solution *MySolution*.
 2. Create a model ending with ".plugin," for example *MySolution.plugin*.
-3. Add the language ^^jetbrains.mps.lang.plugin.standalone^^ to both the *MySolution.plugin* model and the *MySolution* solution.
+3. Add the language ^^jetbrains.mps.lang.plugin.standalone^^ to both the *MySolution\.plugin* model and the *MySolution* solution.
 4. Create a *StandalonePluginDescriptor* in the model *MySolution.plugin*.
 5. Add the *MySolution* to a build model named *MySolution.build*.
-6. Create an idea plugin the build model with id *MySolution.IdeaPlugin*.
-7. Add *MySolution.build* to the idea plugin *MySolution.IdeaPlugin* content.
-8. Add the dependency on *git4idea* to *MySolution.IdeaPlugin* dependencies.
+6. Create an idea plugin the build model with id *MySolution\.IdeaPlugin*.
+7. Add *MySolution\.build* to the idea plugin *MySolution\.IdeaPlugin* content.
+8. Add the dependency on *git4idea* to *MySolution\.IdeaPlugin* dependencies.
 9. Execute the build script.
 10. In properties of solution *MySolution*, on the Facets tab, select *Idea Plugin*.
-11. In newly appearing Idea Plugin tab, set plugin ID to *MySolution.IdeaPlugin*.
+11. In newly appearing Idea Plugin tab, set plugin ID to *MySolution\.IdeaPlugin*.
 12. Restart MPS.
 
 Now the classes within *git4idea* are available within *MySolution*.

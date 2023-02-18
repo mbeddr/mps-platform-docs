@@ -70,7 +70,7 @@ tags:
     ```
 ## Troubleshooting
 
-!!! failure "When creating root nodes as part of language migration via *java model.add root(someRoot)*, it throws the exception *UnsupportedOperationException*."
+!!! failure "When creating root nodes as part of language migration via *java model\.add root(someRoot)*, it throws the exception *UnsupportedOperationException*."
 
     Make sure that the affected model is not a non-editable model.
 

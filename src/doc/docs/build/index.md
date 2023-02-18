@@ -36,7 +36,7 @@ tags:
     in the file build.gradle (for example in [this line](https://github.com/JetBrains/MPS-extensions/blob/3e137bcf269f8a2ac79589d4e4938f78900cf294/build.gradle#L81)
     in mps-extension). For older MPS projects there is no waying of finding out the version.
 
-!!! question "What do you need to put into the *.gitignore* file?"
+!!! question "What do you need to put into the *\.gitignore* file?"
 
     Have a look at this [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore) file.
 

@@ -13,7 +13,7 @@ tags:
 - [The Event Dispatch Thread | Oracle Java documentation](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html)
 
 Regardless of the calling thread, writing and reading MPS models always need to performed holding an appropriate lock.
-IntelliJ IDEA also requires read and write locks in its platform. The IDEA's lock is acquired first and only then the MPS's lock is acquired when using the MPS access language.
+IntelliJ IDEA also needs read and write locks in its platform. The IDEA's lock is acquired first and only then the MPS's lock is acquired when using the MPS access language.
 The MPS locks are described in [Managing concurrent access | MPS](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage).
 
 ## Main thread

@@ -25,6 +25,6 @@ Besides elements with a cardinality of 1, some other items can't be removed from
 
 #### Code smells
 
-- replacement of *functioncall* expression where parent is expression statement
+- replacement of function call expression where parent is expression statement
     + replace complete statement to generate readable code
 

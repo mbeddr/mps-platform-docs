@@ -44,16 +44,16 @@ Besides the Material extensions, the project used the following [Pymdown](https:
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
 - [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 
-- [mdx-spanner](https://pypi.org/project/mdx-spanner):enables rowspan and colspan in Markdown tables
+- [mdx-spanner](https://pypi.org/project/mdx-spanner):enables row and column spanning in Markdown tables
 
 ## Macros
 
 The plugin [mkdocs-macros-plugin](https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/) is activated.
 You can add variables to the extra section of mkdocs.yml (example: `mps_latest`) and use the available macros:
 
-  - contribution_by(github_username)
-  - question_by(github_username)
-  - answer_by(github_username)
+  - contribution_by(GitHub_username)
+  - question_by(GitHub_username)
+  - answer_by(GitHub_username)
   - mps_url(identifier)
   - image_popup()
   - iets3()

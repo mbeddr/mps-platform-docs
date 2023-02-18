@@ -37,7 +37,7 @@ For crashes on macOS, have a look at [Identifying the Cause of Common Crashes | 
 
 ## Mac
 
-You might ran into issues with newer macOS versions One of the is [notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) which is currently not supported by the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin/issues/99). There were also changes introduced with the M1 chips (new architecture: arm64). MPS already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found [here](https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2). If you want to provide your own RCP you might want to look at this commit. There is also a separate JBR called jbr-osx-aarch64 that you might need to use.
+You might run into issues with newer macOS versions One of the is [notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) which is not supported by the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin/issues/99). There were also changes introduced with the M1 chips (new architecture: arm64). MPS already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found [here](https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2). If you want to provide your own RCP you might want to look at this commit. A separate version of JBR called jbr-osx-aarch64 might also be needed.
 
 !!! question "How do I get my defined environment variables?"
 

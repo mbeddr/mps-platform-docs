@@ -21,7 +21,7 @@ This document lists some recommendations for code written it MPS.
 ## Null safety
 
 - Use language [checkedDots](https://www.jetbrains.com/help/mps/other-languages.html) for saver access of possible null values. You can check nodes for null: [node.isNull](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870)
-- Use annotation `#!java @NotNull` and `#!java @Nullable` for baselanguage code. a specific type system rule in MPS checks these annotations.
+- Use annotation `#!java @NotNull` and `#!java @Nullable` for baselanguage code. A specific type system rule in MPS checks these annotations.
 - Use [:eq:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259) (NPE safe equals operation) and [\:ne:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393) 
   NPE safe not equals operation instead of [==](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152) and `#!java equals`.
 - Return optional values instead of null in `baselanguage` code[^1].

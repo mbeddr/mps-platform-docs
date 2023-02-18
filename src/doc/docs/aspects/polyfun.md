@@ -1,10 +1,10 @@
 ---
-title: Polyfun aspect
+title: polymorphic functions aspect
 tags:
 - aspect
 ---
 
-# Polyfun aspect
+# Polymorphic functions aspect
 
 This aspect allows to declare polymorphic functions and is part of [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels) in {{ mps_extensions() }}.
 You can declare a function that can have different implementations per language. To get a better understanding, have a look at the corresponding sandbox.

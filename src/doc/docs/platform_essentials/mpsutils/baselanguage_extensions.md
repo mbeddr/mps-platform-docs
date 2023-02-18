@@ -14,7 +14,7 @@ for referencing any child nodes and named nodes respectively.
 
 > ^^com.mbeddr.mpsutil.richstring^^
 
-This BaseLanguage extension simplifies usage of variables and [Java String.format()](https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html) inside BaseLanguage Strings. Just add the language com.mbeddr.mpsutil.richstring to your model.
+This BaseLanguage extension simplifies usage of variables and [Java String#format](https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html) inside BaseLanguage Strings. Just add the language com.mbeddr.mpsutil.richstring to your model.
 
 The following example shows referencing a simple variable, embedding an expression inside a string, and the equivalent of calling `#!java String.format()`:
 

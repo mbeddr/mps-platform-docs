@@ -47,7 +47,7 @@ be correct.
 
 [Line 204-219](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L204): the all script is a special MPS build script that calls all other build scripts. This task has the type *BuildLanguages* as described in the gradle-plugin documentation and executes the xml file that was created by the MPS build language. The next lines also declare tasks for building the languages and running the tests. They call the corresponding build scripts from the build module of this project (^^de.itemis.mps.extensions.build^^).
 
-[Line 221](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L221): this task installs the nativlibs.loader plugin which can be used for loading native code(e.g. C code) that is needed for a Java library (e.g. C debugger). A special plugin is needed because there are special methods for loading native code in Java. Normal
+[Line 221](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L221): this task installs the nativelibs\.loader plugin which can be used for loading native code(e.g. C code) that is needed for a Java library (e.g. C debugger). A special plugin is needed because special methods for loading native code in Java exi. Normal
 MPS solutions shouldn't be used for this task because they can be reloaded in MPS which isn't possible with native libraries. This plugin is implemented as an IntelliJ plugin which is not affected by the MPS reloading mechanism.
 
 [Line 250](https://github.com/JetBrains/MPS-extensions/blob/67e482fe58ea9568649af0a99b8671203019ae20/build.gradle#L250): this block declares the Junit ant dependency.

@@ -71,7 +71,7 @@ These lists contain named threads from Java, the IntelliJ platform and MPS.
 - Intentions: Shows or hides intentions
 - MPS Make Thread: Thread that executes a make task ([MakeTask](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/jetbrains.mps.ide.platform/source_gen/jetbrains/mps/ide/make/MakeTask.java))
 - generation-thread: generator thread ([GenerationTaskPool](https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/GenerationTaskPool.java))
-- textgen-thread: text generator thread ([TextGeneratorEngine](https://github.com/JetBrains/MPS/blob/76b099c00163c96001d9a1f75c4ae7f59a10e8a4/core/textgen/source/jetbrains/mps/text/TextGeneratorEngine.java#L50))
+- TextGen-thread: text generator thread ([TextGeneratorEngine](https://github.com/JetBrains/MPS/blob/76b099c00163c96001d9a1f75c4ae7f59a10e8a4/core/textgen/source/jetbrains/mps/text/TextGeneratorEngine.java#L50))
 
 ## Other threads
 

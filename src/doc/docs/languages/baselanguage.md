@@ -225,7 +225,7 @@ This expression is the node pendant for the `property/<concept>:<name>/` express
 
 > ^^jetbrains.mps.core.properties^^
 
-This language adds support for [Java .properties](https://en.wikipedia.org/wiki/.properties) files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
+This language adds support for [Java \.properties](https://en.wikipedia.org/wiki/.properties) files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
 Example:
 ```properties 
 mps_home=/Applications/MPS.app 
@@ -240,7 +240,7 @@ locale=en_US
 
 > ^^jetbrains.mps.lang.editor.forms^^
 
-This language add support for checkboxes. There is a text based checkbox (text checkbox UI) and an image checkbox (platform checkbox UI). The text-based checkbox can be styled like any other constant text. The checkbox cell has an *ui* parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the *label*. The checkbox can be toggled through clicking and pressing space. The
+This language add support for checkboxes. Text based checkboxes (text checkbox UI) and image checkboxes (platform checkbox UI) are available. The text-based checkbox can be styled like any other constant text. The checkbox cell has an *ui* parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the *label*. The checkbox can be toggled through clicking and pressing space. The
 
 ![forms: checkbox](forms_checkbox.png)
 

@@ -78,7 +78,7 @@ This issue tracker is most of the time needed for tickets related to [KernelF](h
 ## IntelliJ platform
 
 This issue tracker contains issue for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The used IntelliJ platform can be found on the 
-[MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consistss
+[MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consists
 of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, the IntelliJ platform version is 213.7172 which
 can be checked by visiting the [IntelliJ IDEA download page](https://www.jetbrains.com/de-de/idea/download/other.html).
 If an MPS issue is related to the platform, it is forwarded by the MPS team to the platform team.
@@ -89,7 +89,7 @@ If an MPS issue is related to the platform, it is forwarded by the MPS team to t
 
 > JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and bugfixes.
 
-!!!info "It's very unlikely that you have to submit an issue to this tracker yourself."
+!!!info "It's highly unlikely that you have to submit an issue to this tracker yourself."
 
 This issue tracker is relevant for [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html), UI-related glitches and
 complete Java crashes as MPS is using the JetBrains Runtime instead of the normal JRE. The JetBrains runtime is installed

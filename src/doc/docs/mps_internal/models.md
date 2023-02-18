@@ -128,7 +128,7 @@ It provides access to resulting artifacts of other build models.
 
 **UI**: section *project structure* in *Build Model*, subsection *idea plugin*, subsection *dependencies*.
 
-It contains the contents of [IDEA plugin.xml](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html) *depends* tags.
+It contains the contents of [IDEA plugin.xml](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html) *depends*-tags.
 
 This plugin only loads if all dependencies listed here load before. The contents of dependencies are available for this IDEA plugin.
 
@@ -147,4 +147,4 @@ It contains a copy of module runtime language settings.
 **UI**: section *default layout* in *Build Model*
 
 You have to include all jars included in any Java module settings somewhere in this section.
-*.java* files (from Java source paths) need to be compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding *.class* files should be jared, .java files should be places in corresponding location if they are referenced by java_source_stub model root.
+*.java* files (from Java source paths) need to be compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding *\.class* files should be jared, .java files should be places in corresponding location if they are referenced by java_source_stub model root.

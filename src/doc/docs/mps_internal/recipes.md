@@ -163,13 +163,13 @@ Then:
 
 - For *ConceptZ*, type system rule *ConceptZTypeRule* gets evaluated.
 - For *ConceptY*, type system rules *ConceptYTypeRule1* and *ConceptYTypeRule2* get evaluated.  
-  *ConceptZTypeRule* is not evaluated, as at least one rule for *ConceptY* defines *[override=true]*.
+  *ConceptZTypeRule* is not evaluated, as at least one rule for *ConceptY* defines:*[override=true]*.
 - For *ConceptX*, type system rules *ConceptYTypeRule1*, *ConceptYTypeRule2* and  
   *ConceptXTypeRule* get evaluated.  
   *ConceptYTypeRule1* and *ConceptYTypeRule2* get included because no rule for *ConceptX*
-  defines *[override=true]*.  
+  defines:*[override=true]*.  
   *ConceptZTypeRule*is not evaluated because the search for rules in extended Concepts
-  stops at the first concept having at least one rule defining *[override=true]*.
+  stops at the first concept having at least one rule defining:*[override=true]*.
 
 ## Create an intention
 

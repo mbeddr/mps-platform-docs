@@ -33,7 +33,7 @@ are used. Especially MPS read and write locks should be available in every langu
 - select nodes in the editor
 - recreate opened MPS editors
 - show the completion menu
-- rehighlight nodes
+- re-highlight nodes
 
 ## Examples of actions that require IDEA locks
 

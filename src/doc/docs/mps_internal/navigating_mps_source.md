@@ -52,11 +52,11 @@ operating systems (Windows, Mac, Linux). All of them use the executable *fsnotif
     - *IdeaWin32/64.dll*: native file system functions
     - *launcher.exe*: launches MPS
     - *restarter.exe*: restarts MPS
-    - *runnerw.exe*: old library for Windows process management. Superceded by [WinP](https://github.com/jenkinsci/winp).
+    - *runnerw.exe*: old library for Windows process management. Superseded by [WinP](https://github.com/jenkinsci/winp).
     - *WinProcessListHelper.exe*: lists windows processes
     - *WinShellIntegrationBridge.dll*: integration with the Windows shell
-    - *wslhash*: hash calculation(?) for the [Windows Substystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
-    - *wslproxy*: proxy(?) for the [Windows Substystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
+    - *wslhash*: hash calculation(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
+    - *wslproxy*: proxy(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 
 # build
 
@@ -72,7 +72,7 @@ The `artifacts` folder contains the generated jar files. An artifact might look 
 
 The `dependencies` folder contains the [Gradle configuration properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties).
 
-`home/.ant/lib` contains addtitional Java libraries that can be used with Ant.
+`home/.ant/lib` contains additional Java libraries that can be used with Ant.
 
 The `resources` folder contains image resources as well as the following files:
 
@@ -90,7 +90,7 @@ on Linux/Mac respectively. `update.xml` lists all MPS versions and is used to sh
 # core
 
 The `aspects` folder contains the languages for the language aspects.
-The `baselanguage` fodler contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.
+The `baselanguage` folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.
 
 The folder `devkit` contains the four main devkits:
 
@@ -152,7 +152,7 @@ This folder contains subfolders for:
 - [MPS debugger](https://www.jetbrains.com/help/mps/using-mps-debugger.html)
 - [Context actions](https://www.jetbrains.com/help/mps/context-actions-tool.html)
 - editor related actions
-- run configurations + execution of baselanguage and othe languages
+- run configurations + execution of baselanguage and other languages
 - refactorings
 - UI components and tools such as the dependency viewer, the new module dialog as well as different finders
 - all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)
