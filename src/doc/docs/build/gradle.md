@@ -4,7 +4,15 @@ tags:
 ---
 
 Documentation for Gradle can be found on [gradle.org](https://docs.gradle.org/current/userguide/what_is_gradle.html).
-The used features of the Groovy languages are explained in [A Groovy Build Script Primer](https://docs.gradle.org/current/userguide/groovy_build_script_primer.html).
+The used features of the Groovy languages are explained in [A Groovy Build Script Primer](https://docs.gradle.org/current/userguide/groovy_build_script_primer.html). If you want to use Kotlin instead, start with the [Gradle Kotlin DSL Primer](https://docs.gradle.org/current/userguide/kotlin_dsl.html). [Migrating build logic from Groovy to Kotlin](https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html) might also be helpful. To automatically convert between Groovy and Kotlin syntax, you can try using [Gradle Kotlinize](https://gradle-kotlinize.web.app/). Many manual corrections are still
+necessary.
+
+## Useful Gradle plugins for mps projects
+
+- **[mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin)**: Miscellaneous tasks that were found useful when building MPS-based projects with Gradle.
+- **[Maven publish plugin](https://docs.gradle.org/current/userguide/publishing_maven.html)**: a gradle plugin for publishing build artifacts to Apache Maven repositories (such as nexus repositories)
+- **[nu.studer.credentials](https://plugins.gradle.org/plugin/nu.studer.credentials)**: a gradle plugin for storing and accessing encrypted credentials for use in Gradle builds.
+- **[github-release-gradle-plugin](https://github.com/BreadMoirai/github-release-gradle-plugin)**: a Gradle Plugin to send Releases to GitHub
 
 ## Questions
 
