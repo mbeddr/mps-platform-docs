@@ -107,3 +107,13 @@ This issue tracker is only listed for reference purposes. If there's an OpenJDK 
 will likely be fixed in the JetBrains Runtime.
 
 - [open issues](https://bugs.openjdk.org/projects/JDK/issues/)
+
+## Performance
+
+If you are interested in internal performance-related topics about Java and its compiler, you might find the following articles helpful:
+
+- [How the JIT compiler optimizes code | ibm.com](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=compiler-how-jit-optimizes-code)
+- [The Java HotSpot Performance Engine Architecture | oracle.com](https://www.oracle.com/java/technologies/whitepaper.html)
+- [Optimizing compiler | wikipedia.com](https://en.wikipedia.org/wiki/Optimizing_compiler)
+- [How the JIT compiler boosts Java performance in OpenJDK | developers.redhat.com](https://developers.redhat.com/articles/2021/06/23/how-jit-compiler-boosts-java-performance-openjdk)
+- [Microbenchmarking with Java | baeldung.com](https://www.baeldung.com/java-microbenchmark-harness)
