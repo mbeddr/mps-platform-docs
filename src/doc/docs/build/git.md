@@ -29,6 +29,10 @@ tags:
 
     Assuming the concept is called `Foo`, search with Git Log in the corresponding structure model: `git log -SFoo -- path/to/structure.mps`
 
+!!! question "How can I go to the first commit in a project on GitHub?"
+
+    Use the book on the following page: http://farhadg.github.io/init/landing/
+
 ## General
 
 - [Git cheat sheet](https://github.com/arslanbilal/git-cheat-sheet)
