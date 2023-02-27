@@ -45,3 +45,7 @@ class SwingComponent {
 ```
 
 When the browser is not correctly disposed, it might be drawn in different components, on top of MPS editors etc. Some issues are known where JCEF makes the IDE crash (JBR-4667 + linked related issues, JBR-2206 + linked related issues).  
+
+## Demo + WebSockets
+
+A demo for the JCEF integration can be found in the repository [mps_jcef_minialm](https://github.com/alexanderpann/mps_jcef_minimal). Read the readme for more information. The demo contains two branches, one shows the internal communication via JS, the other branch uses WebSocket for the communication. The WebSocket server is modeled after this [tutorial](https://medium.com/@irunika/how-to-write-a-http-websocket-server-using-netty-f3c136adcba9) and uses the existing IntelliJ libraries of Netty. Handling of web socket frames is described in more detail in [Chapter 12. WebSocket - Netty in Action](https://livebook.manning.com/book/netty-in-action/chapter-12/40).
