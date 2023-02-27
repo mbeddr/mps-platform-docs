@@ -98,3 +98,13 @@ The ant script needs to know where the local MPS is installed and where your mod
 
 The Headless-MPS, which is started by the ant script, behaves sometimes differently compared to an IDE-MPS. For example, circular dependencies can be resolved in the IDE by just applying *Make Project* multiple times, which doesn't work on the command line and thus also fails on the CI.
 Dependencies which are visible in the IDE aren't always visible in the MPS build script/ ant script and can result in failing builds. MPS holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the IDE everything's always visible and wrong dependencies can be resolved but on the command line the build can fail, because the referenced model isn't loaded. The build language generator doesn't check the nodes for e.g. references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.
+
+## Shell scripts
+
+Some scripts like the start script of MPS are developed using Windows Batch Scripting on Windows and Bash Shell Scripting on Mac/Linux. To learn more about
+those two scripting language, consult the following list:
+
+- [Windows Batch Scripting | wikibooks.org](https://en.wikibooks.org/wiki/Windows_Batch_Scripting)
+- [Using batch files | learn.microsoft.com](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490869(v=technet.10))
+- [Bash Shell Scripting | wikibooks.org](https://en.wikibooks.org/wiki/Bash_Shell_Scripting)
+- [Bash Reference Manual | gnu.org](https://www.gnu.org/software/bash/manual/bash.html)
