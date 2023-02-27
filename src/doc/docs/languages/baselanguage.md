@@ -44,6 +44,10 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
     places implicit returns aren't supported, such as when returning a new `ListScope` class. Make sure to add a return
     statement in such places.
 
+!!! question "What library does MPS use to parse Java code?"
+
+    It uses the parser of the Eclipse Java Development Tools (JDT). The AST is described on the page [Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model](https://www.vogella.com/tutorials/EclipseJDT/article.html).    
+
 ## Var Variable
 
 > ^^jetbrains.mps.baselanguage.varVariable^^
