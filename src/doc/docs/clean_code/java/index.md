@@ -4,6 +4,9 @@ tags:
 - best_practise
 ---
 
+To learn more information about advanced Java topics such as the Java virtual machine, collections language and many more topics,
+visit [baeldung.com](https://www.baeldung.com/category/java).
+
 [Refactoring.guru](https://refactoring.guru/refactoring/smells) has information about general code smells.
 
 - Be aware of common [Java gotchas](https://stackoverflow.com/questions/169815/java-common-gotchas).
