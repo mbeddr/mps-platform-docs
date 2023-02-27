@@ -954,6 +954,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     Generated ant scripts (build.xml)
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shell-scripts">
+    Shell scripts
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1052,12 +1057,21 @@ Tasks can be passed to the ant script like the “generate” task.</p>
 <p>The ant script needs to know where the local <abbr title="Meta Programming System">MPS</abbr> is installed and where your modules and dependencies are located. This is usually done using folder macros in the mps build script which are generated as “properties” in the Ant script. This makes the build independent of your local machine and the ant script can be executed on the CI or any other machine.</p>
 <p>The Headless-<abbr title="Meta Programming System">MPS</abbr>, which is started by the ant script, behaves sometimes differently compared to an <abbr title="Integrated Development Environment">IDE</abbr>-<abbr title="Meta Programming System">MPS</abbr>. For example, circular dependencies can be resolved in the <abbr title="Integrated Development Environment">IDE</abbr> by just applying <em>Make Project</em> multiple times, which doesn’t work on the command line and thus also fails on the CI.
 Dependencies which are visible in the <abbr title="Integrated Development Environment">IDE</abbr> aren’t always visible in the <abbr title="Meta Programming System">MPS</abbr> build script/ ant script and can result in failing builds. <abbr title="Meta Programming System">MPS</abbr> holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the <abbr title="Integrated Development Environment">IDE</abbr> everything’s always visible and wrong dependencies can be resolved but on the command line the build can fail, because the referenced model isn’t loaded. The build language generator doesn’t check the nodes for e.g. references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.</p>
+<h2 id="shell-scripts">Shell scripts<a class="headerlink" href="#shell-scripts" title="Permanent link">¶</a></h2>
+<p>Some scripts like the start script of <abbr title="Meta Programming System">MPS</abbr> are developed using Windows Batch Scripting on Windows and Bash Shell Scripting on Mac/Linux. To learn more about
+those two scripting language, consult the following list:</p>
+<ul>
+<li><a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting">Windows Batch Scripting | wikibooks.org</a></li>
+<li><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490869(v=technet.10)">Using batch files | learn.microsoft.com</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Bash_Shell_Scripting">Bash Shell Scripting | wikibooks.org</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual | gnu.org</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
