@@ -21,6 +21,11 @@ The mbeddr doc language used it for generating xhtml, latex, and markdown.
 
 > ^^de.itemis.mps.editor.diagram^^
 
+!!! question "What Java libraries does the diagram language use?"
+
+    For the graphs itself, it uses [JGraphX](https://jgraph.github.io/mxgraph/docs/manual_javavis.html). The layouting is
+    done by the [Eclipse Layout Kernel (ELK)](https://www.eclipse.org/elk/).
+
 !!! warning "I encountered a bug."
 
     Check the [meta Issue](https://github.com/JetBrains/MPS-extensions/issues/120) on Github.
