@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/mps_internal/jcef/" rel="canonical"/>
-<link href="../intellij_sdk/" rel="prev"/>
-<link href="../writing_mps_plugin_with_kotlin/" rel="next"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/reference/standard_plugins/" rel="canonical"/>
+<link href="../core_languages/" rel="prev"/>
+<link href="../extension_points/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
-<title>Java Chromium Embedded Framework - MPS Platform Docs</title>
+<title>Standard plugins - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#demo-websockets">
+<a class="md-skip" href="#standard-plugins-in-mps">
           Skip to content
         </a>
 </div>
@@ -74,7 +74,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Java Chromium Embedded Framework
+              Standard plugins
             
           </span>
 </div>
@@ -158,7 +158,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../mps_internal/">
         MPS internals
       </a>
 </li>
@@ -178,7 +178,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../reference/reading_list/">
+<a class="md-tabs__link md-tabs__link--active" href="../reading_list/">
         Reference
       </a>
 </li>
@@ -538,10 +538,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">MPS internals</a>
+<a href="../../mps_internal/">MPS internals</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -553,14 +553,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../open_api/">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../deps_and_classpath/">Dependencies and classpath</a>
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -572,22 +572,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../models/">
+<a class="md-nav__link" href="../../mps_internal/models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dependencies/">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../recipes/">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
         Recipes
       </a>
 </li>
@@ -595,14 +595,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../classloading/">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../threads/">Threading</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -614,12 +614,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/read_write_action_examples/">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/named_threads/">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -627,75 +627,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utility_classes/">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gui/">
+<a class="md-nav__link" href="../../mps_internal/gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../editor_development/">
+<a class="md-nav__link" href="../../mps_internal/editor_development/">
         Editor development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_sdk/">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Java Chromium Embedded Framework
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
         Java Chromium Embedded Framework
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#demo-websockets">
-    Demo + WebSockets
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing_mps_plugin_with_kotlin/">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
         Writing an MPS plugin with Kotlin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_integration/">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
         IntelliJ integration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating_mps_source/">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../java_design_patterns_in_mps_sources/">
+<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
         Java design patterns in the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mps_startup/">
+<a class="md-nav__link" href="../../mps_internal/mps_startup/">
         What happens on MPS startup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file_format/">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
         File format
       </a>
 </li>
@@ -843,9 +825,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
-<label aria-expanded="false" class="md-nav__link" for="__nav_10" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label aria-expanded="true" class="md-nav__link" for="__nav_10" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -856,62 +838,95 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/reading_list/">
+<a class="md-nav__link" href="../reading_list/">
         Reading list
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
+<a class="md-nav__link" href="../tips_for_os_maintainers/">
         Tips for open source maintainers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/icons/">
+<a class="md-nav__link" href="../icons/">
         Icons
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/core_languages/">
+<a class="md-nav__link" href="../core_languages/">
         Core languages
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/standard_plugins/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Standard plugins
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Standard plugins
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps">
+    MPS
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/extension_points/">
+<a class="md-nav__link" href="#intellij-plugins">
+    IntelliJ plugins
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-in-20212x">
+    Changes in 2021.2.x
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-in-20213x">
+    Changes in 2021.3.x
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../extension_points/">
         Extension points
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/exceptions/">
+<a class="md-nav__link" href="../exceptions/">
         Exceptions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/actions/">
+<a class="md-nav__link" href="../actions/">
         Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/abbreviations/">
+<a class="md-nav__link" href="../abbreviations/">
         Abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/code_abbreviations/">
+<a class="md-nav__link" href="../code_abbreviations/">
         Code abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/gitignore/">
+<a class="md-nav__link" href="../gitignore/">
         Gitignore file
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/issue_trackers/">
+<a class="md-nav__link" href="../issue_trackers/">
         Issue trackers
       </a>
 </li>
@@ -968,8 +983,23 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#demo-websockets">
-    Demo + WebSockets
+<a class="md-nav__link" href="#mps">
+    MPS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intellij-plugins">
+    IntelliJ plugins
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-in-20212x">
+    Changes in 2021.2.x
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-in-20213x">
+    Changes in 2021.3.x
   </a>
 </li>
 </ul>
@@ -979,65 +1009,71 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag" href="../../tags/#internals">internals</a>
-<a class="md-tag" href="../../tags/#intellij">intellij</a>
-<a class="md-tag" href="../../tags/#java">java</a>
-</nav>
-<h1>Java Chromium Embedded Framework</h1>
-<p>Start with the page <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> - Java Chromium Embedded Framework</a> of the IntelliJ platform plugin SDK.</p>
-<p>It should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
-because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a swing component cell.
-For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTMl code. The code can be created by Java or by
-calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a href="http://localhost:8000/mps-platform-docs/aspects/textgen">TextGen</a>.</p>
-<p>Existing Java documentation and examples on the web:</p>
+<h1 id="standard-plugins-in-mps">Standard plugins in <abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#standard-plugins-in-mps" title="Permanent link">¶</a></h1>
+<p>The following list contains the plugins that are installed in <abbr title="Meta Programming System">MPS</abbr> 2021.1 and later by default:</p>
+<h2 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://github.com/viglucci/app-jcef-example">Java <abbr title="Java Chromium Embedded Framework">JCEF</abbr> example</a> that showcases all kinds of handlers and dialogs</li>
-<li><a href="https://github.com/JetBrains/intellij-community/blob/master/plugins/markdown/core/src/org/intellij/plugins/markdown/ui/preview/jcef/MarkdownJCEFHtmlPanel.kt">IntelliJ Markdown preview</a></li>
-<li><a href="https://stackoverflow.com/questions/65480681/how-do-i-use-jcef-with-intellij">How do I use <abbr title="Java Chromium Embedded Framework">JCEF</abbr> with Intellij?</a></li>
-<li><a href="https://bitbucket.org/chromiumembedded/cef/wiki/Home">CEF documentation (non Java version)</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/7078-mps-build-languages">mps-build</a>: <a href="https://www.jetbrains.com/help/mps/build-language.html">Build languages</a> (<em>jetbrains.mps.build</em>)</li>
+<li><a href="https://github.com/JetBrains/jetpad-projectional-open-source">jetpad</a>: JetPad Projectional Editing Framework (<em>jetbrains.jetpad</em>)</li>
+<li>mps-console: <a href="https://www.jetbrains.com/help/mps/mps-console.html">console</a> (<em>jetbrains.mps.console</em>)</li>
+<li>mps-context-actions: <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions tool</a> (<em>jetbrains.mps.editor.contextActions</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/7075-mps-core">mps-core</a>: <abbr title="Meta Programming System">MPS</abbr> Core which includes core stubs, aspects, Ant related code, the <abbr title="Meta Programming System">MPS</abbr> Kernel, editor, devkits, baselanguage, the languages for langue design, the make framework, XML language etc.</li>
+<li>mps-debugger-api: <a href="https://www.jetbrains.com/help/mps/debugger-api.html">Debugger API</a> (<em>jetbrains.mps.debugger.api</em>)</li>
+<li>mps-debugger-java: <a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html">Java debugger for <abbr title="Meta Programming System">MPS</abbr></a> (<em>jetbrains.mps.debugger.java</em>)</li>
+<li>mps-devkit: plugin that contains all <abbr title="Integrated Development Environment">IDE</abbr> related functionality of the language design plugins and baselanguage</li>
+<li>mps-diagram-editor: <a href="https://www.jetbrains.com/help/mps/diagramming-editor.html">diagramming editor (deprecated)</a> (<em>jetbrains.mps.<abbr title="language">lang</abbr>.editor.diagram</em>)</li>
+<li>mps-execution-api: <a href="https://www.jetbrains.com/help/mps/run-configurations.html">Execution Api and Utility Languages</a> (<em>jetbrains.mps.execution.api</em>)</li>
+<li>mps-execution-configurations: <a href="https://www.jetbrains.com/help/mps/run-configurations.html#configurations">Execution configuration</a> (<em>jetbrains.mps.execution.configurations</em>)</li>
+<li>mps-execution-languages: <a href="https://www.jetbrains.com/help/mps/run-configurations.html">Execution languages</a> (<em>jetbrains.mps.execution.configurations</em>)</li>
+<li>mps-git4idea: <a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/git4idea/src/git4idea"><abbr title="Meta Programming System">MPS</abbr> Git integration - stubs</a> (<em>jetbrains.mps.git4idea.stubs</em>)</li>
+<li>mps-httpsupport: <a href="https://www.jetbrains.com/help/mps/http-support-plugin.html"><abbr title="Hypertext Transfer Protocol">HTTP</abbr> support plugin</a> (<em>jetbrains.mps.ide.httpsupport</em>)</li>
+<li>mps-java: <a href="https://www.jetbrains.com/help/mps/using-mps-inside-intellij-idea.html"><abbr title="Meta Programming System">MPS</abbr> Java <abbr title="Integrated Development Environment">IDE</abbr> integrations</a> (<em>jetbrains.mps.ide.java</em>)</li>
+<li>mps-make: <a href="https://www.jetbrains.com/help/mps/howto-integrating-into-the-mps-make-framework.html">Make framework</a> (<em>jetbrains.mps.ide.make</em>)</li>
+<li>mps-memtool: <a href="https://www.jetbrains.com/help/mps/status-bar.html#:~:text=shows%20the%20current%20heap%20level%20and%20memory%20usage">Memory tool</a> (<em>jetbrains.mps.ide.memtool</em>)</li>
+<li>mps-migration: <a href="https://www.jetbrains.com/help/mps/migrations.html">Migration support</a> (<em>jetbrains.mps.ide.migration.workbench</em>)</li>
+<li>mps-modelchecker: <a href="https://www.jetbrains.com/help/mps/typesystem.html">Model checker</a> (<em>jetbrains.mps.ide.modelchecker</em>)</li>
+<li>mps-project-migrations: Migrations from the previous <abbr title="Meta Programming System">MPS</abbr> version (<em>jetbrains.mps.ide.mpsmigration</em>)</li>
+<li>mps-samples: Shipped samples for <abbr title="Meta Programming System">MPS</abbr> (<a href="https://www.jetbrains.com/help/mps/fast-track-to-mps.html#samplestotutorials:">Samples to tutorials</a>, <a href="https://www.jetbrains.com/help/mps/fast-track-to-mps.html#othersampleprojects">other sample projects</a>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/9750-mps-testing">mps-testing</a>: <a href="https://www.jetbrains.com/help/mps/testing-languages.html">languages for unit-testing</a> java code and <abbr title="Meta Programming System">MPS</abbr> aspects such as editors and the type system</li>
+<li>mps-tooltips: Tooltips for <abbr title="Meta Programming System">MPS</abbr> editors; they are showcased in the <em>Tooltip Sample</em> (<em>jetbrains.mps.<abbr title="language">lang</abbr>.editor.tooltips</em>)</li>
+<li>mps-trove: Custom containers designed to work with primitive data types (<a href="https://trove4j.sourceforge.net/html/overview.html">trove4j Java library</a>)</li>
+<li>mps-vcs: <a href="https://www.jetbrains.com/help/mps/version-control-integration.html">version control integration</a> (<em>jetbrains.mps.vcs</em>)</li>
 </ul>
-<p>The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (<abbr title="Meta Programming System">MPS</abbr>): You have
-to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication is done through JS. You then have a <code>subscribe</code> method that you can use to
-listening to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
-<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
-are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>‘ reloading capabilities, it is important to correctly dispose the browser when it isn’t needed anymore. The following code registers a listener for the editor component
-dispose event and also closes the browser:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">SwingComponent</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">create</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="c1">// ...</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="n">EditorComponent</span><span class="w"> </span><span class="n">editorComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">EditorComponent</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="n">editorComponent</span><span class="p">.</span><span class="na">addDisposeListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EditorComponent</span><span class="p">.</span><span class="na">EditorDisposeListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="nd">@Override</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">editorWillBeDisposed</span><span class="p">(</span><span class="nd">@NotNull</span><span class="p">()</span><span class="w"> </span><span class="n">EditorComponent</span><span class="w"> </span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">                </span><span class="n">browser</span><span class="p">.</span><span class="na">getCefBrowser</span><span class="p">().</span><span class="na">close</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">});</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="c1">// ...</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<p>When the browser is not correctly disposed, it might be drawn in different components, on top of <abbr title="Meta Programming System">MPS</abbr> editors etc. Some issues are known where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
-<h2 id="demo-websockets">Demo + WebSockets<a class="headerlink" href="#demo-websockets" title="Permanent link">¶</a></h2>
-<p>A demo for the <abbr title="Java Chromium Embedded Framework">JCEF</abbr> integration can be found in the repository <a href="https://github.com/alexanderpann/mps_jcef_minimal">mps_jcef_minialm</a>. Read the readme for more information. The demo contains two branches, one shows the internal communication via JS, the other branch uses WebSocket for the communication. The WebSocket server is modeled after this <a href="https://medium.com/@irunika/how-to-write-a-http-websocket-server-using-netty-f3c136adcba9">tutorial</a> and uses the existing IntelliJ libraries of Netty. Handling of web socket frames is described in more detail in <a href="https://livebook.manning.com/book/netty-in-action/chapter-12/40">Chapter 12. WebSocket - Netty in Action</a>.</p>
+<h2 id="intellij-plugins">IntelliJ plugins<a class="headerlink" href="#intellij-plugins" title="Permanent link">¶</a></h2>
+<p>The sources for most of the plugins, can be found in the <a href="https://github.com/JetBrains/intellij-community/tree/master/plugins">plugins folder</a> of the IntelliJ community repository.</p>
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/13114-copyright">copyright</a>: copyright (<em>com.intellij.copyright</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/13115-github">github</a>: GitHub (<em>org.jetbrains.plugins.github</em>)</li>
+<li>java: Java related libraries such as an Ant Javac2 Task, the eclipse standalone compiler, <a href="https://www.jetbrains.com/help/idea/annotating-source-code.html#bundled-annotations">JetBrains annotations</a> and libraries for the Java Virtual Machine Process Status Tool (<a href="https://docs.oracle.com/javase/7/docs/technotes/tools/share/jps.html">jps</a>.)</li>
+<li><a href="https://blog.jetbrains.com/idea/2020/04/ui-secrets-customize-the-appearance-of-intellij-idea/">laf-macos/laf-windows10</a> Mac/Windows-specific <a href="https://blog.jetbrains.com/idea/2020/04/ui-secrets-customize-the-appearance-of-intellij-idea/">theme</a> (<a href="https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html">laf=look and feel</a>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/7793-markdown">markdown</a>: Markdown (<em>org.intellij.plugins.markdown</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/11594-properties">properties</a>: properties (<em>com.intellij.properties</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/17035-resource-bundle-editor">properties-resource-bundle-editor</a>: resource bundle editor (<em>com.intellij.properties.bundle.editor</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/7566-settings-repository">settings-repository</a>: settings repository (<em>org.jetbrains.settingsRepository</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/13122-shell-script">sh</a>: shell script (<em>com.jetbrains.sh</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/11553-subversion">svn4idea</a>: subversion (<em>Subversion</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/11545-task-management">tasks</a>: task management (<em>com.intellij.tasks</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/13123-terminal">terminal</a>: terminal (<em>org.jetbrains.plugins.terminal</em>)</li>
+<li>platform-images: image-related functionality (<em>com.intellij.platform.images</em>)</li>
+<li><a href="https://plugins.jetbrains.com/plugin/13124-changereminder">vcs-changeReminder</a>: ChangeReminder (<em>com.jetbrains.changeReminder</em>)</li>
+</ul>
+<h2 id="changes-in-20212x">Changes in 2021.2.x<a class="headerlink" href="#changes-in-20212x" title="Permanent link">¶</a></h2>
+<ul>
+<li>mps-build-<abbr title="user interface">ui</abbr>: <a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#thewizardway"><abbr title="Meta Programming System">MPS</abbr> build wizard</a> (<em>jetbrains.mps.build.<abbr title="user interface">ui</abbr></em>)</li>
+<li>mps-spellcheck: <a href="https://www.jetbrains.com/help/mps/spellchecking.html">Spellcheck integration for <abbr title="Meta Programming System">MPS</abbr></a> using the IntelliJ plugin <a href="https://blog.jetbrains.com/idea/2019/11/meet-grazie-the-ultimate-spelling-grammar-and-style-checker-for-intellij-idea/">Grazie</a> (<em>jetbrains.mps.editor.spellcheck</em>)</li>
+</ul>
+<h2 id="changes-in-20213x">Changes in 2021.3.x<a class="headerlink" href="#changes-in-20213x" title="Permanent link">¶</a></h2>
+<ul>
+<li>mps-ant-make: make execution code (<em>jetbrains.mps.tool.make</em>)</li>
+<li>mps-kotlin: <abbr title="Meta Programming System">MPS</abbr> Kotlin implementation (<em>jetbrains.mps.kotlin</em>)</li>
+<li>mps-navbar: <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html#navigation-bar">navigation bar</a> that supports the <abbr title="Meta Programming System">MPS</abbr> model hierarchy (<em>jetbrains.mps.navbar</em>)</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1098,7 +1134,7 @@ dispose event and also closes the browser:</p>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: IntelliJ SDK" class="md-footer__link md-footer__link--prev" href="../intellij_sdk/" rel="prev">
+<a aria-label="Previous: Core languages" class="md-footer__link md-footer__link--prev" href="../core_languages/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1107,17 +1143,17 @@ dispose event and also closes the browser:</p>
 <span class="md-footer__direction">
                   Previous
                 </span>
-                IntelliJ SDK
+                Core languages
               </div>
 </div>
 </a>
-<a aria-label="Next: Writing an MPS plugin with Kotlin" class="md-footer__link md-footer__link--next" href="../writing_mps_plugin_with_kotlin/" rel="next">
+<a aria-label="Next: Extension points" class="md-footer__link md-footer__link--next" href="../extension_points/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Writing an MPS plugin with Kotlin
+                Extension points
               </div>
 </div>
 <div class="md-footer__button md-icon">
