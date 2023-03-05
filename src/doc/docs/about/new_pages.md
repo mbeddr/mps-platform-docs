@@ -7,6 +7,7 @@ This page lists all new pages since August 2022.
 
 ## February 2023
 
+- [Reference: standard plugins](standard_plugins.md)
 - [MPS internals: File format](file_format.md)
 - [Build: TeamCity](teamcity.md)
 
