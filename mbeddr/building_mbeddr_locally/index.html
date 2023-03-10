@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="https://mbeddr.github.io/mps-platform-docs/platform_essentials/building_mbeddr_locally/" rel="canonical"/>
-<link href="../com_mbeddr_mpsutil/" rel="prev"/>
-<link href="../platform_build_scripts/" rel="next"/>
+<link href="https://mbeddr.github.io/mps-platform-docs/mbeddr/building_mbeddr_locally/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../big_project/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Building Mbeddr locally - MPS Platform Docs</title>
@@ -38,6 +38,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#automatic-build">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
@@ -145,7 +148,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mbeddr/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Mbeddr
       </a>
 </li>
@@ -160,7 +163,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../platform_essentials/">
         Platform essentials
       </a>
 </li>
@@ -461,10 +464,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mbeddr/">Mbeddr</a>
+<a href="../">Mbeddr</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -475,18 +478,46 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           Mbeddr
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Building Mbeddr locally
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Building Mbeddr locally
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/big_project/">
+<a class="md-nav__link" href="#automatic-build">
+    Automatic build
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-build">
+    Manual build
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../big_project/">
         BigProject
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/development_guide/">
+<a class="md-nav__link" href="../development_guide/">
         Development guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+<a class="md-nav__link" href="../misc_topics/">
         Miscellaneous topics
       </a>
 </li>
@@ -681,10 +712,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Platform essentials</a>
+<a href="../../platform_essentials/">Platform essentials</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -696,43 +727,37 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../how_everything_is_connected/">
+<a class="md-nav__link" href="../../platform_essentials/how_everything_is_connected/">
         How everything is connected
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../contributing/">
+<a class="md-nav__link" href="../../platform_essentials/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../common_concepts_and_interfaces/">
+<a class="md-nav__link" href="../../platform_essentials/common_concepts_and_interfaces/">
         Common concepts and interfaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../interpreter/">
+<a class="md-nav__link" href="../../platform_essentials/interpreter/">
         Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../com_mbeddr_mpsutil/">
+<a class="md-nav__link" href="../../platform_essentials/com_mbeddr_mpsutil/">
         MPS utilities
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
-        Building Mbeddr locally
-      </a>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../platform_build_scripts/">
+<a class="md-nav__link" href="../../platform_essentials/platform_build_scripts/">
         Platform build scripts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../build_folder/">
+<a class="md-nav__link" href="../../platform_essentials/build_folder/">
         Build folder
       </a>
 </li>
@@ -942,6 +967,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-build">
+    Automatic build
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-build">
+    Manual build
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -952,12 +993,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#infrastructure">infrastructure</a>
 <a class="md-tag" href="../../tags/#mbeddr">mbeddr</a>
 </nav>
-<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn’t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.com</a>, especially the C related tools, if you want to get everything build. Help for extending this guide is always appreciated.</p>
+<h1>Building Mbeddr locally</h1>
+<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn’t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.com</a>, especially the C related tools, if you want to get everything build.</p>
+<h2 id="automatic-build">Automatic build<a class="headerlink" href="#automatic-build" title="Permanent link">¶</a></h2>
 <ol>
 <li><code>git clone git@github.com:mbeddr/mbeddr.core.git</code></li>
 <li>Switch to the branch that you need, if it isn’t the master branch e.g. <abbr title="Meta Programming System">MPS</abbr> 2021.1.4: <code>git checkout maintenance/mps20211</code></li>
-<li>Open the <em>com.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don’t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, that needs to be installed to be able to use the language.</li>
 <li>If not also set, open <abbr title="Meta Programming System">MPS</abbr>, go to preferences → <em>Appearance&amp;Behavior</em>→<em>Path Variables</em> and set <em>mbeddr.github.core.home</em> to the root directory of the mbeddr.core repository.</li>
+<li>Run <code>./gradlew build_mbeddr -PdisableMavenLocal=true</code> to fully build mbeddr.</li>
+<li>Run <code>./gradlew -PdisableMavenLocal=true</code> instead to only build the platform.</li>
+<li>The tests and sandboxes are not built and have to be built manually.</li>
+</ol>
+<h2 id="manual-build">Manual build<a class="headerlink" href="#manual-build" title="Permanent link">¶</a></h2>
+<ol>
+<li>Open the <em>com.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don’t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, that needs to be installed to be able to use the language.</li>
 <li>
 <p>You can now build all projects. Start with these projects in this order:</p>
 <ul>
@@ -971,14 +1020,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ol>
 <p>If you get compilation error, try a different order. Some projects like <em>com.mbeddr.<abbr title="documentation">doc</abbr></em> and <em>com.mbeddr.<abbr title="documentation">doc</abbr>.aspect</em> don’t have as many dependencies to other projects as other projects.</p>
 <p>If many errors occur in the <em>com.mbeddr.debugger</em> project, you probably don’t have the spawner plugin installed.</p>
-<p>When anything goes wrong, and you want to start over, just clean the generated files: <code>git clean -xdf</code>. After you’ve made a change, just (re)build the parts of the project that you’ve changed and push the branch so that the build server can make a full build + execute the tests.</p>
-<p>You don’t need to open all dependent projects if you make a change in one project.</p>
+<div class="admonition warning">
+<p class="admonition-title">When anything goes wrong, and you want to start over, just clean the generated files: <code>git clean -xdf</code>. After you’ve made a change, just (re)build the parts of the project that you’ve changed and push the branch so that the build server can make a full build + execute the tests.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">You don’t need to open all dependent projects if you make a change in one project.</p>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 10, 2023</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1039,7 +1092,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: MPS utilities" class="md-footer__link md-footer__link--prev" href="../com_mbeddr_mpsutil/" rel="prev">
+<a aria-label="Previous: General" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1048,17 +1101,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <span class="md-footer__direction">
                   Previous
                 </span>
-                MPS utilities
+                General
               </div>
 </div>
 </a>
-<a aria-label="Next: Platform build scripts" class="md-footer__link md-footer__link--next" href="../platform_build_scripts/" rel="next">
+<a aria-label="Next: BigProject" class="md-footer__link md-footer__link--next" href="../big_project/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Platform build scripts
+                BigProject
               </div>
 </div>
 <div class="md-footer__button md-icon">
