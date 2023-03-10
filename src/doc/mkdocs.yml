@@ -188,6 +188,7 @@ nav:
       - KernelF: languages/kernelf.md
   - Mbeddr:
       - mbeddr/index.md
+      - Building Mbeddr locally: mbeddr/building_mbeddr_locally.md
       - BigProject: mbeddr/big_project.md
       - Development guide: mbeddr/development_guide.md
       - Miscellaneous topics: mbeddr/misc_topics.md
@@ -230,7 +231,6 @@ nav:
       - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter, coverage and tracing: platform_essentials/interpreter.md
       - MPS utilities: platform_essentials/com_mbeddr_mpsutil.md
-      - Building Mbeddr locally: platform_essentials/building_mbeddr_locally.md
       - Platform build scripts: platform_essentials/platform_build_scripts.md
       - Build folder: platform_essentials/build_folder.md
   - Clean code:
