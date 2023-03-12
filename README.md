@@ -3,7 +3,7 @@
 This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&A. If you have any feedback, please write a comment at the bottom of a page or
 open an issue in this repository.
 
-![build status](https://img.shields.io/github/workflow/status/mbeddr/mps-platform-docs/Build%20and%20publish%20documentation)
+![build status](https://img.shields.io/github/actions/workflow/status/mbeddr/mps-platform-docs/publish_doc.yml?branch=main)
 ![license](https://img.shields.io/github/license/mbeddr/mps-platform-docs)
 ![last commit](https://img.shields.io/github/last-commit/mbeddr/mps-platform-docs)
 
