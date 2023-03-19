@@ -7,6 +7,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 {% block content %}
 {{ super() }}
 
+{% block extrahead %}
+<meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
+{% endblock %}
+
 <!-- Giscus -->
 <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 <script src="https://giscus.app/client.js"
