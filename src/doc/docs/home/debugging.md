@@ -34,7 +34,7 @@ The following list shows some debugging tips:
 
     Set a breakpoint in `CellActionExecutorFinder`.
 
-# Free Java debugging tools
+## Free Java debugging tools
 
 !!! warning "Especially VisualVM tends to freeze MPS. A better profiler is [YourKit](https://www.yourkit.com/java/profiler/features/) which is a commercial product."
 
@@ -62,12 +62,12 @@ The following list shows some debugging tips:
 
 - [jstack.review - Java Thread Dump Analyzer](https://jstack.review/#tda_1_dump)
 
-# Decompiler
+## Decompiler
 
 Decompiling jar files usually shouldn't be necessary because the source code of [MPS](https://github.com/JetBrains/MPS), [IntelliJ Community](https://github.com/JetBrains/intellij-community), [JetBrainsRuntime](https://github.com/JetBrains/JetBrainsRuntime), and the MPS platforms is open source and available on GitHub. For all other cases,
 use the [JD Java Decompiler](http://java-decompiler.github.io/). The [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) can also be used for this task.
 
-# General Blog posts
+## General Blog posts
 
 - [24 debugging tips and tricks](https://dev.to/humblefool_2/24-debugging-tips-and-tricks-b4c)
 - [The Debugger Checklist – Part I](https://talktotheduck.dev/the-debugger-checklist-part-i)

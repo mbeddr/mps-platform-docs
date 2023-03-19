@@ -14,9 +14,9 @@ Here is some more information for exceptions that often occur in MPS:
 - [java.util.ConcurrentModificationException](https://techvidvan.com/tutorials/java-concurrentmodificationexception/)
 - [java.lang.NullPointerException](https://rollbar.com/blog/how-to-catch-and-fix-nullpointerexception-in-java/)
 
-# MPS
+## MPS
 
-## Module validation
+### Module validation
 
 !!! failure "Can't find / couldn't load X (language, devkit...)."
 
@@ -74,7 +74,7 @@ Here is some more information for exceptions that often occur in MPS:
 
     The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as 'do not generate'.
 
-## Type of exceptions
+### Type of exceptions
 
 | name                                                                                                                                                                                                                                                  | example                                                                                           | description                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ Here is some more information for exceptions that often occur in MPS:
 | ModuleClassLoaderIsDisposedException                                                                                                                                                                                                                  | A module couldn't be disposed and it is loaded again.                                             | The classloader of a module is disposed.                                                                                                                      |
 | ClassLoader of module could not be found                                                                                                                                                                                                              |                                                                                                   | A module can't be loaded because the classloader can't be found.                                                                                              |
 
-# IntelliJ Platform
+## IntelliJ Platform
 | name                                                                                                                                                                                                                              | example                                             | description                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [PluginException](https://github.com/JetBrains/intellij-community/blob/9c46ff89dad4fc9a3e1db98ef0d0a735d4d89da2/platform/core-api/src/com/intellij/diagnostic/PluginException.java#L23)                                           | Usage of deprecated Intellij SDK methods            | Represents an internal error caused by a plugin. It may happen if the plugin's code fails with an exception, or if the plugin violates some contract of IntelliJ Platform. |

@@ -21,12 +21,12 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 - Avoid hardcoded values.
 - Use lazy initialization if performance is [critical](http://www.javapractices.com/topic/TopicAction.do?Id=34) or use [caching](https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/) if necessary.
 
-# Utility and helper classes
+## Utility and helper classes
 - Utility class: include only static methods and are stateless. Don't create an instance of such a class.
 - Helper class: they can be utility classes, or it can be stateful or require an instance. It can be any class whose design is to aid another class.
 - Try to make the name of the utility or helper class more specific (for example: *AdministrationHelper*, *LoginHelper* instead of *Helper*).
 
-# More tips
+## More tips
 - If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult [Understand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274) page.
 - If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
 - Have a look at common sources of [complexity](http://www.javapractices.com/topic/TopicAction.do?Id=287).

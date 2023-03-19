@@ -7,7 +7,7 @@ tags:
 This page describes the folder structure of the MPS sources that can be checked out with Git from https://github.com/JetBrains/MPS.
 More information can be found in the readme of the repository.
 
-# .idea
+## .idea
 
 The `artifacts` directory contains the artifact related settings. More info can be found
 in [Artifacts | IntelliJ IDEA](https://www.jetbrains.com/help/idea/working-with-artifacts.html). Artifacts in this project are the generated jar files
@@ -18,7 +18,7 @@ such as `mps-core.jar` and `vcs-core.jar`:
 The directory also contains settings for code styles, copyright info and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
 many other IntelliJ specific project settings,
 
-# .mps
+## .mps
 
 This folder also contains run configurations and scopes but also other settings:
 
@@ -32,7 +32,7 @@ This folder also contains run configurations and scopes but also other settings:
 - *version.xml*: project version (not used anymore)
 - *settings of different components* (e.g. console history, messages view tool, project view)
 
-# bin
+## bin
 
 This folder contains executable files that are needed for the different
 operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS specific files:
@@ -58,7 +58,7 @@ operating systems (Windows, Mac, Linux). All of them use the executable *fsnotif
     - *wslhash*: hash calculation(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
     - *wslproxy*: proxy(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 
-# build
+## build
 
 The used dependency manager is [Apache Ivy](https://ant.apache.org/ivy/). The corresponding folder is `build/ivy`.
 [Apache Ant](https://ant.apache.org/) is used as the build tool.
@@ -87,7 +87,7 @@ The other XML files are also Ant scripts for different tasks (getting dependenci
 The `run_build.sh` and `run_test.sh` can be used to run the build and tests
 on Linux/Mac respectively. `update.xml` lists all MPS versions and is used to show automatic updates for MPS.
 
-# core
+## core
 
 The `aspects` folder contains the languages for the language aspects.
 The `baselanguage` folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.
@@ -99,28 +99,28 @@ The folder `devkit` contains the four main devkits:
 - ^^jetbrains.mps.devkit.language-design^^ + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources
 - ^^jetbrains.mps.devkit.templates^^: general-purpose + generator languages
 
-## kernel
+### kernel
 
 It contains core languages of MPS such as loaders for Java stubs, classes for persistence, language checkers,
 make classes and runtime classes for smodel such as `SConceptOperations.java` and `SModelOperations.java`.  
 
-## languages
+### languages
 
 This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.
 
-## make
+### make
 
 Everything related to the make facet is situated in this folder.
 
-## stub
+### stub
 
 This folder contains all stub models provided by MPS, e.g. stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g. `java.util.List`) and all MPS related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g. MPS.Core).
 
-## tool
+### tool
 
 This folder contains classes for accessing MPS from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.
 
-# platform
+## platform
 
 This folder contains languages and solutions for the following platform features:
 
@@ -137,15 +137,15 @@ This folder contains languages and solutions for the following platform features
 - integrations with the IDEA platform
 - integration for MPS plugin into IntelliJ IDEA
 
-# samples
+## samples
 
 This folder contains the samples that are ship with MPS. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.
 
-# tests
+## tests
 
 This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.
 
-# workbench
+## workbench
 
 This folder contains subfolders for:
 
