@@ -671,9 +671,95 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Navigating the MPS sources
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Navigating the MPS sources
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#idea">
+    .idea
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps">
+    .mps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bin">
+    bin
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build">
+    build
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core">
+    core
+  </a>
+<nav aria-label="core" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kernel">
+    kernel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#languages">
+    languages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#make">
+    make
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stub">
+    stub
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool">
+    tool
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#platform">
+    platform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#samples">
+    samples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tests">
+    tests
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workbench">
+    workbench
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../java_design_patterns_in_mps_sources/">
@@ -948,6 +1034,86 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#idea">
+    .idea
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps">
+    .mps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bin">
+    bin
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#build">
+    build
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core">
+    core
+  </a>
+<nav aria-label="core" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kernel">
+    kernel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#languages">
+    languages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#make">
+    make
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stub">
+    stub
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool">
+    tool
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#platform">
+    platform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#samples">
+    samples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tests">
+    tests
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workbench">
+    workbench
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -958,16 +1124,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#internals">internals</a>
 <a class="md-tag" href="../../tags/#sources">sources</a>
 </nav>
+<h1>Navigating the MPS sources</h1>
 <p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked out with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
 More information can be found in the readme of the repository.</p>
-<h1 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h1>
+<h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h2>
 <p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
 in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
 <p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr> and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
 many other IntelliJ specific project settings,</p>
-<h1 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h1>
+<h2 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h2>
 <p>This folder also contains run configurations and scopes but also other settings:</p>
 <ul>
 <li><em>codeStyleSettings.xml</em>: style settings used for baselanguage (e.g. default field and parameter prefix)</li>
@@ -980,7 +1147,7 @@ many other IntelliJ specific project settings,</p>
 <li><em>version.xml</em>: project version (not used anymore)</li>
 <li><em>settings of different components</em> (e.g. console history, messages view tool, project view)</li>
 </ul>
-<h1 id="bin">bin<a class="headerlink" href="#bin" title="Permanent link">¶</a></h1>
+<h2 id="bin">bin<a class="headerlink" href="#bin" title="Permanent link">¶</a></h2>
 <p>This folder contains executable files that are needed for the different
 operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source">OS</abbr> specific files:</p>
 <ul>
@@ -1015,7 +1182,7 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 </ul>
 </li>
 </ul>
-<h1 id="build">build<a class="headerlink" href="#build" title="Permanent link">¶</a></h1>
+<h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">¶</a></h2>
 <p>The used dependency manager is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
 <a href="https://ant.apache.org/">Apache Ant</a> is used as the build tool.
 The <code>artifacts</code> folder contains the generated jar files. An artifact might look like this:</p>
@@ -1040,7 +1207,7 @@ a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install 
 The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc.).
 The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
 on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
-<h1 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h1>
+<h2 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h2>
 <p>The <code>aspects</code> folder contains the languages for the language aspects.
 The <code>baselanguage</code> folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
 <p>The folder <code>devkit</code> contains the four main devkits:</p>
@@ -1050,18 +1217,18 @@ The <code>baselanguage</code> folder contains the baselanguage implementation an
 <li><ins>jetbrains.mps.devkit.language-design</ins> + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources</li>
 <li><ins>jetbrains.mps.devkit.templates</ins>: general-purpose + generator languages</li>
 </ul>
-<h2 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
+<h3 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h3>
 <p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
 make classes and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
-<h2 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">¶</a></h2>
+<h3 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">¶</a></h3>
 <p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.</p>
-<h2 id="make">make<a class="headerlink" href="#make" title="Permanent link">¶</a></h2>
+<h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">¶</a></h3>
 <p>Everything related to the make facet is situated in this folder.</p>
-<h2 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">¶</a></h2>
+<h3 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">¶</a></h3>
 <p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g. stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
-<h2 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">¶</a></h2>
+<h3 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">¶</a></h3>
 <p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.</p>
-<h1 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">¶</a></h1>
+<h2 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">¶</a></h2>
 <p>This folder contains languages and solutions for the following platform features:</p>
 <ul>
 <li>build language</li>
@@ -1077,11 +1244,11 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <li>integrations with the IDEA platform</li>
 <li>integration for <abbr title="Meta Programming System">MPS</abbr> plugin into IntelliJ IDEA</li>
 </ul>
-<h1 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">¶</a></h1>
+<h2 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">¶</a></h2>
 <p>This folder contains the samples that are ship with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
-<h1 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h1>
+<h2 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h2>
 <p>This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.</p>
-<h1 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">¶</a></h1>
+<h2 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">¶</a></h2>
 <p>This folder contains subfolders for:</p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
@@ -1098,7 +1265,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
