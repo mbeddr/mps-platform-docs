@@ -8,7 +8,7 @@ The interpreter let you interpret code on the fly. You can use it instead of the
 
 ![interpreter: KernelF test case](interpreter_testcase.gif){width="600px"}
 
-In the GIF you can see the interpreter executing a test case that contains assertions that are writing with [KernelF](https://voelter.de/data/books/kernelf-designEvoUse.pdf). The MPS generator isn't involved in the execution at all.
+In the GIF you can see the interpreter executing a test case that contains assertions written with [KernelF](https://voelter.de/data/books/kernelf-designEvoUse.pdf). The MPS generator isn't involved in the execution at all.
 
 ## Creating an interpreter
 
