@@ -8,12 +8,16 @@ The interpreter let you interpret code on the fly. You can use it instead of the
 
 ![interpreter: KernelF test case](interpreter_testcase.gif){width="600px"}
 
-In the GIF you can see the interpreter executing a test case that contains assertions that are writing with [KernelF](https://voelter.de/data/books/kernelf-designEvoUse.pdf). The MPS generator isn't involved in the execution at all.
+In the GIF you can see the interpreter executing a test case that contains assertions written with [KernelF](https://voelter.de/data/books/kernelf-designEvoUse.pdf). The MPS generator isn't involved in the execution at all.
 
 ## Creating an interpreter
 
-First you have to import the language `com.mbeddr.mpsutil.interpreter`.
-Now create a new interpreter and give it a name. The category should be `arithmetic` so that other interpreters of this category can also use this interpreter, but you can also use other categories. A [demo Java interpreter](http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048) exists in mpsutils (mbeddr) that uses its own category `java`. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.
+To create a new interpreter, create a new solution that contains the interpreter and import the language `com.mbeddr.mpsutil.interpreter`.
+Make sure to set the the solution kind to `Other` in the model properties.
+
+![interpreter: Solution Kind configuration](interpreter_solution.png)
+
+Now create a new model inside your new solution, create the new interpreter and give it a name. The category should be `arithmetic` so that other interpreters of this category can also use this interpreter, but you can also use other categories. A [demo Java interpreter](http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048) exists in mpsutils (mbeddr) that uses its own category `java`. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.
 
 In the related interpreter section, you can define that the current interpret should run before or after another interpreter. [An example](http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270) from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.
 
@@ -62,7 +66,7 @@ class Coverage {
         ICoverage coverage = null; // your implementation
         ContextImpl ctx = new ContextImpl();
         InterpreterEvaluationHelper helper = new InterpreterEvaluationHelper(INTERPRETER_CATEGORY);
-        return helper.evaluateWithContextAndCoverage(expr, getInterpreter(), ctx, coverage);       
+        return helper.evaluateWithContextAndCoverage(expr, getInterpreter(), ctx, coverage);
     }
 }
 ```
@@ -71,7 +75,7 @@ Other methods don't need coverage, a context object and so forth. The easiest me
 
 ## Final notes
 
-The interpreter doesn't support multithreading. It can also be slow when called too many times. 
+The interpreter doesn't support multithreading. It can also be slow when called too many times.
 
 It's also recommended to not call the interpreter from the generator because when searching for interpreters, MPS might deadlock because it starts indexing. You might get away with it by calling the interpreter inside the runnable of `DumbService.getInstance(project).suspendIndexingAndRun()`. You can't return the value from the runnable, but you can assign it in a method of an object that's outside the runnable.
 
