@@ -41,6 +41,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#new-usage">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
@@ -485,9 +488,36 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          BigProject
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         BigProject
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#new-usage">
+    New usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#old-usage">
+    Old usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps">
+    Next steps
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../development_guide/">
@@ -945,6 +975,27 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#new-usage">
+    New usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#old-usage">
+    Old usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps">
+    Next steps
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -960,6 +1011,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 Otherwise, migrations pop up at for other people who work on other parts of mbeddr. This is an unclean workflow.
 To avoid this, you can either open all the projects in <code>mbeddr.core\code\languages</code> individually and run the migration wizard, but this is tedious.
 A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in the individual projects, thus you can run a migration once that executes on all these modules.</p>
+<h2 id="new-usage">New usage<a class="headerlink" href="#new-usage" title="Permanent link">¶</a></h2>
+<ul>
+<li>From the command line: run <code>gradlew.bat :BigProject:run</code> or <code>./gradlew :BigProject:run</code> from the Git checkout root.</li>
+<li>From IntelliJ IDEA: open the Git checkout root as a (Gradle) project in IDEA and run Generate Big Project run configuration.</li>
+</ul>
+<h2 id="old-usage">Old usage<a class="headerlink" href="#old-usage" title="Permanent link">¶</a></h2>
 <ol>
 <li>Open project <code>mbeddr.core\tools\BigProject</code> with IntelliJ IDEA community edition.</li>
 <li>In Idea click in the menu on <em>Run</em> → <em>Run BigProjectGenerator</em>.<ol>
@@ -978,6 +1035,9 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a> Solutions: 305
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a> Devkits: 22
 </code></pre></div></td></tr></table></div></li>
+</ol>
+<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">¶</a></h2>
+<ol>
 <li>Open project <code>mbeddr.core\tools\BigProject</code> with <abbr title="Meta Programming System">MPS</abbr>.</li>
 <li>When the migration wizard starts automatically, execute migrations, otherwise<ol>
 <li>Check for the popup <em>Migration suspended</em> in the right bottom corner. It tells you, which languages aren’t built /deployed.</li>
@@ -990,7 +1050,7 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 3, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
