@@ -28,6 +28,10 @@ tags:
 
     Yes, there is [Heavy Meta TV](https://heavymeta.tv) which hosts an in depth tutorial for JetBrains Meta Programming System (MPS) of about 20 hours. The tutorial were filmed as part of a series of live streams in 2018/2019.
 
+!!! question "I want to learn more about Domain-specific languages. Where do I start?"
+
+    Start with the slides [Introduction to Domain-Specific Languages](http://voelter.de/data/presentations/dslIntro2023.pdf) [Markus Völter](https://voelter.de/publications.html). On the [books page](https://voelter.de/books.html), he also has a few relevant books like DSL Engineering (2013) and How to Understand Almost Anything - A Practitioner's Guide to Domain Analysis (2013).
+
 !!! question "What are the most important shortcuts?"
 
     F1RE blog: [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts)
