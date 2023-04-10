@@ -26,7 +26,7 @@ tags:
 
 !!! question "Are there any video tutorials besides the official videos?"
 
-    Yes, there is [Heavy Meta TV](https://heavymeta.tv) which hosts an in depth tutorial for JetBrains Meta Programming System (MPS) of about 20 hours. The tutorial were filmed as part of a series of live streams in 2018/2019.
+    Yes, there is [Heavy Meta TV](https://heavymeta.tv) which hosts an in depth tutorial for JetBrains Meta Programming System (MPS) of about 20 hours. The tutorials were filmed as part of a series of live streams in 2018/2019.
 
 !!! question "I want to learn more about Domain-specific languages. Where do I start?"
 
@@ -34,7 +34,7 @@ tags:
 
 !!! question "What are the most important shortcuts?"
 
-    F1RE blog: [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts)
+    [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts){{ blog('F1RE') }}
 
 !!! question "Which directory contains the MPS project?"
 
@@ -60,7 +60,7 @@ tags:
     When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models indicator", "../../img/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
     The memory indicator at the same location can be used to free memory. As a last resort the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power saving mode", "../../img/power_saving_mode.gif", "power saving mode") }} can be enabled which disables background tasks such as the model checker (not recommended).
 
-!!! question "What is a module, model, node, concept...?"
+!!! question "What are modules, models, nodes, concepts etc.?"
 
     - {{ blog('sl',false) }}[What goes where: the basic architecture of MPS projects](https://specificlanguages.com/posts/2022-04/28-what-goes-where/)
     - {{ blog('sl',false) }}[Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/)
@@ -72,7 +72,7 @@ tags:
 
 !!! question "What's a SRepository and how's it structured?"
 
-    The answer can be found in the [MPS source code](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24).Multiple repositories could be available in the feature. Given a repository, references to modules/models/nodes can be resolved.
+    The answer can be found in the [MPS source code](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24).Multiple repositories could be available in the future. Given a repository, references to modules/models/nodes can be resolved.
     There's no need in making ids unique globally as each subsystem knows, which exact repository it needs to use at any moment.
     (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )
 
@@ -169,11 +169,11 @@ tags:
 !!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
 
     JBR is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime. In some of the platform build scripts the environment ariable `JB_JAVA11_HOME` can be used to set the JDK home.
-    For older MPS versions that used Java 8, there was the environment variable `JB_JAVA11_HOME`.
+    For older MPS versions that used Java 8, there was the environment variable `JB_JAVA8_HOME`.
 
 !!! question "Are there any resources/communities about domain-specific languages and MPS?"
 
-    - [DSL & MPS books](https://voelter.de/books.html) by Markus Voelter
+    - [DSL & MPS books](https://voelter.de/books.html) by Markus Voelter. Note: some of these books might be outdated and do not cover the latest features of MPS.
     - {{ blog('Strumenta',false) }}[The complete guide to (external) Domain Specific Languages](https://tomassetti.me/domain-specific-languages/)
     - {{ blog('Strumenta',false) }}[68 Resources To Help You To Create Programming Languages](https://tomassetti.me/resources-create-programming-languages/)
     - [Strumenta Virtual Meetups](https://d.strumenta.community/t/new-link-for-virtual-meetups/1024)

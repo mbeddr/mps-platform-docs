@@ -41,7 +41,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 !!! question "How can you replace the logical view on the left side with a custom one?"
 
 
-    Use the class ^^com.mbeddr.mpsutil.projectview^^ from {{ mps_extensions() }}. You can find an example that replicates the _logical view_ [in mbeddr](http://127.0.0.1:63320/node?ref=r%3Ab2f3d5f9-b81e-4589-95e8-d5be28f6e48f%28com.mbeddr.mpsutil.projectview.views.plugin%29%2F8309912865649309798&project=com.mbeddr.mpsutil).
+    Use the language ^^com.mbeddr.mpsutil.projectview^^ from {{ mps_extensions() }}. You can find an example that replicates the _logical view_ [in mbeddr](http://127.0.0.1:63320/node?ref=r%3Ab2f3d5f9-b81e-4589-95e8-d5be28f6e48f%28com.mbeddr.mpsutil.projectview.views.plugin%29%2F8309912865649309798&project=com.mbeddr.mpsutil).
 
 ??? question "How can you tell which IntelliJ version MPS runs with?"
 
@@ -54,7 +54,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
     It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the intelliJ project where you can read the sources and also step into them when debugging.
 
-    In case you're looking at an RCP: `/build.number` provides this information and more, eg `idea.platform.build.number=MPS—203.7717.56`.
+    In case you're looking at an RCP: `build.number` and `build.txt` provide this information and more, eg `idea.platform.build.number=MPS—203.7717.56`.
 
     The platform version is part of the build information e.g. MPS—211.7442.1291
 
@@ -99,7 +99,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 !!! question "how to change (or turn off) the exception submission dialog?"
 
     - Remove all error handlers like [this](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36).
-    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop ups in the IDE where you can see the exception.
+    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop ups in the IDE where you can see the exception. Note: There were some [changes related to the logging configuration](https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration) in MPS 2022.2 where this answer is not valid anymore.
 
 !!! question "Where can you find the latest MPS and IntelliJ icons?"
 
@@ -165,3 +165,4 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
         ToolWindow inspectorToolWindow = inspectorTool.getToolWindow();
         inspectorToolWindow.setAnchor(ToolWindowAnchor.RIGHT, null);
     }
+    ```
