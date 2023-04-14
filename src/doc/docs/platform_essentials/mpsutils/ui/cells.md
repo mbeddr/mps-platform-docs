@@ -37,11 +37,12 @@ In most cases, the language ^^de.itemis.mps.editor.celllayout^^ from {{ mps_exte
 
 > ^^com.mbeddr.mpsutil.margincell^^ and ^^com.mbeddr.mpsutil.review^^
 
-Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word. In fact, the ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
+Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word.
+In fact, the ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
 
 ![example: margin cell](margincell_example.png)
 
-To use the review notes, just include the respective language; intentions are available to attach review notes to editor cells.
+To use the review notes, just include the respective language ^^com.mbeddr.mpsutil.review^^; intentions are available to attach review notes to editor cells.
 
 To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the *margincell-cell-width* and *margincell-dashed-line-interval* style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model's language being aware of it.
 
