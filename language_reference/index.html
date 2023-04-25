@@ -7,23 +7,23 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="http://mbeddr.com/mps-platform-docs/clean_code/java/programming_principles/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../java_style_guide/" rel="next"/>
-<link href="../../../assets/favicon.png" rel="icon"/>
+<link href="http://mbeddr.com/mps-platform-docs/language_reference/" rel="canonical"/>
+<link href="../reference/issue_trackers/" rel="prev"/>
+<link href="../about/editing_this_guide/" rel="next"/>
+<link href="../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Programming principles - MPS Platform Docs</title>
-<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Index - MPS Platform Docs</title>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3FEXS9GHRT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3FEXS9GHRT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3FEXS9GHRT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
-</meta><link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+</meta><link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -34,14 +34,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#programming-principles">
+<a class="md-skip" href="#iets3opensource-language-reference-wip">
           Skip to content
         </a>
 </div>
@@ -61,8 +61,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
-<img alt="logo" src="../../../assets/logo.png"/>
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href=".." title="MPS Platform Docs">
+<img alt="logo" src="../assets/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -77,7 +77,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Programming principles
+              Index
             
           </span>
 </div>
@@ -136,62 +136,62 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../aspects/structure/">
+<a class="md-tabs__link" href="../aspects/structure/">
         Aspects
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../languages/">
+<a class="md-tabs__link" href="../languages/">
         Languages
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mbeddr/">
+<a class="md-tabs__link" href="../mbeddr/">
         Mbeddr
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../build/">
+<a class="md-tabs__link" href="../build/">
         Build
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mps_internal/">
+<a class="md-tabs__link" href="../mps_internal/">
         MPS internals
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../platform_essentials/">
+<a class="md-tabs__link" href="../platform_essentials/">
         Platform essentials
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../mps/">
+<a class="md-tabs__link" href="../clean_code/mps/">
         Clean code
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../patterns/language_design/">
+<a class="md-tabs__link" href="../patterns/language_design/">
         Language/UI patterns
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../reference/reading_list/">
+<a class="md-tabs__link" href="../reference/reading_list/">
         Reference
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../language_reference/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         Language Reference (WIP)
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../about/editing_this_guide/">
+<a class="md-tabs__link" href="../about/editing_this_guide/">
         About
       </a>
 </li>
@@ -207,8 +207,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="MPS Platform Docs">
-<img alt="logo" src="../../../assets/logo.png"/>
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="MPS Platform Docs">
+<img alt="logo" src="../assets/logo.png"/>
 </a>
     MPS Platform Docs
   </label>
@@ -226,7 +226,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../..">Home</a>
+<a href="..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -238,47 +238,47 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/general/">
+<a class="md-nav__link" href="../home/general/">
         General
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/plugins/">
+<a class="md-nav__link" href="../home/plugins/">
         Plugins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/external_files_and_tools/">
+<a class="md-nav__link" href="../home/external_files_and_tools/">
         External files and tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/console/">
+<a class="md-nav__link" href="../home/console/">
         Console
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/platform_specific_bugs/">
+<a class="md-nav__link" href="../home/platform_specific_bugs/">
         OS-specific bugs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/rcp/">
+<a class="md-nav__link" href="../home/rcp/">
         RCP
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/trouble_shooting_guide/">
+<a class="md-nav__link" href="../home/trouble_shooting_guide/">
         Trouble shooting guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/visual_guide/">
+<a class="md-nav__link" href="../home/visual_guide/">
         Visual guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../home/debugging/">
+<a class="md-nav__link" href="../home/debugging/">
         Debugging
       </a>
 </li>
@@ -298,97 +298,97 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/structure/">
+<a class="md-nav__link" href="../aspects/structure/">
         Structure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/editor/">
+<a class="md-nav__link" href="../aspects/editor/">
         Editor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/actions/">
+<a class="md-nav__link" href="../aspects/actions/">
         Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/constraints/">
+<a class="md-nav__link" href="../aspects/constraints/">
         Constraints
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/behavior/">
+<a class="md-nav__link" href="../aspects/behavior/">
         Behavior
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/feedback/">
+<a class="md-nav__link" href="../aspects/feedback/">
         Feedback
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/typesystem/">
+<a class="md-nav__link" href="../aspects/typesystem/">
         Typesystem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/refactorings/">
+<a class="md-nav__link" href="../aspects/refactorings/">
         Refactorings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/scripts/">
+<a class="md-nav__link" href="../aspects/scripts/">
         Scripts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/intentions/">
+<a class="md-nav__link" href="../aspects/intentions/">
         Intentions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/findusages/">
+<a class="md-nav__link" href="../aspects/findusages/">
         Find Usages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/plugin/">
+<a class="md-nav__link" href="../aspects/plugin/">
         Plugin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/dataflow/">
+<a class="md-nav__link" href="../aspects/dataflow/">
         Dataflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/test/">
+<a class="md-nav__link" href="../aspects/test/">
         Test
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/textgen/">
+<a class="md-nav__link" href="../aspects/textgen/">
         TextGen
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/migration/">
+<a class="md-nav__link" href="../aspects/migration/">
         Migration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/vcs/">
+<a class="md-nav__link" href="../aspects/vcs/">
         VCS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/generator/">
+<a class="md-nav__link" href="../aspects/generator/">
         Generator
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/accessory_models/">
+<a class="md-nav__link" href="../aspects/accessory_models/">
         Accessory models
       </a>
 </li>
@@ -405,27 +405,27 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/documentation/">
+<a class="md-nav__link" href="../aspects/documentation/">
         Documentation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/listener/">
+<a class="md-nav__link" href="../aspects/listener/">
         Listener
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/polyfun/">
+<a class="md-nav__link" href="../aspects/polyfun/">
         Polyfun
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/virtualinterfaces/">
+<a class="md-nav__link" href="../aspects/virtualinterfaces/">
         Virtual Interfaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aspects/transformations/">
+<a class="md-nav__link" href="../aspects/transformations/">
         Transformations
       </a>
 </li>
@@ -438,7 +438,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../languages/">Languages</a>
+<a href="../languages/">Languages</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -450,22 +450,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../languages/baselanguage/">
+<a class="md-nav__link" href="../languages/baselanguage/">
         Baselanguage and extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../languages/double_dispatch/">
+<a class="md-nav__link" href="../languages/double_dispatch/">
         Double dispatch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../languages/mps_extensions/">
+<a class="md-nav__link" href="../languages/mps_extensions/">
         MPS-extensions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../languages/kernelf/">
+<a class="md-nav__link" href="../languages/kernelf/">
         KernelF
       </a>
 </li>
@@ -475,7 +475,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mbeddr/">Mbeddr</a>
+<a href="../mbeddr/">Mbeddr</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -487,22 +487,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mbeddr/building_mbeddr_locally/">
+<a class="md-nav__link" href="../mbeddr/building_mbeddr_locally/">
         Building Mbeddr locally
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mbeddr/big_project/">
+<a class="md-nav__link" href="../mbeddr/big_project/">
         BigProject
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mbeddr/development_guide/">
+<a class="md-nav__link" href="../mbeddr/development_guide/">
         Development guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mbeddr/misc_topics/">
+<a class="md-nav__link" href="../mbeddr/misc_topics/">
         Miscellaneous topics
       </a>
 </li>
@@ -512,7 +512,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../build/">Build</a>
+<a href="../build/">Build</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -524,27 +524,27 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build/ci/">
+<a class="md-nav__link" href="../build/ci/">
         CI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build/gradle/">
+<a class="md-nav__link" href="../build/gradle/">
         Gradle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build/command_line_tool/">
+<a class="md-nav__link" href="../build/command_line_tool/">
         Creating a command line tool
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build/git/">
+<a class="md-nav__link" href="../build/git/">
         Git
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build/teamcity/">
+<a class="md-nav__link" href="../build/teamcity/">
         TeamCity
       </a>
 </li>
@@ -554,7 +554,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mps_internal/">MPS internals</a>
+<a href="../mps_internal/">MPS internals</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -566,14 +566,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/open_api/">
+<a class="md-nav__link" href="../mps_internal/open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<a href="../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -585,22 +585,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../mps_internal/terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/models/">
+<a class="md-nav__link" href="../mps_internal/models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/dependencies/">
+<a class="md-nav__link" href="../mps_internal/dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/recipes/">
+<a class="md-nav__link" href="../mps_internal/recipes/">
         Recipes
       </a>
 </li>
@@ -608,14 +608,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/classloading/">
+<a class="md-nav__link" href="../mps_internal/classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mps_internal/threads/">Threading</a>
+<a href="../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -627,12 +627,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/threads/read_write_action_examples/">
+<a class="md-nav__link" href="../mps_internal/threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/threads/named_threads/">
+<a class="md-nav__link" href="../mps_internal/threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -640,57 +640,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/utility_classes/">
+<a class="md-nav__link" href="../mps_internal/utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/gui/">
+<a class="md-nav__link" href="../mps_internal/gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/editor_development/">
+<a class="md-nav__link" href="../mps_internal/editor_development/">
         Editor development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/intellij_sdk/">
+<a class="md-nav__link" href="../mps_internal/intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/jcef/">
+<a class="md-nav__link" href="../mps_internal/jcef/">
         Java Chromium Embedded Framework
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/writing_mps_plugin_with_kotlin/">
+<a class="md-nav__link" href="../mps_internal/writing_mps_plugin_with_kotlin/">
         Writing an MPS plugin with Kotlin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/intellij_integration/">
+<a class="md-nav__link" href="../mps_internal/intellij_integration/">
         IntelliJ integration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/navigating_mps_source/">
+<a class="md-nav__link" href="../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/java_design_patterns_in_mps_sources/">
+<a class="md-nav__link" href="../mps_internal/java_design_patterns_in_mps_sources/">
         Java design patterns in the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/mps_startup/">
+<a class="md-nav__link" href="../mps_internal/mps_startup/">
         What happens on MPS startup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mps_internal/file_format/">
+<a class="md-nav__link" href="../mps_internal/file_format/">
         File format
       </a>
 </li>
@@ -700,7 +700,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../platform_essentials/">Platform essentials</a>
+<a href="../platform_essentials/">Platform essentials</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -712,89 +712,88 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/how_everything_is_connected/">
+<a class="md-nav__link" href="../platform_essentials/how_everything_is_connected/">
         How everything is connected
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/contributing/">
+<a class="md-nav__link" href="../platform_essentials/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/common_concepts_and_interfaces/">
+<a class="md-nav__link" href="../platform_essentials/common_concepts_and_interfaces/">
         Common concepts and interfaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/interpreter/">
+<a class="md-nav__link" href="../platform_essentials/interpreter/">
         Interpreter, coverage and tracing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/com_mbeddr_mpsutil/">
+<a class="md-nav__link" href="../platform_essentials/com_mbeddr_mpsutil/">
         MPS utilities
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/platform_build_scripts/">
+<a class="md-nav__link" href="../platform_essentials/platform_build_scripts/">
         Platform build scripts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../platform_essentials/build_folder/">
+<a class="md-nav__link" href="../platform_essentials/build_folder/">
         Build folder
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mps/">Clean code</a>
+<a href="../clean_code/mps/">Clean code</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
           Clean code
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps/readability_maintainability/">
+<a class="md-nav__link" href="../clean_code/mps/readability_maintainability/">
         Readability/maintainability
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mps/deprecation/">
+<a class="md-nav__link" href="../clean_code/mps/deprecation/">
         Deprecation
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Java (Base Language)</a>
+<a href="../clean_code/java/">Java (Base Language)</a>
 <label for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
           Java (Base Language)
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clean_code/java/programming_principles/">
         Programming principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../java_style_guide/">
+<a class="md-nav__link" href="../clean_code/java/java_style_guide/">
         Java style guide
       </a>
 </li>
@@ -817,17 +816,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../patterns/language_design/">
+<a class="md-nav__link" href="../patterns/language_design/">
         Language design
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../patterns/user_experience/">
+<a class="md-nav__link" href="../patterns/user_experience/">
         User experience
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../patterns/ui_patterns/">
+<a class="md-nav__link" href="../patterns/ui_patterns/">
         UI patterns
       </a>
 </li>
@@ -847,74 +846,74 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/reading_list/">
+<a class="md-nav__link" href="../reference/reading_list/">
         Reading list
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/tips_for_os_maintainers/">
+<a class="md-nav__link" href="../reference/tips_for_os_maintainers/">
         Tips for open source maintainers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/icons/">
+<a class="md-nav__link" href="../reference/icons/">
         Icons
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/core_languages/">
+<a class="md-nav__link" href="../reference/core_languages/">
         Core languages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/standard_plugins/">
+<a class="md-nav__link" href="../reference/standard_plugins/">
         Standard plugins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/extension_points/">
+<a class="md-nav__link" href="../reference/extension_points/">
         Extension points
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/exceptions/">
+<a class="md-nav__link" href="../reference/exceptions/">
         Exceptions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/actions/">
+<a class="md-nav__link" href="../reference/actions/">
         Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/abbreviations/">
+<a class="md-nav__link" href="../reference/abbreviations/">
         Abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/code_abbreviations/">
+<a class="md-nav__link" href="../reference/code_abbreviations/">
         Code abbreviations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/gitignore/">
+<a class="md-nav__link" href="../reference/gitignore/">
         Gitignore file
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../reference/issue_trackers/">
+<a class="md-nav__link" href="../reference/issue_trackers/">
         Issue trackers
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../language_reference/">Language Reference (WIP)</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Language Reference (WIP)</a>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Language Reference (WIP)
@@ -936,22 +935,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../about/editing_this_guide/">
+<a class="md-nav__link" href="../about/editing_this_guide/">
         Editing this guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../about/original_authors/">
+<a class="md-nav__link" href="../about/original_authors/">
         Original authors
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../about/new_pages/">
+<a class="md-nav__link" href="../about/new_pages/">
         New pages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tags/">
+<a class="md-nav__link" href="../tags/">
         Tags
       </a>
 </li>
@@ -973,27 +972,26 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag" href="../../../tags/#best_practise">best_practise</a>
-</nav>
-<h1 id="programming-principles">Programming principles<a class="headerlink" href="#programming-principles" title="Permanent link">¶</a></h1>
-<p>These are some general programming principles taken from <a href="https://dzone.com/articles/java-best-practices-quick-reference">this article</a> which can also be applied to <abbr title="Meta Programming System">MPS</abbr>:</p>
+<h1 id="iets3opensource-language-reference-wip"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr>.opensource Language Reference (WIP)<a class="headerlink" href="#iets3opensource-language-reference-wip" title="Permanent link">¶</a></h1>
+<p>This is a WIP language reference, currently under review on <a href="https://github.com/mbeddr/mbeddr.core/pull/2275">GitHub</a>.</p>
+<p>Included languages:</p>
 <ul>
-<li><strong>KISS</strong> (Keep It Simple, Stupid): you may notice that developers at the beginning of their journey try to implement complicated, ambiguous design.</li>
-<li><strong>DRY</strong> (Don’t Repeat Yourself): try to avoid any duplicates, instead, you put them into a single part of the system or a method.</li>
-<li><strong>YAGNI</strong> (You Ain’t Gonna Need It): if you run into a situation where you are asking yourself, “What about adding extra (feature, code, …etc.) ?”, you probably need to rethink it.</li>
-<li><strong>Clean code over clever code</strong>: speaking of clean code, leave your ego at the door, and forget about writing clever code.</li>
-<li><strong>Avoid premature optimization</strong>: the problem with premature optimization is that you can never know where a program’s bottlenecks will be until after the fact.</li>
-<li><strong>Single responsibility</strong>: every class or module in a program should only concern itself with providing one bit of specific functionality.</li>
-<li><strong>Fail fast, fail hard</strong>: the fail-fast principle stands for stopping the current operation as soon as any unexpected error occurs. Adhering to this principle generally results in a more stable solution</li>
+<li>
+<p><a href="org.iets3.core.expr.base/">org.iets3.core.<abbr title="expression">expr</abbr>.base</a></p>
+</li>
+<li>
+<p><a href="org.iets3.core.expr.collections/">org.iets3.core.<abbr title="expression">expr</abbr>.collections</a></p>
+</li>
+<li>
+<p><a href="org.iets3.core.expr.toplevel/">org.iets3.core.<abbr title="expression">expr</abbr>.toplevel</a></p>
+</li>
 </ul>
-<p><a href="https://refactoring.guru/design-patterns/catalog">refactoring.guru</a> describes general Java design patterns and also includes very nice illustrations.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
@@ -1088,7 +1086,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Index" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="Previous: Issue trackers" class="md-footer__link md-footer__link--prev" href="../reference/issue_trackers/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1097,17 +1095,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <span class="md-footer__direction">
                   Previous
                 </span>
-                Index
+                Issue trackers
               </div>
 </div>
 </a>
-<a aria-label="Next: Java style guide" class="md-footer__link md-footer__link--next" href="../java_style_guide/" rel="next">
+<a aria-label="Next: Editing this guide" class="md-footer__link md-footer__link--next" href="../about/editing_this_guide/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Java style guide
+                Editing this guide
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1132,11 +1130,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
-<script src="../../../javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../javascripts/tablesort.js"></script>
+<script src="../javascripts/tablesort.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

@@ -1,0 +1,3067 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
+<meta content="MPS Platform Docs team" name="author"/>
+<link href="http://mbeddr.com/mps-platform-docs/language_reference/org.iets3.core.expr.base/" rel="canonical"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<title>org.iets3.core.expr.base - MPS Platform Docs</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3FEXS9GHRT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3FEXS9GHRT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3FEXS9GHRT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
+</meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#orgiets3coreexprbase">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+            
+            
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+
+          </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+</aside>
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MPS Platform Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              org.iets3.core.expr.base
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="light-green" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../aspects/structure/">
+        Aspects
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../languages/">
+        Languages
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mbeddr/">
+        Mbeddr
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../build/">
+        Build
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mps_internal/">
+        MPS internals
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../platform_essentials/">
+        Platform essentials
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../clean_code/mps/">
+        Clean code
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../patterns/language_design/">
+        Language/UI patterns
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../reference/reading_list/">
+        Reference
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../">
+        Language Reference (WIP)
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/editing_this_guide/">
+        About
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    MPS Platform Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/general/">
+        General
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/plugins/">
+        Plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/external_files_and_tools/">
+        External files and tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/console/">
+        Console
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/platform_specific_bugs/">
+        OS-specific bugs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/rcp/">
+        RCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
+        Trouble shooting guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/visual_guide/">
+        Visual guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/debugging/">
+        Debugging
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/structure/">
+        Structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/editor/">
+        Editor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/behavior/">
+        Behavior
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/feedback/">
+        Feedback
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/typesystem/">
+        Typesystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/refactorings/">
+        Refactorings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/scripts/">
+        Scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/intentions/">
+        Intentions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/findusages/">
+        Find Usages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/plugin/">
+        Plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/dataflow/">
+        Dataflow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/textgen/">
+        TextGen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/migration/">
+        Migration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/vcs/">
+        VCS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/generator/">
+        Generator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/accessory_models/">
+        Accessory models
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+          Contributed aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_20">
+<span class="md-nav__icon md-icon"></span>
+          Contributed aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/listener/">
+        Listener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/polyfun/">
+        Polyfun
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/virtualinterfaces/">
+        Virtual Interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/transformations/">
+        Transformations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../languages/">Languages</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/baselanguage/">
+        Baselanguage and extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/mps_extensions/">
+        MPS-extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/kernelf/">
+        KernelF
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mbeddr/">Mbeddr</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Mbeddr
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/building_mbeddr_locally/">
+        Building Mbeddr locally
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/big_project/">
+        BigProject
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/development_guide/">
+        Development guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+        Miscellaneous topics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../build/">Build</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/ci/">
+        CI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/gradle/">
+        Gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/command_line_tool/">
+        Creating a command line tool
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/teamcity/">
+        TeamCity
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/">MPS internals</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          MPS internals
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
+        Open API
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<label for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Dependencies and classpath
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+        Terminology and UI for access
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/models/">
+        Models
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
+        Dependencies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
+        Recipes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
+        Classloading
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/threads/">Threading</a>
+<label for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Threading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+        Example actions using locks
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+        Named threads
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+        Utility classes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/gui/">
+        GUI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/editor_development/">
+        Editor development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+        IntelliJ SDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
+        Java Chromium Embedded Framework
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
+        Writing an MPS plugin with Kotlin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
+        Java design patterns in the MPS sources
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/mps_startup/">
+        What happens on MPS startup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
+        File format
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../platform_essentials/">Platform essentials</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Platform essentials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/how_everything_is_connected/">
+        How everything is connected
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/common_concepts_and_interfaces/">
+        Common concepts and interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/interpreter/">
+        Interpreter, coverage and tracing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/com_mbeddr_mpsutil/">
+        MPS utilities
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/platform_build_scripts/">
+        Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/build_folder/">
+        Build folder
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/mps/">Clean code</a>
+<label for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Clean code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
+        Readability/maintainability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
+        Deprecation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/java/">Java (Base Language)</a>
+<label for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+          Java (Base Language)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
+        Programming principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
+        Java style guide
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Language/UI patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Language/UI patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/language_design/">
+        Language design
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/user_experience/">
+        User experience
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/ui_patterns/">
+        UI patterns
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/reading_list/">
+        Reading list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
+        Tips for open source maintainers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/icons/">
+        Icons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/core_languages/">
+        Core languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/standard_plugins/">
+        Standard plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/extension_points/">
+        Extension points
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/exceptions/">
+        Exceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/gitignore/">
+        Gitignore file
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Language Reference (WIP)</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Language Reference (WIP)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/editing_this_guide/">
+        Editing this guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/original_authors/">
+        Original authors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/new_pages/">
+        New pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags/">
+        Tags
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#included-languages">
+    Included Languages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defined-concepts">
+    Defined Concepts
+  </a>
+<nav aria-label="Defined Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractminmaxexpression-abstract-node-url">
+    AbstractMinMaxExpression (abstract, node url)
+  </a>
+<nav aria-label="AbstractMinMaxExpression (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#altoption-node-url">
+    AltOption (node url)
+  </a>
+<nav aria-label="AltOption (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_1">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternativesexpression-alt-node-url">
+    AlternativesExpression (alt, node url)
+  </a>
+<nav aria-label="AlternativesExpression (alt, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_2">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alwaysvalue-always-node-url">
+    AlwaysValue (always, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#andtag-node-url">
+    AndTag (&amp;&amp;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assignmentexpr-node-url">
+    AssignmentExpr (:=, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attempttype-attempt-node-url">
+    AttemptType (attempt, node url)
+  </a>
+<nav aria-label="AttemptType (attempt, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_3">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bangop-node-url">
+    BangOp (!, node url)
+  </a>
+<nav aria-label="BangOp (!, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_4">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binaryarithmeticexpression-abstract-node-url">
+    BinaryArithmeticExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binarycomparisonexpression-abstract-node-url">
+    BinaryComparisonExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binaryequalityexpression-abstract-node-url">
+    BinaryEqualityExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binaryexpression-abstract-node-url">
+    BinaryExpression (abstract, node url)
+  </a>
+<nav aria-label="BinaryExpression (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_5">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binarylogicalexpression-abstract-node-url">
+    BinaryLogicalExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#castexpression-cast-node-url">
+    CastExpression (cast, node url)
+  </a>
+<nav aria-label="CastExpression (cast, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_6">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checktypeconstraintsexpr-check-node-url">
+    CheckTypeConstraintsExpr (check, node url)
+  </a>
+<nav aria-label="CheckTypeConstraintsExpr (check, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_7">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coloncast-node-url">
+    ColonCast (:, node url)
+  </a>
+<nav aria-label="ColonCast (:, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_8">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constraintanderrornode-node-url">
+    ConstraintAndErrorNode (node url)
+  </a>
+<nav aria-label="ConstraintAndErrorNode (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-node-url">
+    Contract (node url)
+  </a>
+<nav aria-label="Contract (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_9">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contractitem-abstract-node-url">
+    ContractItem (abstract, node url)
+  </a>
+<nav aria-label="ContractItem (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_1">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_10">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convenientboolean-node-url">
+    ConvenientBoolean (node url)
+  </a>
+<nav aria-label="ConvenientBoolean (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_11">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convenientbooleanvalue-abstract-node-url">
+    ConvenientBooleanValue (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convenientvaluecond-if-node-url">
+    ConvenientValueCond (if, node url)
+  </a>
+<nav aria-label="ConvenientValueCond (if, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_12">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dereftarget-deref-node-url">
+    DeRefTarget (deref, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defaultvalueexpression-default-node-url">
+    DefaultValueExpression (default, node url)
+  </a>
+<nav aria-label="DefaultValueExpression (default, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_13">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#divexpression-node-url">
+    DivExpression (/, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docwordref-node-url">
+    DocWordRef (node url)
+  </a>
+<nav aria-label="DocWordRef (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references_1">
+    References
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotexpression-node-url">
+    DotExpression (node url)
+  </a>
+<nav aria-label="DotExpression (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_14">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emptyexpression-node-url">
+    EmptyExpression (node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emptytype-emptytype-node-url">
+    EmptyType (emptytype, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emptyvalue-empty-node-url">
+    EmptyValue (empty, node url)
+  </a>
+<nav aria-label="EmptyValue (empty, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_15">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#equalsexpression-node-url">
+    EqualsExpression (==, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#errorexpression-error-node-url">
+    ErrorExpression (error, node url)
+  </a>
+<nav aria-label="ErrorExpression (error, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_16">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#errorliteral-node-url">
+    ErrorLiteral (node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#errortarget-err-node-url">
+    ErrorTarget (err, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exprincontract-abstract-node-url">
+    ExprInContract (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expression-abstract-node-url">
+    Expression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failexpr-fail-node-url">
+    FailExpr (fail, node url)
+  </a>
+<nav aria-label="FailExpr (fail, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_17">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#genericerrortype-error-node-url">
+    GenericErrorType (error, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#greaterequalsexpression-node-url">
+    GreaterEqualsExpression (&gt;=, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#greaterexpression-node-url">
+    GreaterExpression (&gt;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hasvalueop-hasvalue-node-url">
+    HasValueOp (hasValue, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iallowdeletionofdot-abstract-node-url">
+    IAllowDeletionOfDot (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iallowdotonleft-abstract-node-url">
+    IAllowDotOnLeft (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iallowsdocinchildexpressions-abstract-node-url">
+    IAllowsDocInChildExpressions (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iassertconstraints-abstract-node-url">
+    IAssertConstraints (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iattempttype-abstract-node-url">
+    IAttemptType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ibigexpression-abstract-node-url">
+    IBigExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iblocklike-abstract-node-url">
+    IBlockLike (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icanbelvalue-abstract-node-url">
+    ICanBeLValue (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icollectiontype-abstract-node-url">
+    ICollectionType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icomplextypesupportsequals-abstract-node-url">
+    IComplexTypeSupportsEquals (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontainmentstackmember-abstract-node-url">
+    IContainmentStackMember (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontextassistanttypeprovider-abstract-node-url">
+    IContextAssistantTypeProvider (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontexttypeprovider-abstract-node-url">
+    IContextTypeProvider (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontexttypedop-abstract-node-url">
+    IContextTypedOp (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontracted-abstract-node-url">
+    IContracted (abstract, node url)
+  </a>
+<nav aria-label="IContracted (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_18">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icontroladvancedfeatures_old-abstract-node-url">
+    IControlAdvancedFeatures_old (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ideclarativelyinterpretable-abstract-node-url">
+    IDeclarativelyInterpretable (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#idocumentablewordcontainer-abstract-node-url">
+    IDocumentableWordContainer (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#idocumentablewordprovider-abstract-node-url">
+    IDocumentableWordProvider (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#idottarget-abstract-node-url">
+    IDotTarget (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iemptyliteral-abstract-node-url">
+    IEmptyLiteral (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ihasbasetype-abstract-node-url">
+    IHasBaseType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iignoretrivialerrorscontext-abstract-node-url">
+    IIgnoreTrivialErrorsContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iissinglesymbol-abstract-node-url">
+    IIsSingleSymbol (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ijointypecontext-abstract-node-url">
+    IJoinTypeContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iliteral-abstract-node-url">
+    ILiteral (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imainslot-abstract-node-url">
+    IMainSlot (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imayalloweffect-abstract-node-url">
+    IMayAllowEffect (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imayhaveeffect-abstract-node-url">
+    IMayHaveEffect (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imayreadmutablestate-abstract-node-url">
+    IMayReadMutableState (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imultitraceroot-abstract-node-url">
+    IMultiTraceRoot (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inamequalifier-abstract-node-url">
+    INameQualifier (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ineverallowdot-abstract-node-url">
+    INeverAllowDot (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ioptionderefcontext-abstract-node-url">
+    IOptionDerefContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ioptionallytyped-abstract-node-url">
+    IOptionallyTyped (abstract, node url)
+  </a>
+<nav aria-label="IOptionallyTyped (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_19">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iparameterizedtypesupportsequals-abstract-node-url">
+    IParameterizedTypeSupportsEquals (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iprogramlocationprovider-abstract-node-url">
+    IProgramLocationProvider (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iprovidepathconstraints-abstract-node-url">
+    IProvidePathConstraints (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ireducableexpression-abstract-node-url">
+    IReducableExpression (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iref-abstract-node-url">
+    IRef (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ireferenceabletype-abstract-node-url">
+    IReferenceableType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#irunninginterpretercontext-abstract-node-url">
+    IRunningInterpreterContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issconstrainedvalue-abstract-node-url">
+    ISSConstrainedValue (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issconstrainedvalueref-abstract-node-url">
+    ISSConstrainedValueRef (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issdelegatingtype-abstract-node-url">
+    ISSDelegatingType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issitvalueref-abstract-node-url">
+    ISSItValueRef (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iscopefilterer-abstract-node-url">
+    IScopeFilterer (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isinglesymbolref-abstract-node-url">
+    ISingleSymbolRef (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#istructuredsyntax-abstract-node-url">
+    IStructuredSyntax (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itargetthatcandealwithnix-abstract-node-url">
+    ITargetThatCanDealWithNix (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itraceroot-abstract-node-url">
+    ITraceRoot (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itypefrommultiple-abstract-node-url">
+    ITypeFromMultiple (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itypeoverridingcontext-abstract-node-url">
+    ITypeOverridingContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itypesupportsdefaultvalue-abstract-node-url">
+    ITypeSupportsDefaultValue (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itypesupportsproposals-abstract-node-url">
+    ITypeSupportsProposals (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#itypeable-abstract-node-url">
+    ITypeable (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ityped-abstract-node-url">
+    ITyped (abstract, node url)
+  </a>
+<nav aria-label="ITyped (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_20">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ivalidotherwisecontainer-abstract-node-url">
+    IValidOtherwiseContainer (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ivoidcontext-abstract-node-url">
+    IVoidContext (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iwantnewline-abstract-node-url">
+    IWantNewLine (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ifelsesection-else-node-url">
+    IfElseSection (else, node url)
+  </a>
+<nav aria-label="IfElseSection (else, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_21">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ifexpression-if-node-url">
+    IfExpression (if, node url)
+  </a>
+<nav aria-label="IfExpression (if, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_22">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implicitvalidityvalexpr-it-node-url">
+    ImplicitValidityValExpr (it, node url)
+  </a>
+<nav aria-label="ImplicitValidityValExpr (it, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_23">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inlinemessage-message-node-url">
+    InlineMessage (message, node url)
+  </a>
+<nav aria-label="InlineMessage (message, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_24">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#invariant-inv-node-url">
+    Invariant (inv, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issomeexpression-issome-node-url">
+    IsSomeExpression (isSome, node url)
+  </a>
+<nav aria-label="IsSomeExpression (isSome, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_25">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jointype-join-node-url">
+    JoinType (join, node url)
+  </a>
+<nav aria-label="JoinType (join, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_26">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lessequalsexpression-node-url">
+    LessEqualsExpression (&lt;=, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lessexpression-node-url">
+    LessExpression (&lt;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logicalandexpression-node-url">
+    LogicalAndExpression (&amp;&amp;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logicaliffexpression-node-url">
+    LogicalIffExpression (&lt;=&gt;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logicalimpliesexpression-node-url">
+    LogicalImpliesExpression (=&gt;, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logicalnotexpression-node-url">
+    LogicalNotExpression (!, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logicalorexpression-node-url">
+    LogicalOrExpression (||, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makereftarget-ref-node-url">
+    MakeRefTarget (ref, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maxexpression-max-node-url">
+    MaxExpression (max, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#messagevaluetype-message-node-url">
+    MessageValueType (message, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minexpression-min-node-url">
+    MinExpression (min, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minusexpression-node-url">
+    MinusExpression (-, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modexpression-mod-node-url">
+    ModExpression (mod, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mulexpression-node-url">
+    MulExpression (*, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multag-node-url">
+    MulTag (*, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nevervalue-never-node-url">
+    NeverValue (never, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nonstrictequalsexpression-node-url">
+    NonStrictEqualsExpression (===, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noneliteral-none-node-url">
+    NoneLiteral (none, node url)
+  </a>
+<nav aria-label="NoneLiteral (none, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_27">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nonetype-none-node-url">
+    NoneType (none, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notequalsexpression-node-url">
+    NotEqualsExpression (!=, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#oktarget-ok-node-url">
+    OkTarget (ok, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#oneoftarget-oneof-node-url">
+    OneOfTarget (oneOf, node url)
+  </a>
+<nav aria-label="OneOfTarget (oneOf, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_28">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operatorgroup-join-node-url">
+    OperatorGroup (join, node url)
+  </a>
+<nav aria-label="OperatorGroup (join, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_29">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operatortag-abstract-node-url">
+    OperatorTag (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optionorexpression-node-url">
+    OptionOrExpression (?:, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optiontype-opt-node-url">
+    OptionType (opt, node url)
+  </a>
+<nav aria-label="OptionType (opt, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_30">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ortag-node-url">
+    OrTag (||, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parensexpression-node-url">
+    ParensExpression ((, node url)
+  </a>
+<nav aria-label="ParensExpression ((, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_31">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plainconstraint-node-url">
+    PlainConstraint (node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plusexpression-node-url">
+    PlusExpression (+, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plustag-node-url">
+    PlusTag (+, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#postcondition-post-node-url">
+    Postcondition (post, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragmadisablecaching-disable-caching-globally-node-url">
+    PragmaDisableCaching (§disable-caching-globally, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragmaexpression-abstract-node-url">
+    PragmaExpression (abstract, node url)
+  </a>
+<nav aria-label="PragmaExpression (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_32">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#precondition-pre-node-url">
+    Precondition (pre, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primitiveliteral-abstract-node-url">
+    PrimitiveLiteral (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primitivetype-abstract-node-url">
+    PrimitiveType (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programlocationop-abstract-node-url">
+    ProgramLocationOp (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programlocationtype-loc-node-url">
+    ProgramLocationType (loc, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programlocationurlop-url-node-url">
+    ProgramLocationUrlOp (url, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rangetarget-inrange-node-url">
+    RangeTarget (inRange, node url)
+  </a>
+<nav aria-label="RangeTarget (inRange, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_2">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_33">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reductioninspector-node-url">
+    ReductionInspector (node url)
+  </a>
+<nav aria-label="ReductionInspector (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_34">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencetype-ref-node-url">
+    ReferenceType (ref, node url)
+  </a>
+<nav aria-label="ReferenceType (ref, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_35">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revealer-node-url">
+    Revealer (node url)
+  </a>
+<nav aria-label="Revealer (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_36">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revealerthis-revealed-node-url">
+    RevealerThis (revealed, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simpleexpressionvalueinspector-node-url">
+    SimpleExpressionValueInspector (node url)
+  </a>
+<nav aria-label="SimpleExpressionValueInspector (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_3">
+    Properties
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#somevalexpr-node-url">
+    SomeValExpr (node url)
+  </a>
+<nav aria-label="SomeValExpr (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references_2">
+    References
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specificerrortype-error-node-url">
+    SpecificErrorType (error[, node url)
+  </a>
+<nav aria-label="SpecificErrorType (error[, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_37">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#successexpression-success-node-url">
+    SuccessExpression (success, node url)
+  </a>
+<nav aria-label="SuccessExpression (success, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_38">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#successtype-success-node-url">
+    SuccessType (success, node url)
+  </a>
+<nav aria-label="SuccessType (success, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_39">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#successvalueexpr-node-url">
+    SuccessValueExpr (node url)
+  </a>
+<nav aria-label="SuccessValueExpr (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references_3">
+    References
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thisexpression-this-node-url">
+    ThisExpression (this, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tracerexpression-node-url">
+    TracerExpression (node url)
+  </a>
+<nav aria-label="TracerExpression (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_4">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_40">
+    Children
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references_4">
+    References
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tryerrorclause-error-node-url">
+    TryErrorClause (error, node url)
+  </a>
+<nav aria-label="TryErrorClause (error, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_41">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tryexpression-try-node-url">
+    TryExpression (try, node url)
+  </a>
+<nav aria-label="TryExpression (try, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_5">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_42">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trysuccessclause-node-url">
+    TrySuccessClause (=&gt;, node url)
+  </a>
+<nav aria-label="TrySuccessClause (=&gt;, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_43">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tupleaccessexpr-node-url">
+    TupleAccessExpr (node url)
+  </a>
+<nav aria-label="TupleAccessExpr (node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_6">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_44">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tupletype-node-url">
+    TupleType ([, node url)
+  </a>
+<nav aria-label="TupleType ([, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_45">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tuplevalue-node-url">
+    TupleValue ([, node url)
+  </a>
+<nav aria-label="TupleValue ([, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_46">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-abstract-node-url">
+    Type (abstract, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unaryexpression-abstract-node-url">
+    UnaryExpression (abstract, node url)
+  </a>
+<nav aria-label="UnaryExpression (abstract, node url)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#children_47">
+    Children
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unaryminusexpression-node-url">
+    UnaryMinusExpression (-, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validitytype-validity-node-url">
+    ValidityType (validity, node url)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voidtype-void-node-url">
+    VoidType (void, node url)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="orgiets3coreexprbase">org.iets3.core.<abbr title="expression">expr</abbr>.base<a class="headerlink" href="#orgiets3coreexprbase" title="Permanent link">¶</a></h1>
+<hr/>
+<h2 id="included-languages">Included Languages<a class="headerlink" href="#included-languages" title="Permanent link">¶</a></h2>
+<ul>
+<li>com.mbeddr.mpsutil.blutil</li>
+<li>com.mbeddr.mpsutil.editor.querylist</li>
+<li>com.mbeddr.mpsutil.framecell</li>
+<li>com.mbeddr.mpsutil.grammarcells</li>
+<li>com.mbeddr.mpsutil.intentions</li>
+<li>com.mbeddr.mpsutil.modellisteners</li>
+<li>com.mbeddr.mpsutil.refactoring</li>
+<li>de.itemis.mps.editor.celllayout</li>
+<li>de.slisson.mps.conditionalEditor</li>
+<li>de.slisson.mps.richtext</li>
+<li>de.slisson.mps.richtext.customcell</li>
+<li>jetbrains.mps.baseLanguage</li>
+<li>jetbrains.mps.baseLanguage.closures</li>
+<li>jetbrains.mps.baseLanguage.collections</li>
+<li>jetbrains.mps.baseLanguage.javadoc</li>
+<li>jetbrains.mps.baseLanguage.lightweightdsl</li>
+<li>jetbrains.mps.baseLanguage.logging</li>
+<li>jetbrains.mps.baseLanguage.tuples</li>
+<li>jetbrains.mps.baseLanguageInternal</li>
+<li>jetbrains.mps.ide.httpsupport</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.access</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.actions</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.behavior</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.constraints</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.constraints.<abbr title="message">msg</abbr>.specification</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.constraints.rules</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.constraints.rules.kinds</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.constraints.rules.skeleton</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.context</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.context.defs</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.core</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.dataFlow</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.descriptor</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.editor</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.editor.tooltips</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.extension</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.findUsages</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.generator</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.generator.generationContext</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.intentions</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.migration</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.migration.util</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.pattern</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.quotation</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.refactoring</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.resources</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.rulesAndMessages</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.scopes</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.script</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.sharedConcepts</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.smodel</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.smodel.query</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.structure</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.text</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.textGen</li>
+<li>jetbrains.mps.<abbr title="language">lang</abbr>.typesystem</li>
+</ul>
+<hr/>
+<h2 id="defined-concepts">Defined Concepts<a class="headerlink" href="#defined-concepts" title="Permanent link">¶</a></h2>
+<h3 id="abstractminmaxexpression-abstract-node-url">AbstractMinMaxExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2152957725070409762">node url</a>)<a class="headerlink" href="#abstractminmaxexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children">Children<a class="headerlink" href="#children" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>values</em></li>
+</ul>
+<h3 id="altoption-node-url">AltOption (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7971844778466793051">node url</a>)<a class="headerlink" href="#altoption-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_1">Children<a class="headerlink" href="#children_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>when</em></p>
+</li>
+<li>
+<p><em>then</em></p>
+</li>
+</ul>
+<h3 id="alternativesexpression-alt-node-url">AlternativesExpression (alt, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7971844778466793028">node url</a>)<a class="headerlink" href="#alternativesexpression-alt-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_2">Children<a class="headerlink" href="#children_2" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>alternatives</em></li>
+</ul>
+<h3 id="alwaysvalue-always-node-url">AlwaysValue (always, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8435714728543612222">node url</a>)<a class="headerlink" href="#alwaysvalue-always-node-url" title="Permanent link">¶</a></h3>
+<h3 id="andtag-node-url">AndTag (&amp;&amp;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5338017450510309031">node url</a>)<a class="headerlink" href="#andtag-node-url" title="Permanent link">¶</a></h3>
+<h3 id="assignmentexpr-node-url">AssignmentExpr (:=, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745644975">node url</a>)<a class="headerlink" href="#assignmentexpr-node-url" title="Permanent link">¶</a></h3>
+<h3 id="attempttype-attempt-node-url">AttemptType (attempt, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6481804410366698223">node url</a>)<a class="headerlink" href="#attempttype-attempt-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_3">Children<a class="headerlink" href="#children_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>successType</em></p>
+</li>
+<li>
+<p><em>errorLiterals</em></p>
+</li>
+</ul>
+<h3 id="bangop-node-url">BangOp (!, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2390066428848651932">node url</a>)<a class="headerlink" href="#bangop-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_4">Children<a class="headerlink" href="#children_4" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>optionValue</em></li>
+</ul>
+<h3 id="binaryarithmeticexpression-abstract-node-url">BinaryArithmeticExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687762">node url</a>)<a class="headerlink" href="#binaryarithmeticexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="binarycomparisonexpression-abstract-node-url">BinaryComparisonExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687763">node url</a>)<a class="headerlink" href="#binarycomparisonexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="binaryequalityexpression-abstract-node-url">BinaryEqualityExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156760985">node url</a>)<a class="headerlink" href="#binaryequalityexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="binaryexpression-abstract-node-url">BinaryExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156576277">node url</a>)<a class="headerlink" href="#binaryexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_5">Children<a class="headerlink" href="#children_5" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>left</em></p>
+</li>
+<li>
+<p><em>right</em></p>
+</li>
+</ul>
+<h3 id="binarylogicalexpression-abstract-node-url">BinaryLogicalExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156723687">node url</a>)<a class="headerlink" href="#binarylogicalexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="castexpression-cast-node-url">CastExpression (cast, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3281846772293355652">node url</a>)<a class="headerlink" href="#castexpression-cast-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_6">Children<a class="headerlink" href="#children_6" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em>expectedType</em></p>
+</li>
+</ul>
+<h3 id="checktypeconstraintsexpr-check-node-url">CheckTypeConstraintsExpr (check, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8219602584757553931">node url</a>)<a class="headerlink" href="#checktypeconstraintsexpr-check-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>failIfInvalid</em></li>
+</ul>
+<h4 id="children_7">Children<a class="headerlink" href="#children_7" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em>tp</em></p>
+</li>
+</ul>
+<h3 id="coloncast-node-url">ColonCast (:, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5955298286257997823">node url</a>)<a class="headerlink" href="#coloncast-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_8">Children<a class="headerlink" href="#children_8" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em>type</em></p>
+</li>
+</ul>
+<h3 id="constraintanderrornode-node-url">ConstraintAndErrorNode (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1813872364117842299">node url</a>)<a class="headerlink" href="#constraintanderrornode-node-url" title="Permanent link">¶</a></h3>
+<h4 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>expression</em></p>
+</li>
+<li>
+<p><em>source</em></p>
+</li>
+</ul>
+<h3 id="contract-node-url">Contract (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877811041">node url</a>)<a class="headerlink" href="#contract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_9">Children<a class="headerlink" href="#children_9" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>items</em></li>
+</ul>
+<h3 id="contractitem-abstract-node-url">ContractItem (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877811036">node url</a>)<a class="headerlink" href="#contractitem-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>warning</em></li>
+</ul>
+<h4 id="children_10">Children<a class="headerlink" href="#children_10" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em><abbr title="error">err</abbr></em></p>
+</li>
+</ul>
+<h3 id="convenientboolean-node-url">ConvenientBoolean (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8435714728543612220">node url</a>)<a class="headerlink" href="#convenientboolean-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_11">Children<a class="headerlink" href="#children_11" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>value</em></li>
+</ul>
+<h3 id="convenientbooleanvalue-abstract-node-url">ConvenientBooleanValue (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8435714728543612221">node url</a>)<a class="headerlink" href="#convenientbooleanvalue-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="convenientvaluecond-if-node-url">ConvenientValueCond (if, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8435714728543612284">node url</a>)<a class="headerlink" href="#convenientvaluecond-if-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_12">Children<a class="headerlink" href="#children_12" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="dereftarget-deref-node-url">DeRefTarget (deref, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600712067692">node url</a>)<a class="headerlink" href="#dereftarget-deref-node-url" title="Permanent link">¶</a></h3>
+<h3 id="defaultvalueexpression-default-node-url">DefaultValueExpression (default, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6932772747669876272">node url</a>)<a class="headerlink" href="#defaultvalueexpression-default-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_13">Children<a class="headerlink" href="#children_13" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>type</em></li>
+</ul>
+<h3 id="divexpression-node-url">DivExpression (/, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156652603">node url</a>)<a class="headerlink" href="#divexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="docwordref-node-url">DocWordRef (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6527211908668938616">node url</a>)<a class="headerlink" href="#docwordref-node-url" title="Permanent link">¶</a></h3>
+<h4 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>node</em></li>
+</ul>
+<h3 id="dotexpression-node-url">DotExpression (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995145">node url</a>)<a class="headerlink" href="#dotexpression-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_14">Children<a class="headerlink" href="#children_14" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>target</em></li>
+</ul>
+<h3 id="emptyexpression-node-url">EmptyExpression (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164908491660">node url</a>)<a class="headerlink" href="#emptyexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="emptytype-emptytype-node-url">EmptyType (emptytype, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3984696641266738408">node url</a>)<a class="headerlink" href="#emptytype-emptytype-node-url" title="Permanent link">¶</a></h3>
+<h3 id="emptyvalue-empty-node-url">EmptyValue (empty, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3889855429450038473">node url</a>)<a class="headerlink" href="#emptyvalue-empty-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_15">Children<a class="headerlink" href="#children_15" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>type</em></li>
+</ul>
+<h3 id="equalsexpression-node-url">EqualsExpression (==, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156761033">node url</a>)<a class="headerlink" href="#equalsexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="errorexpression-error-node-url">ErrorExpression (error, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606560895472">node url</a>)<a class="headerlink" href="#errorexpression-error-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_16">Children<a class="headerlink" href="#children_16" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>error</em></li>
+</ul>
+<h3 id="errorliteral-node-url">ErrorLiteral (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606559981270">node url</a>)<a class="headerlink" href="#errorliteral-node-url" title="Permanent link">¶</a></h3>
+<h3 id="errortarget-err-node-url">ErrorTarget (<abbr title="error">err</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8219602584758531613">node url</a>)<a class="headerlink" href="#errortarget-err-node-url" title="Permanent link">¶</a></h3>
+<h3 id="exprincontract-abstract-node-url">ExprInContract (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877888703">node url</a>)<a class="headerlink" href="#exprincontract-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="expression-abstract-node-url">Expression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928347719">node url</a>)<a class="headerlink" href="#expression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="failexpr-fail-node-url">FailExpr (fail, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F411710798114972602">node url</a>)<a class="headerlink" href="#failexpr-fail-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_17">Children<a class="headerlink" href="#children_17" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>message</em></p>
+</li>
+<li>
+<p><em>contextExpression</em></p>
+</li>
+<li>
+<p><em>type</em></p>
+</li>
+</ul>
+<h3 id="genericerrortype-error-node-url">GenericErrorType (error, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606561852365">node url</a>)<a class="headerlink" href="#genericerrortype-error-node-url" title="Permanent link">¶</a></h3>
+<h3 id="greaterequalsexpression-node-url">GreaterEqualsExpression (&gt;=, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687889">node url</a>)<a class="headerlink" href="#greaterequalsexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="greaterexpression-node-url">GreaterExpression (&gt;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687764">node url</a>)<a class="headerlink" href="#greaterexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="hasvalueop-hasvalue-node-url">HasValueOp (hasValue, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3889855429449957987">node url</a>)<a class="headerlink" href="#hasvalueop-hasvalue-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iallowdeletionofdot-abstract-node-url">IAllowDeletionOfDot (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5032482955836171565">node url</a>)<a class="headerlink" href="#iallowdeletionofdot-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iallowdotonleft-abstract-node-url">IAllowDotOnLeft (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5032482955834438679">node url</a>)<a class="headerlink" href="#iallowdotonleft-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iallowsdocinchildexpressions-abstract-node-url">IAllowsDocInChildExpressions (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3878179565981658347">node url</a>)<a class="headerlink" href="#iallowsdocinchildexpressions-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iassertconstraints-abstract-node-url">IAssertConstraints (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1185099853503726569">node url</a>)<a class="headerlink" href="#iassertconstraints-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iattempttype-abstract-node-url">IAttemptType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606562038159">node url</a>)<a class="headerlink" href="#iattempttype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ibigexpression-abstract-node-url">IBigExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7849560302565692340">node url</a>)<a class="headerlink" href="#ibigexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iblocklike-abstract-node-url">IBlockLike (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F508719611255975992">node url</a>)<a class="headerlink" href="#iblocklike-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icanbelvalue-abstract-node-url">ICanBeLValue (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068">node url</a>)<a class="headerlink" href="#icanbelvalue-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icollectiontype-abstract-node-url">ICollectionType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6859926652464625057">node url</a>)<a class="headerlink" href="#icollectiontype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icomplextypesupportsequals-abstract-node-url">IComplexTypeSupportsEquals (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7520958096812440715">node url</a>)<a class="headerlink" href="#icomplextypesupportsequals-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icontainmentstackmember-abstract-node-url">IContainmentStackMember (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7249175668709475545">node url</a>)<a class="headerlink" href="#icontainmentstackmember-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icontextassistanttypeprovider-abstract-node-url">IContextAssistantTypeProvider (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F672388678117471179">node url</a>)<a class="headerlink" href="#icontextassistanttypeprovider-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icontexttypeprovider-abstract-node-url">IContextTypeProvider (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F4886573260948603548">node url</a>)<a class="headerlink" href="#icontexttypeprovider-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icontexttypedop-abstract-node-url">IContextTypedOp (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7549708508605912547">node url</a>)<a class="headerlink" href="#icontexttypedop-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="icontracted-abstract-node-url">IContracted (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877810851">node url</a>)<a class="headerlink" href="#icontracted-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_18">Children<a class="headerlink" href="#children_18" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>contract</em></li>
+</ul>
+<h3 id="icontroladvancedfeatures_old-abstract-node-url">IControlAdvancedFeatures_old (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7631603674206286466">node url</a>)<a class="headerlink" href="#icontroladvancedfeatures_old-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ideclarativelyinterpretable-abstract-node-url">IDeclarativelyInterpretable (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F543855896735511983">node url</a>)<a class="headerlink" href="#ideclarativelyinterpretable-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="idocumentablewordcontainer-abstract-node-url">IDocumentableWordContainer (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6527211908672525240">node url</a>)<a class="headerlink" href="#idocumentablewordcontainer-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="idocumentablewordprovider-abstract-node-url">IDocumentableWordProvider (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6527211908668936592">node url</a>)<a class="headerlink" href="#idocumentablewordprovider-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="idottarget-abstract-node-url">IDotTarget (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">node url</a>)<a class="headerlink" href="#idottarget-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iemptyliteral-abstract-node-url">IEmptyLiteral (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F915344943735946072">node url</a>)<a class="headerlink" href="#iemptyliteral-abstract-node-url" title="Permanent link">¶</a></h3>
+<p>Marker interface used to mark literals that at runtime evaluate to empty value.</p>
+<h3 id="ihasbasetype-abstract-node-url">IHasBaseType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3908189377504169836">node url</a>)<a class="headerlink" href="#ihasbasetype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iignoretrivialerrorscontext-abstract-node-url">IIgnoreTrivialErrorsContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3913100176250796213">node url</a>)<a class="headerlink" href="#iignoretrivialerrorscontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iissinglesymbol-abstract-node-url">IIsSingleSymbol (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F125444643124876487">node url</a>)<a class="headerlink" href="#iissinglesymbol-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ijointypecontext-abstract-node-url">IJoinTypeContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6095949300264944876">node url</a>)<a class="headerlink" href="#ijointypecontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iliteral-abstract-node-url">ILiteral (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600710395780">node url</a>)<a class="headerlink" href="#iliteral-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="imainslot-abstract-node-url">IMainSlot (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F162522551948891781">node url</a>)<a class="headerlink" href="#imainslot-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="imayalloweffect-abstract-node-url">IMayAllowEffect (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116">node url</a>)<a class="headerlink" href="#imayalloweffect-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="imayhaveeffect-abstract-node-url">IMayHaveEffect (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166">node url</a>)<a class="headerlink" href="#imayhaveeffect-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="imayreadmutablestate-abstract-node-url">IMayReadMutableState (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3878179565988505489">node url</a>)<a class="headerlink" href="#imayreadmutablestate-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="imultitraceroot-abstract-node-url">IMultiTraceRoot (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1102067954003609289">node url</a>)<a class="headerlink" href="#imultitraceroot-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="inamequalifier-abstract-node-url">INameQualifier (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5227231181400542768">node url</a>)<a class="headerlink" href="#inamequalifier-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ineverallowdot-abstract-node-url">INeverAllowDot (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8266215269008046728">node url</a>)<a class="headerlink" href="#ineverallowdot-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ioptionderefcontext-abstract-node-url">IOptionDerefContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6381079423399017846">node url</a>)<a class="headerlink" href="#ioptionderefcontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ioptionallytyped-abstract-node-url">IOptionallyTyped (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724">node url</a>)<a class="headerlink" href="#ioptionallytyped-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_19">Children<a class="headerlink" href="#children_19" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>type</em></li>
+</ul>
+<h3 id="iparameterizedtypesupportsequals-abstract-node-url">IParameterizedTypeSupportsEquals (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8946943035394495000">node url</a>)<a class="headerlink" href="#iparameterizedtypesupportsequals-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iprogramlocationprovider-abstract-node-url">IProgramLocationProvider (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466384889590">node url</a>)<a class="headerlink" href="#iprogramlocationprovider-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iprovidepathconstraints-abstract-node-url">IProvidePathConstraints (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F4443886968505207936">node url</a>)<a class="headerlink" href="#iprovidepathconstraints-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ireducableexpression-abstract-node-url">IReducableExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8092372783983747124">node url</a>)<a class="headerlink" href="#ireducableexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iref-abstract-node-url">IRef (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7416522108621683377">node url</a>)<a class="headerlink" href="#iref-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ireferenceabletype-abstract-node-url">IReferenceableType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600708210942">node url</a>)<a class="headerlink" href="#ireferenceabletype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="irunninginterpretercontext-abstract-node-url">IRunningInterpreterContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5043470053404793105">node url</a>)<a class="headerlink" href="#irunninginterpretercontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="issconstrainedvalue-abstract-node-url">ISSConstrainedValue (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6571046568849029819">node url</a>)<a class="headerlink" href="#issconstrainedvalue-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="issconstrainedvalueref-abstract-node-url">ISSConstrainedValueRef (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6571046568849029820">node url</a>)<a class="headerlink" href="#issconstrainedvalueref-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="issdelegatingtype-abstract-node-url">ISSDelegatingType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7093020903927062949">node url</a>)<a class="headerlink" href="#issdelegatingtype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="issitvalueref-abstract-node-url">ISSItValueRef (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7093020903919699057">node url</a>)<a class="headerlink" href="#issitvalueref-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iscopefilterer-abstract-node-url">IScopeFilterer (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3829047245302401610">node url</a>)<a class="headerlink" href="#iscopefilterer-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="isinglesymbolref-abstract-node-url">ISingleSymbolRef (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3829047245302399306">node url</a>)<a class="headerlink" href="#isinglesymbolref-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="istructuredsyntax-abstract-node-url">IStructuredSyntax (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8811147530087029174">node url</a>)<a class="headerlink" href="#istructuredsyntax-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itargetthatcandealwithnix-abstract-node-url">ITargetThatCanDealWithNix (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2417394483940924214">node url</a>)<a class="headerlink" href="#itargetthatcandealwithnix-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itraceroot-abstract-node-url">ITraceRoot (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874">node url</a>)<a class="headerlink" href="#itraceroot-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itypefrommultiple-abstract-node-url">ITypeFromMultiple (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1206081519717706522">node url</a>)<a class="headerlink" href="#itypefrommultiple-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itypeoverridingcontext-abstract-node-url">ITypeOverridingContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F369777186288917319">node url</a>)<a class="headerlink" href="#itypeoverridingcontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itypesupportsdefaultvalue-abstract-node-url">ITypeSupportsDefaultValue (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6932772747669856399">node url</a>)<a class="headerlink" href="#itypesupportsdefaultvalue-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itypesupportsproposals-abstract-node-url">ITypeSupportsProposals (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F672388678113750644">node url</a>)<a class="headerlink" href="#itypesupportsproposals-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="itypeable-abstract-node-url">ITypeable (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5706483968284528352">node url</a>)<a class="headerlink" href="#itypeable-abstract-node-url" title="Permanent link">¶</a></h3>
+<p>Nodes that have a defined type but not necessarily specified explicitly in a child</p>
+<h3 id="ityped-abstract-node-url">ITyped (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7071042522334260296">node url</a>)<a class="headerlink" href="#ityped-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_20">Children<a class="headerlink" href="#children_20" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>type</em>:</li>
+</ul>
+<p>type is actually required, but is 0..1 here to improve editor usability</p>
+<h3 id="ivalidotherwisecontainer-abstract-node-url">IValidOtherwiseContainer (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5822258191940088521">node url</a>)<a class="headerlink" href="#ivalidotherwisecontainer-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ivoidcontext-abstract-node-url">IVoidContext (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8237981399425912554">node url</a>)<a class="headerlink" href="#ivoidcontext-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="iwantnewline-abstract-node-url">IWantNewLine (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890">node url</a>)<a class="headerlink" href="#iwantnewline-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="ifelsesection-else-node-url">IfElseSection (else, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F606861080870797309">node url</a>)<a class="headerlink" href="#ifelsesection-else-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_21">Children<a class="headerlink" href="#children_21" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="ifexpression-if-node-url">IfExpression (if, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7849560302565679722">node url</a>)<a class="headerlink" href="#ifexpression-if-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_22">Children<a class="headerlink" href="#children_22" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>condition</em></p>
+</li>
+<li>
+<p><em>thenPart</em></p>
+</li>
+<li>
+<p><em>elsePart</em></p>
+</li>
+<li>
+<p><em>elseSection</em></p>
+</li>
+</ul>
+<h3 id="implicitvalidityvalexpr-it-node-url">ImplicitValidityValExpr (it, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8219602584770724049">node url</a>)<a class="headerlink" href="#implicitvalidityvalexpr-it-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_23">Children<a class="headerlink" href="#children_23" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>type</em></li>
+</ul>
+<h3 id="inlinemessage-message-node-url">InlineMessage (message, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466398246930">node url</a>)<a class="headerlink" href="#inlinemessage-message-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_24">Children<a class="headerlink" href="#children_24" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>text</em></li>
+</ul>
+<h3 id="invariant-inv-node-url">Invariant (inv, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877811181">node url</a>)<a class="headerlink" href="#invariant-inv-node-url" title="Permanent link">¶</a></h3>
+<h3 id="issomeexpression-issome-node-url">IsSomeExpression (isSome, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2807135271608145920">node url</a>)<a class="headerlink" href="#issomeexpression-issome-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_25">Children<a class="headerlink" href="#children_25" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="jointype-join-node-url">JoinType (join, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9142018459473556821">node url</a>)<a class="headerlink" href="#jointype-join-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_26">Children<a class="headerlink" href="#children_26" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>types</em></li>
+</ul>
+<h3 id="lessequalsexpression-node-url">LessEqualsExpression (&lt;=, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687891">node url</a>)<a class="headerlink" href="#lessequalsexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="lessexpression-node-url">LessExpression (&lt;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156687890">node url</a>)<a class="headerlink" href="#lessexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="logicalandexpression-node-url">LogicalAndExpression (&amp;&amp;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156724025">node url</a>)<a class="headerlink" href="#logicalandexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="logicaliffexpression-node-url">LogicalIffExpression (&lt;=&gt;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8448265401162061756">node url</a>)<a class="headerlink" href="#logicaliffexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="logicalimpliesexpression-node-url">LogicalImpliesExpression (=&gt;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1514143479005139333">node url</a>)<a class="headerlink" href="#logicalimpliesexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="logicalnotexpression-node-url">LogicalNotExpression (!, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156802410">node url</a>)<a class="headerlink" href="#logicalnotexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="logicalorexpression-node-url">LogicalOrExpression (||, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156723899">node url</a>)<a class="headerlink" href="#logicalorexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="makereftarget-ref-node-url">MakeRefTarget (<abbr title="reference">ref</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600709141067">node url</a>)<a class="headerlink" href="#makereftarget-ref-node-url" title="Permanent link">¶</a></h3>
+<h3 id="maxexpression-max-node-url">MaxExpression (<abbr title="maximum">max</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2152957725070518937">node url</a>)<a class="headerlink" href="#maxexpression-max-node-url" title="Permanent link">¶</a></h3>
+<h3 id="messagevaluetype-message-node-url">MessageValueType (message, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466384402682">node url</a>)<a class="headerlink" href="#messagevaluetype-message-node-url" title="Permanent link">¶</a></h3>
+<h3 id="minexpression-min-node-url">MinExpression (<abbr title="minimum">min</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2152957725070518938">node url</a>)<a class="headerlink" href="#minexpression-min-node-url" title="Permanent link">¶</a></h3>
+<h3 id="minusexpression-node-url">MinusExpression (-, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156652453">node url</a>)<a class="headerlink" href="#minusexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="modexpression-mod-node-url">ModExpression (<abbr title="modulus">mod</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6044555027808714586">node url</a>)<a class="headerlink" href="#modexpression-mod-node-url" title="Permanent link">¶</a></h3>
+<h3 id="mulexpression-node-url">MulExpression (*, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156578671">node url</a>)<a class="headerlink" href="#mulexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="multag-node-url">MulTag (*, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8560722270290706287">node url</a>)<a class="headerlink" href="#multag-node-url" title="Permanent link">¶</a></h3>
+<h3 id="nevervalue-never-node-url">NeverValue (never, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8435714728543612253">node url</a>)<a class="headerlink" href="#nevervalue-never-node-url" title="Permanent link">¶</a></h3>
+<h3 id="nonstrictequalsexpression-node-url">NonStrictEqualsExpression (===, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3593191807001111860">node url</a>)<a class="headerlink" href="#nonstrictequalsexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="noneliteral-none-node-url">NoneLiteral (none, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2807135271608265973">node url</a>)<a class="headerlink" href="#noneliteral-none-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_27">Children<a class="headerlink" href="#children_27" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>optionalBaseType</em></li>
+</ul>
+<h3 id="nonetype-none-node-url">NoneType (none, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2807135271607940261">node url</a>)<a class="headerlink" href="#nonetype-none-node-url" title="Permanent link">¶</a></h3>
+<h3 id="notequalsexpression-node-url">NotEqualsExpression (!=, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156761034">node url</a>)<a class="headerlink" href="#notequalsexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="oktarget-ok-node-url">OkTarget (ok, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8219602584758209317">node url</a>)<a class="headerlink" href="#oktarget-ok-node-url" title="Permanent link">¶</a></h3>
+<h3 id="oneoftarget-oneof-node-url">OneOfTarget (oneOf, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3352322994211036342">node url</a>)<a class="headerlink" href="#oneoftarget-oneof-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_28">Children<a class="headerlink" href="#children_28" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>values</em></li>
+</ul>
+<h3 id="operatorgroup-join-node-url">OperatorGroup (join, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5338017450510303355">node url</a>)<a class="headerlink" href="#operatorgroup-join-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_29">Children<a class="headerlink" href="#children_29" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>expressions</em></p>
+</li>
+<li>
+<p><em>tag</em></p>
+</li>
+</ul>
+<h3 id="operatortag-abstract-node-url">OperatorTag (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5338017450510303356">node url</a>)<a class="headerlink" href="#operatortag-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="optionorexpression-node-url">OptionOrExpression (?:, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F3829047245309363370">node url</a>)<a class="headerlink" href="#optionorexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="optiontype-opt-node-url">OptionType (<abbr title="option or optional">opt</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2807135271607939856">node url</a>)<a class="headerlink" href="#optiontype-opt-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_30">Children<a class="headerlink" href="#children_30" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>baseType</em></li>
+</ul>
+<h3 id="ortag-node-url">OrTag (||, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8006404979729416973">node url</a>)<a class="headerlink" href="#ortag-node-url" title="Permanent link">¶</a></h3>
+<h3 id="parensexpression-node-url">ParensExpression ((, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837157187871">node url</a>)<a class="headerlink" href="#parensexpression-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_31">Children<a class="headerlink" href="#children_31" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="plainconstraint-node-url">PlainConstraint (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408882279828">node url</a>)<a class="headerlink" href="#plainconstraint-node-url" title="Permanent link">¶</a></h3>
+<h3 id="plusexpression-node-url">PlusExpression (+, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156578546">node url</a>)<a class="headerlink" href="#plusexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="plustag-node-url">PlusTag (+, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8560722270289800014">node url</a>)<a class="headerlink" href="#plustag-node-url" title="Permanent link">¶</a></h3>
+<h3 id="postcondition-post-node-url">Postcondition (post, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877811180">node url</a>)<a class="headerlink" href="#postcondition-post-node-url" title="Permanent link">¶</a></h3>
+<h3 id="pragmadisablecaching-disable-caching-globally-node-url">PragmaDisableCaching (§disable-caching-globally, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5571545316364803538">node url</a>)<a class="headerlink" href="#pragmadisablecaching-disable-caching-globally-node-url" title="Permanent link">¶</a></h3>
+<h3 id="pragmaexpression-abstract-node-url">PragmaExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5571545316364799282">node url</a>)<a class="headerlink" href="#pragmaexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_32">Children<a class="headerlink" href="#children_32" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="precondition-pre-node-url">Precondition (pre, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F867786408877811037">node url</a>)<a class="headerlink" href="#precondition-pre-node-url" title="Permanent link">¶</a></h3>
+<h3 id="primitiveliteral-abstract-node-url">PrimitiveLiteral (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8379605524044170035">node url</a>)<a class="headerlink" href="#primitiveliteral-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="primitivetype-abstract-node-url">PrimitiveType (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928515123">node url</a>)<a class="headerlink" href="#primitivetype-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="programlocationop-abstract-node-url">ProgramLocationOp (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466385889548">node url</a>)<a class="headerlink" href="#programlocationop-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="programlocationtype-loc-node-url">ProgramLocationType (<abbr title="location">loc</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466385888301">node url</a>)<a class="headerlink" href="#programlocationtype-loc-node-url" title="Permanent link">¶</a></h3>
+<h3 id="programlocationurlop-url-node-url">ProgramLocationUrlOp (url, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5299123466385900735">node url</a>)<a class="headerlink" href="#programlocationurlop-url-node-url" title="Permanent link">¶</a></h3>
+<h3 id="rangetarget-inrange-node-url">RangeTarget (inRange, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2245119349904068784">node url</a>)<a class="headerlink" href="#rangetarget-inrange-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_2">Properties<a class="headerlink" href="#properties_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>upperExcluding</em></p>
+</li>
+<li>
+<p><em>lowerExcluding</em></p>
+</li>
+</ul>
+<h4 id="children_33">Children<a class="headerlink" href="#children_33" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="minimum">min</abbr></em></p>
+</li>
+<li>
+<p><em><abbr title="maximum">max</abbr></em></p>
+</li>
+</ul>
+<h3 id="reductioninspector-node-url">ReductionInspector (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8092372783983858717">node url</a>)<a class="headerlink" href="#reductioninspector-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_34">Children<a class="headerlink" href="#children_34" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>reduced</em></li>
+</ul>
+<h3 id="referencetype-ref-node-url">ReferenceType (<abbr title="reference">ref</abbr>, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600708168956">node url</a>)<a class="headerlink" href="#referencetype-ref-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_35">Children<a class="headerlink" href="#children_35" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>baseType</em></li>
+</ul>
+<h3 id="revealer-node-url">Revealer (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F4934857995792117654">node url</a>)<a class="headerlink" href="#revealer-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_36">Children<a class="headerlink" href="#children_36" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>condition</em></li>
+</ul>
+<h3 id="revealerthis-revealed-node-url">RevealerThis (revealed, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9078496479923905756">node url</a>)<a class="headerlink" href="#revealerthis-revealed-node-url" title="Permanent link">¶</a></h3>
+<h3 id="simpleexpressionvalueinspector-node-url">SimpleExpressionValueInspector (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2850607030358693529">node url</a>)<a class="headerlink" href="#simpleexpressionvalueinspector-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_3">Properties<a class="headerlink" href="#properties_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em>onlyLast</em></p>
+</li>
+<li>
+<p><em>showOnTop</em></p>
+</li>
+<li>
+<p><em>showOnConsole</em></p>
+</li>
+<li>
+<p><em>optionalLabel</em></p>
+</li>
+</ul>
+<h3 id="somevalexpr-node-url">SomeValExpr (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1059200196223309235">node url</a>)<a class="headerlink" href="#somevalexpr-node-url" title="Permanent link">¶</a></h3>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>someQuery</em></li>
+</ul>
+<h3 id="specificerrortype-error-node-url">SpecificErrorType (error[, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606561852396">node url</a>)<a class="headerlink" href="#specificerrortype-error-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_37">Children<a class="headerlink" href="#children_37" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>error</em></li>
+</ul>
+<h3 id="successexpression-success-node-url">SuccessExpression (success, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5974679004769488538">node url</a>)<a class="headerlink" href="#successexpression-success-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_38">Children<a class="headerlink" href="#children_38" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="successtype-success-node-url">SuccessType (success, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1919538606561852052">node url</a>)<a class="headerlink" href="#successtype-success-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_39">Children<a class="headerlink" href="#children_39" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>baseType</em></li>
+</ul>
+<h3 id="successvalueexpr-node-url">SuccessValueExpr (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164910719190">node url</a>)<a class="headerlink" href="#successvalueexpr-node-url" title="Permanent link">¶</a></h3>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>try</em></li>
+</ul>
+<h3 id="thisexpression-this-node-url">ThisExpression (this, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F4886573260948604727">node url</a>)<a class="headerlink" href="#thisexpression-this-node-url" title="Permanent link">¶</a></h3>
+<h3 id="tracerexpression-node-url">TracerExpression (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8092372783984279054">node url</a>)<a class="headerlink" href="#tracerexpression-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_4">Properties<a class="headerlink" href="#properties_4" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>traceLabel</em></li>
+</ul>
+<h4 id="children_40">Children<a class="headerlink" href="#children_40" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>traced</em></li>
+</ul>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>target</em></li>
+</ul>
+<h3 id="tryerrorclause-error-node-url">TryErrorClause (error, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164909884363">node url</a>)<a class="headerlink" href="#tryerrorclause-error-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_41">Children<a class="headerlink" href="#children_41" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em>errorLiteral</em></p>
+</li>
+</ul>
+<h3 id="tryexpression-try-node-url">TryExpression (try, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6481804410367226920">node url</a>)<a class="headerlink" href="#tryexpression-try-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_5">Properties<a class="headerlink" href="#properties_5" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>complete</em></li>
+</ul>
+<h4 id="children_42">Children<a class="headerlink" href="#children_42" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><em><abbr title="expression">expr</abbr></em></p>
+</li>
+<li>
+<p><em>successClause</em></p>
+</li>
+<li>
+<p><em>errorClauses</em></p>
+</li>
+</ul>
+<h3 id="trysuccessclause-node-url">TrySuccessClause (=&gt;, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6481804410367607231">node url</a>)<a class="headerlink" href="#trysuccessclause-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_43">Children<a class="headerlink" href="#children_43" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="tupleaccessexpr-node-url">TupleAccessExpr (<a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F2527679671886479690">node url</a>)<a class="headerlink" href="#tupleaccessexpr-node-url" title="Permanent link">¶</a></h3>
+<h4 id="properties_6">Properties<a class="headerlink" href="#properties_6" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>index</em></li>
+</ul>
+<h4 id="children_44">Children<a class="headerlink" href="#children_44" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>tuple</em></li>
+</ul>
+<h3 id="tupletype-node-url">TupleType ([, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1019070541450015930">node url</a>)<a class="headerlink" href="#tupletype-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_45">Children<a class="headerlink" href="#children_45" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>elementTypes</em></li>
+</ul>
+<h3 id="tuplevalue-node-url">TupleValue ([, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1019070541450016346">node url</a>)<a class="headerlink" href="#tuplevalue-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_46">Children<a class="headerlink" href="#children_46" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>values</em></li>
+</ul>
+<h3 id="type-abstract-node-url">Type (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928349204">node url</a>)<a class="headerlink" href="#type-abstract-node-url" title="Permanent link">¶</a></h3>
+<h3 id="unaryexpression-abstract-node-url">UnaryExpression (abstract, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156802409">node url</a>)<a class="headerlink" href="#unaryexpression-abstract-node-url" title="Permanent link">¶</a></h3>
+<h4 id="children_47">Children<a class="headerlink" href="#children_47" title="Permanent link">¶</a></h4>
+<ul>
+<li><em><abbr title="expression">expr</abbr></em></li>
+</ul>
+<h3 id="unaryminusexpression-node-url">UnaryMinusExpression (-, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F5115872837156855227">node url</a>)<a class="headerlink" href="#unaryminusexpression-node-url" title="Permanent link">¶</a></h3>
+<h3 id="validitytype-validity-node-url">ValidityType (validity, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8219602584757554015">node url</a>)<a class="headerlink" href="#validitytype-validity-node-url" title="Permanent link">¶</a></h3>
+<h3 id="voidtype-void-node-url">VoidType (void, <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8237981399425912525">node url</a>)<a class="headerlink" href="#voidtype-void-node-url" title="Permanent link">¶</a></h3>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
+</small>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." rel="noopener" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOHtFrws4CQY8v" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="mbeddr/mps-platform-docs" data-repo-id="R_kgDOHtFrwg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+      
+    targetBlank();
+    })
+   
+   function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
+    }
+  }
+};
+  </script>
+</meta></article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
