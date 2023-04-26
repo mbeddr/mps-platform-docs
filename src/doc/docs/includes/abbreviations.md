@@ -34,7 +34,6 @@
 *[OS]: Open Source
 *[PR]: Pull Request or Public Relations
 *[PSI]: Program Structure Interface
-*[PSI]: Program Structure Interface
 *[RCP]: Rich Client Platform
 *[RC]: Run Configuration
 *[REST]: Representational State Transfer
