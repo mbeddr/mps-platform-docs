@@ -234,11 +234,11 @@ nav:
           - Named threads: mps_internal/threads/named_threads.md
       - Utility classes: mps_internal/utility_classes.md
       - GUI: mps_internal/gui.md
-      - Editor development: mps_internal/editor_development.md  
+      - Editor development: mps_internal/editor_development.md
       - IntelliJ SDK: mps_internal/intellij_sdk.md
       - Java Chromium Embedded Framework: mps_internal/jcef.md
-      - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md 
-      - IntelliJ integration: mps_internal/intellij_integration.md 
+      - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
+      - IntelliJ integration: mps_internal/intellij_integration.md
       - Navigating the MPS sources: mps_internal/navigating_mps_source.md
       - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
       - What happens on MPS startup : mps_internal/mps_startup.md
@@ -274,10 +274,12 @@ nav:
     - Extension points: reference/extension_points.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
-    - Abbreviations: reference/abbreviations.md 
+    - Abbreviations: reference/abbreviations.md
     - Code abbreviations: reference/code_abbreviations.md
     - Gitignore file: reference/gitignore.md
     - Issue trackers: reference/issue_trackers.md
+  - Language Reference (WIP):
+    - Index: language_reference/index.md
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
