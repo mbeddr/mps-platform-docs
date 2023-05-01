@@ -457,10 +457,30 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         Double dispatch
       </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          MPS-extensions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          MPS-extensions
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
-        MPS-extensions
+        General
       </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/cell_layout/">
+        Cell Layout
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/kernelf/">
@@ -869,6 +889,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/included_libraries/">
+        Included libraries
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../reference/extension_points/">
         Extension points
       </a>
@@ -997,11 +1022,15 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </details>
 <div class="admonition question">
 <p class="admonition-title">Are there any video tutorials besides the official videos?</p>
-<p>Yes, there is <a href="https://heavymeta.tv">Heavy Meta TV</a> which hosts an in depth tutorial for JetBrains Meta Programming System (<abbr title="Meta Programming System">MPS</abbr>) of about 20 hours. The tutorial were filmed as part of a series of live streams in 2018/2019.</p>
+<p>Yes, there is <a href="https://heavymeta.tv">Heavy Meta TV</a> which hosts an in depth tutorial for JetBrains Meta Programming System (<abbr title="Meta Programming System">MPS</abbr>) of about 20 hours. The tutorials were filmed as part of a series of live streams in 2018/2019.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">I want to learn more about Domain-specific languages. Where do I start?</p>
+<p>Start with the slides <a href="http://voelter.de/data/presentations/dslIntro2023.pdf">Introduction to Domain-Specific Languages</a> <a href="https://voelter.de/publications.html">Markus Völter</a>. On the <a href="https://voelter.de/books.html">books page</a>, he also has a few relevant books like <abbr title="Domain Specific Language">DSL</abbr> Engineering (2013) and How to Understand Almost Anything - A Practitioner’s Guide to Domain Analysis (2013).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What are the most important shortcuts?</p>
-<p>F1RE blog: <a href="https://www.f1re.io/mps-shortcuts">JetBrains <abbr title="Meta Programming System">MPS</abbr> Shortcuts</a></p>
+<p><a href="https://www.f1re.io/mps-shortcuts">JetBrains <abbr title="Meta Programming System">MPS</abbr> Shortcuts</a><small>(<em>F1RE’s blog</em>)</small></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Which directory contains the <abbr title="Meta Programming System">MPS</abbr> project?</p>
@@ -1028,7 +1057,7 @@ Another reason for high memory usage can be many (poorly) implemented checking r
 The memory indicator at the same location can be used to free memory. As a last resort the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons">power saving mode<span><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/power_saving_mode.gif"><img alt="power saving mode" src="../../img/power_saving_mode.gif"/></a></span></a></span> can be enabled which disables background tasks such as the model checker (not recommended).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What is a module, model, node, concept…?</p>
+<p class="admonition-title">What are modules, models, nodes, concepts etc.?</p>
 <ul>
 <li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-04/28-what-goes-where/">What goes where: the basic architecture of <abbr title="Meta Programming System">MPS</abbr> projects</a></li>
 <li>Specific Languages’ blog: <a href="https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/">Ambiguous terms: Modules and models</a></li>
@@ -1041,7 +1070,7 @@ The memory indicator at the same location can be used to free memory. As a last 
 </div>
 <div class="admonition question">
 <p class="admonition-title">What’s a <abbr title="Semantic Repository">SRepository</abbr> and how’s it structured?</p>
-<p>The answer can be found in the <a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24"><abbr title="Meta Programming System">MPS</abbr> source code</a>.Multiple repositories could be available in the feature. Given a repository, references to modules/models/nodes can be resolved.
+<p>The answer can be found in the <a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24"><abbr title="Meta Programming System">MPS</abbr> source code</a>.Multiple repositories could be available in the future. Given a repository, references to modules/models/nodes can be resolved.
 There’s no need in making ids unique globally as each subsystem knows, which exact repository it needs to use at any moment.
 (e.g. the type-system knows where it stores its type-nodes, so it will not try to resolve references to them )</p>
 <p>A repository contains modules, modules have model roots, each model root can load models.
@@ -1129,12 +1158,12 @@ We usually have a <code>./gradlew setup</code> task in our projects that replace
 <div class="admonition question">
 <p class="admonition-title">Why is <abbr title="Meta Programming System">MPS</abbr> shipped with <abbr title="JetBrains Runtime">JBR</abbr> instead of using an installed <abbr title="Java Development Kit">JDK</abbr>/<abbr title="Java Runtime Environment">JRE</abbr>?</p>
 <p><abbr title="JetBrains Runtime">JBR</abbr> is a fork of OpenJDK with specific bugfixes and improvements for JetBrains IDEs. More <abbr title="information">info</abbr> can be found in <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/JetBrainsRuntime" title="GitHub Repository: JetBrains/JetBrainsRuntime">JetBrains/JetBrainsRuntime</a>. In some of the platform build scripts the environment ariable <code>JB_JAVA11_HOME</code> can be used to set the <abbr title="Java Development Kit">JDK</abbr> home.
-For older <abbr title="Meta Programming System">MPS</abbr> versions that used Java 8, there was the environment variable <code>JB_JAVA11_HOME</code>.</p>
+For older <abbr title="Meta Programming System">MPS</abbr> versions that used Java 8, there was the environment variable <code>JB_JAVA8_HOME</code>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there any resources/communities about domain-specific languages and <abbr title="Meta Programming System">MPS</abbr>?</p>
 <ul>
-<li><a href="https://voelter.de/books.html"><abbr title="Domain Specific Language">DSL</abbr> &amp; <abbr title="Meta Programming System">MPS</abbr> books</a> by Markus Voelter</li>
+<li><a href="https://voelter.de/books.html"><abbr title="Domain Specific Language">DSL</abbr> &amp; <abbr title="Meta Programming System">MPS</abbr> books</a> by Markus Voelter. Note: some of these books might be outdated and do not cover the latest features of <abbr title="Meta Programming System">MPS</abbr>.</li>
 <li>Strumenta’s blog: <a href="https://tomassetti.me/domain-specific-languages/">The complete guide to (external) Domain Specific Languages</a></li>
 <li>Strumenta’s blog: <a href="https://tomassetti.me/resources-create-programming-languages/">68 Resources To Help You To Create Programming Languages</a></li>
 <li><a href="https://d.strumenta.community/t/new-link-for-virtual-meetups/1024">Strumenta Virtual Meetups</a></li>
@@ -1145,7 +1174,7 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 10, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">

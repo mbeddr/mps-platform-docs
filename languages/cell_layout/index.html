@@ -1,0 +1,1586 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
+<meta content="MPS Platform Docs team" name="author"/>
+<link href="http://mbeddr.com/mps-platform-docs/languages/cell_layout/" rel="canonical"/>
+<link href="../mps_extensions/" rel="prev"/>
+<link href="../kernelf/" rel="next"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<title>Cell Layout - MPS Platform Docs</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3FEXS9GHRT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3FEXS9GHRT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3FEXS9GHRT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
+</meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#box-model">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+            
+            
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+
+          </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+</aside>
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MPS Platform Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Cell Layout
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="light-green" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../aspects/structure/">
+        Aspects
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        Languages
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mbeddr/">
+        Mbeddr
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../build/">
+        Build
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../mps_internal/">
+        MPS internals
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../platform_essentials/">
+        Platform essentials
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../clean_code/mps/">
+        Clean code
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../patterns/language_design/">
+        Language/UI patterns
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../reference/reading_list/">
+        Reference
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../language_reference/">
+        Language Reference (WIP)
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/editing_this_guide/">
+        About
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    MPS Platform Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    mps-platform-docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/general/">
+        General
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/plugins/">
+        Plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/external_files_and_tools/">
+        External files and tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/console/">
+        Console
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/platform_specific_bugs/">
+        OS-specific bugs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/rcp/">
+        RCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
+        Trouble shooting guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/visual_guide/">
+        Visual guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/debugging/">
+        Debugging
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/structure/">
+        Structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/editor/">
+        Editor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/behavior/">
+        Behavior
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/feedback/">
+        Feedback
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/typesystem/">
+        Typesystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/refactorings/">
+        Refactorings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/scripts/">
+        Scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/intentions/">
+        Intentions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/findusages/">
+        Find Usages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/plugin/">
+        Plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/dataflow/">
+        Dataflow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/textgen/">
+        TextGen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/migration/">
+        Migration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/vcs/">
+        VCS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/generator/">
+        Generator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/accessory_models/">
+        Accessory models
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+          Contributed aspects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_20">
+<span class="md-nav__icon md-icon"></span>
+          Contributed aspects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/listener/">
+        Listener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/polyfun/">
+        Polyfun
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/virtualinterfaces/">
+        Virtual Interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspects/transformations/">
+        Transformations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Languages</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../baselanguage/">
+        Baselanguage and extensions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../double_dispatch/">
+        Double dispatch
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          MPS-extensions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          MPS-extensions
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mps_extensions/">
+        General
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Cell Layout
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Cell Layout
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#box-model">
+    Box Model
+  </a>
+<nav aria-label="Box Model" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout-box">
+    Layout box
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutboxframe">
+    LayoutBoxFrame
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boxmodel">
+    BoxModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editorcellboxmodel">
+    EditorCellBoxModel
+  </a>
+<nav aria-label="EditorCellBoxModel" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#synchronisation">
+    Synchronisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout">
+    Layout
+  </a>
+<nav aria-label="Layout" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilayouter">
+    ILayouter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilayoutable">
+    ILayoutable
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grid">
+    Grid
+  </a>
+<nav aria-label="Grid" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extending-and-scaling">
+    Extending and scaling
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-layouts">
+    Standard layouts
+  </a>
+<nav aria-label="Standard layouts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flattening">
+    Flattening
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#runtime">
+    Runtime
+  </a>
+<nav aria-label="Runtime" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cells">
+    Cells
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractlayoutableadapter">
+    AbstractLayoutableAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#borderpainter">
+    BorderPainter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutableadapter">
+    LayoutableAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutableadapters">
+    LayoutableAdapters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutablecollectionadapter">
+    LayoutableCollectionAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutengine">
+    LayoutEngine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutinterceptor">
+    LayoutInterceptor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kernelf/">
+        KernelF
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mbeddr/">Mbeddr</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Mbeddr
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/building_mbeddr_locally/">
+        Building Mbeddr locally
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/big_project/">
+        BigProject
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/development_guide/">
+        Development guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+        Miscellaneous topics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../build/">Build</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/ci/">
+        CI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/gradle/">
+        Gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/command_line_tool/">
+        Creating a command line tool
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../build/teamcity/">
+        TeamCity
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/">MPS internals</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          MPS internals
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
+        Open API
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+<label for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Dependencies and classpath
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+        Terminology and UI for access
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/models/">
+        Models
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
+        Dependencies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
+        Recipes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
+        Classloading
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../mps_internal/threads/">Threading</a>
+<label for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Threading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+        Example actions using locks
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+        Named threads
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+        Utility classes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/gui/">
+        GUI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/editor_development/">
+        Editor development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+        IntelliJ SDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
+        Java Chromium Embedded Framework
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
+        Writing an MPS plugin with Kotlin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+        IntelliJ integration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+        Navigating the MPS sources
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
+        Java design patterns in the MPS sources
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/mps_startup/">
+        What happens on MPS startup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
+        File format
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../platform_essentials/">Platform essentials</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Platform essentials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/how_everything_is_connected/">
+        How everything is connected
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/common_concepts_and_interfaces/">
+        Common concepts and interfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/interpreter/">
+        Interpreter, coverage and tracing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/com_mbeddr_mpsutil/">
+        MPS utilities
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/platform_build_scripts/">
+        Platform build scripts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/build_folder/">
+        Build folder
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/mps/">Clean code</a>
+<label for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Clean code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
+        Readability/maintainability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
+        Deprecation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clean_code/java/">Java (Base Language)</a>
+<label for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+          Java (Base Language)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
+        Programming principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
+        Java style guide
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Language/UI patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Language/UI patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/language_design/">
+        Language design
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/user_experience/">
+        User experience
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../patterns/ui_patterns/">
+        UI patterns
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/reading_list/">
+        Reading list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
+        Tips for open source maintainers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/icons/">
+        Icons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/core_languages/">
+        Core languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/standard_plugins/">
+        Standard plugins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/included_libraries/">
+        Included libraries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/extension_points/">
+        Extension points
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/exceptions/">
+        Exceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/actions/">
+        Actions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/abbreviations/">
+        Abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/code_abbreviations/">
+        Code abbreviations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/gitignore/">
+        Gitignore file
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/issue_trackers/">
+        Issue trackers
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../language_reference/">Language Reference (WIP)</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Language Reference (WIP)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/editing_this_guide/">
+        Editing this guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/original_authors/">
+        Original authors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/new_pages/">
+        New pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags/">
+        Tags
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#box-model">
+    Box Model
+  </a>
+<nav aria-label="Box Model" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout-box">
+    Layout box
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutboxframe">
+    LayoutBoxFrame
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boxmodel">
+    BoxModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editorcellboxmodel">
+    EditorCellBoxModel
+  </a>
+<nav aria-label="EditorCellBoxModel" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#synchronisation">
+    Synchronisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layout">
+    Layout
+  </a>
+<nav aria-label="Layout" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilayouter">
+    ILayouter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilayoutable">
+    ILayoutable
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grid">
+    Grid
+  </a>
+<nav aria-label="Grid" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extending-and-scaling">
+    Extending and scaling
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-layouts">
+    Standard layouts
+  </a>
+<nav aria-label="Standard layouts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flattening">
+    Flattening
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#runtime">
+    Runtime
+  </a>
+<nav aria-label="Runtime" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cells">
+    Cells
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractlayoutableadapter">
+    AbstractLayoutableAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#borderpainter">
+    BorderPainter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutableadapter">
+    LayoutableAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutableadapters">
+    LayoutableAdapters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutablecollectionadapter">
+    LayoutableCollectionAdapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutengine">
+    LayoutEngine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#layoutinterceptor">
+    LayoutInterceptor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Cell Layout</h1>
+<p>Some terminology of this page is explained on the page <a href="../../mps_internal/editor_development//#terminology">editor development</a>, so please read this page first. Additionally, when the variable’s type or argument is omitted in a diagram, it is assumed to be <em>int</em>. Methods without a return type, have a type of <em>void</em>.</p>
+<p>In the <abbr title="Meta Programming System">MPS</abbr> layout algorithms, the children decide about their width and height, and the parent cell can only arrange the already layouted children. The algorithms from the celllayout language are similar to the ones from the swing layouters where the child is asked for its <abbr title="minimum">min</abbr>/<abbr title="maximum">max</abbr>/preferred size, but the parent decides about the size of the child and the child then has to fit itself into these bounds. The table and diagram language uses this language, but there are also some useful styles defined in the <em>de.itemis.mps.celllayout</em> language. The language is partially inspired by the Java <a href="https://www.miglayout.com/">MigLayout</a>.</p>
+<h2 id="box-model">Box Model<a class="headerlink" href="#box-model" title="Permanent link">¶</a></h2>
+<p>The box model defines how the editor elements are modeled in the celllayout language. It is like a simplified version
+of the <a href="https://en.wikipedia.org/wiki/CSS_box_model">CSS box model</a>.</p>
+<h3 id="layout-box">Layout box<a class="headerlink" href="#layout-box" title="Permanent link">¶</a></h3>
+<p>A layout box has a <em>position</em> (x,y) and a <em>dimension</em> (width, height). These properties can be saved together in a
+<a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F6454451880331308523">Bounds</a> object which also has methods for checking if another bounds or point is contained in it.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNqNkjtuwzAMhnedgqONGtAeuEGQLh0yFOhQe1Rs1hagB2DRtdwiJ-oRuuVkle2kjfMoOkn8yZ8UP2jlSDTUasWkIWxeRYGwEb1taW09pCl6QlM6eFDWoNgqXC7hg3G-_6yQuEPaf3EO_qiMUSOrmuAePNxBJ0uqL-r7Wf3WElkdDH0w1Di4LxzX-9woFq5AcymXOOmFNSSkcU827Bz5BPp4ER5hFQrDqsZ2L8Mw_jg2j4S2raEYmLZvmPF8LhyiLJnOPMhh3LN8x6hLoI6HaCNdgIhNpA6XmO3YCe91cAbEaSq1buk25AXI361GSQuf_Q36qif_B-uZ8Qz4lDtiPCf4oxe1VOW03El6x1bhRw0_7hvvlehU"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqNkjtuwzAMhnedgqONGtAeuEGQLh0yFOhQe1Rs1hagB2DRtdwiJ-oRuuVkle2kjfMoOkn8yZ8UP2jlSDTUasWkIWxeRYGwEb1taW09pCl6QlM6eFDWoNgqXC7hg3G-_6yQuEPaf3EO_qiMUSOrmuAePNxBJ0uqL-r7Wf3WElkdDH0w1Di4LxzX-9woFq5AcymXOOmFNSSkcU827Bz5BPp4ER5hFQrDqsZ2L8Mw_jg2j4S2raEYmLZvmPF8LhyiLJnOPMhh3LN8x6hLoI6HaCNdgIhNpA6XmO3YCe91cAbEaSq1buk25AXI361GSQuf_Q36qif_B-uZ8Qz4lDtiPCf4oxe1VOW03El6x1bhRw0_7hvvlehU"/></a></p>
+<p>The size can be changed with the <em>growN</em> methods, the position can be changed with the
+<em>move</em> methods. All of those methods take relative values. A listener can be set to listening to changes in the mentioned properties.
+The default implementation is <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118843427">DefaultLayoutBox</a> which extends <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118846449">AbstractlayoutBox</a>. Whenever a setter method is called, the corresponding method of the listener is triggered. The ascent is calculated by subtracting the descent from the height.</p>
+<h3 id="layoutboxframe">LayoutBoxFrame<a class="headerlink" href="#layoutboxframe" title="Permanent link">¶</a></h3>
+<p>A <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842758">LayoutBoxFrame</a> is a box that has a frame around an inner box:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/excalidraw/svg/eNrtVm1v2zYQ_u5fYWhfW5Xk8eWYb0uboOmKtE0WtM0wDLLE2JxlyZPkOG6R_76TYlvy25AWwYCh8wcBvjsejw-fu4dfe_1-UC2mLjjqB-4ujlKfFNE8eFbbb11R-jwjl2j-l_msiJvIUVVNy6MXL9oVYZxPHla51E1cVpUU9xv97_e_Nl_y-KReewzz64VKLy6AxbG5jq6uRHHSLG2CVsUULq6ibJi61nVHdsNUCBoEcqHWjkVdosZQcW44mtYx90k1IieZQ1AWOq6R88NRRT6khBaFYEaj1hz1OuRh-6M-W1vKqsjH7mWe5kVd40-s-bUVDqJ4PCzyWZa0MTfRgDHVxtz4NL2sFk1mgpTgC7byf1xVvWU_tIo2HI4yV5Yba_JpFPuqhoaz9gR1ddOzpLmd37sZsmSZYXVd7V3A0nLf1uNcfZeAGkGCEmtHhzLIcNt8nmcNf7hUaDU3Uq4jfPmKiFM1aW-itHQtpnVtJx1StWXPpkn0sIRrFMZwhkwpWPtTn41rvFqo0jwet3v0OqfaYulzC_Dx-ESPL85Pr2MpPv355vblLksrd1dtEVTLUBqJICy3WoDYYCkIHSoDaIww1hICO1RVEIJhGrnRQlsFfJexAkLJpETNteXa0CU8MWUHTg6SwX-HstksTbe5idTuQmq5h5ocNDtEzRpQaSniO5i5UcY2N7UxwLR4NDdbqtUUo8DTIpp0huFNnlWX_kvTThgaAQrRggKQwqqNqNNo4tPFBtB1zp9TP6zRCGIq3xVBF5HK01xfB1T5tMuX0lHtzb4tSDHtE5G1OEu2gcgLP_RZlP66_xx1rtcrZvNQqH9oyrMP3r4997P43fzV83Pzx4y___zu8dJBOHGjzK50IAsfek3skQ5pdjsQbKiZkpq0pmkn_oM34DdoBieqCrtHHJrGtPpQY2prDMNuQz-NZAghdOdZsGzLDQY_WjTezj7b8Zu_PObzX-YnE_v6-hNePUo0pAo5cK2RWYaCwRY_bUijjG28X1b8tDK0QnINyLF-4uAevZA0HxQFCNIjpjnA_3qxoxcaFL1KJLI9vFRgDtFSGkZTnXW2fzK9QKQZ8w3E3FGMs4wGcv84v9uvGjY0yIDRBLMopWX6X1IN8z2qsecsB5SDvs2tB9F0elkRpuv5RMzwyfL07WbBrXfz430P9-YX9JbdXrPaNcPuvnff-xuUDkdY"><img alt="Kroki" src="https://kroki.io/excalidraw/svg/eNrtVm1v2zYQ_u5fYWhfW5Xk8eWYb0uboOmKtE0WtM0wDLLE2JxlyZPkOG6R_76TYlvy25AWwYCh8wcBvjsejw-fu4dfe_1-UC2mLjjqB-4ujlKfFNE8eFbbb11R-jwjl2j-l_msiJvIUVVNy6MXL9oVYZxPHla51E1cVpUU9xv97_e_Nl_y-KReewzz64VKLy6AxbG5jq6uRHHSLG2CVsUULq6ibJi61nVHdsNUCBoEcqHWjkVdosZQcW44mtYx90k1IieZQ1AWOq6R88NRRT6khBaFYEaj1hz1OuRh-6M-W1vKqsjH7mWe5kVd40-s-bUVDqJ4PCzyWZa0MTfRgDHVxtz4NL2sFk1mgpTgC7byf1xVvWU_tIo2HI4yV5Yba_JpFPuqhoaz9gR1ddOzpLmd37sZsmSZYXVd7V3A0nLf1uNcfZeAGkGCEmtHhzLIcNt8nmcNf7hUaDU3Uq4jfPmKiFM1aW-itHQtpnVtJx1StWXPpkn0sIRrFMZwhkwpWPtTn41rvFqo0jwet3v0OqfaYulzC_Dx-ESPL85Pr2MpPv355vblLksrd1dtEVTLUBqJICy3WoDYYCkIHSoDaIww1hICO1RVEIJhGrnRQlsFfJexAkLJpETNteXa0CU8MWUHTg6SwX-HstksTbe5idTuQmq5h5ocNDtEzRpQaSniO5i5UcY2N7UxwLR4NDdbqtUUo8DTIpp0huFNnlWX_kvTThgaAQrRggKQwqqNqNNo4tPFBtB1zp9TP6zRCGIq3xVBF5HK01xfB1T5tMuX0lHtzb4tSDHtE5G1OEu2gcgLP_RZlP66_xx1rtcrZvNQqH9oyrMP3r4997P43fzV83Pzx4y___zu8dJBOHGjzK50IAsfek3skQ5pdjsQbKiZkpq0pmkn_oM34DdoBieqCrtHHJrGtPpQY2prDMNuQz-NZAghdOdZsGzLDQY_WjTezj7b8Zu_PObzX-YnE_v6-hNePUo0pAo5cK2RWYaCwRY_bUijjG28X1b8tDK0QnINyLF-4uAevZA0HxQFCNIjpjnA_3qxoxcaFL1KJLI9vFRgDtFSGkZTnXW2fzK9QKQZ8w3E3FGMs4wGcv84v9uvGjY0yIDRBLMopWX6X1IN8z2qsecsB5SDvs2tB9F0elkRpuv5RMzwyfL07WbBrXfz430P9-YX9JbdXrPaNcPuvnff-xuUDkdY"/></a></p>
+<p>Setting the frame size sets it for all sides (left, right, bottom, top).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNptj7ENwjAURHtP4RIqLxBFEUhUdJnAgUuwZPsj-yKFICZiBLpMhqlx-94V77pMmzgHr1wk0mgv0Gf7kJkHWXTTYCHiNeujlwg7eLStfipjtvcEmgxuH2O0x8jerfgTyU23uqHcq3wQUkJVuRiRSpYq4JRsQL9il8tyr16qK5m_G1_CzE-G"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNptj7ENwjAURHtP4RIqLxBFEUhUdJnAgUuwZPsj-yKFICZiBLpMhqlx-94V77pMmzgHr1wk0mgv0Gf7kJkHWXTTYCHiNeujlwg7eLStfipjtvcEmgxuH2O0x8jerfgTyU23uqHcq3wQUkJVuRiRSpYq4JRsQL9il8tyr16qK5m_G1_CzE-G"/></a></p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118845385">AbstractLayoutBoxFrame</a> extends this class.
+The position is calculated by the inner box’s position minus the frame size and the dimension is the inner box’s dimension plus the
+frame size. The default implementation is <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118843041">DefaultLayoutBoxFrame</a>. It contains a layout box has the frame size split up into left, right, bottom and top size.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F2623983396592470484">CalcOnWriteFrame</a> is a layout box frame which contains an inner and result layout box. The position and dimension are returned from the result box while the same setter methods set the properties of the inner box. When the inner box changes, the listener propagates those changes to the result box. When the left/right/bottom or top size is set, the property of the result box is set by a delta.</p>
+<h3 id="boxmodel">BoxModel<a class="headerlink" href="#boxmodel" title="Permanent link">¶</a></h3>
+<p>A <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842608">BoxModel</a> consists of 4 boxes. The most inner box contains the content, the most outer box is the margin.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/excalidraw/svg/eNrtWNtS20gQfecrXN7XzWTuF95iQgIkIQSWBNjaSsnS2AgLyUgytpPKv6dHOJZsy5RxTLY2ix5c5bn29Jzuc3q-bjUazXzct83tRtOOfC8Kg9QbNv907bc2zcIkhi5a_M-SQeoXIy_zvJ9tP39ezkB-cn03y0b22sZ5BuP-hv-NxtfiF3rCwM1NW4fZVXbU677BwU2UjePgbPS6mFoM-mFMav3ci7uRLbtG0C6FQEQZqZWYto-dhYwixlmldRgG-aXrUQZJOTfl0obdyxx6iRGIc8KxpAK7T07H3O2-3cDTlixPk57dSaIkdSb-UUzApYFtz-9102QQB-UYIjyv3SnHdMIoOsnHxcrgUfBec279TxPDyVz7slmwYfcytlk2Myfpe36YO9cQXJ7AWdffD4rL-ae6QhxMVvhxW-VVsEnLt9Iea91VUkyYpFSULqsgBmsx33yYxAV8KJWGKsHKeWH2EmCTF6t2vCizpUudabslpOJBFE07B_3Au5tEpKZKKS41rywbhXHPOaz0VZT4vXKXrcqx5lDa8Wxydv7hKu2P7Hiv-_rzXi-iq6NUGrSAUAEIxXwGhlOMcoGYVEQrbopP1SCVU8S1pppQsWmM0rbW8rfEKCFSMS4l1jUgJYyaZSAlWlCuBRe_CqUzc1bG6VtlWvz24IRcnNL9zujEC9vBl0Wc5naUz0JUQcLUzOiZnOmugkmCiKD1yZQQghw-seZcUSkkXQTqxuHZtrwdtP878Jy5yQkOtRBKGlwLQ3UPCg1hSlGt8eZRqIU25AEoLEHlwARObCVpYNNGKxlV7iaJ85PwS5Hm8UzrK-86jMYzDnYLvYjCrnNCM7KdCkTBD3kI4mLanSf9KkoyCwbfxem01YddPGhN94P5kyRp2A1jL_rrHtPdgnvTbIuouCfsWmx4MRbR8THDvq8uvNNTmu6uTA8Ku3TPZlN5wRFSI0GII4Ka2FMEMWFYnYzRsKDRlGIltZREb1rFdLw2xuK3ZAimpYZkJ2iditGULAtNxinENMF8jcisWP2IGuaZYexTa1f2jg9fXficnl0d3O6sxg0CYaaANY1mQutZfqASCcU0pCVlDFG8hiQoAkWDQRkyrpaQBEMcc64lkQYoGu7giTRqSMMwyiWvlS6KLdXX2ChgcSiJ_m2BvUAZR14QhHF3KWcQjRR1kDNMMIgwIx7EIT4cwqbrsIhch0VqT_MQGtn_EJq3h-HAfz98-exQfR6Qo_P3q9MIeIsooRZpRGMENZZg1Y5pdPKa4oJBjYxFUZwUsUX-59H4kAoDAEuNri8wOF4q7TQmoMH1L2GPNWuLwbnpHdyEOhm-Ge5em72LM326Gn8QBEASmAmOMauozDt0GqAH4JbaAoMSBBKGG2qIMZRUyKfkDg5JQjCAvaQMS8LYE3cscIcE3wvNK4VDCUshl6oaZQgxqlqnbIw6gOfpT9UbO5CZYavl5GGQ0pgB7kC3cG4qb3mPSx5qHfKoPc1DyAOfdtPRWbLTb9_m1-PRu_ZNl39cLTw1gviTkmru3lLNrL4zBon6ZyqCFQJNYihnRBZPpk_V_0rBCGW8AVSCMK4liaUvpYRRoYHJzSMoOSft6c-E4zsvBUBvqvxfP_rWegCoM35J8MFvcdNNr98_ycGLU30AaAiDyXHL3Zq3oR226oro4mtuTQLaIdkWYuPbFmzyHWrsV7U="><img alt="Kroki" src="https://kroki.io/excalidraw/svg/eNrtWNtS20gQfecrXN7XzWTuF95iQgIkIQSWBNjaSsnS2AgLyUgytpPKv6dHOJZsy5RxTLY2ix5c5bn29Jzuc3q-bjUazXzct83tRtOOfC8Kg9QbNv907bc2zcIkhi5a_M-SQeoXIy_zvJ9tP39ezkB-cn03y0b22sZ5BuP-hv-NxtfiF3rCwM1NW4fZVXbU677BwU2UjePgbPS6mFoM-mFMav3ci7uRLbtG0C6FQEQZqZWYto-dhYwixlmldRgG-aXrUQZJOTfl0obdyxx6iRGIc8KxpAK7T07H3O2-3cDTlixPk57dSaIkdSb-UUzApYFtz-9102QQB-UYIjyv3SnHdMIoOsnHxcrgUfBec279TxPDyVz7slmwYfcytlk2Myfpe36YO9cQXJ7AWdffD4rL-ae6QhxMVvhxW-VVsEnLt9Iea91VUkyYpFSULqsgBmsx33yYxAV8KJWGKsHKeWH2EmCTF6t2vCizpUudabslpOJBFE07B_3Au5tEpKZKKS41rywbhXHPOaz0VZT4vXKXrcqx5lDa8Wxydv7hKu2P7Hiv-_rzXi-iq6NUGrSAUAEIxXwGhlOMcoGYVEQrbopP1SCVU8S1pppQsWmM0rbW8rfEKCFSMS4l1jUgJYyaZSAlWlCuBRe_CqUzc1bG6VtlWvz24IRcnNL9zujEC9vBl0Wc5naUz0JUQcLUzOiZnOmugkmCiKD1yZQQghw-seZcUSkkXQTqxuHZtrwdtP878Jy5yQkOtRBKGlwLQ3UPCg1hSlGt8eZRqIU25AEoLEHlwARObCVpYNNGKxlV7iaJ85PwS5Hm8UzrK-86jMYzDnYLvYjCrnNCM7KdCkTBD3kI4mLanSf9KkoyCwbfxem01YddPGhN94P5kyRp2A1jL_rrHtPdgnvTbIuouCfsWmx4MRbR8THDvq8uvNNTmu6uTA8Ku3TPZlN5wRFSI0GII4Ka2FMEMWFYnYzRsKDRlGIltZREb1rFdLw2xuK3ZAimpYZkJ2iditGULAtNxinENMF8jcisWP2IGuaZYexTa1f2jg9fXficnl0d3O6sxg0CYaaANY1mQutZfqASCcU0pCVlDFG8hiQoAkWDQRkyrpaQBEMcc64lkQYoGu7giTRqSMMwyiWvlS6KLdXX2ChgcSiJ_m2BvUAZR14QhHF3KWcQjRR1kDNMMIgwIx7EIT4cwqbrsIhch0VqT_MQGtn_EJq3h-HAfz98-exQfR6Qo_P3q9MIeIsooRZpRGMENZZg1Y5pdPKa4oJBjYxFUZwUsUX-59H4kAoDAEuNri8wOF4q7TQmoMH1L2GPNWuLwbnpHdyEOhm-Ge5em72LM326Gn8QBEASmAmOMauozDt0GqAH4JbaAoMSBBKGG2qIMZRUyKfkDg5JQjCAvaQMS8LYE3cscIcE3wvNK4VDCUshl6oaZQgxqlqnbIw6gOfpT9UbO5CZYavl5GGQ0pgB7kC3cG4qb3mPSx5qHfKoPc1DyAOfdtPRWbLTb9_m1-PRu_ZNl39cLTw1gviTkmru3lLNrL4zBon6ZyqCFQJNYihnRBZPpk_V_0rBCGW8AVSCMK4liaUvpYRRoYHJzSMoOSft6c-E4zsvBUBvqvxfP_rWegCoM35J8MFvcdNNr98_ycGLU30AaAiDyXHL3Zq3oR226oro4mtuTQLaIdkWYuPbFmzyHWrsV7U="/></a></p>
+<p>The default implementation is <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842820">DefaultBoxModel</a> which is used by <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F4403454289951403328">EditorCellBoxModel</a>. </p>
+<h3 id="editorcellboxmodel">EditorCellBoxModel<a class="headerlink" href="#editorcellboxmodel" title="Permanent link">¶</a></h3>
+<p>This box model is stored in the user object of the corresponding cell under the key 
+<em>EditorCellBoxModel</em>. Besides the mentioned boxes, is has a box for additional padding and a bracket box for when the cell has the stylesheet item <em>drawBrackets</em> enabled. The brackets have a width of 7 pixel. </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/excalidraw/svg/eNrtWV1T20YUfedXeNzXdrN79ztvgZAACQ6EkgCdDiNLwggLy5ZlYyeT_94r2ViyLREDpp1Q_MDg_dLq7rn3nLP-vlGr1ZNx16-_rtX9keuEgRc7N_Xf0_ahH_eDqINdkH3vR4PYzUZeJkm3__rVq3wGcaPrySw_9K_9TtLHcX_h91rte_YXewIvnXt82IvCTnI0boqt3lVvqK53T3eyqdmg283Evps4nVbo510jbFcAhGtjqQI56xhjB7NAlBJz7TeBl1xiHxeWSE05A0mzj5oNufSD1mWSjqGWGAOGFeZPnv-6Rmct_SSO2v5WFEZxusnfJsvlW2w6brsVR4OOl49xfU94Tj7mIgjDo2ScrYwxxfjVF9b_Ot03W2ivmoUPbF12_H5_bk7UddwgyWJD8zdId9fd9bLj-bu4QsebrnB7Xvlh8GnLj3w_vu9lCwNXwjCdBzQHDaPKLDY3ok6GIKBMGKFAzAYE_beInCRb9sIJ-34e03Rv2zmqOoMwnHUOup4zmcSUAa0Z04aJPAhh0Gkvzgkjt50_Z6PwZgtQPd8Z00HsNbZcQfc1T_bH3Xd6GaqJP0rmUaq5IZQvg1RoIJDhcAmjjGpipLUgOFuA8Qyja4dm0xdNr_nrQHPuGKcYFBgsyiwvhaAVVQhkhkmErjDrR6DiUtp7IDAHVAokjOG-E7eCTm0zGhWOJsKaGXybJM9c6zvnOgjHc_FNF3oTBq00BvXQvyjAE8OQBFi1Z91J1C2CpO_jhicBmrW6-BQHW-Ndb_FNojjArTrhn3dsPV1w5xbDjIC8K-VMx3z4ctoTx15vcNm6_NJs8KPV2YErIphYyjtgQDAn0-oubPoRyxzB9C1_VHIESEWoFsCMlgtj1pOPF44ECc-SKjhQqywVtCxNseRV5akUlgETUj0gTwu7Xs5SzFEt18MTw_0GiHMn2T8YHh6cdyJ6vXcWrcYTnGgLVhm9QBQIZD3fPCMKxkgKYWoE0omSCl6IYiWiYNRQgyoQyiBojK5CoDVI2NqYJ2AKlAigHsMUm1Hs-fEvyRRlW78PU8Sbjf5V_6Dd-kC9Xtgfd7yT0fvVmUJKwvRy4gFHfyF4Sd6BtkgQC1NmGcesJGJKPU9CDUw6TvPiWVIDmgGOvk6WKTigmlZSA0e5zMHQ9ScmMFZYdpqY9fr9qeHC8aOT08OruDvyxzut9-c77RBWR6lCU7qIUIkIpaKUG0BIwpVGfTKROVaXIFUAEU_jdBk0jVHP0-kypblQippy_SIrfQbWBCRrbtZvdZHPpOTrkTAftd0Uw70jdnYMuxejIydoet9WkTBYEQm3Qs6Z2vQouGJkwQLPYAoCYW0NMK31fLV9kTB3SRgjpUYRXQpCpSoxCJxrKg01_z0ElxTMG88LEtyrE9YOHPy_0_ol1czPXuM-ymaT35yNZfj5M6euq8-c42OIt1fmDDxp5AA-X98z4lCGSMZSdihxFRqzVdrSVDS4ICYrUrEySjGzftfbpFQ-T9drlMECJ6FM2hhaeT-KhtdYxbQQa7a95Qn7EGXzh-X86-a2an9uvDtzBZxc7Q23VjO9kqDtMRY9lTC8oJQz2gBFpOZGaxTcFiNQYoCBAFY7yQwHDGIhRjl7cCKwwyimLDK3KdxEv7BJziaWg1CiVNHIyptTq7BQoECGf4lNKsG5xCU_IxBmiAYujbFcci7AynsRiosv4ccPoRT1EEp5NI_sHgb2YyMYuJ9u3v7R0OcDdnD6aXUewWgxLfUyjxiK-Wdl-c8YosRycHTOVGaWJUst9j9Pxvv4DgQsWFNhO2zltamyWlNTTO718AcAqHVdm34cnNr2Xi8w0c2Hm-1ru3N2Yo5XYxBGJKfIHdxwXpTDE3xagmWN2rJbHHT2RBmcZVEUo6op4w6BVUJyxL0CZCfG-Qt3LHEHcgBKFGHK7lIl8DvcsEbOF3r95MEsOkr6GCuyhbUZH1VNH5ZoQznFIobAEbagXJ6WPvRD6KP0be5DH_S4FY9Ooq1uc5hcj0f7zV5LfFkpPQEDxajSVKTHwsS8wLOWyPLrKySU1IRYain6XLQk9uVeYLWfNiyziMqiJivQBLDKdIT07hX0U1xOWWOYfNRvGzGelp-s6zrg4en3sJ83ynZfkX74NzvrutPtHiUYx5lGQDwE3vR988fVh4F_s1nmpLNPfWOa0imW_Uxw_NjAh_wDRBhqnA=="><img alt="Kroki" src="https://kroki.io/excalidraw/svg/eNrtWV1T20YUfedXeNzXdrN79ztvgZAACQ6EkgCdDiNLwggLy5ZlYyeT_94r2ViyLREDpp1Q_MDg_dLq7rn3nLP-vlGr1ZNx16-_rtX9keuEgRc7N_Xf0_ahH_eDqINdkH3vR4PYzUZeJkm3__rVq3wGcaPrySw_9K_9TtLHcX_h91rte_YXewIvnXt82IvCTnI0boqt3lVvqK53T3eyqdmg283Evps4nVbo510jbFcAhGtjqQI56xhjB7NAlBJz7TeBl1xiHxeWSE05A0mzj5oNufSD1mWSjqGWGAOGFeZPnv-6Rmct_SSO2v5WFEZxusnfJsvlW2w6brsVR4OOl49xfU94Tj7mIgjDo2ScrYwxxfjVF9b_Ot03W2ivmoUPbF12_H5_bk7UddwgyWJD8zdId9fd9bLj-bu4QsebrnB7Xvlh8GnLj3w_vu9lCwNXwjCdBzQHDaPKLDY3ok6GIKBMGKFAzAYE_beInCRb9sIJ-34e03Rv2zmqOoMwnHUOup4zmcSUAa0Z04aJPAhh0Gkvzgkjt50_Z6PwZgtQPd8Z00HsNbZcQfc1T_bH3Xd6GaqJP0rmUaq5IZQvg1RoIJDhcAmjjGpipLUgOFuA8Qyja4dm0xdNr_nrQHPuGKcYFBgsyiwvhaAVVQhkhkmErjDrR6DiUtp7IDAHVAokjOG-E7eCTm0zGhWOJsKaGXybJM9c6zvnOgjHc_FNF3oTBq00BvXQvyjAE8OQBFi1Z91J1C2CpO_jhicBmrW6-BQHW-Ndb_FNojjArTrhn3dsPV1w5xbDjIC8K-VMx3z4ctoTx15vcNm6_NJs8KPV2YErIphYyjtgQDAn0-oubPoRyxzB9C1_VHIESEWoFsCMlgtj1pOPF44ECc-SKjhQqywVtCxNseRV5akUlgETUj0gTwu7Xs5SzFEt18MTw_0GiHMn2T8YHh6cdyJ6vXcWrcYTnGgLVhm9QBQIZD3fPCMKxkgKYWoE0omSCl6IYiWiYNRQgyoQyiBojK5CoDVI2NqYJ2AKlAigHsMUm1Hs-fEvyRRlW78PU8Sbjf5V_6Dd-kC9Xtgfd7yT0fvVmUJKwvRy4gFHfyF4Sd6BtkgQC1NmGcesJGJKPU9CDUw6TvPiWVIDmgGOvk6WKTigmlZSA0e5zMHQ9ScmMFZYdpqY9fr9qeHC8aOT08OruDvyxzut9-c77RBWR6lCU7qIUIkIpaKUG0BIwpVGfTKROVaXIFUAEU_jdBk0jVHP0-kypblQippy_SIrfQbWBCRrbtZvdZHPpOTrkTAftd0Uw70jdnYMuxejIydoet9WkTBYEQm3Qs6Z2vQouGJkwQLPYAoCYW0NMK31fLV9kTB3SRgjpUYRXQpCpSoxCJxrKg01_z0ElxTMG88LEtyrE9YOHPy_0_ol1czPXuM-ymaT35yNZfj5M6euq8-c42OIt1fmDDxp5AA-X98z4lCGSMZSdihxFRqzVdrSVDS4ICYrUrEySjGzftfbpFQ-T9drlMECJ6FM2hhaeT-KhtdYxbQQa7a95Qn7EGXzh-X86-a2an9uvDtzBZxc7Q23VjO9kqDtMRY9lTC8oJQz2gBFpOZGaxTcFiNQYoCBAFY7yQwHDGIhRjl7cCKwwyimLDK3KdxEv7BJziaWg1CiVNHIyptTq7BQoECGf4lNKsG5xCU_IxBmiAYujbFcci7AynsRiosv4ccPoRT1EEp5NI_sHgb2YyMYuJ9u3v7R0OcDdnD6aXUewWgxLfUyjxiK-Wdl-c8YosRycHTOVGaWJUst9j9Pxvv4DgQsWFNhO2zltamyWlNTTO718AcAqHVdm34cnNr2Xi8w0c2Hm-1ru3N2Yo5XYxBGJKfIHdxwXpTDE3xagmWN2rJbHHT2RBmcZVEUo6op4w6BVUJyxL0CZCfG-Qt3LHEHcgBKFGHK7lIl8DvcsEbOF3r95MEsOkr6GCuyhbUZH1VNH5ZoQznFIobAEbagXJ6WPvRD6KP0be5DH_S4FY9Ooq1uc5hcj0f7zV5LfFkpPQEDxajSVKTHwsS8wLOWyPLrKySU1IRYain6XLQk9uVeYLWfNiyziMqiJivQBLDKdIT07hX0U1xOWWOYfNRvGzGelp-s6zrg4en3sJ83ynZfkX74NzvrutPtHiUYx5lGQDwE3vR988fVh4F_s1nmpLNPfWOa0imW_Uxw_NjAh_wDRBhqnA=="/></a></p>
+<h4 id="synchronisation">Synchronisation<a class="headerlink" href="#synchronisation" title="Permanent link">¶</a></h4>
+<p>The read synchronisation method initializes the boxes based on the information from the editor cell. The padding is calculated as the gap minus the additional padding. If the padding is negative it is added as additional padding, otherwise it is set to the padding box.
+If the dimension is less than the total frame size of the bracket box, the additional padding is set to 0. The dimension is the maximum of the current dimension and the total frame size of the bracket box. The default behavior of <abbr title="Meta Programming System">MPS</abbr> is not to reserve any space for the border and let it overlap. That’s why the position is therefore calculated as the border size minus 1.
+In the write synchronisation method, the left and right gap are set. They are calculated as the padding plus the additional padding. Depending on the <em>useMove</em> flag, the cells are then moved or only the position is set.</p>
+<h2 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">¶</a></h2>
+<p>The immutable class <a href="http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1140493069047732951">Size</a> has special methods for supporting unlimited sizes which are just large numbers that are larger than every practically used size. This approach reduces the potential for overflow errors. <em>limitedX</em> methods can be used for limiting either the width or height.
+The <em>deriveN</em> methods just change the width or height separately.</p>
+<h3 id="ilayouter">ILayouter<a class="headerlink" href="#ilayouter" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1605248462118897924">ILayouter</a> has a layout method and a method to move the children of a layoutable container by a delta.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNqVkc1KQ0EMhffzFHfZgk8gIrUXhILChbqoy3TuaR1IE8xkSrX03TsjBXVTdJPf75xFMstO5mXHIYnDNhTRLZ7oQ0vtumPgr3ISVZySwG66nD7Rq2S3OvBp2Oke_Vvi0SA_uRHstLrk12nYwgfDBmYYl9Xjiudt14CmeE6ykIr8XUCH_wkecoT4VbTGRvZgzo9qSzCiJ5Wh7ZNsv8XNF-93lwPSmnEfXF9w8F9MG8xLPRkslIw8FIleqHlO6nqtyiAJpzCDjO03Z_dUnDs="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNqVkc1KQ0EMhffzFHfZgk8gIrUXhILChbqoy3TuaR1IE8xkSrX03TsjBXVTdJPf75xFMstO5mXHIYnDNhTRLZ7oQ0vtumPgr3ISVZySwG66nD7Rq2S3OvBp2Oke_Vvi0SA_uRHstLrk12nYwgfDBmYYl9Xjiudt14CmeE6ykIr8XUCH_wkecoT4VbTGRvZgzo9qSzCiJ5Wh7ZNsv8XNF-93lwPSmnEfXF9w8F9MG8xLPRkslIw8FIleqHlO6nqtyiAJpzCDjO03Z_dUnDs="/></a></p>
+<p>All the <em>size</em> methods and the ascent calculation method take a container as the first parameter and a size constraint as a second parameter to restrict the returned size.
+<em>toText()</em> produces a string that is returned when copying the cells to the system clipboard. <em>usesPunctuation()</em>
+determines if punctuation stylesheet items are used. The class <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4403454289948172446">AbstractLayout</a> extends this interface. It has a method for checking and returning the gap in pixels between two ILayoutables. If the left ILayoutable has the stylesheet item <em>punctuation-right</em> or the right the item <em>punctuation-left</em> enabled, there is no gap. If one the two ILayoutables has
+a border on the conjoined side, there is also no gap.</p>
+<h3 id="ilayoutable">ILayoutable<a class="headerlink" href="#ilayoutable" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNp9kkFqwzAQRfc-hZYOGHufblJ7UQpJCaSQbifWJBbIGiONid2QE_UI3eVklWVD2uIWLAve_5ovjbRyDJbbWkfKMNojlCie19BTy3DQKC6REFl2-zghZw759pllogGLhpfffQUZBmXQzti7GdbPsLOSXM3wCtWp4rsQ4IG6DUnUvzC40m9tpkhZgTmh9IonObVGurhLRJ-MscmUshgNW3KKFZlgmdhOvWP80_wgvDQMn7S1eERrUQaf8z_fE8fWdyVU9ZaNMv-I0P0tPoZjBW0M9Z9FHdo_s2KQlXuydH6LpwoF6bY2uwZMIMq90N5CE9_T98PRJjEHh2t_nQVqHdClRq5IXkWaplMA0yt2HC-WYpjzVmnpr_8aRSs0cnhQX1Jozl0="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9kkFqwzAQRfc-hZYOGHufblJ7UQpJCaSQbifWJBbIGiONid2QE_UI3eVklWVD2uIWLAve_5ovjbRyDJbbWkfKMNojlCie19BTy3DQKC6REFl2-zghZw759pllogGLhpfffQUZBmXQzti7GdbPsLOSXM3wCtWp4rsQ4IG6DUnUvzC40m9tpkhZgTmh9IonObVGurhLRJ-MscmUshgNW3KKFZlgmdhOvWP80_wgvDQMn7S1eERrUQaf8z_fE8fWdyVU9ZaNMv-I0P0tPoZjBW0M9Z9FHdo_s2KQlXuydH6LpwoF6bY2uwZMIMq90N5CE9_T98PRJjEHh2t_nQVqHdClRq5IXkWaplMA0yt2HC-WYpjzVmnpr_8aRSs0cnhQX1Jozl0="/></a></p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047745619">ILayoutable</a> inherits some methods of LayoutBox, some of ILayouter. The main method <code>relayout</code> calculates the new position and dimension of an editor cell. Additionally, the interface has methods for the special celllayout properties such as <em>growX</em>, <em>column-span</em> etc. and methods for checking and setting the <em>changed</em> flag.
+ In <a href="AbstractLayoutable">AbstractLayoutable</a> all those properties are set to false and the column and row spans are by default set to 1.</p>
+<p>The <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047704919">ILayoutableContainer</a> inherits from ILayoutable and has a layouter and children:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNplkMEKwjAQRO_5ij22UOi9iJQKasG7eozNahbiFpItWsQv8i_8MpuC0NLr22FmZ8og2kt3d4pY0F91g1AfdN92oi8O4aUA8vz7uaHkOTSWnPHIBTgKspoI1zMdMaM_LdF5iY5kxC7xHulmZcbdGIa--D-IfrhT2DotglzzzpNJ0oEFlDqaVG3HJiTPDPoMHjEoAzsaR9XgWumAjhg3sVeSFtPq6q1KZBOn-QGe5GTQ"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNplkMEKwjAQRO_5ij22UOi9iJQKasG7eozNahbiFpItWsQv8i_8MpuC0NLr22FmZ8og2kt3d4pY0F91g1AfdN92oi8O4aUA8vz7uaHkOTSWnPHIBTgKspoI1zMdMaM_LdF5iY5kxC7xHulmZcbdGIa--D-IfrhT2DotglzzzpNJ0oEFlDqaVG3HJiTPDPoMHjEoAzsaR9XgWumAjhg3sVeSFtPq6q1KZBOn-QGe5GTQ"/></a></p>
+<p>There are <em>innerX</em> methods for getting the position and dimension as well as a method for setting the inner bounds. There is also support for the <em>flatten-grid</em> and <em>base-line-child</em> property.</p>
+<h3 id="grid">Grid<a class="headerlink" href="#grid" title="Permanent link">¶</a></h3>
+<p>A <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991452">Grid</a> is a 2D structure and consists of <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714">GridElement</a>s and has a dimension. Internally a 1D array is used to store the elements.</p>
+<h4 id="extending-and-scaling">Extending and scaling<a class="headerlink" href="#extending-and-scaling" title="Permanent link">¶</a></h4>
+<p>Each row has an ascent and descent, and all columns can have different widths. A column’s width can be extended. It is kept the same if the new with is smaller than the existing width. It can also extend to an unlimited size. The row’s height can also be extended by providing a new ascent and descent. The sum of both values has to be greater than zero. When the old values are greater, nothing changes. The contained cells of the grid can also be extended by providing a size getter that determines a new size for each ILayoutable.</p>
+<p>The widths can also be scaled by proving a new value and weights for the columns. The widths of the columns are percentages of the
+new width based on the weights (possible rounding errors are compensated). The same scaling method exists for the height: it works the same way except that the ascents and descents of the rows are recalculated. The provided weights don’t have to add up to 1 as they are automatically normalized.
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Example calculation</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">availableWidth</span><span class="o">=</span><span class="mi">500</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">newColumnWidths</span><span class="o">=[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// calculation:</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">float</span><span class="o">[]</span><span class="w"> </span><span class="n">weighths</span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kt">float</span><span class="o">[]</span><span class="w"> </span><span class="n">newColumnSizes</span><span class="o">=[</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div></p>
+<p>The method <em>applyLayout(x, y)</em> takes a position as an argument and sets new bounds for the individual valid elements of the grid. An element is valid when it has a ILayoutable.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">baseLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascent</span><span class="p">(</span><span class="n">row</span><span class="o">[</span><span class="n">y</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">x</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">baseLine</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">ascent</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div></p>
+<p>When the alignment center or alignment right property is set, the x position is changed accordingly based on the remaining space.
+This is the elements size minus the result size which is calculated in the following way: the minimum of the elements size and the preferred size is calculated, then the minimum of this size and the maximum size. If the <em>overflowN</em> property is set, the corresponding size direction will be set to unlimited.</p>
+<p>The main method of the grid is <em>growElement</em> which takes a grid element, an offset and the two directions as arguments. If the elements’ dimension is lower than the maximum size of the ILayoutable, the ILayoutable’s dimension becomes the element’s dimension, otherwise the additional padding of the layout’s box model is used to grow the element. For the horizontal growing, the alignment is taking into account.</p>
+<p>A <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714">GridElement</a> has a ILayoutable and different <em>extendN</em> methods: extendSize works by changing the ascent of the ILayoutable. The descent is calculated by substracting the ascent from the height. There are further methods for extending the width and extending the columns.</p>
+<h3 id="standard-layouts">Standard layouts<a class="headerlink" href="#standard-layouts" title="Permanent link">¶</a></h3>
+<p>Default implementations for the standard <abbr title="Meta Programming System">MPS</abbr> layouts are provided:</p>
+<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047724245">HorizontalLayout</a> (grid with 1 row)</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674300634136">VerticalLayout</a> (grid with 1 column)</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674303613006">IndentLayout</a> (layout based on lines that consist of words)</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F6809252184302533466">ICellLayoutWrapper</a></li>
+</ul>
+<p>ICellLayoutWrapper can wrap an existing cell layout. It can be unwrapped by calling CellLayout.unwrapAll.
+<a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F3671361614442888780">IEditorCellBasedLayoutable</a> extends ILayoutable and contains an editor cell, a method to check if an indent is present and a <code>readSyncAll</code> and <code>writeSyncAll</code> method.
+<a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F3671361614442886164">ISupportsTopDownLayout</a> is an editorCell that has a topdown layoutable (IEditorCellBasedLayoutable).</p>
+<ul>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F20138194853236771">GridLayout</a></li>
+</ul>
+<p>This class uses the class <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F8791219374217538066">DynamicGrid</a> to store the grid. DynamidGrid stores the elements in a 1D array and automatically grows the array when the grid size changes.
+This layout respects the grid and row span properties and automatically adjusts the spans when the value is set to a negative value. The new values becomes
+the maximum number of spans that are available. It also has a method to load a <abbr title="subtraction">sub</abbr> grid into a DynamicGrid. The grid elements come from a <a href="http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047704919">ILayoutableContainer</a>.</p>
+<h4 id="flattening">Flattening<a class="headerlink" href="#flattening" title="Permanent link">¶</a></h4>
+<p>An ILayoutable is considered an intermediate if</p>
+<ul>
+<li>it has a horizontal layout and the parent is a grid layout</li>
+<li>it has a grid layout, horizontal or vertical layout and the <em>flatten-grid</em> stylesheet item is set.</li>
+</ul>
+<p>This method plays a role in the flattening of the grid. When this item is used, all ancestor elements of the grid that have this property enabled,
+are placed directly in the main grid and are not <abbr title="subtraction">sub</abbr>-grids. In the following example it is assumed that the property is enabled for all children:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/excalidraw/svg/eNrtXFtT4koXfZ9fYfm9HnP6fpk3QfEy3m-op05ZEaJkCAQhoHhq_vu3OygEkkhwgmamhqma0nQ6dHfW2mvv3rv978vKymow7DirX1dWnaea7bn1rv24-pe5PnC6PddvQxMJf-_5_W4tvLMRBJ3e17__nvSwan5r1MvxnJbTDnpw3z_w-8rKf-H_0OLWTd-H9W-ydW4jMTiodYMruUkq3zfCruFNr4PpOrXAbt97zqTpCa4LLi2lhMRK8nHDEBowI5YUeLrh0a0HDWhkVFlEUkYlR-FHjG9pOO59IzAP4MjSjFNMmA4_bHzPaBxfV9D4Si_o-k2n7Ht-1wz2f6OnToZ6a9ea912_365P7qk5dVa3J_fcuZ53Ggy90YratUa_G5ns6BuqLxPAM9fH_Xo-rP-kF3zlfaPt9HpTffyOXXODcJXQZA5mfJ2devii_o0-oV1_ecLrm5u8Fvpy5cdkPI5jXqtgWMMqMz1umKBHkdjVA78dIglLqokkiE7ucHsbAKEgfOqd7fWcyaKaoW3OwisKsQjMusPWRunwutYq3d2S00bzqDe4rowXagpqdrfrP66OW368_DRZk36nbo8GhAVMhmqmCBETDHluuwmN7b7nTa75teZkDl8iizbDB68z2K-UfHZZ8c9vWg-NbuN893t2PkhmcaqRIDN0ENhSBu8xLgCBiBxxIU4CpixNKdfRxnzQj7lt396loH8Gxb8Y9iXlSAssZAL2qVCp2KdYcUwJ5_lh_xUtgfMUTIN9BLb7fXy2sf-4riobjaMbjMu7W-vegtBXUqF8oJ88mhj0pyYTol4iZDEBKOZEIw6WfRr7kloKI85EkhZwC0yV1grmMzL3CTQg_CNtfwHRP_U-X2AO2qqRsfI0AecAjTSci5AbiMl3wHxqHD9vhifQMpCCRcSRV-K3g1P32YyYoKmrFbvlesOpdTX91z333kx9tQaDdbqr0fkHLjhG4xtabr0eNdy3ds-BwYZGYGIeavBVNlzt7mTRBb_r3rtt2zuLz8Q8envs1liEv0HBHq26z9d7FX_vaT84OT0T_XKzlFl9JNMWQ2RaTMKV4tySjIAz9uJMyRgPKUXWbNcxAUG9hNam_8hhY3_UKKsaEVhUWDiNk1wxxlGqHAlYNUokxu-Ro7cUQ3Mpc1KMvafa_tFxXX-Xa50L3h5Uq2hzLTtcBRh_wqXCMW-JWlxNuz2vOMUaJ_hJ4HWNOrzgO2d8KlLT2Pkt8Ym55FRiUO0kd0mxNHxqsPXIuKZ5wzMXX_4N5EXYR0Qq-xAVFCOVyRkcccG9eOqhcq250dq83Lk4uSd3j2s3RYFMnAaGgBo8MzIbpL8SUDPMpuKYPIjzyuJkEsewiRH8A0mSOWM_J_e9x3dvr7rs4uG03Nuu1EsPh93tYPHIVeaF9mnPPEJjlAp0iD1N2JOJxm9NutA4BxCBA8OwJMBqEpcboAHLA-2zYcVYs5hFKKhSqn8V_d4R9MHb4lILLt8bJSxsc-V7HPeFvXSzTmQ1J8d9xkWfY4FnXXTyhoueHBu8X2pI5JEzDGQcCEiZ1JkZeGC39mTl_OhbWe9vb95uyKNTv1dsBgqhLKUFU7HQhEDcIeXsnlkeQcR4txmTBLHRcUcIw0vg0Xi6UGKzv3UxODhcl7fBuaSstL91sntZXUxswGeLrMWSxAZcyVSf0RhBqRDODPXkSRca6kpoi2OAusQEc0Wm0W7SIrmgPVVrgE7cpEs4Esr45yqL3GBFQxnQH6M3GmGKP0xv5JL0Zo4dntUb-YF6w1lq4IaVQBocfp5dcMr3J4Nm65Z4bq1c1jebZ-fHA7vYLJQKPD4eT8NIi4T7YD9Hvjv7FiEeJ59KCGtonGyaSSXAOOBiKs1O86x72dhuNr8p1tLH1af-Sa-IYQ0jqSCnDGsFKMmuNMmTLrbSYG4hChhnSiVFNSQXrOcY1AiIwSjhka3QP0HNPJGZY3s_M6gBE5bGP66Qlkhn3z0L2qdlfS2varajdjhZGz58I5VfwNHTsVSLEJYk09Lz8RLDleCG-bqYCrNXHRx2vMbwLtgLbusHw8php9QsoMJwlIpwDJ618fBRdownz7rYO8SIWFoCxlMkBueC9RwlhlNhKpjoH4nJLjFzbO9nSgxG6I0cDQdECqSyBzLHpUHbq3wb3j2te08n7cNjjEm_OCWAKbvXhALNZssrqYWmC2ryJN5PFmiORYhyjSn6pA21jyo8lB-SrOQsvaJHEUQJqFFmHgweFT_vuU_H61sDct26YFe4cVvwHA5hKqW4xdRWSoymXLE8N5AXLtF8jfOR0FxJQQq6o3xzeXF12HQb15eHtYeDar95clddW3BHWfOI1C4rzhepBctCSqWoUtmhnzzpgkNfMotSjLDgLKW-kkq1vD3lBWs0X-FPCROMEPY75jDxknyxOZZ5kTLDvH0x9kYwJBiGKEBkryJotqvV4-H23abek4O249PSdW2v8ApETG5FxveVjYdGlqpBGZOYBClgHMUF3Vnedh_ba0P_4P6q2Ze4sdZz-j1_IcXhmGm5dMUBbyq1YAYJUBwZTejPw3ryrIuNdQYBBpWAdWWKA2NZTJoT3PPNYmopmYB--DcUnGUlMecY4iUlMbPEZjNx2TQ-IXC3GNMkVroIxLSoSD53CLi3CJnZsJoEtBZFahlnrWa3cn-96mGSWj1MMMghlirpEArlNN1h4GBItRJ0OadQ3sXLju_Oqts_EQ1DUUFD45___Svx7iSshdfHKJs8ISZ7nt0Lyn6r5QYwtSMzrNghoMDuBiW3XXfb99Ov7OXA706G072h1an1zZSRhThWmBPj6WN4c1REhr16b3fCFQazH4YZMTw47fr80by9_RYZzRqyMKMKom4hEYfAGxMSH422UHh2IA5Oszjrxmo0HLs-u3Qw1GhbdNsn2Ux9F64-DPb7Nzs3Z-274e6eqFTOspyLAyuFLYUkBKgUcSHYTNwmLYFn6lHHBdLMMtVSGKnR8Wr1AafifjU7lXgqDhhnEuLxesvRMahUt45rWGqqi2SPXqX_zrPBDrQNtz7ieFzgdxY7Gzc1l1mHIWnw2U7EZUwQ0NR3CiEpB0uGskeljlzbdR69s41n5bsbhN64znWr4J46peCpp57iYBJJNLVjk2dUqrJV1mrFNJaMFTQbHaxfre9tie7e4Y3eqV2WRPXxeX-xqNSU4aBlR6VakPRcGEZMMLZALix51gXHuqnfQ4B1iPISjg1KnhPec0xISyCoFupPPjp7SDrHCn9uPlqkxjTgOjOzb5Kdgt8uqse7p89rZ72bs8vNza2W19ss-iYo4xDXaKKFSkjDUc5_Pin9s2KDKMJml7CYYmPXH09Ojqol0a0dPHvNysnmpVteUGyEXv4xDjBy6cE7hahWMpF9CzR51gVHumIWlkTL1EODucA9R61RSEnJUKThj9jME5s5NvgzxUbL9P0zDbhSU7nVeRTc8E63tTomZdJf29jt79kX66ek4BQEMxM_mfsa2oDW8k-ObEzhBzH8LKbWkMaG6G4fM7p1g68uqsGgJQ4qC6bbzOIvXWtQqtaYv26lFBXZCzySJ11wnGsBMTy4jxgnSg3PB-x5So354xjo96ztWJbUzLHAeUnNlxdGr9qdzmkAKzk2OvCO3PrLckxWb3XgOo-lpP3g8GPsRUhoQx0ntGA_vsCX_B8B6rUx"><img alt="Kroki" src="https://kroki.io/excalidraw/svg/eNrtXFtT4koXfZ9fYfm9HnP6fpk3QfEy3m-op05ZEaJkCAQhoHhq_vu3OygEkkhwgmamhqma0nQ6dHfW2mvv3rv978vKymow7DirX1dWnaea7bn1rv24-pe5PnC6PddvQxMJf-_5_W4tvLMRBJ3e17__nvSwan5r1MvxnJbTDnpw3z_w-8rKf-H_0OLWTd-H9W-ydW4jMTiodYMruUkq3zfCruFNr4PpOrXAbt97zqTpCa4LLi2lhMRK8nHDEBowI5YUeLrh0a0HDWhkVFlEUkYlR-FHjG9pOO59IzAP4MjSjFNMmA4_bHzPaBxfV9D4Si_o-k2n7Ht-1wz2f6OnToZ6a9ea912_365P7qk5dVa3J_fcuZ53Ggy90YratUa_G5ns6BuqLxPAM9fH_Xo-rP-kF3zlfaPt9HpTffyOXXODcJXQZA5mfJ2devii_o0-oV1_ecLrm5u8Fvpy5cdkPI5jXqtgWMMqMz1umKBHkdjVA78dIglLqokkiE7ucHsbAKEgfOqd7fWcyaKaoW3OwisKsQjMusPWRunwutYq3d2S00bzqDe4rowXagpqdrfrP66OW368_DRZk36nbo8GhAVMhmqmCBETDHluuwmN7b7nTa75teZkDl8iizbDB68z2K-UfHZZ8c9vWg-NbuN893t2PkhmcaqRIDN0ENhSBu8xLgCBiBxxIU4CpixNKdfRxnzQj7lt396loH8Gxb8Y9iXlSAssZAL2qVCp2KdYcUwJ5_lh_xUtgfMUTIN9BLb7fXy2sf-4riobjaMbjMu7W-vegtBXUqF8oJ88mhj0pyYTol4iZDEBKOZEIw6WfRr7kloKI85EkhZwC0yV1grmMzL3CTQg_CNtfwHRP_U-X2AO2qqRsfI0AecAjTSci5AbiMl3wHxqHD9vhifQMpCCRcSRV-K3g1P32YyYoKmrFbvlesOpdTX91z333kx9tQaDdbqr0fkHLjhG4xtabr0eNdy3ds-BwYZGYGIeavBVNlzt7mTRBb_r3rtt2zuLz8Q8envs1liEv0HBHq26z9d7FX_vaT84OT0T_XKzlFl9JNMWQ2RaTMKV4tySjIAz9uJMyRgPKUXWbNcxAUG9hNam_8hhY3_UKKsaEVhUWDiNk1wxxlGqHAlYNUokxu-Ro7cUQ3Mpc1KMvafa_tFxXX-Xa50L3h5Uq2hzLTtcBRh_wqXCMW-JWlxNuz2vOMUaJ_hJ4HWNOrzgO2d8KlLT2Pkt8Ym55FRiUO0kd0mxNHxqsPXIuKZ5wzMXX_4N5EXYR0Qq-xAVFCOVyRkcccG9eOqhcq250dq83Lk4uSd3j2s3RYFMnAaGgBo8MzIbpL8SUDPMpuKYPIjzyuJkEsewiRH8A0mSOWM_J_e9x3dvr7rs4uG03Nuu1EsPh93tYPHIVeaF9mnPPEJjlAp0iD1N2JOJxm9NutA4BxCBA8OwJMBqEpcboAHLA-2zYcVYs5hFKKhSqn8V_d4R9MHb4lILLt8bJSxsc-V7HPeFvXSzTmQ1J8d9xkWfY4FnXXTyhoueHBu8X2pI5JEzDGQcCEiZ1JkZeGC39mTl_OhbWe9vb95uyKNTv1dsBgqhLKUFU7HQhEDcIeXsnlkeQcR4txmTBLHRcUcIw0vg0Xi6UGKzv3UxODhcl7fBuaSstL91sntZXUxswGeLrMWSxAZcyVSf0RhBqRDODPXkSRca6kpoi2OAusQEc0Wm0W7SIrmgPVVrgE7cpEs4Esr45yqL3GBFQxnQH6M3GmGKP0xv5JL0Zo4dntUb-YF6w1lq4IaVQBocfp5dcMr3J4Nm65Z4bq1c1jebZ-fHA7vYLJQKPD4eT8NIi4T7YD9Hvjv7FiEeJ59KCGtonGyaSSXAOOBiKs1O86x72dhuNr8p1tLH1af-Sa-IYQ0jqSCnDGsFKMmuNMmTLrbSYG4hChhnSiVFNSQXrOcY1AiIwSjhka3QP0HNPJGZY3s_M6gBE5bGP66Qlkhn3z0L2qdlfS2varajdjhZGz58I5VfwNHTsVSLEJYk09Lz8RLDleCG-bqYCrNXHRx2vMbwLtgLbusHw8php9QsoMJwlIpwDJ618fBRdownz7rYO8SIWFoCxlMkBueC9RwlhlNhKpjoH4nJLjFzbO9nSgxG6I0cDQdECqSyBzLHpUHbq3wb3j2te08n7cNjjEm_OCWAKbvXhALNZssrqYWmC2ryJN5PFmiORYhyjSn6pA21jyo8lB-SrOQsvaJHEUQJqFFmHgweFT_vuU_H61sDct26YFe4cVvwHA5hKqW4xdRWSoymXLE8N5AXLtF8jfOR0FxJQQq6o3xzeXF12HQb15eHtYeDar95clddW3BHWfOI1C4rzhepBctCSqWoUtmhnzzpgkNfMotSjLDgLKW-kkq1vD3lBWs0X-FPCROMEPY75jDxknyxOZZ5kTLDvH0x9kYwJBiGKEBkryJotqvV4-H23abek4O249PSdW2v8ApETG5FxveVjYdGlqpBGZOYBClgHMUF3Vnedh_ba0P_4P6q2Ze4sdZz-j1_IcXhmGm5dMUBbyq1YAYJUBwZTejPw3ryrIuNdQYBBpWAdWWKA2NZTJoT3PPNYmopmYB--DcUnGUlMecY4iUlMbPEZjNx2TQ-IXC3GNMkVroIxLSoSD53CLi3CJnZsJoEtBZFahlnrWa3cn-96mGSWj1MMMghlirpEArlNN1h4GBItRJ0OadQ3sXLju_Oqts_EQ1DUUFD45___Svx7iSshdfHKJs8ISZ7nt0Lyn6r5QYwtSMzrNghoMDuBiW3XXfb99Ov7OXA706G072h1an1zZSRhThWmBPj6WN4c1REhr16b3fCFQazH4YZMTw47fr80by9_RYZzRqyMKMKom4hEYfAGxMSH422UHh2IA5Oszjrxmo0HLs-u3Qw1GhbdNsn2Ux9F64-DPb7Nzs3Z-274e6eqFTOspyLAyuFLYUkBKgUcSHYTNwmLYFn6lHHBdLMMtVSGKnR8Wr1AafifjU7lXgqDhhnEuLxesvRMahUt45rWGqqi2SPXqX_zrPBDrQNtz7ieFzgdxY7Gzc1l1mHIWnw2U7EZUwQ0NR3CiEpB0uGskeljlzbdR69s41n5bsbhN64znWr4J46peCpp57iYBJJNLVjk2dUqrJV1mrFNJaMFTQbHaxfre9tie7e4Y3eqV2WRPXxeX-xqNSU4aBlR6VakPRcGEZMMLZALix51gXHuqnfQ4B1iPISjg1KnhPec0xISyCoFupPPjp7SDrHCn9uPlqkxjTgOjOzb5Kdgt8uqse7p89rZ72bs8vNza2W19ss-iYo4xDXaKKFSkjDUc5_Pin9s2KDKMJml7CYYmPXH09Ojqol0a0dPHvNysnmpVteUGyEXv4xDjBy6cE7hahWMpF9CzR51gVHumIWlkTL1EODucA9R61RSEnJUKThj9jME5s5NvgzxUbL9P0zDbhSU7nVeRTc8E63tTomZdJf29jt79kX66ek4BQEMxM_mfsa2oDW8k-ObEzhBzH8LKbWkMaG6G4fM7p1g68uqsGgJQ4qC6bbzOIvXWtQqtaYv26lFBXZCzySJ11wnGsBMTy4jxgnSg3PB-x5So354xjo96ztWJbUzLHAeUnNlxdGr9qdzmkAKzk2OvCO3PrLckxWb3XgOo-lpP3g8GPsRUhoQx0ntGA_vsCX_B8B6rUx"/></a></p>
+<h2 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">¶</a></h2>
+<h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">¶</a></h3>
+<p>The <a href="http://127.0.0.1:63320/node?ref=r%3A02240f59-d215-4642-b459-56f9f2ccb58d%28de.itemis.mps.editor.celllayout.runtime.cells%29%2F4504148519581216388">EditorListenerCellProvider</a> class has a reference to a node and creates a new <a href="http://127.0.0.1:63320/node?ref=r%3A02240f59-d215-4642-b459-56f9f2ccb58d%28de.itemis.mps.editor.celllayout.runtime.cells%29%2F4504148519581269051">EditorListenerCell</a>. This class can forward two events of the editor to the provider: <em>onEditorloaded</em> and <em>onEditorUnloaded</em>. This cell is not visible in the editor.</p>
+<h3 id="abstractlayoutableadapter">AbstractLayoutableAdapter<a class="headerlink" href="#abstractlayoutableadapter" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441899653">AbstractLayoutableAdapter</a> has a parent LayoutableCollectionAdapter and handles reading all cell layout specific stylesheet items (<em>readSyncAll</em>).
+All items are cached. The writing of the items (<em>writeSyncAll</em>) is forwarded to the box model.
+It also contains a editor cell box model. All setter and getter work with the margin box of this box model. The only special implementations are the size
+methods: the preferred size is the size of the box model’s margin box. The maximum and minimum size are equivalent to the preferred size.</p>
+<h3 id="borderpainter">BorderPainter<a class="headerlink" href="#borderpainter" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F7943214583599648867">BorderPainter</a> is an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EAbstractAdditionalPainter">AbstractAdditionalPainter</a> that gets the information form the border box of the editor cell’s box model. There is support for border thickness, color for each side of the box. The border is only painted when the specified rectangular area intersects with the current clipping area of
+the graphics object. The position and the dimension of the border gets changed because there is one pixel less reserved than required for the border.
+Paint requests are added to a queue which is then processed in order of thickness and brightness (light gray is the default color and has the 
+lowest priority). In the following example, the painter was enabled for all editor cells:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../diagrams/celllayout_borderpainter.png"><img alt="celllayout: border painter in action" src="../diagrams/celllayout_borderpainter.png"/></a></p>
+<h3 id="layoutableadapter">LayoutableAdapter<a class="headerlink" href="#layoutableadapter" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F7112191969006061574">LayoutableAdapter</a> extends <a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441899653">AbstractLayoutableAdapter</a>.</p>
+<p>It forwards <em>writeSync</em> to the box model and calls relayout on the cell if a relayout was requested.
+In the method <em>readSync</em>, relayout is requested if one of the <em>growN</em> properties is set. Then relayout is called.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://kroki.io/plantuml/svg/eNp1j0EKgzAQRfc5RZYKPYKIodsWCp5gNF8NxCjJiNrSuzexiy7abgZm_pv586vA5HkZrTCO4TtqIS-0TwtTY6E0zXEqiwIbw-kgVRPYU8tfTFnKh1i9YdS7a5W1WS48SH-6AK7NHdlqNA-nAaYfOBfLrImhrOndCMeR68E3jw7eQx8LIZbz5JJxfPIArsb9k1Ro052kvFHafqJPUcVEKfkLOLNf6A=="><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1j0EKgzAQRfc5RZYKPYKIodsWCp5gNF8NxCjJiNrSuzexiy7abgZm_pv586vA5HkZrTCO4TtqIS-0TwtTY6E0zXEqiwIbw-kgVRPYU8tfTFnKh1i9YdS7a5W1WS48SH-6AK7NHdlqNA-nAaYfOBfLrImhrOndCMeR68E3jw7eQx8LIZbz5JJxfPIArsb9k1Ro052kvFHafqJPUcVEKfkLOLNf6A=="/></a></p>
+<p>When the expected bounds are not equal to the actual bounds or a relayout was requested or the cell is marked as changed, the cell is relayouted again.
+The size method takes a width and height and calculates the delta for the old dimension in comparison to the new dimension and assigns it to the additional padding box of the box model. The horizontal alignment is also taking into account.</p>
+<p>The preferred size and also the minimum size is calculated as the dimension of the box model’s padding minus the additional padding. The maximum size is equal to the preferred size unless the cell is an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Label">Editor_Label</a> or one of the <em>grow</em> stylesheet itemi is set: in those cases, the width or the height or both can be unlimited.</p>
+<h3 id="layoutableadapters">LayoutableAdapters<a class="headerlink" href="#layoutableadapters" title="Permanent link">¶</a></h3>
+<p>The <a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192442245136">LayoutableAdapters</a> class manages adapters. In <em>createAdapter</em> it returns the TopDownLayoutable for editor cells that support top down layouting, creates a LayoutableCollectionAdapter for the layouter of the cell and the cell itself or creates a new LayoutableAdapter for the cell instead. The method <em>getAdapter</em> calls this method if there is no existing adapter or receives it from the user object of the cell with the key <em>LayoutableAdapter</em>.</p>
+<h3 id="layoutablecollectionadapter">LayoutableCollectionAdapter<a class="headerlink" href="#layoutablecollectionadapter" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192442242919">LayoutableCollectionAdapter</a> is a layout adapter for collections which supports the <em>pushN</em> stylesheet items and <em>grid-layout-flatten</em>. It caches the calculated inner sizes and inner ascents and also has a method to return a list of children of type ILayoutable.</p>
+<p>The <code>relayout</code> method itself calculates the layout bounds based on a size constraint and the current position. If the position or dimension has changed in comparison to the last calculation</p>
+<ul>
+<li><code>relayout</code> is called if the size has changed.</li>
+<li><code>moveChildren</code> is called when the position has changed.</li>
+</ul>
+<p>When one of those two events has occurred but no layouter is present, relayout is called. The <em>getLayouter</em> method returns a suitable ILayouter based on the existing layout e.g. HorizontalLayout for CellLayout_Horizontal. If the cell or any of its super classes overwrites the method <em>relayoutImpl</em>, <em>null</em> is returned.</p>
+<p>The inner position and dimension methods are based on the box model’s content box. The total gap is the content’s position minus the margin’s position. To switch between the outer and inner size, the methods <em>toInnerSize</em> and <em>toOuterSize</em> can be used. The ascent is calculated as the ascent of the children plus the total gap at the top. When the different sizes like maximum, minimum and preferred size are calculated, the values are first looked up in the cache. If no value can be found, the sizes are guessed from the cached values: if the size was already smaller for a more strict constraint, that value is used. If there is still no value returned, the value is calculated.</p>
+<h3 id="layoutengine">LayoutEngine<a class="headerlink" href="#layoutengine" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441898630">LayoutEngine</a> is the main entry point for layouting editor components, the root cell, single cells or a subtree of a cell. 
+<em>layoutSubtree</em> requires the cell itself and a function that sets the bounds of the ILayoutable. For a normal cell the size is calculated as the
+desired dimension constraint by the minimum and maximum size of the ILayoutable. For the root cell the calculation is different:
+The preferred width is the x position of the cell minus the text width settings of the editor + the hardcoded 15 pixel left margin or the unlimited width if
+it is bigger. The preferred size is then calculated as the preferred size of the root layoutable constraint by the preferred width.</p>
+<p><code>layoutSubtreeUnsafe</code> reads all the necessary information from the processed cell, preprocesses the layoutables (e.g. setting margin and padding), relayouts the cell, sets all margins and writes back the calculated result to the editor cell. In the end, the position and dimensions are fixed for editorcell collections based on the <em>overflow</em> stylesheet items and the request layout flags, that were set in previous steps are cleared. All of those methods are invoke inside a watchdog that stops the layouting after a certain time if no stable layout could be found.</p>
+<h3 id="layoutinterceptor">LayoutInterceptor<a class="headerlink" href="#layoutinterceptor" title="Permanent link">¶</a></h3>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F4403454289951894115">LayoutInterceptor</a> replaces the cell layout of cells that use stylesheet items of the cell layout language with a custom layout from this language.
+The interceptor is installed in the <a href="http://127.0.0.1:63320/node?ref=r%3Ac30772cf-6faa-4379-900e-6719e180568e%28de.itemis.mps.editor.celllayout.runtime.plugin%29%2F4403454289951931861">project plugin</a> through different methods: as an editor update listener, an additional painter and an editor component creation listener.</p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 1, 2023</span>
+</small>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." rel="noopener" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOHtFrws4CQY8v" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="mbeddr/mps-platform-docs" data-repo-id="R_kgDOHtFrwg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+      
+    targetBlank();
+    })
+   
+   function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
+    }
+  }
+};
+  </script>
+</meta></article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: General" class="md-footer__link md-footer__link--prev" href="../mps_extensions/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  Previous
+                </span>
+                General
+              </div>
+</div>
+</a>
+<a aria-label="Next: KernelF" class="md-footer__link md-footer__link--next" href="../kernelf/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  Next
+                </span>
+                KernelF
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

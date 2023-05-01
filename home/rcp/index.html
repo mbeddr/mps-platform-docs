@@ -457,10 +457,30 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         Double dispatch
       </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          MPS-extensions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          MPS-extensions
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/mps_extensions/">
-        MPS-extensions
+        General
       </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../languages/cell_layout/">
+        Cell Layout
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../languages/kernelf/">
@@ -869,6 +889,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/included_libraries/">
+        Included libraries
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../reference/extension_points/">
         Extension points
       </a>
@@ -1017,7 +1042,7 @@ or you could unregister the preference pages itself. For example:
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you replace the logical view on the left side with a custom one?</p>
-<p>Use the class <ins>com.mbeddr.mpsutil.projectview</ins> from <span class="twemoji">
+<p>Use the language <ins>com.mbeddr.mpsutil.projectview</ins> from <span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,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"/>
 </svg>
@@ -1036,7 +1061,7 @@ How can I know?</p>
 </span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>: The easiest way to get the correct platform for an <abbr title="Meta Programming System">MPS</abbr> version is by running ant in the root of your <abbr title="Meta Programming System">MPS</abbr> sources:</p>
 <p><code>ant -f build/getDependencies.xml download-platform</code></p>
 <p>It will place the platform in the folder <em>mps-platform</em> of the repository and is automatically imported into the intelliJ project where you can read the sources and also step into them when debugging.</p>
-<p>In case you’re looking at an <abbr title="Rich Client Platform">RCP</abbr>: <code>/build.number</code> provides this information and more, <abbr title="engaged generator">eg</abbr> <code>idea.platform.build.number=MPS—203.7717.56</code>.</p>
+<p>In case you’re looking at an <abbr title="Rich Client Platform">RCP</abbr>: <code>build.number</code> and <code>build.txt</code> provide this information and more, <abbr title="engaged generator">eg</abbr> <code>idea.platform.build.number=MPS—203.7717.56</code>.</p>
 <p>The platform version is part of the build information e.g. <abbr title="Meta Programming System">MPS</abbr>—211.7442.1291</p>
 <p>To get the baseline version e.g. 211, programatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">getBaselineVersion</span><span class="p">()</span><span class="w"></span></code></p>
 <p>To get the full version e.g. 211.7442.1291, programatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">currentVersion</span><span class="p">().</span><span class="na">asString</span><span class="p">()</span><span class="w"></span></code></p>
@@ -1098,7 +1123,7 @@ How can I know?</p>
 <p class="admonition-title">how to change (or turn off) the exception submission dialog?</p>
 <ul>
 <li>Remove all error handlers like <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36">this</a>.</li>
-<li>Remove <code>&lt;appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender"&gt;</code> from the log.xml file. This will also disable the error pop ups in the <abbr title="Integrated Development Environment">IDE</abbr> where you can see the exception.</li>
+<li>Remove <code>&lt;appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender"&gt;</code> from the log.xml file. This will also disable the error pop ups in the <abbr title="Integrated Development Environment">IDE</abbr> where you can see the exception. Note: There were some <a href="https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration">changes related to the logging configuration</a> in <abbr title="Meta Programming System">MPS</abbr> 2022.2 where this answer is not valid anymore.</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -1172,19 +1197,23 @@ How can I know?</p>
 <div class="admonition question">
 <p class="admonition-title">How can you set the position of a tool window?</p>
 <p>Example based on the <abbr title="Meta Programming System">MPS</abbr> inspector:</p>
-<p>```Java
-InspectorTool inspectorTool = ideaProject.getComponent(InspectorTool.class); 
-if (inspectorTool != null) {
-    ToolWindow inspectorToolWindow = inspectorTool.getToolWindow();
-    inspectorToolWindow.setAnchor(ToolWindowAnchor.RIGHT, null);
-}</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">InspectorTool</span><span class="w"> </span><span class="n">inspectorTool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ideaProject</span><span class="p">.</span><span class="na">getComponent</span><span class="p">(</span><span class="n">InspectorTool</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inspectorTool</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">ToolWindow</span><span class="w"> </span><span class="n">inspectorToolWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inspectorTool</span><span class="p">.</span><span class="na">getToolWindow</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">inspectorToolWindow</span><span class="p">.</span><span class="na">setAnchor</span><span class="p">(</span><span class="n">ToolWindowAnchor</span><span class="p">.</span><span class="na">RIGHT</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 </div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 10, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
