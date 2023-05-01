@@ -1039,7 +1039,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="plugin-and-rcp">Plugin and <abbr title="Rich Client Platform">RCP</abbr><a class="headerlink" href="#plugin-and-rcp" title="Permanent link">¶</a></h2>
 <h3 id="actions-filter">Actions filter<a class="headerlink" href="#actions-filter" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.actionsfilter</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.actionsfilter</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> contains a lot of actions that might be not needed by end users such as actions for language development and actions of the <abbr title="Integrated Development Environment">IDE</abbr> platform. This language allows disabling
 actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin solution by defining an actions profile. <strong>Active by default</strong> can
@@ -1057,7 +1057,7 @@ that’s located at the top left of the window.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/actionsfilter_preferences.png"><img alt="actions filter preferences" src="../../images/actionsfilter_preferences.png"/></a></p>
 <h3 id="preference-form">Preference form<a class="headerlink" href="#preference-form" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.preferenceform</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.preferenceform</ins></p>
 </blockquote>
 <p>This language allows adding new preference pages to <em>Preferences</em>→<em>Other Settings</em>. The language uses the IntelliJ platform
 mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation</a>).</p>
@@ -1089,7 +1089,7 @@ that reference the values of the preference form. The input fields can be access
 <p>The <em>after read</em> method is called, after the state is loaded (for example: when the preference form is opened).</p>
 <h3 id="wizard-process">Wizard (process)<a class="headerlink" href="#wizard-process" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.process</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.process</ins></p>
 </blockquote>
 <p>This language allows creating wizards with multiple steps:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/wizard_step_example.png"><img alt="example: single step of a custom wizard" src="../../images/wizard_step_example.png"/></a></p>
@@ -1107,7 +1107,7 @@ the wizard it can be invoked from an action. Example:</p>
 executed the <em>onFinish</em> callback of every step. For more information, have at look the <a href="http://127.0.0.1:63320/node?ref=r%3A9aef0d3c-87c9-4ce3-ad67-def9817c1ab4%28com.mbeddr.mpsutil.process.sandbox.plugin%29%2F4724180912013515813">example</a>.</p>
 <h3 id="new-model-rcp">New Model (<abbr title="Rich Client Platform">RCP</abbr>)<a class="headerlink" href="#new-model-rcp" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.rcp</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.rcp</ins></p>
 </blockquote>
 <p>This language allows creating a new action for creating models like the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
 Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig</a>. The following settings are supported:</p>
@@ -1121,11 +1121,11 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 </ul>
 <h3 id="spreferences">SPreferences<a class="headerlink" href="#spreferences" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.spreferences</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.spreferences</ins></p>
 </blockquote>
 <p>This extension allows the definition of preference pages by using <abbr title="Meta Programming System">MPS</abbr> models; so in the preference page you get a normal <abbr title="Meta Programming System">MPS</abbr> editor, as exemplified by mbeddr’s platform templates preference page:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/spreference_example.png"><img alt="example: spreferences" src="../../images/spreference_example.png"/></a></p>
-<p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check out the root “Platform Templates” as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
+<p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check <abbr title="output">out</abbr> the root “Platform Templates” as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/spreferences_query.png"><img alt="spreferences: query" src="../../images/spreferences_query.png"/></a></p>
 <hr/>
 <div class="md-source-file">

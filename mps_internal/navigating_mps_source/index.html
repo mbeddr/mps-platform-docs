@@ -1169,7 +1169,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#sources">sources</a>
 </nav>
 <h1>Navigating the MPS sources</h1>
-<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked out with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
+<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
 More information can be found in the readme of the repository.</p>
 <h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h2>
 <p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
@@ -1185,15 +1185,15 @@ many other IntelliJ specific project settings,</p>
 <li><em>compiler.xml</em>: the version of the Java compiler (currently: 11)</li>
 <li><em>encodings.xml</em>: encoding of the files (should be: UTF-8)</li>
 <li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in current project </li>
-<li><em>misc.xml</em>: miscellaneous settings (e.g. settings of favourites manager)</li>
+<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g. settings of favourites manager)</li>
 <li><em>modules.xml</em>: a list of modules of this project that are loaded in <abbr title="Meta Programming System">MPS</abbr></li>
 <li><em>vcs.xml</em>: version control settings</li>
 <li><em>version.xml</em>: project version (not used anymore)</li>
 <li><em>settings of different components</em> (e.g. console history, messages view tool, project view)</li>
 </ul>
-<h2 id="bin">bin<a class="headerlink" href="#bin" title="Permanent link">¶</a></h2>
+<h2 id="bin"><abbr title="binary">bin</abbr><a class="headerlink" href="#bin" title="Permanent link">¶</a></h2>
 <p>This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source">OS</abbr> specific files:</p>
+operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr> specific files:</p>
 <ul>
 <li>
 <p>Linux</p>
@@ -1214,12 +1214,12 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 <p>Windows</p>
 <ul>
 <li><em>breakgen(64).dll</em>: gracefully shut down a running process (not possible with Java).</li>
-<li><em>elevator.<abbr title="executable">exe</abbr></em>: sudo-like tool for windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
+<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: sudo-like tool for windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
 <li><em>IdeaWin32/64.dll</em>: native file system functions</li>
-<li><em>launcher.<abbr title="executable">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>restarter.<abbr title="executable">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>runnerw.<abbr title="executable">exe</abbr></em>: old library for Windows process management. Superseded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
-<li><em>WinProcessListHelper.<abbr title="executable">exe</abbr></em>: lists windows processes</li>
+<li><em>launcher.<abbr title="executable/execution">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>restarter.<abbr title="executable/execution">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: old library for Windows process management. Superseded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
+<li><em>WinProcessListHelper.<abbr title="executable/execution">exe</abbr></em>: lists windows processes</li>
 <li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
 <li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
 <li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>

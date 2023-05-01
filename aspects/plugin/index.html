@@ -1080,7 +1080,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 <p>Usage:</p>
 <ul>
-<li>Targets <abbr title="actual">act</abbr> as filters working on a stream of data delivered to them.</li>
+<li>Targets <abbr title="actual/action/active">act</abbr> as filters working on a stream of data delivered to them.</li>
 <li>The data flowing along targets is called <em>resources</em>.</li>
 <li>Resources are represented as Java interfaces and tuples.</li>
 </ul>
@@ -1098,7 +1098,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>On the workspace root node, right-click and open <em>Project Paths</em> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>).</li>
 <li>Click on the red, old solution file and on <em>-</em>.</li>
 <li>Click on <em>+</em> and select the new location of this <em>.msd</em> file.</li>
-<li>Open your build script for CI tests and update the solution path in the project structure.</li>
+<li>Open your build script for <abbr title="Continuous Integration">CI</abbr> tests and update the solution path in the project structure.</li>
 </ol>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </details>
@@ -1130,7 +1130,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>I have a .jar that depends on a native libray (.dll/.so/…). To use it in an <abbr title="Meta Programming System">MPS</abbr> plugin I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> tries to reload the jar in some cases (e.g. after a rebuild). This will fail, because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
 <p>How can I avoid this problem?</p>
 </blockquote>
-<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (re-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” in the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `com.intellij.</p>
+<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (re-)load .jars / stubs of a solution, you can check the facet “IDEA Plugin” in the “Facets” tab of the solution properties. This will show another tab where you have to set the Plugin ID `<abbr title="commercial/common/communication">com</abbr>.intellij.</p>
 <p>Now we just have to ensure that the .jars can be found at runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></sub></sub></p>
 </details>
@@ -1181,7 +1181,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
 </div>
-<h2 id="open-api">Open API<a class="headerlink" href="#open-api" title="Permanent link">¶</a></h2>
+<h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you create a new <em>SContainmentLink</em> for a non-existent role?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>Create it through <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.adapter.structure%28MPS.Core%2F%29%2F%7EMetaAdapterFactory">MetaAdapterFactory</a>.</p>
@@ -1206,7 +1206,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">A reference to a key in an action context parameter is out of search scope.</p>
+<p class="admonition-title">A reference to a key in an action context parameter is <abbr title="output">out</abbr> of search scope.</p>
 <p>You need to add a dependency to <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a>.
 This class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EPlatformDataKeys">PlatformDataKeys</a>
 and this class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7ECommonDataKeys">CommonDataKeys</a>.</p>

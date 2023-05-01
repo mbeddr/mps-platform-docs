@@ -1101,7 +1101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="ui"><abbr title="User Interface">UI</abbr><a class="headerlink" href="#ui" title="Permanent link">¶</a></h2>
 <h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">¶</a></h3>
 <h4 id="asynccell">AsyncCell<a class="headerlink" href="#asynccell" title="Permanent link">¶</a></h4>
-<p>The async cell allows displaying a text based loading indicator as long as the return string is null.</p>
+<p>The <abbr title="asynchronous">async</abbr> cell allows displaying a text based loading indicator as long as the return string is null.</p>
 <p>Create a new <code>$custom cell$</code> editor cell and return a new AsyncCellProvider:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1118,7 +1118,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../gifs/async_cell.gif"><img alt="async cell" src="../../gifs/async_cell.gif"/></a></p>
 <h4 id="framecell">FrameCell<a class="headerlink" href="#framecell" title="Permanent link">¶</a></h4>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.framecell</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.framecell</ins></p>
 </blockquote>
 <p>The <a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
 <ul>
@@ -1135,23 +1135,23 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a> can also be used for customizing the border and margins around a cell. Its documentation can be found <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/">here</a>.</p>
 <h3 id="margin-cell-review">Margin cell / review<a class="headerlink" href="#margin-cell-review" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.margincell</ins> and <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins></p>
 </blockquote>
 <p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word.
 In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/margincell_example.png"><img alt="example: margin cell" src="../../images/margincell_example.png"/></a></p>
-<p>To use the review notes, just include the respective language <ins>com.mbeddr.mpsutil.review</ins>; intentions are available to attach review notes to editor cells.</p>
+<p>To use the review notes, just include the respective language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins>; intentions are available to attach review notes to editor cells.</p>
 <p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
 <h3 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.placeholderTextList</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.placeholderTextList</ins></p>
 </blockquote>
 <p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregation with a custom placeholder text.</p>
 <p>The placeholder can be specified in the inspector by creating a query function for the <em>placeholder text</em>.</p>
 <h3 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h3>
 <h4 id="concept-diagram">Concept diagram<a class="headerlink" href="#concept-diagram" title="Permanent link">¶</a></h4>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.conceptdiagram</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.conceptdiagram</ins></p>
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/conceptdiagram_example.png"><img alt="example:conceptdiagram" src="../../images/conceptdiagram_example.png"/></a></p>
 <p>Create a new root node of type <a href="http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138">ConceptDiagram</a>. The editor should now contain an empty editor. Nodes can be dragged
@@ -1159,14 +1159,14 @@ from the <em>Diagram Palette</em> to the diagram. If nodes from other languages 
 section.</p>
 <h4 id="dependencies-diagram">Dependencies diagram<a class="headerlink" href="#dependencies-diagram" title="Permanent link">¶</a></h4>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.dependenciesdiagram</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.dependenciesdiagram</ins></p>
 </blockquote>
 <p>This language contains a concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870">DependenciesDiagram</a></p>
 <p>Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. <em>uses</em> if the language is imported).</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/dependencydiagram_example.png"><img alt="example: dependency diagram" src="../../images/dependencydiagram_example.png"/></a></p>
 <h3 id="date-picker">Date picker<a class="headerlink" href="#date-picker" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.datepicker</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.datepicker</ins></p>
 </blockquote>
 <p>A classic widget to select a date from a pop-up calendar.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/datepicker_example.png"><img alt="example: datepicker" src="../../images/datepicker_example.png"/></a></p>
@@ -1176,7 +1176,7 @@ section.</p>
 <p>This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
 <h3 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.editor.utils</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.editor.utils</ins></p>
 </blockquote>
 <p>The class <a href="http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d-a811-70d97e847917%2Fr%3Af4ae6487-fb1d-418f-8dd3-759f9604156f%28com.mbeddr.mpsutil.editor.utils%2Fcom.mbeddr.mpsutil.editor.utils.runtime%29%2F4912572611769853192">EditorRuntimeUtil</a> contains a few helpful editor utility methods:</p>
 <ul>
@@ -1186,7 +1186,7 @@ section.</p>
 </ul>
 <h2 id="file-picker">File picker<a class="headerlink" href="#file-picker" title="Permanent link">¶</a></h2>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.filepicker</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.filepicker</ins></p>
 </blockquote>
 <p>This language contains text-based file and folder pickers. The paths can be directly entered in
 the editor. There’s also an intention <code>Open File Chooser Dialog</code> that shows a file chooser dialog. The following file pickers are supported:</p>
@@ -1201,21 +1201,21 @@ the editor. There’s also an intention <code>Open File Chooser Dialog</code> th
 <p>The macro pickers can contain <a href="https://www.jetbrains.com/help/mps/absolute-path-variables.html">path variables</a>.</p>
 <h3 id="hyperlink">Hyperlink<a class="headerlink" href="#hyperlink" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.hyperlink</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.hyperlink</ins></p>
 </blockquote>
 <p>Hyperlink cells can be used for references in <abbr title="Meta Programming System">MPS</abbr>. In contrast to normal reference cells they automatically become blue and underlined if the mouse hovers over them (no Ctrl is necessary). The following style attributes are supported:</p>
 <ul>
 <li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
-<li><strong>hyperlink-handler</strong>: a function that’s called when the link is clicked. The <em>util</em> parameter object contains a method
+<li><strong>hyperlink-handler</strong>: a function that’s called when the link is clicked. The <em><abbr title="utilities">util</abbr></em> parameter object contains a method
   <em>openInBrowser</em> for opening a URL with the default web browser.</li>
-<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the usage of the key <em>ctrl</em> to activate the hyperlink.</li>
+<li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the usage of the key <em><abbr title="control">ctrl</abbr></em> to activate the hyperlink.</li>
 <li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
 <li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
 <li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
 </ul>
 <h3 id="jfreechart">JFreeChart<a class="headerlink" href="#jfreechart" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.jfreechart</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.jfreechart</ins></p>
 </blockquote>
 <p>This module contains stubs for the <a href="https://www.jfree.org/jfreechart/">JFreeChart</a> library. The charts can be viewed in
 an extra tool <em>Chart</em> by calling the following code:</p>
@@ -1225,7 +1225,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/jfreechart_example.png"><img alt="example: jfreechart" src="../../images/jfreechart_example.png"/></a></p>
 <h3 id="target-chooser">Target chooser<a class="headerlink" href="#target-chooser" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.targetchooser</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.targetchooser</ins></p>
 </blockquote>
 <p>The target chooser language provides a modal dialog for choosing nodes based on a predefined scope:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../images/targetchooser_example.png"><img alt="example: target chooser" src="../../images/targetchooser_example.png"/></a></p>
@@ -1258,7 +1258,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 </ul>
 <h3 id="user-styles">User styles<a class="headerlink" href="#user-styles" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.userstyles</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.userstyles</ins></p>
 </blockquote>
 <p>This language provides a new annotation <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/userConfigurable" title="GitHub User: userConfigurable">@userConfigurable</a></em>, that can be added to a style class in a style sheet
 (intention:<em>Make User Configurable</em>). After defining a name, the user can change the style in the preferences
@@ -1269,7 +1269,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <li><strong>Bold</strong>: equivalent to <em>font-style: bold</em></li>
 <li><strong>Italic</strong>: equivalent to *font-style: italic</li>
 <li><strong>Effects: Dotted lines, bold underscored, underscored, underwaved</strong>: equivalent to <em>underlined</em></li>
-<li><strong>Effects: strikeout</strong>: equivalent to <em>strike-out</em></li>
+<li><strong>Effects: strikeout</strong>: equivalent to <em>strike-<abbr title="output">out</abbr></em></li>
 </ul>
 <p>Further useful links for developers:</p>
 <ul>

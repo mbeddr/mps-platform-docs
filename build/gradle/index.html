@@ -1126,7 +1126,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a class="md-tag" href="../../tags/#infrastructure">infrastructure</a>
 </nav>
 <h1>Gradle</h1>
-<p>Documentation for Gradle can be found on <a href="https://docs.gradle.org/current/userguide/what_is_gradle.html">gradle.org</a>.
+<p>Documentation for Gradle can be found on <a href="https://docs.gradle.org/current/userguide/what_is_gradle.html">gradle.<abbr title="organization">org</abbr></a>.
 The used features of the Groovy languages are explained in <a href="https://docs.gradle.org/current/userguide/groovy_build_script_primer.html">A Groovy Build Script Primer</a>. If you want to use Kotlin instead, start with the <a href="https://docs.gradle.org/current/userguide/kotlin_dsl.html">Gradle Kotlin <abbr title="Domain Specific Language">DSL</abbr> Primer</a>. <a href="https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html">Migrating build logic from Groovy to Kotlin</a> might also be helpful. To automatically convert between Groovy and Kotlin syntax, you can try using <a href="https://gradle-kotlinize.web.app/">Gradle Kotlinize</a>. Many manual corrections are still
 necessary.</p>
 <h2 id="useful-gradle-plugins-for-mps-projects">Useful Gradle plugins for mps projects<a class="headerlink" href="#useful-gradle-plugins-for-mps-projects" title="Permanent link">¶</a></h2>
@@ -1177,7 +1177,7 @@ It might simply work if the other private repository is part of the same organiz
 <p>Also add the username. Even though no username is required for token access, an error will occur if you leave it empty.</p>
 </li>
 <li>
-<p>Make sure you authorize the PAT for the SSO org (warning: this resets when changing permissions!)</p>
+<p>Make sure you authorize the PAT for the <abbr title="Single Sign on">SSO</abbr> <abbr title="organization">org</abbr> (warning: this resets when changing permissions!)</p>
 </li>
 </ul>
 </li>
@@ -1330,7 +1330,7 @@ private_token=YYY
 </details>
 <div class="admonition question">
 <p class="admonition-title">How to run a Gradle task from java code?</p>
-<p>Using the Gradle wrapper or the Gradle tooling API as described in this <a href="https://stackoverflow.com/a/49877200/16577108">StackOverflow answer</a>.</p>
+<p>Using the Gradle wrapper or the Gradle tooling <abbr title="Application Programming Interface">API</abbr> as described in this <a href="https://stackoverflow.com/a/49877200/16577108">StackOverflow answer</a>.</p>
 </div>
 <h2 id="gradle-tips">Gradle Tips<a class="headerlink" href="#gradle-tips" title="Permanent link">¶</a></h2>
 <table>
@@ -1347,7 +1347,7 @@ private_token=YYY
 </tr>
 <tr>
 <td>buildAll scripts</td>
-<td>This is the meta build script (platforms only). This build model is generated and its artifact (ant-xml task) is committed to the gradle <abbr title="repository">repo</abbr>.</td>
+<td>This is the <abbr title="metadata">meta</abbr> build script (platforms only). This build model is generated and its artifact (ant-xml task) is committed to the gradle <abbr title="repository">repo</abbr>.</td>
 </tr>
 <tr>
 <td>project properties</td>
@@ -1355,7 +1355,7 @@ private_token=YYY
 </tr>
 <tr>
 <td>System properties</td>
-<td><ul><li>passed through <b>-D</b> from CL</li><li>are available in the gradle build file though norma java mechanism: <i>System.getProperty();</i></li><li>Project properties can be specified as system properties. They need to be prefixed with <i>org.gradle.project.NAME</i></li></ul></td>
+<td><ul><li>passed through <b>-D</b> from CL</li><li>are available in the gradle build file though norma java mechanism: <i>System.getProperty();</i></li><li>Project properties can be specified as system properties. They need to be prefixed with <i><abbr title="organization">org</abbr>.gradle.project.NAME</i></li></ul></td>
 </tr>
 <tr>
 <td>gradle.properties</td>
@@ -1369,7 +1369,7 @@ private_token=YYY
 </table>
 <h2 id="gradle-wrapper-gradlewgradlewbat">Gradle Wrapper (<em>gradlew/gradlew.bat</em>)<a class="headerlink" href="#gradle-wrapper-gradlewgradlewbat" title="Permanent link">¶</a></h2>
 <p>The gradle wrapper script downloads gradle in the specified version, independent of your local installed gradle, and then starts the downloaded gradle.
-It consists of a small java program (located under <code>./gradle/wrapper/gradle-wrapper.jar</code>), an init-file which contains the gradle version (<code>./gradle/wrapper/gradle-wrapper.properties</code>) and start scripts for Windows, Mac and Linux (<code>./gradlew</code> and <code>./gradlew.bat</code>).</p>
+It consists of a small java program (located under <code>./gradle/wrapper/gradle-wrapper.jar</code>), an <abbr title="initialization">init</abbr>-file which contains the gradle version (<code>./gradle/wrapper/gradle-wrapper.properties</code>) and start scripts for Windows, Mac and Linux (<code>./gradlew</code> and <code>./gradlew.bat</code>).</p>
 <p>Why do we use gradle? Gradle build scripts have the advantage that you write code instead of XML, like it’s the case using Maven or Ant.
 We use gradle to download <abbr title="Meta Programming System">MPS</abbr> and the dependencies in the correct version and put them in the right place, generate the Ant scripts from the mps build scripts using a <code>build-allScripts.xml</code> Ant scripts and then start Ant with correct parameters (where is <abbr title="Meta Programming System">MPS</abbr> on disc, where are the dependencies on disc, …). This is easier than doing it with and directly.
 For defining the gradle scripts you can use groove (<code>build.gradle</code>) or kotlin (<code>build.gradle.kts</code>), both can do the same. Groovy is enough for smaller building scripts, but it’s dynamically typed and thus fails late when the gradle task is executed. Kotlin provides type-checking and the auto-completion works better compared to groovy (with Intellij); this makes it easier to use with complex scripts.</p>
@@ -1386,7 +1386,7 @@ For defining the gradle scripts you can use groove (<code>build.gradle</code>) o
 <li>example: Gson is used inside a gradle project and needs to be on the classpath of the project to be able to compile the project.</li>
 </ul>
 <p>If the dependency in only used in the buildscript (i.e. only from the <code>build.gradle</code> file) then it should be in a <code>buildscript { }</code> block. Dependencies used in both project code and build scripts will effectively need to be listed twice.</p>
-<p>A good explanation of gradle configurations can be found in <a href="https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35">Gradle Configurations Explained: What is the difference between API and Implementation? | medium.com</a>.</p>
+<p>A good explanation of gradle configurations can be found in <a href="https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35">Gradle Configurations Explained: What is the difference between <abbr title="Application Programming Interface">API</abbr> and Implementation? | medium.<abbr title="commercial/common/communication">com</abbr></a>.</p>
 <h2 id="creating-a-gradle-plugin">Creating a gradle plugin<a class="headerlink" href="#creating-a-gradle-plugin" title="Permanent link">¶</a></h2>
 <p>You have to decide between three choices:</p>
 <ul>
@@ -1397,7 +1397,7 @@ For defining the gradle scripts you can use groove (<code>build.gradle</code>) o
 <h3 id="standalone-project">Standalone project<a class="headerlink" href="#standalone-project" title="Permanent link">¶</a></h3>
 <ul>
 <li>define all dependencies in gradle file</li>
-<li>create a properties file in the resource folder with the same name as the plugin <abbr title="identification">id</abbr><ul>
+<li>create a properties file in the resource folder with the same name as the plugin <abbr title="identification/identifier">id</abbr><ul>
 <li>example:  <code>org.samples.greeting.properties</code> in <code>src/main/resources/META-INF/gradle-plugins/</code></li>
 </ul>
 </li>

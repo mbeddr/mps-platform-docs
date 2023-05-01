@@ -1033,7 +1033,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h1>Cells</h1>
 <h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">¶</a></h3>
 <h4 id="asynccell">AsyncCell<a class="headerlink" href="#asynccell" title="Permanent link">¶</a></h4>
-<p>The async cell allows displaying a text based loading indicator as long as the return string is null.</p>
+<p>The <abbr title="asynchronous">async</abbr> cell allows displaying a text based loading indicator as long as the return string is null.</p>
 <p>Create a new <code>$custom cell$</code> editor cell and return a new AsyncCellProvider:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1050,7 +1050,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../../gifs/async_cell.gif"><img alt="async cell" src="../../../gifs/async_cell.gif"/></a></p>
 <h4 id="framecell">FrameCell<a class="headerlink" href="#framecell" title="Permanent link">¶</a></h4>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.framecell</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.framecell</ins></p>
 </blockquote>
 <p>The <a href="http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790">frame</a> cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:</p>
 <ul>
@@ -1067,16 +1067,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a> can also be used for customizing the border and margins around a cell. Its documentation can be found <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/">here</a>.</p>
 <h3 id="margin-cell-review">Margin cell / review<a class="headerlink" href="#margin-cell-review" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.margincell</ins> and <ins>com.mbeddr.mpsutil.review</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.margincell</ins> and <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins></p>
 </blockquote>
 <p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word.
 In fact, the ReviewNote cell implements exactly Word’s comment facility as an example of the margin cell. Here is a screenshot:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../../images/margincell_example.png"><img alt="example: margin cell" src="../../../images/margincell_example.png"/></a></p>
-<p>To use the review notes, just include the respective language <ins>com.mbeddr.mpsutil.review</ins>; intentions are available to attach review notes to editor cells.</p>
+<p>To use the review notes, just include the respective language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins>; intentions are available to attach review notes to editor cells.</p>
 <p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model’s language being aware of it.</p>
 <h3 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><ins>com.mbeddr.mpsutil.placeholderTextList</ins></p>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.placeholderTextList</ins></p>
 </blockquote>
 <p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregation with a custom placeholder text.</p>
 <p>The placeholder can be specified in the inspector by creating a query function for the <em>placeholder text</em>.</p>

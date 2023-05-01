@@ -1031,18 +1031,18 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 <h1 id="continuous-integration">Continuous integration<a class="headerlink" href="#continuous-integration" title="Permanent link">¶</a></h1>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up CI with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects</a><small>(<em>Specific Languages’ blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up <abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects</a><small>(<em>Specific Languages’ blog</em>)</small></li>
 <li><a href="https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/">Maturity levels of <abbr title="Meta Programming System">MPS</abbr> deployment</a><small>(<em>Specific Languages’ blog</em>)</small></li>
 <li><a href="https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50">The Business-<abbr title="Domain Specific Language">DSL</abbr> DevOps Process</a><small>(<em>Markus Voelter’s blog</em>)</small></li>
 </ul>
 <details class="question">
-<summary>How to attach debugger to a CI build on GitHub actions?</summary>
-<p>Note: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual">act</abbr></a>.</p>
+<summary>How to attach debugger to a <abbr title="Continuous Integration">CI</abbr> build on GitHub actions?</summary>
+<p>Note: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual/action/active">act</abbr></a>.</p>
 <p>The plan is to first teach the build to open up a reachable <abbr title="Secure Shell">SSH</abbr> connection, and then tunnel a local port onto it so that we can connect IntelliJ to it.</p>
 <ul>
 <li>Sign up with ngrok and get your authtoken</li>
 </ul>
-<p>Since build agents usually are not reachable from the web, we’ll need someone to bridge the build agents’ firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/</a> which requires a free signup. I tried tmate as well, but that doesn’t support port forwarding.</p>
+<p>Since build agents usually are not reachable from the web, we’<abbr title="linked list">ll</abbr> need someone to bridge the build agents’ firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/</a> which requires a free signup. I tried tmate as well, but that doesn’t support port forwarding.</p>
 <ul>
 <li>Open ssh from your <code>.github/workflows/build.yml</code></li>
 </ul>
@@ -1062,7 +1062,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>    SSH_PASS: ssh-rsa AAAJOAKJFLJWKLJLEKJLEFKJLFEKJLK…JAOIFJOFA bkruck@itemis.com
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a># …
 </code></pre></div></td></tr></table></div>
-<p>Since this is a private repository, I was fine with directly pasting my authtoken and public <abbr title="Secure Shell">SSH</abbr> key into it directly (I didn’t have permissions to add secrets to the <abbr title="repository">repo</abbr>). After the whole session, I reset my ngrok auth token.</p>
+<p>Since this is a private repository, I was fine with directly pasting my authtoken and public <abbr title="Secure Shell">SSH</abbr> key into it directly (I didn’t have permissions to add secrets to the <abbr title="repository">repo</abbr>). After the whole session, I reset my ngrok <abbr title="authentication">auth</abbr> token.</p>
 <p>Another note worth mentioning is, that we trust the author of the action and ngrok here to not man-in-the-middle us here.</p>
 <ul>
 <li>Tell <abbr title="Meta Programming System">MPS</abbr> to wait for us</li>
@@ -1114,12 +1114,12 @@ If still asked for a password, check which user is running the build. On GitHub,
 <ul>
 <li>Connect with your local IntelliJ</li>
 </ul>
-<p>Assuming, that you have the <abbr title="Meta Programming System">MPS</abbr> sources checked out, opened it in IntelliJ and added the sources of your project as a module, we should be ready to connect now:</p>
-<p>Just start a remote debugging session on port 5020. It will forward the requests over <abbr title="Secure Shell">SSH</abbr> to the agent machine. Once connected, you’ll be able to set breakpoints (for example, I set an Exception breakpoint for <code>StackOverflowError</code>), and then proceed the build to run into the break point.</p>
+<p>Assuming, that you have the <abbr title="Meta Programming System">MPS</abbr> sources checked <abbr title="output">out</abbr>, opened it in IntelliJ and added the sources of your project as a module, we should be ready to connect now:</p>
+<p>Just start a remote debugging session on port 5020. It will forward the requests over <abbr title="Secure Shell">SSH</abbr> to the agent machine. Once connected, you’<abbr title="linked list">ll</abbr> be able to set breakpoints (for example, I set an Exception breakpoint for <code>StackOverflowError</code>), and then proceed the build to run into the break point.</p>
 <ul>
 <li>Cleanup</li>
 </ul>
-<p>After you found your issue and everything is shiny, remember to remove the step from your github workflow again and reset your ngrok auth token.</p>
+<p>After you found your issue and everything is shiny, remember to remove the step from your github workflow again and reset your ngrok <abbr title="authentication">auth</abbr> token.</p>
 </details>
 <div class="admonition warning">
 <p class="admonition-title">The build fails with exit code 137</p>

@@ -1009,7 +1009,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list in baselanguage) and enter your statements.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you find all System.out.println statements?</p>
+<p class="admonition-title">How can you find all System.<abbr title="output">out</abbr>.println statements?</p>
 <p><a href="https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc">Code snippet:</a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/find_print_statement.png"><img alt="find print statements" src="../../img/find_print_statement.png"/></a>]</p>
 </div>
@@ -1033,7 +1033,7 @@ or has a different solution kind such as <em>other</em>.</p>
 <div class="admonition question">
 <p class="admonition-title">What does the expression #internalMode do?</p>
 <p>It tells you if the internal mode is activated. It can be achieved by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
-or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom VM Options</em>. The exact functionality of this flag can be found by looking at the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
+or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The exact functionality of this flag can be found by looking at the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
 One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu in Intellij <abbr title="Integrated Development Environment">IDE</abbr>‘s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
 for more <abbr title="information">info</abbr>.</p>
 </div>

@@ -1251,7 +1251,7 @@ created correctly if errors exist.</p>
 type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add dependency to <em>ModelA</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>ModuleB</em> to <em>ModuleA</em>.</li>
 </ul>
 <h2 id="reuse-aka-extend-reference-a-external-java-type">Reuse (aka extend, reference) a external java type<a class="headerlink" href="#reuse-aka-extend-reference-a-external-java-type" title="Permanent link">¶</a></h2>
@@ -1260,7 +1260,7 @@ type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <ul>
 <li>To <em>ModuleB</em>, add the export flag to the dependency on <em>ModuleA</em>.</li>
 <li>To <em>ModelC</em>, add dependency to <em>ModelB</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the Dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the Dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>ModuleC</em> to <em>ModuleB</em>.</li>
 </ul>
 <p>Remark: not sure if we should add the export flag to the dependency on <em>ModuleA</em> here.</p>
@@ -1268,28 +1268,28 @@ type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <p>Directly (aka root node) or indirectly (aka child node) within <em>ModelB</em> inside <em>ModuleB</em>, we want to create an instance of <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add <em>Used Language</em> to <em>LanguageA</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically add a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageA</em>.</li>
 </ul>
 <h2 id="use-an-intention">Use an intention<a class="headerlink" href="#use-an-intention" title="Permanent link">¶</a></h2>
 <p>Make <em>IntentionC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add <em>Used Language</em> to <em>LanguageC</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="use-a-type-system-rule">Use a type system rule<a class="headerlink" href="#use-a-type-system-rule" title="Permanent link">¶</a></h2>
 <p>Make <em>TypesystemRuleC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add <em>Used Language</em> to <em>LanguageC</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="use-an-alternate-editor-with-a-hint">Use an alternate editor with a hint<a class="headerlink" href="#use-an-alternate-editor-with-a-hint" title="Permanent link">¶</a></h2>
 <p>Make <em>EditorC</em> defined in <em>LanguageC</em> for <em>ConceptA</em> inside <em>LanguageA</em> using <em>HintD</em> defined in <em>LanguageD</em> available in <em>ModelB</em> inside <em>ModuleB</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add <em>Used Language</em> to <em>LanguageC</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the <em>Used Language</em> being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>ModuleB</em> to <em>LanguageC</em>.</li>
 </ul>
 <h2 id="make-sure-that-a-generator-is-executed-for-a-model">Make sure that a generator is executed for a model<a class="headerlink" href="#make-sure-that-a-generator-is-executed-for-a-model" title="Permanent link">¶</a></h2>
@@ -1301,14 +1301,14 @@ type <em>ClassA</em> inside <em>ModelA</em> inside <em>ModuleA</em>.</p>
 <h2 id="use-node-type">Use <em>node<someconcept></someconcept></em> type<a class="headerlink" href="#use-node-type" title="Permanent link">¶</a></h2>
 <p><em>ClassB</em> inside <em>ModelB</em> inside <em>ModuleB</em> wants to create a variable of type <em>node<concepta></concepta></em> inside <em>LanguageA</em>.</p>
 <ul>
-<li>To <em>ModelB</em>, add Dependency to <em>LanguageA.structure</em>. Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+<li>To <em>ModelB</em>, add Dependency to <em>LanguageA.structure</em>. Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>ModuleB</em> to <em>LanguageA</em>.</li>
 </ul>
 <h2 id="call-a-behavior-method">Call a behavior Method<a class="headerlink" href="#call-a-behavior-method" title="Permanent link">¶</a></h2>
 <p><em>ClassB</em> inside <em>ModelB</em> inside <em>ModuleB</em> wants to call behavior method <em>opA</em> inside <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>ModelB</em>, add dependency to <em>LanguageA.structure</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>ModuleB</em> to <em>LanguageA</em>.</li>
 </ul>
 <p>Note: We could also add a dependency from <em>ModelB</em> to <em>LanguageA.behavior</em>. However, as we need
@@ -1318,14 +1318,14 @@ to depend on <em>LanguageA.structure</em> anyway (to be able to access the type)
 type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.structure</em>, add dependency to <em>LanguageA.structure</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 </ul>
 <h2 id="extend-a-concept-or-implement-a-conceptinterface">Extend a concept or implement a ConceptInterface<a class="headerlink" href="#extend-a-concept-or-implement-a-conceptinterface" title="Permanent link">¶</a></h2>
 <p><em>ConceptB</em> inside <em>LanguageB</em> wants to extend / implement <em>ConceptA</em> / <em>ConceptInterfaceA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.structure</em>, add dependency to <em>LanguageA.structure</em>.<br/>
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB</em> to <em>LanguageA</em> has extends Scope, either by
   setting it manually or by using the intention on the error appearing on <em>ConceptB</em>.</li>
@@ -1336,7 +1336,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.editor</em>, add dependency to <em>LanguageC.editor</em>.</li>
 <li>To <em>LanguageB.editor</em>, add dependency to <em>LanguageA.structure</em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageC</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageA</em> has <em>Extends Scope</em>.</li>
@@ -1345,7 +1345,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <p><em>LanguageB</em> wants to define a new editor component for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.editor</em>, add dependency to <em>LanguageA.structure</em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageA</em> has <em>Extends Scope</em>.</li>
 </ul>
@@ -1354,7 +1354,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.editor</em>, add dependency to <em>LanguageC.editor</em>.</li>
 <li>To <em>LanguageB.editor</em>, add dependency to <em>LanguageA.structure</em>.
-  Even if <abbr title="Meta Programming System">MPS</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if <abbr title="Meta Programming System">MPS</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageC</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageC</em> has <em>Extends Scope</em>.</li>
@@ -1363,7 +1363,7 @@ type <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <p><em>LanguageB</em> wants to define a new type system rule for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.typesystem</em>, add dependency to <em>LanguageA.structure</em>.
-  Even if <abbr title="Meta Programming System">MPS</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if <abbr title="Meta Programming System">MPS</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 <li>Make sure the dependency from <em>LanguageB*to *LanguageA</em> has <em>Extends Scope</em>.</li>
 </ul>
@@ -1392,7 +1392,7 @@ This flag specifies if type system rules of concepts extended by the applicable 
 <p><em>LanguageB</em> wants to define a new intention for <em>ConceptA</em> inside <em>LanguageA</em>.</p>
 <ul>
 <li>To <em>LanguageB.intentions</em>, add dependency to <em>LanguageA.structure</em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>LanguageB</em> to <em>LanguageA</em>.</li>
 </ul>
 <h2 id="create-a-generator">Create a Generator<a class="headerlink" href="#create-a-generator" title="Permanent link">¶</a></h2>
@@ -1407,7 +1407,7 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 <ul>
 <li>To <em>GeneratorB.main@generator</em>, add dependency to <em>LanguageA.structure</em>.</li>
 <li>To <em>GeneratorB.main@generator</em>, add <em>Used Language</em> to <em>LanguageC</em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency or used language being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency or used language being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li>Don’t forget to sort your generator into the generation process by defining some <a href="https://www.jetbrains.com/help/mps/mapping-priorities.html">mapping priorities</a>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>GeneratorB</em> to <em>LanguageA</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>GeneratorB</em> to <em>GeneratorA</em>.</li>
@@ -1425,7 +1425,7 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 <em>GeneratorB</em> transforms <em>ConceptE</em> inside <em>LanguageE</em> into <em>ConceptF</em> inside <em>LanguageF</em>.</p>
 <ul>
 <li>To <em>#GeneratorB.main@generator</em>, add dependency to <em>GeneratorA.main@generator</em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being <em>out of scope</em>, click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency being <em><abbr title="output">out</abbr> of scope</em>, click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>GeneratorB</em> to <em>GeneratorA</em>.</li>
 <li>Make sure the dependency from <em>GeneratorB*to *GeneratorA</em> has <em>Extends Scope</em>.</li>
 </ul>
@@ -1435,7 +1435,7 @@ into <em>ConceptC</em> inside <em>LanguageC</em>.</p>
 <li>To <em>#!java GeneratorB.main@generator</em>, add dependency to <em>LanguageA.structure</em>.</li>
 <li>To <em>#!java GeneratorB.main@generator</em>, add dependency to <em>ModelC</em>.</li>
 <li>To <em>#!java GeneratorB.main@generator</em>, add <em>Used Language</em> to <em><abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr></em>.
-  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency or <em>Used Language</em> being “out of scope,” click <em>ok</em>.</li>
+  Even if the <abbr title="Integrated Development Environment">IDE</abbr> complains about the dependency or <em>Used Language</em> being “<abbr title="output">out</abbr> of scope,” click <em>ok</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>GeneratorB</em> to <em>LanguageA</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a dependency from <em>GeneratorB</em> to <em>SolutionC</em>.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> automatically adds a <em>Used Language</em> from <em>GeneratorB</em> to <em><abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr></em>.</li>

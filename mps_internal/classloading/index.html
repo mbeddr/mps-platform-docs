@@ -1114,12 +1114,12 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 <tr>
 <td><abbr title="Meta Programming System">MPS</abbr>/<abbr title="library">lib</abbr></td>
 <td>root class loader,boostrap class loader</td>
-<td>com.intellij.util.<abbr title="language">lang</abbr>.UrlClassLoader</td>
+<td><abbr title="commercial/common/communication">com</abbr>.intellij.<abbr title="utilities">util</abbr>.<abbr title="language">lang</abbr>.UrlClassLoader</td>
 </tr>
 <tr>
 <td>/plugins/<plugin-name>/<abbr title="library">lib</abbr></plugin-name></td>
 <td>IDEA plugin class loader</td>
-<td>com.intellij.ide.plugins.<abbr title="classloader">cl</abbr>.PluginClassLoader</td>
+<td><abbr title="commercial/common/communication">com</abbr>.intellij.ide.plugins.<abbr title="classloader">cl</abbr>.PluginClassLoader</td>
 </tr>
 <tr>
 <td>any mps module with a java facet</td>
@@ -1137,7 +1137,7 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 <li>Add the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> to both the <em>MySolution.plugin</em> model and the <em>MySolution</em> solution.</li>
 <li>Create a <em>StandalonePluginDescriptor</em> in the model <em>MySolution.plugin</em>.</li>
 <li>Add the <em>MySolution</em> to a build model named <em>MySolution.build</em>.</li>
-<li>Create an idea plugin the build model with <abbr title="identification">id</abbr> <em>MySolution.IdeaPlugin</em>.</li>
+<li>Create an idea plugin the build model with <abbr title="identification/identifier">id</abbr> <em>MySolution.IdeaPlugin</em>.</li>
 <li>Add <em>MySolution.build</em> to the idea plugin <em>MySolution.IdeaPlugin</em> content.</li>
 <li>Add the dependency on <em>git4idea</em> to <em>MySolution.IdeaPlugin</em> dependencies.</li>
 <li>Execute the build script.</li>

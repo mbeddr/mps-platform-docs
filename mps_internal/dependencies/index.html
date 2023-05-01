@@ -1177,7 +1177,7 @@ take a long time building in the <abbr title="Integrated Development Environment
 <p>Neither runtime solutions nor accessory models constitute a dependency from the language to the referenced solution or model.</p>
 <h2 id="cyclic-dependencies">Cyclic dependencies<a class="headerlink" href="#cyclic-dependencies" title="Permanent link">¶</a></h2>
 <p>Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic <em>Extends Scope</em> dependency. Cycles between models in the same module are fine.
-Starting with <abbr title="Meta Programming System">MPS</abbr> 2021.1, there’s a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn’t <abbr title="actual">act</abbr> as forgiving as the earlier one (ECJ).</p>
+Starting with <abbr title="Meta Programming System">MPS</abbr> 2021.1, there’s a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn’t <abbr title="actual/action/active">act</abbr> as forgiving as the earlier one (ECJ).</p>
 <p>Distinctive cases are runtime solutions, accessory models, and utility models.</p>
 <p>In contrast to runtime solutions, utility models are used <em>while</em> accessing behavior or running a generator. Code within runtime solutions is used <em>after</em> the generator ran from the generated code. Thus, a runtime solution shouldn’t use or reference the language it is referenced from. A utility model can use or reference the language it is reference from.</p>
 <p>Accessory models can use or reference the language they’re referenced from.</p>

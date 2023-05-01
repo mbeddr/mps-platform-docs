@@ -1297,7 +1297,7 @@ When I run it, then I expect the result <code>[0,1,2,3,4]</code> but unexpectedl
 What’s happening?</p>
 </blockquote>
 <p><code>Yield</code> does not work with <code>.select({…})</code>.
-It will do what you expected if you just call <code>.selectMany({…})</code> instead. That’ll also make it clear what happens if you <code>yield</code> multiple times during an iteration, and that the control flow doesn’t end when you’re yielding.</p>
+It will do what you expected if you just call <code>.selectMany({…})</code> instead. That’<abbr title="linked list">ll</abbr> also make it clear what happens if you <code>yield</code> multiple times during an iteration, and that the control flow doesn’t end when you’re yielding.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></sub></sub></p>
 </div>
 <div class="admonition question">
@@ -1336,7 +1336,7 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn�
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.structure</ins></p>
 </blockquote>
 <ul>
-<li>An intention can mark a regular property-cell such as string, int, and boolean as transactional.</li>
+<li>An intention can mark a regular property-cell such as string, <abbr title="integer">int</abbr>, and boolean as transactional.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> updates the editor, when the cursor leaves the cell (= commit).</li>
 <li>You must define the commit handler in the inspector. The benefit is that the editor isn’t permanently updated on every key typed.</li>
 <li>Can be useful, for example, if you set your text-color dynamically.</li>
@@ -1359,7 +1359,7 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn�
 <blockquote>
 <p><ins>jetbrains.mps.core.xml.sax</ins></p>
 </blockquote>
-<p><a href="https://www.baeldung.com/java-sax-parser">SAX</a>, also known as the Simple API for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the <em>root</em> element and then at <em>rules</em> for XML tags.</p>
+<p><a href="https://www.baeldung.com/java-sax-parser">SAX</a>, also known as the Simple <abbr title="Application Programming Interface">API</abbr> for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the <em>root</em> element and then at <em>rules</em> for XML tags.</p>
 <h3 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">¶</a></h3>
 <p>The rule can have an optional <em>creator</em> which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (<em><abbr title="attribute">attr</abbr></em>) and children which take can have an optional handler. It has two arguments: the <em>result</em> which has the same type as the type of the rule and the <em>child</em> which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The <em>default</em> child block can be used for children with any tags. Next there can be a <em>text</em> handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the <em>validate</em> method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the <em>global text handler text</em>. 
 Example:</p>
@@ -1491,7 +1491,7 @@ Example:
 <blockquote>
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.imageGen</ins></p>
 </blockquote>
-<p>The single concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484">ImageGenerator</a> can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node <abbr title="identification">id</abbr> must be provided. The image is generated through the facet <a href="http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862">GenerateImages</a> which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
+<p>The single concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484">ImageGenerator</a> can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node <abbr title="identification/identifier">id</abbr> must be provided. The image is generated through the facet <a href="http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862">GenerateImages</a> which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>

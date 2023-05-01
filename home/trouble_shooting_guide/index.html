@@ -1062,7 +1062,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 <h1 id="troubleshooting-guide">Troubleshooting guide<a class="headerlink" href="#troubleshooting-guide" title="Permanent link">¶</a></h1>
 <p>This is a non-exhaustive list of common problems with <abbr title="Meta Programming System">MPS</abbr> and platform projects. It is assumed that Gradle is used for building the project.
-For general <abbr title="Meta Programming System">MPS</abbr> problems, read <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html">Finding your way out</a>first.</p>
+For general <abbr title="Meta Programming System">MPS</abbr> problems, read <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html">Finding your way <abbr title="output">out</abbr></a>first.</p>
 <h2 id="mps-and-platforms"><abbr title="Meta Programming System">MPS</abbr> and platforms<a class="headerlink" href="#mps-and-platforms" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> is sluggish and doesn’t work the way it should.</p>
@@ -1189,18 +1189,18 @@ For general <abbr title="Meta Programming System">MPS</abbr> problems, read <a h
 <li>When the build works without your changes, then your changes are the problem. Redo them one-by-one to find the one that causes the problem.</li>
 </ul>
 </li>
-<li>Does it work on CI?<ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm1.5 0a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm10.28-1.72-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l1.47 1.47 3.97-3.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span> → Is the CI build recent?<ul>
+<li>Does it work on <abbr title="Continuous Integration">CI</abbr>?<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm1.5 0a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm10.28-1.72-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l1.47 1.47 3.97-3.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span> → Is the <abbr title="Continuous Integration">CI</abbr> build recent?<ul>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Retrigger via a Whitespace-only commit.</li>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm1.5 0a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm10.28-1.72-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l1.47 1.47 3.97-3.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span> → Search for differences between your local Gradle build and the CI build (versions).</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm1.5 0a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm10.28-1.72-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l1.47 1.47 3.97-3.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span> → Search for differences between your local Gradle build and the <abbr title="Continuous Integration">CI</abbr> build (versions).</li>
 </ul>
 </li>
 <li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Is it the same error message?<ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Search for differences between your local Gradle build and the CI build (versions).</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Search for differences between your local Gradle build and the <abbr title="Continuous Integration">CI</abbr> build (versions).</li>
 </ul>
 </li>
-<li>is the master build green on CI?<ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Find out who broke it and make him fix it. After it is fixed, continue.</li>
+<li>is the master build green on <abbr title="Continuous Integration">CI</abbr>?<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"></path></svg></span> → Find <abbr title="output">out</abbr> who broke it and make him fix it. After it is fixed, continue.</li>
 </ul>
 </li>
 <li>is the master build recent?<ul>
@@ -1214,9 +1214,9 @@ For general <abbr title="Meta Programming System">MPS</abbr> problems, read <a h
 <li>Out of options. Ask somebody for help.</li>
 </ol>
 </div>
-<h2 id="ci">CI<a class="headerlink" href="#ci" title="Permanent link">¶</a></h2>
+<h2 id="ci"><abbr title="Continuous Integration">CI</abbr><a class="headerlink" href="#ci" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Tests are failing on CI, but run green in the local <abbr title="Meta Programming System">MPS</abbr> installation.</p>
+<p class="admonition-title">Tests are failing on <abbr title="Continuous Integration">CI</abbr>, but run green in the local <abbr title="Meta Programming System">MPS</abbr> installation.</p>
 <p>What about the local Gradle build?
 The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.home=PATH_TO_YOU_MPS_INSTALLTION</code>. Afterwards the test results can be found in <code>build/iets3-allScripts</code> (<span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1224,23 +1224,23 @@ The tests can be executed locally with: <code>./gradlew ant-build-tests -Dmps.ho
 </svg>
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>).</p>
 <ul>
-<li>It runs (green) -&gt; there is a discrepancy between the CI and your local Gradle build.<ul>
-<li>Make sure you are on the same branch/commit as the CI,</li>
+<li>It runs (green) -&gt; there is a discrepancy between the <abbr title="Continuous Integration">CI</abbr> and your local Gradle build.<ul>
+<li>Make sure you are on the same branch/commit as the <abbr title="Continuous Integration">CI</abbr>,</li>
 </ul>
 </li>
-<li>It shows the same test failures as the CI → there is a discrepancy between the <abbr title="Meta Programming System">MPS</abbr> Build and the Gradle Build<ul>
+<li>It shows the same test failures as the <abbr title="Continuous Integration">CI</abbr> → there is a discrepancy between the <abbr title="Meta Programming System">MPS</abbr> Build and the Gradle Build<ul>
 <li>Rebuild the build scripts in <abbr title="Meta Programming System">MPS</abbr>.</li>
 <li>Try running the tests in a seperate Ppocess (edit the run configuration in <abbr title="Meta Programming System">MPS</abbr>).</li>
 <li>Make sure your <abbr title="Meta Programming System">MPS</abbr> uses the same (versions of the) dependencies as the gradle build.<ul>
 <li>This can be achieved in 2 different ways:<ul>
 <li>Run <code>./gradlew dependencies</code> to see which versions of which dependency gradle uses and
-  make sure the <abbr title="Open Source">OS</abbr> and Mbeddr repos are checked out on the right branches / commits (<span class="twemoji">
+  make sure the <abbr title="Open Source / Operating System">OS</abbr> and Mbeddr repos are checked <abbr title="output">out</abbr> on the right branches / commits (<span class="twemoji">
 <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <image height="32" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="/>
 </svg>
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>).</li>
 <li>Remove the file <em>projectlibraries.overrides.properties</em> from your <abbr title="repository">repo</abbr> and execute
-  <code>./gradlew setup</code> in both. This configures <abbr title="Meta Programming System">MPS</abbr> to directy use the Java class files from the Gradle artifacts instead of the checked out repos.</li>
+  <code>./gradlew setup</code> in both. This configures <abbr title="Meta Programming System">MPS</abbr> to directy use the Java class files from the Gradle artifacts instead of the checked <abbr title="output">out</abbr> repos.</li>
 </ul>
 </li>
 </ul>
