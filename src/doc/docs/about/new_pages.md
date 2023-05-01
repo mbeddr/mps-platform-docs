@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## May 2023
+
+- [Languages: Cell Layout](cell_layout.md)
+
 ## February 2023
 
 - [Reference: standard plugins](standard_plugins.md)

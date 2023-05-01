@@ -201,7 +201,9 @@ nav:
       - languages/index.md
       - Baselanguage and extensions: languages/baselanguage.md
       - Double dispatch: languages/double_dispatch.md
-      - MPS-extensions: languages/mps_extensions.md
+      - MPS-extensions: 
+          - General: languages/mps_extensions.md
+          - Cell Layout: languages/cell_layout.md
       - KernelF: languages/kernelf.md
   - Mbeddr:
       - mbeddr/index.md
