@@ -11,7 +11,7 @@
 <link href="../common_concepts_and_interfaces/" rel="prev"/>
 <link href="../com_mbeddr_mpsutil/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.3" name="generator"/>
 <title>Interpreter, coverage and tracing - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -1076,7 +1076,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>In the GIF you can see the interpreter executing a test case that contains assertions written with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn’t involved in the execution at all.</p>
 <h2 id="creating-an-interpreter">Creating an interpreter<a class="headerlink" href="#creating-an-interpreter" title="Permanent link">¶</a></h2>
 <p>To create a new interpreter, create a new solution that contains the interpreter and import the language <code>com.mbeddr.mpsutil.interpreter</code>.
-Make sure to set the the solution kind to <code>Other</code> in the model properties.</p>
+Make sure to set the the solution kind to <code>Other</code> in the module properties.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/interpreter_solution.png"><img alt="interpreter: Solution Kind configuration" src="../images/interpreter_solution.png"/></a></p>
 <p>Now create a new model inside your new solution, create the new interpreter and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use other categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses its own category <code>java</code>. You don’t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
 <p>In the related interpreter section, you can define that the current interpret should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.</p>
@@ -1132,7 +1132,7 @@ The <em>$</em> expression returns the concept’s type. It can be used for type 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 3, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
