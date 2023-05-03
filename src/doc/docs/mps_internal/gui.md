@@ -12,6 +12,25 @@ tags:
     It can be found in the IntelliJ IDEA [documentation](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html).
     A more technical explanation can be found in the [IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
 
+!!! question "What exactly is an MPS action? How do they work?"
+
+    The [MPS actions](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups) compile down to [IntelliJ platform actions](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html), so in general you actually see actions from MPS and the IntelliJ platform (e.g. Close Floating Navigation Bar). Most icon buttons like the buttons in the upper right corner or the image buttons in the MPS tools are also IntelliJ buttons.
+
+    Actions which can be enabled or disabled are of type [ToggleAction](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html#useful-action-base-classes). They are used, for example, in KernelF in the run menu. There is a deprecated concept *addJavaAction* which
+    let's you add IntelliJ actions when referencing actions in an MPS plugin.
+
+    To disable actions, use the [actionsfilter](http://mbeddr.com/mps-platform-docs/platform_essentials/com_mbeddr_mpsutil/#actions-filter) language. You can modify the shortcuts of actions locally in *Preferences->Keymap*.
+
+!!! question "How can I find the source of an action?"
+
+    There are a few different things that you could try:
+
+    1. Guessing. If the caption contains, for example, the text "Clone", search for a root node that has the name Clone in it. Alternatively, you can try searching through the console: `#instances<scope = global>(ActionDeclaration).where({~it => it.caption.contains("Clone"); })`
+    2. Search the MPS GitHub repository: https://github.com/JetBrains/MPS/search?q=clone+solution for commits or code mentioning your keywords. In this case, it is clear that the action must be called "CloneModule" based on the first results.
+    3. If you find a similar action in the same context menu, check the other actions/groups in the same module. In your case, you might have found the group [SolutionRefactoring](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F1223018726868) through the [RenameModule](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F3734045384532066586) action which contains your action.
+
+    If the caption is not dynamic, number 1 usually works. If the action is located in the *MPS.IDEA* module, you will find it in the [IntelliJ community sources](https://github.com/JetBrains/intellij-community).
+
 !!! question "How can you show modal dialogs for inputting text?"
 
     Use the class [com.intellij.openapi.ui.Messages](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.ui%28MPS.IDEA%2F%29%2F%7EMessages).
