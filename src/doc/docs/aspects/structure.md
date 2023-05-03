@@ -46,6 +46,26 @@ The structure aspect contains all the concept and interface declarations of a la
 
     [Assigning node IDs explicitly](https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/){{ blog('sl') }}
 
+!!! question "Can I find a node by its ID?"
+
+    You can write a script on the console to find it. For example:
+
+    ![find nodes on the console by ID](node_by_id_console.png)
+
+    There is also the action *Go to node by ID* that can be found in the *Navigate* main menu.
+
+!!! question "Can I cast concept objects to super concept objects?"
+
+    > I have the following successfull boolean check: `someConcept.isSubConceptOf(MySuperConcept)`
+    > But if I put this code below, it fails with an exception that the cast cannot be performed: `((concept<MySuperConcept>) someConcept)`
+    > The type of the expression someConcept is `concept<>.`
+
+    There is a [special cast](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152) for that. For example:
+    ```java
+    concept<> cls = node/AbstractMethodError/.concept;
+    #print cls:BaseConcept.getLanguage().getQualifiedName();
+    ```
+
 ## Interfaces
 
 !!! warning "The concept implements {{ mps_url("@mps.ISuppressErrors") }} but errors are still shown for the node."
