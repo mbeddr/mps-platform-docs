@@ -13,7 +13,7 @@ In the GIF you can see the interpreter executing a test case that contains asser
 ## Creating an interpreter
 
 To create a new interpreter, create a new solution that contains the interpreter and import the language `com.mbeddr.mpsutil.interpreter`.
-Make sure to set the the solution kind to `Other` in the model properties.
+Make sure to set the the solution kind to `Other` in the module properties.
 
 ![interpreter: Solution Kind configuration](interpreter_solution.png)
 
