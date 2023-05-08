@@ -139,7 +139,7 @@ tags:
     }
     ```
 
-    {{ contribution_by('aquapp') }}
+    {{ contribution_by('AlexeiQ') }}
 
 !!! question "How can you convert a quotation to an expression?"
 

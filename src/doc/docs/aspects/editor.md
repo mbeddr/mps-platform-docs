@@ -84,7 +84,7 @@ The editor aspect defines the projectional editor of a concept.
 
     > ![autocompletion int16](autocompletion_int16.png)
 
-    {{ question_by('aquapp') }}
+    {{ question_by('AlexeiQ') }}
 
     In general, it's up to the users and specific context to decide what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.
 
@@ -174,7 +174,7 @@ The editor aspect defines the projectional editor of a concept.
 
     ![new editor for CompoundInitializerMember](CompoundInitializerMember_editor_new.png)
 
-    {{ contribution_by('aquapp') }}
+    {{ contribution_by('AlexeiQ') }}
 
 
 !!! question "Is it possible to access the selected value of one swing component from inside another swing component?"
@@ -218,7 +218,7 @@ The editor aspect defines the projectional editor of a concept.
 
     Since these attributes are hidden and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the *show if* property on the collection.
 
-    {{ contribution_by('aquapp') }}
+    {{ contribution_by('AlexeiQ') }}
 
 !!! question "How to you split child collections?"
 

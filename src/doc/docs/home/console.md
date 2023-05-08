@@ -45,7 +45,7 @@ tags:
 
     > Given I have a node selected in the editor. How can I select it to manipulate it in the MPS console?
 
-    {{ question_by('aquapp') }}
+    {{ question_by('AlexeiQ') }}
 
     You can simply copy the node and paste it into the console:
 
