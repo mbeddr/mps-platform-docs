@@ -171,6 +171,7 @@ nav:
     - Trouble shooting guide: home/trouble_shooting_guide.md
     - Visual guide: home/visual_guide.md
     - Debugging: home/debugging.md
+    - Performance: home/performance.md
   - Aspects:
     - Structure: aspects/structure.md
     - Editor: aspects/editor.md

@@ -8,6 +8,7 @@ This page lists all new pages since August 2022.
 ## May 2023
 
 - [Languages: Cell Layout](cell_layout.md)
+- [Performance](performance.md)
 
 ## March 2023
 
