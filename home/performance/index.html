@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="http://mbeddr.com/mps-platform-docs/mps_internal/navigating_mps_source/" rel="canonical"/>
-<link href="../intellij_integration/" rel="prev"/>
-<link href="../java_design_patterns_in_mps_sources/" rel="next"/>
+<link href="http://mbeddr.com/mps-platform-docs/home/performance/" rel="canonical"/>
+<link href="../debugging/" rel="prev"/>
+<link href="../../aspects/structure/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.3, mkdocs-material-9.1.3" name="generator"/>
-<title>Navigating the MPS sources - MPS Platform Docs</title>
+<title>Performance - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -41,7 +41,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#idea">
+<a class="md-skip" href="#general">
           Skip to content
         </a>
 </div>
@@ -77,7 +77,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Navigating the MPS sources
+              Performance
             
           </span>
 </div>
@@ -136,7 +136,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link md-tabs__link--active" href="../..">
         Home
       </a>
 </li>
@@ -161,7 +161,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../mps_internal/">
         MPS internals
       </a>
 </li>
@@ -223,69 +223,135 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
           Home
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/general/">
+<a class="md-nav__link" href="../general/">
         General
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/plugins/">
+<a class="md-nav__link" href="../plugins/">
         Plugins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/external_files_and_tools/">
+<a class="md-nav__link" href="../external_files_and_tools/">
         External files and tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/console/">
+<a class="md-nav__link" href="../console/">
         Console
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/platform_specific_bugs/">
+<a class="md-nav__link" href="../platform_specific_bugs/">
         OS-specific bugs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/rcp/">
+<a class="md-nav__link" href="../rcp/">
         RCP
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
+<a class="md-nav__link" href="../trouble_shooting_guide/">
         Trouble shooting guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/visual_guide/">
+<a class="md-nav__link" href="../visual_guide/">
         Visual guide
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../home/debugging/">
+<a class="md-nav__link" href="../debugging/">
         Debugging
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/performance/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Performance
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Performance
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general">
+    General
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generator">
+    Generator
+  </a>
+<nav aria-label="Generator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-pruning">
+    Model pruning
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editor">
+    Editor
+  </a>
+<nav aria-label="Editor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#big-roots-render-slowly">
+    Big roots render slowly
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#long-running-checking-rules-on-big-roots">
+    Long-running checking rules on big roots
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-extensions">
+    MPS-Extensions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kernelf">
+    KernelF
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java">
+    Java
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -576,29 +642,29 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">MPS internals</a>
+<a href="../../mps_internal/">MPS internals</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           MPS internals
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../open_api/">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../deps_and_classpath/">Dependencies and classpath</a>
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -610,22 +676,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../models/">
+<a class="md-nav__link" href="../../mps_internal/models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dependencies/">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../recipes/">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
         Recipes
       </a>
 </li>
@@ -633,14 +699,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../classloading/">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../threads/">Threading</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -652,12 +718,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/read_write_action_examples/">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/named_threads/">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -665,144 +731,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utility_classes/">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gui/">
+<a class="md-nav__link" href="../../mps_internal/gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../editor_development/">
+<a class="md-nav__link" href="../../mps_internal/editor_development/">
         Editor development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_sdk/">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../jcef/">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
         Java Chromium Embedded Framework
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing_mps_plugin_with_kotlin/">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
         Writing an MPS plugin with Kotlin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_integration/">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
         IntelliJ integration
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Navigating the MPS sources
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idea">
-    .idea
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mps">
-    .mps
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bin">
-    bin
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build">
-    build
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#core">
-    core
-  </a>
-<nav aria-label="core" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kernel">
-    kernel
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#languages">
-    languages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make">
-    make
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stub">
-    stub
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tool">
-    tool
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#platform">
-    platform
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#samples">
-    samples
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tests">
-    tests
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#workbench">
-    workbench
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java_design_patterns_in_mps_sources/">
+<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
         Java design patterns in the MPS sources
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mps_startup/">
+<a class="md-nav__link" href="../../mps_internal/mps_startup/">
         What happens on MPS startup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file_format/">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
         File format
       </a>
 </li>
@@ -1089,77 +1068,56 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#idea">
-    .idea
+<a class="md-nav__link" href="#general">
+    General
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mps">
-    .mps
+<a class="md-nav__link" href="#generator">
+    Generator
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bin">
-    bin
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build">
-    build
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#core">
-    core
-  </a>
-<nav aria-label="core" class="md-nav">
+<nav aria-label="Generator" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#kernel">
-    kernel
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#languages">
-    languages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make">
-    make
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stub">
-    stub
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tool">
-    tool
+<a class="md-nav__link" href="#model-pruning">
+    Model pruning
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#platform">
-    platform
+<a class="md-nav__link" href="#editor">
+    Editor
+  </a>
+<nav aria-label="Editor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#big-roots-render-slowly">
+    Big roots render slowly
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#samples">
-    samples
+<a class="md-nav__link" href="#long-running-checking-rules-on-big-roots">
+    Long-running checking rules on big roots
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mps-extensions">
+    MPS-Extensions
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tests">
-    tests
+<a class="md-nav__link" href="#kernelf">
+    KernelF
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#workbench">
-    workbench
+<a class="md-nav__link" href="#java">
+    Java
   </a>
 </li>
 </ul>
@@ -1169,152 +1127,98 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag" href="../../tags/#internals">internals</a>
-<a class="md-tag" href="../../tags/#sources">sources</a>
-</nav>
-<h1>Navigating the MPS sources</h1>
-<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
-More information can be found in the readme of the repository.</p>
-<h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h2>
-<p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
-in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
-such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../../img/mps_artifacts.png"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png"/></a></p>
-<p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr> and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
-many other IntelliJ specific project settings,</p>
-<h2 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">¶</a></h2>
-<p>This folder also contains run configurations and scopes but also other settings:</p>
+<h1>Performance</h1>
+<div class="admonition warning">
+<p class="admonition-title">This is a page about advanced topics. Please skip it if you are a beginner.</p>
+</div>
+<p>This page explains common bottlenecks regarding memory consumption and performance in general and how to solve those problems.</p>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h2>
 <ul>
-<li><em>codeStyleSettings.xml</em>: style settings used for baselanguage (e.g. default field and parameter prefix)</li>
-<li><em>compiler.xml</em>: the version of the Java compiler (currently: 11)</li>
-<li><em>encodings.xml</em>: encoding of the files (should be: UTF-8)</li>
-<li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in current project </li>
-<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g. settings of favourites manager)</li>
-<li><em>modules.xml</em>: a list of modules of this project that are loaded in <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>vcs.xml</em>: version control settings</li>
-<li><em>version.xml</em>: project version (not used anymore)</li>
-<li><em>settings of different components</em> (e.g. console history, messages view tool, project view)</li>
-</ul>
-<h2 id="bin"><abbr title="binary">bin</abbr><a class="headerlink" href="#bin" title="Permanent link">¶</a></h2>
-<p>This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr> specific files:</p>
-<ul>
-<li>
-<p>Linux</p>
-<ul>
-<li><em>libdgbm</em>: GNU dbm (‘gdbm’) is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
-<li><em>restart.<abbr title="position y">py</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
+<li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
+<li>Do not invalidate the cache when restarting the project, if it isn’t necessary. The reindexing can take quiet a while for large projects.</li>
+<li><a href="Speeding up model checks with Scope Cache">Speeding up model checks with Scope Cache</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
+<li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java</a>)</li>
+<li>Don’t recalculate expensive calculation but rather save the results in variables.</li>
+<li>Different data structure have different time and space complexities. For example, selecting a different list implementation can have big improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
+<li>Make sure to iterate nodes or editor cell trees efficiently. Narrow don’t the nodes that you want to iterate over e.g. <code>model.roots(ClassConcept)</code> instead of
+ <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create huge scopes. The same is true for searching in the console: snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code>can also be quiet expensive.</li>
+<li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope</a>. Try to also use the following snippets for filtering models that often shouldn’t be searched because they are not indexed:<ul>
+<li><code>#modules.where({~it =&gt; it.isPackaged() })</code>to filter <abbr title="output">out</abbr> modules that are installed</li>
+<li><code>#models.where({~it =&gt; TemporaryModels.isTemporary(it) })</code> to filter temporary models</li>
 </ul>
 </li>
-<li>
-<p>Mac</p>
-<ul>
-<li><em>libmacscreenmenu64.dylib</em>: native access to the <a href="https://support.apple.com/guide/mac-help/menu-bar-mchlp1446/mac">Apple menu bar</a>.</li>
-<li><em>libnst64.dlib</em>: native access to the Apple MacBook Pro <a href="https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac">Touch Bar</a>. The library is called NST(NextStep Touch Bar).</li>
-<li><em>printenv</em>: prints the environment variables</li>
+<li>Throwing exceptions and especially fatal errors that are shown in the lower right corner of the window are slow. Short
+  freezes before the errors are thrown are sometimes the result of that.</li>
 </ul>
+<h2 id="generator">Generator<a class="headerlink" href="#generator" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Disabling transient models through the button in the bottom right corner of the <abbr title="Meta Programming System">MPS</abbr> frame will increase generation performance significantly especially
+  in combination with the generator option “Apply transformations in place”.</p>
 </li>
 <li>
-<p>Windows</p>
-<ul>
-<li><em>breakgen(64).dll</em>: gracefully shut down a running process (not possible with Java).</li>
-<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: sudo-like tool for windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
-<li><em>IdeaWin32/64.dll</em>: native file system functions</li>
-<li><em>launcher.<abbr title="executable/execution">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>restarter.<abbr title="executable/execution">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: old library for Windows process management. Superseded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
-<li><em>WinProcessListHelper.<abbr title="executable/execution">exe</abbr></em>: lists windows processes</li>
-<li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
-<li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
-<li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
-</ul>
+<p>TODO: add generator performance slides from the <abbr title="Meta Programming System">MPS</abbr> Meetup</p>
 </li>
 </ul>
-<h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">¶</a></h2>
-<p>The used dependency manager is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
-<a href="https://ant.apache.org/">Apache Ant</a> is used as the build tool.
-The <code>artifacts</code> folder contains the generated jar files. An artifact might look like this:</p>
+<h3 id="model-pruning">Model pruning<a class="headerlink" href="#model-pruning" title="Permanent link">¶</a></h3>
+<p>Often, not all nodes have to be processed in the generator. We might have different build configurations where we are interested
+in only a subset of nodes, or we don’t use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a> and
+need to copy nodes from different models to the current model. Sometimes additional information is attached to nodes such as attributes
+or nodes don’t have to be generated at all. Having too many nodes to be processed can have memory impacts as well as make the generator a lot slower.</p>
+<p>Model pruning can be achieved by using an allowlist or blocklist approach: either specify which nodes should be processed or which nodes
+shouldn’t be processed. Both approaches can also be combined. The following simplified approach is on possible solution to achieve this:</p>
+<ol>
+<li>Collect all original root nodes: <code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">roots</span><span class="p">(</span><span class="o">&lt;</span><span class="n">all</span><span class="o">&gt;</span><span class="p">).</span><span class="na">select</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">genContext</span><span class="p">.</span><span class="na">get</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nf">for</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"></span></code></li>
+<li>Create a pruning condition that decides which nodes can be pruned and collect the other nodes (relevant nodes). You might also want to keep a list of relevant root concepts that shouldn’t be pruned.</li>
+<li>Start from a specific node and iterate through its descendants and follow only the references that are allowed by the pruning condition. You might want to
+include also other nodes that are not reachable by reference that are still needed for the generation.</li>
+<li>Make copies of the roots of nodes that are relevant and shouldn’t be pruned.</li>
+<li>Iterate through the children of the copies. If a child is not a relevant node, detach it from its parent node.</li>
+<li>Clear the original content from the input model and add the relevant roots to the input model.</li>
+</ol>
+<h2 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">¶</a></h2>
+<h3 id="big-roots-render-slowly">Big roots render slowly<a class="headerlink" href="#big-roots-render-slowly" title="Permanent link">¶</a></h3>
+<p>The initial rendering time increases with the size of the <abbr title="Abstract Syntax Tree">AST</abbr>. <abbr title="Meta Programming System">MPS</abbr> tries to cache parts of the editor once built and after the initial render it will only update the parts that require changes, but collecting the necessary dependency information to achieve this incrementality takes time.
+How big is too big? Thousands of descendants are going to take several seconds to render. Re-layouting the editor should therefore also not be invoked
+too often (manually or programmatically).</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></sub></sub></p>
+<h3 id="long-running-checking-rules-on-big-roots">Long-running checking rules on big roots<a class="headerlink" href="#long-running-checking-rules-on-big-roots" title="Permanent link">¶</a></h3>
+<p>When a root is displayed in the editor, checking rules are run in the background. The background checker can be interrupted between rules but not during the execution of a rule. When checking rules are too expensive for live checking set the flag <code>do not apply on the fly</code> to true.
+Type system calculations are cached by default but can also impact performance when they have to be recalculated too often. </p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></sub></sub></p>
+<h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">¶</a></h2>
 <ul>
-<li><em>languages</em>: contains <abbr title="Meta Programming System">MPS</abbr> languages</li>
-<li><em>modules</em>: contains Java classes</li>
-<li><em><abbr title="library">lib</abbr></em>: Jar dependencies</li>
-<li><em>META-INF</em>: contains the <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a></li>
-<li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin that this artifact belongs to.</li>
+<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in nodes attributes. That means
+ that auto re-layouting the diagram creates a lot of changes in the <abbr title="difference">diff</abbr> view for this root node. The auto-layouting can be influenced through
+ an option in the editor definition of the diagram.</li>
+<li>Tables and diagrams disable incremental rendering. That means that the editor will not be updated incremental causing a full update on each typed character.
+  This might also affect the typesystem calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
+<li>Using horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>) will cause a top-down layout algorithm to be activated for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> relayout and is also called more often for some reason, slowing down the incremental editor update.</li>
 </ul>
-<p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties</a>.</p>
-<p><code>home/.ant/lib</code> contains additional Java libraries that can be used with Ant.</p>
-<p>The <code>resources</code> folder contains image resources as well as the following files:</p>
+<h2 id="kernelf">KernelF<a class="headerlink" href="#kernelf" title="Permanent link">¶</a></h2>
 <ul>
-<li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>mps-dmg.sh</em>: create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for macOS</li>
-<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> macOS application</li>
+<li>The <a href="http://localhost:8000/mps-platform-docs/platform_essentials/interpreter/#code-coverage">code coverage collection</a> is global. That means that you either
+have to empty it after some time with <code>DefaultCoverageAnalyzer.reset()</code> or start the interpreter without coverage. The class
+<a href="http://127.0.0.1:63320/node?ref=r%3A83e946de-2a7f-4a4c-b3c9-4f671aa7f2db%28org.iets3.core.expr.base.behavior%29%2F4065005624681052837">IETS3ExprEvalHelper</a> has methods for evaluating nodes with and without coverage.</li>
+<li>The <a href="http://mbeddr.com/interpreter/Interpreter.html">interpreter</a> framework can be slow when the interpreter is invoked often.
+  There might be <a href="https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/">faster alternatives</a> that are currently not
+ implemented though.</li>
 </ul>
-<p>The <code>tests</code> folder contains Ant scripts for executing tests.
-The <code>tools</code> folder contains scripts for signing and creating DMGs and also
-a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
-The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc.).
-The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
-on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
-<h2 id="core">core<a class="headerlink" href="#core" title="Permanent link">¶</a></h2>
-<p>The <code>aspects</code> folder contains the languages for the language aspects.
-The <code>baselanguage</code> folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
-<p>The folder <code>devkit</code> contains the four main devkits:</p>
+<h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">¶</a></h2>
+<p>If you are interested in internal performance-related topics about Java and its compiler, you might find the following articles helpful:</p>
 <ul>
-<li><ins>jetbrains.mps.devkit.bootstrap-languages</ins>: contains all the jetbrains.mps.<abbr title="language">lang</abbr> languages</li>
-<li><ins>jetbrains.mps.devkit.general-purpose</ins>: baselanguage + smodel + text +  quotation language</li>
-<li><ins>jetbrains.mps.devkit.language-design</ins> + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources</li>
-<li><ins>jetbrains.mps.devkit.templates</ins>: general-purpose + generator languages</li>
-</ul>
-<h3 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h3>
-<p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
-make classes and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
-<h3 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">¶</a></h3>
-<p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.</p>
-<h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">¶</a></h3>
-<p>Everything related to the make facet is situated in this folder.</p>
-<h3 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">¶</a></h3>
-<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g. stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
-<h3 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">¶</a></h3>
-<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.</p>
-<h2 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">¶</a></h2>
-<p>This folder contains languages and solutions for the following platform features:</p>
-<ul>
-<li>build language</li>
-<li>console</li>
-<li>http server</li>
-<li>make</li>
-<li>migrations</li>
-<li>model checker</li>
-<li>Java to mps parsing</li>
-<li>spell checker</li>
-<li>debugging information (traceInfo)</li>
-<li>version control</li>
-<li>integrations with the IDEA platform</li>
-<li>integration for <abbr title="Meta Programming System">MPS</abbr> plugin into IntelliJ IDEA</li>
-</ul>
-<h2 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">¶</a></h2>
-<p>This folder contains the samples that are ship with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
-<h2 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h2>
-<p>This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.</p>
-<h2 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">¶</a></h2>
-<p>This folder contains subfolders for:</p>
-<ul>
-<li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
-<li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions</a></li>
-<li>editor related actions</li>
-<li>run configurations + execution of baselanguage and other languages</li>
-<li>refactorings</li>
-<li><abbr title="User Interface">UI</abbr> components and tools such as the dependency viewer, the new module dialog as well as different finders</li>
-<li>all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)</li>
-<li>editor tabs for the various language aspects</li>
+<li><a href="https://www.ibm.com/docs/en/sdk-java-technology/8?topic=compiler-how-jit-optimizes-code">How the JIT compiler optimizes code | ibm.<abbr title="commercial/common/communication">com</abbr></a></li>
+<li><a href="https://www.oracle.com/java/technologies/whitepaper.html">The Java HotSpot Performance Engine Architecture | oracle.<abbr title="commercial/common/communication">com</abbr></a></li>
+<li><a href="https://en.wikipedia.org/wiki/Optimizing_compiler">Optimizing compiler | wikipedia.<abbr title="commercial/common/communication">com</abbr></a></li>
+<li><a href="https://developers.redhat.com/articles/2021/06/23/how-jit-compiler-boosts-java-performance-openjdk">How the JIT compiler boosts Java performance in OpenJDK | developers.redhat.<abbr title="commercial/common/communication">com</abbr></a></li>
+<li><a href="https://www.baeldung.com/java-microbenchmark-harness">Microbenchmarking with Java | baeldung.<abbr title="commercial/common/communication">com</abbr></a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 13, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
@@ -1409,7 +1313,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: IntelliJ integration" class="md-footer__link md-footer__link--prev" href="../intellij_integration/" rel="prev">
+<a aria-label="Previous: Debugging" class="md-footer__link md-footer__link--prev" href="../debugging/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1418,17 +1322,17 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <span class="md-footer__direction">
                   Previous
                 </span>
-                IntelliJ integration
+                Debugging
               </div>
 </div>
 </a>
-<a aria-label="Next: Java design patterns in the MPS sources" class="md-footer__link md-footer__link--next" href="../java_design_patterns_in_mps_sources/" rel="next">
+<a aria-label="Next: Structure" class="md-footer__link md-footer__link--next" href="../../aspects/structure/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                Java design patterns in the MPS sources
+                Structure
               </div>
 </div>
 <div class="md-footer__button md-icon">
