@@ -118,7 +118,7 @@
 *[div]: division
 *[dk]: delta key/devkit
 *[doc]: document/documentation
-*[driver]: drv
+*[drv]: driver
 *[dr]: dynamic reference
 *[ds]: data source
 *[dsm]: default semantic model
@@ -346,13 +346,10 @@
 *[rm]: remove/root model
 *[rnd]: random
 *[rng]: range
-*[rec]: record
 *[rect]: rectangle
 *[recv]: receive
-*[ref]: reference
 *[regex]: regular expression
 *[rem]: remote
-*[repo]: repository
 *[req]: request
 *[res]: response/result
 *[ret]: return
