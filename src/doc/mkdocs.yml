@@ -253,6 +253,7 @@ nav:
       - MPS utilities: platform_essentials/com_mbeddr_mpsutil.md
       - Platform build scripts: platform_essentials/platform_build_scripts.md
       - Build folder: platform_essentials/build_folder.md
+      - Testing: platform_essentials/testing.md
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md
