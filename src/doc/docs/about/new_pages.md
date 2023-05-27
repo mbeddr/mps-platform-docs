@@ -9,7 +9,7 @@ This page lists all new pages since August 2022.
 
 - [Languages: Cell Layout](cell_layout.md)
 - [Performance](performance.md)
-- [Testing](platform_essentials/testing.md)
+- [Testing](testing.md)
 
 ## March 2023
 
@@ -42,7 +42,7 @@ This page lists all new pages since August 2022.
 
 ## September 2022
 
-- [What happens on MPS startup (2021.1.4)](mps_internal/mps_startup.md)
+- [What happens on MPS startup (2021.1.4)](mps_startup.md)
 
 ## August 2022
 
