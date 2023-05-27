@@ -876,6 +876,11 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         Build folder
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../platform_essentials/testing/">
+        Testing
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1254,6 +1259,10 @@ statement in such places.</p>
 <p class="admonition-title">What library does <abbr title="Meta Programming System">MPS</abbr> use to parse Java code?</p>
 <p>It uses the parser of the Eclipse Java Development Tools (JDT). The <abbr title="Abstract Syntax Tree">AST</abbr> is described on the page <a href="https://www.vogella.com/tutorials/EclipseJDT/article.html">Eclipse JDT - Abstract Syntax Tree (<abbr title="Abstract Syntax Tree">AST</abbr>) and the Java Model</a>.    </p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How do know if a node in <abbr title="Meta Programming System">MPS</abbr> is commented <abbr title="output">out</abbr>? How can I comment <abbr title="output">out</abbr> nodes programmatically?</p>
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3Ab9f36c08-4a75-4513-9277-a390d3426e0f%28jetbrains.mps.editor.runtime.impl.cellActions%29%2F6549307287717228796">CommentUtil</a>. It has methods for commenting/uncommenting and checking if the node is commented <abbr title="output">out</abbr> (<code>CommentUtil#isCommentedOut</code>).</p>
+</div>
 <h2 id="var-variable">Var Variable<a class="headerlink" href="#var-variable" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage.varVariable</ins></p>
@@ -1518,7 +1527,7 @@ Example:
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 27, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
