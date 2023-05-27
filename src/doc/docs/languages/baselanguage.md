@@ -48,6 +48,10 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
 
     It uses the parser of the Eclipse Java Development Tools (JDT). The AST is described on the page [Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model](https://www.vogella.com/tutorials/EclipseJDT/article.html).    
 
+!!! question "How do know if a node in MPS is commented out? How can I comment out nodes programmatically?"
+
+    Use the class [CommentUtil](http://127.0.0.1:63320/node?ref=r%3Ab9f36c08-4a75-4513-9277-a390d3426e0f%28jetbrains.mps.editor.runtime.impl.cellActions%29%2F6549307287717228796). It has methods for commenting/uncommenting and checking if the node is commented out (`CommentUtil#isCommentedOut`).
+
 ## Var Variable
 
 > ^^jetbrains.mps.baselanguage.varVariable^^
