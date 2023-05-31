@@ -313,10 +313,6 @@ The editor aspect defines the projectional editor of a concept.
     editorContext.getNodeEditorComponent().selectNode()
     ```
 
-!!! question "How to get the current MPS project from within the editor?"
-
-    Specific Languages Blog: [How to get the current MPS project from within the editor](https://specificlanguages.com/posts/how-to-get-current-project-from-editor/)
-
 !!! question "How do you find all open editors?"
 
     {{ blog('sl',false) }}[Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/)
