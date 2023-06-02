@@ -219,6 +219,7 @@ nav:
       - Creating a command line tool: build/command_line_tool.md
       - Git: build/git.md
       - TeamCity: build/teamcity.md
+      - Advanced GitHub workflow: build/advanced_github_workflow.md
   - MPS internals:
       - mps_internal/index.md
       - Open API: mps_internal/open_api.md

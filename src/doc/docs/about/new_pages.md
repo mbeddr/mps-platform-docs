@@ -5,12 +5,16 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## June 2023
+
+- [Build: Advanced GitHub workflow](advanced_github_workflow.md)
+
 ## May 2023
 
 - [Languages: Cell Layout](cell_layout.md)
-- [Performance](performance.md)
-- [Testing](testing.md)
-- [Accessing the project](accessing_the_project.md)
+- [Home: Performance](performance.md)
+- [Platform essentials: Testing](testing.md)
+- [Platform essentials: Accessing the project](accessing_the_project.md)
 
 ## March 2023
 
