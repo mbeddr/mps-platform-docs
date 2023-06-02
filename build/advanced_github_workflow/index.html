@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
 <meta content="MPS Platform Docs team" name="author"/>
-<link href="http://mbeddr.com/mps-platform-docs/mps_internal/java_design_patterns_in_mps_sources/" rel="canonical"/>
-<link href="../navigating_mps_source/" rel="prev"/>
-<link href="../mps_startup/" rel="next"/>
+<link href="http://mbeddr.com/mps-platform-docs/build/advanced_github_workflow/" rel="canonical"/>
+<link href="../teamcity/" rel="prev"/>
+<link href="../../mps_internal/" rel="next"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.3, mkdocs-material-9.1.3" name="generator"/>
-<title>Java design patterns in the MPS sources - MPS Platform Docs</title>
+<title>Advanced GitHub workflow - MPS Platform Docs</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -41,7 +41,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creational-patterns">
+<a class="md-skip" href="#codeowners-file">
           Skip to content
         </a>
 </div>
@@ -77,7 +77,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Java design patterns in the MPS sources
+              Advanced GitHub workflow
             
           </span>
 </div>
@@ -156,12 +156,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../build/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Build
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../mps_internal/">
         MPS internals
       </a>
 </li>
@@ -534,76 +534,142 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../build/">Build</a>
+<a href="../">Build</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
           Build
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/ci/">
+<a class="md-nav__link" href="../ci/">
         CI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/gradle/">
+<a class="md-nav__link" href="../gradle/">
         Gradle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/command_line_tool/">
+<a class="md-nav__link" href="../command_line_tool/">
         Creating a command line tool
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/git/">
+<a class="md-nav__link" href="../git/">
         Git
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../build/teamcity/">
+<a class="md-nav__link" href="../teamcity/">
         TeamCity
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/advanced_github_workflow/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Advanced GitHub workflow
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Advanced GitHub workflow
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeowners-file">
+    CODEOWNERS file
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merge-queue">
+    Merge queue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issue-and-pull-request-templates">
+    Issue and pull request templates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-actions-and-workflows">
+    GitHub Actions and workflows
+  </a>
+<nav aria-label="GitHub Actions and workflows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#release-notes">
+    Release notes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflows">
+    Workflows
+  </a>
+<nav aria-label="Workflows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#metrics">
+    Metrics
+  </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-the-ticket-to-the-merged-pr">
+    From the ticket to the merged PR
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#an-example-of-a-different-workflow">
+    An example of a different workflow
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">MPS internals</a>
+<a href="../../mps_internal/">MPS internals</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           MPS internals
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../open_api/">
+<a class="md-nav__link" href="../../mps_internal/open_api/">
         Open API
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../deps_and_classpath/">Dependencies and classpath</a>
+<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -615,22 +681,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../terminology_and_ui_for_access/">
+<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
         Terminology and UI for access
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../models/">
+<a class="md-nav__link" href="../../mps_internal/models/">
         Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dependencies/">
+<a class="md-nav__link" href="../../mps_internal/dependencies/">
         Dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../recipes/">
+<a class="md-nav__link" href="../../mps_internal/recipes/">
         Recipes
       </a>
 </li>
@@ -638,14 +704,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../classloading/">
+<a class="md-nav__link" href="../../mps_internal/classloading/">
         Classloading
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../threads/">Threading</a>
+<a href="../../mps_internal/threads/">Threading</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -657,12 +723,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/read_write_action_examples/">
+<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
         Example actions using locks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../threads/named_threads/">
+<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
         Named threads
       </a>
 </li>
@@ -670,207 +736,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utility_classes/">
+<a class="md-nav__link" href="../../mps_internal/utility_classes/">
         Utility classes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gui/">
+<a class="md-nav__link" href="../../mps_internal/gui/">
         GUI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../editor_development/">
+<a class="md-nav__link" href="../../mps_internal/editor_development/">
         Editor development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_sdk/">
+<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
         IntelliJ SDK
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../jcef/">
+<a class="md-nav__link" href="../../mps_internal/jcef/">
         Java Chromium Embedded Framework
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing_mps_plugin_with_kotlin/">
+<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
         Writing an MPS plugin with Kotlin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../intellij_integration/">
+<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
         IntelliJ integration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating_mps_source/">
+<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
         Navigating the MPS sources
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Java design patterns in the MPS sources
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
         Java design patterns in the MPS sources
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creational-patterns">
-    Creational Patterns
-  </a>
-<nav aria-label="Creational Patterns" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#abstract-factory">
-    Abstract Factory
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#builder">
-    Builder
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#factory-method">
-    Factory method
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#prototype">
-    Prototype
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#singleton">
-    Singleton
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#structural-patterns">
-    Structural Patterns
-  </a>
-<nav aria-label="Structural Patterns" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adapter">
-    Adapter
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bridge">
-    Bridge
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#composite">
-    Composite
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#decorator">
-    Decorator
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#facade">
-    Facade
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#flyweight">
-    Flyweight
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#proxy">
-    Proxy
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#behavioral-patterns">
-    Behavioral Patterns
-  </a>
-<nav aria-label="Behavioral Patterns" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chain-of-responsibility">
-    Chain of Responsibility
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iterator">
-    Iterator
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memento">
-    Memento
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#state">
-    State
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#template-method">
-    Template method
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#command">
-    Command
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mediator">
-    Mediator
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observer">
-    Observer
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strategy">
-    Strategy
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#visitor">
-    Visitor
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../mps_startup/">
+<a class="md-nav__link" href="../../mps_internal/mps_startup/">
         What happens on MPS startup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file_format/">
+<a class="md-nav__link" href="../../mps_internal/file_format/">
         File format
       </a>
 </li>
@@ -1167,141 +1083,57 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creational-patterns">
-    Creational Patterns
+<a class="md-nav__link" href="#codeowners-file">
+    CODEOWNERS file
   </a>
-<nav aria-label="Creational Patterns" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merge-queue">
+    Merge queue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#issue-and-pull-request-templates">
+    Issue and pull request templates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-actions-and-workflows">
+    GitHub Actions and workflows
+  </a>
+<nav aria-label="GitHub Actions and workflows" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#abstract-factory">
-    Abstract Factory
+<a class="md-nav__link" href="#release-notes">
+    Release notes
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#builder">
-    Builder
+<a class="md-nav__link" href="#workflows">
+    Workflows
   </a>
-</li>
+<nav aria-label="Workflows" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#factory-method">
-    Factory method
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#prototype">
-    Prototype
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#singleton">
-    Singleton
+<a class="md-nav__link" href="#metrics">
+    Metrics
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#structural-patterns">
-    Structural Patterns
-  </a>
-<nav aria-label="Structural Patterns" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adapter">
-    Adapter
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bridge">
-    Bridge
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#composite">
-    Composite
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#decorator">
-    Decorator
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#facade">
-    Facade
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#flyweight">
-    Flyweight
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#proxy">
-    Proxy
-  </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#behavioral-patterns">
-    Behavioral Patterns
-  </a>
-<nav aria-label="Behavioral Patterns" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chain-of-responsibility">
-    Chain of Responsibility
+<a class="md-nav__link" href="#from-the-ticket-to-the-merged-pr">
+    From the ticket to the merged PR
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#iterator">
-    Iterator
+<a class="md-nav__link" href="#an-example-of-a-different-workflow">
+    An example of a different workflow
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memento">
-    Memento
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#state">
-    State
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#template-method">
-    Template method
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#command">
-    Command
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mediator">
-    Mediator
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observer">
-    Observer
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strategy">
-    Strategy
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#visitor">
-    Visitor
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1310,131 +1142,119 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Java design patterns in the MPS sources</h1>
-<p>This page lists at most three examples per <a href="https://refactoring.guru/design-patterns">Java design pattern</a> in the <abbr title="Meta Programming System">MPS</abbr> source code.
-The headers link to explanations and examples for the corresponding design patterns in the Java world.</p>
-<h2 id="creational-patterns">Creational Patterns<a class="headerlink" href="#creational-patterns" title="Permanent link">¶</a></h2>
-<h3 id="abstract-factory"><a href="https://refactoring.guru/design-patterns/abstract-factory">Abstract Factory</a><a class="headerlink" href="#abstract-factory" title="Permanent link">¶</a></h3>
+<h1>Advanced GitHub workflow</h1>
+<p>The following workflow is suitable for small projects as well as projects with hundreds of developers. This guide assumes that the project is hosted on GitHub and that <abbr title="Continuous Integration">CI</abbr> pipeline also runs on GitHub. Additionaly, one or more teams work on the project and a form of <a href="https://www.wikiwand.com/en/Agile_software_development">agile software development</a> is implemented.
+New feature/bugfixes are developed based on a <a href="https://www.vollcom-digital.com/blog/digital-transformation/how-to-write-an-agile-ticket/">ticket</a> system.</p>
+<h2 id="codeowners-file">CODEOWNERS file<a class="headerlink" href="#codeowners-file" title="Permanent link">¶</a></h2>
+<p>GitHub supports <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS</a> files which should be placed in the <em>.github</em> subfolder. In can be generated by an <abbr title="Meta Programming System">MPS</abbr> language. For solutions, a root node
+can be added to describe the owners. For example:</p>
+<blockquote>
+<p><strong>Solution Code Owners</strong></p>
+<p>The following maintainers should be added to pull requests changing this solution</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>- team1
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>- team2
+</code></pre></div>
+<p>For languages, this information could be added to the documentation aspect if the language <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> is used. For example:</p>
+<blockquote>
+<p><strong>Maintainer</strong> </p>
+<p>The following maintainers should be added to pull requests changing this language.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>ownerslist {
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>- team1
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>- team2
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>}
+</code></pre></div>
+<p>In the branch protection rules on GitHub it can then be specified that the corresponding team has to review pull requests
+before they can be merged.</p>
+<h2 id="merge-queue">Merge queue<a class="headerlink" href="#merge-queue" title="Permanent link">¶</a></h2>
+<p>When all branches are merged into a main branch and there are a lot of pull requests at the same time, it can make sense to
+enable the <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue">merge queue</a> feature on GitHub. Pull requests that have reviews and no failing checks can be added to the merge queue. The position
+in the merge queue is shown in the <abbr title="Pull Request or Public Relations">PR</abbr> as well as the expected time for the <abbr title="Pull Request or Public Relations">PR</abbr> to be merged.</p>
+<p>When the previous PRs in the merge queue  are in conflict with the current <abbr title="Pull Request or Public Relations">PR</abbr>, the current <abbr title="Pull Request or Public Relations">PR</abbr> will be taken <abbr title="output">out</abbr> of the merge queue. This can also be done manually when a <abbr title="Pull Request or Public Relations">PR</abbr> is added to the merge queue by accident. There is also the option “Merge when ready” at the bottom of the <abbr title="Pull Request or Public Relations">PR</abbr> to automatically add
+it to the merge queue when all other checks succeed.</p>
+<h2 id="issue-and-pull-request-templates">Issue and pull request templates<a class="headerlink" href="#issue-and-pull-request-templates" title="Permanent link">¶</a></h2>
+<p>To make it easier for developers and users to submit issues, <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">issue templates</a> can be added to a
+repository. A few templates can be found at <a href="https://github.com/stevemao/github-issue-templates">stevemao/github-issue-templates</a>. If you are using a help desk
+or some other tool like <a href="https://www.atlassian.com/software/jira">Jira</a>, <a href="https://www.jetbrains.com/youtrack/">YouTrack</a> or a platform like <a href="https://about.gitlab.com/">GitLab</a> you might want to <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues">disable issues</a> instead.</p>
+<p>For developers a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">pull request template</a> helps them create better pull requests. The template is instantiated when a new <abbr title="Pull Request or Public Relations">PR</abbr> is opened.
+It can explain naming conventions that the developer has to follow or provide a checklist of things to pay attention to before
+open a new <abbr title="Pull Request or Public Relations">PR</abbr> e.g. adding the change to the changelog, updating the documentation or checking that tests exist for a new feature.</p>
+<h2 id="github-actions-and-workflows">GitHub Actions and workflows<a class="headerlink" href="#github-actions-and-workflows" title="Permanent link">¶</a></h2>
+<p>GitHub supports automating the workflow through <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<h3 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">¶</a></h3>
+<p>GitHub supports <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes">automatically generating release notes</a> as well as many <a href="https://github.com/marketplace?type=actions&amp;query=Release+notes+">actions</a> on the GitHub marketplace support this feature. While a common approach is to just extract the information from
+the commit messages, it might be better to manually write a release notes file or extract the information from the <abbr title="Pull Request or Public Relations">PR</abbr> description
+if it has a pre-defined format.</p>
+<p>It’s important to differentiate between a changelog and release notes (<a href="https://amoeboids.com/blog/changelog-vs-release-notes-the-key-differences/">amoeboids.<abbr title="commercial/common/communication">com</abbr></a>): the changelog communicates technical changes, the release notes 
+inform the users about new features, improvements, bug fixes etc. in a non-technical way.</p>
+<h3 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">¶</a></h3>
+<p><a href="https://docs.github.com/en/actions/using-workflows/about-workflows">Workflows</a> are located in the <em>.github/workflows</em> directory and can be triggered by
+events, scheduled automatically or manual triggered. For many workflows, at least the <a href="https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables">default environment variables</a> <em>GITHUB_ACTOR</em> and <em>GITHUB_TOKEN</em> are necessary. <a href="https://github.com/nektos/act">nektos/<abbr title="actual/action/active">act</abbr></a> can be used to run GitHub Actions locally. Depending on the project, fhe following workflows might be useful:</p>
 <ul>
-<li>TODO</li>
+<li>building the project using the <a href="https://github.com/gradle/gradle-build-action">gradle-build-action</a> in combination with the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a></li>
+<li>checking that issues or PRs are not <a href="https://github.com/actions/stale">stale</a> (e.g. as a cronjob)</li>
+<li>checking that <abbr title="Pull Request or Public Relations">PR</abbr> conventions are followed when a <abbr title="Pull Request or Public Relations">PR</abbr> changes or the <abbr title="Pull Request or Public Relations">PR</abbr> is added to the merge queue. Some possible checks:<ul>
+<li>valid <abbr title="Pull Request or Public Relations">PR</abbr> title</li>
+<li>valid <abbr title="Pull Request or Public Relations">PR</abbr> description</li>
+<li>valid branch name</li>
 </ul>
-<h3 id="builder"><a href="https://refactoring.guru/design-patterns/builder">Builder</a><a class="headerlink" href="#builder" title="Permanent link">¶</a></h3>
+</li>
+<li>publishing the <abbr title="Meta Programming System">MPS</abbr> languages and <abbr title="Rich Client Platform">RCP</abbr> as snapshots when a snapshot <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">git tag</a> is used</li>
+<li>building and testing the languages when a <abbr title="Pull Request or Public Relations">PR</abbr> is created or the <abbr title="Pull Request or Public Relations">PR</abbr> is added to the merge queue</li>
+<li>building the <abbr title="Rich Client Platform">RCP</abbr> when a change is pushed to main</li>
+<li>creating a release (e.g. manually triggered)<ul>
+<li>building the <abbr title="Rich Client Platform">RCP</abbr></li>
+<li>generating the release notes</li>
+<li>deploying the <abbr title="Rich Client Platform">RCP</abbr> to a repository e.g. <a href="https://jfrog.com/artifactory/">JFrog artifactory</a>, <a href="https://www.sonatype.com/products/sonatype-nexus-repository">sonatype nexus repository</a> or <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">GitHub Packages</a></li>
+</ul>
+</li>
+<li>collecting repository metrics</li>
+<li>scaning the code for vulnerabilities and errors <a href="https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors">automatically on GitHub</a> or using a proprietary solution like <a href="https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html">Black Duck Software Composition Analysis</a> (e.g. as a cronjob)</li>
+<li>uploading coverage reports (e.g. <a href="https://www.jacoco.org/jacoco/trunk/index.html#:~:text=JaCoCo%20is%20a%20free%20Java,26%20based%20on%20commit%20e0d9d0442e9d6caa98362db034ad76db819a8cc9">JaCoCo</a>) and test results generated by <abbr title="Meta Programming System">MPS</abbr> (<a href="https://junit.org/junit5/">JUnit</a>) to a server (e.g. as a cronjob)</li>
+</ul>
+<h4 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">¶</a></h4>
+<p>To get an overview of project statistics, a GitHub action like <a href="https://github.com/floric/repo-monitor-action">floric/<abbr title="repository">repo</abbr>-monitor-action</a> can be used to
+generate custom metrics reports including the last releases using GitHub Pages. Some interesting statistics for <abbr title="Meta Programming System">MPS</abbr> projects can be extracted. In the snippets it is assumed that the languages and solutions are located in the <em>code</em> folder:</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of languages</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">$(</span>find code/languages/*/languages/* -maxdepth <span class="m">0</span> -type d <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of solutions</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">$(</span>find code/languages/*/solutions/* -maxdepth <span class="m">0</span> -type d <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of models</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">$(</span>find code/languages/*/*/*/models/*.mps -maxdepth <span class="m">0</span> -type f <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of concepts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">$(</span>grep -ro <span class="s2">"&lt;node concept=\"1TIwiD\""</span> code/languages/*/languages/*/models --include *structure.mps <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of interfaces</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">$(</span>grep -ro <span class="s2">"&lt;node concept=\"PlHQZ\""</span> code/languages/*/languages/*/models --include *structure.mps <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">number of deprecated nodes (DeprecatedNodeAnnotation)</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">$(</span>grep -ro <span class="s2">"&lt;node concept=\"asaX9\""</span> code/languages/*/languages/*/models --include *structure.mps <span class="p">|</span> wc -l<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Other interesting statistics that can be collected:</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/builders.html">Builders language</a></li>
-<li><a href="https://www.jetbrains.com/help/mps/editor-language-generation-api.html#languageruntime:%C2%A0abstracteditorbuilder">AbstractEditorBuilder</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/configuration/EditorConfigurationBuilder.java">EditorConfigurationBuilder.java</a></li>
+<li>code coverage</li>
+<li>duration of workflow</li>
+<li>build duration</li>
+<li><a href="https://github.com/mbeddr/mps-gradle-plugin#model-check">model check</a> duration</li>
+<li>number of added files in the latest commit</li>
+<li>number of modified files in the latest commit</li>
+<li>number of removed files in the latest commit</li>
 </ul>
-<h3 id="factory-method"><a href="https://refactoring.guru/design-patterns/factory-method">Factory method</a><a class="headerlink" href="#factory-method" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/tests/jetbrains/mps/nodeEditor/cells/collections/AbstractContainerTest.java">AbstractContainerTest.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/cells/EditorCellFactory.java">EditorCellFactory.java</a></li>
-<li><a href="https://www.jetbrains.com/help/mps/editor.html#customcell">Custom cell | <abbr title="Meta Programming System">MPS</abbr> documentation</a></li>
-</ul>
-<h3 id="prototype"><a href="https://refactoring.guru/design-patterns/prototype">Prototype</a><a class="headerlink" href="#prototype" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/source/jetbrains/mps/project/structure/modules/Copyable.java">Copyable.java</a></li>
-</ul>
-<h3 id="singleton"><a href="https://refactoring.guru/design-patterns/singleton">Singleton</a><a class="headerlink" href="#singleton" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorSettings.java">EditorSettings.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/openapi/source/org/jetbrains/mps/openapi/persistence/PersistenceFacade.java">PersistenceFacade.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/jetbrains.mps.ide.platform/source_gen/jetbrains/mps/ide/icons/GlobalIconManager.java">GlobalIconManager.java</a></li>
-</ul>
-<h2 id="structural-patterns">Structural Patterns<a class="headerlink" href="#structural-patterns" title="Permanent link">¶</a></h2>
-<h3 id="adapter"><a href="https://refactoring.guru/design-patterns/adapter">Adapter</a><a class="headerlink" href="#adapter" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/GenerationTaskAdapter.java">GenerationTaskAdapter.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/GeneratorLoggerAdapter.java">GeneratorLoggerAdapter.java</a></li>
-</ul>
-<h3 id="bridge"><a href="https://refactoring.guru/design-patterns/bridge">Bridge</a><a class="headerlink" href="#bridge" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-core/src/jetbrains/mps/idea/core/navigation/NavigationSupportImpl.java">NavigationSupportImpl</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/updater/UpdateSessionImpl.java">UpdateSessionImpl</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editorlang-runtime/source/jetbrains/mps/editor/runtime/TextBuilderImpl.java">TextBuilderImpl.java</a></li>
-</ul>
-<h3 id="composite"><a href="https://refactoring.guru/design-patterns/composite">Composite</a><a class="headerlink" href="#composite" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/kernelSolution/source_gen/jetbrains/mps/scope/CompositeScope.java">CompositeScope.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompositeSubstituteInfo.java">CompositeSubstituteInfo.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/make-runtime/solutions/jetbrains.mps.make.runtime/source_gen/jetbrains/mps/internal/make/runtime/script/CompositeResult.java">CompositeResult.java</a></li>
-</ul>
-<h3 id="decorator"><a href="https://refactoring.guru/design-patterns/decorator">Decorator</a><a class="headerlink" href="#decorator" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/smodel/source/jetbrains/mps/progress/ProgressMonitorDecorator.java">ProgressMonitorDecorator</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/NodeSubstituteInfoFilterDecorator.java">NodeSubstituteInfoFilterDecorator.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/lang/editor/menus/substitute/ConstraintsFilteringSubstituteMenuPartDecorator.java">ConstraintsFilteringSubstituteMenuPartDecorator.java</a></li>
-</ul>
-<h3 id="facade"><a href="https://refactoring.guru/design-patterns/facade">Facade</a><a class="headerlink" href="#facade" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/GenerationFacade.java">GenerationFacade.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/source/jetbrains/mps/smodel/ModuleRepositoryFacade.java">ModuleRepositoryFacade.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/openapi/source/org/jetbrains/mps/openapi/module/FindUsagesFacade.java">FindUsagesFacade.java</a></li>
-</ul>
-<h3 id="flyweight"><a href="https://refactoring.guru/design-patterns/flyweight">Flyweight</a><a class="headerlink" href="#flyweight" title="Permanent link">¶</a></h3>
-<h3 id="proxy"><a href="https://refactoring.guru/design-patterns/proxy">Proxy</a><a class="headerlink" href="#proxy" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editorlang-runtime/source/jetbrains/mps/editor/runtime/menus/SubstituteItemProxy.java">SubstituteItemProxy.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/execution-api/source_gen/jetbrains/mps/execution/api/configurations/RunConfigurationProxy.java">RunConfigurationProxy.java</a></li>
-</ul>
-<h2 id="behavioral-patterns">Behavioral Patterns<a class="headerlink" href="#behavioral-patterns" title="Permanent link">¶</a></h2>
-<h3 id="chain-of-responsibility"><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a><a class="headerlink" href="#chain-of-responsibility" title="Permanent link">¶</a></h3>
-<h3 id="iterator"><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a><a class="headerlink" href="#iterator" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/openapi/source/org/jetbrains/mps/util/BreadthConceptHierarchyIterator.java">BreadthConceptHierarchyIterator.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/openapi/source/org/jetbrains/mps/util/DescendantsTreeIterator.java">DescendantsTreeIterator.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/openapi/source/org/jetbrains/mps/util/FilterIterator.java">FilterIterator.java</a></li>
-</ul>
-<h3 id="memento"><a href="https://refactoring.guru/design-patterns/memento">Memento</a><a class="headerlink" href="#memento" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Memento.java">Memento.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/cache/MappingsMemento.java">MappingsMemento.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/21933fd970193ae6a8770a96a4c83857142c2848/workbench/mps-editor/source/jetbrains/mps/ide/editor/BaseNodeEditor.java#L383">BaseNodeEditor.java#BaseEditorState</a></li>
-</ul>
-<h3 id="state"><a href="https://refactoring.guru/design-patterns/state">State</a><a class="headerlink" href="#state" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editorlang-runtime/source/jetbrains/mps/editor/runtime/cells/CaretState.java">CaretState.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/typesystemEngine/source/jetbrains/mps/newTypesystem/state/State.java">State.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/plan/CheckpointState.java">CheckpointState.java</a></li>
-</ul>
-<h3 id="template-method"><a href="https://refactoring.guru/design-patterns/template-method">Template method</a><a class="headerlink" href="#template-method" title="Permanent link">¶</a></h3>
-<h3 id="command"><a href="https://refactoring.guru/design-patterns/command">Command</a><a class="headerlink" href="#command" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://www.jetbrains.com/help/mps/saving-and-reverting-changes.html">Save and revert changes | <abbr title="Meta Programming System">MPS</abbr> documentation</a> </li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/typesystemEngine/source/jetbrains/mps/newTypesystem/operation/equation/SubstituteEquationOperation.java">SubstituteEquationOperation.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/smodel/source/jetbrains/mps/smodel/SNodeUndoableAction.java">SNodeUndoableAction.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/undo/RestoreVirtualFileInstance.java">RestoreVirtualFileInstance.java</a></li>
-</ul>
-<h3 id="mediator"><a href="https://refactoring.guru/design-patterns/mediator">Mediator</a><a class="headerlink" href="#mediator" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/GenerationController.java">GenerationController.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cells/contextAssistant/ContextAssistantController.java">ContextAssistantController.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/pluginSolutions/lang.script/source_gen/jetbrains/mps/ide/script/migrationtool/MigrationScriptsController.java">MigrationScriptsController.java</a></li>
-</ul>
-<h3 id="observer"><a href="https://refactoring.guru/design-patterns/observer">Observer</a><a class="headerlink" href="#observer" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html">Messaging Infrastructure | IntelliJ Platform Plugin SDK</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/smodel/source/jetbrains/mps/smodel/event/SModelListener.java">SModelListener.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/project/source/jetbrains/mps/project/ProjectManagerListener.java">ProjectManagerListener.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source/jetbrains/mps/ide/ui/tree/MPSTreeNodeListener.java">MPSTreeNodeListener.java</a></li>
-</ul>
-<h3 id="strategy"><a href="https://refactoring.guru/design-patterns/strategy">Strategy</a><a class="headerlink" href="#strategy" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/testbench/source_gen/jetbrains/mps/testbench/junit/runners/FromModulesListProjectStrategy.java">FromModulesListProjectStrategy.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/testbench/source_gen/jetbrains/mps/testbench/junit/runners/FromProjectPathProjectStrategy.java">FromProjectPathProjectStrategy.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/testbench/source_gen/jetbrains/mps/testbench/junit/runners/FromDirWithModulesProjectStrategy.java">FromDirWithModulesProjectStrategy.java</a></li>
-</ul>
-<h3 id="visitor"><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a><a class="headerlink" href="#visitor" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/smodel/source/jetbrains/mps/smodel/event/SModelEventVisitor.java">SModelEventVisitor.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/editor/intentions-runtime/source/jetbrains/mps/intentions/IntentionsVisitor.java">IntentionsVisitor.java</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/core/kotlin-stub/source_gen/jetbrains/mps/kotlin/stubs/common/metadata/ModuleVisitor.java">ModuleVisitor.java</a></li>
-</ul>
+<h2 id="from-the-ticket-to-the-merged-pr">From the ticket to the merged <abbr title="Pull Request or Public Relations">PR</abbr><a class="headerlink" href="#from-the-ticket-to-the-merged-pr" title="Permanent link">¶</a></h2>
+<p>The developer starts by creating a new branch from the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch">default branch</a> which is usually called <em>main</em> or <em>master</em>. It is the stable branch that contains all the latest changes.
+To make the connection between code changes and ticket numbers, the ticket numbers can be used in the branch name. There are many different
+branch naming conventions (<a href="https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4">example</a>). One possible convention is
+to start the branch with a category such as feature, bugfix or refactor, then include the ticket number and a description of the branch.
+For example: <code>feature/TASK-123_implement_awesome_feature</code>.</p>
+<p>For the commits itself, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and then a description of the change e.g. <code>TASK-123: implement feature</code>. When the branch is ready and pushed to GitHub, some of the described workflows should be automatically executed. The <abbr title="Pull Request or Public Relations">PR</abbr> should be reviewed from a whitebox and blackbox perspective (see: <a href="../../platform_essentials/testing/">testing</a>) and when all checks succeed, the <abbr title="Pull Request or Public Relations">PR</abbr> can be added to the merge queue. When the <abbr title="Pull Request or Public Relations">PR</abbr> is at the top of the merge queue, it will be build and tested again and all the check will we executed once again. If everything succeeds, the <abbr title="Pull Request or Public Relations">PR</abbr> will be finally merged into one of the stable branches like the default branch.</p>
+<p>In the meantime, depending on the used <a href="https://www.easyagile.com/blog/agile-workflow/">agile workflow</a>, the state of the ticket might
+change from “Todo”, to “in progress” to “Code Review” and then to “Done” when the <abbr title="Pull Request or Public Relations">PR</abbr> is finally merged. Depending on the <a href="https://digital.ai/glossary/agile-release-planning">release cycle</a>, A new version might be released for the users every 4 weeks or add a different interval.</p>
+<h2 id="an-example-of-a-different-workflow">An example of a different workflow<a class="headerlink" href="#an-example-of-a-different-workflow" title="Permanent link">¶</a></h2>
+<p>While the described workflow has been proven to be successfully for big projects, there are many other workflows that can be used. For example: the <abbr title="Meta Programming System">MPS</abbr> platforms don’t use ticket numbers in commit messages, tickets are also not planned in advance. Linking existing ticket can also be difficult because the platforms are Open Source, the tickets sometimes are not. New versions are also released whenever a change is pushed to the master or maintenance branches (<a href="https://www.wikiwand.com/en/Rolling_release">rolling release</a>) instead of using a fixed release cycle. The project is also not build on GitHub but on a <a href="../teamcity/">TeamCity</a> server.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2023</span>
 </small>
 </div>
 <form class="md-feedback" hidden="" name="feedback">
@@ -1529,7 +1349,7 @@ The headers link to explanations and examples for the corresponding design patte
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Navigating the MPS sources" class="md-footer__link md-footer__link--prev" href="../navigating_mps_source/" rel="prev">
+<a aria-label="Previous: TeamCity" class="md-footer__link md-footer__link--prev" href="../teamcity/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1538,17 +1358,17 @@ The headers link to explanations and examples for the corresponding design patte
 <span class="md-footer__direction">
                   Previous
                 </span>
-                Navigating the MPS sources
+                TeamCity
               </div>
 </div>
 </a>
-<a aria-label="Next: What happens on MPS startup" class="md-footer__link md-footer__link--next" href="../mps_startup/" rel="next">
+<a aria-label="Next: Index" class="md-footer__link md-footer__link--next" href="../../mps_internal/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Next
                 </span>
-                What happens on MPS startup
+                Index
               </div>
 </div>
 <div class="md-footer__button md-icon">
