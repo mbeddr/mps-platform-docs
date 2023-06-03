@@ -123,7 +123,7 @@ Use the interface [IOptionallyTyped](http://127.0.0.1:63320/node?ref=r%3A66e07cb
 
 #### ITraceRoot
 
-Nodes that want to be the root of [tracing](../interpreter/#tracing-in-kernelf), should implement the interface [ITraceRoot](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874)
+Nodes that want to be the root of [[kernelf#tracing|tracing]], should implement the interface [ITraceRoot](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874)
 
 #### Custom types
 

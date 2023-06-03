@@ -2,6 +2,7 @@
 tags:
 - internals
 - ui
+alias: editor-dev
 ---
 
 ## Terminology

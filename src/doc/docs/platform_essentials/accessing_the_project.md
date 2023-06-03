@@ -17,8 +17,8 @@ There are a few different places where you might need access to a project. Not a
 ### Actions
 
 [Actions](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups) provide access to the MPS/IntelliJ project,
-the project frame and other information via action context parameters. The official documentation also explains the classes that
-need to be imported to access those. The available actions can be found on the page [actions | reference](../reference/actions.md).
+the project frame and other information via action context parameters. The official documentation also explains the classes that 
+need to be imported to access those. The available actions can be found on the page [[reference-actions|reference:actions]].
 There is no need to convert between different project classes because all parameters are available.
 
 ### Editor

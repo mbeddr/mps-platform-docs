@@ -13,7 +13,7 @@ This page lists all new pages since August 2022.
 
 - [Languages: Cell Layout](cell_layout.md)
 - [Home: Performance](performance.md)
-- [Platform essentials: Testing](testing.md)
+- [[testing|Platform essentials: Testing]]
 - [Platform essentials: Accessing the project](accessing_the_project.md)
 
 ## March 2023
@@ -54,7 +54,7 @@ This page lists all new pages since August 2022.
 - [platform essentials: platform build scripts](platform_build_scripts.md)
 - [Reference: Gitignore file](gitignore.md)
 - [Reference: Core languages](core_languages.md)
-- [Home: Visual guide](../home/visual_guide.md)
+- [Home: Visual guide](visual_guide.md)
 - [Reference: MPS extension points](extension_points.md)
 - [Platform essentials: Common concepts and interfaces](common_concepts_and_interfaces.md)
 - [Platform essentials: Contributing](contributing.md)

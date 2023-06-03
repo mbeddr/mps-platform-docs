@@ -30,7 +30,8 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! warning "I've set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme."
 
-    The return type of those functions indicate that they return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found [here](../../patterns/user_experience#dark-theme).
+    The return type of those functions indicate that they return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found 
+    [[ux#dark-theme#references|here]].
 
 !!! question "What is the difference between an empty cell and a simple constant cell without any content?"
 

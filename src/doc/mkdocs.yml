@@ -88,6 +88,8 @@ plugins:
       height: auto
       selector: .glightbox
   - autolinks
+  - alias:
+      use_relative_link: true
   - autolink_references:
       autolinks:
         - reference_prefix: MPS-

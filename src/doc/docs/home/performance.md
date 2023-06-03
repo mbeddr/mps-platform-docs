@@ -1,3 +1,7 @@
+---
+alias: performance
+---
+
 !!! warning "This is a page about advanced topics. Please skip it if you are a beginner."
 
 This page explains common bottlenecks regarding memory consumption and performance in general and how to solve those problems.

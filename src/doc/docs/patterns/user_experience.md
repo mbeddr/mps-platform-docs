@@ -2,6 +2,7 @@
 tags:
 - best_practise
 - ui
+alias: ux
 ---
 
 # User experience and user interfaces

@@ -1,3 +1,9 @@
+---
+tags:
+- iets3
+alias: kernelf
+---
+
 Please start with the [readme file](https://github.com/IETS3/iets3.opensource) of the [iets3.opensource](https://github.com/IETS3/iets3.opensource)
 repository. The main documentation is the book [DESIGN, EVOLUTION AND USE of KernelF](http://voelter.de/data/books/kernelf-designEvoUse.pdf) by Markus Voelter. There's also a [short reference](http://voelter.de/data/pub/kernelf-reference.pdf) with only 27 pages.
 

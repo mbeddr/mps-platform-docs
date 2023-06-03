@@ -40,7 +40,7 @@ Besides the Material extensions, the project used the following [Pymdown](https:
 - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret/): superscript text via caret
 - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/): enables marking words
 - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
-- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Some example icons are in [MPS Icons](../reference/icons.md).
+- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Some example icons are in [MPS Icons](icons.md).
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
 - [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 

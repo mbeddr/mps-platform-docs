@@ -2,6 +2,7 @@
 tags:
 - mbeddr
 - iets3
+alias: interpreter
 ---
 
 The interpreter let you interpret code on the fly. You can use it instead of the normal approach by writing an MPS generator and executing the code this way (e.g. executing baselanguage code). The result of invoking the interpreter is a Java object.

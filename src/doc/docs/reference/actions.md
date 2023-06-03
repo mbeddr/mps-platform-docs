@@ -2,6 +2,7 @@
 tags:
 - reference
 - intellij
+alias: reference-actions
 ---
 
 ## CommonDataKeys

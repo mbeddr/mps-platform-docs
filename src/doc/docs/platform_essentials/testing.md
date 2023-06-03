@@ -1,3 +1,7 @@
+---
+alias: testing
+---
+
 This page explains some testing ideas in MPS according to general ideas in [software testing](https://en.wikipedia.org/wiki/Software_testing).
 For a specific MPS testing introduction, visit [Testing language - MPS documentation](https://www.jetbrains.com/help/mps/testing-languages.html).
 
@@ -110,7 +114,7 @@ Check the [Nielsen's usability heuristics](https://www.nngroup.com/articles/ten-
 #### [Stress testing](https://en.wikipedia.org/wiki/Stress_testing_(software))
 
 - Does the application still works when there is no internet connection? 
-- What is the maximal size of a model that generates in a timely fashion? Is [model pruning](../../home/performance#model-pruning) needed?
+- What is the maximal size of a model that generates in a timely fashion? Is [[performance#model-pruning|model pruning]] needed?
 - What happens when you enter the power save mode? Do things like the automatic typesystem checks and background threads work again when you leave the mode?
 
 #### [Soak testing](https://en.wikipedia.org/wiki/Soak_testing)
