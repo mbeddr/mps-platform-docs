@@ -1,6 +1,6 @@
-## Baselanguage extensions
+# Baselanguage extensions
 
-### BLDoc
+## BLDoc
 
 > ^^com.mbeddr.mpsutil.bldoc^^
 
@@ -10,7 +10,7 @@ node can be referenced in the ^^com.mbeddr.doc^^ language: [@child](http://127.0
 [@root](http://127.0.0.1:63320/node?ref=r%3Acd485f95-5a84-4e95-8a53-480ef712b00a%28com.mbeddr.mpsutil.bldoc.structure%29%2F5358654548920954071)
 for referencing any child nodes and named nodes respectively.
 
-### Richstring
+## Richstring
 
 > ^^com.mbeddr.mpsutil.richstring^^
 
@@ -20,7 +20,7 @@ The following example shows referencing a simple variable, embedding an expressi
 
 ![example: richstring](richstring_example.png)
 
-### SModule
+## SModule
 
 > ^^com.mbeddr.mpsutil.smodule^^
 

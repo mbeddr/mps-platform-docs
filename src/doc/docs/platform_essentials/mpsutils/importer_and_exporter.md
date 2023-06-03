@@ -1,6 +1,6 @@
-## Importer and exporter
+# Importer and exporter
 
-### ECore
+## ECore
 
 > ^^com.mbeddr.mpsutil.ecore^^
 
@@ -9,7 +9,7 @@ The conversion is between an XML file and an MPS model. The importer can import 
 
 Access the action through right-clicking a model and opening the *Ecore Transformation tools* group.
 
-### XML import
+## XML import
 
 > ^^com.mbeddr.mpsutil.xmlImport.plugin^^
 

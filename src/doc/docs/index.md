@@ -8,7 +8,7 @@ This website collects practical knowledge about MPS and popular MPS platforms. I
 It contains questions and answers for {{ mps() }} and the following platforms:
 
 - {{ mps_extensions() }} [:material-help-box:](https://jetbrains.github.io/MPS-extensions/)
-- {{ mbeddr() }} [:material-help-box:](com_mbeddr_mpsutil.md)[:material-help-box:](https://github.com/mbeddr?type=source#documentation)
+- {{ mbeddr() }} [[mps_utils|:material-help-box:]][:material-help-box:](https://github.com/mbeddr?type=source#documentation)
 - {{ iets3() }} [:material-help-box:](https://voelter.de/data/books/kernelf-designEvoUse.pdf)
 
 Click on one of the :material-help-box: buttons to go directly to one of the documentations.

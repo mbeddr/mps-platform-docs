@@ -19,7 +19,7 @@ tags:
     Actions which can be enabled or disabled are of type [ToggleAction](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html#useful-action-base-classes). They are used, for example, in KernelF in the run menu. There is a deprecated concept *addJavaAction* which
     let's you add IntelliJ actions when referencing actions in an MPS plugin.
 
-    To disable actions, use the [actionsfilter](http://mbeddr.com/mps-platform-docs/platform_essentials/com_mbeddr_mpsutil/#actions-filter) language. You can modify the shortcuts of actions locally in *Preferences->Keymap*.
+    To disable actions, use the [[mpsutils_plugin_rcp#actions-filter|actionsfilter]] language. You can modify the shortcuts of actions locally in *Preferences->Keymap*.
 
 !!! question "How can I find the source of an action?"
 

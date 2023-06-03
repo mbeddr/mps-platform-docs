@@ -1,12 +1,12 @@
-## Deprecated
+# Deprecated
 
-### Build utilities
+## Build utilities
 
 > ^^com.mbeddr.mpsutil.buildutil^^
 
 !!! warning "This language was an attempt to automatically update build scripts during the build. It will be removed in the future."
 
-### Code completion menu
+## Code completion menu
 
 > ^^com.mbeddr.mpsutil.ccmenu^^
 
@@ -15,14 +15,14 @@
 This language added support for customizing the code completion menu with tabs and a special tab for creating reference
 targets. The contributions were made in a plugin solutions by creating a [CCMenuExtensions](http://127.0.0.1:63320/node?ref=r%3A3d5b7b5d-2674-4caf-bdca-c100c5a0cb8e%28com.mbeddr.mpsutil.ccmenu.structure%29%2F6243347984996272104) root node.
 
-### Forms
+## Forms
 
 > ^^com.mbeddr.mpsutil.forms^^
 
 !!! warning "This is an unfinished language that was probably intended to be used in ^^com.mbeddr.mpsutil.process^^. This language will be removed soon."
 
 
-### Gradle support
+## Gradle support
 
 > ^^com.mbeddr.mpsutil.gradlesupport^^
 
@@ -30,20 +30,20 @@ This language was an attempt to create Gradle files from MPS. It has a concepts 
 text files, single lines and multi lines. If you want to generate text files, use one of the
 [text generator plugins](https://jetbrains.github.io/MPS-extensions/extensions/generator/plaintext-gen/) from {{ mps_extensions() }}.
 
-### HTTP support
+## HTTP support
 
 > ^^com.mbeddr.mpsutil.httpsupport^^
 
 !!! warning "This was the old http support plugin. Please use the language jetbrains.mps.ide.httpsupport instead."
 
 
-### Icon char
+## Icon char
 
 > ^^com.mbeddr.mpsutil.iconchar^^
 
 !!! warning "This language was used to programmatically create icons but is deprecated. Please use the official [Icon description](https://www.jetbrains.com/help/mps/icon-description.html) language instead."
 
-### Language stats
+## Language stats
 
 > ^^com.mbeddr.mpsutil.langstats^^
 
@@ -68,19 +68,19 @@ testgens 0
 LOC: 1962.1999999999998  
 ```
 
-### License manager
+## License manager
 
 > ^^com.mbeddr.mpsutil.licensemanager.common^^
 
 !!! warning "This language contains some classes of an old mbeddr license manager and will probably be removed in the future."
 
-### Make
+## Make
 
 > ^^com.mbeddr.mpsutil.make^^
 
 !!! warning "This plugin contains old fixes for rebuilding models/modules and projects that are already included in MPS. The plugin will be removed soon."
 
-### Multilingual
+## Multilingual
 
 !!!warning "This language might be removed in the future."
 
@@ -89,31 +89,31 @@ LOC: 1962.1999999999998
 The idea behind this language was to store text translations in properties files and load the through the Java [ResourceBundle](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ResourceBundle.html) class. The documentation for the language
 can be found [here as a PDF](../../files/multilingual.pdf) and is located in the virtual package ^^doc.com.mbeddr.mpsutil^^.
 
-### Node difference
+## Node difference
 
 > ^^com.mbeddr.mpsutil.nodediff^^
 
 !!! warning "These actions were used to structurally compare two nodes and are deprecated. Please use the official action [Compare Two Nodes](http://127.0.0.1:63320/node?ref=r%3A5ec7bf64-acd2-448b-8f9b-ce1b8d920038%28jetbrains.mps.vcs.plugin%29%2F8199015172308449938) instead."
 
-### RCP configuration
+## RCP configuration
 
 > ^^com.mbeddr.mpsutil.rcpconfig^^
 
 !!! warning "This solution contains an old build script for the mbeddr RCP. It is deprecated and will be removed soon."
 
-### Run configuration
+## Run configuration
 
 > ^^com.mbeddr.mpsutil.runconfiguration^^
 
 !!! warning "This language was used as a workaround for accessing the debugged node in [breakpoint creators](http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892). The expression is now officially supported, this language is deprecated and will be removed soon."
 
-### Test scope
+## Test scope
 
 > ^^com.mbeddr.mpsutil.testScope^^
 
 !!! warning "This language is deprecated. Please use the official [testing scopes](https://www.jetbrains.com/help/mps/testing-languages.html#testingscopes) instead."
 
-### Var scope
+## Var scope
 
 > ^^com.mbeddr.mpsutil.varscope^^
 

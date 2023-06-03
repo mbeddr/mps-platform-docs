@@ -251,7 +251,20 @@ nav:
       - Contributing: platform_essentials/contributing.md
       - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter, coverage and tracing: platform_essentials/interpreter.md
-      - MPS utilities: platform_essentials/com_mbeddr_mpsutil.md
+      - Mbeddr utilities:
+          - platform_essentials/mpsutils/index.md
+          - Common: platform_essentials/mpsutils/common.md
+          - Actions: platform_essentials/mpsutils/actions.md
+          - BaseLanguage extensions: platform_essentials/mpsutils/baselanguage_extensions.md
+          - Generator: platform_essentials/mpsutils/generator.md
+          - Importer and exporter: platform_essentials/mpsutils/importer_and_exporter.md
+          - Languages: platform_essentials/mpsutils/languages.md
+          - Language extensions: platform_essentials/mpsutils/language_extensions.md
+          - Tools: platform_essentials/mpsutils/tools.md
+          - UI: platform_essentials/mpsutils/ui.md
+          - Testing: platform_essentials/mpsutils/testing.md   
+          - Plugin and RCP: platform_essentials/mpsutils/plugin_and_rcp.md
+          - Deprecated languages and solutions: platform_essentials/mpsutils/deprecated.md
       - Platform build scripts: platform_essentials/platform_build_scripts.md
       - Build folder: platform_essentials/build_folder.md
       - Testing: platform_essentials/testing.md

@@ -1,6 +1,6 @@
-## Generator
+# Generator
 
-### Generator facade
+## Generator facade
 
 > ^^com.mbeddr.mpsutil.generatorfacade^^
 
@@ -9,7 +9,7 @@ This language contains a class [GeneratorFacade](http://127.0.0.1:63320/node?ref
 with a custom handler for generator messages and custom generation parameters such as *save transient models* (default: *false*) or
 *generate in parallel* (default: yes, 4 threads).
 
-### GenUtil
+## GenUtil
 
 > ^^com.mbeddr.mpsutil.genutil^^
 
@@ -24,13 +24,13 @@ the *setref* statement which takes a key, a context node (here: the newly create
 a new user object for this node. For normal values, *setref* and *getref* should be used to set and retrieve
 values from the user object respectively. For int values, *setint* and *getint* can be used.
 
-### Mapping labels
+## Mapping labels
 
 > ^^com.mbeddr.mpsutil.mappingLabels^^
 
 This language provides intentions for automatically creating [mapping labels](https://www.jetbrains.com/help/mps/generator-language.html#mappinglabel). One of the use cases is to migrate [reference macros](https://www.jetbrains.com/help/mps/generator-language.html#macro) that use strings to identify target nodes to resolve the target by mapping labels instead.
 
-### postprocessGeneratedFiles
+## postprocessGeneratedFiles
 
 > ^^com.mbeddr.mpsutil.postprocessGeneratedFiles^^
 
@@ -56,7 +56,7 @@ generated files postprocessor facet testGen
 
 For simple duplicating the TextGen outcome, There's also the builtin JetBrains annotation [CopyOutcome](http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F1223283106984741523).
 
-### XModel actions
+## XModel actions
 
 > ^^com.mbeddr.mpsutil.xmodel.actions^^
 

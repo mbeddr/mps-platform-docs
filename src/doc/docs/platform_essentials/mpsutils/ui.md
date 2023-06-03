@@ -1,10 +1,10 @@
-## UI
+# UI
 
 {% include 'platform_essentials/mpsutils/ui/cells.md' %}
 
 {% include 'platform_essentials/mpsutils/ui/diagrams.md' %}
 
-### Date picker
+## Date picker
 
 > ^^com.mbeddr.mpsutil.datepicker^^
 
@@ -16,7 +16,7 @@ A classic widget to select a date from a pop-up calendar.
 
 This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.
 
-### Editor utils
+## Editor utils
 
 > ^^com.mbeddr.mpsutil.editor.utils^^
 
@@ -42,7 +42,7 @@ the editor. There's also an intention `Open File Chooser Dialog` that shows a fi
 
 The macro pickers can contain [path variables](https://www.jetbrains.com/help/mps/absolute-path-variables.html).
 
-### Hyperlink
+## Hyperlink
 
 > ^^com.mbeddr.mpsutil.hyperlink^^
 
@@ -56,7 +56,7 @@ Hyperlink cells can be used for references in MPS. In contrast to normal referen
 - **hyperlink-focus**: focus the target node of the hyperlink after navigating to it.
 - **hyperlink-select**: select the target node of the hyperlink after navigating to it.
 
-### JFreeChart
+## JFreeChart
 
 > ^^com.mbeddr.mpsutil.jfreechart^^
 
@@ -71,7 +71,7 @@ where `createChart` return instance of [JFreeChart](http://127.0.0.1:63320/node?
 
 ![example: jfreechart](jfreechart_example.png)
 
-### Target chooser
+## Target chooser
 
 > ^^com.mbeddr.mpsutil.targetchooser^^
 
@@ -104,7 +104,7 @@ The *options* object has the following setters:
   [TargetChooserScope](http://127.0.0.1:63320/node?ref=r%3A24b43531-125c-4436-b4b0-f3444d2173fd%28com.mbeddr.mpsutil.targetchooser%29%2F7547442689028637169) or a sequence of nodes (+ ancestor filter). By default, the specified modules scope
   with the specified model and node filers applied is used.
 
-### User styles
+## User styles
 
 > ^^com.mbeddr.mpsutil.userstyles^^
 

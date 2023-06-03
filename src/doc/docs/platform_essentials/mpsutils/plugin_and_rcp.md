@@ -1,6 +1,10 @@
-## Plugin and RCP
+---
+alias: mpsutils_plugin_rcp
+---
 
-### Actions filter
+# Plugin and RCP
+
+## Actions filter
 
 > ^^com.mbeddr.mpsutil.actionsfilter^^
 
@@ -20,7 +24,7 @@ The predefined actions profiles can be customized by the user in *preferences* -
 
 ![actions filter preferences](actionsfilter_preferences.png)
 
-### Preference form
+## Preference form
 
 > ^^com.mbeddr.mpsutil.preferenceform^^
 
@@ -57,7 +61,7 @@ extensionPoint/HttpServerConfigChangeListener/.objects.forEach({~it => it.server
 
 The *after read* method is called, after the state is loaded (for example: when the preference form is opened).
 
-### Wizard (process)
+## Wizard (process)
 
 > ^^com.mbeddr.mpsutil.process^^
 
@@ -79,7 +83,7 @@ The *show* method shows the modal dialog and checks if it was closed with the ex
 executed the *onFinish* callback of every step. For more information, have at look the [example](http://127.0.0.1:63320/node?ref=r%3A9aef0d3c-87c9-4ce3-ad67-def9817c1ab4%28com.mbeddr.mpsutil.process.sandbox.plugin%29%2F4724180912013515813).
 
 
-### New Model (RCP)
+## New Model (RCP)
 
 > ^^com.mbeddr.mpsutil.rcp^^
 
@@ -93,7 +97,7 @@ Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3
 - **optional devkits**: devkits that are automatically added when the model is created
 - **show model properties**: open the model properties after the model was created
 
-### SPreferences
+## SPreferences
 
 > ^^com.mbeddr.mpsutil.spreferences^^
 

@@ -39,7 +39,7 @@ This page lists all new pages since August 2022.
 
 - [MPS internals: Editor development](editor_development.md)
 - [Platform essentials: Build folder](build_folder.md)
-- [Platform essentials: MPS utilities](com_mbeddr_mpsutil.md)
+- [[mps_utils|Platform essentials: Mbeddr MPS utilities]]
 
 ## October 2022
 

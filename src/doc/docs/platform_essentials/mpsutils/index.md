@@ -1,13 +1,12 @@
 ---
 tags:
 - mbeddr
+alias: mps_utils
 ---
 
-This documentation gives an introduction to the subproject *com.mbeddr.mpsutil* of {{ mbeddr() }}. 
+# Mbeddr MPS utilities
 
-The project contains a bunch of different utility languages and solutions:
-
-{% include 'platform_essentials/mpsutils/common.md' %}
+This documentation gives an introduction to the subproject *com.mbeddr.mpsutil* of {{ mbeddr() }}.
 
 ## Incremental computation
 
@@ -18,10 +17,10 @@ recomputed when a dependent value changes. The methods are documented in the beh
 derived from an existing model, you have to use [shadow models](https://jetbrains.github.io/MPS-extensions/extensions/other/shadow-models/)
 from {{ mps_extensions() }}.
 
-## Interpreter 
+## Interpreter
 
 > ^^com.mbeddr.mpsutil.interpreter^^
- 
+
 The interpreter is described on the [interpreter](interpreter.md) page.
 
 ## Stubs
@@ -37,25 +36,3 @@ Stub models for the following Java libraries exist:
     - [Xerces2 J](https://mvnrepository.com/artifact/xerces/xercesImpl)
 
 !!! warning "The included versions might be old."
-
-{% include 'platform_essentials/mpsutils/actions.md' %}
-
-{% include 'platform_essentials/mpsutils/baselanguage_extensions.md' %}
-
-{% include 'platform_essentials/mpsutils/generator.md' %}
-
-{% include 'platform_essentials/mpsutils/importer_and_exporter.md' %}
-
-{% include 'platform_essentials/mpsutils/languages.md' %}
-
-{% include 'platform_essentials/mpsutils/language_extensions.md' %}
-
-{% include 'platform_essentials/mpsutils/tools.md' %}
-
-{% include 'platform_essentials/mpsutils/ui.md' %}
-
-{% include 'platform_essentials/mpsutils/testing.md' %}
-
-{% include 'platform_essentials/mpsutils/plugin_and_rcp.md' %}
-
-{% include 'platform_essentials/mpsutils/deprecated.md' %}
