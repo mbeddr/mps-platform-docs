@@ -24,4 +24,5 @@ python.pip 'mdx-spanner:0.0.5'
 
 task serveFast(type: MkdocsTask) {
     command = 'serve --dirtyreload'
+    environment 'SNIPPET_APPENDS', []
 }

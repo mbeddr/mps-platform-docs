@@ -132,9 +132,7 @@ markdown_extensions:
 
   - pymdownx.inlinehilite
   - pymdownx.snippets:
-        auto_append:
-           - docs/includes/abbreviations.md
-           - docs/includes/code_abbreviations.md
+        auto_append: !ENV [SNIPPET_APPENDS, ["docs/includes/abbreviations.md","docs/includes/code_abbreviations.md"]]
   - pymdownx.tabbed:
         alternate_style: true
   - pymdownx.keys
