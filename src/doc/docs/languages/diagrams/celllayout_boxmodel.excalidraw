@@ -1,8 +1,7 @@
-```kroki-excalidraw
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://excalidraw.com",
+  "source": "https://excalidraw-jetbrains-plugin",
   "elements": [
     {
       "id": "rBNsjsPkgK0dqlsyndXxG",
@@ -260,7 +259,5 @@
   "appState": {
     "gridSize": null,
     "viewBackgroundColor": "#ffffff"
-  },
-  "files": {}
+  }
 }
- ```

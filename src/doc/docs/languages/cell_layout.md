@@ -52,7 +52,9 @@ The default implementation is [DefaultLayoutBox](http://127.0.0.1:63320/node?ref
 
 A [LayoutBoxFrame](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842758) is a box that has a frame around an inner box:
 
-{% include 'languages/diagrams/celllayout_layoutbox_frame.md' %}
+```kroki-excalidraw
+@from_file:languages/diagrams/celllayout_layoutbox_frame.excalidraw
+```
 
 Setting the frame size sets it for all sides (left, right, bottom, top).
 
@@ -79,7 +81,9 @@ frame size. The default implementation is [DefaultLayoutBoxFrame](http://127.0.0
 
 A [BoxModel](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842608) consists of 4 boxes. The most inner box contains the content, the most outer box is the margin.
 
-{% include 'languages/diagrams/celllayout_boxmodel.md' %}
+```kroki-excalidraw
+@from_file:languages/diagrams/celllayout_boxmodel.excalidraw
+```
 
 The default implementation is [DefaultBoxModel](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842820) which is used by [EditorCellBoxModel](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F4403454289951403328). 
 
@@ -88,7 +92,9 @@ The default implementation is [DefaultBoxModel](http://127.0.0.1:63320/node?ref=
 This box model is stored in the user object of the corresponding cell under the key 
 *EditorCellBoxModel*. Besides the mentioned boxes, is has a box for additional padding and a bracket box for when the cell has the stylesheet item *drawBrackets* enabled. The brackets have a width of 7 pixel. 
 
-{% include 'languages/diagrams/celllayout_editorcell_boxmodel.md' %}
+```kroki-excalidraw
+@from_file:languages/diagrams/celllayout_editorcell_boxmodel.excalidraw
+```
 
 #### Synchronisation
 
@@ -247,7 +253,9 @@ An ILayoutable is considered an intermediate if
 This method plays a role in the flattening of the grid. When this item is used, all ancestor elements of the grid that have this property enabled,
 are placed directly in the main grid and are not sub-grids. In the following example it is assumed that the property is enabled for all children:
 
-{% include 'languages/diagrams/celllayout_grid_flattening.md' %}
+```kroki-excalidraw
+@from_file:languages/diagrams/celllayout_grid_flattening.excalidraw
+```
 
 ## Runtime
 

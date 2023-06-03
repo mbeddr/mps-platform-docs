@@ -12,6 +12,7 @@ open an issue in this repository.
 ## Requirements
 
 - Python >= 3.10
+- [IntelliJ Excalidraw Integration plugin](https://plugins.jetbrains.com/plugin/17096-excalidraw-integration) (optional)
 
 ## Local execution
 Run: `./gradlew mkdocsServe` (rebuilds everything on change --> slow)
