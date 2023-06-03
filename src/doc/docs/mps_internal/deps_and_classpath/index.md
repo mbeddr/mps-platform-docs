@@ -83,55 +83,13 @@ For discussion, we establish a continued scenario:
 (The Relations listed here are not complete to reduce clutter. The [complete example](https://github.com/enikao/mps-dependencies) is available.)
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class LanguageBase <<L,yellow>>
-
-LanguageBase *-- ConceptBase: defines
-LanguageBase *-- ConceptBase2: defines
-
-class SolutionBase <<S, violet>>
-
-class ModelBase <<O, gray>>
-
-class NodeBase <<N, lightgreen>>
-
-ModelBase -up[dotted]-|> LanguageBase: using
-NodeBase -up[dotted]-|> ConceptBase: instanceof
-ModelBase *-- NodeBase: contains
-SolutionBase *-- ModelBase: contains
-
-hide empty members
-
-@enduml
-
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram1.puml
 ```
 
 *SolutionBase* doesn't change during generation, as *LanguageBase* doesn't define any generators.
 
 ```kroki-plantuml
-@startuml
-class LanguageBase <<L,yellow>>
-class LanguageBaseGen <<G,lightgray>>
-class GeneratorBase <<L,lightblue>>
-class ConceptBase
-
-class SolutionBaseGen <<S, violet>>
-class ModelBaseGen <<G, lightgray>>
-
-LanguageBaseGen *-right- GeneratorBase: contains
-GeneratorBase -right[dotted]-> ConceptBase: defines a rule for
-
-SolutionBaseGen *-right- ModelBaseGen: contains
-ModelBaseGen -down[dotted]-> LanguageBase: using
-ModelBaseGen -up[dotted]-> LanguageBaseGen: using
-ModelBaseGen *-right- NodeBase: contains
-NodeBase -up[dotted]-> ConceptBase: instanceof
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram2.puml
 ```
 
 *SolutionBaseGen* doesn't change during generation either, as it doesn't contain any instances from
@@ -139,132 +97,27 @@ hide empty members
 no generators at all.
 
 ```kroki-plantuml
-@startuml
-class LanguageBase <<L,yellow>>
-class LanguageBaseGen <<G,lightgray>>
-class ConceptBase
-
-class SolutionBaseGen2 <<S, violet>>
-class ModelBaseGen2 <<G, lightgray>>
-
-SolutionBaseGen2 *-right- ModelBaseGen2: contains
-ModelBaseGen2 -up[dotted]->LanguageBase: using
-ModelBaseGen2 -up[dotted]->LanguageBaseGen: engages
-ModelBaseGen2 *-right- NodeBase: contains
-NodeBase -up[dotted]- ConceptBase: instanceof
-LanguageBase -right- ConceptBase: contains
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram3.puml
 ```
 
 *SolutionBaseGen2* ends up with a transformed *NodeBase*, as *Languages engaged in generation* are never removed.
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class LanguageBase <<L,yellow>>
-class LanguageBaseGenExtends <<G,lightgray>>
-class GeneratorBaseExtends <<G,lightgray>>
-class ConceptBase
-class ConceptBase2
-
-class SolutionBaseGenExtends <<S, violet>>
-class ModelBaseGenExtends <<G, lightgray>>
-
-LanguageBaseGenExtends --|> LanguageBase: extends
-LanguageBaseGenExtends *-- GeneratorBaseExtends: contains
-GeneratorBaseExtends -[dotted]-> ConceptBase2: defines a rule for
-
-SolutionBaseGenExtends *-- ModelBaseGenExtends: contains
-ModelBaseGenExtends -right[dotted]->LanguageBase: using
-ModelBaseGenExtends -right[dotted]->LanguageBaseGenExtends: engages
-ModelBaseGenExtends *-- NodeBase: contains
-ModelBaseGenExtends *-- NodeBase2: contains
-NodeBase -[dotted]- ConceptBase: instanceof
-NodeBase2 -[dotted]- ConceptBase2: instanceof
-LanguageBase *-- ConceptBase: contains
-LanguageBase *-- ConceptBase2: contains
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram4.puml
 ```
 
 *SolutionBaseGenExtends* ends up with an unchanged *NodeBase*, but a transformed *NodeBase2*.
 *GeneratorBaseExtends* gets executed, because *LanguageBaseGenExtends* is listed in *Languages engaged in generation*. However, the Dependencies of the Language aren't considered for selecting the running Generators.
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class LanguageBase <<L,yellow>>
-class LanguageBaseGenExtends2 <<G,lightgray>>
-class GeneratorBaseExtends2 <<G,lightgray>>
-class ConceptBase
-class ConceptBase2
-
-class SolutionBaseGenExtends2 <<S, violet>>
-class ModelBaseGenExtends2 <<G, lightgray>>
-
-LanguageBaseGenExtends2 --|> LanguageBase: extends
-LanguageBaseGenExtends2 *-- GeneratorBaseExtends2: contains
-GeneratorBaseExtends2 --|> GeneratorBase: extends
-GeneratorBaseExtends2 -[dotted]-> ConceptBase2: defines a rule for
-
-SolutionBaseGenExtends2 *-- ModelBaseGenExtends2: contains
-ModelBaseGenExtends2 -right[dotted]->LanguageBase: using
-ModelBaseGenExtends2 -right[dotted]->LanguageBaseGenExtends2: engages
-ModelBaseGenExtends2 *-- NodeBase: contains
-ModelBaseGenExtends2 *-- NodeBase2: contains
-NodeBase -[dotted]- ConceptBase: instanceof
-NodeBase2 -[dotted]- ConceptBase2: instanceof
-LanguageBase *-- ConceptBase: contains
-LanguageBase *-- ConceptBase2: contains
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram5.puml
 ```
 
 In *SolutionBaseGenExtends2* both *NodeBase* and *NodeBase2* will be transformed, as *LanguageBaseGenExtends2*
 is listed in *Languages engaged in generation* and *GeneratorBaseExtends2* extends *GeneratorBase*.
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class LanguageBase <<L,yellow>>
-class LanguageExtendsGen <<G,lightgray>>
-class GeneratorExtendsGen <<G,lightgray>>
-class ConceptExtendsGen <<G,lightgray>>
-class ConceptBase
-
-class SolutionExtendsGen <<S, violet>>
-class ModelExtendsGen <<G, lightgray>>
-class NodeExtendsGen <<G, lightgray>>
-
-
-LanguageBase *-right- ConceptBase: contains
-LanguageExtendsGen -down-|> LanguageBase: extends
-ConceptExtendsGen --|> ConceptBase: extends
-LanguageExtendsGen -right[dotted]-ConceptExtendsGen: defines
-LanguageExtendsGen *-right-GeneratorExtendsGen: contains
-GeneratorExtendsGen -[dotted]-ConceptExtendsGen: defines a rule for
-
-SolutionExtendsGen *-- ModelExtendsGen: contains
-ModelExtendsGen *-- NodeBase: contains
-ModelExtendsGen *-[dotted]- LanguageBase: using
-ModelExtendsGen *-[dotted]- LanguageExtendsGen: using
-NodeBase -[dotted]- ConceptBase: instanceof
-NodeExtendsGen -[dotted]- ConceptExtendsGen: instanceof
-ModelExtendsGen *-- NodeExtendsGen: contains
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram6.puml
 ```
 
 Only *NodeExtendsGen* will be transformed in *SolutionExtendsGen*, as the only active Generator is
@@ -272,38 +125,7 @@ Only *NodeExtendsGen* will be transformed in *SolutionExtendsGen*, as the only a
 the same language as the generator. The Generator doesn't extend any other applicable Generator.
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class LanguageBase <<L,yellow>>
-class LanguageExtendsGen2 <<G,lightgray>>
-class GeneratorExtendsGen2 <<G,lightgray>>
-class ConceptExtendsGen2 <<G,lightgray>>
-class ConceptBase
-
-class SolutionExtendsGen2 <<S, violet>>
-class ModelExtendsGen2 <<G, lightgray>>
-class NodeExtendsGen2 <<G, lightgray>>
-
-LanguageBase *-right- ConceptBase: contains
-LanguageExtendsGen2 -down-|> LanguageBase: extends
-ConceptExtendsGen2 --|> ConceptBase: extends
-LanguageExtendsGen2 -right[dotted]-ConceptExtendsGen2: defines
-LanguageExtendsGen2 *-right-GeneratorExtendsGen2: contains
-GeneratorExtendsGen2 --|> GeneratorBase: extends
-GeneratorExtendsGen2 -[dotted]-ConceptExtendsGen2: defines a rule for
-
-SolutionExtendsGen2 *-- ModelExtendsGen2: contains
-ModelExtendsGen2 *-- NodeBase: contains
-ModelExtendsGen2 *-[dotted]- LanguageBase: using
-ModelExtendsGen2 *-[dotted]- LanguageExtendsGen2: using
-NodeBase -[dotted]- ConceptBase: instanceof
-NodeExtendsGen2 -[dotted]- ConceptExtendsGen2: instanceof
-ModelExtendsGen2 *-- NodeExtendsGen2: contains
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/deps_and_classpath/diagrams/diagram7.puml
 ```
 
 All nodes within *SolutionExtendsGen2* get transformed, as an instance of *ConceptExtendsGen2* was found,
@@ -331,6 +153,3 @@ The Stereotype enables
 - Build language test instruction to search the model for tests.
 
 As soon as you are using any concepts from language *jetbrains.mps.lang.test*, you need to have a *TestInfo* root node in the same model. The *TestInfo* node needs to refer to a project to be used to execute the tests. This reference may not use a *&#36{module}*, *&#36{language_descriptor}*, *&#36{solution_descriptor}*, or *&#36{project}* builtin path variables. It needs to refer to a project containing the test.
-
-
-

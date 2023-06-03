@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+
+class ModuleA <<M,lightgray>>
+class "ModelA.one" as ModelA1 <<m,lightblue>>
+class "NodeA.one.alpha" as NodeA1 <<N,yellow>>
+class "ModelA.two" as ModelA2 <<m,lightblue>>
+class "NodeA.two.alpha" as NodeA2 <<N,yellow>>
+
+class ModuleB <<G,lightgray>>
+class "ModelB.one" as ModelB1 <<G,lightblue>>
+class "NodeB.one.alpha" as NodeB1 <<N,yellow>>
+
+class ModuleC <<M,lightgray>>
+class "ModelC.one" as ModelC1 <<G,lightblue>>
+
+ModuleA *-- ModelA1: contains
+ModelA1 *-- NodeA1: contains
+ModuleA *-- ModelA2: contains
+ModelA2 *-- NodeA2: contains
+
+ModuleB *-- ModelB1: contains
+ModuleB .left.|> ModuleA: depends on
+ModelB1 .left.|> ModelA1: depends on
+ModelB1 *-- NodeB1: contains
+NodeB1 .left.|> ModelA1: depends on
+NodeB1 .[#red]left.|> ModelA2: depends on
+note right on link
+out of scope
+as ModelB.one has
+no dependency on 
+ModelA.two
+end note
+'ModuleC --|> ModelB1
+
+ModuleC *-- ModelC1: contains
+ModelC1 .[#red]down. ModelA1: depends on
+note right on link
+out of scope
+as ModuleC has
+no dependency on 
+ModuleA
+end note
+
+hide empty members
+
+@enduml

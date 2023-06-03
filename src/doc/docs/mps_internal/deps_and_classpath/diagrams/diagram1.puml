@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+class LanguageBase <<L,yellow>>
+
+LanguageBase *-- ConceptBase: defines
+LanguageBase *-- ConceptBase2: defines
+
+class SolutionBase <<S, violet>>
+
+class ModelBase <<O, gray>>
+
+class NodeBase <<N, lightgreen>>
+
+ModelBase -up[dotted]-|> LanguageBase: using
+NodeBase -up[dotted]-|> ConceptBase: instanceof
+ModelBase *-- NodeBase: contains
+SolutionBase *-- ModelBase: contains
+
+hide empty members
+
+@enduml

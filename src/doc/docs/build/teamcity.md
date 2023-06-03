@@ -39,20 +39,7 @@ One or multiple [build configurations](https://www.jetbrains.com/help/teamcity/c
 The following diagram show a simplified version of the [build chain](https://www.jetbrains.com/help/teamcity/build-chain.html) that shows the dependencies between the projects/configurations:
 
 ```kroki-plantuml
-@startuml
-skinparam componentStyle rectangle
-
-[MPS-Extensions] as ext
-[mbeddr platform] as platform
-[IETS3] as iets3
-[mbeddr] as mbeddr
-[mbeddr analyses tests] as analyses
-
-ext -right-> platform : dependency of
-platform -down-> iets3: dependency of
-platform -right-> mbeddr: dependency of
-mbeddr -right-> analyses: dependency of
-@enduml
+@from_file:build/diagrams/teamcity_build_chain.puml
 ```
 
 Although all these repositories use Gradle for the build management, TeamCity has a lot of bundled plugins. Many are described in [Configuring Build steps | TeamCity On-Premises](https://www.jetbrains.com/help/teamcity/configuring-build-steps.html). The builds are executed by [build agents](https://www.jetbrains.com/help/teamcity/build-agent.html). The Docker image of the agents can be found in the [mbeddr.build.docker](https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile) repository.

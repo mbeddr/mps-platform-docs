@@ -1,0 +1,10 @@
+@startuml
+interface LayoutBox <<extends Cloneable>> {
+//«get/set»// leftSize
+//«get/set»// rightSize
+//«get/set»// topSize
+//«get/set»// bottomSize
+//«get/set»// innerBox
+setFrameSze(size)
+}
+@enduml

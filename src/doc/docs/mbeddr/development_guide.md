@@ -142,16 +142,7 @@ This allows us to access all artifacts constituting one feature.
 All test code should be placed in a special folder in the file system:
 
 ```kroki-plantuml
-left to right direction
-
-folder "${PROJECT_HOME}" {
-  folder solutions as S
-  note right of S: contains all productive solutions
-  folder languages as L
-  note right of L: contains all productive languages
-  folder tests  as T
-  note right of T: contains all solutions and languages\nrequired for test, demo, playground
-}
+@from_file:mbeddr/diagrams/file_system_structure.puml
 ```
 
 ## Build

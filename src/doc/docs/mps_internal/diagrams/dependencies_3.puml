@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+
+package LanguageA {
+  class ConceptA
+  class ConceptInterfaceA
+  class EditorComponentA <<E,orange>>
+}
+
+package LanguageB {
+  diamond LanguageB
+  class ConceptB
+  class EditorB <<E,orange>>
+  class EditorComponentB <<E,orange>>
+  class TypesystemB <<T,violet>>
+}
+ 
+ConceptB .[#blue].|> ConceptA:extends
+ConceptB .[#blue].|> ConceptInterfaceA:implements
+ 
+EditorB .[#blue].|> ConceptA:defined for
+note right of EditorB
+but not if LanguageA only defines the editor hint
+end note
+EditorComponentB .[#blue].|> ConceptA:defined for
+
+LanguageB .[#blue].|> EditorComponentA: uses
+
+TypesystemB .[#blue].|> ConceptA:defined for
+
+hide empty members
+
+@enduml

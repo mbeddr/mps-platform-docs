@@ -13,35 +13,7 @@ A layout box has a *position* (x,y) and a *dimension* (width, height). These pro
 [Bounds](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F6454451880331308523) object which also has methods for checking if another bounds or point is contained in it.
 
 ```kroki-plantuml
-@startuml
-interface LayoutBox <<extends Cloneable>> {
-//«get/set»// x
-//«get»// right = x + width
-//«get/set»// y
-//«get»// bottom = y + height
-//«get/set»// width
-//«get/set»// height
-//«get/set»// ascent
-//«get/set»// descent
-containsPoint(x, y): boolean
-growWidth/Height(amount) 
-moveX/Y(amount) 
-move(amountX,amountY) 
-setSize(w, h)
-setListener(listener)
-}
-
-interface Bounds <<immutable>> {
-//«get/set»// x: int
-//«get»// maxX = x + width
-//«get/set»// y: int
-//«get»// maxY = y + height
-//«get/set»// width: int
-//«get/set»// height: int
-contains(x, y): boolean
-contains(childBounds): boolean
-}
-@enduml
+@from_file:languages/diagrams/celllayout_interface_layoutbox.puml
 ```
 
 The size can be changed with the *growN* methods, the position can be changed with the
@@ -59,16 +31,7 @@ A [LayoutBoxFrame](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4
 Setting the frame size sets it for all sides (left, right, bottom, top).
 
 ```kroki-plantuml
-@startuml
-interface LayoutBox <<extends Cloneable>> {
-//«get/set»// leftSize
-//«get/set»// rightSize
-//«get/set»// topSize
-//«get/set»// bottomSize
-//«get/set»// innerBox
-setFrameSze(size)
-}
-@enduml
+@from_file:languages/diagrams/celllayout_interface_layoutbox2.puml
 ```
 
 [AbstractLayoutBoxFrame](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118845385) extends this class.
@@ -112,19 +75,7 @@ The *deriveN* methods just change the width or height separately.
 [ILayouter](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1605248462118897924) has a layout method and a method to move the children of a layoutable container by a delta.
 
 ```kroki-plantuml
-@startuml
-interface ILayouter {
-layout(container, sizeConstraint)
-moveChildren(container, deltaX, deltaY)
-getPreferredSize(container, sizeConstraint): Size
-getMinInnerSize(container, sizeConstraint): Size
-getMaxInnerSize(container, sizeConstraint): Size
-getAscent(container, sizeConstraint): int
-getCellsForSelectionPainting(container): Seq<ILayoutable>
-toText(container): TextBuilder
-usesPunctuation(): boolean
-}
-@enduml
+@from_file:languages/diagrams/celllayout_interface_ilayouter.puml
 ```
 
 All the *size* methods and the ascent calculation method take a container as the first parameter and a size constraint as a second parameter to restrict the returned size.
@@ -135,38 +86,7 @@ a border on the conjoined side, there is also no gap.
 ### ILayoutable
 
 ```kroki-plantuml
-@startuml
-interface ILayoutable {
-  //«get/set»// parent: ILayoutableContainer
-  //«get/set»// x
-  //«get/set»// y
-  //«get/set»// width
-  //«get/set»// height
-  //«get»// boxModel
-  //«get»// ascent
-  //«get/set»// changed
-  setBounds(x, y, width, height)
-  setPosition(x, y)
-  setSize(width, height); 
-   
-  getPreferredSize(sizeConstraint)
-  getMinSize(sizeConstraint)
-  getMaxSize(sizeConstraint)
-  getAscent(size); 
-  
-  relayout(sizeConstraint)
-   
-  isGrowX()
-  getColumnSpan()
-  isNoWrap()
-  getMaxWidth()
-  isBaseLineCell()
-  {method} ...
-   
-  toText(): TextBuilder
-}
-
-@enduml
+@from_file:languages/diagrams/celllayout_interface_ilayoutable.puml
 ```
 
 [ILayoutable](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047745619) inherits some methods of LayoutBox, some of ILayouter. The main method `relayout` calculates the new position and dimension of an editor cell. Additionally, the interface has methods for the special celllayout properties such as *growX*, *column-span* etc. and methods for checking and setting the *changed* flag.
@@ -175,19 +95,7 @@ interface ILayoutable {
 The [ILayoutableContainer](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047704919) inherits from ILayoutable and has a layouter and children:
 
 ```kroki-plantuml
-@startuml
-interface ILayoutable {
-  //«get// children: list<ILayoutable>
-  //«get// innerX
-  //«get// innerY
-  //«get// innerWidth
-  //«get// innerHeight
-  //«get// layouter: ILayouter
-  isFlattenInGrid()
-  setInnerBounds(x, y, width, height)
-  getBaselineChild(): ILayoutable
-}
-@enduml
+@from_file:languages/diagrams/celllayout_interface_ilayoutable_container.puml
 ```
 
 There are *innerX* methods for getting the position and dimension as well as a method for setting the inner bounds. There is also support for the *flatten-grid* and *base-line-child* property.
@@ -287,18 +195,7 @@ It forwards *writeSync* to the box model and calls relayout on the cell if a rel
 In the method *readSync*, relayout is requested if one of the *growN* properties is set. Then relayout is called.
 
 ```kroki-plantuml
-@startuml
-interface LayoutableAdapter <<extends AbstractLayoutableAdapter>> {
-writeSyncAll()
-readSyncAll()
-setSize(width,height)
-updateAlignment()
-getPreferredSize(sizeConstraint)
-getMinSize(sizeConstraint)
-getAscent(size)
-getMaxSize(sizeConstraint)
-}
-@enduml
+@from_file:languages/diagrams/celllayout_interface_layoutable_adapter.puml
 ```
 
 When the expected bounds are not equal to the actual bounds or a relayout was requested or the cell is marked as changed, the cell is relayouted again.

@@ -10,53 +10,7 @@ By default, you can only reference nodes present in the current model. Dependenc
 Models listed as dependencies of Model $A$ need to be contained within modules listed in the dependencies (including transitive entries) of the module containing this model. Example:
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class ModuleA <<M,lightgray>>
-class "ModelA.one" as ModelA1 <<m,lightblue>>
-class "NodeA.one.alpha" as NodeA1 <<N,yellow>>
-class "ModelA.two" as ModelA2 <<m,lightblue>>
-class "NodeA.two.alpha" as NodeA2 <<N,yellow>>
-
-class ModuleB <<G,lightgray>>
-class "ModelB.one" as ModelB1 <<G,lightblue>>
-class "NodeB.one.alpha" as NodeB1 <<N,yellow>>
-
-class ModuleC <<M,lightgray>>
-class "ModelC.one" as ModelC1 <<G,lightblue>>
-
-ModuleA *-- ModelA1: contains
-ModelA1 *-- NodeA1: contains
-ModuleA *-- ModelA2: contains
-ModelA2 *-- NodeA2: contains
-
-ModuleB *-- ModelB1: contains
-ModuleB .left.|> ModuleA: depends on
-ModelB1 .left.|> ModelA1: depends on
-ModelB1 *-- NodeB1: contains
-NodeB1 .left.|> ModelA1: depends on
-NodeB1 .[#red]left.|> ModelA2: depends on
-note right on link
-out of scope
-as ModelB.one has
-no dependency on 
-ModelA.two
-end note
-'ModuleC --|> ModelB1
-
-ModuleC *-- ModelC1: contains
-ModelC1 .[#red]down. ModelA1: depends on
-note right on link
-out of scope
-as ModuleC has
-no dependency on 
-ModuleA
-end note
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_1.puml
 ```
 
 You can't mark a model *internal* and hide it from outside access.
@@ -66,59 +20,7 @@ You can't mark a model *internal* and hide it from outside access.
 It exports a Module Dependency again to be used by modules depending on this module. Example:
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-class ModuleA <<M,lightgray>>
-class "ModelA.one" as ModelA1 <<m,lightblue>>
-class "NodeA.one.TheNode" as NodeA1 <<N,yellow>>
-
-class ModuleB <<(M,lightgray) export=true>>
-class ModuleC <<M,lightgray>>
-
-class ModuleBeta <<M,lightgray>>
-class "ModelBeta.one" as ModelBeta1 <<m,lightblue>>
-class "NodeBeta.one.TheNode" as NodeBeta1 <<N,yellow>>
-class "ModelBeta.two" as ModelBeta2 <<m,lightblue>>
-class "NodeBeta.two.TheNode" as NodeBeta2 <<N,yellow>>
-
-class ModuleGamma <<M,lightgray>>
-class "ModelGamma.one" as ModelGamma1 <<m,lightblue>>
-
-ModuleA *-- ModelA1:contains
-ModelA1 *-- NodeA1:contains
-
-ModuleB .left.> ModuleA: depends on
-ModuleC .left.> ModuleA: depends on
-
-ModuleBeta .left.> ModuleB: depends on
-ModuleBeta *-- ModelBeta1: contains
-ModelBeta1 .left.> ModelA1: depends on
-ModelBeta1 *-- NodeBeta1: contains
-NodeBeta1 .left.> NodeA1: references
-ModuleBeta *-- ModelBeta2: contains
-ModelBeta2 *-- NodeBeta2: contains
-NodeBeta2 .[#red]right.> NodeA1: references
-note top on link
-out of scope,
-as ModelBeta.two has
-no dependency on
-ModelA.one
-end note
-
-ModuleGamma .left.> ModuleC: depends on
-ModuleGamma *-- ModelGamma1: contains
-ModelGamma1 .[#red]right.> ModelA1: depends on
-note top on link
-out of scope,
-as ModuleC has
-does not export
-ModuleA
-end note
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_2.puml
 ```
 
 ## Scope
@@ -132,39 +34,7 @@ hide empty members
 *LanguageB* (containing *ConceptB*) must extend *LanguageA* (containing *ConceptA* and *ConceptInterfaceA*) if and only if
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-package LanguageA {
-  class ConceptA
-  class ConceptInterfaceA
-  class EditorComponentA <<E,orange>>
-}
-
-package LanguageB {
-  diamond LanguageB
-  class ConceptB
-  class EditorB <<E,orange>>
-  class EditorComponentB <<E,orange>>
-  class TypesystemB <<T,violet>>
-}
- 
-ConceptB .[#blue].|> ConceptA:extends
-ConceptB .[#blue].|> ConceptInterfaceA:implements
- 
-EditorB .[#blue].|> ConceptA:defined for
-note right of EditorB
-but not if LanguageA only defines the editor hint
-end note
-EditorComponentB .[#blue].|> ConceptA:defined for
-
-LanguageB .[#blue].|> EditorComponentA: uses
-
-TypesystemB .[#blue].|> ConceptA:defined for
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_3.puml
 ```
 
 Another case is if *LanguageB* defines a generator outputting *ConceptA* and *LanguageA* has a runtime solution.
@@ -172,54 +42,13 @@ Another case is if *LanguageB* defines a generator outputting *ConceptA* and *La
 *LanguageB* shouldn't extend *LanguageA* (but needs a *Default Scope* dependency) if
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-package LanguageA {
-  class ConceptA
-}
-
-package LanguageB {
-  class IntentionB <<I,yellow>>
-
-  class ConceptB {
-    <color:green>child: ConceptA</color>
-    --
-    <color:green>node<ConceptA> method()</color>
-    --
-    <color:green>reference: node<ConceptA></color>
-  }
-}
-
-IntentionB .[#green].|> ConceptA: defined for
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_4.puml
 ```
 
 *LanguageB* can't define
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-package LanguageA {
-  class ConceptA
-}
-
-package LanguageB {
-  class BehaviorB <<B,orange>>
-  class ConstraintB <<C,lightblue>>
-}
-
-BehaviorB .[#red].|> ConceptA: defined for
-ConstraintB .[#red].|> ConceptA: defined for
-
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_5.puml
 ```
 
 To be precise, it is possible to remove all errors flagged on behaviors and constraints in *LanguageB*. However, they aren't taken into account for *ConceptA*.
@@ -229,25 +58,7 @@ To be precise, it is possible to remove all errors flagged on behaviors and cons
 *GeneratorB* (inside *LanguageB*, and containing *ConceptB*) must extend *GeneratorA* (inside *LanguageA*, and containing *ConceptA*), if and only if
 
 ```kroki-plantuml
-@startuml
-left to right direction
-
-package LanguageA {
-  class ConceptA
-  class GeneratorA <<G,lightgray>>
-}
-
-package LanguageB {
-  class GeneratorB <<G,lightgray>>
-}
-
-GeneratorB .[#blue].|> ConceptA: defines a new rule for
-GeneratorB .[#blue].|> GeneratorA: extends a switch
-GeneratorB .[#blue].|> GeneratorA: defines a generator priority relative to
-
-hide empty members
-
-@enduml
+@from_file:mps_internal/diagrams/dependencies_6.puml
 ```
 
 ## Implicit dependencies

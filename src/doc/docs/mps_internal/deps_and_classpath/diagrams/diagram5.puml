@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+class LanguageBase <<L,yellow>>
+class LanguageBaseGenExtends2 <<G,lightgray>>
+class GeneratorBaseExtends2 <<G,lightgray>>
+class ConceptBase
+class ConceptBase2
+
+class SolutionBaseGenExtends2 <<S, violet>>
+class ModelBaseGenExtends2 <<G, lightgray>>
+
+LanguageBaseGenExtends2 --|> LanguageBase: extends
+LanguageBaseGenExtends2 *-- GeneratorBaseExtends2: contains
+GeneratorBaseExtends2 --|> GeneratorBase: extends
+GeneratorBaseExtends2 -[dotted]-> ConceptBase2: defines a rule for
+
+SolutionBaseGenExtends2 *-- ModelBaseGenExtends2: contains
+ModelBaseGenExtends2 -right[dotted]->LanguageBase: using
+ModelBaseGenExtends2 -right[dotted]->LanguageBaseGenExtends2: engages
+ModelBaseGenExtends2 *-- NodeBase: contains
+ModelBaseGenExtends2 *-- NodeBase2: contains
+NodeBase -[dotted]- ConceptBase: instanceof
+NodeBase2 -[dotted]- ConceptBase2: instanceof
+LanguageBase *-- ConceptBase: contains
+LanguageBase *-- ConceptBase2: contains
+
+hide empty members
+
+@enduml

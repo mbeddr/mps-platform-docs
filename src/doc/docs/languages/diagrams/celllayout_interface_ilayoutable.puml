@@ -1,0 +1,32 @@
+@startuml
+interface ILayoutable {
+  //«get/set»// parent: ILayoutableContainer
+  //«get/set»// x
+  //«get/set»// y
+  //«get/set»// width
+  //«get/set»// height
+  //«get»// boxModel
+  //«get»// ascent
+  //«get/set»// changed
+  setBounds(x, y, width, height)
+  setPosition(x, y)
+  setSize(width, height); 
+   
+  getPreferredSize(sizeConstraint)
+  getMinSize(sizeConstraint)
+  getMaxSize(sizeConstraint)
+  getAscent(size); 
+  
+  relayout(sizeConstraint)
+   
+  isGrowX()
+  getColumnSpan()
+  isNoWrap()
+  getMaxWidth()
+  isBaseLineCell()
+  {method} ...
+   
+  toText(): TextBuilder
+}
+
+@enduml

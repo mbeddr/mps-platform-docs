@@ -1,0 +1,13 @@
+@startuml
+interface ILayoutableContainer {
+  //«get// children: list<ILayoutable>
+  //«get// innerX
+  //«get// innerY
+  //«get// innerWidth
+  //«get// innerHeight
+  //«get// layouter: ILayouter
+  isFlattenInGrid()
+  setInnerBounds(x, y, width, height)
+  getBaselineChild(): ILayoutable
+}
+@enduml

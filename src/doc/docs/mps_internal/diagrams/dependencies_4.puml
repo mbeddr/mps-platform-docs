@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+package LanguageA {
+  class ConceptA
+}
+
+package LanguageB {
+  class IntentionB <<I,yellow>>
+
+  class ConceptB {
+    <color:green>child: ConceptA</color>
+    --
+    <color:green>node<ConceptA> method()</color>
+    --
+    <color:green>reference: node<ConceptA></color>
+  }
+}
+
+IntentionB .[#green].|> ConceptA: defined for
+
+hide empty members
+
+@enduml

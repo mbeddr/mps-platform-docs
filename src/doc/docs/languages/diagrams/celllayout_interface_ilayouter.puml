@@ -1,0 +1,13 @@
+@startuml
+interface ILayouter {
+layout(container, sizeConstraint)
+moveChildren(container, deltaX, deltaY)
+getPreferredSize(container, sizeConstraint): Size
+getMinInnerSize(container, sizeConstraint): Size
+getMaxInnerSize(container, sizeConstraint): Size
+getAscent(container, sizeConstraint): int
+getCellsForSelectionPainting(container): Seq<ILayoutable>
+toText(container): TextBuilder
+usesPunctuation(): boolean
+}
+@enduml

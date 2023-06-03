@@ -1,0 +1,12 @@
+@startuml
+interface LayoutableAdapter <<extends AbstractLayoutableAdapter>> {
+writeSyncAll()
+readSyncAll()
+setSize(width,height)
+updateAlignment()
+getPreferredSize(sizeConstraint)
+getMinSize(sizeConstraint)
+getAscent(size)
+getMaxSize(sizeConstraint)
+}
+@enduml
