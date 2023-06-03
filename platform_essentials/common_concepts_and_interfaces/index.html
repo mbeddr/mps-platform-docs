@@ -1,1581 +1,3708 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&A.">
+      
+      
+        <meta name="author" content="MPS Platform Docs team">
+      
+      
+        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/platform_essentials/common_concepts_and_interfaces/">
+      
+      
+        <link rel="prev" href="../contributing/">
+      
+      
+        <link rel="next" href="../interpreter/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Common concepts and interfaces - MPS Platform Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
 
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="This website collects practical knowledge about MPS and popular MPS platforms such as MPS-extensions and mbeddr. It is written mainly in the form of a Q&amp;A." name="description"/>
-<meta content="MPS Platform Docs team" name="author"/>
-<link href="http://mbeddr.com/mps-platform-docs/platform_essentials/common_concepts_and_interfaces/" rel="canonical"/>
-<link href="../contributing/" rel="prev"/>
-<link href="../interpreter/" rel="next"/>
-<link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.3" name="generator"/>
-<title>Common concepts and interfaces - MPS Platform Docs</title>
-<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3FEXS9GHRT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3FEXS9GHRT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3FEXS9GHRT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
-</meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            
-                .gscrollbar-fixer { padding-right: 15px; }
-                .gdesc-inner { font-size: 0.75rem; }
-                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="" data-md-color-primary="light-green" data-md-color-scheme="default" dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#mbeddr">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3FEXS9GHRT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3FEXS9GHRT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3FEXS9GHRT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
+
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mbeddr" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-<aside class="md-banner">
-<div class="md-banner__inner md-grid md-typeset">
-<button aria-label="Don't show this again" class="md-banner__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
-</button>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+              </button>
             
             
 If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
 
           </div>
-<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
-</aside>
-</div>
+          
+            <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="MPS Platform Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
-<img alt="logo" src="../../assets/logo.png"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             MPS Platform Docs
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Common concepts and interfaces
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="light-green" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
-</form>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
-</a>
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
-</button>
-</nav>
-<div class="md-search__suggest" data-md-component="search-suggest"></div>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
-<div class="md-source__icon md-icon">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-</div>
-<div class="md-source__repository">
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
     mps-platform-docs
   </div>
 </a>
-</div>
-</nav>
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../aspects/structure/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aspects/structure/" class="md-tabs__link">
         Aspects
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../languages/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../languages/" class="md-tabs__link">
         Languages
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mbeddr/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mbeddr/" class="md-tabs__link">
         Mbeddr
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../build/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../build/" class="md-tabs__link">
         Build
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mps_internal/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mps_internal/" class="md-tabs__link">
         MPS internals
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Platform essentials
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../clean_code/mps/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../clean_code/mps/" class="md-tabs__link">
         Clean code
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../patterns/language_design/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../patterns/language_design/" class="md-tabs__link">
         Language/UI patterns
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../reference/reading_list/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/reading_list/" class="md-tabs__link">
         Reference
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../language_reference/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../language_reference/" class="md-tabs__link">
         Language Reference (WIP)
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../about/editing_this_guide/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/editing_this_guide/" class="md-tabs__link">
         About
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
+    
+  
 </header>
-<div class="md-container" data-md-component="container">
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="MPS Platform Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MPS Platform Docs">
-<img alt="logo" src="../../assets/logo.png"/>
-</a>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
     MPS Platform Docs
   </label>
-<div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository">
-<div class="md-source__icon md-icon">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-</div>
-<div class="md-source__repository">
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mbeddr/mps-platform-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
     mps-platform-docs
   </div>
 </a>
-</div>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../..">Home</a>
-<label for="__nav_1">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_1">
-<span class="md-nav__icon md-icon"></span>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
           Home
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/general/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/general/" class="md-nav__link">
         General
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/plugins/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/plugins/" class="md-nav__link">
         Plugins
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/external_files_and_tools/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/external_files_and_tools/" class="md-nav__link">
         External files and tools
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/console/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/console/" class="md-nav__link">
         Console
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/platform_specific_bugs/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/platform_specific_bugs/" class="md-nav__link">
         OS-specific bugs
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/rcp/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/rcp/" class="md-nav__link">
         RCP
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/trouble_shooting_guide/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/trouble_shooting_guide/" class="md-nav__link">
         Trouble shooting guide
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/visual_guide/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/visual_guide/" class="md-nav__link">
         Visual guide
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/debugging/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/debugging/" class="md-nav__link">
         Debugging
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../home/performance/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/performance/" class="md-nav__link">
         Performance
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Aspects
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Aspects
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/structure/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/structure/" class="md-nav__link">
         Structure
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/editor/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/editor/" class="md-nav__link">
         Editor
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/actions/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/actions/" class="md-nav__link">
         Actions
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/constraints/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/constraints/" class="md-nav__link">
         Constraints
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/behavior/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/behavior/" class="md-nav__link">
         Behavior
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/feedback/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/feedback/" class="md-nav__link">
         Feedback
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/typesystem/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/typesystem/" class="md-nav__link">
         Typesystem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/refactorings/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/refactorings/" class="md-nav__link">
         Refactorings
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/scripts/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/scripts/" class="md-nav__link">
         Scripts
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/intentions/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/intentions/" class="md-nav__link">
         Intentions
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/findusages/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/findusages/" class="md-nav__link">
         Find Usages
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/plugin/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/plugin/" class="md-nav__link">
         Plugin
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/dataflow/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/dataflow/" class="md-nav__link">
         Dataflow
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/test/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/test/" class="md-nav__link">
         Test
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/textgen/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/textgen/" class="md-nav__link">
         TextGen
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/migration/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/migration/" class="md-nav__link">
         Migration
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/vcs/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/vcs/" class="md-nav__link">
         VCS
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/generator/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/generator/" class="md-nav__link">
         Generator
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/accessory_models/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/accessory_models/" class="md-nav__link">
         Accessory models
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_20" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_20" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
           Contributed aspects
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_20">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_20_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_20">
+          <span class="md-nav__icon md-icon"></span>
           Contributed aspects
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/documentation/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/documentation/" class="md-nav__link">
         Documentation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/listener/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/listener/" class="md-nav__link">
         Listener
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/polyfun/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/polyfun/" class="md-nav__link">
         Polyfun
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/virtualinterfaces/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/virtualinterfaces/" class="md-nav__link">
         Virtual Interfaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../aspects/transformations/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspects/transformations/" class="md-nav__link">
         Transformations
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../languages/">Languages</a>
-<label for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../languages/">Languages</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Languages
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/baselanguage/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/baselanguage/" class="md-nav__link">
         Baselanguage and extensions
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/double_dispatch/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/double_dispatch/" class="md-nav__link">
         Double dispatch
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
           MPS-extensions
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
           MPS-extensions
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/mps_extensions/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/mps_extensions/" class="md-nav__link">
         General
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/cell_layout/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/cell_layout/" class="md-nav__link">
         Cell Layout
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../languages/kernelf/">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/kernelf/" class="md-nav__link">
         KernelF
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../mbeddr/">Mbeddr</a>
-<label for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mbeddr/">Mbeddr</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Mbeddr
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/building_mbeddr_locally/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/building_mbeddr_locally/" class="md-nav__link">
         Building Mbeddr locally
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/big_project/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/big_project/" class="md-nav__link">
         BigProject
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/development_guide/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/development_guide/" class="md-nav__link">
         Development guide
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mbeddr/misc_topics/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mbeddr/misc_topics/" class="md-nav__link">
         Miscellaneous topics
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../build/">Build</a>
-<label for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../build/">Build</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           Build
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/ci/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/ci/" class="md-nav__link">
         CI
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/gradle/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/gradle/" class="md-nav__link">
         Gradle
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/command_line_tool/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/command_line_tool/" class="md-nav__link">
         Creating a command line tool
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/git/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/teamcity/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/teamcity/" class="md-nav__link">
         TeamCity
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../build/advanced_github_workflow/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/advanced_github_workflow/" class="md-nav__link">
         Advanced GitHub workflow
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/">MPS internals</a>
-<label for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mps_internal/">MPS internals</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           MPS internals
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/open_api/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/open_api/" class="md-nav__link">
         Open API
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
-<label for="__nav_6_3">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_6_3">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+          
+            <label for="__nav_6_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
           Dependencies and classpath
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/terminology_and_ui_for_access/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/terminology_and_ui_for_access/" class="md-nav__link">
         Terminology and UI for access
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/models/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/models/" class="md-nav__link">
         Models
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/dependencies/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/dependencies/" class="md-nav__link">
         Dependencies
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/recipes/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/recipes/" class="md-nav__link">
         Recipes
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/classloading/">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/classloading/" class="md-nav__link">
         Classloading
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../mps_internal/threads/">Threading</a>
-<label for="__nav_6_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_6_5">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mps_internal/threads/">Threading</a>
+          
+            <label for="__nav_6_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
           Threading
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/read_write_action_examples/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/threads/read_write_action_examples/" class="md-nav__link">
         Example actions using locks
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/threads/named_threads/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/threads/named_threads/" class="md-nav__link">
         Named threads
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/utility_classes/">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/utility_classes/" class="md-nav__link">
         Utility classes
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/gui/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/gui/" class="md-nav__link">
         GUI
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/editor_development/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/editor_development/" class="md-nav__link">
         Editor development
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_sdk/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/intellij_sdk/" class="md-nav__link">
         IntelliJ SDK
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/jcef/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/jcef/" class="md-nav__link">
         Java Chromium Embedded Framework
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/writing_mps_plugin_with_kotlin/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/writing_mps_plugin_with_kotlin/" class="md-nav__link">
         Writing an MPS plugin with Kotlin
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/intellij_integration/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/intellij_integration/" class="md-nav__link">
         IntelliJ integration
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/navigating_mps_source/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/navigating_mps_source/" class="md-nav__link">
         Navigating the MPS sources
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/java_design_patterns_in_mps_sources/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/java_design_patterns_in_mps_sources/" class="md-nav__link">
         Java design patterns in the MPS sources
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/mps_startup/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/mps_startup/" class="md-nav__link">
         What happens on MPS startup
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../mps_internal/file_format/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mps_internal/file_format/" class="md-nav__link">
         File format
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../">Platform essentials</a>
-<label for="__nav_7">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_7">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Platform essentials</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
           Platform essentials
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../how_everything_is_connected/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_everything_is_connected/" class="md-nav__link">
         How everything is connected
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../contributing/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Common concepts and interfaces
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Common concepts and interfaces
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mbeddr">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mbeddr" class="md-nav__link">
     Mbeddr
   </a>
-<nav aria-label="Mbeddr" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#base">
+  
+    <nav class="md-nav" aria-label="Mbeddr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
     Base
   </a>
-<nav aria-label="Base" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assessment">
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessment" class="md-nav__link">
     Assessment
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chunk">
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
     Chunk
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icommentable">
+        
+          <li class="md-nav__item">
+  <a href="#icommentable" class="md-nav__link">
     ICommentable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idocumentable">
+        
+          <li class="md-nav__item">
+  <a href="#idocumentable" class="md-nav__link">
     IDocumentable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itreeviewable">
+        
+          <li class="md-nav__item">
+  <a href="#itreeviewable" class="md-nav__link">
     ITreeViewable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icontainerofuniquenames">
+        
+          <li class="md-nav__item">
+  <a href="#icontainerofuniquenames" class="md-nav__link">
     IContainerOfUniqueNames
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idetectcycle">
+        
+          <li class="md-nav__item">
+  <a href="#idetectcycle" class="md-nav__link">
     IDetectCycle
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iempty">
+        
+          <li class="md-nav__item">
+  <a href="#iempty" class="md-nav__link">
     IEmpty
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#name-related-interfaces">
+        
+          <li class="md-nav__item">
+  <a href="#name-related-interfaces" class="md-nav__link">
     Name related interfaces
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#imbeddrideroot">
+        
+          <li class="md-nav__item">
+  <a href="#imbeddrideroot" class="md-nav__link">
     IMbeddrIDERoot
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iets3">
+      
+        <li class="md-nav__item">
+  <a href="#iets3" class="md-nav__link">
     IETS3
   </a>
-<nav aria-label="IETS3" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#general">
+  
+    <nav class="md-nav" aria-label="IETS3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
     General
   </a>
-<nav aria-label="General" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isolvable">
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isolvable" class="md-nav__link">
     ISolvable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icanruncheckmanually">
+        
+          <li class="md-nav__item">
+  <a href="#icanruncheckmanually" class="md-nav__link">
     ICanRunCheckManually
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ioptionallynamed">
+        
+          <li class="md-nav__item">
+  <a href="#ioptionallynamed" class="md-nav__link">
     IOptionallyNamed
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ivalidnamedconcept">
+        
+          <li class="md-nav__item">
+  <a href="#ivalidnamedconcept" class="md-nav__link">
     IValidNamedConcept
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#expressions">
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
     Expressions
   </a>
-<nav aria-label="Expressions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icanbelvalue">
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icanbelvalue" class="md-nav__link">
     ICanBeLValue
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idottarget">
+        
+          <li class="md-nav__item">
+  <a href="#idottarget" class="md-nav__link">
     IDotTarget
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iemptyliteral">
+        
+          <li class="md-nav__item">
+  <a href="#iemptyliteral" class="md-nav__link">
     IEmptyLiteral
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iliteral">
+        
+          <li class="md-nav__item">
+  <a href="#iliteral" class="md-nav__link">
     ILiteral
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#effects">
+        
+          <li class="md-nav__item">
+  <a href="#effects" class="md-nav__link">
     Effects
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ioptionallytyped">
+        
+          <li class="md-nav__item">
+  <a href="#ioptionallytyped" class="md-nav__link">
     IOptionallyTyped
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itraceroot">
+        
+          <li class="md-nav__item">
+  <a href="#itraceroot" class="md-nav__link">
     ITraceRoot
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#custom-types">
+        
+          <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
     Custom types
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iwantnewline">
+        
+          <li class="md-nav__item">
+  <a href="#iwantnewline" class="md-nav__link">
     IWantNewLine
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tests">
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
     Tests
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#top-level">
+        
+          <li class="md-nav__item">
+  <a href="#top-level" class="md-nav__link">
     Top-level
   </a>
-<nav aria-label="Top-level" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itoplevelexprcontent">
+  
+    <nav class="md-nav" aria-label="Top-level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#itoplevelexprcontent" class="md-nav__link">
     IToplevelExprContent
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#collections">
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
     Collections
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mps-extensions">
+      
+        <li class="md-nav__item">
+  <a href="#mps-extensions" class="md-nav__link">
     MPS-extensions
   </a>
-<nav aria-label="MPS-extensions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#richtext">
+  
+    <nav class="md-nav" aria-label="MPS-extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#richtext" class="md-nav__link">
     Richtext
   </a>
-<nav aria-label="Richtext" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iword">
+  
+    <nav class="md-nav" aria-label="Richtext">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iword" class="md-nav__link">
     IWord
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../interpreter/">
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpreter/" class="md-nav__link">
         Interpreter, coverage and tracing
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../com_mbeddr_mpsutil/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../com_mbeddr_mpsutil/" class="md-nav__link">
         MPS utilities
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../platform_build_scripts/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform_build_scripts/" class="md-nav__link">
         Platform build scripts
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../build_folder/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_folder/" class="md-nav__link">
         Build folder
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../testing/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
         Testing
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../accessing_the_project/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing_the_project/" class="md-nav__link">
         Accessing the project
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../clean_code/mps/">Clean code</a>
-<label for="__nav_8">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../clean_code/mps/">Clean code</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
           Clean code
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/mps/readability_maintainability/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/mps/readability_maintainability/" class="md-nav__link">
         Readability/maintainability
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/mps/deprecation/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/mps/deprecation/" class="md-nav__link">
         Deprecation
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../clean_code/java/">Java (Base Language)</a>
-<label for="__nav_8_4">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_8_4">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../clean_code/java/">Java (Base Language)</a>
+          
+            <label for="__nav_8_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
           Java (Base Language)
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/java/programming_principles/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/java/programming_principles/" class="md-nav__link">
         Programming principles
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../clean_code/java/java_style_guide/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/java/java_style_guide/" class="md-nav__link">
         Java style guide
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Language/UI patterns
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_9">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
           Language/UI patterns
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/language_design/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/language_design/" class="md-nav__link">
         Language design
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/user_experience/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/user_experience/" class="md-nav__link">
         User experience
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../patterns/ui_patterns/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/ui_patterns/" class="md-nav__link">
         UI patterns
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           Reference
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_10">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
           Reference
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/reading_list/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reading_list/" class="md-nav__link">
         Reading list
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/tips_for_os_maintainers/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tips_for_os_maintainers/" class="md-nav__link">
         Tips for open source maintainers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/icons/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/icons/" class="md-nav__link">
         Icons
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/core_languages/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/core_languages/" class="md-nav__link">
         Core languages
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/standard_plugins/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/standard_plugins/" class="md-nav__link">
         Standard plugins
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/included_libraries/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/included_libraries/" class="md-nav__link">
         Included libraries
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/extension_points/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/extension_points/" class="md-nav__link">
         Extension points
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/exceptions/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/exceptions/" class="md-nav__link">
         Exceptions
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/actions/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/actions/" class="md-nav__link">
         Actions
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/abbreviations/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/abbreviations/" class="md-nav__link">
         Abbreviations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/code_abbreviations/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/code_abbreviations/" class="md-nav__link">
         Code abbreviations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/gitignore/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gitignore/" class="md-nav__link">
         Gitignore file
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../reference/issue_trackers/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/issue_trackers/" class="md-nav__link">
         Issue trackers
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../language_reference/">Language Reference (WIP)</a>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_11">
-<span class="md-nav__icon md-icon"></span>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../language_reference/">Language Reference (WIP)</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
           Language Reference (WIP)
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
           About
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_12">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
           About
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../about/editing_this_guide/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/editing_this_guide/" class="md-nav__link">
         Editing this guide
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../about/original_authors/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/original_authors/" class="md-nav__link">
         Original authors
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../about/new_pages/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/new_pages/" class="md-nav__link">
         New pages
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tags/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
         Tags
       </a>
-</li>
-</ul>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mbeddr">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mbeddr" class="md-nav__link">
     Mbeddr
   </a>
-<nav aria-label="Mbeddr" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#base">
+  
+    <nav class="md-nav" aria-label="Mbeddr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
     Base
   </a>
-<nav aria-label="Base" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assessment">
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessment" class="md-nav__link">
     Assessment
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chunk">
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
     Chunk
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icommentable">
+        
+          <li class="md-nav__item">
+  <a href="#icommentable" class="md-nav__link">
     ICommentable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idocumentable">
+        
+          <li class="md-nav__item">
+  <a href="#idocumentable" class="md-nav__link">
     IDocumentable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itreeviewable">
+        
+          <li class="md-nav__item">
+  <a href="#itreeviewable" class="md-nav__link">
     ITreeViewable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icontainerofuniquenames">
+        
+          <li class="md-nav__item">
+  <a href="#icontainerofuniquenames" class="md-nav__link">
     IContainerOfUniqueNames
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idetectcycle">
+        
+          <li class="md-nav__item">
+  <a href="#idetectcycle" class="md-nav__link">
     IDetectCycle
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iempty">
+        
+          <li class="md-nav__item">
+  <a href="#iempty" class="md-nav__link">
     IEmpty
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#name-related-interfaces">
+        
+          <li class="md-nav__item">
+  <a href="#name-related-interfaces" class="md-nav__link">
     Name related interfaces
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#imbeddrideroot">
+        
+          <li class="md-nav__item">
+  <a href="#imbeddrideroot" class="md-nav__link">
     IMbeddrIDERoot
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iets3">
+      
+        <li class="md-nav__item">
+  <a href="#iets3" class="md-nav__link">
     IETS3
   </a>
-<nav aria-label="IETS3" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#general">
+  
+    <nav class="md-nav" aria-label="IETS3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
     General
   </a>
-<nav aria-label="General" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isolvable">
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isolvable" class="md-nav__link">
     ISolvable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icanruncheckmanually">
+        
+          <li class="md-nav__item">
+  <a href="#icanruncheckmanually" class="md-nav__link">
     ICanRunCheckManually
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ioptionallynamed">
+        
+          <li class="md-nav__item">
+  <a href="#ioptionallynamed" class="md-nav__link">
     IOptionallyNamed
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ivalidnamedconcept">
+        
+          <li class="md-nav__item">
+  <a href="#ivalidnamedconcept" class="md-nav__link">
     IValidNamedConcept
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#expressions">
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
     Expressions
   </a>
-<nav aria-label="Expressions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#icanbelvalue">
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icanbelvalue" class="md-nav__link">
     ICanBeLValue
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#idottarget">
+        
+          <li class="md-nav__item">
+  <a href="#idottarget" class="md-nav__link">
     IDotTarget
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iemptyliteral">
+        
+          <li class="md-nav__item">
+  <a href="#iemptyliteral" class="md-nav__link">
     IEmptyLiteral
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iliteral">
+        
+          <li class="md-nav__item">
+  <a href="#iliteral" class="md-nav__link">
     ILiteral
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#effects">
+        
+          <li class="md-nav__item">
+  <a href="#effects" class="md-nav__link">
     Effects
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ioptionallytyped">
+        
+          <li class="md-nav__item">
+  <a href="#ioptionallytyped" class="md-nav__link">
     IOptionallyTyped
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itraceroot">
+        
+          <li class="md-nav__item">
+  <a href="#itraceroot" class="md-nav__link">
     ITraceRoot
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#custom-types">
+        
+          <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
     Custom types
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iwantnewline">
+        
+          <li class="md-nav__item">
+  <a href="#iwantnewline" class="md-nav__link">
     IWantNewLine
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tests">
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
     Tests
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#top-level">
+        
+          <li class="md-nav__item">
+  <a href="#top-level" class="md-nav__link">
     Top-level
   </a>
-<nav aria-label="Top-level" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#itoplevelexprcontent">
+  
+    <nav class="md-nav" aria-label="Top-level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#itoplevelexprcontent" class="md-nav__link">
     IToplevelExprContent
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#collections">
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
     Collections
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mps-extensions">
+      
+        <li class="md-nav__item">
+  <a href="#mps-extensions" class="md-nav__link">
     MPS-extensions
   </a>
-<nav aria-label="MPS-extensions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#richtext">
+  
+    <nav class="md-nav" aria-label="MPS-extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#richtext" class="md-nav__link">
     Richtext
   </a>
-<nav aria-label="Richtext" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iword">
+  
+    <nav class="md-nav" aria-label="Richtext">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iword" class="md-nav__link">
     IWord
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag" href="../../tags/#mps_extensions">mps_extensions</a>
-<a class="md-tag" href="../../tags/#mbeddr">mbeddr</a>
-<a class="md-tag" href="../../tags/#iets3">iets3</a>
-</nav>
-<h1>Common concepts and interfaces</h1>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="../../tags/#mps_extensions" class="md-tag">mps_extensions</a>
+      
+    
+      
+      
+        <a href="../../tags/#mbeddr" class="md-tag">mbeddr</a>
+      
+    
+      
+      
+        <a href="../../tags/#iets3" class="md-tag">iets3</a>
+      
+    
+  </nav>
+
+
+
+  
+  
+
+
+  <h1>Common concepts and interfaces</h1>
+
 <p>This list explains some common abstract concepts and interfaces that you can use to extend or use the functionality of the platforms.
 Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
-<h2 id="mbeddr">Mbeddr<a class="headerlink" href="#mbeddr" title="Permanent link">¶</a></h2>
-<h3 id="base">Base<a class="headerlink" href="#base" title="Permanent link">¶</a></h3>
-<h4 id="assessment"><a href="http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814">Assessment</a><a class="headerlink" href="#assessment" title="Permanent link">¶</a></h4>
+<h2 id="mbeddr">Mbeddr<a class="headerlink" href="#mbeddr" title="Permanent link">&para;</a></h2>
+<h3 id="base">Base<a class="headerlink" href="#base" title="Permanent link">&para;</a></h3>
+<h4 id="assessment"><a href="http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814">Assessment</a><a class="headerlink" href="#assessment" title="Permanent link">&para;</a></h4>
 <p>To extend assessments, extend the class <a href="AssessmentQuery">AssessmentQuery</a> to create a new query. The result of the query has to extend the class <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F865293814733133833">AssessmentResult</a>. The interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F671216505796427448">AssessmentSummary</a> must also be extended to provide a summary of the results.</p>
 <p>Example:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/example_interpreter_coverage.png"><img alt="example for an assessment query: interpreter coverage" src="../images/example_interpreter_coverage.png"/></a></p>
-<h4 id="chunk">Chunk<a class="headerlink" href="#chunk" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="../images/example_interpreter_coverage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example for an assessment query: interpreter coverage" src="../images/example_interpreter_coverage.png" /></a></p>
+<h4 id="chunk">Chunk<a class="headerlink" href="#chunk" title="Permanent link">&para;</a></h4>
 <p>A node of the class <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7139820346881560230">Chunk</a> has several properties: it has a name, acts as a scope provider for elements, can import other elements or vice versa. It also integrates with the tree view and provides a graph of all the chunk hierarchy including imports. It also detects dependency cycles.</p>
 <p>Example:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/example_library.png"><img alt="example: simple library with an import" src="../images/example_library.png"/></a></p>
-<h4 id="icommentable">ICommentable<a class="headerlink" href="#icommentable" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="../images/example_library.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: simple library with an import" src="../images/example_library.png" /></a></p>
+<h4 id="icommentable">ICommentable<a class="headerlink" href="#icommentable" title="Permanent link">&para;</a></h4>
 <p>Concepts or interfaces that implement <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229556133800">ICommentable</a> can be commented <abbr title="output">out</abbr> by typing <code>//</code> or <code>/*</code> as long as it is not trigger by a node that implements <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067">IEmpty</a>.</p>
-<h4 id="idocumentable">IDocumentable<a class="headerlink" href="#idocumentable" title="Permanent link">¶</a></h4>
+<h4 id="idocumentable">IDocumentable<a class="headerlink" href="#idocumentable" title="Permanent link">&para;</a></h4>
 <p>Add support for documenting nodes when implementing the <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F3857533489766146432">IDocumentable</a> interface. The text node is using the language <code>de.slisson.mps.richtext</code> and supported text and embedded nodes.</p>
-<h4 id="itreeviewable">ITreeViewable<a class="headerlink" href="#itreeviewable" title="Permanent link">¶</a></h4>
+<h4 id="itreeviewable">ITreeViewable<a class="headerlink" href="#itreeviewable" title="Permanent link">&para;</a></h4>
 <p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F176285146686936640">ITreeViewRoot</a> to use the Tree tool. It is a tool that can show a tree structure when this interface is implemented.</p>
 <p>Example: <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> call tree of functions</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/iets3_calltree.png"><img alt="iets3 call tree of functions" src="../images/iets3_calltree.png"/></a></p>
-<h4 id="icontainerofuniquenames">IContainerOfUniqueNames<a class="headerlink" href="#icontainerofuniquenames" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="../images/iets3_calltree.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="iets3 call tree of functions" src="../images/iets3_calltree.png" /></a></p>
+<h4 id="icontainerofuniquenames">IContainerOfUniqueNames<a class="headerlink" href="#icontainerofuniquenames" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5095889050031055796">IContainerOfUniqueNames</a> checks that the provided names are indeed unique and shows and error otherwise. For qualified names, implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5227231181399633032">IHasQualifiedName</a>.</p>
-<h4 id="idetectcycle">IDetectCycle<a class="headerlink" href="#idetectcycle" title="Permanent link">¶</a></h4>
+<h4 id="idetectcycle">IDetectCycle<a class="headerlink" href="#idetectcycle" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5939454523704167063">IDetectCycle</a> can be implemented to detect cyclic dependencies. This feature is used, for example, with chunks that import other chunks.</p>
-<h4 id="iempty">IEmpty<a class="headerlink" href="#iempty" title="Permanent link">¶</a></h4>
+<h4 id="iempty">IEmpty<a class="headerlink" href="#iempty" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067">IEmpty</a> can be implemented to support empty lines. Error messages are automatically suppressed and the node is also not shown in the outline.</p>
-<h4 id="name-related-interfaces">Name related interfaces<a class="headerlink" href="#name-related-interfaces" title="Permanent link">¶</a></h4>
+<h4 id="name-related-interfaces">Name related interfaces<a class="headerlink" href="#name-related-interfaces" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291">IIdentifierNamedConcept</a> can be used for concept that should have a valid identifier. Check the <a href="http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296">property constraint</a> to understand how it works.</p>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193612">INameAllUpperCase</a>, <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224192794">INameFirstCharLowerCase</a> and <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193610">INameFirstCharUpperCase</a> can be used to further constraint the identifier name.</p>
-<h4 id="imbeddrideroot">IMbeddrIDERoot<a class="headerlink" href="#imbeddrideroot" title="Permanent link">¶</a></h4>
-<p>Concepts that implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829">IMbeddrIDERoot</a> show up in the <em>New Roots</em> menu that’s shown above the normal <em>new</em> menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.</p>
-<h2 id="iets3"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr><a class="headerlink" href="#iets3" title="Permanent link">¶</a></h2>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
-<h4 id="isolvable">ISolvable<a class="headerlink" href="#isolvable" title="Permanent link">¶</a></h4>
+<h4 id="imbeddrideroot">IMbeddrIDERoot<a class="headerlink" href="#imbeddrideroot" title="Permanent link">&para;</a></h4>
+<p>Concepts that implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829">IMbeddrIDERoot</a> show up in the <em>New Roots</em> menu that&rsquo;s shown above the normal <em>new</em> menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.</p>
+<h2 id="iets3"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr><a class="headerlink" href="#iets3" title="Permanent link">&para;</a></h2>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<h4 id="isolvable">ISolvable<a class="headerlink" href="#isolvable" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F5067755556171617239">ISolvable</a> can be implemented to create solver tasks that could be executed by a solver such as <a href="https://github.com/Z3Prover/z3">Z3</a>. To enable the solver for a node, implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F9051170899708928820">IUseSolver</a>. A solver task must extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F8571724170506775997">AbstractSolverTask</a>. The concept that can be mapped to the solver must implement <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F5553107600697040451">ICanBeMappedToSolver</a>.</p>
-<h4 id="icanruncheckmanually">ICanRunCheckManually<a class="headerlink" href="#icanruncheckmanually" title="Permanent link">¶</a></h4>
+<h4 id="icanruncheckmanually">ICanRunCheckManually<a class="headerlink" href="#icanruncheckmanually" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F4450571177430728250">ICanRunCheckManually</a> can be implemented to support running checks that are executed through one of the actions (runAllManuallyOnModel, runAllManuallyOnRoot, runManuallyOnContainer etc.) or are executed through intentions. The result of a check can be stored as a user object of a node. The interface also supports updating the editor with the test results, for example, highlighting the background of a test with a color and refreshing the editor.</p>
 <p>Example:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../gifs/run_check_manually.gif"><img alt="KernelF: run check manually" src="../gifs/run_check_manually.gif"/></a></p>
-<h4 id="ioptionallynamed">IOptionallyNamed<a class="headerlink" href="#ioptionallynamed" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="../gifs/run_check_manually.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KernelF: run check manually" src="../gifs/run_check_manually.gif" /></a></p>
+<h4 id="ioptionallynamed">IOptionallyNamed<a class="headerlink" href="#ioptionallynamed" title="Permanent link">&para;</a></h4>
 <p>Use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F229512757698888199">IOptionallyNamed</a> for concepts that should support an optional name. You can also use this name in smart references.</p>
-<h4 id="ivalidnamedconcept">IValidNamedConcept<a class="headerlink" href="#ivalidnamedconcept" title="Permanent link">¶</a></h4>
+<h4 id="ivalidnamedconcept">IValidNamedConcept<a class="headerlink" href="#ivalidnamedconcept" title="Permanent link">&para;</a></h4>
 <p>As an alternative to the mbeddr interfaces, you can use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F229512757699383348">IValidNamedConcept</a> for valid identifiers that are valid in KernelF.</p>
-<h3 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">¶</a></h3>
+<h3 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h3>
 <p>To add a new expression, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928347719">Expression</a>. The new concept can be commented <abbr title="output">out</abbr> and documented by default.</p>
-<h4 id="icanbelvalue">ICanBeLValue<a class="headerlink" href="#icanbelvalue" title="Permanent link">¶</a></h4>
+<h4 id="icanbelvalue">ICanBeLValue<a class="headerlink" href="#icanbelvalue" title="Permanent link">&para;</a></h4>
 <p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068">ICanBeLValue</a> when the concept can be used as the <a href="https://en.wikipedia.org/wiki/Value_(computer_science)?oldformat=true#Assignment:_l-values_and_r-values">left value</a> of expressions such as assignments. Variable references, paths and dot expression can be left values.</p>
-<h4 id="idottarget">IDotTarget<a class="headerlink" href="#idottarget" title="Permanent link">¶</a></h4>
+<h4 id="idottarget">IDotTarget<a class="headerlink" href="#idottarget" title="Permanent link">&para;</a></h4>
 <p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">IDotTarget</a> to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines and many more.</p>
-<h4 id="iemptyliteral">IEmptyLiteral<a class="headerlink" href="#iemptyliteral" title="Permanent link">¶</a></h4>
+<h4 id="iemptyliteral">IEmptyLiteral<a class="headerlink" href="#iemptyliteral" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F915344943735946072">IEmptyLiteral</a> is a marker interface used to mark literals that at runtime evaluate to an empty value.</p>
-<h4 id="iliteral">ILiteral<a class="headerlink" href="#iliteral" title="Permanent link">¶</a></h4>
+<h4 id="iliteral">ILiteral<a class="headerlink" href="#iliteral" title="Permanent link">&para;</a></h4>
 <p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600710395780">ILiteral</a> to add support for a new literal. For primitive types such as integers and strings, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8379605524044170035">PrimitiveLiteral</a> instead. Register an extension for the <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F1085994689350268573">primitiveTypeMapper</a> extension point when using custom primitive literals. The standard implementation is the <a href="http://127.0.0.1:63320/node?ref=r%3A5bf19129-2710-45a6-906e-9ee2d0977853%28org.iets3.core.expr.simpleTypes.plugin%29%2F3910975805742593968">SimpleTypesPrimitiveTypeMapper</a>.</p>
-<h4 id="effects">Effects<a class="headerlink" href="#effects" title="Permanent link">¶</a></h4>
+<h4 id="effects">Effects<a class="headerlink" href="#effects" title="Permanent link">&para;</a></h4>
 <p>Since KernelF is by default immutable, some language extensions allow side effects such as the language <em><abbr title="organization">org</abbr>.iets3.core.<abbr title="expression">expr</abbr>.mutable</em>. To add custom concepts that have affects, implement the interfaces <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116">IMayAllowEffect</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166">IMayHaveEffect</a>.</p>
-<h4 id="ioptionallytyped">IOptionallyTyped<a class="headerlink" href="#ioptionallytyped" title="Permanent link">¶</a></h4>
+<h4 id="ioptionallytyped">IOptionallyTyped<a class="headerlink" href="#ioptionallytyped" title="Permanent link">&para;</a></h4>
 <p>Use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724">IOptionallyTyped</a> to add an optional type to an expression. The expression automatically used the provided type as its own type.</p>
-<h4 id="itraceroot">ITraceRoot<a class="headerlink" href="#itraceroot" title="Permanent link">¶</a></h4>
+<h4 id="itraceroot">ITraceRoot<a class="headerlink" href="#itraceroot" title="Permanent link">&para;</a></h4>
 <p>Nodes that want to be the root of <a href="../interpreter/#tracing-in-kernelf">tracing</a>, should implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874">ITraceRoot</a></p>
-<h4 id="custom-types">Custom types<a class="headerlink" href="#custom-types" title="Permanent link">¶</a></h4>
+<h4 id="custom-types">Custom types<a class="headerlink" href="#custom-types" title="Permanent link">&para;</a></h4>
 <p>Custom types must extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928349204">Type</a>. If the type supports a default value (e.g. <code>false</code> for the boolean type and <code>0</code> for a numeric type), also implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6932772747669856399">ITypeSupportsDefaultValue</a>.</p>
-<h4 id="iwantnewline">IWantNewLine<a class="headerlink" href="#iwantnewline" title="Permanent link">¶</a></h4>
+<h4 id="iwantnewline">IWantNewLine<a class="headerlink" href="#iwantnewline" title="Permanent link">&para;</a></h4>
 <p>The concepts of expressions that need to be on a new line such as try expressions, block expressions and sometimes tables, need to implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890">IWantNewLine</a>. This interface affects the layout of some expressions such as if expressions and function bodies.</p>
-<h4 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h4>
+<h4 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h4>
 <p>To add a new test statement, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3Aba7faab6-2b80-43d5-8b95-0c440665312c%28org.iets3.core.expr.tests.structure%29%2F8219602584783477664">AbstractTestItem</a>. If the editor needs to be updated after the test item was executed, override the method <a href="http://127.0.0.1:63320/node?ref=r%3A7961970e-5737-42e2-b144-9bef3ad8d077%28org.iets3.core.expr.tests.behavior%29%2F4314247060317840957">performAdditionalEditorUpdate</a>.</p>
-<h3 id="top-level">Top-level<a class="headerlink" href="#top-level" title="Permanent link">¶</a></h3>
-<h4 id="itoplevelexprcontent">IToplevelExprContent<a class="headerlink" href="#itoplevelexprcontent" title="Permanent link">¶</a></h4>
+<h3 id="top-level">Top-level<a class="headerlink" href="#top-level" title="Permanent link">&para;</a></h3>
+<h4 id="itoplevelexprcontent">IToplevelExprContent<a class="headerlink" href="#itoplevelexprcontent" title="Permanent link">&para;</a></h4>
 <p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Ada65683e-ff6f-430d-ab68-32a77df72c93%28org.iets3.core.expr.toplevel.structure%29%2F2861782275883475449">IToplevelExprContent</a> to allow an expression to be used at the topmost level like the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123155">ExpressionStatement</a> in <em>baselanguage</em>.</p>
-<h3 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">¶</a></h3>
+<h3 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h3>
 <p>When implementing custom operations for collections such as maps, lists and sets, use one of the provided concepts as the base concept (for example <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339795488">NoArgCollectionOp</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283340020764">OneArgCollectionOp</a>). If no suitable concept is available, implement one of the interfaces such as <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339790458">ICollectionOp</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7757419675865128281">IMapOneArgOp</a>. If this is still not possible, you can still implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">IDotTarget</a> directly.</p>
-<h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">¶</a></h2>
-<h3 id="richtext">Richtext<a class="headerlink" href="#richtext" title="Permanent link">¶</a></h3>
-<h4 id="iword">IWord<a class="headerlink" href="#iword" title="Permanent link">¶</a></h4>
+<h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
+<h3 id="richtext">Richtext<a class="headerlink" href="#richtext" title="Permanent link">&para;</a></h3>
+<h4 id="iword">IWord<a class="headerlink" href="#iword" title="Permanent link">&para;</a></h4>
 <p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3Aca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3%28de.slisson.mps.richtext.structure%29%2F2557074442922392300">IWord</a> to add new embeddable nodes to the text.</p>
-<hr/>
+
+  <hr>
 <div class="md-source-file">
-<small>
+  <small>
     
       Last update:
       <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
-</small>
+      
+    
+  </small>
 </div>
-<form class="md-feedback" hidden="" name="feedback">
-<fieldset>
-<legend class="md-feedback__title">
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
         Was this page helpful?
       </legend>
-<div class="md-feedback__inner">
-<div class="md-feedback__list">
-<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"></path></svg>
-</button>
-<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"></path></svg>
-</button>
-</div>
-<div class="md-feedback__note">
-<div data-md-value="1" hidden="">
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
               
               
                 
               
               Thanks for your feedback!
             </div>
-<div data-md-value="0" hidden="">
+          
+            <div data-md-value="0" hidden>
               
               
                 
               
-              Thanks for your feedback! Help us improve this page by using our <a href="..." rel="noopener" target="_blank">feedback form</a>.
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
             </div>
-</div>
-</div>
-</fieldset>
-</form>
-<meta content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" name="google-site-verification">
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+
+
+<meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
+
+
 <!-- Giscus -->
 <h2 id="__comments">Comments</h2>
-<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOHtFrws4CQY8v" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="mbeddr/mps-platform-docs" data-repo-id="R_kgDOHtFrwg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+<script src="https://giscus.app/client.js"
+        data-repo="mbeddr/mps-platform-docs"
+        data-repo-id="R_kgDOHtFrwg"
+        data-category="General"
+        data-category-id="DIC_kwDOHtFrws4CQY8v"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
 </script>
+
 <!-- Reload on palette change -->
 <script>
     var palette = __md_get("__palette")
@@ -1620,66 +3747,96 @@ Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
   }
 };
   </script>
-</meta></article>
-</div>
-</div>
-<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </button>
-</main>
-<footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Contributing" class="md-footer__link md-footer__link--prev" href="../contributing/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                  Previous
-                </span>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../contributing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Contributing" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
                 Contributing
               </div>
-</div>
-</a>
-<a aria-label="Next: Interpreter, coverage and tracing" class="md-footer__link md-footer__link--next" href="../interpreter/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                  Next
-                </span>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../interpreter/" class="md-footer__link md-footer__link--next" aria-label="Next: Interpreter, coverage and tracing" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
                 Interpreter, coverage and tracing
               </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-copyright">
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
-<script src="../../javascripts/mathjax.js"></script>
-<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../javascripts/tablesort.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
