@@ -7,7 +7,7 @@ tags:
 
 !!! question "How do you compare Git branches?"
 
-    Have a look at [this guide](../../files/compare_git_branches.pdf).
+    Have a look at [this guide](/files/compare_git_branches.pdf).
 
 !!! question "How should you configure Git?"
     

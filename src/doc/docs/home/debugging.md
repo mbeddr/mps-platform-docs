@@ -9,7 +9,7 @@ For more in-depth explanations, visit:
 
 - {{ blog('sl',false) }} [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
 - DSL Foundry: [White paper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/)
-- [Debugging MPS with IntelliJ setup](../../files/debugging-MPS-with-IntelliJ_Setup.pdf)
+- [Debugging MPS with IntelliJ setup](/files/debugging-MPS-with-IntelliJ_Setup.pdf)
 
 The following list shows some debugging tips:
 

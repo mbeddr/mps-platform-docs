@@ -112,7 +112,7 @@ tags:
 
 !!! question "How do you debug MPS projects?"
     
-    Have a look at [this blog post](https://dslfoundry.com/how-to-debug-in-mps/) or [this guide](../../files/mps_debugging.pdf).
+    Have a look at [this blog post](https://dslfoundry.com/how-to-debug-in-mps/) or [this guide](/files/mps_debugging.pdf).
 
 !!! question "Where are the log messages?"
 

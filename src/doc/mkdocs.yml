@@ -90,6 +90,8 @@ plugins:
   - autolinks
   - alias:
       use_relative_link: true
+  - webcontext:
+      context: mps-platform-docs
   - autolink_references:
       autolinks:
         - reference_prefix: MPS-
