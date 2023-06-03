@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+
+folder "${PROJECT_HOME}" {
+  folder solutions as S
+  note right of S: contains all productive solutions
+  folder languages as L
+  note right of L: contains all productive languages
+  folder tests  as T
+  note right of T: contains all solutions and languages\nrequired for test, demo, playground
+}
+
+@enduml

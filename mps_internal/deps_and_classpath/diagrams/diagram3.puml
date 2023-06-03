@@ -1,0 +1,18 @@
+@startuml
+class LanguageBase <<L,yellow>>
+class LanguageBaseGen <<G,lightgray>>
+class ConceptBase
+
+class SolutionBaseGen2 <<S, violet>>
+class ModelBaseGen2 <<G, lightgray>>
+
+SolutionBaseGen2 *-right- ModelBaseGen2: contains
+ModelBaseGen2 -up[dotted]->LanguageBase: using
+ModelBaseGen2 -up[dotted]->LanguageBaseGen: engages
+ModelBaseGen2 *-right- NodeBase: contains
+NodeBase -up[dotted]- ConceptBase: instanceof
+LanguageBase -right- ConceptBase: contains
+
+hide empty members
+
+@enduml

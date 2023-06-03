@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+package LanguageA {
+  class ConceptA
+}
+
+package LanguageB {
+  class BehaviorB <<B,orange>>
+  class ConstraintB <<C,lightblue>>
+}
+
+BehaviorB .[#red].|> ConceptA: defined for
+ConstraintB .[#red].|> ConceptA: defined for
+
+
+hide empty members
+
+@enduml

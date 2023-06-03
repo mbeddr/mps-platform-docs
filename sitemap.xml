@@ -321,26 +321,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://mbeddr.com/mps-platform-docs/languages/diagrams/celllayout_boxmodel/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://mbeddr.com/mps-platform-docs/languages/diagrams/celllayout_editorcell_boxmodel/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://mbeddr.com/mps-platform-docs/languages/diagrams/celllayout_grid_flattening/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://mbeddr.com/mps-platform-docs/languages/diagrams/celllayout_layoutbox_frame/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/</loc>
          <lastmod>2023-06-03</lastmod>
          <changefreq>daily</changefreq>
@@ -506,11 +486,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/com_mbeddr_mpsutil/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/common_concepts_and_interfaces/</loc>
          <lastmod>2023-06-03</lastmod>
          <changefreq>daily</changefreq>
@@ -537,6 +512,11 @@
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/testing/</loc>
+         <lastmod>2023-06-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/</loc>
          <lastmod>2023-06-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -597,16 +577,6 @@
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/ui/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/ui/cells/</loc>
-         <lastmod>2023-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/ui/diagrams/</loc>
          <lastmod>2023-06-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

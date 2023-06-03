@@ -1,0 +1,10 @@
+@startuml
+hide empty members
+    
+    class CompountInitializerMember {
+    ..<color:blue>children</color>..
+    <color:purple>expr</color>: Expression[1]
+    ..<color:blue>references</color>..
+    <color:purple>member</color>: Member[1]
+    }
+@enduml

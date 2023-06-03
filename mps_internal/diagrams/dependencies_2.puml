@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+
+class ModuleA <<M,lightgray>>
+class "ModelA.one" as ModelA1 <<m,lightblue>>
+class "NodeA.one.TheNode" as NodeA1 <<N,yellow>>
+
+class ModuleB <<(M,lightgray) export=true>>
+class ModuleC <<M,lightgray>>
+
+class ModuleBeta <<M,lightgray>>
+class "ModelBeta.one" as ModelBeta1 <<m,lightblue>>
+class "NodeBeta.one.TheNode" as NodeBeta1 <<N,yellow>>
+class "ModelBeta.two" as ModelBeta2 <<m,lightblue>>
+class "NodeBeta.two.TheNode" as NodeBeta2 <<N,yellow>>
+
+class ModuleGamma <<M,lightgray>>
+class "ModelGamma.one" as ModelGamma1 <<m,lightblue>>
+
+ModuleA *-- ModelA1:contains
+ModelA1 *-- NodeA1:contains
+
+ModuleB .left.> ModuleA: depends on
+ModuleC .left.> ModuleA: depends on
+
+ModuleBeta .left.> ModuleB: depends on
+ModuleBeta *-- ModelBeta1: contains
+ModelBeta1 .left.> ModelA1: depends on
+ModelBeta1 *-- NodeBeta1: contains
+NodeBeta1 .left.> NodeA1: references
+ModuleBeta *-- ModelBeta2: contains
+ModelBeta2 *-- NodeBeta2: contains
+NodeBeta2 .[#red]right.> NodeA1: references
+note top on link
+out of scope,
+as ModelBeta.two has
+no dependency on
+ModelA.one
+end note
+
+ModuleGamma .left.> ModuleC: depends on
+ModuleGamma *-- ModelGamma1: contains
+ModelGamma1 .[#red]right.> ModelA1: depends on
+note top on link
+out of scope,
+as ModuleC has
+does not export
+ModuleA
+end note
+
+hide empty members
+@enduml

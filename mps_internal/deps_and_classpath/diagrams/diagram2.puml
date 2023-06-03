@@ -1,0 +1,21 @@
+@startuml
+class LanguageBase <<L,yellow>>
+class LanguageBaseGen <<G,lightgray>>
+class GeneratorBase <<L,lightblue>>
+class ConceptBase
+
+class SolutionBaseGen <<S, violet>>
+class ModelBaseGen <<G, lightgray>>
+
+LanguageBaseGen *-right- GeneratorBase: contains
+GeneratorBase -right[dotted]-> ConceptBase: defines a rule for
+
+SolutionBaseGen *-right- ModelBaseGen: contains
+ModelBaseGen -down[dotted]-> LanguageBase: using
+ModelBaseGen -up[dotted]-> LanguageBaseGen: using
+ModelBaseGen *-right- NodeBase: contains
+NodeBase -up[dotted]-> ConceptBase: instanceof
+
+hide empty members
+
+@enduml

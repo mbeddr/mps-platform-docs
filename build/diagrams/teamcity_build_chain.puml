@@ -1,0 +1,14 @@
+@startuml
+skinparam componentStyle rectangle
+
+[MPS-Extensions] as ext
+[mbeddr platform] as platform
+[IETS3] as iets3
+[mbeddr] as mbeddr
+[mbeddr analyses tests] as analyses
+
+ext -right-> platform : dependency of
+platform -down-> iets3: dependency of
+platform -right-> mbeddr: dependency of
+mbeddr -right-> analyses: dependency of
+@enduml

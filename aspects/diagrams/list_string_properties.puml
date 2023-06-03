@@ -1,0 +1,9 @@
+@startuml
+class Concept {
+myString: MyString [0..n]
+}
+
+class MyString {
+value: string
+}
+@enduml

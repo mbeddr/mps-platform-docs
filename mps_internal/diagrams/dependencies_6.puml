@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+package LanguageA {
+  class ConceptA
+  class GeneratorA <<G,lightgray>>
+}
+
+package LanguageB {
+  class GeneratorB <<G,lightgray>>
+}
+
+GeneratorB .[#blue].|> ConceptA: defines a new rule for
+GeneratorB .[#blue].|> GeneratorA: extends a switch
+GeneratorB .[#blue].|> GeneratorA: defines a generator priority relative to
+
+hide empty members
+
+@enduml

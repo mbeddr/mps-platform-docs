@@ -1,0 +1,29 @@
+@startuml
+interface LayoutBox <<extends Cloneable>> {
+//«get/set»// x
+//«get»// right = x + width
+//«get/set»// y
+//«get»// bottom = y + height
+//«get/set»// width
+//«get/set»// height
+//«get/set»// ascent
+//«get/set»// descent
+containsPoint(x, y): boolean
+growWidth/Height(amount) 
+moveX/Y(amount) 
+move(amountX,amountY) 
+setSize(w, h)
+setListener(listener)
+}
+
+interface Bounds <<immutable>> {
+//«get/set»// x: int
+//«get»// maxX = x + width
+//«get/set»// y: int
+//«get»// maxY = y + height
+//«get/set»// width: int
+//«get/set»// height: int
+contains(x, y): boolean
+contains(childBounds): boolean
+}
+@enduml

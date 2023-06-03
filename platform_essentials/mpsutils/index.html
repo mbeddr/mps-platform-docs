@@ -12,23 +12,27 @@
         <meta name="author" content="MPS Platform Docs team">
       
       
-        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/languages/diagrams/celllayout_grid_flattening/">
+        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/">
       
       
+        <link rel="prev" href="../interpreter/">
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      
+        <link rel="next" href="common/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Celllayout grid flattening - MPS Platform Docs</title>
+        <title>Mbeddr MPS utilities - MPS Platform Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +71,7 @@
     
 <meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
 
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -78,7 +82,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -98,6 +102,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#mbeddr-mps-utilities" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -127,9 +136,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+    <a href="../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -145,7 +154,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Celllayout grid flattening
+              Mbeddr MPS utilities
             
           </span>
         </div>
@@ -241,7 +250,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -257,7 +266,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../aspects/structure/" class="md-tabs__link">
+      <a href="../../aspects/structure/" class="md-tabs__link">
         Aspects
       </a>
     </li>
@@ -273,7 +282,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link">
+      <a href="../../languages/" class="md-tabs__link">
         Languages
       </a>
     </li>
@@ -289,7 +298,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../mbeddr/" class="md-tabs__link">
+      <a href="../../mbeddr/" class="md-tabs__link">
         Mbeddr
       </a>
     </li>
@@ -305,7 +314,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../build/" class="md-tabs__link">
+      <a href="../../build/" class="md-tabs__link">
         Build
       </a>
     </li>
@@ -321,7 +330,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../mps_internal/" class="md-tabs__link">
+      <a href="../../mps_internal/" class="md-tabs__link">
         MPS internals
       </a>
     </li>
@@ -331,13 +340,15 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../platform_essentials/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Platform essentials
       </a>
     </li>
@@ -353,7 +364,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../clean_code/mps/" class="md-tabs__link">
+      <a href="../../clean_code/mps/" class="md-tabs__link">
         Clean code
       </a>
     </li>
@@ -369,7 +380,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../patterns/language_design/" class="md-tabs__link">
+      <a href="../../patterns/language_design/" class="md-tabs__link">
         Language/UI patterns
       </a>
     </li>
@@ -385,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../reference/reading_list/" class="md-tabs__link">
+      <a href="../../reference/reading_list/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -401,7 +412,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../language_reference/" class="md-tabs__link">
+      <a href="../../language_reference/" class="md-tabs__link">
         Language Reference (WIP)
       </a>
     </li>
@@ -417,7 +428,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../../about/editing_this_guide/" class="md-tabs__link">
+      <a href="../../about/editing_this_guide/" class="md-tabs__link">
         About
       </a>
     </li>
@@ -451,9 +462,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+    <a href="../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     MPS Platform Docs
@@ -519,7 +530,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../..">Home</a>
+          <a href="../..">Home</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -542,7 +553,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/general/" class="md-nav__link">
+      <a href="../../home/general/" class="md-nav__link">
         General
       </a>
     </li>
@@ -556,7 +567,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/plugins/" class="md-nav__link">
+      <a href="../../home/plugins/" class="md-nav__link">
         Plugins
       </a>
     </li>
@@ -570,7 +581,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/external_files_and_tools/" class="md-nav__link">
+      <a href="../../home/external_files_and_tools/" class="md-nav__link">
         External files and tools
       </a>
     </li>
@@ -584,7 +595,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/console/" class="md-nav__link">
+      <a href="../../home/console/" class="md-nav__link">
         Console
       </a>
     </li>
@@ -598,7 +609,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/platform_specific_bugs/" class="md-nav__link">
+      <a href="../../home/platform_specific_bugs/" class="md-nav__link">
         OS-specific bugs
       </a>
     </li>
@@ -612,7 +623,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/rcp/" class="md-nav__link">
+      <a href="../../home/rcp/" class="md-nav__link">
         RCP
       </a>
     </li>
@@ -626,7 +637,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/trouble_shooting_guide/" class="md-nav__link">
+      <a href="../../home/trouble_shooting_guide/" class="md-nav__link">
         Trouble shooting guide
       </a>
     </li>
@@ -640,7 +651,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/visual_guide/" class="md-nav__link">
+      <a href="../../home/visual_guide/" class="md-nav__link">
         Visual guide
       </a>
     </li>
@@ -654,7 +665,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/debugging/" class="md-nav__link">
+      <a href="../../home/debugging/" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -668,7 +679,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../home/performance/" class="md-nav__link">
+      <a href="../../home/performance/" class="md-nav__link">
         Performance
       </a>
     </li>
@@ -759,7 +770,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/structure/" class="md-nav__link">
+      <a href="../../aspects/structure/" class="md-nav__link">
         Structure
       </a>
     </li>
@@ -773,7 +784,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/editor/" class="md-nav__link">
+      <a href="../../aspects/editor/" class="md-nav__link">
         Editor
       </a>
     </li>
@@ -787,7 +798,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/actions/" class="md-nav__link">
+      <a href="../../aspects/actions/" class="md-nav__link">
         Actions
       </a>
     </li>
@@ -801,7 +812,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/constraints/" class="md-nav__link">
+      <a href="../../aspects/constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -815,7 +826,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/behavior/" class="md-nav__link">
+      <a href="../../aspects/behavior/" class="md-nav__link">
         Behavior
       </a>
     </li>
@@ -829,7 +840,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/feedback/" class="md-nav__link">
+      <a href="../../aspects/feedback/" class="md-nav__link">
         Feedback
       </a>
     </li>
@@ -843,7 +854,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/typesystem/" class="md-nav__link">
+      <a href="../../aspects/typesystem/" class="md-nav__link">
         Typesystem
       </a>
     </li>
@@ -857,7 +868,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/refactorings/" class="md-nav__link">
+      <a href="../../aspects/refactorings/" class="md-nav__link">
         Refactorings
       </a>
     </li>
@@ -871,7 +882,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/scripts/" class="md-nav__link">
+      <a href="../../aspects/scripts/" class="md-nav__link">
         Scripts
       </a>
     </li>
@@ -885,7 +896,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/intentions/" class="md-nav__link">
+      <a href="../../aspects/intentions/" class="md-nav__link">
         Intentions
       </a>
     </li>
@@ -899,7 +910,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/findusages/" class="md-nav__link">
+      <a href="../../aspects/findusages/" class="md-nav__link">
         Find Usages
       </a>
     </li>
@@ -913,7 +924,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/plugin/" class="md-nav__link">
+      <a href="../../aspects/plugin/" class="md-nav__link">
         Plugin
       </a>
     </li>
@@ -927,7 +938,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/dataflow/" class="md-nav__link">
+      <a href="../../aspects/dataflow/" class="md-nav__link">
         Dataflow
       </a>
     </li>
@@ -941,7 +952,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/test/" class="md-nav__link">
+      <a href="../../aspects/test/" class="md-nav__link">
         Test
       </a>
     </li>
@@ -955,7 +966,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/textgen/" class="md-nav__link">
+      <a href="../../aspects/textgen/" class="md-nav__link">
         TextGen
       </a>
     </li>
@@ -969,7 +980,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/migration/" class="md-nav__link">
+      <a href="../../aspects/migration/" class="md-nav__link">
         Migration
       </a>
     </li>
@@ -983,7 +994,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/vcs/" class="md-nav__link">
+      <a href="../../aspects/vcs/" class="md-nav__link">
         VCS
       </a>
     </li>
@@ -997,7 +1008,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/generator/" class="md-nav__link">
+      <a href="../../aspects/generator/" class="md-nav__link">
         Generator
       </a>
     </li>
@@ -1011,7 +1022,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/accessory_models/" class="md-nav__link">
+      <a href="../../aspects/accessory_models/" class="md-nav__link">
         Accessory models
       </a>
     </li>
@@ -1064,7 +1075,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/documentation/" class="md-nav__link">
+      <a href="../../aspects/documentation/" class="md-nav__link">
         Documentation
       </a>
     </li>
@@ -1078,7 +1089,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/listener/" class="md-nav__link">
+      <a href="../../aspects/listener/" class="md-nav__link">
         Listener
       </a>
     </li>
@@ -1092,7 +1103,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/polyfun/" class="md-nav__link">
+      <a href="../../aspects/polyfun/" class="md-nav__link">
         Polyfun
       </a>
     </li>
@@ -1106,7 +1117,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/virtualinterfaces/" class="md-nav__link">
+      <a href="../../aspects/virtualinterfaces/" class="md-nav__link">
         Virtual Interfaces
       </a>
     </li>
@@ -1120,7 +1131,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../aspects/transformations/" class="md-nav__link">
+      <a href="../../aspects/transformations/" class="md-nav__link">
         Transformations
       </a>
     </li>
@@ -1175,7 +1186,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Languages</a>
+          <a href="../../languages/">Languages</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1198,7 +1209,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../baselanguage/" class="md-nav__link">
+      <a href="../../languages/baselanguage/" class="md-nav__link">
         Baselanguage and extensions
       </a>
     </li>
@@ -1212,7 +1223,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../double_dispatch/" class="md-nav__link">
+      <a href="../../languages/double_dispatch/" class="md-nav__link">
         Double dispatch
       </a>
     </li>
@@ -1259,7 +1270,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../mps_extensions/" class="md-nav__link">
+      <a href="../../languages/mps_extensions/" class="md-nav__link">
         General
       </a>
     </li>
@@ -1273,7 +1284,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../cell_layout/" class="md-nav__link">
+      <a href="../../languages/cell_layout/" class="md-nav__link">
         Cell Layout
       </a>
     </li>
@@ -1294,7 +1305,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../kernelf/" class="md-nav__link">
+      <a href="../../languages/kernelf/" class="md-nav__link">
         KernelF
       </a>
     </li>
@@ -1342,7 +1353,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mbeddr/">Mbeddr</a>
+          <a href="../../mbeddr/">Mbeddr</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1365,7 +1376,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mbeddr/building_mbeddr_locally/" class="md-nav__link">
+      <a href="../../mbeddr/building_mbeddr_locally/" class="md-nav__link">
         Building Mbeddr locally
       </a>
     </li>
@@ -1379,7 +1390,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mbeddr/big_project/" class="md-nav__link">
+      <a href="../../mbeddr/big_project/" class="md-nav__link">
         BigProject
       </a>
     </li>
@@ -1393,7 +1404,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mbeddr/development_guide/" class="md-nav__link">
+      <a href="../../mbeddr/development_guide/" class="md-nav__link">
         Development guide
       </a>
     </li>
@@ -1407,7 +1418,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mbeddr/misc_topics/" class="md-nav__link">
+      <a href="../../mbeddr/misc_topics/" class="md-nav__link">
         Miscellaneous topics
       </a>
     </li>
@@ -1459,7 +1470,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../build/">Build</a>
+          <a href="../../build/">Build</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1482,7 +1493,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/ci/" class="md-nav__link">
+      <a href="../../build/ci/" class="md-nav__link">
         CI
       </a>
     </li>
@@ -1496,7 +1507,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/gradle/" class="md-nav__link">
+      <a href="../../build/gradle/" class="md-nav__link">
         Gradle
       </a>
     </li>
@@ -1510,7 +1521,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/command_line_tool/" class="md-nav__link">
+      <a href="../../build/command_line_tool/" class="md-nav__link">
         Creating a command line tool
       </a>
     </li>
@@ -1524,7 +1535,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/git/" class="md-nav__link">
+      <a href="../../build/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -1538,7 +1549,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/teamcity/" class="md-nav__link">
+      <a href="../../build/teamcity/" class="md-nav__link">
         TeamCity
       </a>
     </li>
@@ -1552,7 +1563,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../build/advanced_github_workflow/" class="md-nav__link">
+      <a href="../../build/advanced_github_workflow/" class="md-nav__link">
         Advanced GitHub workflow
       </a>
     </li>
@@ -1622,7 +1633,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mps_internal/">MPS internals</a>
+          <a href="../../mps_internal/">MPS internals</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1645,7 +1656,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/open_api/" class="md-nav__link">
+      <a href="../../mps_internal/open_api/" class="md-nav__link">
         Open API
       </a>
     </li>
@@ -1685,7 +1696,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
+          <a href="../../mps_internal/deps_and_classpath/">Dependencies and classpath</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1708,7 +1719,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/terminology_and_ui_for_access/" class="md-nav__link">
+      <a href="../../mps_internal/terminology_and_ui_for_access/" class="md-nav__link">
         Terminology and UI for access
       </a>
     </li>
@@ -1722,7 +1733,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/models/" class="md-nav__link">
+      <a href="../../mps_internal/models/" class="md-nav__link">
         Models
       </a>
     </li>
@@ -1736,7 +1747,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/dependencies/" class="md-nav__link">
+      <a href="../../mps_internal/dependencies/" class="md-nav__link">
         Dependencies
       </a>
     </li>
@@ -1750,7 +1761,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/recipes/" class="md-nav__link">
+      <a href="../../mps_internal/recipes/" class="md-nav__link">
         Recipes
       </a>
     </li>
@@ -1771,7 +1782,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/classloading/" class="md-nav__link">
+      <a href="../../mps_internal/classloading/" class="md-nav__link">
         Classloading
       </a>
     </li>
@@ -1807,7 +1818,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mps_internal/threads/">Threading</a>
+          <a href="../../mps_internal/threads/">Threading</a>
           
             <label for="__nav_6_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1830,7 +1841,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/threads/read_write_action_examples/" class="md-nav__link">
+      <a href="../../mps_internal/threads/read_write_action_examples/" class="md-nav__link">
         Example actions using locks
       </a>
     </li>
@@ -1844,7 +1855,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/threads/named_threads/" class="md-nav__link">
+      <a href="../../mps_internal/threads/named_threads/" class="md-nav__link">
         Named threads
       </a>
     </li>
@@ -1865,7 +1876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/utility_classes/" class="md-nav__link">
+      <a href="../../mps_internal/utility_classes/" class="md-nav__link">
         Utility classes
       </a>
     </li>
@@ -1879,7 +1890,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/gui/" class="md-nav__link">
+      <a href="../../mps_internal/gui/" class="md-nav__link">
         GUI
       </a>
     </li>
@@ -1893,7 +1904,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/editor_development/" class="md-nav__link">
+      <a href="../../mps_internal/editor_development/" class="md-nav__link">
         Editor development
       </a>
     </li>
@@ -1907,7 +1918,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/intellij_sdk/" class="md-nav__link">
+      <a href="../../mps_internal/intellij_sdk/" class="md-nav__link">
         IntelliJ SDK
       </a>
     </li>
@@ -1921,7 +1932,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/jcef/" class="md-nav__link">
+      <a href="../../mps_internal/jcef/" class="md-nav__link">
         Java Chromium Embedded Framework
       </a>
     </li>
@@ -1935,7 +1946,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/writing_mps_plugin_with_kotlin/" class="md-nav__link">
+      <a href="../../mps_internal/writing_mps_plugin_with_kotlin/" class="md-nav__link">
         Writing an MPS plugin with Kotlin
       </a>
     </li>
@@ -1949,7 +1960,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/intellij_integration/" class="md-nav__link">
+      <a href="../../mps_internal/intellij_integration/" class="md-nav__link">
         IntelliJ integration
       </a>
     </li>
@@ -1963,7 +1974,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/navigating_mps_source/" class="md-nav__link">
+      <a href="../../mps_internal/navigating_mps_source/" class="md-nav__link">
         Navigating the MPS sources
       </a>
     </li>
@@ -1977,7 +1988,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/java_design_patterns_in_mps_sources/" class="md-nav__link">
+      <a href="../../mps_internal/java_design_patterns_in_mps_sources/" class="md-nav__link">
         Java design patterns in the MPS sources
       </a>
     </li>
@@ -1991,7 +2002,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/mps_startup/" class="md-nav__link">
+      <a href="../../mps_internal/mps_startup/" class="md-nav__link">
         What happens on MPS startup
       </a>
     </li>
@@ -2005,7 +2016,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../mps_internal/file_format/" class="md-nav__link">
+      <a href="../../mps_internal/file_format/" class="md-nav__link">
         File format
       </a>
     </li>
@@ -2025,14 +2036,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
         
@@ -2063,7 +2076,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform_essentials/">Platform essentials</a>
+          <a href="../">Platform essentials</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2071,7 +2084,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Platform essentials
@@ -2086,7 +2099,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/how_everything_is_connected/" class="md-nav__link">
+      <a href="../how_everything_is_connected/" class="md-nav__link">
         How everything is connected
       </a>
     </li>
@@ -2100,7 +2113,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -2114,7 +2127,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/common_concepts_and_interfaces/" class="md-nav__link">
+      <a href="../common_concepts_and_interfaces/" class="md-nav__link">
         Common concepts and interfaces
       </a>
     </li>
@@ -2128,7 +2141,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/interpreter/" class="md-nav__link">
+      <a href="../interpreter/" class="md-nav__link">
         Interpreter, coverage and tracing
       </a>
     </li>
@@ -2140,10 +2153,77 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Mbeddr utilities</a>
+          
+            <label for="__nav_7_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mbeddr utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/com_mbeddr_mpsutil/" class="md-nav__link">
-        MPS utilities
+      <a href="common/" class="md-nav__link">
+        Common
       </a>
     </li>
   
@@ -2156,8 +2236,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/platform_build_scripts/" class="md-nav__link">
-        Platform build scripts
+      <a href="actions/" class="md-nav__link">
+        Actions
       </a>
     </li>
   
@@ -2170,8 +2250,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/build_folder/" class="md-nav__link">
-        Build folder
+      <a href="baselanguage_extensions/" class="md-nav__link">
+        BaseLanguage extensions
       </a>
     </li>
   
@@ -2184,7 +2264,91 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/testing/" class="md-nav__link">
+      <a href="generator/" class="md-nav__link">
+        Generator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="importer_and_exporter/" class="md-nav__link">
+        Importer and exporter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="languages/" class="md-nav__link">
+        Languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="language_extensions/" class="md-nav__link">
+        Language extensions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ui/" class="md-nav__link">
+        UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="testing/" class="md-nav__link">
         Testing
       </a>
     </li>
@@ -2198,7 +2362,84 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../platform_essentials/accessing_the_project/" class="md-nav__link">
+      <a href="plugin_and_rcp/" class="md-nav__link">
+        Plugin and RCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deprecated/" class="md-nav__link">
+        Deprecated languages and solutions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform_build_scripts/" class="md-nav__link">
+        Platform build scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_folder/" class="md-nav__link">
+        Build folder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        Testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing_the_project/" class="md-nav__link">
         Accessing the project
       </a>
     </li>
@@ -2244,7 +2485,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../clean_code/mps/">Clean code</a>
+          <a href="../../clean_code/mps/">Clean code</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -2267,7 +2508,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../clean_code/mps/readability_maintainability/" class="md-nav__link">
+      <a href="../../clean_code/mps/readability_maintainability/" class="md-nav__link">
         Readability/maintainability
       </a>
     </li>
@@ -2281,7 +2522,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../clean_code/mps/deprecation/" class="md-nav__link">
+      <a href="../../clean_code/mps/deprecation/" class="md-nav__link">
         Deprecation
       </a>
     </li>
@@ -2317,7 +2558,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../clean_code/java/">Java (Base Language)</a>
+          <a href="../../clean_code/java/">Java (Base Language)</a>
           
             <label for="__nav_8_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2340,7 +2581,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../clean_code/java/programming_principles/" class="md-nav__link">
+      <a href="../../clean_code/java/programming_principles/" class="md-nav__link">
         Programming principles
       </a>
     </li>
@@ -2354,7 +2595,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../clean_code/java/java_style_guide/" class="md-nav__link">
+      <a href="../../clean_code/java/java_style_guide/" class="md-nav__link">
         Java style guide
       </a>
     </li>
@@ -2418,7 +2659,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../patterns/language_design/" class="md-nav__link">
+      <a href="../../patterns/language_design/" class="md-nav__link">
         Language design
       </a>
     </li>
@@ -2432,7 +2673,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../patterns/user_experience/" class="md-nav__link">
+      <a href="../../patterns/user_experience/" class="md-nav__link">
         User experience
       </a>
     </li>
@@ -2446,7 +2687,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../patterns/ui_patterns/" class="md-nav__link">
+      <a href="../../patterns/ui_patterns/" class="md-nav__link">
         UI patterns
       </a>
     </li>
@@ -2523,7 +2764,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
+      <a href="../../reference/reading_list/" class="md-nav__link">
         Reading list
       </a>
     </li>
@@ -2537,7 +2778,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/tips_for_os_maintainers/" class="md-nav__link">
+      <a href="../../reference/tips_for_os_maintainers/" class="md-nav__link">
         Tips for open source maintainers
       </a>
     </li>
@@ -2551,7 +2792,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/icons/" class="md-nav__link">
+      <a href="../../reference/icons/" class="md-nav__link">
         Icons
       </a>
     </li>
@@ -2565,7 +2806,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/core_languages/" class="md-nav__link">
+      <a href="../../reference/core_languages/" class="md-nav__link">
         Core languages
       </a>
     </li>
@@ -2579,7 +2820,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/standard_plugins/" class="md-nav__link">
+      <a href="../../reference/standard_plugins/" class="md-nav__link">
         Standard plugins
       </a>
     </li>
@@ -2593,7 +2834,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/included_libraries/" class="md-nav__link">
+      <a href="../../reference/included_libraries/" class="md-nav__link">
         Included libraries
       </a>
     </li>
@@ -2607,7 +2848,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/extension_points/" class="md-nav__link">
+      <a href="../../reference/extension_points/" class="md-nav__link">
         Extension points
       </a>
     </li>
@@ -2621,7 +2862,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/exceptions/" class="md-nav__link">
+      <a href="../../reference/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -2635,7 +2876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/actions/" class="md-nav__link">
+      <a href="../../reference/actions/" class="md-nav__link">
         Actions
       </a>
     </li>
@@ -2649,7 +2890,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/abbreviations/" class="md-nav__link">
+      <a href="../../reference/abbreviations/" class="md-nav__link">
         Abbreviations
       </a>
     </li>
@@ -2663,7 +2904,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/code_abbreviations/" class="md-nav__link">
+      <a href="../../reference/code_abbreviations/" class="md-nav__link">
         Code abbreviations
       </a>
     </li>
@@ -2677,7 +2918,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/gitignore/" class="md-nav__link">
+      <a href="../../reference/gitignore/" class="md-nav__link">
         Gitignore file
       </a>
     </li>
@@ -2691,7 +2932,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/issue_trackers/" class="md-nav__link">
+      <a href="../../reference/issue_trackers/" class="md-nav__link">
         Issue trackers
       </a>
     </li>
@@ -2726,12 +2967,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
           
         
+          
+        
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../language_reference/">Language Reference (WIP)</a>
+          <a href="../../language_reference/">Language Reference (WIP)</a>
+          
+            <label for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -2742,6 +2993,48 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language_reference/org.iets3.core.expr.base/" class="md-nav__link">
+        org.iets3.core.expr.base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language_reference/org.iets3.core.expr.collections/" class="md-nav__link">
+        org.iets3.core.expr.collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language_reference/org.iets3.core.expr.toplevel/" class="md-nav__link">
+        org.iets3.core.expr.toplevel
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -2795,7 +3088,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../about/editing_this_guide/" class="md-nav__link">
+      <a href="../../about/editing_this_guide/" class="md-nav__link">
         Editing this guide
       </a>
     </li>
@@ -2809,7 +3102,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../about/original_authors/" class="md-nav__link">
+      <a href="../../about/original_authors/" class="md-nav__link">
         Original authors
       </a>
     </li>
@@ -2823,7 +3116,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../about/new_pages/" class="md-nav__link">
+      <a href="../../about/new_pages/" class="md-nav__link">
         New pages
       </a>
     </li>
@@ -2837,7 +3130,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         Tags
       </a>
     </li>
@@ -2868,6 +3161,37 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incremental-computation" class="md-nav__link">
+    Incremental computation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreter" class="md-nav__link">
+    Interpreter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stubs" class="md-nav__link">
+    Stubs
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2883,22 +3207,71 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="../../tags/#mbeddr" class="md-tag">mbeddr</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-  <h1>Celllayout grid flattening</h1>
-
-<p><a class="glightbox" href="https://kroki.io/excalidraw/svg/eNrtXFtT4koXfZ9fYfm9HnP6fpk3QfEy3m-op05ZEaJkCAQhoHhq_vu3OygEkkhwgmamhqma0nQ6dHfW2mvv3rv978vKymow7DirX1dWnaea7bn1rv24-pe5PnC6PddvQxMJf-_5_W4tvLMRBJ3e17__nvSwan5r1MvxnJbTDnpw3z_w-8rKf-H_0OLWTd-H9W-ydW4jMTiodYMruUkq3zfCruFNr4PpOrXAbt97zqTpCa4LLi2lhMRK8nHDEBowI5YUeLrh0a0HDWhkVFlEUkYlR-FHjG9pOO59IzAP4MjSjFNMmA4_bHzPaBxfV9D4Si_o-k2n7Ht-1wz2f6OnToZ6a9ea912_365P7qk5dVa3J_fcuZ53Ggy90YratUa_G5ns6BuqLxPAM9fH_Xo-rP-kF3zlfaPt9HpTffyOXXODcJXQZA5mfJ2devii_o0-oV1_ecLrm5u8Fvpy5cdkPI5jXqtgWMMqMz1umKBHkdjVA78dIglLqokkiE7ucHsbAKEgfOqd7fWcyaKaoW3OwisKsQjMusPWRunwutYq3d2S00bzqDe4rowXagpqdrfrP66OW368_DRZk36nbo8GhAVMhmqmCBETDHluuwmN7b7nTa75teZkDl8iizbDB68z2K-UfHZZ8c9vWg-NbuN893t2PkhmcaqRIDN0ENhSBu8xLgCBiBxxIU4CpixNKdfRxnzQj7lt396loH8Gxb8Y9iXlSAssZAL2qVCp2KdYcUwJ5_lh_xUtgfMUTIN9BLb7fXy2sf-4riobjaMbjMu7W-vegtBXUqF8oJ88mhj0pyYTol4iZDEBKOZEIw6WfRr7kloKI85EkhZwC0yV1grmMzL3CTQg_CNtfwHRP_U-X2AO2qqRsfI0AecAjTSci5AbiMl3wHxqHD9vhifQMpCCRcSRV-K3g1P32YyYoKmrFbvlesOpdTX91z333kx9tQaDdbqr0fkHLjhG4xtabr0eNdy3ds-BwYZGYGIeavBVNlzt7mTRBb_r3rtt2zuLz8Q8envs1liEv0HBHq26z9d7FX_vaT84OT0T_XKzlFl9JNMWQ2RaTMKV4tySjIAz9uJMyRgPKUXWbNcxAUG9hNam_8hhY3_UKKsaEVhUWDiNk1wxxlGqHAlYNUokxu-Ro7cUQ3Mpc1KMvafa_tFxXX-Xa50L3h5Uq2hzLTtcBRh_wqXCMW-JWlxNuz2vOMUaJ_hJ4HWNOrzgO2d8KlLT2Pkt8Ym55FRiUO0kd0mxNHxqsPXIuKZ5wzMXX_4N5EXYR0Qq-xAVFCOVyRkcccG9eOqhcq250dq83Lk4uSd3j2s3RYFMnAaGgBo8MzIbpL8SUDPMpuKYPIjzyuJkEsewiRH8A0mSOWM_J_e9x3dvr7rs4uG03Nuu1EsPh93tYPHIVeaF9mnPPEJjlAp0iD1N2JOJxm9NutA4BxCBA8OwJMBqEpcboAHLA-2zYcVYs5hFKKhSqn8V_d4R9MHb4lILLt8bJSxsc-V7HPeFvXSzTmQ1J8d9xkWfY4FnXXTyhoueHBu8X2pI5JEzDGQcCEiZ1JkZeGC39mTl_OhbWe9vb95uyKNTv1dsBgqhLKUFU7HQhEDcIeXsnlkeQcR4txmTBLHRcUcIw0vg0Xi6UGKzv3UxODhcl7fBuaSstL91sntZXUxswGeLrMWSxAZcyVSf0RhBqRDODPXkSRca6kpoi2OAusQEc0Wm0W7SIrmgPVVrgE7cpEs4Esr45yqL3GBFQxnQH6M3GmGKP0xv5JL0Zo4dntUb-YF6w1lq4IaVQBocfp5dcMr3J4Nm65Z4bq1c1jebZ-fHA7vYLJQKPD4eT8NIi4T7YD9Hvjv7FiEeJ59KCGtonGyaSSXAOOBiKs1O86x72dhuNr8p1tLH1af-Sa-IYQ0jqSCnDGsFKMmuNMmTLrbSYG4hChhnSiVFNSQXrOcY1AiIwSjhka3QP0HNPJGZY3s_M6gBE5bGP66Qlkhn3z0L2qdlfS2varajdjhZGz58I5VfwNHTsVSLEJYk09Lz8RLDleCG-bqYCrNXHRx2vMbwLtgLbusHw8php9QsoMJwlIpwDJ618fBRdownz7rYO8SIWFoCxlMkBueC9RwlhlNhKpjoH4nJLjFzbO9nSgxG6I0cDQdECqSyBzLHpUHbq3wb3j2te08n7cNjjEm_OCWAKbvXhALNZssrqYWmC2ryJN5PFmiORYhyjSn6pA21jyo8lB-SrOQsvaJHEUQJqFFmHgweFT_vuU_H61sDct26YFe4cVvwHA5hKqW4xdRWSoymXLE8N5AXLtF8jfOR0FxJQQq6o3xzeXF12HQb15eHtYeDar95clddW3BHWfOI1C4rzhepBctCSqWoUtmhnzzpgkNfMotSjLDgLKW-kkq1vD3lBWs0X-FPCROMEPY75jDxknyxOZZ5kTLDvH0x9kYwJBiGKEBkryJotqvV4-H23abek4O249PSdW2v8ApETG5FxveVjYdGlqpBGZOYBClgHMUF3Vnedh_ba0P_4P6q2Ze4sdZz-j1_IcXhmGm5dMUBbyq1YAYJUBwZTejPw3ryrIuNdQYBBpWAdWWKA2NZTJoT3PPNYmopmYB--DcUnGUlMecY4iUlMbPEZjNx2TQ-IXC3GNMkVroIxLSoSD53CLi3CJnZsJoEtBZFahlnrWa3cn-96mGSWj1MMMghlirpEArlNN1h4GBItRJ0OadQ3sXLju_Oqts_EQ1DUUFD45___Svx7iSshdfHKJs8ISZ7nt0Lyn6r5QYwtSMzrNghoMDuBiW3XXfb99Ov7OXA706G072h1an1zZSRhThWmBPj6WN4c1REhr16b3fCFQazH4YZMTw47fr80by9_RYZzRqyMKMKom4hEYfAGxMSH422UHh2IA5Oszjrxmo0HLs-u3Qw1GhbdNsn2Ux9F64-DPb7Nzs3Z-274e6eqFTOspyLAyuFLYUkBKgUcSHYTNwmLYFn6lHHBdLMMtVSGKnR8Wr1AafifjU7lXgqDhhnEuLxesvRMahUt45rWGqqi2SPXqX_zrPBDrQNtz7ieFzgdxY7Gzc1l1mHIWnw2U7EZUwQ0NR3CiEpB0uGskeljlzbdR69s41n5bsbhN64znWr4J46peCpp57iYBJJNLVjk2dUqrJV1mrFNJaMFTQbHaxfre9tie7e4Y3eqV2WRPXxeX-xqNSU4aBlR6VakPRcGEZMMLZALix51gXHuqnfQ4B1iPISjg1KnhPec0xISyCoFupPPjp7SDrHCn9uPlqkxjTgOjOzb5Kdgt8uqse7p89rZ72bs8vNza2W19ss-iYo4xDXaKKFSkjDUc5_Pin9s2KDKMJml7CYYmPXH09Ojqol0a0dPHvNysnmpVteUGyEXv4xDjBy6cE7hahWMpF9CzR51gVHumIWlkTL1EODucA9R61RSEnJUKThj9jME5s5NvgzxUbL9P0zDbhSU7nVeRTc8E63tTomZdJf29jt79kX66ek4BQEMxM_mfsa2oDW8k-ObEzhBzH8LKbWkMaG6G4fM7p1g68uqsGgJQ4qC6bbzOIvXWtQqtaYv26lFBXZCzySJ11wnGsBMTy4jxgnSg3PB-x5So354xjo96ztWJbUzLHAeUnNlxdGr9qdzmkAKzk2OvCO3PrLckxWb3XgOo-lpP3g8GPsRUhoQx0ntGA_vsCX_B8B6rUx?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/excalidraw/svg/eNrtXFtT4koXfZ9fYfm9HnP6fpk3QfEy3m-op05ZEaJkCAQhoHhq_vu3OygEkkhwgmamhqma0nQ6dHfW2mvv3rv978vKymow7DirX1dWnaea7bn1rv24-pe5PnC6PddvQxMJf-_5_W4tvLMRBJ3e17__nvSwan5r1MvxnJbTDnpw3z_w-8rKf-H_0OLWTd-H9W-ydW4jMTiodYMruUkq3zfCruFNr4PpOrXAbt97zqTpCa4LLi2lhMRK8nHDEBowI5YUeLrh0a0HDWhkVFlEUkYlR-FHjG9pOO59IzAP4MjSjFNMmA4_bHzPaBxfV9D4Si_o-k2n7Ht-1wz2f6OnToZ6a9ea912_365P7qk5dVa3J_fcuZ53Ggy90YratUa_G5ns6BuqLxPAM9fH_Xo-rP-kF3zlfaPt9HpTffyOXXODcJXQZA5mfJ2devii_o0-oV1_ecLrm5u8Fvpy5cdkPI5jXqtgWMMqMz1umKBHkdjVA78dIglLqokkiE7ucHsbAKEgfOqd7fWcyaKaoW3OwisKsQjMusPWRunwutYq3d2S00bzqDe4rowXagpqdrfrP66OW368_DRZk36nbo8GhAVMhmqmCBETDHluuwmN7b7nTa75teZkDl8iizbDB68z2K-UfHZZ8c9vWg-NbuN893t2PkhmcaqRIDN0ENhSBu8xLgCBiBxxIU4CpixNKdfRxnzQj7lt396loH8Gxb8Y9iXlSAssZAL2qVCp2KdYcUwJ5_lh_xUtgfMUTIN9BLb7fXy2sf-4riobjaMbjMu7W-vegtBXUqF8oJ88mhj0pyYTol4iZDEBKOZEIw6WfRr7kloKI85EkhZwC0yV1grmMzL3CTQg_CNtfwHRP_U-X2AO2qqRsfI0AecAjTSci5AbiMl3wHxqHD9vhifQMpCCRcSRV-K3g1P32YyYoKmrFbvlesOpdTX91z333kx9tQaDdbqr0fkHLjhG4xtabr0eNdy3ds-BwYZGYGIeavBVNlzt7mTRBb_r3rtt2zuLz8Q8envs1liEv0HBHq26z9d7FX_vaT84OT0T_XKzlFl9JNMWQ2RaTMKV4tySjIAz9uJMyRgPKUXWbNcxAUG9hNam_8hhY3_UKKsaEVhUWDiNk1wxxlGqHAlYNUokxu-Ro7cUQ3Mpc1KMvafa_tFxXX-Xa50L3h5Uq2hzLTtcBRh_wqXCMW-JWlxNuz2vOMUaJ_hJ4HWNOrzgO2d8KlLT2Pkt8Ym55FRiUO0kd0mxNHxqsPXIuKZ5wzMXX_4N5EXYR0Qq-xAVFCOVyRkcccG9eOqhcq250dq83Lk4uSd3j2s3RYFMnAaGgBo8MzIbpL8SUDPMpuKYPIjzyuJkEsewiRH8A0mSOWM_J_e9x3dvr7rs4uG03Nuu1EsPh93tYPHIVeaF9mnPPEJjlAp0iD1N2JOJxm9NutA4BxCBA8OwJMBqEpcboAHLA-2zYcVYs5hFKKhSqn8V_d4R9MHb4lILLt8bJSxsc-V7HPeFvXSzTmQ1J8d9xkWfY4FnXXTyhoueHBu8X2pI5JEzDGQcCEiZ1JkZeGC39mTl_OhbWe9vb95uyKNTv1dsBgqhLKUFU7HQhEDcIeXsnlkeQcR4txmTBLHRcUcIw0vg0Xi6UGKzv3UxODhcl7fBuaSstL91sntZXUxswGeLrMWSxAZcyVSf0RhBqRDODPXkSRca6kpoi2OAusQEc0Wm0W7SIrmgPVVrgE7cpEs4Esr45yqL3GBFQxnQH6M3GmGKP0xv5JL0Zo4dntUb-YF6w1lq4IaVQBocfp5dcMr3J4Nm65Z4bq1c1jebZ-fHA7vYLJQKPD4eT8NIi4T7YD9Hvjv7FiEeJ59KCGtonGyaSSXAOOBiKs1O86x72dhuNr8p1tLH1af-Sa-IYQ0jqSCnDGsFKMmuNMmTLrbSYG4hChhnSiVFNSQXrOcY1AiIwSjhka3QP0HNPJGZY3s_M6gBE5bGP66Qlkhn3z0L2qdlfS2varajdjhZGz58I5VfwNHTsVSLEJYk09Lz8RLDleCG-bqYCrNXHRx2vMbwLtgLbusHw8php9QsoMJwlIpwDJ618fBRdownz7rYO8SIWFoCxlMkBueC9RwlhlNhKpjoH4nJLjFzbO9nSgxG6I0cDQdECqSyBzLHpUHbq3wb3j2te08n7cNjjEm_OCWAKbvXhALNZssrqYWmC2ryJN5PFmiORYhyjSn6pA21jyo8lB-SrOQsvaJHEUQJqFFmHgweFT_vuU_H61sDct26YFe4cVvwHA5hKqW4xdRWSoymXLE8N5AXLtF8jfOR0FxJQQq6o3xzeXF12HQb15eHtYeDar95clddW3BHWfOI1C4rzhepBctCSqWoUtmhnzzpgkNfMotSjLDgLKW-kkq1vD3lBWs0X-FPCROMEPY75jDxknyxOZZ5kTLDvH0x9kYwJBiGKEBkryJotqvV4-H23abek4O249PSdW2v8ApETG5FxveVjYdGlqpBGZOYBClgHMUF3Vnedh_ba0P_4P6q2Ze4sdZz-j1_IcXhmGm5dMUBbyq1YAYJUBwZTejPw3ryrIuNdQYBBpWAdWWKA2NZTJoT3PPNYmopmYB--DcUnGUlMecY4iUlMbPEZjNx2TQ-IXC3GNMkVroIxLSoSD53CLi3CJnZsJoEtBZFahlnrWa3cn-96mGSWj1MMMghlirpEArlNN1h4GBItRJ0OadQ3sXLju_Oqts_EQ1DUUFD45___Svx7iSshdfHKJs8ISZ7nt0Lyn6r5QYwtSMzrNghoMDuBiW3XXfb99Ov7OXA706G072h1an1zZSRhThWmBPj6WN4c1REhr16b3fCFQazH4YZMTw47fr80by9_RYZzRqyMKMKom4hEYfAGxMSH422UHh2IA5Oszjrxmo0HLs-u3Qw1GhbdNsn2Ux9F64-DPb7Nzs3Z-274e6eqFTOspyLAyuFLYUkBKgUcSHYTNwmLYFn6lHHBdLMMtVSGKnR8Wr1AafifjU7lXgqDhhnEuLxesvRMahUt45rWGqqi2SPXqX_zrPBDrQNtz7ieFzgdxY7Gzc1l1mHIWnw2U7EZUwQ0NR3CiEpB0uGskeljlzbdR69s41n5bsbhN64znWr4J46peCpp57iYBJJNLVjk2dUqrJV1mrFNJaMFTQbHaxfre9tie7e4Y3eqV2WRPXxeX-xqNSU4aBlR6VakPRcGEZMMLZALix51gXHuqnfQ4B1iPISjg1KnhPec0xISyCoFupPPjp7SDrHCn9uPlqkxjTgOjOzb5Kdgt8uqse7p89rZ72bs8vNza2W19ss-iYo4xDXaKKFSkjDUc5_Pin9s2KDKMJml7CYYmPXH09Ojqol0a0dPHvNysnmpVteUGyEXv4xDjBy6cE7hahWMpF9CzR51gVHumIWlkTL1EODucA9R61RSEnJUKThj9jME5s5NvgzxUbL9P0zDbhSU7nVeRTc8E63tTomZdJf29jt79kX66ek4BQEMxM_mfsa2oDW8k-ObEzhBzH8LKbWkMaG6G4fM7p1g68uqsGgJQ4qC6bbzOIvXWtQqtaYv26lFBXZCzySJ11wnGsBMTy4jxgnSg3PB-x5So354xjo96ztWJbUzLHAeUnNlxdGr9qdzmkAKzk2OvCO3PrLckxWb3XgOo-lpP3g8GPsRUhoQx0ntGA_vsCX_B8B6rUx?" /></a></p>
+<h1 id="mbeddr-mps-utilities">Mbeddr <abbr title="Meta Programming System">MPS</abbr> utilities<a class="headerlink" href="#mbeddr-mps-utilities" title="Permanent link">&para;</a></h1>
+<p>This documentation gives an introduction to the subproject <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil</em> of <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>.</p>
+<h2 id="incremental-computation">Incremental computation<a class="headerlink" href="#incremental-computation" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.incrementalcomputation</ins></p>
+</blockquote>
+<p>The language provides a single interface <a href="http://127.0.0.1:63320/node?ref=r%3A644d327d-a4dc-4e49-b137-5aa4630bcd32%28com.mbeddr.mpsutil.incrementalcomputation.structure%29%2F3315277234172465334">IncrementallyComputedValueHolder</a> that can be implemented to support values that are automatically
+recomputed when a dependent value changes. The methods are documented in the behavior aspect. If a full model should be
+derived from an existing model, you have to use <a href="https://jetbrains.github.io/MPS-extensions/extensions/other/shadow-models/">shadow models</a>
+from <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAKVUlEQVR4nMxZC1RU1fr/9jlzZgYGBhiGl5AzSvQ3DahQlKRES0WCv+98dE0tWRT5yKxWXlu95FZeb1e7Zt3bSgXTUjMEH4hC0hXzgbgE00BeOjCMDAwwT2aYmTPnrnPmwQyiDAxk31qb2fuw97d/v/399uPsg4EHxkIIf3vs+I235q1qVyzONP+YlHoskMMVeuJzoIYG2/BhH//Ir+OnfxcXGJIAiLJ6wgCqVIrKuWeOPtdq0CuGFmrfNmACBMLw1x9+cv07Y+M/4uK4Nw3aSoACe75B1/77nOLjM6Rduubhgd1jAyIw1lc49ssnZux5PCA4vge0bfSdyohlgsYudUPqqRNTm3TaxuGD7yYBBIDWjB7/xsYxk//GxjEvZAfLyIbqAU+XCRMgnGTKEq26Lu1UwZQmnU72wAiM8vYX74hO3p0QGD7VARJRgHrJhkk0eMLcUwYKGnWa+rTCwmmN2uGJxD1XIQwQnimasO7sUyt+SwiImAoMHgTWXwCKySMAC4CZpIzXNC3lDvD2SogCka93ZEHKzLNRfvyo4SCA9/VwtJe/eP/j8/OWRcRkEBjGdg2Ua76LNGlXlB2f8+FvFzaF83hhMQJBnD0C9ijx2Sz/+ZGiBT83y0626Q1tw0aAhrYqPC4jO3ruEbF3wCP3A05bp8nQtvBi7vRShfQcHZSCpsZjABQ5OTR0GobZo2CVmDeB+84Z/dDCoibZSYWhe8hIOFBFcPjhX45J3f10gGiGs9bvlZcbtdJ5lw7PqNa2V/V2+sLo0Yt3JCbs4bAwrvN8AGSBVr3+ztyCX6be6FDdHDICC4IeW7T14eSv+ARb0B9wOv2ua6tYXJ6b1mzQSO/lOD5YOGnfc0m5wd6cMDt4e/vO7m75vBNnZ11t67zqMYFnAyKnHxy3pBAhekLfHzidL+2UFC2rODJfYzZq+nMu9uWJDs1MKngkgD/WQQCsc0NlMioXHD83s0zeUeYJAWzDQ4nvIYR6ViOnlcaRt3KFfPnN71+4cjjVHfC03dboJNOPnp5ceqflZ2useya2H4flnzc78XRCWGC8JwSQfPImAwvDODb0LhPPOQKXNPJzz1/eM4UC4NEKGUgnBIaxsibFbh0j8I12+AQKwn24EOLDUc7J/3XGFbny8qAI1E96q82f8HI6Qd5NQoMIUCIO/Hjnytd/r87fb6LIc4PprLelR4+CfyRFg8poUi0+dmnmeVnHpYH6wI4pqn66+zGybVYAamCDGrHBjBCkhse/9lHsXw4OBfgeo+WE+/00J/70tJHCqQNtjWVJSjZJ9J21LuCtamWA6xABZoQBiRBDwp/rF26vOWvWLCgqKoKrV69Cfn4+fPPNN1BTUwOlpaXg5+fXf++ODQ+AR+D8g/8/viB5VNCsARFQmLrap1fsmrRLdnm72tyttACACTBQYwQYMJwBTQJykLA4NSYIAvh8Pvj6+oLZbIa1a9eCRCKB9PR0UKlUbgFAtvlAE+GwEHdf2pO5KZHByW4ToP+0m/Ud79QXrn+sbHvEhvrCjAp9R6XRNuKkS7KSoG3JkiWQmZkJTU1NoNPpQCaTQURExEAGDw5WS/eelSqKezY6ADYLcbNTY3OnjxLOdMeHy1HCRJGmSo3syj5Z2b8vdDYUETibCPMOiqJwFmFCGJgxDORGNZxqusiM8O3btyEnJwcqKytBKpVCbW0tIymEELS3t4NIJGIipNVqITw8HIxGI0RFRUFXVxeYTCboJi2lh2tkL4X5cEJjQ/hxdiIsHIg5jwQvrO/sul7Vrqu+H4F+j9N+hHdA8ojxy1NFiZmBPGHUDVUTvH1+G+zYsQOEQiEkJiZCdXU1E4Ho6GjIysqCvXv3glgshuLiYgbsmTNnYOLEidDa2srIraSkBLZt20a7/xIA1tCZteNHrf/o6aitOEYPqlVSJEWZXzt546UDv7f84FYE+rJui8lwQyW5mCc5t7NWLS0zU5bga+01kSkpKRAcHAwYhgFFUcBms0GhUEBSUhLU19eDQCBgCNEjTZMZN24cZGdnM0Q4HA7k5eXR7uld+CSduSRTXqxSaCqSI4PSCBZi088wDLCUKOFsiVJfd71Nd70vfG7fSlBAWcpabxTsu3l8E102GAzA4/Eccvjiiy8gNDSUIXTixAlYunQp6PV6ZnKvXLmSIRcXFwdKpRJIkuyzj6N1rUdTDl2e0trVLbPLCceA9dXzY3IWjg1e2FebwdxKTLCN3FCYQ0LOJvLjig7Ni81/NMg71koEgKQs5jdP16TvqWjJdq7r0b3QcJlEZZA8u7888bxUWcI8QNZIbE+O2hUTwotxrvunJCDwYgW8P0304fiR3gnMKRYcGx4W5sMOda7LenAw7zY2joj0SWEZ704Z+YE/mxACPVUs9Oyz/v+nqtbvihs6i53b/GkILHxCuOCDZPEnYj43CkgEFGmboQigy0xq3i2qX5NdIc/p3W7QBHAcZ1acvoxeZSwWi1t+nn3Uf9rmNPFnMWE+E5gRpxNFAaIQc5gsa1L/mpFfs7yuQ1/fV/tBz4Ht27czO2tfad26dW75WDopaNnRNY/9HDvSZwLzSuWUTJSlO+uX2+/OyK585l7gwZNlNCQkBAICAvqsIJfLobOzs19HGVPD4J+LIsE+8oxsLAD1cn3Vy9/ffPGKVNvvO/OgJUSDpJPHhrncg8G+Mvm3G3Ib3tB2kzp3mg+GQAsAfO5uZS4bcRY9E7TE35sVyLwkWXretxMifR0E5Gpj89r9da8ev9ZxfCBgBv19oF/HCGBRknDR5uXizyIEHLFjgtqlwiTr1WR+ueLQ6zl1r3bozP3rrpcNyzKaGMtP3JIh3hIX6fsUA9gCTjcdPUlvJHXv7Lu1dldJy+7B9jWkBP5P5BW1ZbVoS3K8YC4zuqQT4F5av9qgLVu5s2bZzWZ9jSd9DgmBYAERuPGViPdWzQ7JZGMYmxl1ehG33Ssh2wUBLVj6jL/taPOnmw80fmw0U2ZP+/aIAN8H912/fMT6dS+OeJPHwf0cOsfulgtN4laLoS59W+3yczfU5z0F7hEBFg74qsWhL7+/+qGPhXwi1DExnQFjrlHIOSX/z1tf39qg0bu3PA4bgbkpgrSPN4z8dIzYaxzlpHOHTJwTAlCoTa2rP69blVfacWwogQ+YwMQ4n7gt74s+nxzHn+KQiu2wZZdMbxIll5WFKzfXrmhpNw3BjucBgU8+GJn19uoRm8DiurIgirJ9anIl06UntR/ubNz4rwN3dtJVhgs8uLORpSUHJB/5fsxJBobFeROyb0rIpVx+TXNxxV9rl9VIDHXDCdxu/Z5G588OfIHJ2EYYIddTI8KsXyotiCK37pZmTVl+/ek/Cjy4IyEfHsZzFJz07pAMAmhu7Za88lbdS2cuqM4ON+De1m8ESi9oeq7SkX3Urb8URsHe3NZvn5hVEfMgwLtlXC7ilP835qK5I4FiUnsCZVYkUIraCYr5qYLZDxpfvzdzZjOQPxxuO+DFxYhAAUuoVJGdxwo7jix+pWbRpSva8j8G5r3tfwEAAP//97SuDUC0StUAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+<h2 id="interpreter">Interpreter<a class="headerlink" href="#interpreter" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.interpreter</ins></p>
+</blockquote>
+<p>The interpreter is described on the <a href="../interpreter/">interpreter</a> page.</p>
+<h2 id="stubs">Stubs<a class="headerlink" href="#stubs" title="Permanent link">&para;</a></h2>
+<p>Stub models for the following Java libraries exist:</p>
+<ul>
+<li><a href="https://site.mockito.org/">Mockito</a>: a framework for unit tests</li>
+<li><a href="https://opencsv.sourceforge.net/">Open CSV</a>jav: a CSV (comma-separated values) parser library</li>
+<li><a href="https://xmlgraphics.apache.org/batik/">Batik</a>: a toolkit for applications that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as display, generation, or manipulation</li>
+<li><strong>XML</strong>: the following jars are included:<ul>
+<li><a href="https://mvnrepository.com/artifact/xml-apis/xml-apis-ext">XML Commons External Components XML APIs Extensions</a></li>
+<li><a href="https://mvnrepository.com/artifact/xml-resolver/xml-resolver">XML Commons Resolver Component</a></li>
+<li><a href="https://mvnrepository.com/artifact/xerces/xercesImpl">Xerces2 J</a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">The included versions might be old.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 1, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
       
     
   </small>
@@ -3035,6 +3408,42 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../interpreter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interpreter, coverage and tracing" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Interpreter, coverage and tracing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="common/" class="md-footer__link md-footer__link--next" aria-label="Next: Common" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Common
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3057,16 +3466,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="../../../javascripts/tablesort.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
