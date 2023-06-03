@@ -82,24 +82,8 @@ tags:
     Each root node is a root of a tree of nodes, So that overall, a repository is a tree structure.
 
     ```kroki-mermaid
-    %%{init: {'theme':'base'}}%%
-    graph LR;
-    REP[(repository)]
-    MOD1[[module 1]]
-    MOD2[[module 2]]
-    MODN[[module n]]
-
-    REP --> MOD1;
-    REP --> MOD2;
-    REP --> MODN;
-    MOD2 --> MR1[\model root 1\];
-    MR2 --> MD1{model 1};
-    MD1 --> RN1(root node 1);
-    MD1 --> RN2(root node 2);
-    MD1 --> RNN(root node n);
-    MOD2 --> MR2[\model root 2\];
-    MOD2 --> MRN[\mmodel root n\];
-    ``` 
+@from_file:home/diagrams/srepository_example.mermaid
+    ```
 
 !!! question "Is there an existing expression/scripting language?"
 

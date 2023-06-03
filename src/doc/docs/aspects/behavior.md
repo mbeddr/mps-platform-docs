@@ -78,11 +78,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 ??? question "How do you initialize a node?"
 
     ```kroki-plantuml
-    @startuml
-    class Car {
-    <color:purple>description</color>: HTMLDescription [1]
-    }
-    @enduml
+@from_file:aspects/diagrams/initialize_node_car_example.puml
     ```
 
     > How can I ensure that all created node will have a non-null `HTMLDescription`?

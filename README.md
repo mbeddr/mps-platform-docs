@@ -14,6 +14,7 @@ open an issue in this repository.
 - Python >= 3.10
 - [IntelliJ Excalidraw Integration](https://plugins.jetbrains.com/plugin/17096-excalidraw-integration) (optional)
 - [IntelliJ PlantUML Integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) (optional)
+- [IntelliJ Mermaid](https://plugins.jetbrains.com/plugin/20146-mermaid) (optional)
 
 ## Local execution
 Run: `./gradlew mkdocsServe` (rebuilds everything on change --> slow)

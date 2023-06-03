@@ -83,15 +83,7 @@ The structure aspect contains all the concept and interface declarations of a la
     Wrap your property into a new concept and use a child collection:
 
     ```kroki-plantuml
-    @startuml
-    class Concept {
-    myString: MyString [0..n]
-    }
-
-    class MyString {
-    value: string
-    }
-    @enduml
+@from_file:aspects/diagrams/list_string_properties.puml
     ```
 
 !!! question "Can properties be overridden?"

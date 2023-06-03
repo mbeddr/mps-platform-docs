@@ -153,15 +153,7 @@ The editor aspect defines the projectional editor of a concept.
     > Structure of the new node in **(C)**:
 
     ```kroki-plantuml
-    hide empty members
-    
-    class CompountInitializerMember {
-    ..<color:blue>children</color>..
-    <color:purple>expr</color>: Expression[1]
-    ..<color:blue>references</color>..
-    <color:purple>member</color>: Member[1]
-    }
-    @enduml
+@from_file:aspects/diagrams/first_editable_cell_compount_initializer_member.puml
     ```
 
     > Editor of the new node in **(C)**:
