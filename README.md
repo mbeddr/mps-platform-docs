@@ -9,6 +9,10 @@ open an issue in this repository.
 
 <img width="1068" alt="mps-platform-docs homepage" src="https://user-images.githubusercontent.com/88385944/180607116-2c61d660-7893-4ebb-a383-97b56ff94abb.png">
 
+## Requirements
+
+- Python >= 3.10
+
 ## Local execution
 Run: `./gradlew mkdocsServe` (rebuilds everything on change --> slow)
 Better: `./gradlew serveFast`(rebuilds only current page --> fast, only first build is slow)
