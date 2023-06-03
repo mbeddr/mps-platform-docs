@@ -1,8 +1,83 @@
 # UI
 
-{% include 'platform_essentials/mpsutils/ui/cells.md' %}
+### Cells
 
-{% include 'platform_essentials/mpsutils/ui/diagrams.md' %}
+#### AsyncCell
+
+The async cell allows displaying a text based loading indicator as long as the return string is null.
+
+Create a new `$custom cell$` editor cell and return a new AsyncCellProvider:
+
+```java
+return new AsyncCellProvider(node, { =>
+    string value = calculateValue(); // calculate or query your value here
+    if (value.isEmpty) { return null; }
+    Style style = editorContext.?getContextCell().?getStyle();
+    return new AsyncCellValue(value, style);
+});
+```
+
+![async cell](async_cell.gif)
+
+#### FrameCell
+
+> ^^com.mbeddr.mpsutil.framecell^^
+
+The [frame](http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33%2Fr%3A724443d4-b85d-4829-9ddf-5c5d9b1583dc%28com.mbeddr.mpsutil.framecell%2Fcom.mbeddr.mpsutil.framecell.structure%29%2F8760592470373336790) cell is a special editor cell collection that draws a top and bottom border around its contained cell. It supports the following style attributes:
+
+- **frame-color**: the color of the frame (default: black)
+- **frame-width**: the thickness of the frame (default: 1 pixel)
+- **frame-padding**: the space between the containing cell and the frame (default: 3 pixel)
+
+An example can be seen in the documentation language:
+
+![example: framecell](framecell_example.png)
+
+In most cases, the language ^^de.itemis.mps.editor.celllayout^^ from {{ mps_extensions() }} can also be used for customizing the border and margins around a cell. Its documentation can be found [here](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/).
+
+### Margin cell / review
+
+> ^^com.mbeddr.mpsutil.margincell^^ and ^^com.mbeddr.mpsutil.review^^
+
+Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word.
+In fact, the ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
+
+![example: margin cell](margincell_example.png)
+
+To use the review notes, just include the respective language ^^com.mbeddr.mpsutil.review^^; intentions are available to attach review notes to editor cells.
+
+To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the *margincell-cell-width* and *margincell-dashed-line-interval* style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model's language being aware of it.
+
+### Placeholder text list
+
+> ^^com.mbeddr.mpsutil.placeholderTextList^^
+
+This language adds a new [cell model](http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652) that supports multiple aggregation with a custom placeholder text.
+
+The placeholder can be specified in the inspector by creating a query function for the *placeholder text*.
+
+
+### Diagrams
+
+#### Concept diagram
+
+> ^^com.mbeddr.mpsutil.conceptdiagram^^
+
+![example:conceptdiagram](conceptdiagram_example.png)
+
+Create a new root node of type [ConceptDiagram](http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138). The editor should now contain an empty editor. Nodes can be dragged
+from the *Diagram Palette* to the diagram. If nodes from other languages are needed, add the language to the *languages*
+section.
+
+#### Dependencies diagram
+
+> ^^com.mbeddr.mpsutil.dependenciesdiagram^^
+
+This language contains a concept [DependenciesDiagram](http://127.0.0.1:63320/node?ref=r%3Aa1fbbb29-6fd2-49ce-b0b8-414a40e14ddc%28com.mbeddr.mpsutil.dependenciesdiagram.structure%29%2F7129450248256615870)
+
+Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules will be automatically added. The dependencies are visualized by the line between the two boxes, and its label is named after the scope of the dependency (e.g. *uses* if the language is imported).
+
+![example: dependency diagram](dependencydiagram_example.png)
 
 ## Date picker
 
