@@ -296,7 +296,10 @@ nav:
     - Gitignore file: reference/gitignore.md
     - Issue trackers: reference/issue_trackers.md
   - Language Reference (WIP):
-    - Index: language_reference/index.md
+    - language_reference/index.md
+    - org.iets3.core.expr.base: language_reference/org.iets3.core.expr.base.md
+    - org.iets3.core.expr.collections: language_reference/org.iets3.core.expr.collections.md
+    - org.iets3.core.expr.toplevel: language_reference/org.iets3.core.expr.toplevel.md
   - About:
     - Editing this guide: about/editing_this_guide.md
     - Original authors: about/original_authors.md
