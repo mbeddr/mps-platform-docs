@@ -1,0 +1,52 @@
+@startsalt
+scale 1.2
+skinparam defaultFontName Roboto
+{
+{T
++ IdeFrameImpl (1)
+++ IdeRootPane (2)
++++ IdeGlassPaneImpl (3)
+++++ JBLayeredPane (4)
++++++ IdeMenuBar (5)
+++++++ ActionMenu (7)
++++++ JBPanel (6)
+++++++ NonOpaquePanel (8)
+++++++ ToolWindowsPane (9)
++++++++ Stripe (11)
+++++++++ StripeButton (12)
++++++++ ToolWindowsPane$MyLayeredPane (13)
+++++++++ ThreeComponentsSplitter (14)
++++++++++ Divider
++++++++++ Divider
++++++++++ ThreeComponentsSplitter
+++++++++++ Divider
+++++++++++ Divider
+++++++++++ EditorsSplitter (19)
++++++++++++ JPanel
+++++++++++++ EditorTabs (21)
++++++++++++++ EditorWindow$TComp (22)
+++++++++++++++ EditorComposite$MyComponent (23)
++++++++++++++++ JPanel
+++++++++++++++++ MPSFileNodeEditorComponent (24)
++++++++++++++++++ BaseNodeEditor$EditorPanel (25)
+++++++++++++++++++ JPanel
++++++++++++++++++++ EditorComponent (26)
+++++++++++++++++++++ JPanel
++++++++++++++++++++++ FontSizeChangingScrollPane (27)
+++++++++++++++++++++++ EditorComponent$MyScrollBar (28)
+++++++++++++++++++++++ JBScrollBar (29)
++++++++++++++++++++++++ JBViewPort
+++++++++++++++++++++++++ LeftEditorHighlighter (30)
++++++++++++++++++++++++ JBViewPort
+++++++++++++++++++++++++ NodeEditorComponent (31)
++++++++++++++++++++++++++ LightBulbMenu (32)
++++++++++++++++++++++ EditorMessagesPanel (33)
+++++++++++ InternalDecoratorImpl (20)
++++++++++ InternalDecoratorImpl (15)
+++++++++++ JPanel (16)
+++++++++++ MyNonOpaquePanel (17)
++++++++++++ DialogConsoleTab (18)     
++++++ IdeStatusBarImpl (10)
+}
+}
+@endsalt
