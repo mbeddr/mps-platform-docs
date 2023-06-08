@@ -68,8 +68,7 @@ extra:
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
 plugins:
-  - search:
-      separator: '(?!MPS)[\s\-/#:]'
+  - search
   - macros:
       on_error_fail: true
   - gen-files:
