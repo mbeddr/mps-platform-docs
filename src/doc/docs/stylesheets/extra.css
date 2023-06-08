@@ -46,3 +46,9 @@ em {
 .ignore_max_width {
     max-width: none !important;
 }
+
+
+.md-typeset .admonition,
+.md-typeset details, .md-nav__link {
+  font-size: 16px
+}
