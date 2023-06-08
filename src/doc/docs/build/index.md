@@ -4,10 +4,10 @@ tags:
 - build
 ---
 
+# Build language
+
 - [official documentation](https://www.jetbrains.com/help/mps/build-language.html)
 - [Escaping to Ant from the build language](https://specificlanguages.com/posts/2022-03/24-escaping-to-ant-from-build-language/){{ blog('sl') }}
-
-# Build language
 
 !!! question "How can you override the build directory name *build* to something different?"
 
