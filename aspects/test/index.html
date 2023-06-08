@@ -3669,6 +3669,10 @@ in this node. Make sure that variables that are used in this path are set in <em
 <p>When running the tests from a run configuration, enable <code>Execute in the same process</code> in the configuration settings.
 Also check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">The tests only works in <abbr title="Meta Programming System">MPS</abbr> and not on the command line</p>
+<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>?</a>.</p>
+</div>
 <div class="admonition failure">
 <p class="admonition-title">Why does the test execution fail with &ldquo;Test project &lsquo;$&hellip;&rsquo; is not opened. Aborted&rdquo;?</p>
 <p>This is happening because the used variable in the <code>TestInfo</code> is not set. Go to <em>File</em> &rarr; <em>Settings</em> &rarr; <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
@@ -3684,7 +3688,7 @@ According to the IntelliJ documentation in can also happen when the dialog is no
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 8, 2023</span>
       
     
   </small>
@@ -3883,6 +3887,8 @@ According to the IntelliJ documentation in can also happen when the dialog is no
     
     
       <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../javascripts/code_scrolling.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
