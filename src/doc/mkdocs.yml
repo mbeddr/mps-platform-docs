@@ -285,6 +285,7 @@ nav:
       - User experience: patterns/user_experience.md
       - UI patterns: patterns/ui_patterns.md
   - Reference:
+    - Programmer knowledge: reference/programmer_knowledge.md
     - Reading list: reference/reading_list.md
     - Tips for open source maintainers: reference/tips_for_os_maintainers.md
     - Icons: reference/icons.md

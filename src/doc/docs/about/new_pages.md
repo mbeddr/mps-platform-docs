@@ -7,6 +7,7 @@ This page lists all new pages since August 2022.
 
 ## June 2023
 
+- [Reference: Programmer knowledge](programmer_knowledge.md)
 - [Build: Advanced GitHub workflow](advanced_github_workflow.md)
 - [MPS internals: Platform UI inspector](platform_ui_inspector.md)
 
