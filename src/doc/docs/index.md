@@ -14,7 +14,8 @@ It contains questions and answers for {{ mps() }} and the following platforms:
 Click on one of the :material-help-box: buttons to go directly to one of the documentations.
 
 You can open links starting with http://127.0.0.1 with the builtin [HTTP support plugin](https://www.jetbrains.com/help/mps/http-support-plugin.html).
-Platform specific instructions are marked when possible. Long answers are collapsed by default.
+Platform specific instructions are marked when possible. Long answers are collapsed by default. Questions marked with
+:fontawesome-solid-flask: have answers that are educated guesses that are not confirmed.
 
 If you have any suggestions, please write a comment at the bottom of the page or open an issue on GitHub.
 

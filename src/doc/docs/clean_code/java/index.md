@@ -27,9 +27,9 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 - Try to make the name of the utility or helper class more specific (for example: *AdministrationHelper*, *LoginHelper* instead of *Helper*).
 
 ## More tips
-- If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult [Understand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274) page.
-- If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225) page.
-- Have a look at common sources of [complexity](http://www.javapractices.com/topic/TopicAction.do?Id=287).
+- If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult the page: [Understand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274).
+  - If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225).
+- Have a look at common sources of [complexity](https://web.archive.org/web/20210425130253/http://www.javapractices.com/topic/TopicAction.do?Id=287).
 
 [^1]:[Naming 101: A Programmer's Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)
 [^2]:[Rule of 30 – When is a Method, Class or Subsystem Too Big?](https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or)

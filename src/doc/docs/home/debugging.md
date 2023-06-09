@@ -5,6 +5,10 @@ tags:
 
 # Debugging
 
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+> 
+> (Brian Kernighan)
+
 For more in-depth explanations, visit:
 
 - {{ blog('sl',false) }} [Debugging in MPS](https://specificlanguages.com/articles/debugging/)

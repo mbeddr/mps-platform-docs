@@ -136,3 +136,14 @@ Check the [Nielsen's usability heuristics](https://www.nngroup.com/articles/ten-
 - Does the application works if a non-bundled Java Runtime is used? (e.g. JDK 11 instead of JBR 11 which might be needed for JCEF support)
 - Can the application be started with insufficient initial memory specific in the custom VM options? (`Xms`)
 - Does the editor still work when switching between different editor themes? (e.g. Light Theme, Darcula Theme, Mac Theme)
+
+## Final words
+
+> Given enough eyeballs, all bugs are shallow.
+>
+> Eric S. Raymond ([Linus's law](https://www.wikiwand.com/en/Linus%27s_law))
+
+While it is possible to find many bugs with one or a handful developers and users, it helps to have a large enough beta-tester and co-developer base
+to get bugs reported and fixed quickly. Sometimes it is good enough when somebody just finds a workaround.
+
+Other times, like in the MPS platforms, some bugs would have never been identified, were there not that many users and developers that use them daily. There are always new unexplored use cases when the platforms are included in a new project and more edge cases are detected when more users test features. While this quote was originally referring to open source projects, this also applies to closed source projects.

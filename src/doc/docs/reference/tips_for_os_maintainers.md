@@ -26,6 +26,11 @@ Tools (GitHub):
 - [Find (almost) any GitHub user's email address!](https://emailaddress.github.io/): find out more information about a contributor
 - [Publishing Java packages with Maven](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-maven)
 
+Licenses
+
+- [Choose an open source license](https://choosealicense.com/)
+- [How open source licenses work](https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94)
+
 Reference:
 
 - [Github vs Gitlab vs Bitbucket](https://disbug.io/en/blog/github-vs-gitlab-vs-bitbucket)

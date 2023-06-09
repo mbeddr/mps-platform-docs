@@ -5,7 +5,7 @@ tags:
 - ui
 ---
 
-This document lists some recommendations for code written it MPS.
+This document lists some recommendations for code written it MPS. For a general introduction to code smells, go to [Code Smells | Coding Horror](https://blog.codinghorror.com/code-smells/) and [How To Write Unmaintainable Code](https://web.archive.org/web/20171224114025id_/https://www.thc.org/root/phun/unmaintain.html)
 
 ## Implementation
 

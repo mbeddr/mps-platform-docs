@@ -4,7 +4,8 @@ alias: performance
 
 !!! warning "This is a page about advanced topics. Please skip it if you are a beginner."
 
-This page explains common bottlenecks regarding memory consumption and performance in general and how to solve those problems.
+This page explains common bottlenecks regarding memory consumption and performance in MPS in general and how to solve those problems.
+If you want to know about slow software in general (e.g. hardware-related slowness), read: [Slow Software | Ink & Switch](https://www.inkandswitch.com/slow-software/).
 
 ## General
 

@@ -7,12 +7,50 @@ alias: ux
 
 # User experience and user interfaces
 
+??? question ":fontawesome-solid-flask: Why do my users ignore certain tools such as the [context action tool](https://www.jetbrains.com/help/mps/context-actions-tool.html)?"
+
+    According to [Fitt's law](https://www.wikiwand.com/en/Fitts%27s_law), the time required to move to a target area is a function of the distance to the target divided by the width of the target. The target area in our case is the button that opens the tool window.
+    In addition, the movement with the mouse can be split in 2 phases:
+    
+    - initial movement: fast, imprecise
+    - final movement: slow, precise
+
+    The corners of the screen are sometimes called magic corners. At these points two edges collide and form a theoretically infinitely big button.
+    As a result, they are easy to hit (e.g. Windows start button, MacOS close button). 
+
+    In this explanation it is assumed that the MPS window takes up most of the screen's size. In MPS, the project tool is located in the upper left corner, the Git tool in the lower left corner, the inspector in the lower right corner and the context actions tool in the upper right corner. All tools are near the magic corners and therefore should be easier to hit. The initial
+    movement should be already quite precise. 
+
+    Due to the location of the editor and sometimes the width of the screen (e.g. wide-screen monitors) the mouse cursor is more often placed
+    on the left side of the screen even if the logical view is opened on the left side. Therefore the tools on the left side are easier to reach because of the smaller distance.
+
+    For Windows users it might also play a role that in older Windows versions, the start menu button was located in a similar position as the Git tool which makes it easier to hit. The same can be said for the inspector which is located near the old Windows notification area.
+
+    If a button is not located near the magic corners such as the terminal, it takes the users even longer to find the button and press it.
+    This additional effort makes it more unlikely that the button is pressed at all.
+
+    Opening a tool also disrupts the workflow. In the editor itself, there is less jumping around involved, the mouse is often not needed at all.
+    Ideally, the cursor just moves from one line to the next.
+
+??? question "How do deal with many choices in the UI?"
+
+    The [drop-down list](https://jetbrains.github.io/ui/controls/drop_down/) page in the [IntelliJ Platform UI Guidelines](https://jetbrains.github.io/ui/)
+    recommend using a dropdown when there are more than four choices. Not only the number of items can be decisive. The [context assistant](https://www.jetbrains.com/help/mps/context-assistant.html)
+    handles this a bit differently though: it switches between buttons and a dropdown depending on the total width of the choices.
+    
+    Therefore the number of choices is important but also the ordering of the items plays a big role: according to [Hick's law](https://www.wikiwand.com/en/Hick%27s_law) the average reaction time $T$ to make a choice is $T = b*log_2(n+1)$ where $b$ is a constant factor and $n$ the number of items. When
+    the items are in order, users perform a binary search to find the item. When there is no order, the search time is linear instead.
+
+    When there are many choices, a search functionality should be provided that works similar to the code completion menu when a custom UI
+    component is used. Similar choices can also be grouped together (e.g. [intentions menu](https://jetbrains.github.io/MPS-extensions/extensions/utils/intentions-menu/) for grouping intentions).
+
 ## Basics
 
 - [7 Graphic Design Principles to Up-Level your Graphics](https://mariahalthoff.com/blog/7-graphic-design-principles)
 - [7 Gestalt Principles of Design](https://ux360.design/gestalt-principles-design/)
 - [10 Graphic Design Rules You Should Never Break](https://www.business2community.com/web-design/10-graphic-design-rules-never-break-01935942)
 - [20 Most Important UI Design Principles for UI Designer](https://www.mockplus.com/blog/post/ui-design-principle/?r=cherry)
+- [First Principles of Interaction Design](https://asktog.com/atc/principles-of-interaction-design/)
 - [What are the basic rules of user interface design? (quora)](https://www.quora.com/What-are-the-basic-rules-of-user-interface-design)
 - [Understanding layout | Material Design](https://material.io/design/layout/understanding-layout.html#principles)
 
