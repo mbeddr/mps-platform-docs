@@ -98,6 +98,6 @@ def define_env(env):
         elif text == "dslf":
             text = "DSLFoundry"
         if after:
-            return "<small>(*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)</small>"
+            return "(*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)"
         else:
             return text + ("'s" if text[-1] != 's' else "'") + " blog: "
