@@ -3341,12 +3341,43 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 
 <h1 id="user-experience-and-user-interfaces">User experience and user interfaces<a class="headerlink" href="#user-experience-and-user-interfaces" title="Permanent link">&para;</a></h1>
+<details class="question">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 0H128c-17.7 0-32 14.3-32 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6 0 480.9 31.1 512 69.4 512h309.2c38.3 0 69.4-31.1 69.4-69.4 0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32S337.7 0 320 0h-32zm-96 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1l34.5 56.1h-171l34.5-56.1c12.4-20.2 19-43.4 19-67.1z"/></svg></span> Why do my users ignore certain tools such as the <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context action tool</a>?</summary>
+<p>According to <a href="https://www.wikiwand.com/en/Fitts%27s_law">Fitt&rsquo;s law</a>, the time required to move to a target area is a function of the distance to the target divided by the width of the target. The target area in our case is the button that opens the tool window.
+In addition, the movement with the mouse can be split in 2 phases:</p>
+<ul>
+<li>initial movement: fast, imprecise</li>
+<li>final movement: slow, precise</li>
+</ul>
+<p>The corners of the screen are sometimes called magic corners. At these points two edges collide and form a theoretically infinitely big button.
+As a result, they are easy to hit (e.g. Windows start button, MacOS close button). </p>
+<p>In this explanation it is assumed that the <abbr title="Meta Programming System">MPS</abbr> window takes up most of the screen&rsquo;s size. In <abbr title="Meta Programming System">MPS</abbr>, the project tool is located in the upper left corner, the Git tool in the lower left corner, the inspector in the lower right corner and the context actions tool in the upper right corner. All tools are near the magic corners and therefore should be easier to hit. The initial
+movement should be already quite precise. </p>
+<p>Due to the location of the editor and sometimes the width of the screen (e.g. wide-screen monitors) the mouse cursor is more often placed
+on the left side of the screen even if the logical view is opened on the left side. Therefore the tools on the left side are easier to reach because of the smaller distance.</p>
+<p>For Windows users it might also play a role that in older Windows versions, the start menu button was located in a similar position as the Git tool which makes it easier to hit. The same can be said for the inspector which is located near the old Windows notification area.</p>
+<p>If a button is not located near the magic corners such as the terminal, it takes the users even longer to find the button and press it.
+This additional effort makes it more unlikely that the button is pressed at all.</p>
+<p>Opening a tool also disrupts the workflow. In the editor itself, there is less jumping around involved, the mouse is often not needed at all.
+Ideally, the cursor just moves from one line to the next.</p>
+</details>
+<details class="question">
+<summary>How do deal with many choices in the <abbr title="User Interface">UI</abbr>?</summary>
+<p>The <a href="https://jetbrains.github.io/ui/controls/drop_down/">drop-down list</a> page in the <a href="https://jetbrains.github.io/ui/">IntelliJ Platform <abbr title="User Interface">UI</abbr> Guidelines</a>
+recommend using a dropdown when there are more than four choices. Not only the number of items can be decisive. The <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistant</a>
+handles this a bit differently though: it switches between buttons and a dropdown depending on the total width of the choices.</p>
+<p>Therefore the number of choices is important but also the ordering of the items plays a big role: according to <a href="https://www.wikiwand.com/en/Hick%27s_law">Hick&rsquo;s law</a> the average reaction time <span class="arithmatex">\(T\)</span> to make a choice is <span class="arithmatex">\(T = b*log_2(n+1)\)</span> where <span class="arithmatex">\(b\)</span> is a constant factor and <span class="arithmatex">\(n\)</span> the number of items. When
+the items are in order, users perform a binary search to find the item. When there is no order, the search time is linear instead.</p>
+<p>When there are many choices, a search functionality should be provided that works similar to the code completion menu when a custom <abbr title="User Interface">UI</abbr>
+component is used. Similar choices can also be grouped together (e.g. <a href="https://jetbrains.github.io/MPS-extensions/extensions/utils/intentions-menu/">intentions menu</a> for grouping intentions).</p>
+</details>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://mariahalthoff.com/blog/7-graphic-design-principles">7 Graphic Design Principles to Up-Level your Graphics</a></li>
 <li><a href="https://ux360.design/gestalt-principles-design/">7 Gestalt Principles of Design</a></li>
 <li><a href="https://www.business2community.com/web-design/10-graphic-design-rules-never-break-01935942">10 Graphic Design Rules You Should Never Break</a></li>
 <li><a href="https://www.mockplus.com/blog/post/ui-design-principle/?r=cherry">20 Most Important <abbr title="User Interface">UI</abbr> Design Principles for <abbr title="User Interface">UI</abbr> Designer</a></li>
+<li><a href="https://asktog.com/atc/principles-of-interaction-design/">First Principles of Interaction Design</a></li>
 <li><a href="https://www.quora.com/What-are-the-basic-rules-of-user-interface-design">What are the basic rules of user interface design? (quora)</a></li>
 <li><a href="https://material.io/design/layout/understanding-layout.html#principles">Understanding layout | Material Design</a></li>
 </ul>
@@ -3555,7 +3586,7 @@ Catastrophic, fatal (use serious instead)</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2023</span>
       
     
   </small>
