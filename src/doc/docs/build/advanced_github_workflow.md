@@ -1,4 +1,4 @@
-The following workflow is suitable for small projects as well as projects with hundreds of developers. This guide assumes that the project is hosted on GitHub and that CI pipeline also runs on GitHub. Additionaly, one or more teams work on the project and a form of [agile software development](https://www.wikiwand.com/en/Agile_software_development) is implemented.
+The following workflow is suitable for small projects as well as projects with hundreds of developers. This guide assumes that the project is hosted on GitHub and that the CI pipeline also runs on GitHub. Additionally, one or more teams work on the project and a form of [agile software development](https://www.wikiwand.com/en/Agile_software_development) is implemented.
 New feature/bugfixes are developed based on a [ticket](https://www.vollcom-digital.com/blog/digital-transformation/how-to-write-an-agile-ticket/) system.
 
 ## CODEOWNERS file 
@@ -28,7 +28,7 @@ ownerslist {
 }
 ```                           
 
-In the branch protection rules on GitHub it can then be specified that the corresponding team has to review pull requests
+In the branch protection rules on GitHub, it can then be specified that the corresponding team has to review pull requests
 before they can be merged.
 
 ## Merge queue
@@ -37,7 +37,7 @@ When all branches are merged into a main branch and there are a lot of pull requ
 enable the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) feature on GitHub. Pull requests that have reviews and no failing checks can be added to the merge queue. The position
 in the merge queue is shown in the PR as well as the expected time for the PR to be merged.
 
-When the previous PRs in the merge queue  are in conflict with the current PR, the current PR will be taken out of the merge queue. This can also be done manually when a PR is added to the merge queue by accident. There is also the option "Merge when ready" at the bottom of the PR to automatically add
+When the previous PRs in the merge queue are in conflict with the current PR, the current PR will be taken out of the merge queue. This can also be done manually when a PR is added to the merge queue by accident. There is also the option "Merge when ready" at the bottom of the PR to automatically add
 it to the merge queue when all other checks succeed.
 
 ## Issue and pull request templates
@@ -46,9 +46,9 @@ To make it easier for developers and users to submit issues, [issue templates](h
 repository. A few templates can be found at [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates). If you are using a help desk
 or some other tool like [Jira](https://www.atlassian.com/software/jira), [YouTrack](https://www.jetbrains.com/youtrack/) or a platform like [GitLab](https://about.gitlab.com/) you might want to [disable issues](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues) instead.
 
-For developers a [pull request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) helps them create better pull requests. The template is instantiated when a new PR is opened.
+For developers, a [pull request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) helps them create better pull requests. The template is instantiated when a new PR is opened.
 It can explain naming conventions that the developer has to follow or provide a checklist of things to pay attention to before
-open a new PR e.g. adding the change to the changelog, updating the documentation or checking that tests exist for a new feature.
+open a new PR e.g. adding the change to the changelog, updating the documentation or, checking that tests exist for a new feature.
 
 ## GitHub Actions and workflows
 
@@ -61,12 +61,12 @@ the commit messages, it might be better to manually write a release notes file o
 if it has a pre-defined format.
 
 It's important to differentiate between a changelog and release notes ([amoeboids.com](https://amoeboids.com/blog/changelog-vs-release-notes-the-key-differences/)): the changelog communicates technical changes, the release notes 
-inform the users about new features, improvements, bug fixes etc. in a non-technical way.
+inform the users about new features, improvements and bug fixes in a non-technical way.
 
 ### Workflows
 
 [Workflows](https://docs.github.com/en/actions/using-workflows/about-workflows) are located in the *.github/workflows* directory and can be triggered by
-events, scheduled automatically or manual triggered. For many workflows, at least the [default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables) *GITHUB_ACTOR* and *GITHUB_TOKEN* are necessary. [nektos/act](https://github.com/nektos/act) can be used to run GitHub Actions locally. Depending on the project, fhe following workflows might be useful:
+events, scheduled automatically or manually triggered. For many workflows, at least the [default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables) *GITHUB_ACTOR* and *GITHUB_TOKEN* are necessary. [nektos/act](https://github.com/nektos/act) can be used to run GitHub Actions locally. Depending on the project, the following workflows might be useful:
 
 - building the project using the [gradle-build-action](https://github.com/gradle/gradle-build-action) in combination with the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin)
 - checking that issues or PRs are not [stale](https://github.com/actions/stale) (e.g. as a cronjob)
@@ -74,7 +74,7 @@ events, scheduled automatically or manual triggered. For many workflows, at leas
     - valid PR title
     - valid PR description
     - valid branch name
-- publishing the MPS languages and RCP as snapshots when a snapshot [git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) is used
+- publishing the MPS languages and RCP as snapshots when a snapshot [Git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) is used
 - building and testing the languages when a PR is created or the PR is added to the merge queue
 - building the RCP when a change is pushed to main
 - creating a release (e.g. manually triggered)
@@ -82,13 +82,13 @@ events, scheduled automatically or manual triggered. For many workflows, at leas
     - generating the release notes
     - deploying the RCP to a repository e.g. [JFrog artifactory](https://jfrog.com/artifactory/), [sonatype nexus repository](https://www.sonatype.com/products/sonatype-nexus-repository) or [GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry)
 - collecting repository metrics
-- scaning the code for vulnerabilities and errors [automatically on GitHub](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors) or using a proprietary solution like [Black Duck Software Composition Analysis](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html) (e.g. as a cronjob)
+- scanning the code for vulnerabilities and errors [automatically on GitHub](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors) or using a proprietary solution like [Black Duck Software Composition Analysis](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html) (e.g. as a cronjob)
 - uploading coverage reports (e.g. [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html#:~:text=JaCoCo%20is%20a%20free%20Java,26%20based%20on%20commit%20e0d9d0442e9d6caa98362db034ad76db819a8cc9)) and test results generated by MPS ([JUnit](https://junit.org/junit5/)) to a server (e.g. as a cronjob)
 
 #### Metrics
 
 To get an overview of project statistics, a GitHub action like [floric/repo-monitor-action](https://github.com/floric/repo-monitor-action) can be used to
-generate custom metrics reports including the last releases using GitHub Pages. Some interesting statistics for MPS projects can be extracted. In the snippets it is assumed that the languages and solutions are located in the *code* folder:
+generate custom metrics reports including the last releases using GitHub Pages. Some interesting statistics for MPS projects can be extracted. In the snippets, it is assumed that the languages and solutions are located in the *code* folder:
 
 ```bash title="number of languages"
 $(find code/languages/*/languages/* -maxdepth 0 -type d | wc -l)
@@ -129,14 +129,14 @@ Other interesting statistics that can be collected:
 The developer starts by creating a new branch from the [default branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch) which is usually called *main* or *master*. It is the stable branch that contains all the latest changes.
 To make the connection between code changes and ticket numbers, the ticket numbers can be used in the branch name. There are many different
 branch naming conventions ([example](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)). One possible convention is
-to start the branch with a category such as feature, bugfix or refactor, then include the ticket number and a description of the branch.
+to start the branch with a category such as *feature*, *bugfix* or *refactor*, then include the ticket number and a description of the branch.
 For example: `feature/TASK-123_implement_awesome_feature`.
 
-For the commits itself, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and then a description of the change e.g. `TASK-123: implement feature`. When the branch is ready and pushed to GitHub, some of the described workflows should be automatically executed. The PR should be reviewed from a whitebox and blackbox perspective (see: [[testing|testing]]) and when all checks succeed, the PR can be added to the merge queue. When the PR is at the top of the merge queue, it will be build and tested again and all the check will we executed once again. If everything succeeds, the PR will be finally merged into one of the stable branches like the default branch.
+For the commits themselves, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and then a description of the change e.g. `TASK-123: implement feature`. When the branch is ready and pushed to GitHub, some of the described workflows should be automatically executed. The PR should be reviewed from a white box and black box perspective (see: [[testing|testing]]) and when all checks succeed, the PR can be added to the merge queue. When the PR is at the top of the merge queue, it will be built and tested again, and all the checks will be executed once again. If everything succeeds, the PR will be finally merged into one of the stable branches like the default branch.
 
 In the meantime, depending on the used [agile workflow](https://www.easyagile.com/blog/agile-workflow/), the state of the ticket might
-change from "Todo", to "in progress" to "Code Review" and then to "Done" when the PR is finally merged. Depending on the [release cycle](https://digital.ai/glossary/agile-release-planning), A new version might be released for the users every 4 weeks or add a different interval.
+change from "Todo", to "in progress" to "Code Review" and then to "Done" when the PR is finally merged. Depending on the [release cycle](https://digital.ai/glossary/agile-release-planning), A new version might be released for the users every 4 weeks or at a different interval.
 
 ## An example of a different workflow
 
-While the described workflow has been proven to be successfully for big projects, there are many other workflows that can be used. For example: the MPS platforms don't use ticket numbers in commit messages, tickets are also not planned in advance. Linking existing ticket can also be difficult because the platforms are Open Source, the tickets sometimes are not. New versions are also released whenever a change is pushed to the master or maintenance branches ([rolling release](https://www.wikiwand.com/en/Rolling_release)) instead of using a fixed release cycle. The project is also not build on GitHub but on a [TeamCity](teamcity.md) server.
+While the described workflow has been proven to be successful for big projects, many other workflows can be used. For example the MPS platforms don't use ticket numbers in commit messages, and tickets are also not planned. Linking existing tickets can also be difficult because the platforms are Open Source, and the tickets sometimes are not. New versions are also released whenever a change is pushed to the master or maintenance branches ([rolling release](https://www.wikiwand.com/en/Rolling_release)) instead of using a fixed release cycle. The project is also not built on GitHub but on a [TeamCity](teamcity.md) server.

@@ -14,7 +14,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How do you hide inapplicable operands in dot expressions?"
 
-    {{ blog('sl',false) }}[Dot expressions: hiding inapplicable operands](https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/)
+    [Dot expressions: hiding inapplicable operands](https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/){{ blog('sl') }}
 
 !!! question "Are there any useful helper classes?"
 
@@ -34,7 +34,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How can you emulate references?"
 
-    {{ blog('sl',false) }}[Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/)
+    [Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/){{ blog('sl') }}
 
 ## Scopes
 
@@ -68,5 +68,5 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "What's the difference between *parent scope* and *super.getScope*?"
 
-    `parent scope` asks of your node or up in the hierarchy for the scope until it finds a scope provider.
+    `parent scope` asks your node or up in the hierarchy for the scope until it finds a scope provider.
     `super.getScope` will use the implementation from the super concept.

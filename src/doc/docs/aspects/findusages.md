@@ -12,7 +12,7 @@ Custom finders for discovering related nodes can be implemented in this aspect.
 
 !!! warning "I click *Find usages* in the context menu of a node, and it doesn't find anything."
 
-    The standard search scope is the project. Try to expand it to global in the find usages settings. Also check that
+    The standard search scope is the project. Try to expand it to global in the find usages settings. Check also that
     you are using the correcting finders in the *Finders* section of the settings. 
 
 !!! warning "I want to execute *Find usages* more than once, but the result tab gets overridden."
@@ -38,7 +38,7 @@ Custom finders for discovering related nodes can be implemented in this aspect.
     [CollectConsumer](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.util%28MPS.Core%2F%29%2F~CollectConsumer) which adds the results to the provided collection. There is also the method `getResults()` to get back
     the collection.
 
-!!! warning "Fast usages search is not supported for model."
+!!! warning "Fast usages search is not supported for a model."
 
     When specifying the scope, make sure to exclude models that don't support fast usages search (e.g. temporary models such as the console model).
     Models are only loaded when they are accessed, so make sure to keep the scope of the find usages call at a minimum.

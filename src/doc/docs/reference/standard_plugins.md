@@ -32,7 +32,7 @@ The following list contains the plugins that are installed in MPS 2021.1 and lat
 
 ## IntelliJ plugins
 
-The sources for most of the plugins, can be found in the [plugins folder](https://github.com/JetBrains/intellij-community/tree/master/plugins) of the IntelliJ community repository.
+The sources for most of the plugins can be found in the [plugins folder](https://github.com/JetBrains/intellij-community/tree/master/plugins) of the IntelliJ community repository.
 
 - [copyright](https://plugins.jetbrains.com/plugin/13114-copyright): copyright (*com.intellij.copyright*)
 - [github](https://plugins.jetbrains.com/plugin/13115-github): GitHub (*org.jetbrains.plugins.github*)

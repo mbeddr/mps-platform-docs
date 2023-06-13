@@ -29,51 +29,51 @@ Although this aspect adheres to the [plugin model](#mps-plugin-model) naming con
 
 ### Test model
 
-**UI**: entry below solution in a specific folder named `tests` with specific icon in the logical view.
+**UI**: entry below solution in a specific folder named `tests` with a specific icon in the logical view
 
 A model containing tests. Defined by the *&commat;tests* stereotype.
 
 ### Generator model
 
-**UI**: entry with specific icon below generator in the logical view.
+**UI**: entry with a specific icon below generator in the logical view
 
 A model containing the generator, defined by the *&commat;generator* stereotype.
 
 ### Transient model
 
-**UI**: last entry below project in logical view.
+**UI**: last entry below project in the logical view
 
 Temporary models produced during generation, defined by *&commat;transient«someNumber»* or *&commat;«someNumber»* stereotype.
 
 ###Accessories model
 
-**UI**: entry below language in a specific folder named *accessories* in the logical view or entry below the solution in the logical view.
+**UI**: entry below language in a specific folder named *accessories* in the logical view or entry below the solution in the logical view
 
 A model specially selected by a language. Nodes contained in these models are implicitly available on the Java classpath and the [dependencies](#dependencies) of any model using this language. A use case would be a default library of concept instances to be available at any place you use the Language.
 
-You can store accessory models in two places: either as an aspect of a language (recommended), or as a regular model below a solution. In both cases, the model needs to be added to the module runtime language settings.
+You can store accessory models in two places: either as an aspect of a language (recommended) or as a regular model below a solution. In both cases, the model needs to be added to the module runtime language settings.
 
 ### Utility model
 
-**UI**: entry below language in a special folder named *util models* in the logical view.
+**UI**: entry below language in a special folder named *util models* in the logical view
 
-It includes code required in other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation or a generator needs to do complex model traversals. Create them as regular models within the language.
+It includes code required in other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation, or a generator needs to do complex model traversals. Create them as regular models within the language.
 
 ### Build model
 
-**UI: entry below a solution in the logical view
+**UI**: entry below a solution in the logical view
 
 It includes nodes from the [build language](#build-language).
 
 ### MPS plugin model
 
-**UI**: model within a solution in the logical view.
+**UI**: model within a solution in the logical view
 
 It includes MPS plugins. The model name needs to adhere to the naming convention *«moduleName».plugin*.
 
 ## Model stereotype
 
-**UI**: attached to the model name, separated by *@*.
+**UI**: attached to the model name, separated by *@*
 
 A model may have a stereotype. To change, add, or remove a stereotype, use
 *Rename Model Refactoring* in the context menu of a model.
@@ -100,7 +100,7 @@ It lists other models this model contains references to.
 
 ### Used languages model settings
 
-**UI**: tab in model properties dialog
+**UI**: tab in the model properties dialog
 
 It lists languages used in this Model. Any *Used Language* listed in a model, needs to be in the list of *Used Languages* of the containing module.
 
@@ -119,7 +119,7 @@ It's used in [build models](#build-model). MPS can execute them via the *Run «B
 
 ## Dependencies
 
-**UI**: section within build model
+**UI**: a section within the build model
 
 This is the scope import for all references to other build models.
 It provides access to resulting artifacts of other build models.
@@ -134,17 +134,17 @@ This plugin only loads if all dependencies listed here load before. The contents
 
 ## Module Dependencies
 
-**UI**: section *mps group* in *Build Model*, subsection *solution*/*module*, inspector section *dependencies*.
+**UI**: section *mps group* in *Build Model*, subsection *solution*/*module*, inspector section *dependencies*
 
-It contains a copy of relations of the described module.
+It contains a copy of the relations of the described module.
 
 ## Runtime
 
-It contains a copy of module runtime language settings.
+It contains a copy of the module runtime language settings.
 
-## Jars
+## JARs
 
 **UI**: section *default layout* in *Build Model*
 
 You have to include all jars included in any Java module settings somewhere in this section.
-*.java* files (from Java source paths) need to be compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding *\.class* files should be jared, .java files should be places in corresponding location if they are referenced by java_source_stub model root.
+*.java* files (from Java source paths) need to be compiled as Java sources inside the corresponding build script and manually included into the resulting build layout: corresponding *\.class* files should be jared, .java files should be placed in the corresponding location if they are referenced by java_source_stub model root.

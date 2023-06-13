@@ -4,8 +4,7 @@ tags:
 - examples
 ---
 
-These actions use IntelliJ platforms or access MPS models and need additional locks because of the location where they
-are used. Especially MPS read and write locks should be available in every language aspect and manually locking isn't necessary.
+These actions use the IntelliJ platform or access MPS models and need additional locks because they are running on a different thread. Especially MPS read and write locks should be available in every language aspect and manually locking isn't necessary.
 
 ## Example of actions that require MPS locks
 
@@ -46,7 +45,7 @@ Useful methods:
 
 ### Write actions
 
-- VFS related actions
+- VFS-related actions
     - refresh files
     - create/remove directories
     - create/modify/delete/copy files
@@ -63,9 +62,9 @@ Useful methods:
 They are executed in the lambda of `#!java ApplicationManager.getApplication().invokeLater/invokeAndWait)`.
 
 - update tools
-- show progress bars for a long-running actions
-- update text in swing components
-- dispose UI components
+- show progress bars for long-running actions
+- update text in Java Swing components
+- dispose of UI components
 - rebuild components
 - start a make process
 - save projects/modules
@@ -79,5 +78,5 @@ They are executed in the lambda of `#!java ApplicationManager.getApplication().i
 
 They are executed in the lambda of `#!java ApplicationManager.getApplication().executeOnPooledThread`
 
-- set break points on startup
+- set breakpoints on startup
 - preview the generated text for nodes

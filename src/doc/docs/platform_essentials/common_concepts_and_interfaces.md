@@ -6,7 +6,7 @@ tags:
 ---
 
 This list explains some common abstract concepts and interfaces that you can use to extend or use the functionality of the platforms.
-Identifiers starting with a capital *I* refer to interfaces.
+Identifiers starting with a capital "I" refer to interfaces.
 
 ## Mbeddr
 
@@ -31,7 +31,7 @@ Example:
 
 #### ICommentable
 
-Concepts or interfaces that implement [ICommentable](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229556133800) can be commented out by typing `//` or `/*` as long as it is not trigger by a node that implements [IEmpty](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067).
+Concepts or interfaces that implement [ICommentable](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229556133800) can be commented out by typing `//` or `/*` as long as it is not triggered by a node that implements [IEmpty](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067).
 
 #### IDocumentable
 
@@ -47,7 +47,7 @@ Example: IETS3 call tree of functions
 
 #### IContainerOfUniqueNames
 
-[IContainerOfUniqueNames](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5095889050031055796) checks that the provided names are indeed unique and shows and error otherwise. For qualified names, implement the interface [IHasQualifiedName](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5227231181399633032).
+[IContainerOfUniqueNames](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5095889050031055796) checks that the provided names are indeed unique and shows an error otherwise. For qualified names, implement the interface [IHasQualifiedName](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5227231181399633032).
 
 #### IDetectCycle
 
@@ -59,13 +59,13 @@ Example: IETS3 call tree of functions
 
 #### Name related interfaces
 
-[IIdentifierNamedConcept](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291) can be used for concept that should have a valid identifier. Check the [property constraint](http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296) to understand how it works.
+[IIdentifierNamedConcept](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291) can be used for concepts that should have valid identifiers. Check the [property constraint](http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296) to understand how it works.
 
 [INameAllUpperCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193612), [INameFirstCharLowerCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224192794) and [INameFirstCharUpperCase](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193610) can be used to further constraint the identifier name.
 
 #### IMbeddrIDERoot
 
-Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829) show up in the *New Roots* menu that's shown above the normal *new* menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.
+Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829) show up in the *New Roots* menu that's shown above the normal *new* menu of the context menu. It adds the following features: a custom name for the menu entry, root concept sorting, and custom categories for the root concepts.
 
 ## IETS3
 
@@ -77,7 +77,7 @@ Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/no
 
 #### ICanRunCheckManually
 
-[ICanRunCheckManually](http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F4450571177430728250) can be implemented to support running checks that are executed through one of the actions (runAllManuallyOnModel, runAllManuallyOnRoot, runManuallyOnContainer etc.) or are executed through intentions. The result of a check can be stored as a user object of a node. The interface also supports updating the editor with the test results, for example, highlighting the background of a test with a color and refreshing the editor.
+[ICanRunCheckManually](http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F4450571177430728250) can be implemented to support running checks that are executed through one of the actions (runAllManuallyOnModel, runAllManuallyOnRoot, runManuallyOnContainer) or are executed through intentions. The result of a check can be stored as a user object of a node. The interface also supports updating the editor with the test results, for example, highlighting the background of a test with color and refreshing the editor.
 
 Example:
 
@@ -99,11 +99,11 @@ To add a new expression, extend the concept [Expression](http://127.0.0.1:63320/
 
 #### ICanBeLValue
 
-Implement the interface [ICanBeLValue](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068) when the concept can be used as the [left value](https://en.wikipedia.org/wiki/Value_(computer_science)?oldformat=true#Assignment:_l-values_and_r-values) of expressions such as assignments. Variable references, paths and dot expression can be left values.
+Implement the interface [ICanBeLValue](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068) when the concept can be used as the [left value](https://en.wikipedia.org/wiki/Value_(computer_science)?oldformat=true#Assignment:_l-values_and_r-values) of expressions such as assignments. Variable references, paths, and dot expressions can be left values.
 
 #### IDotTarget
 
-Implement [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines and many more.
+Implement [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines, and many more.
 
 #### IEmptyLiteral
 
@@ -115,11 +115,11 @@ Implement [ILiteral](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d
 
 #### Effects
 
-Since KernelF is by default immutable, some language extensions allow side effects such as the language *org.iets3.core.expr.mutable*. To add custom concepts that have affects, implement the interfaces [IMayAllowEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116) and [IMayHaveEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166).
+Since KernelF is by default immutable, some language extensions allow side effects such as the language *org.iets3.core.expr.mutable*. To add custom concepts that have effects, implement the interfaces [IMayAllowEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116) and [IMayHaveEffect](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166).
 
 #### IOptionallyTyped
 
-Use the interface [IOptionallyTyped](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724) to add an optional type to an expression. The expression automatically used the provided type as its own type.
+Use the interface [IOptionallyTyped](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724) to add an optional type to an expression. The expression automatically used the provided type as its type.
 
 #### ITraceRoot
 
@@ -131,7 +131,7 @@ Custom types must extend the concept [Type](http://127.0.0.1:63320/node?ref=r%3A
 
 #### IWantNewLine
 
-The concepts of expressions that need to be on a new line such as try expressions, block expressions and sometimes tables, need to implement the interface [IWantNewLine](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890). This interface affects the layout of some expressions such as if expressions and function bodies.
+The concepts of expressions that need to be on a new line such as try expressions, block expressions, and sometimes tables, need to implement the interface [IWantNewLine](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890). This interface affects the layout of some expressions such as if expressions and function bodies.
 
 #### Tests
 
@@ -141,7 +141,7 @@ To add a new test statement, extend the concept [AbstractTestItem](http://127.0.
 
 #### IToplevelExprContent
 
-Implement the interface [IToplevelExprContent](http://127.0.0.1:63320/node?ref=r%3Ada65683e-ff6f-430d-ab68-32a77df72c93%28org.iets3.core.expr.toplevel.structure%29%2F2861782275883475449) to allow an expression to be used at the topmost level like the [ExpressionStatement](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123155) in *baselanguage*.
+Implement the interface [IToplevelExprContent](http://127.0.0.1:63320/node?ref=r%3Ada65683e-ff6f-430d-ab68-32a77df72c93%28org.iets3.core.expr.toplevel.structure%29%2F2861782275883475449) to allow an expression to be used at the topmost level like the [ExpressionStatement](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123155) in Base Language.
 
 ### Collections
 

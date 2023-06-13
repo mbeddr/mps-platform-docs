@@ -21,9 +21,9 @@ tags:
 
     Use the language ^^com.dslfoundry.plaintextgen^^ from {{ mps_extensions() }}.
 
-??? question "Can I implement TextGen for another language?"
+??? question "Can I implement text generation for another language?"
 
-    >I would like to implement a textgen for language A in a separate language B. Concretely, I need a *different* textgen for some of the KernelF concepts. When I try to do this, I get a compile error, because it looks like the generated descriptor does not include "inherited" concepts:
+    >I would like to implement text generation for language A in a separate language B. Concretely, I need *different* text generation for some of the KernelF concepts. When I try to do this, I get a compile error, because it looks like the generated descriptor does not include "inherited" concepts:
 
     > ```java
     > public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
@@ -46,9 +46,9 @@ tags:
 
     It's not possible this way. So far the two ways I found to make this happen are:
 
-    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this in a generic way by using a script the generator that searches for all node of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
+    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialize the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this generically by using a script the generator that searches for all nodes of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
 
-    2. Create annotations that override the text gen of the concepts and attache them in a generator. Then MPS will first call the text gen of the annotation and you can override it there. 
+    2. Create annotations that override the text generation of the concepts and attach them in a generator. Then MPS will first call the text gen of the annotation and you can override it there. 
 
     There is MPS-22092 which describes this request.
 

@@ -12,7 +12,7 @@ This isn't a complete list.
 
 - *source_gen*: the generated Java files
 - *source_gen.caches*:
-    - *dependencies*: cache files which list dependencies between used classes and interfaces
+    - *dependencies*: cache files that list dependencies between used classes and interfaces
     - *generated*: a list of generated files
 - *classes_gen*: the generated Java class files
 - *test_gen*: the generated JUnit Java test files

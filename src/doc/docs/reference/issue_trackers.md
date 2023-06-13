@@ -7,8 +7,8 @@ tags:
 ## Reporting bugs
 
 This page should help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
-issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor related languages
-(diagrams, tables, tree notations...) are located in MPS-extensions. The following list, gives a rough overview:
+issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor-related languages
+(diagrams, tables, tree notations...) are located in {{ mps_extensions() }}. The following list gives a rough overview:
 
 - {{ mps() }}
     - ^^[jetbrains.*](core_languages.md)^^
@@ -30,7 +30,7 @@ issue belongs to. Most of the time, the package name tells you the correct proje
     - ^^de.slisson.*^^
     - ^^de.q60.*^^
     - ^^com.dslfoundry.*^^ ([DSLFoundry](https://github.com/DSLFoundry))
-    - ^^org.modelix.model*^^ (if it related to the API, otherwise go to [modelix](https://github.com/modelix?type=source) itself)
+    - ^^org.modelix.model*^^ (if it is related to the API, otherwise go to [modelix](https://github.com/modelix?type=source) itself)
 - JetBrains Runtime Environment or [OpenJDK](https://github.com/openjdk/jdk)
     - ^^com.sun.*^^
     - ^^java.*^^
@@ -53,7 +53,7 @@ This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains
 
 ## MPS-extensions
 
-If you are unsure which languages are part of this platform, please consult [full extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/) page.
+If you are unsure which languages are part of this platform, please consult the [full extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/) page.
 
 - [open issues](https://github.com/JetBrains/MPS-extensions/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 - [reference: search issues and pull requests | github.com](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
@@ -63,7 +63,7 @@ If you are unsure which languages are part of this platform, please consult [ful
 
 This is the issue tracker related to [mbeddr.core](https://github.com/mbeddr/mbeddr.core). You can find there issues related
 to the [mbeddr platform](http://mbeddr.com/platform.html) which is used, for example, by IETS3.OS. Please note that nearly
-all editor-related languages where moved to MPS-extensions, so please submit those tickets in the corresponding issue tracker.
+all editor-related languages were moved to {{ mps_extensions() }}, so please submit those tickets in the corresponding issue tracker.
 
 
 - [open issues](https://github.com/mbeddr/mbeddr.core/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
@@ -77,9 +77,9 @@ This issue tracker is most of the time needed for tickets related to [KernelF](h
 
 ## IntelliJ platform
 
-This issue tracker contains issue for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The used IntelliJ platform can be found on the 
+This issue tracker contains issues for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The used IntelliJ platform can be found on the 
 [MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consists
-of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, the IntelliJ platform version is 213.7172 which
+of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, and the IntelliJ platform version is 213.7172 which
 can be checked by visiting the [IntelliJ IDEA download page](https://www.jetbrains.com/de-de/idea/download/other.html).
 If an MPS issue is related to the platform, it is forwarded by the MPS team to the platform team.
 
@@ -87,13 +87,13 @@ If an MPS issue is related to the platform, it is forwarded by the MPS team to t
 
 ## JetBrains Runtime
 
-> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and bugfixes.
+> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and general bugfixes.
 
 !!!info "It's highly unlikely that you have to submit an issue to this tracker yourself."
 
 This issue tracker is relevant for [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html), UI-related glitches and
 complete Java crashes as MPS is using the JetBrains Runtime instead of the normal JRE. The JetBrains runtime is installed
-in the jbr folder of the MPS installation. The corresponding JBR version for an IntelliJ platform release can be found
+in the *jbr* folder of the MPS installation. The corresponding JBR version for an IntelliJ platform release can be found
 in the [JetBrainsRuntime readme](https://github.com/JetBrains/JetBrainsRuntime#releases-based-on-jdk-11).
 
 - [open issues](https://youtrack.jetbrains.com/issues/JBR?q=%23Open%20)

@@ -16,19 +16,19 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "How can you create an MPS concept declaration programmatically?"
 
-    {{ blog('sl',false) }}[Create a MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/)
+    [Create an MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/){{ blog('sl') }}
 
 !!! warning "Concept XY wasn't found in the language."
 
-    {{ blog('sl',false) }}[Concept not found](https://specificlanguages.com/posts/2022-03/14-concept-not-found/)
+    [Concept not found](https://specificlanguages.com/posts/2022-03/14-concept-not-found/){{ blog('sl') }}
 
 !!! question "How do you find examples of MPS concepts?"
 
-    {{ blog('sl',false) }}[Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/)
+    [Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/){{ blog('sl') }}
 
 !!! question "When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?"
 
-    The used algorithm is a a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
+    The used algorithm is a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
     You can try it yourself, for example for the concept {{ mps_url("@mps.ClassConcept") }}:
     ```java
     BehaviorRegistryImpl r = (BehaviorRegistryImpl) ConceptRegistry.getInstance().getBehaviorRegistry();
@@ -56,7 +56,7 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "Can I cast concept objects to super concept objects?"
 
-    > I have the following successfull boolean check: `someConcept.isSubConceptOf(MySuperConcept)`
+    > I have the following successful boolean check: `someConcept.isSubConceptOf(MySuperConcept)`
     > But if I put this code below, it fails with an exception that the cast cannot be performed: `((concept<MySuperConcept>) someConcept)`
     > The type of the expression someConcept is `concept<>.`
 
@@ -74,7 +74,7 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "What's {{ mps_url("@mps.IMainClass") }} used for?"
 
-    It allows to execute *baselanguage* code. An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
+    It allows to execute Base Language code. An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
 
 ## Properties
 
@@ -94,7 +94,7 @@ The structure aspect contains all the concept and interface declarations of a la
 
     The easiest way to do this is via [PropertyIdRefExpression](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080). Then you can directly reference the property in question like this:
     `property/MyConcept : myProperty/.getName()`
-    Whit this implementation, every changes in the property names are always calculated properly.
+    Whith this implementation, every change in the property names are always calculated properly.
 
     {{ contribution_by('abstraktor') }}
 

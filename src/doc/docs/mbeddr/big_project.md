@@ -4,9 +4,9 @@ tags:
 - utility
 ---
 
-If you have introduced a migration to mbeddr and need to execute, you need to execute it on all MPS projects contained in mbeddr.
-Otherwise, migrations pop up at for other people who work on other parts of mbeddr. This is an unclean workflow.
-To avoid this, you can either open all the projects in `mbeddr.core\code\languages` individually and run the migration wizard, but this is tedious.
+If you have introduced a migration to mbeddr and need to execute it, you need to execute it on all MPS projects contained in mbeddr.
+Otherwise, migrations pop up for other people who work on other parts of mbeddr. This is an unclean workflow.
+To avoid this, you could open all the projects in `mbeddr.core\code\languages` individually and run the migration wizard, but this is tedious.
 A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in the individual projects, thus you can run a migration once that executes on all these modules.
 
 ## New usage

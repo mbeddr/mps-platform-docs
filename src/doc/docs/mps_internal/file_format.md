@@ -1,7 +1,7 @@
 A few different persistence formats can be selected when creating a new model (`Model` --> `storage format`):
 
 - **Pre-installed XML-based format**
-    Models are described in an XML format. Git changes are collected per model. It is the default format. There seems to be support for saving user objects (strings, node ids etc. but not serializable objects) but this option just doesn't seem to be activated. User objects are therefore lost when existing MPS.
+    Models are described in an XML format. Git changes are collected per model. It is the default format. There seems to be support for saving user objects (strings, node ids, etc. but not serializable objects) but this option just doesn't seem to be activated. User objects are therefore lost when existing MPS.
 - **Pre-installed XML-based File-Per-Root format** (.mpsr) 
   Models are described in an XML format. Git changes are collected per root node. Some file-per-root [specific bugs](https://youtrack.jetbrains.com/issues/MPS?q=per%20root%20persistence%20%23Open%20) exist.
 - **Pre-installed Binary-Format** (.mpb)

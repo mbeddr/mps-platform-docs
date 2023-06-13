@@ -6,14 +6,14 @@ tags:
 
 # Polymorphic functions aspect
 
-This aspect allows to declare polymorphic functions and is part of [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels) in {{ mps_extensions() }}.
+This aspect allows declaring polymorphic functions and is part of [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels) in {{ mps_extensions() }}.
 You can declare a function that can have different implementations per language. To get a better understanding, have a look at the corresponding sandbox.
 
-!!! question "Is there a handler which the IDE calls when it loads a language?"
+!!! question "Is there a handler that the IDE calls when it loads a language?"
 
-    > I have a language $K$ with some languages extending $K$ named $A$, $B$ and $C$. $K$ needs to access some behavior implemented by $A$, $B$ or $C$, depending on which of these are deployed. In order to do that, I implemented a registry where $A$, $B$, and $C$ can register and which $K$ uses to retrieve a common interface with a specific implementation by $A$, $B$ or $C$.
+    > I have a language $K$ with some languages extending $K$ named $A$, $B$ and $C$. $K$ needs to access some behavior implemented by $A$, $B$ or $C$, depending on which of these are deployed. To do that, I implemented a registry where $A$, $B$, and $C$ can register and which $K$ uses to retrieve a common interface with a specific implementation by $A$, $B$, or $C$.
     
-    > The question remains: How can $A$, $B$ and $C$ register their implementation at the registry? Is there maybe better mechanism I should use here?
+    > The question remains: How can $A$, $B$ and $C$ register their implementation at the registry? Is there maybe a better mechanism I should use here?
 
     The language ^^de.q60.mps.polymorphicfunctions^^ allows you to do that. It provides a new language aspect where you can declare a function in one language and multiple implementations in other languages. It supports [polymorphic dispatch](https://en.wikipedia.org/wiki/Dynamic_dispatch) and even priority rules in case there are multiple applicable implementations.
 

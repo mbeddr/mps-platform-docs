@@ -33,10 +33,10 @@ We need to add a *StandalonePluginDescriptor* (defined in Language ^^jetbrains.m
 
 The term "plugin" is used at various places throughout MPS. It describes different things:
 
-- IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which MPS is based upon.
-- MPS plugins: automatically loaded Models.
-- Plugin language aspect: model inside a language defining extension points.
-- Build model plugins: part of the build model language providing new entries for build models.
+- IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which MPS is based upon
+- MPS plugins: automatically loaded models
+- plugin language aspect: model inside a language defining extension points
+- build model plugins: part of the build model language providing new entries for build models.
 
 ## Non-project sources
 
@@ -48,11 +48,11 @@ Non-project sources are
 - common and Java module settings regarding Java classes and Java source files
 - IDEA plugins referenced by a module
 
-These directories or jar files are recursively scanned for *.mpl* (languages), *.msd* (solutions), and *.devkit* (devkit) files. If found, the corresponding content is added to the modules pool.
+These directories or JAR files are recursively scanned for *.mpl* (languages), *.msd* (solutions), and *.devkit* (devkit) files. If found, the corresponding content is added to the modules pool.
 
 ## Java classpath versus relations
 
-The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations in a different way.
+The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations differently.
 As a rule of thumb, the classpath has all Java classes reachable through any kind of relation. The Classpath is populated generously.
 
 On the contrary, the relations are populated reluctantly, for example, they need to be specified explicitly.
@@ -74,9 +74,9 @@ You must add *LanguageA* (containing *ConceptA*) to *ModuleB's* and contained *M
 
 *GeneratorA* contained in *LanguageA* (containing *ConceptA*) will be executed for *ModelS* (contained in *ModuleS*) if and only if
 
-- *ModelS* uses *LanguageA* and contains an instance of *ConceptA*
-- *ModelS* lists *LanguageA* in Languages engaged on generation
-- The preceding conditions match *LanguageB* containing *GeneratorB* extending *GeneratorA*
+- *ModelS* uses *LanguageA* and contains an instance of *ConceptA*.
+- *ModelS* lists *LanguageA* in Languages engaged on generation.
+- The preceding conditions match *LanguageB* containing *GeneratorB* extending *GeneratorA*.
 
 For discussion, we establish a continued scenario:
 
@@ -150,6 +150,6 @@ Test models contain tests, defined by the *@tests* stereotype.
 The Stereotype enables
 
 - the *Run Tests* entry in the solution and test model context menu.
-- Build language test instruction to search the model for tests.
+- Build language test instructions to search the model for tests.
 
 As soon as you are using any concepts from language *jetbrains.mps.lang.test*, you need to have a *TestInfo* root node in the same model. The *TestInfo* node needs to refer to a project to be used to execute the tests. This reference may not use a *&#36{module}*, *&#36{language_descriptor}*, *&#36{solution_descriptor}*, or *&#36{project}* builtin path variables. It needs to refer to a project containing the test.

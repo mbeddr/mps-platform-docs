@@ -14,7 +14,7 @@ tags:
 
 !!! question "How can you go to the declaration of an intention when you open the intention menu?"
     
-    Select the intention and click the arrow/press right arrow key --> *Go to intention declaration*.
+    Select the intention and click the arrow/press the right arrow key --> *Go to intention declaration*.
 
 !!! question "How do you execute an action as an intention?"
 
@@ -37,17 +37,17 @@ tags:
 
 !!! question "How can you make intentions visible?"
     
-    {{ blog('sl',false) }}[Making intentions visible](https://specificlanguages.com/posts/2021-02/10-making-intentions-visible/)
+    [Making intentions visible](https://specificlanguages.com/posts/2021-02/10-making-intentions-visible/){{ blog('sl') }}
 
 !!! question "How can you show a submenu in the intention menu?"
     
-    {{ blog('sl',false) }}[Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/)
+    [Showing a submenu in the intentions menu](https://specificlanguages.com/posts/2022-01/27-intention-submenu/){{ blog('sl') }}
 
 !!! question "An Intention isn't visible, although it should be. What can you do?"
 
     > Intention X should be visible on Concept Y. However, when I select an instance of Y, it is not listed in the intention menu. What can I do?
 
-    Make sure the language that declares the intention is in *Used Languages* of the model:
+    Make sure the language that declares the intention is in the *Used Languages* section of the model:
 
         - Check if the intention applies to the concept you want it to apply to. (Maybe *visible on child nodes* is not set).
         - Check if the *isApplicable* condition evaluated to true (try to avoid adding `System.err.our` prints to the model).

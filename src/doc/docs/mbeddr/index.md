@@ -7,7 +7,7 @@ tags:
 
 !!! question "Why are there two context action tools?"
 
-    The context actions tool from ^^com.mbeddr.mpsutil.contextactions^^ was developed first. Later, JetBrains developed their own
+    The context actions tool from ^^com.mbeddr.mpsutil.contextactions^^ was developed first. Later, JetBrains developed their
     tool that works the same as the one from mpsutil. Nowadays both tool windows coexist.
 
 !!! warning "I am using some mbeddr languages in my project but some of them aren't deployed."
@@ -19,7 +19,7 @@ tags:
     - ^^mbeddr.spawner^^
 
     They can be installed by calling `gradlew.bat install "-PMPS_Installation=<path to MPS>"`
-    from the root folder of the mbeddr.core repository when building from source. The actionsfilter plugin
-    is necessary for the actionsfilter language.
+    from the root folder of the mbeddr.core repository when building from source. The actions filter plugin
+    is necessary for the actions filter language.
 
 

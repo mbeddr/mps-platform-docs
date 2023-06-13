@@ -5,7 +5,7 @@ The headers link to explanations and examples for the corresponding design patte
 
 ### [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)
 
-- TODO
+- [AbstractPluginFactory](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/plugins/AbstractPluginFactory.java)
 
 ### [Builder](https://refactoring.guru/design-patterns/builder)
 

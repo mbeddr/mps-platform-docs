@@ -6,8 +6,7 @@ tags:
 
 # Development Guide
 
-This document describes how the mbeddr team uses Git for contributing changes. The guide was written some years ago, so it 
-might not reflect the workflow and guidelines of newer committers anymore.
+!!! warning "This document describes how the mbeddr team used Git for contributing changes in the past. The guide was written some years ago, so it might not reflect the workflow and guidelines of newer committers anymore."
 
 ## Commit messages
 
@@ -39,7 +38,7 @@ Further information and ideas on how to write good commit messages can be found 
 
 We make heavy use of branches in the development process. If your task requires more than one commit, commit your changes on a branch.
 
-Two types of branches exist: *feature* and *refactor*: the first is used for new features, the second for bug fixes or code refactorings. They are distinguished by prefix: a feature branch my-awesome-stuff would be named *feature/my-awesome-stuff* or *refactor/my-awesome-stuff*, if it's a refactoring branch. Both kinds of branches should be short living (a couple of days) to reduce the risk of diverting to far from master and causing huge afford to merge. Ideally, no commits happen directly to *master* and every commit is first evaluated on a feature/refactoring branch.
+Two types of branches exist: *feature* and *refactor*: the first is used for new features, and the second for bug fixes or code refactorings. They are distinguished by prefix: a feature branch my-awesome-stuff would be named *feature/my-awesome-stuff* or *refactor/my-awesome-stuff* if it's a refactoring branch. Both kinds of branches should be short living (a couple of days) to reduce the risk of diverting too far from the master branch and causing huge afford to merge. Ideally, no commits happen directly to *master*, and every commit is first evaluated on a feature/refactoring branch.
 
 Nowadays, we mostly do merging instead of rebasing. The following sections might therefore not accurately reflect the current workflow.
 
@@ -71,7 +70,7 @@ Below you can see the starting point in the repository:
 * 5cee848        initial commit
 ```
 
-Now create the new feature branch named *feature/my-awesome-stuff* and commit some changes on it. While working on your branch, someone else committed changes into the *master* branch. Hence, for integrating your changes into *master* you would end up with a merge:
+Now create the new feature branch named *feature/my-awesome-stuff* and commit some changes to it. While working on your branch, someone else committed changes to the *master* branch. Hence, for integrating your changes into *master* you would end up with a merge:
 
 ```
 * 3c36424        (HEAD -> master) fixed some super important issue
@@ -117,7 +116,7 @@ Now Git history looks like this:
 * 5cee848        initial commit
 ```
 
-You haven't created a merge commit, and all commits from your branch appear as a single commit in the Git history. You are good to go to push back to the repo. But wait, what if somebody has changes things in the meantime on the remote, wouldn't the pull create a new merge? Yes it would! Therefor don't use a plain `git pull` but use `git pull --rebase` for when you are pulling from the repo into your local *master* branch. This way, Git doesn't produce a new merge commit but rebase your local changes on top of the remote changes.
+You haven't created a merge commit, and all commits from your branch appear as a single commit in the Git history. You are good to go to push back to the repo. But wait, what if somebody has changed things in the meantime on the remote, wouldn't the pull create a new merge? Yes it would! Therefore, don't use a plain `git pull` but use `git pull --rebase` when you are pulling from the repo into your local *master* branch. This way, Git doesn't produce a new merge commit but rebase your local changes on top of the remote changes.
 
 ## Test Organization
 
@@ -125,9 +124,9 @@ You haven't created a merge commit, and all commits from your branch appear as a
 
 The test solution for language *com.mbeddr.x.lang* should be named *test.com.mbeddr.x.lang*. Respectively, the test solution for solution *com.mbeddr.y.sol* should be named *test.com.mbeddr.y.sol*. If you need a dedicated language for testing purposes, you should name it *test.com.mbeddr.x.[lang|sol].testsupport* (or a similar suffix).
 
-This way, you can discriminate between "real" code below namespace *com.mbeddr* and test code below namespace *test*. You should also place any demo or playground modules outside the *com.mbeddr* namespace for the same reason.
+This way, you can discriminate between the "real" code below namespace *com.mbeddr* and the test code below namespace *test*. You should also place any demo or playground modules outside the *com.mbeddr* namespace for the same reason.
 
-By following this scheme, you can build productive code in the UI by building everything below *com.mbeddr* in the modules pool, and be assured not to be interfered by test, demo, or playground code.
+By following this scheme, you can build productive code in the UI by building everything below *com.mbeddr* in the modules pool, and be assured not to be interfered with by test, demo, or playground code.
 
 ### Project Structure
 
@@ -149,13 +148,13 @@ All test code should be placed in a special folder in the file system:
 
 ### Build script setup
 
-In mbeddr different build scripts exist. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
+In mbeddr, different build scripts exist. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
 This documentation guides you to following the mbeddr standards for setting up your *BuildProject* and integrating it into Mbeddr's build infrastructure.
 
 #### Required BuildFolderMacros
 
 In your *BuildProject* (the build script's model representation in MPS) you first need a *BuildFolderMacro* (a _folder_) named *mps\.home* (see code snippet below).
-If you want to run the generated ant script in your MPS, then you should specify the location of your MPS installation in a relative way, otherwise you don't need a path for *mps\.home*.
+If you want to run the generated ant script in your MPS, then you should specify the location of your MPS installation relatively, otherwise, you don't need a path for *mps\.home*.
 At script execution time, you will redefine *mps\.home*, to point to the folder where your MPS installation is located at.
 
 ```
@@ -169,7 +168,7 @@ When executing the ant script, generated from your *BuildProject*, define this m
 folder artifacts.root = <no defaultPath>
 ```
 
-For each *BuildProjectDependency* (the dependency's section below your folders) we need a separate *BuildFolderMacro* that follows the naming convention <BuildProject name>.artifacts and points to `$artifacts.root/<BuildProject name>`.
+For each *BuildProjectDependency* (the dependency section below your folders) we need a separate *BuildFolderMacro* that follows the naming convention <BuildProject name>.artifacts and points to `$artifacts.root/<BuildProject name>`.
 At build script execution time, those macros will point to the folders, where your required plugins are located.
 In the code snippet below you can see the resulting *BuildFolderMacros* for a *BuildProject* with two dependencies: mps-sl-all and com.mbeddr.platform.
 
@@ -196,7 +195,7 @@ Furthermore, you need to mark solutions containing type system tests as *content
 
 To get your tests executed, you first need to add the *module-tests* plugin to your *use plugins:* section (on top of your *BuildProject*).
 When you can't add the node *module-tests* to this section, import it from *jetbrains.mps.build.mps.tests.accessories*.
-Finally, create a *BuildMpsLayout_TestModules* (a _test configuration_) at bottom of your *BuildProject* and list there all solutions that contain type system tests to be executed.
+Finally, create a *BuildMpsLayout_TestModules* (a _test configuration_) at the bottom of your *BuildProject* and list there all solutions that contain type system tests to be executed.
 
 #### Configurations for generator and compiler
 

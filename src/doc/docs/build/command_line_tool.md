@@ -55,7 +55,7 @@ class InvokeMethod {
 }
 ```
 
-Why all the reflection tricks and why not call the class directly instead? The answer is that when MPS is initialized and a project is opened, it sets up classloaders, putts on the classpath any dependencies that module `Baz` might have, so that you don't have to specify them ourselves.
+Why all the reflection tricks and why not call the class directly instead? The answer is that when MPS is initialized and a project is opened, it sets up classloaders, puts on the classpath any dependencies that module `Baz` might have so that you don't have to specify them ourselves.
 
 We still need to have on the classpath the initial set of JARs to run our class and start MPS. Here is how you would run our tool from Gradle:
 
@@ -67,7 +67,7 @@ task runCommandLineTool(type: JavaExec) {
 }
 ```
 
-You can also add MPS to the gradle dependencies block:
+You can also add MPS to the Gradle dependencies block:
 
 ```groovy
 dependencies {

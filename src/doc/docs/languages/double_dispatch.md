@@ -82,7 +82,7 @@ public class DoubleDispatch {
      
     System.out.println(); 
      
-    // Note the different datatypes  
+    // Note the different data types  
     SpaceShip theSpaceShipReference = theApolloSpacecraft; 
     theAsteroid.collideWith(theSpaceShipReference); // output: (7)
     theAsteroidReference.collideWith(theSpaceShipReference); // output: (8)

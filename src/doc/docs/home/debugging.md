@@ -11,8 +11,8 @@ tags:
 
 For more in-depth explanations, visit:
 
-- {{ blog('sl',false) }} [Debugging in MPS](https://specificlanguages.com/articles/debugging/)
-- DSL Foundry: [White paper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/)
+- [Debugging in MPS](https://specificlanguages.com/articles/debugging/){{ blog('sl') }}
+- [White paper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/){{ blog('dslf') }}
 - [Debugging MPS with IntelliJ setup](/files/debugging-MPS-with-IntelliJ_Setup.pdf)
 
 The following list shows some debugging tips:
@@ -22,21 +22,21 @@ The following list shows some debugging tips:
 - Inspect Node: right-click --> *Show Node in Explorer*
 - Inspector: right-click --> *Inspect Node*
 - Right-click --> *Language Debug*
-    - *Show Type*: show type system type of current node.
-    - *Rule which caused Error*: find Checking-Rule/Constraint, which caused an error.
+    - *Show Type*: show type system type of the current node.
+    - *Rule which caused Error*: find checking rule/constraint, which caused the error.
     - *Cell in Explorer*: debug editor cells and collections.
-    - *Generation Traceback*: debug the generator. In transient models you can find the source node for the generated (intermediate) node.
+    - *Generation Traceback*: debug the generator. In transient models, you can find the source node for the generated (intermediate) node.
 - Find Action: *Help* --> *Find Action* or ++ctrl+shift+a++ if you forgot the name of your action.
 - Changing IDE settings
-    - Two locations: bin folder (MPS/IDE folder) and Preferences folder (overwrites bin-folder)
-    - JVM: bin/mps.vmoptions (RAM/Xmx, debugger port, …)
-    - Log-level (Log4J): bin/log.xml 	
-    - IDEA properties: bin/idea.properties: change default paths, advanced IDE settings
+    - 2 locations: bin folder (MPS/IDE folder) and preferences folder (overwrites bin folder)
+    - JVM: *bin/mps.vmoptions* (RAM/Xmx, debugger port, …)
+    - Log-level (Log4J): *bin/log.xml* 	
+    - IDEA properties: *bin/idea.properties*: change default paths, advanced IDE settings
 - Log file: is stored in the logs folder, e.g. `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
 
 !!! question "How do I debug action maps?"
 
-    Set a breakpoint in `CellActionExecutorFinder`.
+    Set a breakpoint in [CellActionExecutorFinder](http://127.0.0.1:63320/node?ref=r%3Afa6df9a8-26a8-40dd-9b99-6ccc8d453556%28com.mbeddr.mpsutil.grammarcells.runtime.insertpopup%29%2F3077579741543265862).
 
 ## Free Java debugging tools
 
@@ -44,9 +44,9 @@ The following list shows some debugging tips:
 
 - [VisualVM](https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a)
     - display process configuration and environment (e.g. Java/MPS version, JVM arguments, system properties)
-    - monitor process performance And memory (e.g. CPU/heap usage, loaded classes, threads)
+    - monitor process performance and memory (e.g. CPU/heap usage, loaded classes, threads)
     - visualize process threads (e.g. dispatch thread)
-    - profile performance And memory usage (e.g. CPU usage)
+    - profile performance and memory usage (e.g. CPU usage)
     - take and display thread dumps (e.g. find [deadlocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html))
     - take and browse heap dumps (e.g. find memory leaks)
     - analyze core dumps (e.g. crashed Java processes)
@@ -54,7 +54,7 @@ The following list shows some debugging tips:
     ![VisualVM](visualvm.png)
 
 - [Memory Analyzer (MAT)](https://www.eclipse.org/mat/)
-    - find memory relates issues such as memory leaks
+    - find memory related issues such as memory leaks
 
     ![Memory Analyzer (MAT)](http://www.eclipse.org/mat/about/overview.png)
 

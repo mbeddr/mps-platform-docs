@@ -8,8 +8,7 @@ tags:
 
 - [IntelliJ Platform SDK documentation](https://plugins.jetbrains.com/docs/intellij/welcome.html)
 - [Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)
-- [Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)
-    - IDEA thread modeling (for example: `invokeLater`), PSI, Virtual Files, Dynamic plugins, UI
+- [Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/): IDEA thread modeling (for example: `invokeLater`), PSI, Virtual Files, Dynamic plugins, UI
 
 !!! question "Where can you find a list of all IntelliJ registry entries?"
 

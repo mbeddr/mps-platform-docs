@@ -7,9 +7,9 @@ tags:
 The different plugins of MPS are declared using a [plugin configuration file](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html). The functionality is split into [plugin components](https://plugins.jetbrains.com/docs/intellij/plugin-components.html). `application-components` are activated when MPS starts, `project-components`
 are activated when a project is opened.
 
-MPS uses existing [IntelliJ extension points](https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html). For a list of all extension points and listener have a look at
-[Extension Point and Listener List | IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html). New extensions points are declared in a section *extensionPoints* where
-a qualified name and the interface to implement has to be provided. The interface has to contain an extension point name
+MPS uses existing [IntelliJ extension points](https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html). For a list of all extension points and listeners have a look at
+[Extension Point and Listener List | IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html). New extension points are declared in a section *extensionPoints* where
+a qualified name and the interface to implement have to be provided. The interface has to contain an extension point name
 declaration. Example:
 
 ```java
@@ -57,7 +57,7 @@ Included in other plugins:
 - [PlatformActions](https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml)
 
 All the plugins use the [charisma reporter](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java) for error reporting.
-This allows reporting errors to YouTrack. Another notable extension is the declaration of the mps language library. For example:
+This allows reporting errors to YouTrack. Another notable extension is the declaration of the MPS language library. For example:
 ```xml
 <mps.LanguageLibrary dir="/languages" />
 ```

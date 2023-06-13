@@ -5,7 +5,7 @@ tags:
 ---
 
 This table contains all languages shipped with MPS. Languages in gray color are test languages that
-are only used internally by MPS. Languages that are crossed out, are deprecated or unused languages.
+are only used internally by MPS. Languages that are crossed out, are deprecated or unused.
 
 <style type="text/css">
     

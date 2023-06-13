@@ -3,9 +3,10 @@ tags:
 - ui
 ---
 
-Hover over a green rectangle to show a short description.
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
 
-When you click the shape, you are redirected to the corresponding documentation when it's available.
+Hover over a green rectangle to show a short description. When you click the shape, you are redirected to the corresponding documentation when it's available.
 
 ![imagemap: what is](what_is.png){usemap='#image-map' .off-glb width="1788" height="1033" .ignore_max_width .map }
 
@@ -110,8 +111,7 @@ When you click the shape, you are redirected to the corresponding documentation 
     <area target="_blank" alt="Default horizontal gap" title="Default horizontal gap" href="https://www.jetbrains.com/help/mps/editor.html#punctuationproperties." coords="1156,284,1166,299" shape="rect">
 </map>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+
 <script type="text/javascript">
   $(function() {
     document.getElementsByTagName('body')[0].style.overflow = "scroll";

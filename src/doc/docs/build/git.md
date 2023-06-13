@@ -11,9 +11,9 @@ tags:
 
 !!! question "How should you configure Git?"
     
-    Generated files should not be checked into Git ('classes_gen', 'source_gen') unless the output of generators should be checked.
+    Generated files should not be checked into Git (*classes_gen*, *source_gen*) unless the output of generators should be checked.
     
-    Example from [mps-extensions](https://github.com/JetBrains/MPS-extensions):
+    Example from [MPS-extensions](https://github.com/JetBrains/MPS-extensions):
 
     - [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore)
     - [.gitattributes](https://github.com/JetBrains/MPS-extensions/blob/master/.gitattributes).
@@ -50,7 +50,7 @@ tags:
 - Necessary files/text
     - [README.md](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
     - [LICENSE](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-    - description in about section of GitHub repository
+    - description in the about section of the GitHub repository
 - More extensive checklists
     - [Open Source Check List](https://github.com/cfpb/open-source-project-template/blob/main/opensource-checklist.md)
     - [Am I ready to Open Source This?](https://gist.github.com/PurpleBooth/6f1ba788bf70fb501439)

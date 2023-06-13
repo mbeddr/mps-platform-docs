@@ -16,7 +16,7 @@ If you are using IntelliJ for editing, it is recommended to install the plugin [
 - The first header should be `#`.
 - Inserted images with Markdown, not HTML: `![description](url){width="600px"}`. Set the with to 600px or 300px, depending on how big or small the image is
 - [footnotes syntax](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
-- The `target=_blank` attribute and an icon for external links gets automatically added to links.
+- The `target=_blank` attribute and an icon for external links get automatically added to links.
 
 The following symbols must be escaped:
 
@@ -44,7 +44,7 @@ Besides the Material extensions, the project used the following [Pymdown](https:
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
 - [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 
-- [mdx-spanner](https://pypi.org/project/mdx-spanner):enables row and column spanning in Markdown tables
+- [mdx-spanner](https://pypi.org/project/mdx-spanner): enables row and column spanning in Markdown tables
 
 ## Macros
 
@@ -75,8 +75,8 @@ The identifier can start with one of the following special identifiers:
   - @iets3
 
 The special identifiers get translated to the corresponding package names. Only the last part of the identifier has to
-be the correct name. The identifier can reference classes, interfaces, concept, and interface declarations in baselanguage,
-mps-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
+be the correct name. The identifier can reference classes, interfaces, concepts, and interface declarations in Base Language,
+MPS-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
 exact.
 
 Example: `@mps.ClassConcept` will find `jetbrains.mps.baseLanguage.structure.ClassConcept`. When the wrong node is

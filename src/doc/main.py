@@ -86,7 +86,7 @@ def define_env(env):
         return ':mps_logo:[MPS](https://github.com/JetBrains/MPS)'
         
     @env.macro
-    def blog(text,after=True):
+    def blog(text):
         if text == "sl":
             text = "Specific Languages"
         elif text == "mv":
@@ -97,7 +97,6 @@ def define_env(env):
             text = "log verbose"
         elif text == "dslf":
             text = "DSLFoundry"
-        if after:
-            return "(*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)"
-        else:
-            return text + ("'s" if text[-1] != 's' else "'") + " blog: "
+        elif text == "fire":
+            text = "F1RE"
+        return "(*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)"

@@ -38,7 +38,7 @@ tags:
     - Console: ConsoleContext **context**, ConsoleStream **console**
     - Constraint:
         - Scope: ReferenceConstraintsContext **_context**
-    - Typesystem:
+    - Type-system:
         - all rules: IsApplicable2Status **status**, TypeCheckingContext **typeCheckingContext**
         - comparison rule: SNode **node1**, SNode **node2**, 
         - inequation replacement rule
@@ -52,18 +52,18 @@ tags:
 
 !!! question "How does the IDE collect generators to engage on a model?"
 
-    {{ blog('sl',false) }}[How MPS collects generators to engage on a model](https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/)
+    [How MPS collects generators to engage on a model](https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/){{ blog('sl') }}
 
-!!! question "genplan (in devkit) vs. generator priorities?"
+!!! question "generation plan (in devkit) vs. generator priorities?"
 
-    The genplan is applied instead of the generator priorities. If your generator should be applied in a model using a genplan, your generator has to be part of the genplan.
-    When developing a language, which is used within an aspect, e.g. typesystem, the MPS aspect's genplan can block the generator.
+    The generation plan is applied instead of the generator priorities. If your generator should be applied in a model using a generation plan, your generator has to be part of the generation plan.
+    When developing a language, which is used within an aspect, e.g. type-system, the MPS aspect's generation plan can block the generator.
 
-??? question "How can you use generated classes which implement an extension-point?"
+??? question "How can you use generated classes which implement an extension point?"
 
-    > Let $L_A$ be a language which offers an extension-point over class $E$. Then it is quite simple to provide a static implementation for extension-point for $E$ for example in another language. What if we have want map a concept $Q$ of $B$ to that extension-point? We want to be able to generated Code $C$ from a oncept instance of $Q$ which is a subclass of $E$, such that we can use it for the extension-point over class $E$.
+    > Let $L_A$ be a language that offers an extension point over class $E$. Then it is quite simple to provide a static implementation for extension point for $E$ for example in another language. What if we want to map a concept $Q$ of $B$ to that extension point? We want to be able to generate code $C$ from a concept instance of $Q$ which is a subclass of $E$, such that we can use it for the extension point over class $E$.
 
-    - Create the extension point in the plugin aspect of language $L_A$.
+    - Create the extension point in the plugin aspect of a language $L_A$.
 
     ![extension point ModelMergeExt](extension_point_ModelMergeExt.png){width="600px"}
 
@@ -72,7 +72,7 @@ tags:
     ![ModelMergeExt generator](ModelMergeExt_generator.png){width="600px"}
 
     - map_ModelMerge maps $Q$ to a class which extends $E$ (here `ConceptMergeSpec`).
-    - map_ModelMerge_extension will generate an extension for $Q$. It is a extension RootMapping which can be selected from the intention. 
+    - map_ModelMerge_extension will generate an extension for $Q$. It is an extension RootMapping which can be selected from the intention. 
 
     ![ModelMergeExt root template](ModelMergeExt_root_template.png)
     
@@ -81,11 +81,11 @@ tags:
 
     Make sure you have ^^jetbrains.mps.lang.extension^^ included as language in the plugin.
 
-    - Now create a solution, not a sandbox. Set *Solution Kind* in the properties to *Other*. Afterwards create a model named *plugin* (not optional). Add an instance of $Q$ to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to $Q$:
+    - Now create a solution, not a sandbox. Set *Solution Kind* in the properties to *Other*. Afterwards, create a model named *plugin* (not optional). Add an instance of $Q$ to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to $Q$:
 
-    1.the generated class 
-    2.the generated extension 
-    3.an `ExtensionDescriptor` which provides all found extensions
+    1. the generated class 
+    2. the generated extension 
+    3. an `ExtensionDescriptor` which provides all found extensions
 
     - Now you should be able to locate your extension with a code fragment like this:
 
@@ -103,8 +103,8 @@ tags:
 
 !!! question "Can you access the output model in a property macro?"
 
-    > In reference macros in generators, I can use the provided "outputNode" parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
-    > Can I do something similar in property macros? For those, there obviously is no "outputNode". I'd still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?
+    > In reference macros in generators, I can use the provided *outputNode* parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
+    > Can I do something similar in property macros? For those, there is no *outputNode*. I'd still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?
 
     {{ question_by('jonaskraemer') }}
 
@@ -114,7 +114,7 @@ tags:
 
     - Custom generation facet: if there is a GP defined, this plan is used.
     - Devkits: first, MPS looks if any devkit specifies a GP. The first devKit with an associated plan is consulted, if any, and no further lookup is done.
-      If there are no devkits with associated plans, MPS checks the facets of the devkit modules if any is an GP provider.
+      If there are no devkits with associated plans, MPS checks the facets of the devkit modules if any is a GP provider.
       The first found facet serves as a provider.
 
 !!! question "What is cross-model generation?"
@@ -126,14 +126,14 @@ tags:
 !!! question "What can be generated?"
 
     Have a look at the [language repository](https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository). You
-    might also find other languages on GitHub. In general there doesn't have to be an existing language. Any text can be
+    might also find other languages on GitHub. In general, there doesn't have to be an existing language. Any text can be
     generated with TextGen or Plaintextgen from {{ mps_extensions() }}. It's also possible to generate code from an action or
-    pre/post-processing script in the generator by using an existing Java library such as Apache Poi. A tutorial for example 
-    for excel can be found [here](https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi).
+    pre/post-processing script in the generator by using an existing Java library such as [Apache POI](https://poi.apache.org/). A tutorial for example 
+    for Excel can be found [here](https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi).
 
 !!! hint "I want to create multi outputs for a language.[^1]"
 
-    Use a dummy concept or a generation plan with a fork. This quesion is also answered in [the generator cookbook](https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode).
+    Use a dummy concept or a generation plan with a fork. This question is also answered in [the generator cookbook](https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode).
 
 !!! question "How can you generate latex files?"
 
@@ -158,8 +158,8 @@ tags:
 
 ??? question "How can you make sure that a generator B can use the output of a generator A?"
 
-    1. Define priorities or a fixed genplan for $B$ (and maybe $A$)
-    2. If you can't run / don't want to run both generators in the same “phase”, configure them to run one after each other.
+    1. Define priorities or a fixed generation plan for $B$ (and maybe $A$)
+    2. If you can't run/don't want to run both generators in the same “phase”, configure them to run one after the other.
 
     Solution **1**:
 
@@ -178,7 +178,7 @@ tags:
 
     Solution **4**:
     
-    - Define a fixed genplan with checkpoints.
+    - Define a fixed generation plan with checkpoints.
     - Organize the whole generation process manually.
 
 ??? question "How to generate large strings?"
@@ -187,22 +187,22 @@ tags:
     > That property holds a string of more than 64000 characters and the java compiler gives me a *constant string too long* error.
     > What can I do?
 
-    > This is how it looks like so far:
+    > This is what it looks like so far:
 
     > ![long string property macro](long_string_property_macro.png){width="600px"}
 
     **Option 1**: Extract into a separate file
 
-    Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.
+    Of course, it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.
 
     **Option 2**: Split and join again
 
     The restriction only applies to the size of string literals. However, at runtime, it is allowed to have larger strings. So that we can split it into a concatenation that gets assembled at runtime then:
 
     * Here we use the [Guiva](https://github.com/google/guava) classes [Joiner](https://github.com/google/guava) and [Splitter](https://github.com/google/guava) from `MPS.Core/google.common.base` and `java.util.Arrays`.
-    * We use the splitter at generation time to split it into parts of maximal 50000 characters.
-    * Then we map it onto an arbitrary node that has a string property, as `$LOOP$` requires a node
-    * In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible in the screenshot)
+    * We use the splitter at generation time to split it into parts of maximum 50000 characters.
+    * Then we map it onto an arbitrary node that has a string property, as `$LOOP$` requires a node.
+    * In the property macro inside the loop, we simply pull that property out of the node again (the inspector of this is not visible in the screenshot).
     * It is just a coincidence that we create nodes of the same concept and use the same property for the loop content, than for the outside context node. You may light-quote anything of type string here.
 
     ![long string improved macro](long_string_improved_macro.png)
@@ -218,7 +218,7 @@ tags:
 !!! question "How do you get the output path for a solution?"
 
     - To get an {{ mps_url("@mps.IFile") }}, call `#!java SModelOperations.getOutputLocation(model)`.
-    - To get an string, call `#!java ProjectPathUtil.getGeneratorOutputPath(module.getModuleDescriptor())`. You have to first cast the module to an `AbstractModule.`
+    - To get a string, call `#!java ProjectPathUtil.getGeneratorOutputPath(module.getModuleDescriptor())`. You have to first cast the module to an `AbstractModule.`
 
 ??? question "How can I check if a model requires generation programmatically?"
 
@@ -236,7 +236,7 @@ tags:
     if (statusManager.generationRequired(model)) { /* ... */ } 
     ```
     
-    Unfortunately, it does'nt seem to be reliable, e.g. when changing something in the model, the API behaves correctly in the first place. But after executing the *Synchronize* action, MPS for some reason believes that generation is not required any more (even though the change would have an effect on the output and *Synchronize* doesn't execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).
+    Unfortunately, it doesn't seem to be reliable, e.g. when changing something in the model, the API behaves correctly in the first place. But after executing the *Synchronize* action, MPS for some reason believes that generation is not required anymore (even though the change would have an effect on the output and *Synchronize* doesn't execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).
 
     {{ contribution_by('till-f') }}
 
@@ -271,11 +271,11 @@ tags:
 
 !!! question "How do I debug generators?"
     
-    {{ blog('sl',false) }}[Debugging generators](https://specificlanguages.com/posts/debugging-generators/)
+    [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){{ blog('sl') }}
 
 !!! warning "The generated code has no debug symbols."
 
-    Locate the build solution in MPS that is building your languages and adjust the java settings:
+    Locate the build solution in MPS that is building your languages and adjust the Java settings:
     
         java options <project default> 
           generate debug info false 
@@ -288,7 +288,7 @@ tags:
     
     Then set *generate debug info* to true.
     
-    If no java options exist in your build solution, simply add one in the project structure.
+    If no Java options exist in your build solution, simply add one to the project structure.
 
 ??? question "How can you debug the differences of generation between command line and MPS?"
 
@@ -296,9 +296,9 @@ tags:
     > When I run the same in a command line then I see a compile error.
     > How can I debug this?
 
-    The issue behind this kind of issues usually lies in one of these three things:
+    The cause behind this kind of issues usually lies in one of these three things:
 
-    **Issue Area 1**: Settings (inplace, threading)
+    **Issue Area 1**: Settings (in place, threading)
     
     Try turning off *Apply transformations in place* in your MPS settings under *Build, Execution, Deployment* --> *Generator* --> *General*, as this is unset in the command line (note, that this setting doesn't appear in the search):
     
@@ -312,11 +312,11 @@ tags:
     
     **Issue Area 3**: Generation plans
     
-    The command line build runs the generator plans that are included in the devkits of a model, or that are explicitly added to the _generator_ facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could be the culprit. (Remember, right-clicking a model and *Show Generation Plan* to see if all looks as expected).
+    The command line build runs the generator plans that are included in the devkits of a model, or that are explicitly added to the _generator_ facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could be the culprit. (Remember, right-click a model and *Show Generation Plan* to see if all looks as expected).
 
-    Remark 1: Inplace transformations are on or off depending on your build script, same applied to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build not project is opened, which means anything that tried to access the project including virtual files will fail.
+    Remark 1: Inplace transformations are on or off depending on your build script, the same applies to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build no project is opened, which means anything that tried to access the project including virtual files will fail.
 
-    Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to MPS-32026 that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
+    Remark 2: One potential source of problems could be the packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to MPS-32026 that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
 
     {{ contribution_by('abstraktor') }}
 

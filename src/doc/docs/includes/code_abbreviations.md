@@ -33,7 +33,7 @@
 *[bhvr]: behavior
 *[bim]: buffered image
 *[bis]: buffered input stream
-*[bl]: baselanguage/baseline
+*[bl]: base language/baseline
 *[bos]: byte array output stream
 *[bool]: boolean
 *[bp]: breakpoint/binary persistence
@@ -63,7 +63,7 @@
 *[clr]: clear
 *[cls]: class
 *[cmd]: command
-*[cme]: cross model environment
+*[cme]: cross-model environment
 *[cmp]: compare/comparison
 *[com]: commercial/common/communication
 *[comm]: common
@@ -84,7 +84,7 @@
 *[const]: constant
 *[conv]: conversation
 *[coord]: coordinate
-*[cp]: check point (state)/copy/current process
+*[cp]: checkpoint (state)/copy/current process
 *[cpb]: concept presentation builder
 *[cr]: concept reference/registry
 *[cs]: change set/collection sequence
@@ -211,12 +211,12 @@
 *[lang]: language
 *[lat]: latitude
 *[lca]: lowest common ancestor
-*[lcv]: lower case value
+*[lcv]: lower-case value
 *[ld]: link declaration/descriptor
 *[le]: less or equal
 *[len]: length
 *[lf]: line feed
-*[lhs]: left hand side
+*[lhs]: left-hand side
 *[lib]: library
 *[ll]: linked list
 *[lm]: labeled mappings
@@ -341,7 +341,7 @@
 *[res]: result
 *[ret]: return
 *[rgb]: red/blue/green
-*[rhs]: right hand side
+*[rhs]: right-hand side
 *[rl]: reference link
 *[rm]: remove/root model
 *[rnd]: random
@@ -355,7 +355,7 @@
 *[ret]: return
 *[rev]: revision
 *[rm]: remove
-*[rt]: right type/runtime/result type/result tpype
+*[rt]: right type/runtime/result type/result type
 *[rv]: result value
 *[sa]: style attribute
 *[sb]: string builder/buffer
@@ -397,14 +397,14 @@
 *[sync]: synchronization
 *[sw]: string writer
 *[ta]: text area
-*[tc]: teamcity/template context/template call
+*[tc]: TeamCity/template context/template call
 *[td]: table data/type definition/target declaration
 *[tee]: template execution environment
 *[teei]: template execution environment implementation
 *[temp]: temporary
 *[tf]: template fragment
 *[tg]: template generator/thread group
-*[tgl]: toogle
+*[tgl]: toggle
 *[tgs]: text generation support
 *[tgt]: target
 *[th]: throwable
@@ -441,7 +441,6 @@
 *[vf]: virtual file
 *[vfs]: virtual file system
 *[vp]: view port/virtual package
-*[vv]: ? value
 *[wa]: write action
 *[win]: window/Windows
 *[wiz]: wizard

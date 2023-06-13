@@ -9,9 +9,9 @@ This document lists some recommendations for code written it MPS. For a general 
 
 ## Implementation
 
-- {{ blog('sl',false) }}[Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/)
-- Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that should have a name. The name property can be automatically used as the name for root nodes, references etc.
-- Avoid deep nested call chains, for example: `nodea.nodeb.nodec.property`. Consider providing a method to access a property or method for the deeper levels.
+- [Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/){{ blog('sl') }}
+- Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that should have a name. The name property can be automatically used as the name for root nodes, references, etc.
+- Avoid deeply nested call chains, for example: `nodea.nodeb.nodec.property`. Consider providing a method to access a property or method for deeper levels.
 - Use [isInstanceOf](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865) to check if a node is an instance of a concept.
 - Use the built-in collection classes such as collections, set, list, and map ([documentation](https://www.jetbrains.com/help/mps/collections-language.html)). Use the correct type of collection[^4].
 - Use the [access language](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage) instead of directly calling [ModelAccess](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EModelAccess) methods.
@@ -24,7 +24,7 @@ This document lists some recommendations for code written it MPS. For a general 
 - Use annotation `#!java @NotNull` and `#!java @Nullable` for baselanguage code. A specific type system rule in MPS checks these annotations.
 - Use [:eq:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259) (NPE safe equals operation) and [\:ne:](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271221393) 
   NPE safe not equals operation instead of [==](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152) and `#!java equals`.
-- Return optional values instead of null in `baselanguage` code[^1].
+- Return optional values instead of null in Base Language code[^1].
 
 ## Exceptions and warnings
 
@@ -34,12 +34,13 @@ This document lists some recommendations for code written it MPS. For a general 
   `#!java log error "This is an error",errorObject`
 - Clean up in the *finally-block* of a try statement.
 - Treat warnings in MPS as errors[^5] and also don't ignore warnings and errors. Warnings might become errors or even make the compilation fail in the future. Ignoring too many messages can hide real errors that you have to address.
-- Specific Languages blog: [Warnings should not replace documentation](https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/)
+- [Warnings should not replace documentation](https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/){{ blog('sl') }}
 
 ## Swing components
 
-- Use components from the IntelliJ platform. [here](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html) describe some more components. Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.
-- Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (*a*, *an*, *the*, *and*, *or*, *so*, *yet*, etc.), and don't appear as the first or last word.
+- Use components from the IntelliJ platform. The
+  IntelliJ Platform Plugin SDK mentions [some more components](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html). Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.
+- Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (*a*, *an*, *the*, *and*, *or*, *so*, *yet*, etc.), that don't appear as the first or last word.
   If the text isn't short, then you should use the capitalization used in ordinary prose (sentence capitalization) instead.
 - Read the [Swing tutorials](https://docs.oracle.com/javase/tutorial/uiswing/index.html) to get a better understanding of the components.
 
@@ -51,8 +52,8 @@ This document lists some recommendations for code written it MPS. For a general 
 
 ## Miscellaneous
 
-- Be careful when using unicode inside MPS. It might break something (MPS-33687, MPS-31835).
-- Use gradle for build scripts ([minimal example](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75)).
+- Be careful when using unicode characters inside MPS. It might break something (MPS-33687, MPS-31835).
+- Use Gradle for build scripts ([minimal example](https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75)).
 - Do not leave debug statements in production code (exception: [debug log](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497) statements).
 
 [^1]:[Return Optional not null](http://www.javapractices.com/topic/TopicAction.do?Id=279)

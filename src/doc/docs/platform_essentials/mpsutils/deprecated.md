@@ -1,4 +1,4 @@
-# Deprecated
+# Deprecated languages and solutions
 
 ## Build utilities
 
@@ -13,7 +13,7 @@
 !!! warning "This language isn't used anymore and is disabled."
 
 This language added support for customizing the code completion menu with tabs and a special tab for creating reference
-targets. The contributions were made in a plugin solutions by creating a [CCMenuExtensions](http://127.0.0.1:63320/node?ref=r%3A3d5b7b5d-2674-4caf-bdca-c100c5a0cb8e%28com.mbeddr.mpsutil.ccmenu.structure%29%2F6243347984996272104) root node.
+targets. The contributions were made in a plugin solution by creating a [CCMenuExtensions](http://127.0.0.1:63320/node?ref=r%3A3d5b7b5d-2674-4caf-bdca-c100c5a0cb8e%28com.mbeddr.mpsutil.ccmenu.structure%29%2F6243347984996272104) root node.
 
 ## Forms
 
@@ -26,15 +26,15 @@ targets. The contributions were made in a plugin solutions by creating a [CCMenu
 
 > ^^com.mbeddr.mpsutil.gradlesupport^^
 
-This language was an attempt to create Gradle files from MPS. It has a concepts for
-text files, single lines and multi lines. If you want to generate text files, use one of the
+This language was an attempt to create Gradle files from MPS. It has concepts for
+text files, single lines, and multiple lines. If you want to generate text files, use one of the
 [text generator plugins](https://jetbrains.github.io/MPS-extensions/extensions/generator/plaintext-gen/) from {{ mps_extensions() }}.
 
 ## HTTP support
 
 > ^^com.mbeddr.mpsutil.httpsupport^^
 
-!!! warning "This was the old http support plugin. Please use the language jetbrains.mps.ide.httpsupport instead."
+!!! warning "This was the old HTTP support plugin. Please use the language jetbrains.mps.ide.httpsupport instead."
 
 
 ## Icon char
@@ -47,7 +47,7 @@ text files, single lines and multi lines. If you want to generate text files, us
 
 > ^^com.mbeddr.mpsutil.langstats^^
 
-This language contains a concept [Counter](http://127.0.0.1:63320/node?ref=44ad0baa-db6e-4793-9250-f08ab386ec56%2Fr%3Aae5422b8-2aa2-4f57-80cb-0636bf6344ae%28com.mbeddr.mpsutil.langstats%2Fcom.mbeddr.mpsutil.langstats.structure%29%2F2745981761596927378) that can be populated by invoking the intention `Count` after creating a new instance in any model. It will search the current model and all imported models and will fill it with some general stats like the number of concepts, properties or number of type system rules. The formula for the lines of code (LOC) property can be found [in the editor](http://127.0.0.1:63320/node?ref=44ad0baa-db6e-4793-9250-f08ab386ec56%2Fr%3Aa9d5f5c6-b55f-4bb9-8d35-0ab16f5a6136%28com.mbeddr.mpsutil.langstats%2Fcom.mbeddr.mpsutil.langstats.editor%29%2F2745981761597143560). Most of the stats can be easily replicated with the [MPS console](https://www.jetbrains.com/help/mps/mps-console.html).
+This language contains a concept [Counter](http://127.0.0.1:63320/node?ref=44ad0baa-db6e-4793-9250-f08ab386ec56%2Fr%3Aae5422b8-2aa2-4f57-80cb-0636bf6344ae%28com.mbeddr.mpsutil.langstats%2Fcom.mbeddr.mpsutil.langstats.structure%29%2F2745981761596927378) that can be populated by invoking the intention `Count` after creating a new instance in any model. It will search the current model and all imported models and will fill it with some general stats like the number of concepts, properties, or number of type system rules. The formula for the lines of code (LOC) property can be found [in the editor](http://127.0.0.1:63320/node?ref=44ad0baa-db6e-4793-9250-f08ab386ec56%2Fr%3Aa9d5f5c6-b55f-4bb9-8d35-0ab16f5a6136%28com.mbeddr.mpsutil.langstats%2Fcom.mbeddr.mpsutil.langstats.editor%29%2F2745981761597143560). Most of the stats can be easily replicated with the [MPS console](https://www.jetbrains.com/help/mps/mps-console.html).
 
 ```
 Counter                  

@@ -7,7 +7,7 @@ tags:
 ## Base Language
 > ^^jetbrains.mps.baselanguage^^
 
-For a full list of *baselanguage* bugs and feature requests, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
+For a full list of Base Language bugs and feature requests, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
 
 ### Blog posts
 
@@ -17,15 +17,15 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
 !!! warning "Paste as Java class doesn't work."
 
     Not all newer Java features can be pasted such as the double colon operator(::) and static imports (fixed in the newest MPS versions). Loops with more
-    than one variable also don't work.
+    than one variable also doesn't work.
 
-!!! warning "Set the `Export flag at the moduleX import."
+!!! warning "Set the Export flag at the moduleX import."
 
     You are using a class that extends another class that is situated in another solution. That means that the export flag for the other
-    solutions should be set in the current module, so that there is automatically a dependency to this module.
+    solutions should be set in the current module so that there is automatically a dependency on this module.
     More information can be found in [dependencies: export flag](dependencies.md#export-flag).
 
-!!! question "What Java language features aren't supported in *baselanguage*?"
+!!! question "What Java language features aren't supported in Base Language?"
 
     The following features are not supported (yet):
 
@@ -38,10 +38,10 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
     - [double brace initialization](https://www.geeksforgeeks.org/double-brace-initialization-java)
 
 
-!!! warning "A function with *baselanguage* code doesn't return anything when called."
+!!! warning "A function with Base Language code doesn't return anything when called."
 
-    *baselanguage* permits implicit returns. The last statement is automatically returned. In some
-    places implicit returns aren't supported, such as when returning a new `ListScope` class. Make sure to add a return
+    Base Language permits implicit returns. The last statement is automatically returned. In some
+    places, implicit returns aren't supported, such as when returning a new `ListScope` class. Make sure to add a return
     statement in such places.
 
 !!! question "What library does MPS use to parse Java code?"
@@ -56,7 +56,7 @@ For a full list of *baselanguage* bugs and feature requests, have a look at [thi
 
 > ^^jetbrains.mps.baselanguage.varVariable^^
 
-This extension allows to declare local variables with the type automatically inferred from the initializer which must not be empty. Example:
+This extension allows declaring local variables with the type automatically inferred from the initializer which must not be empty. Example:
 
 ```java
 var value = (ISimple) {var input => return 1; }
@@ -72,9 +72,9 @@ var x=0c710
 
 > ^^jetbrains.mps.baselanguage.closures^^
 
-!!! warning "Exception when passing closure literal as a parameter in a behaviour method call"
+!!! warning "Exception when passing closure literal as a parameter in a behavior method call"
 
-    Closures can't be used for functional interface types such as `java.util.Runnable` in behaviour methods (see MPS-31866)
+    Closures can't be used for functional interface types such as `java.util.Runnable` in behavior methods (see MPS-31866)
 
 ## Collections
 
@@ -85,16 +85,16 @@ var x=0c710
     new singleton<string>("single")`
     ```
 
-!!! question "How do you convert from a Java *ArrayList* to a *baselanguage* list?"
+!!! question "How do you convert from a Java *ArrayList* to a Base Language list?"
 
     Use the copy constructor: 
     ```java
     new arraylist<string>(copy: yourArrayList)`
     ```
 
-!!! question "How do you convert *baselanguage* collections to Java streams?"
+!!! question "How do you convert Base Language collections to Java streams?"
 
-    First convert your collection to a list that you downcast to a Java list.
+    First, convert your collection to a list that you downcast to a Java list.
     Then you can convert it into a stream `#!java StreamSupport.stream(list/.spliterator(), false)`
 
 !!! question "Why doesn't *yield* work inside a select operation?"
@@ -129,7 +129,7 @@ var x=0c710
 > ^^jetbrains.mps.baselanguage.checkeddots^^
 
 - voids `NullPointerException` when Java executes a method call on a null variable. For example, it won't throw a `NullPointerException`, if `myObject` is null.
-- **bold** methods or dot-expressions are null safe, for example `new arraylist<string>()`.**where**`({~it => })`
+- **bold** methods or dot-expressions are null safe, for example, `new arraylist<string>()`.**where**`({~it => })`
 
 ## Access language 
 
@@ -141,10 +141,10 @@ var x=0c710
 
 > ^^jetbrains.mps.lang.editor.structure^^
 
-- An intention can mark a regular property-cell such as string, int, and boolean as transactional.
+- An intention can mark a regular property cell such as string, int, and boolean as transactional.
 - MPS updates the editor, when the cursor leaves the cell (= commit).
 - You must define the commit handler in the inspector. The benefit is that the editor isn't permanently updated on every key typed.
-- Can be useful, for example, if you set your text-color dynamically.
+- Can be useful, for example, if you set your text color dynamically.
 
 ## Images
 
@@ -157,7 +157,7 @@ var x=0c710
   <figcaption>example: image cell</figcaption>
 </figure>
 
-## Baselanguage internal
+## Base Language internal
 
 Specific Languages blog: [Poor man's cross-model generation: baseLanguageInternal](https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/)
 
@@ -165,11 +165,11 @@ Specific Languages blog: [Poor man's cross-model generation: baseLanguageInterna
 
 > ^^jetbrains.mps.core.xml.sax^^
 
-[SAX](https://www.baeldung.com/java-sax-parser), also known as the Simple API for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the *root* element and then at *rules* for XML tags.
+[SAX](https://www.baeldung.com/java-sax-parser), also known as the Simple API for XML, is used for parsing XML documents. This language allows creating sax parsers. The parser can take parameters and save data into variables. You start by specifying the *root* element and then at *rules* for XML tags.
 
 ### Rules
 
-The rule can have an optional *creator* which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (*attr*) and children which take can have an optional handler. It has two arguments: the *result* which has the same type as the type of the rule and the *child* which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The *default* child block can be used for children with any tags. Next there can be a *text* handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the *validate* method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the *global text handler text*. 
+The rule can have an optional *creator* which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (*attr*) and children which take can have an optional handler. It has two arguments: the *result* which has the same type as the type of the rule and the *child* which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The *default* child block can be used for children with any tags. Next, there can be a *text* handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the *validate* method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the *global text handler text*. 
 Example:
 
 ```java
@@ -219,7 +219,7 @@ sax parser ModelReader8 {
 }
 ```
 
-To use the generated parser, you have to use [InternalClassCreator](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024) from Baselanguage Internal. Example:
+To use the generated parser, you have to use [InternalClassCreator](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024) from Base Language Internal. Example:
 
 `#!java new [ XMLSAXHandler ] jetbrains.mps.smodel.persistence.def.v8.LineToContentMapReader8Handler (withPropertyValues, withAssociationTarget)`
 
@@ -227,7 +227,7 @@ To use the generated parser, you have to use [InternalClassCreator](http://127.0
 
 > ^^jetbrains.mps.lang.checkedName^^
 
-This language can be used to reference properties. `property/<node>,<role>/`is the main expression which has the type `propRef<>`. To access the value use `.value`. Example: 
+This language can be used to reference properties. `property/<node>,<role>/`is the main expression that has the type `propRef<>`. To access the value use `.value`. Example: 
 ```java
 propRef<string> property = property/node/Class/ | name/;
 #print property.value;
@@ -238,7 +238,7 @@ This expression is the node pendant for the `property/<concept>:<name>/` express
 
 > ^^jetbrains.mps.core.properties^^
 
-This language adds support for [Java \.properties](https://en.wikipedia.org/wiki/.properties) files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
+This language adds support for [Java \.properties](https://en.wikipedia.org/wiki/.properties) files. The keys and values are escaped automatically when they contain special characters. The generated properties file has the encoding ISO-8859-1.
 Example:
 ```properties 
 mps_home=/Applications/MPS.app 
@@ -253,7 +253,7 @@ locale=en_US
 
 > ^^jetbrains.mps.lang.editor.forms^^
 
-This language add support for checkboxes. Text based checkboxes (text checkbox UI) and image checkboxes (platform checkbox UI) are available. The text-based checkbox can be styled like any other constant text. The checkbox cell has an *ui* parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the *label*. The checkbox can be toggled through clicking and pressing space. The
+This language adds support for checkboxes. Text-based checkboxes (text checkbox UI) and image checkboxes (platform checkbox UI) are available. The text-based checkbox can be styled like any other constant text. The checkbox cell has an *ui* parameter which allows switching between both styles. The state is backed by a boolean property. The visible text is specified by the *label*. The checkbox can be toggled by clicking and pressing space.
 
 ![forms: checkbox](forms_checkbox.png)
 
@@ -261,7 +261,7 @@ This language add support for checkboxes. Text based checkboxes (text checkbox U
 
 > ^^jetbrains.mps.lang.editor.imageGen^^
 
-The single concept [ImageGenerator](http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484) can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node id must be provided. The image is generated through the facet [GenerateImages](http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862) which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
+The single concept [ImageGenerator](http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484) can generate an image for a node. It accepts a file name, and a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node id must be provided. The image is generated through the facet [GenerateImages](http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862) which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
 ```java
 IIORegistry registry = IIORegistry.getDefaultInstance(); 
 StringBuilder builder = new  StringBuilder(); 

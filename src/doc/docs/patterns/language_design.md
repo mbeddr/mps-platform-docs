@@ -86,7 +86,7 @@ tags:
 - [Thoughts on Formal Verification and DSLs](https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48){{ blog('mv') }}
 - [Thoughts on X-by-Construction](https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024){{ blog('mv') }}
 
-### Z3 Theorem prover
+### Z3 theorem prover
 
 - [Programming Z3 (tutorial)](https://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [Program verification with Z3 (course slides)](https://www.pm.inf.ethz.ch/education/courses/program-verification.html#:~:text=lec%C2%ADtures%20%26%20ex%C2%ADer%C2%ADcises)

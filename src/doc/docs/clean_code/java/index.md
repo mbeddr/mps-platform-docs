@@ -4,7 +4,7 @@ tags:
 - best_practise
 ---
 
-To learn more information about advanced Java topics such as the Java virtual machine, collections language and many more topics,
+To learn more information about advanced Java topics such as the Java virtual machine, collections language, and many more topics,
 visit [baeldung.com](https://www.baeldung.com/category/java).
 
 [Refactoring.guru](https://refactoring.guru/refactoring/smells) has information about general code smells.
@@ -22,8 +22,8 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 - Use lazy initialization if performance is [critical](http://www.javapractices.com/topic/TopicAction.do?Id=34) or use [caching](https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/) if necessary.
 
 ## Utility and helper classes
-- Utility class: include only static methods and are stateless. Don't create an instance of such a class.
-- Helper class: they can be utility classes, or it can be stateful or require an instance. It can be any class whose design is to aid another class.
+- Utility class: they include only static methods and are stateless. Don't create an instance of such a class.
+- Helper class: they can be utility classes, or they can be stateful or require an instance. It can be any class whose design is to aid another class.
 - Try to make the name of the utility or helper class more specific (for example: *AdministrationHelper*, *LoginHelper* instead of *Helper*).
 
 ## More tips

@@ -14,9 +14,9 @@ Settings applied to all projects opened with this MPS installation ([official do
 
 #### (IDEA) Plugins
 
-**UI**: entry in settings dialog
+**UI**: entry in the settings dialog
 
-A packaged set of contributions to the [IntelliJ IDEA platform](https://plugins.jetbrains.com/docs/intellij/welcome.html), which MPS is based upon.
+A packaged set of contributions to the [IntelliJ IDEA platform](https://plugins.jetbrains.com/docs/intellij/welcome.html), on which MPS is based upon.
 
 Contained in one of the following places:
 
@@ -28,13 +28,13 @@ However, you can package MPS plugins into IDEA plugins, just as any other conten
 
 ### Project settings
 
-**UI**: Entry in settings dialog
+**UI**: Entry in the settings dialog
 
 Settings applied to one project. Stored in *${project}/.mps/*.
 
 ## Modules pool
 
-**UI**: second root entry in logical view
+**UI**: second root entry in the logical view
 
 All content known to MPS is contained in its modules pool. This modules pool is shared between all windows of the same MPS installation. In some future MPS version, every window should have its independent modules pool.
 
@@ -49,11 +49,11 @@ Every Project is contained in its own window.
 
 ## Project
 
-**UI**: first root entry in logical view
+**UI**: first root entry in the logical view
 
 A project is a collection of modules. A module can be part of more than one project. They can be added via the *Project Paths* context menu entry of the project.
 
-Modules can be nested in folders. These folders are stored in the project, i.e. the same module can be in different folders inside different Projects. Folders are only for visual organization, they don't have any effect on storage location, generation or anything else.
+Modules can be nested in folders. These folders are stored in the project, i.e. the same module can be in different folders inside different Projects. Folders are only for visual organization, they don't have any effect on storage location, generation, or anything else.
 
 !!! question "What are some known predefined path variables?"
 

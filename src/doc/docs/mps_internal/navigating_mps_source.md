@@ -9,24 +9,24 @@ More information can be found in the readme of the repository.
 
 ## .idea
 
-The `artifacts` directory contains the artifact related settings. More info can be found
+The `artifacts` directory contains the artifact-related settings. More info can be found
 in [Artifacts | IntelliJ IDEA](https://www.jetbrains.com/help/idea/working-with-artifacts.html). Artifacts in this project are the generated jar files
 such as `mps-core.jar` and `vcs-core.jar`:
 
 ![mps artifacts dialog](mps_artifacts.png)
 
-The directory also contains settings for code styles, copyright info and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
-many other IntelliJ specific project settings,
+The directory also contains settings for code styles, copyright info, and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
+many other IntelliJ-specific project settings,
 
 ## .mps
 
 This folder also contains run configurations and scopes but also other settings:
 
-- *codeStyleSettings.xml*: style settings used for baselanguage (e.g. default field and parameter prefix)
+- *codeStyleSettings.xml*: style settings used for Base Language (e.g. default field and parameter prefix)
 - *compiler.xml*: the version of the Java compiler (currently: 11)
 - *encodings.xml*: encoding of the files (should be: UTF-8)
-- *migration.xml*: list of executed MPS migrations in current project 
-- *misc.xml*: miscellaneous settings (e.g. settings of favourites manager)
+- *migration.xml*: list of executed MPS migrations in the current project 
+- *misc.xml*: miscellaneous settings (e.g. settings of favorites manager)
 - *modules.xml*: a list of modules of this project that are loaded in MPS
 - *vcs.xml*: version control settings
 - *version.xml*: project version (not used anymore)
@@ -35,7 +35,7 @@ This folder also contains run configurations and scopes but also other settings:
 ## bin
 
 This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS specific files:
+operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS-specific files:
 
 - Linux
     - *libdgbm*: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX *dbm* function [source](https://packages.debian.org/de/sid/libgdbm-dev)
@@ -83,19 +83,19 @@ The `resources` folder contains image resources as well as the following files:
 The `tests` folder contains Ant scripts for executing tests.
 The `tools` folder contains scripts for signing and creating DMGs and also
 a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
-The other XML files are also Ant scripts for different tasks (getting dependencies, building MPS languages, migration projects etc.).
+The other XML files are also Ant scripts for different tasks (getting dependencies, building MPS languages, migration projects, etc.).
 The `run_build.sh` and `run_test.sh` can be used to run the build and tests
 on Linux/Mac respectively. `update.xml` lists all MPS versions and is used to show automatic updates for MPS.
 
 ## core
 
 The `aspects` folder contains the languages for the language aspects.
-The `baselanguage` folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.
+The `baselanguage` folder contains the Base Language implementation and all its extensions such as extension methods, closures, or the collection language.
 
 The folder `devkit` contains the four main devkits:
 
 - ^^jetbrains.mps.devkit.bootstrap-languages^^: contains all the jetbrains.mps.lang languages
-- ^^jetbrains.mps.devkit.general-purpose^^: baselanguage + smodel + text +  quotation language
+- ^^jetbrains.mps.devkit.general-purpose^^: Base Language + smodel + text +  quotation language
 - ^^jetbrains.mps.devkit.language-design^^ + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources
 - ^^jetbrains.mps.devkit.templates^^: general-purpose + generator languages
 
@@ -106,7 +106,7 @@ make classes and runtime classes for smodel such as `SConceptOperations.java` an
 
 ### languages
 
-This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.
+This folder contains all core languages such as smodel, quotation, access, quotations, pattern, and so forth.
 
 ### make
 
@@ -118,7 +118,7 @@ This folder contains all stub models provided by MPS, e.g. stubs for annotations
 
 ### tool
 
-This folder contains classes for accessing MPS from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.
+This folder contains classes for accessing MPS from Java (e.g. `MPSEnvironment) and other tool-related classes such as accessing Ant from Java.
 
 ## platform
 
@@ -126,11 +126,11 @@ This folder contains languages and solutions for the following platform features
 
 - build language
 - console
-- http server
+- HTTP server
 - make
 - migrations
 - model checker
-- Java to mps parsing
+- Java to MPS parsing
 - spell checker
 - debugging information (traceInfo)
 - version control
@@ -139,7 +139,7 @@ This folder contains languages and solutions for the following platform features
 
 ## samples
 
-This folder contains the samples that are ship with MPS. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.
+This folder contains the samples that are shipped with MPS. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.
 
 ## tests
 
@@ -152,7 +152,7 @@ This folder contains subfolders for:
 - [MPS debugger](https://www.jetbrains.com/help/mps/using-mps-debugger.html)
 - [Context actions](https://www.jetbrains.com/help/mps/context-actions-tool.html)
 - editor related actions
-- run configurations + execution of baselanguage and other languages
+- run configurations + execution of Base Language and other languages
 - refactorings
 - UI components and tools such as the dependency viewer, the new module dialog as well as different finders
 - all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)

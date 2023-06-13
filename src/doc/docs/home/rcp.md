@@ -8,27 +8,27 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
 !!! warning "A plugin is incompatible with the current RCP version."
     
-    {{ blog('sl',false) }}[Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/)
+    [Fixing the 'Plugin incompatible with the current [CUSTOM RCP] version' error](https://specificlanguages.com/posts/plugin-incompatible-with-current-version/){{ blog('sl') }}
 
 !!! question "How can you customize the welcome screen in an RCP?"
 
-    - {{ blog('sl',false) }}[Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/)
+    - [Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/){{ blog('sl') }}
     
     The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. A cheat sheet for the syntax can be found [here](https://devhints.io/xpath). 
     
-    - {{ blog('sl',false) }}[Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/)
-    - {{ blog('sl',false) }}[A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/)
+    - [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/){{ blog('sl') }}
+    - [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/){{ blog('sl') }}
 
 !!! question "How can you reduce the size of an RCP?"
 
-    - Remove all packaged plugins that you don't need
-    - Use a JBR version without JCEF if you don't need an embedded browser (jbr_nomod).
+    - Remove all packaged plugins that you don't need.
+    - Use a JBR version without JCEF if you don't need an embedded browser (*jbr_nomod*).
 
 !!! question "How can I deactivate a preference page?"
 
     - Remove the plugin that contains the preference page.
     - For `SPreference` pages: they are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and then call `#!java dispose`
-    or you could unregister the preference pages itself. For example:
+    or you could unregister the preference pages themselves. For example:
     ```java
     Project ideaProject = ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project);
     list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ideaProject.getPlugins());
@@ -52,21 +52,21 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
     `ant -f build/getDependencies.xml download-platform`
 
-    It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the intelliJ project where you can read the sources and also step into them when debugging.
+    It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the IntelliJ project where you can read the sources and also step into them when debugging.
 
     In case you're looking at an RCP: `build.number` and `build.txt` provide this information and more, eg `idea.platform.build.number=MPS—203.7717.56`.
 
     The platform version is part of the build information e.g. MPS—211.7442.1291
 
-    To get the baseline version e.g. 211, programatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
+    To get the baseline version e.g. 211, programmatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
 
-    To get the full version e.g. 211.7442.1291, programatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
+    To get the full version e.g. 211.7442.1291, programmatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
 
-??? question "How can you show a custom implemented project view instead of the MPS logical view?"
-    Assume that the view was build with ^^com.mbeddr.mpsutil.projectview^^:    
+??? question "How can you show a custom-implemented project view instead of the MPS logical view?"
+    Assume that the view was built with ^^com.mbeddr.mpsutil.projectview^^:    
 
     ```java
-    SwingUtilities.invokeLater(new Runnable() { 
+    ApplicationManager.getInstance().invokeLater(new Runnable() { 
         public void run() {
             list<AbstractProjectViewPane> viewsToRemove = new linkedlist<AbstractProjectViewPane>;
             ProjectView projectView = ProjectView.getInstance(project.getProject());
@@ -90,16 +90,16 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
         })
     ```
 
-!!! question "How can you customise the *New Roots* (mbeddr.platform) or *New dialog* of MPS/mbeddr?"
+!!! question "How can you customize the *New Roots* (mbeddr.platform) or *New dialog* of MPS/mbeddr?"
 
     ```java
     CreateRootFilterEP.getInstance().addFilter
     ```
 
-!!! question "how to change (or turn off) the exception submission dialog?"
+!!! question "How can you change or turn off the exception submission dialog?"
 
     - Remove all error handlers like [this](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36).
-    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop ups in the IDE where you can see the exception. Note: There were some [changes related to the logging configuration](https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration) in MPS 2022.2 where this answer is not valid anymore.
+    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop-ups in the IDE where you can see the exception. Note: There were some [changes related to the logging configuration](https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration) in MPS 2022.2 where this answer is not valid anymore.
 
 !!! question "Where can you find the latest MPS and IntelliJ icons?"
 
@@ -116,14 +116,14 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 !!! question "How can I install a custom editor color scheme?"
 
     Follow the guideline [Export IntelliJ editor themes as plugins | JetBrains blog](https://blog.jetbrains.com/platform/2017/12/export-intellij-editor-themes-as-plugins/) to export a jar file. You can copy this JAR file to the
-    *plugins* folder of the RCP. You can enable the color scheme by default with the following code in an applicaiton plugin:
+    *plugins* folder of the RCP. You can enable the color scheme by default with the following code in an application plugin:
     
     ```
     EditorColorsScheme colorScheme = EditorColorsManager.getInstance().getAllSchemes().asSequence.findFirst({~it => it.getDisplayName() :eq: "[NAME_OF_YOUR_SCHEME]"; }); 
     EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
     ```
 
-!!! question "How to you disable an MPS/Intellij tool window?"
+!!! question "How do you disable an MPS/IntelliJ tool window?"
 
     ```Java
     Project ideaProject = ProjectHelper.toIdeaProject(project);
@@ -146,7 +146,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
 !!! question "How do you add an action to the menu bar of an IntelliJ tool window?"
 
-    Example base on the project view:
+    The Example is based on the project view:
 
     ```Java
     ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(ToolWindowId.PROJECT_VIEW);

@@ -32,6 +32,6 @@ tags:
 | {{ mps_url("@mps.newTypesystem.SubtypingUtil") }}                                                           | subtyping related methods such as `leastCommonSuperTypes`.                                |
 | {{ mps_url("@mps.persistence.PersistenceUtil") }}                                                           | methods for saving and loading models                                                     |
 | {{ mps_url("@mps.project.ModelsAutoImportsManager") }}                                                      | utility methods related to auto importing models                                          |
-| {{ mps_url("@mps.project.ProjectManager") }}                                                                | project related methods such as creating projects and attaching listeners to projects     |
+| {{ mps_url("@mps.project.ProjectManager") }}                                                                | project-related methods such as creating projects and attaching listeners to projects     |
 | {{ mps_url("@mps.smodel.CopyUtil") }}                                                                       | methods for copying models and nodes                                                      |
 | {{ mps_url("@mps.smodel.ModelAccessHelper") }}                                                              | methods for running code as a command/read/write action                                   |

@@ -12,21 +12,21 @@ tags:
 - [Modality and invokeLater() | IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater)
 - [The Event Dispatch Thread | Oracle Java documentation](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html)
 
-Regardless of the calling thread, writing and reading MPS models always need to performed holding an appropriate lock.
+Regardless of the calling thread, writing and reading MPS models always need to be performed holding an appropriate lock.
 IntelliJ IDEA also needs read and write locks in its platform. The IDEA's lock is acquired first and only then the MPS's lock is acquired when using the MPS access language.
 The MPS locks are described in [Managing concurrent access | MPS](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage).
 
 ## Main thread
 
-- some operations need to be run in thus thread to keep race conditions from occurring
+- some operations need to be run in this thread to keep race conditions from occurring
 - the UI freezes when operations take a long time (run them in the background)
 - Write MPS model: `write action with`
 - Read MPS model: `read action with`
 
 ## AWT event dispatch thread (EDT) / UI / Editor Thread
 
-- drawing of components in MPS/IntelliJ IDEA is done through [Swing](https://www.tutorialspoint.com/swing/swing_quick_guide.htm)
-- Swing isn't thread safe, most of the Swing code runs in EDT.
+- drawing of components in MPS/IntelliJ IDEA is done through [Java Swing](https://www.tutorialspoint.com/swing/swing_quick_guide.htm)
+- Swing isn't thread-safe, most of the Swing code runs in EDT.
 - EDT = series of short tasks such as the `actionPerformed` method of a button.
 - Tasks must be short or the UI becomes unresponsive.
 - Synchronously write/read MPS model: `command with`.

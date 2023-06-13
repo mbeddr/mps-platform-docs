@@ -30,7 +30,7 @@ Multi-Party boolean decision table:
 
 ## Tracing
 
-To follow the executing of an interpreter, the execution trace is helpful. Right-click an interpreted node and click *Show Trace*. The Trace explorer now opens in the lower left corner. When you click one of the lines in the trace explorer, the node in the editor gets replaced by the trace. The trace can be manipulated through the *trace expression*.
+To follow the execution of an interpreter, the execution trace is helpful. Right-click an interpreted node and click *Show Trace*. The trace explorer now opens in the lower left corner. When you click one of the lines in the trace explorer, the node in the editor gets replaced by the trace. The trace can be manipulated through the *trace expression*.
 
 ![trace tool](trace_tool.gif)
 

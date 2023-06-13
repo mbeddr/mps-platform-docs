@@ -1,10 +1,10 @@
-This page is an addition to https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/. Some terminology of this page is explained on the page [[editor-dev#terminology|editor development]], so please read this page first. Additionally, when the variable's type or argument is omitted in a diagram, it is assumed to be *int*. Methods without a return type, have a type of *void*.
+This page is an addition to [Cell Layout | MPS-extensions](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/). Some terminology of this page is explained on the page [[editor-dev#terminology|editor development]], so please read this page first. Additionally, when the variable's type or argument is omitted in a diagram, it is assumed to be *int*. Methods without a return type, have a type of *void*.
 
-In the MPS layout algorithms, the children decide about their width and height, and the parent cell can only arrange the already layouted children. The algorithms from the celllayout language are similar to the ones from the swing layouters where the child is asked for its min/max/preferred size, but the parent decides about the size of the child and the child then has to fit itself into these bounds. The table and diagram language uses this language, but there are also some useful styles defined in the *de.itemis.mps.celllayout* language. The language is partially inspired by the Java [MigLayout](https://www.miglayout.com/).
+In the MPS layout algorithms, the children decide about their width and height, and the parent cell can only arrange the already layouted children. The algorithms from the cell layout language are similar to the ones from the Java Swing layouters where the child is asked for its min/max/preferred size, but the parent decides about the size of the child and the child then has to fit itself into these bounds. The table and diagram language uses this language, but there are also some useful styles defined in the *de.itemis.mps.celllayout* language. The language is partially inspired by Java [MigLayout](https://www.miglayout.com/).
 
 ## Box Model
 
-The box model defines how the editor elements are modeled in the celllayout language. It is like a simplified version
+The box model defines how the editor elements are modeled in the cell layout language. It is like a simplified version
 of the [CSS box model](https://en.wikipedia.org/wiki/CSS_box_model).
 
 ### Layout box
@@ -17,7 +17,7 @@ A layout box has a *position* (x,y) and a *dimension* (width, height). These pro
 ```
 
 The size can be changed with the *growN* methods, the position can be changed with the
-*move* methods. All of those methods take relative values. A listener can be set to listening to changes in the mentioned properties.
+*move* methods. All of those methods take relative values. A listener can be set to listen to changes in the mentioned properties.
 The default implementation is [DefaultLayoutBox](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118843427) which extends [AbstractlayoutBox](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118846449). Whenever a setter method is called, the corresponding method of the listener is triggered. The ascent is calculated by subtracting the descent from the height.
 
 ### LayoutBoxFrame
@@ -42,7 +42,7 @@ frame size. The default implementation is [DefaultLayoutBoxFrame](http://127.0.0
 
 ### BoxModel
 
-A [BoxModel](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842608) consists of 4 boxes. The most inner box contains the content, the most outer box is the margin.
+A [BoxModel](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F1605248462118842608) consists of 4 boxes. The innermost box contains the content, the outermost box is the margin.
 
 ```kroki-excalidraw
 @from_file:languages/diagrams/celllayout_boxmodel.excalidraw
@@ -53,17 +53,17 @@ The default implementation is [DefaultBoxModel](http://127.0.0.1:63320/node?ref=
 ### EditorCellBoxModel
 
 This box model is stored in the user object of the corresponding cell under the key 
-*EditorCellBoxModel*. Besides the mentioned boxes, is has a box for additional padding and a bracket box for when the cell has the stylesheet item *drawBrackets* enabled. The brackets have a width of 7 pixel. 
+*EditorCellBoxModel*. Besides the mentioned boxes, it has a box for additional padding and a bracket box for when the cell has the stylesheet item *drawBrackets* enabled. The brackets have a width of 7 pixels. 
 
 ```kroki-excalidraw
 @from_file:languages/diagrams/celllayout_editorcell_boxmodel.excalidraw
 ```
 
-#### Synchronisation
+#### Synchronization
 
-The read synchronisation method initializes the boxes based on the information from the editor cell. The padding is calculated as the gap minus the additional padding. If the padding is negative it is added as additional padding, otherwise it is set to the padding box.
+The read synchronization method initializes the boxes based on the information from the editor cell. The padding is calculated as the gap minus the additional padding. If the padding is negative it is added as additional padding, otherwise, it is set to the padding box.
 If the dimension is less than the total frame size of the bracket box, the additional padding is set to 0. The dimension is the maximum of the current dimension and the total frame size of the bracket box. The default behavior of MPS is not to reserve any space for the border and let it overlap. That's why the position is therefore calculated as the border size minus 1.
-In the write synchronisation method, the left and right gap are set. They are calculated as the padding plus the additional padding. Depending on the *useMove* flag, the cells are then moved or only the position is set.
+In the write synchronization method, the left and right gaps are set. They are calculated as the padding plus the additional padding. Depending on the *useMove* flag, the cells are then moved or only the position is set.
 
 ## Layout
 
@@ -80,7 +80,7 @@ The *deriveN* methods just change the width or height separately.
 
 All the *size* methods and the ascent calculation method take a container as the first parameter and a size constraint as a second parameter to restrict the returned size.
 *toText()* produces a string that is returned when copying the cells to the system clipboard. *usesPunctuation()*
-determines if punctuation stylesheet items are used. The class [AbstractLayout](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4403454289948172446) extends this interface. It has a method for checking and returning the gap in pixels between two ILayoutables. If the left ILayoutable has the stylesheet item *punctuation-right* or the right the item *punctuation-left* enabled, there is no gap. If one the two ILayoutables has
+determines if punctuation stylesheet items are used. The class [AbstractLayout](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4403454289948172446) extends this interface. It has a method for checking and returning the gap in pixels between two ILayoutables. If the left ILayoutable has the stylesheet item *punctuation-right* or the right item *punctuation-left* enabled, there is no gap. If one of the two ILayoutables has
 a border on the conjoined side, there is also no gap.
 
 ### ILayoutable
@@ -98,7 +98,7 @@ The [ILayoutableContainer](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca
 @from_file:languages/diagrams/celllayout_interface_ilayoutable_container.puml
 ```
 
-There are *innerX* methods for getting the position and dimension as well as a method for setting the inner bounds. There is also support for the *flatten-grid* and *base-line-child* property.
+There are *innerX* methods for getting the position and dimension as well as a method for setting the inner bounds. There is also support for the *flatten-grid* and *base-line-child* properties.
 
 ### Grid
 
@@ -108,7 +108,7 @@ A [Grid](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0c
 
 Each row has an ascent and descent, and all columns can have different widths. A column's width can be extended. It is kept the same if the new with is smaller than the existing width. It can also extend to an unlimited size. The row's height can also be extended by providing a new ascent and descent. The sum of both values has to be greater than zero. When the old values are greater, nothing changes. The contained cells of the grid can also be extended by providing a size getter that determines a new size for each ILayoutable.
 
-The widths can also be scaled by proving a new value and weights for the columns. The widths of the columns are percentages of the
+The widths can also be scaled by providing a new value and weights for the columns. The widths of the columns are percentages of the
 new width based on the weights (possible rounding errors are compensated). The same scaling method exists for the height: it works the same way except that the ascents and descents of the rows are recalculated. The provided weights don't have to add up to 1 as they are automatically normalized.
 ```java title="Example calculation"
 float availableWidth=500;
@@ -126,11 +126,11 @@ float element.y = element.baseLine - element.ascent;
 ```
 
 When the alignment center or alignment right property is set, the x position is changed accordingly based on the remaining space.
-This is the elements size minus the result size which is calculated in the following way: the minimum of the elements size and the preferred size is calculated, then the minimum of this size and the maximum size. If the *overflowN* property is set, the corresponding size direction will be set to unlimited.
+This is the size of the elements minus the result size which is calculated in the following way: the minimum of size of the elements and the preferred size is calculated, then the minimum of this size and the maximum size. If the *overflowN* property is set, the corresponding size direction will be set to unlimited.
 
-The main method of the grid is *growElement* which takes a grid element, an offset and the two directions as arguments. If the elements' dimension is lower than the maximum size of the ILayoutable, the ILayoutable's dimension becomes the element's dimension, otherwise the additional padding of the layout's box model is used to grow the element. For the horizontal growing, the alignment is taking into account.
+The main method of the grid is *growElement* which takes a grid element, an offset, and the two directions as arguments. If the elements' dimension is lower than the maximum size of the ILayoutable, the ILayoutable's dimension becomes the element's dimension, otherwise, the additional padding of the layout's box model is used to grow the element. For horizontal growing, the alignment is taken into account.
 
-A [GridElement](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714) has a ILayoutable and different *extendN* methods: extendSize works by changing the ascent of the ILayoutable. The descent is calculated by substracting the ascent from the height. There are further methods for extending the width and extending the columns.
+A [GridElement](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714) has a ILayoutable and different *extendN* methods: extendSize works by changing the ascent of the ILayoutable. The descent is calculated by subtracting the ascent from the height. There are further methods for extending the width and extending the columns.
 
 ### Standard layouts
 
@@ -143,23 +143,23 @@ Default implementations for the standard MPS layouts are provided:
 
 ICellLayoutWrapper can wrap an existing cell layout. It can be unwrapped by calling CellLayout.unwrapAll.
 [IEditorCellBasedLayoutable](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F3671361614442888780) extends ILayoutable and contains an editor cell, a method to check if an indent is present and a `readSyncAll` and `writeSyncAll` method.
-[ISupportsTopDownLayout](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F3671361614442886164) is an editorCell that has a topdown layoutable (IEditorCellBasedLayoutable).
+[ISupportsTopDownLayout](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F3671361614442886164) is an editor cell that has a top-down layoutable (IEditorCellBasedLayoutable).
 
 - [GridLayout](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F20138194853236771)
 
 This class uses the class [DynamicGrid](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F8791219374217538066) to store the grid. DynamidGrid stores the elements in a 1D array and automatically grows the array when the grid size changes.
-This layout respects the grid and row span properties and automatically adjusts the spans when the value is set to a negative value. The new values becomes
-the maximum number of spans that are available. It also has a method to load a sub grid into a DynamicGrid. The grid elements come from a [ILayoutableContainer](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047704919).
+This layout respects the grid and row span properties and automatically adjusts the spans when the value is set to a negative value. The new values become
+the maximum number of spans that are available. It also has a method to load a sub-grid into a DynamicGrid. The grid elements come from a [ILayoutableContainer](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F1140493069047704919).
 
 #### Flattening
 
 An ILayoutable is considered an intermediate if
 
 - it has a horizontal layout and the parent is a grid layout
-- it has a grid layout, horizontal or vertical layout and the *flatten-grid* stylesheet item is set.
+- it has a grid layout, horizontal or vertical layout, and the *flatten-grid* stylesheet item is set.
 
 This method plays a role in the flattening of the grid. When this item is used, all ancestor elements of the grid that have this property enabled,
-are placed directly in the main grid and are not sub-grids. In the following example it is assumed that the property is enabled for all children:
+are placed directly in the main grid and are not sub-grids. In the following example, it is assumed that the property is enabled for all children:
 
 ```kroki-excalidraw
 @from_file:languages/diagrams/celllayout_grid_flattening.excalidraw
@@ -175,13 +175,13 @@ The [EditorListenerCellProvider](http://127.0.0.1:63320/node?ref=r%3A02240f59-d2
 
 [AbstractLayoutableAdapter](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441899653) has a parent LayoutableCollectionAdapter and handles reading all cell layout specific stylesheet items (*readSyncAll*).
 All items are cached. The writing of the items (*writeSyncAll*) is forwarded to the box model.
-It also contains a editor cell box model. All setter and getter work with the margin box of this box model. The only special implementations are the size
-methods: the preferred size is the size of the box model's margin box. The maximum and minimum size are equivalent to the preferred size.
+It also contains an editor cell box model. All setter and getter work with the margin box of this box model. The only special implementations are the size
+methods: the preferred size is the size of the box model's margin box. The maximum and minimum sizes are equivalent to the preferred size.
 
 ### BorderPainter 
 
-[BorderPainter](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F7943214583599648867) is an [AbstractAdditionalPainter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EAbstractAdditionalPainter) that gets the information form the border box of the editor cell's box model. There is support for border thickness, color for each side of the box. The border is only painted when the specified rectangular area intersects with the current clipping area of
-the graphics object. The position and the dimension of the border gets changed because there is one pixel less reserved than required for the border.
+[BorderPainter](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F7943214583599648867) is an [AbstractAdditionalPainter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EAbstractAdditionalPainter) that gets the information form the border-box of the editor cell's box model. There is support for border thickness, and color for each side of the box. The border is only painted when the specified rectangular area intersects with the current clipping area of
+the graphics object. The position and the dimension of the border get changed because there is one pixel less reserved than required for the border.
 Paint requests are added to a queue which is then processed in order of thickness and brightness (light gray is the default color and has the 
 lowest priority). In the following example, the painter was enabled for all editor cells:
 
@@ -191,21 +191,21 @@ lowest priority). In the following example, the painter was enabled for all edit
 
 [LayoutableAdapter](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F7112191969006061574) extends [AbstractLayoutableAdapter](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441899653).
 
-It forwards *writeSync* to the box model and calls relayout on the cell if a relayout was requested.
-In the method *readSync*, relayout is requested if one of the *growN* properties is set. Then relayout is called.
+It forwards *writeSync* to the box model and calls re-layout on the cell if a re-layout was requested.
+In the method *readSync*, re-layout is requested if one of the *growN* properties is set. Then re-layout is called.
 
 ```kroki-plantuml
 @from_file:languages/diagrams/celllayout_interface_layoutable_adapter.puml
 ```
 
-When the expected bounds are not equal to the actual bounds or a relayout was requested or the cell is marked as changed, the cell is relayouted again.
-The size method takes a width and height and calculates the delta for the old dimension in comparison to the new dimension and assigns it to the additional padding box of the box model. The horizontal alignment is also taking into account.
+When the expected bounds are not equal to the actual bounds or a re-layout was requested or the cell is marked as changed, the cell is re-layouted again.
+The size method takes a width and height and calculates the delta for the old dimension in comparison to the new dimension and assigns it to the additional padding box of the box model. The horizontal alignment is also taken into account.
 
-The preferred size and also the minimum size is calculated as the dimension of the box model's padding minus the additional padding. The maximum size is equal to the preferred size unless the cell is an [Editor_Label](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Label) or one of the *grow* stylesheet itemi is set: in those cases, the width or the height or both can be unlimited.
+The preferred size and also minimum size is calculated as the dimension of the box model's padding minus the additional padding. The maximum size is equal to the preferred size unless the cell is an [Editor_Label](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Label) or one of the *grow* stylesheet items is set: in those cases, the width or the height or both can be unlimited.
 
 ### LayoutableAdapters
 
-The [LayoutableAdapters](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192442245136) class manages adapters. In *createAdapter* it returns the TopDownLayoutable for editor cells that support top down layouting, creates a LayoutableCollectionAdapter for the layouter of the cell and the cell itself or creates a new LayoutableAdapter for the cell instead. The method *getAdapter* calls this method if there is no existing adapter or receives it from the user object of the cell with the key *LayoutableAdapter*.
+The [LayoutableAdapters](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192442245136) class manages adapters. In *createAdapter* it returns the TopDownLayoutable for editor cells that support top-down layouting, creates a LayoutableCollectionAdapter for the layouter of the cell and the cell itself, or creates a new LayoutableAdapter for the cell instead. The method *getAdapter* calls this method if there is no existing adapter or receives it from the user object of the cell with the key *LayoutableAdapter*.
 
 ### LayoutableCollectionAdapter
 
@@ -216,22 +216,22 @@ The `relayout` method itself calculates the layout bounds based on a size constr
 - `relayout` is called if the size has changed.
 - `moveChildren` is called when the position has changed.
 
-When one of those two events has occurred but no layouter is present, relayout is called. The *getLayouter* method returns a suitable ILayouter based on the existing layout e.g. HorizontalLayout for CellLayout_Horizontal. If the cell or any of its super classes overwrites the method *relayoutImpl*, *null* is returned.
+When one of those two events has occurred but no layouter is present, re-layout is called. The *getLayouter* method returns a suitable ILayouter based on the existing layout e.g. HorizontalLayout for CellLayout_Horizontal. If the cell or any of its superclasses overwrites the method *relayoutImpl*, *null* is returned.
 
- The inner position and dimension methods are based on the box model's content box. The total gap is the content's position minus the margin's position. To switch between the outer and inner size, the methods *toInnerSize* and *toOuterSize* can be used. The ascent is calculated as the ascent of the children plus the total gap at the top. When the different sizes like maximum, minimum and preferred size are calculated, the values are first looked up in the cache. If no value can be found, the sizes are guessed from the cached values: if the size was already smaller for a more strict constraint, that value is used. If there is still no value returned, the value is calculated.
+ The inner position and dimension methods are based on the box model's content box. The total gap is the content's position minus the margin's position. To switch between the outer and inner sizes, the methods *toInnerSize* and *toOuterSize* can be used. The ascent is calculated as the ascent of the children plus the total gap at the top. When the different sizes like maximum, minimum, and preferred size are calculated, the values are first looked up in the cache. If no value can be found, the sizes are guessed from the cached values: if the size was already smaller for a more strict constraint, that value is used. If there is still no value returned, the value is calculated.
 
 
 ### LayoutEngine
 
 [LayoutEngine](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441898630) is the main entry point for layouting editor components, the root cell, single cells or a subtree of a cell. 
-*layoutSubtree* requires the cell itself and a function that sets the bounds of the ILayoutable. For a normal cell the size is calculated as the
-desired dimension constraint by the minimum and maximum size of the ILayoutable. For the root cell the calculation is different:
-The preferred width is the x position of the cell minus the text width settings of the editor + the hardcoded 15 pixel left margin or the unlimited width if
+*layoutSubtree* requires the cell itself and a function that sets the bounds of the ILayoutable. For a normal cell, the size is calculated as the
+desired dimension constraint by the minimum and maximum size of the ILayoutable. For the root cell, the calculation is different:
+The preferred width is the x position of the cell minus the text width settings of the editor + the hardcoded 15-pixel left margin or the unlimited width if
 it is bigger. The preferred size is then calculated as the preferred size of the root layoutable constraint by the preferred width.
 
-`layoutSubtreeUnsafe` reads all the necessary information from the processed cell, preprocesses the layoutables (e.g. setting margin and padding), relayouts the cell, sets all margins and writes back the calculated result to the editor cell. In the end, the position and dimensions are fixed for editorcell collections based on the *overflow* stylesheet items and the request layout flags, that were set in previous steps are cleared. All of those methods are invoke inside a watchdog that stops the layouting after a certain time if no stable layout could be found.
+`layoutSubtreeUnsafe` reads all the necessary information from the processed cell, preprocesses the layoutables (e.g. setting margin and padding), re-layouts the cell, sets all margins, and writes back the calculated result to the editor cell. In the end, the position and dimensions are fixed for editor cell collections based on the *overflow* stylesheet items, and the request layout flags, that were set in previous steps are cleared. All of those methods are invoked inside a watchdog that stops the layouting after a certain time if no stable layout could be found.
 
 ### LayoutInterceptor
 
 [LayoutInterceptor](http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F4403454289951894115) replaces the cell layout of cells that use stylesheet items of the cell layout language with a custom layout from this language.
-The interceptor is installed in the [project plugin](http://127.0.0.1:63320/node?ref=r%3Ac30772cf-6faa-4379-900e-6719e180568e%28de.itemis.mps.editor.celllayout.runtime.plugin%29%2F4403454289951931861) through different methods: as an editor update listener, an additional painter and an editor component creation listener.
+The interceptor is installed in the [project plugin](http://127.0.0.1:63320/node?ref=r%3Ac30772cf-6faa-4379-900e-6719e180568e%28de.itemis.mps.editor.celllayout.runtime.plugin%29%2F4403454289951931861) through different methods: as an editor update listener, an additional painter, and an editor component creation listener.

@@ -5,9 +5,9 @@ This section lists all relations required for a specific task.
 If not specified otherwise, you should add all dependencies.
 
 - If no dependency exists: with *default scope* and no *export flag*.
-- If a dependency (no matter witch scope and export flag) exists: no change
+- If a dependency (no matter which scope and export flag) exists: no change
 
-The IDE often creates the required relations on module level automatically if we add a relation on Model
+The IDE often creates the required relations on the module level automatically if we add a relation on the model
 level. However, this doesn't work always, so double-check if the module level relation was
 created correctly if errors exist.
 
@@ -20,7 +20,7 @@ type *ClassA* inside *ModelA* inside *ModuleA*.
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *ModuleB* to *ModuleA*.
 
-## Reuse (aka extend, reference) a external java type
+## Reuse (aka extend, reference) an external Java type
 
 *ClassB* inside *ModelB* inside *ModuleB* extends *ClassA* inside *ModelA* inside *ModuleA*.
 *ClassC* inside *ModelC* inside *ModuleC* wants to use *ClassB* as simple as possible.
@@ -78,7 +78,7 @@ Make sure that *GeneratorC* defined in *LanguageC* for *ConceptA* inside *Langua
 - To *ModelB*, add Dependency to *LanguageA.structure*. Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *ModuleB* to *LanguageA*.
 
-## Call a behavior Method
+## Call a behavior method
 
 *ClassB* inside *ModelB* inside *ModuleB* wants to call behavior method *opA* inside *ConceptA* inside *LanguageA*.
 
@@ -100,7 +100,7 @@ type *ConceptA* inside *LanguageA*.
 
 ## Extend a concept or implement a ConceptInterface
 
-*ConceptB* inside *LanguageB* wants to extend / implement *ConceptA* / *ConceptInterfaceA* inside *LanguageA*.
+*ConceptB* inside *LanguageB* wants to extend/implement *ConceptA*/*ConceptInterfaceA* inside *LanguageA*.
 
 - To *LanguageB.structure*, add dependency to *LanguageA.structure*.  
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
@@ -165,10 +165,10 @@ Then:
 - For *ConceptY*, type system rules *ConceptYTypeRule1* and *ConceptYTypeRule2* get evaluated.  
   *ConceptZTypeRule* is not evaluated, as at least one rule for *ConceptY* defines:*[override=true]*.
 - For *ConceptX*, type system rules *ConceptYTypeRule1*, *ConceptYTypeRule2* and  
-  *ConceptXTypeRule* get evaluated.  
+  *ConceptXTypeRule* gets evaluated.  
   *ConceptYTypeRule1* and *ConceptYTypeRule2* get included because no rule for *ConceptX*
   defines:*[override=true]*.  
-  *ConceptZTypeRule*is not evaluated because the search for rules in extended Concepts
+  *ConceptZTypeRule* is not evaluated because the search for rules in extended Concepts
   stops at the first concept having at least one rule defining:*[override=true]*.
 
 ## Create an intention
@@ -184,7 +184,7 @@ Then:
 Create Generator includes
 
 - creating new root mappings
-- creating new reduction rule
+- creating new reduction rules
 - creating new switches
 
 *GeneratorB* inside *LanguageB* wants to create a generator transforming *ConceptA* inside *LanguageA*
@@ -203,7 +203,7 @@ into *ConceptC* inside *LanguageC*.
 *Extend Generator* includes
 
 - Making sure that another generator is always executed if this generator gets executed.
-- Creating new reduction ruled to be used in another generator.
+- Creating new reduction rules to be used in another generator.
 - Creating a new switch entry for a switch in another generator.
 
 *GeneratorB* inside *LanguageB* wants to extend *GeneratorA* inside *LanguageA*.  

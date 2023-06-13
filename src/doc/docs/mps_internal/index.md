@@ -3,29 +3,11 @@ tags:
 - internals
 ---
 
-!!! warning "The project isn't a project."
-
-    > I want to call `GenerationCheckHelper.checkModelsBeforeGenerationIfNeeded` to check my model. It that takes a `Project` but my `Project` that I get  as an action context isn't the correct project. The type system complains that it's not the correct class. 
-    >
-    > How do I get the correct project class?
-
-    The two *Project* interfaces  are always a source of confusion. Essentially one comes from the IntelliJ platform and the other one holds MPS specific parts of the project.
-
-    [com.intellij.openapi.project.Project](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.project%28MPS.IDEA%2F%29%2F%7EProject):  The project from the platform stores basic information like the folder where the project is located and gives, for example, access to project plugins.
+!!! question "How do you get started using MPS' Open API?"
     
-    [jetbrains.mps.project.Project](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProject): MPS specific aspects of a project like model access or the repository. It also gives access to the modules (languages and solutions) of the project.
-    
-    To get the *MPS Project* from an *Idea Project* use `fromIdeaProject` from [ProjectHelper](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.project%28MPS.Platform%2F%29%2F%7EProjectHelper).
-    
-    To the a *Idea Project* from the *MPS Project* case the interface to `MPSProject`, if you only have a `jetbrains.mps.project.Project`, call `getProject` on it.
+    [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/){{ blog('sl') }}
 
-    {{ contribution_by('coolya') }}
-
-!!! question "How to you get started using MPS' Open API?"
-    
-    {{ blog('sl',false) }}[The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/)
-
-!!! question "How to you get MPS core components from code?"
+!!! question "How do you get MPS core components from code?"
 
     From the console:
     ``` Java
@@ -40,12 +22,12 @@ tags:
 
 !!! question "Is there a way to start two instances of MPS, each with its own cache/state?"
 
-    You can create a copy of you MPS installation and edit the idea.properties file in the bin directory. 
-    Changing *idea.system.path* should allows you start a second instance with dedicated caches/state. 
-    If you don’t want to share any configuration also update idea.config.path.
+    You can create a copy of your MPS installation and edit the idea.properties file in the bin directory. 
+    Changing *idea.system.path* should allow you to start a second instance with dedicated caches/state. 
+    If you don’t want to share any configuration also update *idea.config.path*.
 
 
-!!! question "Where can you find builtin icons?"
+!!! question "Where can you find built-in icons?"
 
     IntelliJ IDEA icons are declared in the class [AllIcons](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons).
     MPS icons are declared in the class [MPSIcons](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons).
@@ -63,7 +45,7 @@ tags:
     can be found in the same model.
 
 
-!!! question "How to you add widgets to the status bar? (for example: memory indicator, save transient models)"
+!!! question "How do you add widgets to the status bar? (for example memory indicator, save transient models)"
 
     Have a look at [this answer](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120). 
     Make sure to call this code from a [project plugin](https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)).
@@ -83,28 +65,28 @@ tags:
     Implement the interface `StatusBarWidgetFactory` and register it through the StatusBarWidgetFactory.EP_NAME extension point.
 
 !!! question "How do you add model imports and used languages programmatically?"
-    {{ blog('sl',false) }}[Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/)
+    [Adding model imports and used languages programmatically](https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/){{ blog('sl') }}
 
 !!! question "How can you run some MPS code from the command line/CI?"
     
-    - {{ blog('sl',false) }}[Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/)
-    - {{ blog('sl',false) }}[Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/)
+    - [Running MPS code from command line](https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/){{ blog('sl') }}
+    - [Running code in MPS on CI](https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/){{ blog('sl') }}
 
 !!! question "How can you run generated code from within MPS?"
 
-    {{ blog('sl',false) }}[Run generated code from within MPS](https://specificlanguages.com/posts/2022-03/29-run-generated-code-from-within-mps/)
+    [Run generated code from within MPS](https://specificlanguages.com/posts/2022-03/29-run-generated-code-from-within-mps/){{ blog('sl') }}
 
 !!! question "How can you render a node as a text?"
     
-    {{ blog('sl',false) }}[Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/)
+    [Rendering a node as text](https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/){{ blog('sl') }}
 
 !!! question "How can you associate more information with a node?"
      
-    {{ blog('sl',false) }}[Associating additional information with a node](https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/)
+    [Associating additional information with a node](https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/){{ blog('sl') }}
 
 !!! question "How does shrinking of absolute paths work?"
     
-    {{ blog('sl',false) }}[Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/)
+    [Shrinking of absolute paths](https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/){{ blog('sl') }}
 
 !!! question "How can you retrieve nodes of other models and modules?"
 
@@ -112,38 +94,38 @@ tags:
 
 !!! question "How can you make an internal MPS editor read-only?"
 
-    > Given I want to make a contribution to a generator the `j.mps.lang.editor`.
+    > Given I want to contribute to a generator the `j.mps.lang.editor`.
     > When I download the [MPS source](https://github.com/JetBrains/MPS), open the project in MPS under `code`
     > and open `j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare`, then I see the model being read-only. What can I do?
 
     You need to open MPS in IDEA (Community Edition is enough), compile and run it from there, then you can edit MPS sources. There are instructions in [README](https://github.com/JetBrains/MPS).
 
-??? question "How can you do a fulltext search in the IDE?"
+??? question "How can you do a full-text search in the IDE?"
 
     > I sometimes need a textual search which MPS doesn't provide out of the box.
 
-    > In that situation, I am unsure of the concept and type of what I see, so a top-down search is not an option. Instead I would like to search for that string to have a starting point for my investigation.
+    > In that situation, I am unsure of the concept and type of what I see, so a top-down search is not an option. Instead, I would like to search for that string to have a starting point for my investigation.
 
     > Examples:
 
-    > - I want to investigate in an editor in the user interface and don't want to reverse engineer what hints, editors and concepts lead to what I see.
-    > - Behavioral view code, like custom cells, swing cells or querylists make it hard to figure out where the source logic of that is located.
+    > - I want to investigate an editor in the user interface and don't want to reverse engineer what hints, editors and concepts lead to what I see.
+    > - Behavioral view code, like custom cells, Java Swing cells, or query lists make it hard to figure out where the source logic of that is located.
     > - when the console shows something I don't understand, I'd like to see its context source code, so that I can figure out what to do next.
 
-    **Option 0**: Use Language Debugging facilities of MPS instead.
+    **Option 0**: Use language debugging facilities of MPS instead.
 
     For built-in languages, MPS brings a load of dedicated debugging facilities:
 
     - Debugging editor cells and nodes: When you right-click an item in the editor, you can find a submenu *Language Debug*.
-    - Debugging menu entries: Select an item that you're curious in and press ++cmd+alt+b++/++ctrl+alt+b++ to open the *Menu Trace* of it.
-    - Setup and an IntelliJ and connect it to step through java code.
+    - Debugging menu entries: Select an item that you're curious about and press ++cmd+alt+b++/++ctrl+alt+b++ to open the *Menu Trace* of it.
+    - Setup IntelliJ idea and connect it to step through Java code.
 
-    **Option 1**: Search for literals from console.
+    **Option 1**: Search for literals from the console.
 
     **Option 2**: Search through serialized Java.
 
     1. Set up IntelliJ with your project.
-    2. Hit ++cmd+shift+f++/++ctrl+shift+f++ to search in path.
+    2. Hit ++cmd+shift+f++/++ctrl+shift+f++ to search in the path.
     3. When you found a class of interest, open it in MPS via ++cmd+n++/++ctrl+n++. The source node usually has a similar name.
 
     This is great for finding editor nodes, for example, if that java class is named *Vehicle_EditorBuilder*, your source node was an editor for the *Vehicle* concept.
@@ -165,7 +147,7 @@ tags:
     ```
 
     Use `#!java new IdEncoder().parseNodeId("1aL6sVX49Cb")` to get the node id.
-    This will print the corresponding node to console. Clicking it will open in in MPS:
+    This will print the corresponding node to the console. Clicking it will open in MPS:
 
     ```java
     #nodes.where({~it => 
@@ -179,7 +161,7 @@ tags:
     })
     ```
 
-??? question "How to get rid of Error: shall specify a repository to lock?"
+??? question "How to get rid of the error: shall specify a repository to lock?"
 
     > When accessing model properties in rendering code, you must encapsulate the model accessing code in a read action:
     
@@ -190,43 +172,43 @@ tags:
 
     {{ question_by('cwalesch') }}
 
-    The repository is what is represented as the "modules pool" in the UI. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. MPS is slowly but steadily moving to project specific repositories. That would mean each project (window) of MPS would have it's own separate repository. 
+    The repository is what is represented as the "modules pool" in the UI. It contains all the dependencies currently visible. At the moment there is only one global repository which causes several problems. MPS is slowly but steadily moving to project-specific repositories. That would mean each project (window) of MPS would have its separate repository. 
 
     To get the repository you will need access to the project. e.g. the editor context will give you access to the repository: `editorContext.getRepository()`.
     
-    In other cases, for instance,  when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository though to the place where you need it.
+    In other cases, for instance,  when you don't have an editor context directly available you need to make sure that from UI (action) you pass the project or repository through to the place where you need it.
 
     {{ answer_by('coolya') }}
 
 ??? question "How can you get an identifier of a node?"
 
-    > Given I have a node myNode and I need to serialize something that identifies it.
+    > Given I have a node *myNode* and I need to serialize something that identifies it.
     > When I serialize that something and then deserialize that identifier again, then I will find exactly that node.
     > How can I build such a thing?
 
     **Option 1**: PersistenceFacade ID
 
-    Since the url does not look nice; you may use this combined string of model ID and node ID that is used for the url. For that, import the class `org.jetbrains.mps.openapi.persistence.PersistenceFacade` from the _MPS.OpenApi_ stub and run:
+    Since the URL does not look nice, you may use this combined string of model ID and node ID that is used for the URL. For that, import the class `org.jetbrains.mps.openapi.persistence.PersistenceFacade` from the _MPS.OpenApi_ stub and run:
     
     ```java
     # serialize identifier
     string mySerializedId = SNodePointer.serialize(node/.getReference())
     
-    # find node based on serialized identifier
+    # find node based on the serialized identifier
     node<> myFoundNode = SNodePointer.deserialize(mySerializedId).resolve(repository)
     
     # then, node == myFoundNode
     ```
 
-    **Option 2**: Url
+    **Option 2**: URL
     
-    Import the `httpsupport` language and use `node.getURL`. This will be a url that you can use locally to open this node. It includes the node id and the model and thus is a pretty good globally unique id.
+    Import the `httpsupport` language and use `node.getURL`. This will be a URL that you can use locally to open this node. It includes the node id and the model and thus is a pretty good globally unique id.
     
-    This id is a local URL and looks odd though: `http://127.0.0.1:63320/node?ref=r%3A4bc03cd1-b1e3-49da-84da-f27e7062f6f7%28integrityOfUpdate%29%2F2209769512593382448&project=SecurityAnalyst`. Especially the code to find the node again based on this url contains some grepping then.
+    This id is a local URL and looks odd though: `http://127.0.0.1:63320/node?ref=r%3A4bc03cd1-b1e3-49da-84da-f27e7062f6f7%28integrityOfUpdate%29%2F2209769512593382448&project=SecurityAnalyst`. Especially the code to find the node again based on this URL contains some grepping then.
     
     **Option 3**: Node Id
     
-    Use `#!java node/.getNodeId().toString()` it will yield the nodes id. Note that a node ID is only unique within this model. If it should be globally unique, consider option 1.
+    Use `#!java node/.getNodeId().toString()` it will yield the node's id. Note that a node ID is only unique within this model. If it should be globally unique, consider option 1.
 
     {{ contribution_by('abstraktor') }}
 
@@ -236,12 +218,12 @@ tags:
     *CONFIG_DIR* refers to the configuration directory. *WORKSPACE_FILE* refers to *$PROJECT/.mps/workspace.xml*:
 
     - refactoring settings: *CONFIG_DIR/options/refactoringSettings.xml*
-    - override/implement setttings: *WORKSPACE_FILE/OverrideImplementMethodComponent*
+    - override/implement settings: *WORKSPACE_FILE/OverrideImplementMethodComponent*
     - additional libraries: *CONFIG_DIR/options/AdditionalLibrariesManager.xml*
     - default search options: *WORKSPACE_FILE/DefaultSearchOptions3*
     - make configuration: *WORKSPACE_FILE/mpsMakeService*
     - code style settings: *CONFIG_DIR/options/codeStyleSettings.xml*
-    - break point settings: *WORKSPACE_FILE/BreakpointViewSettings*
+    - breakpoint settings: *WORKSPACE_FILE/BreakpointViewSettings*
     - migration state: *WORKSPACE_FILE/MigrationProperties*
     - model validation settings: *CONFIG_DIR/options/mpsModelValidationSettings.xml*
     - concept editor settings: *WORKSPACE_FILE/ConceptEditorHintSettings*
@@ -256,7 +238,7 @@ tags:
     - project plugin settings: *WORKSPACE_FILE/ProjectPluginManager*
     - generation settings: *CONFIG_DIR/options/generationSettings.xml*
     - console history: *WORKSPACE_FILE/ConsoleHistory*
-    - break points: *WORKSPACE_FILE/BreakpointManager*
+    - breakpoints: *WORKSPACE_FILE/BreakpointManager*
     - bookmarks: *WORKSPACE_FILE/MPSBookmarkManager*
     - messages view tool settings: *WORKSPACE_FILE/MessagesViewTool*
     - usages view tool settings: *WORKSPACE_FILE/UsagesViewTool*
@@ -269,7 +251,7 @@ tags:
     - [Advanced configuration | jetbrains.com](https://www.jetbrains.com/help/idea/tuning-the-ide.html)
     - [Configuring JVM options and platform properties](https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties)
     - JVM
-        - [Intellij Jvm Options Explained](https://github.com/FoxxMD/intellij-jvm-options-explained)
+        - [IntelliJ JVM Options Explained](https://github.com/FoxxMD/intellij-jvm-options-explained)
         - [Java HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
     - system properties
         - [Java system properties](https://docs.oracle.com/en/java/javase/18/docs/api/system-properties.html)

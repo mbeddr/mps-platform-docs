@@ -6,24 +6,24 @@ tags:
 
 # Behavior aspect
 
-The behavior aspect can be use for defining methods for the concepts of the language.
+The behavior aspect can be used for defining methods for the concepts of the language.
 
 - [official documentation](https://www.jetbrains.com/help/mps/behavior.html)
 
 ## General
 
-!!! question "Can you use asynchronous code in behaviour methods such as calling external tools?"
+!!! question "Can you use asynchronous code in behavior methods such as calling external tools?"
 
-    Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behaviour code. 
-    It should always be assumed that you have the correct lock in this methods. Move the code concerning the concurrent access for example into a background task.
+    Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behavior code. 
+    It should always be assumed that you have the correct lock in these methods. Move the code concerning the concurrent access for example into a background task.
     More information can be found in [Progress indicators | MPS](https://www.jetbrains.com/help/mps/progress-indicators.html).
 
 !!! question "Where can you save temporary information about nodes?"
 
-    Consider saving temporay data about nodes in annotations and user objects ([node/.putUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529), [node/.getUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529))
+    Consider saving temporary data about nodes in annotations and user objects ([node/.putUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529), [node/.getUserObject](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529))
     instead of introducing properties. 
-    You can store and access Java-Objects in `SNode::putUserObject()` as key-value pairs)where you normally could not access them in the MPS context, e.g. storing it as node member and access it in an editor, a checking-rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
-    For the generator consult the section `Transferring User Data` of the [generator documentation](https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference).
+    You can store and access Java objects in `SNode::putUserObject()` as key-value pairs) where you normally could not access them in the MPS context, e.g. storing them as node members and access them in an editor, a checking rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
+    For the generator, consult the section *Transferring User Data* of the [generator documentation](https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference).
 
 ??? question "How to mark a constructor-created child optional? (created by a light quotation)"
 
@@ -34,7 +34,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     Solutions:
 
     - Initialize it with `null` in the light quotation.
-    - Create it without light quotation.
+    - Create it without a light quotation.
     - Allow the child to be optional (`[0..1]`).
 
 !!! question "How can you delete a child node from a node where the child’s concept no longer exists and the parent node's child link is no longer defined?"
@@ -53,7 +53,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     
     > ![virtual getPresentation](virtual_getPresentation.png)
     
-    > Yet, I see that `methodDeclNode.isVirtual` is `null`.
+    > Yet, I see that `methodDeclNode.isVirtual` is *null*.
     
     > ![methodDeclNode isVirtual is null](methodDeclNode_isVirtual_null.png)
     
@@ -69,7 +69,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     
     The editor shows that a method is _virtual_ when `isVirtual()` is true. As a result, overriding methods of virtual methods are not necessarily having `isVirtual=true`, but will still display _virtual_.
     
-    The rationale behind may be that if a method is overriding another one, both of them must be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the `isVirtual` more precisely as „is explicitly virtual", and `isVirtual()` as "is effectively virtual".
+    The rationale behind this may be that if a method is overriding another one, both of them must be virtual. This is needed so that the runtime will find out which of the two implementations to call. So we may read the `isVirtual` more precisely as „is explicitly virtual", and `isVirtual()` as "is effectively virtual".
 
     {{ contribution_by('abstraktor') }}
 
@@ -81,7 +81,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 @from_file:aspects/diagrams/initialize_node_car_example.puml
     ```
 
-    > How can I ensure that all created node will have a non-null `HTMLDescription`?
+    > How can I ensure that all created nodes will have a non-null `HTMLDescription`?
 
     **Using a node factory**
 
@@ -127,16 +127,16 @@ The behavior aspect can be use for defining methods for the concepts of the lang
 
 !!! question "Can you access the parent in the constructor?"
 
-    No, it doesn't work because the node is not attached yet ([Concept constructors | MPS](https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors)). Use for example a [node factory](https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation) to access the parent instead.
+    No, it doesn't work because the node is not attached yet ([Concept constructors | MPS](https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors)). Use a [node factory](https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation) to access the parent instead.
 
 !!! question "How can you query the context in a node constructor?"
 
     > Does anyone know a way to find the contextExpression from the node constructor?
 
-    Use a node factories instead of constructors and make use of the `enclosingNode` parameter. 
+    Use node factories instead of constructors and make use of the `enclosingNode` parameter. 
     Constructors are invoked always when creating a node. Node factories are invoked only by the editor and by the `new initialized ...` expression.
     
-    Note: Node factories are invoked in the inverse order of constructors. MPS will first invoke the specific node factory and the more generic ones if the exist.
+    Note: Node factories are invoked in the inverse order of constructors. MPS will first invoke the specific node factory and the more generic ones if they exist.
 
 !!! question "Is there a way to call the constructor of a super concept inside the constructor of a sub-concept?"
     > Something like:
@@ -146,7 +146,7 @@ The behavior aspect can be use for defining methods for the concepts of the lang
     }
     ```
 
-    `#!java concept/MyConcept/.new initialized instance()` provides this behaviour.
+    `#!java concept/MyConcept/.new initialized instance()` provides this behavior.
 
 
 ## Bugs/missing features

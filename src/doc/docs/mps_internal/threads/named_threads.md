@@ -6,12 +6,12 @@ tags:
 
 # Reference: Named threads
 
-These lists contain named threads from Java, the IntelliJ platform and MPS.
+These lists contain named threads from Java, the IntelliJ platform, and MPS.
 
 ## Java Threads
 
 - AWT threads
-    - AWT-AppKit: macOS specific Thread
+    - AWT-AppKit: macOS-specific Thread
     - AWT-EventQueue: = EDT
     - [AWT-Windows](https://stackoverflow.com/a/21597955/16577108)
     - [AWT-Shutdown](http://srcrr.com/java/oracle/openjdk/6/reference/sun/awt/AWTAutoShutdown.html)
@@ -76,7 +76,7 @@ These lists contain named threads from Java, the IntelliJ platform and MPS.
 ## Other threads
 
 - AnimatorThread (removed class of com.intellij.util.ui.Timer)
-- Poller SunPKCS11-Darwin (macOS specific thread)
+- Poller SunPKCS11-Darwin (macOS-specific thread)
 - [process reaper](https://stackoverflow.com/a/3836230/16577108) (Linux/macOS specific thread)
 - Batik CleanerThread ([org.apache.batik.util.CleanerThread](https://xmlgraphics.apache.org/batik/javadoc/org/apache/batik/util/CleanerThread.html))
 - [Netty Builtin Server](https://www.jetbrains.com/help/idea/php-built-in-web-server.html)

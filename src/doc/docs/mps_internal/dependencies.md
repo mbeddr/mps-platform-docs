@@ -2,8 +2,8 @@
 
 !!! warning "Some sections on this page were written a few years ago where an older MPS version was used. Please report anything that isn't true anymore."
 
-The amount of languages can be important: many small languages are hard to maintain while big languages
-take a long time building in the IDE. Many dependencies can create cycles which are described later.
+The number of languages can be important: many small languages are hard to maintain while big languages
+take a long time to build in the IDE. Many dependencies can create cycles which are described later.
 
 By default, you can only reference nodes present in the current model. Dependencies add other models and modules that you can reference from the current model.
 
@@ -55,7 +55,7 @@ To be precise, it is possible to remove all errors flagged on behaviors and cons
 
 ### Extends scope for generators
 
-*GeneratorB* (inside *LanguageB*, and containing *ConceptB*) must extend *GeneratorA* (inside *LanguageA*, and containing *ConceptA*), if and only if
+*GeneratorB* (inside *LanguageB*, and containing *ConceptB*) must extend *GeneratorA* (inside *LanguageA*, and containing *ConceptA*), if and only if *GeneratorB*...
 
 ```kroki-plantuml
 @from_file:mps_internal/diagrams/dependencies_6.puml
@@ -75,11 +75,11 @@ A Generator inherits some dependencies from the language where it's defined in:
 - The language's module is added to the generator module dependencies.
 - The language is added to the generator *Used languages*.
 
-Except the case of generating a concept of a language that has a runtime solution, there's no requirement on the language's dependencies or *Used Languages* stemming from the generator.
+Except in the case of generating a concept of a language that has a runtime solution, there's no requirement on the language's dependencies or *Used Languages* stemming from the generator.
 
 ### Implicit exports of used language and language structure aspect
 
-Both a *Used Language* and the language structure aspect implicitly make it possible to access the language's behavior methods. However, they not export again the complete behavior aspect. For example, a *baselanguage* class contained in the behavior Aspect isn't visible.
+Both a *Used Language* and the language structure aspect implicitly make it possible to access the language's behavior methods. However, they don't export the complete behavior aspect again. For example, a Base Language class contained in the behavior Aspect isn't visible.
 
 ### Implicit exports of runtime language settings
 
@@ -92,18 +92,18 @@ Accessory Models are
 
 - implicitly loaded into the dependencies of any model using this language.
 
-  Accessory Models aren't designed to keep any classes. This is design-only information. They shouldn't affect Java class path anyhow.
+  Accessory Models aren't designed to keep any classes. This is design-only information. They shouldn't affect the Java classpath anyhow.
 
 Neither runtime solutions nor accessory models constitute a dependency from the language to the referenced solution or model.
 
 ## Cyclic dependencies
 
 Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic *Extends Scope* dependency. Cycles between models in the same module are fine.
-Starting with MPS 2021.1, there's a higher chance that you could run into troubles with cyclic dependencies. The reason is the new javax compiler that doesn't act as forgiving as the earlier one (ECJ).
+Starting with MPS 2021.1, there's a higher chance that you could run into troubles with cyclic dependencies. The reason is the new Javax compiler that doesn't act as forgiving as the earlier one (ECJ).
 
 Distinctive cases are runtime solutions, accessory models, and utility models.
 
-In contrast to runtime solutions, utility models are used *while* accessing behavior or running a generator. Code within runtime solutions is used *after* the generator ran from the generated code. Thus, a runtime solution shouldn't use or reference the language it is referenced from. A utility model can use or reference the language it is reference from.
+In contrast to runtime solutions, utility models are used *while* accessing behavior or running a generator. Code within runtime solutions is used *after* the generator ran from the generated code. Thus, a runtime solution shouldn't use or reference the language it is referenced from. A utility model can use or reference the language it is referenced from.
 
 Accessory models can use or reference the language they're referenced from.
 

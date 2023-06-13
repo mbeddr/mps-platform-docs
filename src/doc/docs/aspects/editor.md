@@ -15,7 +15,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "What happens when you press ++f5++ in the editor?"
 
-    {{ blog('sl',false) }}[F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/)
+    [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/){{ blog('sl') }}
 
 !!! question "How can you delete non-existing children, references, or properties from a node?"
 
@@ -25,12 +25,12 @@ The editor aspect defines the projectional editor of a concept.
 
     There are 2 solutions:
 
-    1. Use a querylist with empty insert/delete handlers.
+    1. Use a query list with empty insert/delete handlers.
     2. Create an action map/inline action cell with empty blocks for the actions `INSERT` and `INSERT_BEFORE`.
 
-!!! warning "I've set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme."
+!!! warning "I've set a color of type java.awt.Color in a style property query but the color is different when using the Darcula theme."
 
-    The return type of those functions indicate that they return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found 
+    The return type of those functions indicates that the return type is `java.awt.Color` but the generator maps these colors to [theme-dependent colors](https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202). The only avoid to avoid this mappings is to use custom factories. More info about theme-dependent colors can be found 
     [[ux#dark-theme#references|here]].
 
 !!! question "What is the difference between an empty cell and a simple constant cell without any content?"
@@ -45,9 +45,9 @@ The editor aspect defines the projectional editor of a concept.
 
 ## Menus
 
-!!! hint "Explain the different menu related terms."
+!!! hint "Explain the different menu-related terms."
 
-    - **Menu definitions** have two flavours *named* and +default+ and can be defined in transformation or substitute menus.
+    - **Menu definitions** have two flavours *named* and *default* and can be defined in transformation or substitute menus.
     - **Default menu**
         - **Default substitutions** will replace the default menu that MPS shows.
 
@@ -55,12 +55,12 @@ The editor aspect defines the projectional editor of a concept.
         - **Transformation menus**
             define UI actions that will be shown in various locations. The menu is defined as a list of sections.
             Each section contains a list of menu parts for a set of locations. 
-            At runtime the menu parts and locations are used to generate the content of the completion menu.
+            At runtime, the menu parts and locations are used to generate the content of the completion menu.
             The contents of the completion menu are called menu items.
         - **Parameterized actions**
             allow to calculate a list of elements of a specific type to be shown in the completion menu.
-            They calculate all elements for the substitution menu and have an influence on the node creation.
-            Moreover, they definesthe selection where the cursor should be placed.
+            They calculate all elements for the substitution menu and influence the node creation.
+            Moreover, they define the selection where the cursor should be placed.
 
 !!! question "How do you find out where a substitute menu entry is coming from?"
 
@@ -68,7 +68,8 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you add smart references using the transformation menus?"
 
-    F1RE Blog: [Adding smart references using transformation menus](https://www.f1re.io/transformation-menu-for-smart-references)
+    [Adding smart references using transformation menus](https://www.f1re.io/transformation-menu-for-smart-references){{ blog('fire') }}
+
 
 ??? question "What's the best way to improve the autocomplete description of concepts?"
 
@@ -87,9 +88,9 @@ The editor aspect defines the projectional editor of a concept.
 
     {{ question_by('AlexeiQ') }}
 
-    In general, it's up to the users and specific context to decide what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.
+    In general, it's up to the users and specific context to decide what makes sense to put into the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.
 
-    The short description in the concept is the original, simple way to provide static description in the code completion menu. You can also add your own substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.
+    The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.
     
     ![DataItem SubstituteMenu](DataItem_substituteMenu.png){width="800px"}
     
@@ -109,8 +110,8 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How do you create clickable links?"
 
-    - {{ blog('sl',false) }}[Creating clickable URL links in the editor](https://specificlanguages.com/posts/basic-editors/clickable-url-links/)
-    - {{ blog('sl',false) }}[More clickable URL links](https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/)
+    - [Creating clickable URL links in the editor](https://specificlanguages.com/posts/basic-editors/clickable-url-links/){{ blog('sl') }}
+    - [More clickable URL links](https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/){{ blog('sl') }}
 
 !!! question "How can you include non-child relations in the editor?."
 
@@ -118,20 +119,20 @@ The editor aspect defines the projectional editor of a concept.
 
 ## Editor declaration
 
-!!! question "Is there a disadvantage by using the indent layout instead of the indent cell mode?"
+!!! question "Is there a disadvantage to use the indent layout instead of the indent cell mode?"
 
     No. There used to be performance issues with bigger models that were fixed in [MPS 2021.1](https://blog.jetbrains.com/mps/2021/05/mps-2021-1-has-been-released/).
 
 !!! question "How do you use an empty text for empty cells?"
 
-    {{ blog('sl',false) }}[Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/)
+    [Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/){{ blog('sl') }}
 
 
 !!! hint "How can you set editor hints?"
 
     - you can set hints via `#!java editorContext.getEditorComponent().getUpdater()`
         - explicit hints for nodes
-        - initial hints globally; they behave similar to pushed hints.
+        - initial hints globally; they behave similarly to pushed hints.
     - via right-click: push editor hints and select a specific one.
 
     - via an {{ mps_url("@mpsutil.EditorHintToggleAction") }} (e.g. in action declarations)
@@ -148,7 +149,7 @@ The editor aspect defines the projectional editor of a concept.
     > - **(A)** What it looks like after creation
     > - **(B)** Initial situation with cursor at **(1)**: pressing ++enter++ leads to **(C)**
 
-    > The problem is, that in **(C)** the cursor is at **(2)**, right before a read-only cell and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is at position **(3)**.
+    > The problem is, that in **(C)** the cursor is at **(2)**, right before a read-only cell, and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is at position **(3)**.
     
     > Structure of the new node in **(C)**:
 
@@ -161,18 +162,18 @@ The editor aspect defines the projectional editor of a concept.
     >  ![example c:node editor](example_c_node_editor.png)
 
     Usually, you would set the *attracts focus* property of the cell, where the cursor should be positioned, to `attractsFocus` or `FirstEditableCell`.
-    But, since (**C.2** and **C.3**) are error cells, the default behaviour is to set the cursor in front of the first error cell, which is **(C.2)**.
+    But, since (**C.2** and **C.3**) are error cells, the default behavior is to set the cursor in front of the first error cell, which is **(C.2)**.
     
-    Therefore, change the first part of your editor to a querylist cell **(A)**, which references the "member" in the cell properties **(B)** and set the read-only property on the querylist.
+    Therefore, change the first part of your editor to a query list cell **(A)**, which references the "member" in the cell properties **(B)**, and set the read-only property on the query list.
 
     ![new editor for CompoundInitializerMember](CompoundInitializerMember_editor_new.png)
 
     {{ contribution_by('AlexeiQ') }}
 
 
-!!! question "Is it possible to access the selected value of one swing component from inside another swing component?"
+!!! question "Is it possible to access the selected value of one Java Swing component from inside another Java Swing component?"
 
-    Yes: [Is it possible to access the selected value of one swing component from inside another swing component? | MPS forum](https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479)
+    Yes: [Is it possible to access the selected value of one Java Swing component from inside another Java Swing component? | MPS forum](https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479)
 
 !!! question "How can you access an icon stored in a concept?"
 
@@ -201,19 +202,19 @@ The editor aspect defines the projectional editor of a concept.
     highlightManager.mark(((SNode) ref), HighlightConstants.INSTANCES_COLOR, "usage", messageOwner);
     ```
 
-    The second approach has a better performance, because the highlighter runs asynchronously and not during the editor rebuild.
+    The second approach has a better performance because the highlighter runs asynchronously and not during the editor rebuild.
 
 !!! question "How can you hide a custom cell in the editor? (*show if* property)"
 
     > Custom cells expect only a cell provider in the inspector, but don't offer the possibility to specify other attributes to set e.g. "show if". How can I hide a custom cell under a specific condition? (MPS-33195)
 
-    The meta model actually allows to specify the *show if* property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
+    The meta-model allows specifying the *show if* property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.
 
-    Since these attributes are hidden and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the *show if* property on the collection.
+    Since these attributes are hidden and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the *show if* property on the collection.
 
     {{ contribution_by('AlexeiQ') }}
 
-!!! question "How to you split child collections?"
+!!! question "How do you split child collections?"
 
     [Advanced editors: splitting child collection in editor](https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/){{ blog('sl') }}
 
@@ -226,9 +227,9 @@ The editor aspect defines the projectional editor of a concept.
     editorContext.openInspector()
     ```
 
-    - {{ blog('sl',false) }}[Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/)
-    - {{ blog('sl',false) }}[Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/)
-    - {{ blog('sl',false) }}[Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/)
+    - [Opening Inspector automatically](https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/){{ blog('sl') }}
+    - [Opening Inspector automatically: Selection listeners](https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/){{ blog('sl') }}
+    - [Opening Inspector automatically: Editor extensions](https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/){{ blog('sl') }}
 
 !!! question "How can you focus on a node in the inspector?"
 
@@ -267,13 +268,13 @@ The editor aspect defines the projectional editor of a concept.
     EditorCell.renderText().getText()
     ```
 
-!!! question "How can you find out if an editor cell is readonly?"
+!!! question "How can you find out if an editor cell is read-only?"
 
     ```java
     ReadOnlyUtil.isCellsReadOnlyInEditor(this.editorComponent, new singleton<EditorCell>(editorCell))
     ```
 
-!!! question "How do you get an editor for a node as a swing component?"
+!!! question "How do you get an editor for a node as a Java Swing component?"
 
     ```java
     HeadlessEditorComponent component = new HeadlessEditorComponent(#project.getRepository()); 
@@ -292,7 +293,7 @@ The editor aspect defines the projectional editor of a concept.
     ```
 
 
-!!! question "How to you get the selection/ selected node in the editor?"
+!!! question "How do you get the selection/selected node in the editor?"
 
     ```java
     editorComponent.getSelectionManager().getSelection() / editorContext.getSelectedNode()
@@ -308,7 +309,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How do you find all open editors?"
 
-    {{ blog('sl',false) }}[Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/)
+    [Finding all open editors](https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/){{ blog('sl') }}
 
 !!! question "How do you programmatically collapse editor cells?"
 
@@ -323,7 +324,7 @@ The editor aspect defines the projectional editor of a concept.
 
     > When closing an editor tab, MPS removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.
     
-    > In my code, I want to react on this editor-close event. Is there are way to implement a callback or hook which is called when an editor tab is closed?
+    > In my code, I want to react to this editor-close event. Is there a way to implement a callback or hook which is called when an editor tab is closed?
 
     You can register an [EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener), that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
 

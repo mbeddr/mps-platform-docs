@@ -29,7 +29,7 @@ The following list contains the Java libraries in the *lib* folder that are inst
 - *asm-all.jar*: [ASM](https://asm.ow2.io/) (Java bytecode manipulation and analysis framework)
 - *icons.jar*: [IntelliJ icons](https://jetbrains.design/intellij/resources/icons_list/)
 - *util.jar*: [Utility classes](https://github.com/JetBrains/intellij-community/tree/master/platform/util) from the IntelliJ platform
-- *openapi.jar*: API do interact with IntelliJ
+- *openapi.jar*: API to interact with the IntelliJ platform
 - *platform.jar*: [IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) 
 - *platform-api.jar*: public API of the IntelliJ platform SDK
 - *platform-impl.jar*: implementation classes of the IntelliJ platform SDK
@@ -42,7 +42,7 @@ The following list contains the Java libraries in the *lib* folder that are inst
 - *netty-buffer.jar*: abstraction of a byte buffer, the fundamental data structure to represent a low-level binary and text message [JavaDoc](https://netty.io/4.0/api/io/netty/buffer/package-summary.html)
 - *netty-codec-http*: encoder, decoder and their related message types for HTTP ([JavaDoc](https://netty.io/4.0/api/io/netty/handler/codec/http/package-summary.html))
 - *nanoxml.jar*: [nanoxml](https://github.com/saulhidalgoaular/nanoxml) (non-validating XML parser)
-- *microba.jar*: [Microba controls](https://github.com/DataGrip/microba) (set of swing components)
+- *microba.jar*: [Microba controls](https://github.com/DataGrip/microba) (set of Java Swing components)
 - *miglayout-swing.jar*: [MigLayout](https://www.miglayout.com/) (Java layout manager)
 
 ### plugins folder

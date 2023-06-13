@@ -23,8 +23,8 @@ tags:
     Red rectangles: marker facets
     
     - Do not define dependencies on other facets.
-    - They are known to the MPS make process and are available for user.
-    - You can define where you own facet should fit in and decide if you require some facet.
+    - They are known to the MPS make process and are available for users.
+    - You can define where your own facet should fit in and decide if you require some facet.
 
     Usage:
 
@@ -48,7 +48,7 @@ tags:
 
     {{ contribution_by('abstraktor') }}
 
-??? question "How to you guide the user through cleaning up after deleting a referenced node?"
+??? question "How do you guide the user through cleaning up after deleting a referenced node?"
 
     > Given I have a concept `Ball` and I have a reference `BallRef`.
     > When I have a `Ball` node and I have `BallRef`s to it all over my model.
@@ -58,11 +58,11 @@ tags:
     You can show a balloon that says for example:
 
     ```
-    Deleting ball has left some dangling references
+    Deleting the ball has left some dangling references
     _Show_, _Ignore_
     ```
 
-    When clicking *show*, it will open a usage search for the deleted node using `#!java ConsoleUtil.show`. This is implemented with a modellistener in a quite generic fashion.
+    When clicking *show*, it will open a usage search for the deleted node using `#!java ConsoleUtil.show`. This is implemented with a model listener in a quite generic fashion.
 
     Here are a few insights:
 
@@ -75,7 +75,7 @@ tags:
 
 ??? question "How can you make sure that the IDE loads a jar exactly once and then never again?"
 
-    > I have a .jar that depends on a native libray (.dll/.so/...). To use it in an MPS plugin I have a stubs solution for it. Unfortunately, without further ado, MPS tries to reload the jar in some cases (e.g. after a rebuild). This will fail, because the JVM does not allow reloading of native libraries.
+    > I have a .jar that depends on a native library (.dll/.so/...). To use it in an MPS plugin I have a stubs solution for it. Unfortunately, without further ado, MPS tries to reload the jar in some cases (e.g. after a rebuild). This will fail because the JVM does not allow reloading of native libraries.
     
     > How can I avoid this problem?
 
@@ -87,7 +87,7 @@ tags:
 
 ??? question "How can you use an IntelliJ icon for an action?"
 
-    > I want to use one of the icons shipped with IntelliJ for my own action (`jetbrains.mps.lang.plugin.structure.ActionDeclaration`). How can I reference the icon? (note: this question might be deprecated for newer MPS versions)
+    > I want to use one of the icons shipped with IntelliJ for my action (`jetbrains.mps.lang.plugin.structure.ActionDeclaration`). How can I reference the icon? (note: this question might be deprecated for newer MPS versions)
 
     You can use `IconLoader.getIcon(...)` in the reflective editor. Right-click the editor for the icon, use `show reflective editor` and enter the expression as shown in the screenshot:
 
@@ -107,9 +107,9 @@ tags:
 
     ![projection mode switcher](projection_mode_switcher.png)
     
-    Afterwards you will find a new entry in the *Projection* menu.
+    Afterwards, you will find a new entry in the *Projection* menu.
     
-    Hint when used with Grammar Cells: you have to *disable component inlining* which can be activated by an intention at the position where the include of $A$ happens. Also in any editor component that inherits from $A$ and $A$ itself we cannot use Grammar Cells.
+    Hint when used with Grammar Cells: you have to *disable component inlining* which can be activated by an intention at the position where the include of $A$ happens. Also in any editor component that inherits from $A$ and $A$ itself, we cannot use Grammar Cells.
 
     {{ contribution_by('dbinkele') }}
 
@@ -133,7 +133,7 @@ tags:
 
     Create it through {{ mps_url("@mps.MetaAdapterFactory") }}.
 
-!!! question "How to you check if a model is a generator model, a test model etc.?"
+!!! question "How do you check if a model is a generator model or a test model?"
 
     Call the corresponding method in {{ mps_url("@mps.SModelStereotype") }}.
 
@@ -163,12 +163,12 @@ tags:
 
 !!! warning "An action isn't visible."
 
-    You have to add it to an `ActionGroup` that can be attached to differenct places such as the context menu or the build menu. 
+    You have to add it to an `ActionGroup` that can be attached to different places such as the context menu or the build menu. 
     All of the action context parameters that are marked as required have to be available and the `#!java isApplicable` block must
-    return true for an action to be visible. For debugging purposes you can set *always visible* to true to check if your
+    return true for an action to be visible. For debugging purposes, you can set *always visible* to true to check if your
     action is registered at all. 
 
-    You also need to have a standalone descriptor in your model for it to work. Additionaly,
+    You also need to have a standalone descriptor in your model for it to work. Additionally,
     the solution kind should be set to *Other* in the *Java* tab of the solution properties ([Plugin | MPS](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups)).
 
 [^1]:[How to create new SContainmentLink for a non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)

@@ -14,11 +14,11 @@ alias: editor-dev
 
 A few terms are also common in typography or are encountered in web development.
 
-- *padding-left/right/top/bottom*: a floating point number, which specifies the padding of a text cell, that's how much space is between the cell's text and cell's left and right sides, respectively.
-- *inset*: size of the elements' borders. It specifies the space that an element must leave at its edges. In some editor cells, it corresponds to the so-called padding of the editor cell.
+- *padding-left/right/top/bottom*: a floating point number, which specifies the padding of a text cell, that's how much space is between the cell's text and the cell's left and right sides, respectively.
+- *inset*: the size of the elements' borders. It specifies the space that an element must leave at its edges. In some editor cells, it corresponds to the so-called padding of the editor cell.
 - *baseline*: the line upon which most letters sit ([other explanation](https://fonts.google.com/knowledge/glossary/baseline)).
-- *ascent*: the recommended distance above the baseline for a single spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
-- *descent*: the recommended distance below the baseline for a single spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
+- *ascent*: the recommended distance above the baseline for a single-spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
+- *descent*: the recommended distance below the baseline for a single-spaced text ([other explanation](https://fonts.google.com/knowledge/glossary/ascenders_descenders)).
 - *gap*: space between cells in a collection. There's a left and right gap. It is mainly influenced by the [punctuation properties](https://www.jetbrains.com/help/mps/editor.html#punctuationproperties.).
 
 Some tree structure terminology is explained in this graphic from [towardsdatascience.com](https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c):
@@ -35,9 +35,9 @@ to render the node tree as a projection-specific text, render the node tree as a
 and other use cases ([source](http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F8425027850913231105)).
 
 When initializing an editor component, an [editor configuration](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.configuration%28MPS.Editor%2F%29%2F%7EEditorConfiguration) can be provided. The property *notifies* tells the editor component to send out
-[EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener) notifications. The property is set to true for MPS IDE editors and the inspector, and false for other scenarios. Some languages in {{ mps_extensions() }} need this flag to be true, so that the languages get activated.
+[EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener) notifications. The property is set to true for MPS IDE editors and the inspector, and false for other scenarios. Some languages in {{ mps_extensions() }} need this flag to be true so that the languages get activated.
 
-The editor component itself extends [JComponent](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/JComponent.html), has [antialiasing enabled](https://github.com/JetBrains/MPS/blob/e5db64ce7b7a419b0ea746dfa0d2f1e7bfabcf72/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L224) and has a left margin of 15 pixels, and top margin of 10 pixels. The gap between the content and the scrollbars is 15 pixels. The editor contains objects of type [EditorCell](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell), arranged in a tree structure. You can right-click in the editor and select *Language Debug* --> *Show Cell in Explorer* to show the current selected cell in the cell explorer tool. The editor component is not only responsible for the editor content but also interacts with the type checking thread, the highlighter (left highlighter column but also the message gutter on the right side).
+The editor component itself extends [JComponent](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/JComponent.html), has [antialiasing enabled](https://github.com/JetBrains/MPS/blob/e5db64ce7b7a419b0ea746dfa0d2f1e7bfabcf72/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L224) and has a left margin of 15 pixels, and top margin of 10 pixels. The gap between the content and the scrollbars is 15 pixels. The editor contains objects of type [EditorCell](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell), arranged in a tree structure. You can right-click in the editor and select *Language Debug* --> *Show Cell in Explorer* to show the currently selected cell in the cell explorer tool. The editor component is not only responsible for the content of the editor but also interacts with the type-checking thread, the highlighter (left highlighter column but also the message gutter on the right side).
 
 ## Left highlighter
 
@@ -51,8 +51,8 @@ The left editor highlighter contains the buttons for folding editor cells and ot
 
 ### UpdateSession
 
-As the name already implies, the class updates the editor. It registers dependencies between nodes, registers big cells, update child cells
-and can return attributed cells. It also gives access to the EditorCellFactory through *getCellFactory()*. It can accessed through
+As the name already implies, the class updates the editor. It registers dependencies between nodes, registers big cells, updates child cells
+, and can return attributed cells. It also gives access to the EditorCellFactory through *getCellFactory()*. It can be accessed through
 *Updater.getCurrentUpdateSession*. Read the [JavaDoc](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/update/UpdateSession.java) to understand
 how dependencies in the editor work.
 
@@ -61,16 +61,16 @@ how dependencies in the editor work.
 The editor context provides access to a few editor-related objects like the editor component, editor component state, selection manager,
 context assistant manager and the editor panel manager.
 
-!!! info "The EditorContext gets destroyed on editor relayout and can be used as a key in an editor cache."
+!!! info "The EditorContext gets destroyed on editor re-layout and can be used as a key in an editor cache."
 
 - *getRepository()*: returns an object of type [SRepository](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7ESRepository)
-- *getSelectedNode()*: returns the current selected node in the editor
+- *getSelectedNode()*: returns the currently selected node in the editor
 - *selectWRTFocusPolicy* sets the focus for a cell or node based on its focus policy defined in the *attracts focus* item in the common
 section in the inspector of the editor (wrt stands for "with respect to"). 
 - *select*: selects the node in the editor
 - *getSelectedCell()*: returns the selected cell in the editor component
-- *flushEvents()*: processes all pending model events such as property changes, adding/removing children etc. This method is called
-at the start of the selectX methods and sometimes has to be called when not all changes to the model are visible.
+- *flushEvents()*: processes all pending model events such as property changes and adding/removing children. This method is called
+at the start of the *selectX* methods and sometimes has to be called when not all changes to the model are visible.
 - *getContextCell()*: returns the cell of *runWithContextCell* or the current select cell
 - *getSelectionManager()*: returns the class that's responsible for handling editor selections
 - *getEditorPanelManager()*: returns a class that can open MPS editors for nodes through *openEditor(node)*
@@ -78,14 +78,14 @@ at the start of the selectX methods and sometimes has to be called when not all 
 ## EditorCell
 
 An EditorCell is a rectangle that has a position(*x* and *y*) and a dimension (*width* and *height*) that can draw anything in the editor (overwrite *paintContent*).
-To request a relayout of the cell, call *requestRelayout* or call *relayout* to relayout it directly. Editor cells support saving additional information (user objects)
+To request a re-layout of the cell, call *requestRelayout* or call *relayout* to re-layout it directly. Editor cells support saving additional information (user objects)
 by calling the methods *putUserObject(key, value)* and *getUserObject()*. [Cell actions](https://www.jetbrains.com/help/mps/editor.html#cellactions) for action maps.
 
-To manually set the style of a cell, call `cell.getStyle().set(attribute,value)`. Warnings, errors and other message are also directly attached to cells.
-They can be accessed through *getMessages*. The resulting list is sorted from less important to the most important messages, so most important
-messages appended to the end of this list. [The substitution of nodes](https://www.jetbrains.com/help/mps/transformation-menu-language.html#substitutemenus)
+To manually set the style of a cell, call `cell.getStyle().set(attribute,value)`. Warnings, errors, and other messages are also directly attached to cells.
+They can be accessed through *getMessages*. The resulting list is sorted from less important to the most important messages, so the most important
+messages are appended to the end of this list. [The substitution of nodes](https://www.jetbrains.com/help/mps/transformation-menu-language.html#substitutemenus)
 can be influenced by *getSubstituteInfo* and *setSubstituteInfo*. This can be useful, for example, in tables in {{ mps_extensions() }} where you might
-one to customize the behavior.
+want to customize the behavior.
 
 When a node is copied to the clipboard, the node itself and a textual representation are copied. The method *renderText()*
 is used for the latter case as it renders the cell and its descendants as text.
@@ -101,7 +101,7 @@ saved in a [sideTransformInfo](http://127.0.0.1:63320/node?ref=r%3A00000000-0000
 ### Custom cells
 
 Extend one of the existing EditorCell implementations like EditorCell_Collection or EditorCell_Constant to use as the basis for the new
-cell. Override the *paintContent* method, to draw custom stuff in the editor ([EditorCell_DropDown](http://127.0.0.1:63320/node?ref=r%3A2da81fb8-b6c6-47b8-8c70-4c760b6faf63%28de.itemis.mps.editor.dropdown.runtime%29%2F8584963402264447319) in {{ mps_extensions() }}).
+cell. Override the *paintContent* method, to draw custom stuff in the editor (e.g. [EditorCell_DropDown](http://127.0.0.1:63320/node?ref=r%3A2da81fb8-b6c6-47b8-8c70-4c760b6faf63%28de.itemis.mps.editor.dropdown.runtime%29%2F8584963402264447319) in {{ mps_extensions() }}).
 If you need to do custom re-layouting, you can override *relayoutImpl* from EditorCell_Basic, for example:
 
 ```java
@@ -123,41 +123,41 @@ myHeight = myImages.getWidth();
 
 [Code folding](https://www.jetbrains.com/help/mps/working-with-source-code.html#code_folding) mainly affects cells of type
 [EditorCell_Collection](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Collection). Call `collection.fold()` to fold the collection and `collection.unfold()` to unfold it. The position
-of the folded cells will stay the same in the folded state and will be recalculated when the collection is unfolded. When a cell is folded, it's in the collapsed state. To get the folded collection for a child cell, call `CellTraversalUtil.getFoldedParent`, to check if it's folded, call
+of the folded cells will stay the same in the folded state and will be recalculated when the collection is unfolded. When a cell is folded, it's in a collapsed state. To get the folded collection for a child cell, call `CellTraversalUtil.getFoldedParent`, to check if it's folded, call
 `CellTraversalUtil.isCellUnderFoldedCollection`.
 
 ### CellLayout
 
 The [celllayout language](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) in {{ mps_extensions() }} has its own layout engine and replaces the MPS layout engine when styles of the languages are used. If you want to understand the first language, it's recommended to study the [MPS implementations](https://github.com/JetBrains/MPS/tree/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellLayout) of the
 different layouts first. The different layouts are described in the [MPS documentation](https://www.jetbrains.com/help/mps/editor.html#celllayouts).
-What are the advantages of the celllayout language with respect to the MPS layouts?
+What are the advantages of the cell layout language concerning the MPS layouts?
 
-Layouting happens from the root to the leafs. That means, children are
+Layouting happens from the root to the leaves. That means, children are
 asked for their preferred/min/max size, but the parent sets the size and
-the child has to fit itself into that size.
+the child has to fit into that size.
 
 This gives more control over the resulting layout, such as:
 
-- Richtext (or any ident layout) can be wrapped to fit into the size of
-  a table column. Indent layout always wrap at the right
+- Richtext (or any indent layout) can be wrapped to fit into the size of
+  a table column. Indent layout always wraps at the right
   margin line.
 - making a horizontal line as wide as the cell above/below or as wide as the page
-- having additional cells on the right of a richtext without them being
+- having additional cells on the right of a rich text without them being
   pushed over the right margin (the text wraps earlier).
 - In a diagram, the content of a box can fit to the size of the box.
-  This is especially useful if sub-diagrams exist in the box. Before
-  this was possible only with some ugly hacks.
+  This is especially useful if sub-diagrams exist in the box. In the past,
+  this was only possible with some ugly hacks.
 
-A CSS like box model can be use for setting border sizes and
-margins on cells and respect them in the layout. MPS by default allows only borders of size 1.
+A CSS-like box model can be used for setting border sizes and
+margins on cells and respecting them in the layout. MPS by default allows only borders of size 1.
 
 This framework is compatible with the existing layouts in MPS.
 That means, implementations for horizontal, vertical,
-vertical-grid and indent layouts exist, that support this new architecture. You don't need to change anything, and you can still use the MPS editor language.
+vertical-grid, and indent layouts exist, that support this new architecture. You don't need to change anything, and you can still use the MPS editor language.
 
 You can also have custom layouts based on the default MPS layout
 architecture. This framework can handle them in a parent cell
-(for example: margin comments) or in a child cell (e.g. math).
+(for example margin comments) or in a child cell (e.g. math).
 
 {{ contribution_by('slisson') }}
 
@@ -166,9 +166,9 @@ architecture. This framework can handle them in a parent cell
 The editor cell context contains the used [editor hints](https://www.jetbrains.com/help/mps/editor-hints.html), as well as optional information
 about the property edited by the cell. It also contains the node location in the tree. It is used to specify the location for both transformations and substitutions. Usually, the same node is transformed and substituted, but when creating a menu for an empty cell, the transformations are collected for the parent while substitutions are collected for the (non-existent) child.
 
-!!! info "The EditorCellContext gets destroyed on editor relayout but is recreated and can be used as a key in an editor cache."
+!!! info "The EditorCellContext gets destroyed on editor re-layout but is recreated and can be used as a key in an editor cache."
 
-The class [EditorCellFactory](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/cells/EditorCellFactory.java) is also used to create new editor cell and manipulate the cell context. Read its JavaDoc to understand more about
+The class [EditorCellFactory](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/cells/EditorCellFactory.java) is also used to create new editor cells and manipulate the cell context. Read its JavaDoc to understand more about
 its methods. To access the EditorCellContext through the EditorContext call
 
 ```java
@@ -186,7 +186,7 @@ A selection contains the following information and methods:
  - *canExecuteAction* and executeAction to execute an action for the selected cells. The available actions are listed in the enum
 [CellActionType](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType). The different types are implemented as actions in plugin solutions, e.g., the action [SelectLocalHome](http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003) calls `#!java editorComponent.getSelectionManager().getSelection().executeAction(CellActionType.SELECT_LOCAL_HOME)`.
 
-A few builtin selections exist:
+A few built-in selections exist:
 
 - [EditorCellLabelSelection](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.selection%28MPS.Editor%2F%29%2F%7EEditorCellLabelSelection): a selection for EditorCell_Label cells, that supports ranges. A trivial selection in this context is a selection instance where the start equals the end of the selection.
 - [EditorCellSelection](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.selection%28MPS.Editor%2F%29%2F%7EEditorCellSelection): a selection of a single editor cell. The caret position is also saved in the selection.
@@ -259,9 +259,9 @@ When possible, try to cache objects/calculations. Depending on the type of exten
 or EditorCellContext can be used, for example, as the keys in a map that represents the cache. You can use a weak hash map
 as the backing data structure ([Guide to WeakHashMap in Java](https://www.baeldung.com/java-weakhashmap)): `#!java
 map<EditorComponent, YourListener> instances = new weakHashMap<EditorComponent, YourListener>;` To let the garbage collector
-delete a referenced editor component in the listener when it is not needed anymore, store it in a weak reference: `#!java myEditorComponent = new WeakReference<EditorComponent>(editorComponent)`
+delete a referenced editor component in the listener when it is not needed anymore, and store it in a weak reference: `#!java myEditorComponent = new WeakReference<EditorComponent>(editorComponent)`
 
-### Disposing resources
+### Disposing of resources
 
 Register a dispose-listener for the editor component and execute your *uninstall* method in the body:
 
@@ -274,7 +274,7 @@ editorComponent.addDisposeListener(new EditorComponent.EditorDisposeListener() {
 })
 ```
 
-Make sure to also call it in the *dispose* method of your application/project plugin. Failing to dispose the allocated resources can 
+Make sure to also call it in the *dispose* method of your application/project plugin. Failing to dispose of the allocated resources can 
 lead to class reloading issues and memory leaks.
 
 ## Painting
@@ -282,13 +282,13 @@ lead to class reloading issues and memory leaks.
 [EditorCell_Basic](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell_Basic) overwrites *paintComponent* and calls *paintCell* to paint the cell itself + *paintDecorations* to draw
 borders and messages in the editor. *paintCell* fills the background of the cell and paints the selection if necessary.
 Afterwards, the method *paintContent* is called which is the method that gets overridden most of the time. All the *paintX*
-methods have a [Graphics](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html) that can be cast to a [Graphics2D](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html) if necessary. The old documentation at Oracle is still a good starting point
+methods have a [Graphics](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html) object that can be cast to a [Graphics2D](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html) object if necessary. The old documentation at Oracle is still a good starting point
 to learn more about [2d Graphics in Java](https://docs.oracle.com/javase/tutorial/2d/index.html). To find examples in MPS,
 search for global usages of the [Graphics](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EGraphics) class.
 
 Editor components support additional painting through the methods *addAdditionalPainter* and *removeAdditionalPainter*. They
 allow registering/unregistering objects of class [AdditionalPainter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EAdditionalPainter).
-The highlighting of the current selected line and red highlighting of the break point line are implemented that way.
+The highlighting of the currently selected line and red highlighting of the breakpoint line is implemented that way.
 
 ## Additional reference
 

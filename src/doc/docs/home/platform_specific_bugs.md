@@ -9,7 +9,7 @@ tags:
 
 ## Native crashes
 
-Native crashes are crashes where MPS crashes internally (C/C++ code) and shows an error dialog. First search the following Youtrack projects:
+Native crashes are crashes where MPS crashes internally (C/C++ code) and an error dialog is shown. First search the following Youtrack projects:
 
 - [MPS](https://youtrack.jetbrains.com/issues/MPS): MPS related crashes
 - [IntelliJ IDEA](https://youtrack.jetbrains.com/issues/IDEA): IntelliJ (platform) related crashes
@@ -44,7 +44,7 @@ For crashes on macOS, have a look at [Identifying the Cause of Common Crashes | 
 
 ## Mac
 
-You might run into issues with newer macOS versions One of the is [notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) which is not supported by the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin/issues/99). There were also changes introduced with the M1 chips (new architecture: arm64). MPS already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found [here](https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2). If you want to provide your own RCP you might want to look at this commit. A separate version of JBR called jbr-osx-aarch64 might also be needed.
+You might run into issues with newer macOS versions. One of the is [notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) which is not supported by the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin/issues/99). There were also changes introduced with the M1 chips (new architecture: arm64). MPS already provides extra downloads for the new Macs (.dmg Apple Silicon). The commit can be found [here](https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2). If you want to provide your own RCP you might want to look at this commit. A separate version of JBR called jbr-osx-aarch64 might also be needed.
 
 !!! question "How do I get my defined environment variables?"
 

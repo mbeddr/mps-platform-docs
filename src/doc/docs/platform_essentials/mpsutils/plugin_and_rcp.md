@@ -16,9 +16,9 @@ that's located at the top left of the window.
 
 ![example: actions filter](actionsfilter_example.png)
 
-!!! note "To use the language, not only the language has to be installed but also the corresponding Intellij plugin. `./gradlew install` can install this plugin. Without the plugin the language won't load at all."
+!!! note "To use the language, not only the language has to be installed but also the corresponding IntelliJ plugin. `./gradlew install` can install this plugin. Without the plugin, the language won't load at all."
 
-!!! tip "Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not readonly. Execute `./gradlew install` to install the plugin after making a change and restart MPS to test it."
+!!! tip "Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not read-only. Execute `./gradlew install` to install the plugin after making a change and restart MPS to test it."
 
 The predefined actions profiles can be customized by the user in *preferences* --> *Appearance & Behavior* --> *Actions*. New profiles can be created by clicking the *+* button and deleted by clicking the *-* button.
 
@@ -37,9 +37,9 @@ Example:
 
 It supports the following options:
 
-- **scope**: save the preferences on application or project level
+- **scope**: save the preferences on the application or project level
 - **help topic**: The help topic is an internal identifier that can link a page in the MPS documentation.
-  Example: `preferences.intentionPowerPack` links to https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack which redirects to https://www.jetbrains.com/help/mps/intentions-settings.html. The base URL in MPS is defined the [XML configuration](https://github.com/JetBrains/MPS/search?q=webhelp-url) of a few plugins. To get the other internal names search for `getHelpTopic` in the [MPS repository](https://github.com/JetBrains/MPS/search?q=getHelpTopic) and/or the [IntelliJ Community repository](https://github.com/JetBrains/intellij-community/search?q=getHelpTopic).
+  Example: `preferences.intentionPowerPack` links to https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack which redirects to https://www.jetbrains.com/help/mps/intentions-settings.html. The base URL in MPS is defined as the [XML configuration](https://github.com/JetBrains/MPS/search?q=webhelp-url) of a few plugins. To get the other internal names, search for `getHelpTopic` in the [MPS repository](https://github.com/JetBrains/MPS/search?q=getHelpTopic) and/or the [IntelliJ Community repository](https://github.com/JetBrains/intellij-community/search?q=getHelpTopic).
 
 The preference form supports a few different input elements:
 
@@ -59,7 +59,7 @@ HttpServerConfig.setCurrentConfig(config);
 extensionPoint/HttpServerConfigChangeListener/.objects.forEach({~it => it.serverChanged(config); });
 ```
 
-The *after read* method is called, after the state is loaded (for example: when the preference form is opened).
+The *after read* method is called after the state is loaded (for example: when the preference form is opened).
 
 ## Wizard (process)
 
@@ -92,7 +92,7 @@ Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3
 
 - **name**: the name of the new action
 - **caption**: the text that's shown for the action
-- **user can change persistence**: boolean flag that decides if the user can change the model's persistence type.
+- **user can change persistence**: a boolean flag that decides if the user can change the model's persistence type.
 - **default persistence**: the type of model persistence that's used when the model is created
 - **optional devkits**: devkits that are automatically added when the model is created
 - **show model properties**: open the model properties after the model was created
@@ -101,7 +101,7 @@ Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3
 
 > ^^com.mbeddr.mpsutil.spreferences^^
 
-This extension allows the definition of preference pages by using MPS models; so in the preference page you get a normal MPS editor, as exemplified by mbeddr's platform templates preference page:
+This extension allows the definition of preference pages by using MPS models. In the preference page you get a normal MPS editor, as exemplified by the mbeddr platform templates preference page:
 
 ![example: spreferences](spreference_example.png)
 

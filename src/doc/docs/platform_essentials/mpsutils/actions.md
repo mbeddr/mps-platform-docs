@@ -4,10 +4,10 @@
 
 > ^^com.mbeddr.mpsutil.buildassistant^^
 
-This language adds actions to make or rebuild models/modules or projects and also include their
+This language adds actions to make or rebuild models/modules or projects and also includes their
 dependencies.
 
-!!! question "TODO: Do the official actions already provide this capability?"
+TODO: Do the official actions already provide the same functionality?
 
 ## Generic actions
 
@@ -20,7 +20,7 @@ As the name already implies, this language adds some new generic actions:
 - **Reset MPS Editor Font Size**:: reset the font size to the default size (ctrl + 0, 13 pixels)
 - **File Manager in Output Folder**: a new action in the context menu of models that opens the path of the generated files.
   This action won't work if the model does not generate output files.
-- **File Manager in Module Folder**: a new action in the context menu of modules that opens the path of th module.
+- **File Manager in Module Folder**: a new action in the context menu of modules that opens the path of the module.
 
 ## Node access
 
@@ -29,8 +29,8 @@ As the name already implies, this language adds some new generic actions:
 This language adds a new group of actions called *Copy/Paste Special* to the editor popup that opens when right-clicking
 in the editor:
 
-- **Copy Node as XML**: serialize the selected node to XML and copy it to the system clipboard.
-- **Paste XML Node**: deserialize a previously copied node and insert it next to the current selected node.
+- **Copy Node as XML**: serializes the selected node to XML and copies it to the system clipboard.
+- **Paste XML Node**: deserializes a previously copied node and inserst it next to the currently selected node.
 - **Copy Node Info to Clipboard**: copies some information (project, module, model, node, URL) about a node to the system
   clipboard.
 
@@ -68,7 +68,7 @@ be defined in *shortcut*. Refactoring parameters can be specified in *parameters
 the refactoring dialog for the value of the parameters:
 
 - *string*: chooser for selecting a text
-- +node*: chooser for selecting a node using a filter. The filter is a function which has a list of nodes to refactor as a parameter and
+- +node*: chooser for selecting a node using a filter. The filter is a function that has a list of nodes to refactor as a parameter and
   should return a new filtered sequence of nodes.
 - *project tree node*: chooser for selecting a node from the project tree
 

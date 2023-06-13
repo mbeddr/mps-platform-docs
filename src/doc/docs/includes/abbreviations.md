@@ -10,11 +10,11 @@
 *[DoD]: Definition of Done
 *[DoR]: Definition of Ready
 *[DOM]: Document Object Model
-*[DSL]: Domain Specific Language
+*[DSL]: Domain-Specific Language
 *[EDT]: Event Dispatch Thread
 *[EP]: Extension Point
 *[ES]: External System
-*[FBI]: File Based Index
+*[FBI]: File-Based Index
 *[FO]: Functional Owner
 *[FJ]: ForkJoin
 *[GP]: Generation Plan
@@ -37,14 +37,14 @@
 *[LSP]: Language Server Protocol
 *[LVCS]: Local History
 *[LaF]: Look and Feel
-*[MBSE]: Model Based System Engineering
+*[MBSE]: Model-Based System Engineering
 *[M2M]: Model to Model
 *[M2T]: Model to Text
-*[MDD]: Model Driven Development
-*[MDSD]: Model Driven Software Development
+*[MDD]: Model-Driven Development
+*[MDSD]: Model-Driven Software Development
 *[MPS]: Meta Programming System
 *[MR]: Merge Request
-*[NDA]: Non Disclosure Agreement
+*[NDA]: Non-Disclosure Agreement
 *[NPE]: NullPointerException
 *[OS]: Open Source / Operating System
 *[PI]: Product Increment
@@ -59,7 +59,7 @@
 *[SM]: Scrum Master
 *[SSH]: Secure Shell
 *[SSL]: Secure Socket Layer
-*[SSO]: Single Sign on
+*[SSO]: Single Sign-On
 *[SNode]: Semantic Node
 *[SRepository]: Semantic Repository
 *[SSH]: Secure Shell

@@ -59,7 +59,7 @@ tags:
 
 !!! question "How to shut down MPS programmatically?"
 
-    In normal conditions one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, an exception
+    In normal conditions, one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, an exception
      can be thrown on purpose. 
 
 !!! question "How can you react to opening and closing of projects?"

@@ -15,6 +15,6 @@ tags:
 - Don't use interface the [IDon'tSubstituteByDefault](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819). Create an empty default substitute menu for the concept instead.
 - Don't use [print](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208), `#!java System.out` or `#!java System.err` for logging. Use [log](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497) for low-level logging or [message](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325) for high-level logging instead.
 - Use the explicit presentation of a node when used in a string. For example: `#!java "my node: " + node.getPresentation()` instead of `#!java "my node: " + node`.
-- Don't use counter variable in LoopMacro. Use `#!java LOOP index` in code instead.
+- Don't use counter variables in LoopMacro. Use `#!java LOOP index` in the code instead.
 - Don't use [IOperationContext](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext). You can find more info in the attached comment of the interface.
 - Avoid getting the repository from the opened project or using the global repository. The code might break in the future.

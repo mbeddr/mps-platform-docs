@@ -15,8 +15,8 @@ tags:
 
 !!! warning "Type system rules aren't executing."
 
-    Turn off the [power save mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode). Also make sure that the languages that contains the rules is used. Make sure that under *Tool* -->
-    *Model Checker* the typesystem checks are enabled. Some rules are only checked when *Check model* is invoked. In this case the
+    Turn off the [power save mode](https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20save%20mode). Make also sure that the language that contains the rules is used. Make sure that under *Tool* -->
+    *Model Checker* the type-system checks are enabled. Some rules are only checked when *Check model* is invoked. In this case, the
     option *do not apply on the fly* is set to true in a checking rule.
 
 !!! question "Are comparison rules often used?"
@@ -25,27 +25,27 @@ tags:
 
 !!! question "How do you learn more about MPS CodeRules?"
 
-    This is kind of a new typesystem bases on constraints. Visit @JetBrains/mps-coderules
+    This is kind of a new type-system is based on constraints. Visit @JetBrains/mps-coderules
     for more information. There is also a [blog post](https://specificlanguages.com/posts/2022-01/13-coderules-entering-exiting/)
     about this project. The new MPS implementation of the Kotlin language uses CodeRules. More information can be found in @JetBrains/mps-kotlin-typesystem. There is also a free course about it on [stepik](https://stepik.org/course/101057/promo).
 
 !!! question "Type system vs constraints?"
     
-    {{ blog('sl',false) }}[Type system vs constraints](https://specificlanguages.com/posts/typesystem-vs-constraints/)
+    [Type system vs constraints](https://specificlanguages.com/posts/typesystem-vs-constraints/){{ blog('sl') }}
 
 !!! question "Subtyping vs inheritance?"
     
-    Specific Languages blog: [Subtyping vs inheritance](https://specificlanguages.com/posts/2022-02/08-subtyping-vs-inheritance/)
+    [Subtyping vs inheritance](https://specificlanguages.com/posts/2022-02/08-subtyping-vs-inheritance/){{ blog('sl') }}
 
 !!! question "How can you speed up model checks?"
     
-    {{ blog('sl',false) }}[Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/)
+    [Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/){{ blog('sl') }}
 
 ??? question "How do you build a language extension for checking rules?"
 
-    > I built a baselanguage extension which can be used in a checking rule (i.e., in the typesystem aspect of another language) buut the new language's generator isn't engaged during the generation of some checking rule using the extension (generation plan says: "NOT IN THE PLAN").
+    > I built a Base Language extension which can be used in a checking rule (i.e., in the type-system aspect of another language) but the new language's generator isn't engaged during the generation of some checking rule using the extension (the generation plan says: "NOT IN THE PLAN").
 
-    The generator of the new language must have a dependency to the baseLanguage generator with the scope set to `Extends`.
+    The generator of the new language must have a dependency to the Base Language generator with the scope set to `Extends`.
     
     ![extend baselanguage generator](generator_extend_baselanguage.png){width="600px"}
 
@@ -53,7 +53,7 @@ tags:
 
 !!! question "When and why should you copy a type in an inference rule?"
 
-    > I've seen basically the same code, where one time the type is copied and another time it's just used (without the copy). When should we copy the type and why?
+    > I've seen the same code, where one time the type is copied, and another time it's just used (without the copy). When should we copy the type and why?
 
     ```kotlin
     inference rule typeof_Member {
@@ -69,7 +69,7 @@ tags:
 
     The type should only be copied if you want to use it in another type as a child.
 
-    In the example it should be fine to simply use `member.type`. But let's say you have a `SetType` concept in your language that contains an `innerType` as a child. If you want to construct an instance of that concept, you would write code like this:
+    In the example, it should be fine to simply use `member.type`. But let's say you have a `SetType` concept in your language that contains an `innerType` as a child. If you want to construct an instance of that concept, you would write code like this:
     
     ```java
     node<SetType> result = new node<SetType>;
@@ -86,12 +86,12 @@ tags:
     > Given I have a piece of embedded demonstration code and don't want it to show warnings (e.g. on unused variables).
     > How can I do that?
 
-    Make your node implement {{ mps_url("@mps.ISuppressErrors") }}. If you don't override any methods of it, it will suppress all constraint, typesystem and cardinality errors and warnings.
+    Make your node implement {{ mps_url("@mps.ISuppressErrors") }}. If you don't override any methods of it, it will suppress all constraint, type-system, and cardinality errors and warnings.
 
     - You may override `#suppress(node<>)` to only suppress the errors of certain subnodes.
     - You may override `#suppress(NodeReportItem)` to only suppress certain errors. Overriding this will take precedence of overriding `#suppress(node<>)`. Xou should implement only one of them or manually call `#suppress(node<>)` from `#suppress(NodeReportItem)`.
     
-    - If there are nested nodes that implement `ISuppressErrors`, the error will be suppressed if any of them returns true. You may debug such by copying the errornode to the console (e.g. `nodeRef@50283`) and running this line:
+    - If there are nested nodes that implement `ISuppressErrors`, the error will be suppressed if any of them returns true. You may debug such by copying the error node to the console (e.g. `nodeRef@50283`) and running this line:
     
     ```java
     > nodeRef@50283.ancestors<concept = ISuppressErrors>.select({~it => [it, it.suppress(nodeRef@50283)]; });
@@ -124,11 +124,11 @@ tags:
 
 !!! question "What's Helgins?"
 
-    It's the old name of the typesystem. The name is nowadays not used anymore.
+    It's the old name of the type-system. The name is nowadays not used anymore.
 
 !!! question "How is the relation between null and other types?"
 
-    Null is a subtype of every [reference](https://www.javatpoint.com/reference-data-types-in-java) type in baselanguage/Java but not of primitive types.
+    Null is a subtype of every [reference](https://www.javatpoint.com/reference-data-types-in-java) type in Base Language/Java but not of primitive types.
 
 !!! question "What is variance?"
 
@@ -149,10 +149,10 @@ tags:
     - *contravariance*:
         - supertypes are allowed instead of a type
         - [parameter of function types](https://www.jetbrains.com/help/mps/closures.html#functiontype)
-    - *Invariance*: neither covariance nor contravariance
+    - *invariance*: neither covariance nor contravariance
         - examples: generics (e.g `List<String>`is not a subtype of `List<Object>`)
 
-    For overriden methods, the signature has to be the same (name + parameters), the return type can be a subtype of the original return type:
+    For overridden methods, the signature has to be the same (name + parameters), and the return type can be a subtype of the original return type:
 
     ```java
     class MyCollection {
@@ -173,14 +173,14 @@ tags:
 
 !!! question "What's autoboxing in Base Language/Java?"
 
-        For some cases there is an automatic conversion between primitive types and reference types called [autoboxing/unboxing](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html).
+        In some cases, there is an automatic conversion between primitive types and reference types called [autoboxing/unboxing](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html).
 
     ```java
     Integer z1 = 1;
     int z2 = new Integer(1);
     ```
 
-    Autoboxing [doesn't apply to array types](https://stackoverflow.com/a/45918658/16577108) and the type checker behaves differently in Java (J) and *baselanguage (B)*:
+    Autoboxing [doesn't apply to array types](https://stackoverflow.com/a/45918658/16577108) and the type checker behaves differently in Java (J) and *Base Language (B)*:
 
     ```java
     Integer[] a = new int[]{1, 2}; // disallowed in both

@@ -1,4 +1,4 @@
-The following example, shows the internal structure of MPS in regards to the [Swing](https://docs.oracle.com/javase/tutorial/uiswing/) components.
+The following example shows the internal structure of MPS in regard to the [Swing](https://docs.oracle.com/javase/tutorial/uiswing/) components.
 Most of the structure is predetermined by the IntelliJ platform. There is a [UI inspector
 ](https://plugins.jetbrains.com/docs/intellij/internal-ui-inspector.html) in IntelliJ products for debugging purposes
 that is disabled by default in MPS. It can be enabled on the MPS console through the following code:
@@ -45,7 +45,7 @@ because a different version of the IntelliJ platform is used.
     20. the opened left tool window
     21. the [document tabs](https://www.jetbrains.com/help/mps/editor-guided-tour.html#194d9944) that enable navigating between opened editors
     22. the editor window
-    23. This class hides the internal structure of a UI component which represent a set of opened editors
+    23. This class hides the internal structure of a UI component which represents a set of opened editors
     24. MPS version of an IntelliJ [document](https://plugins.jetbrains.com/docs/intellij/documents.html) editor
     25. the panel that contains the MPS editor
     26. the [editor component](https://www.jetbrains.com/help/mps/editor.html#editorcomponentsandeditorcomponentcells) itself
@@ -55,4 +55,4 @@ because a different version of the IntelliJ platform is used.
     30. the left editor highlighter ([left gutter](https://www.jetbrains.com/help/mps/editor-guided-tour.html#c1b7ec2d))
     31. an editor component for editing nodes
     32. the [intentions](https://www.jetbrains.com/help/mps/mps-intentions.html) menu
-    33. [validation side bar/marker bar](https://www.jetbrains.com/help/mps/editor-guided-tour.html#marker_bar)
+    33. [validation sidebar/marker bar](https://www.jetbrains.com/help/mps/editor-guided-tour.html#marker_bar)
