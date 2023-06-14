@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2761,8 +2763,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2785,20 +2785,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3185,7 +3171,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3208,6 +3196,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
 
 
@@ -3217,7 +3207,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>TeamCity</h1>
 
-<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">Extensive official documentation</a> is available for TeamCity on the web. The TeamCity server can be reached at <a href="https://build.mbeddr.com">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. When a new commit is pushed to a branch in one the Git repositories, the platforms are build on the server, tested and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis nexus server</a>.
+<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">Extensive official documentation</a> is available for TeamCity on the web. The TeamCity server can be reached at <a href="https://build.mbeddr.com">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. When a new commit is pushed to a branch in one of the Git repositories, the platforms are built on the server, tested, and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis Nexus repository</a>.
 This is configured through <a href="https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html"><abbr title="Version Control System">VCS</abbr> triggers</a>.</p>
 <p>The test results are collected from <a href="https://ant.apache.org/manual/Tasks/junitreport.html">Ant JUnit reports</a> and make the builds fail if not all tests pass. Tests can be <a href="https://www.jetbrains.com/help/teamcity/investigating-and-muting-build-failures.html">muted</a>. This might be necessary when tests return both passes and failures despite no changes (<a href="https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/">flake tests</a>). This can happen, for example, if the test is timing-dependent, an algorithm is not <a href="https://en.wikipedia.org/wiki/Deterministic_system">deterministic</a> or a timeout happens.</p>
 <p>All GitHub repositories are connected directly to TeamCity and show the build status at the bottom of pull requests and next to pushed commits with the help of the <a href="https://www.jetbrains.com/help/teamcity/commit-status-publisher.html">Commit Status Publisher</a>. The main repositories require the build to succeed before a pull request can be merged:</p>
@@ -3228,7 +3218,7 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 <p><strong><abbr title="Meta Programming System">MPS</abbr>-Extensions</strong></p>
 <ul>
 <li>build the project: <code>gradle build</code><ul>
-<li>is is not triggered by changes in the documentation</li>
+<li>it is not triggered by changes in the documentation</li>
 </ul>
 </li>
 <li>build the documentation</li>
@@ -3249,7 +3239,7 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 </li>
 <li><strong>mbeddr</strong><ul>
 <li>build and publish: <code>gradle build:com.mbeddr:languages:publish</code><ul>
-<li>depends on mbeddr platform</li>
+<li>depends on the mbeddr platform</li>
 </ul>
 </li>
 <li>analyses test: <code>gradle test_mbeddr_analysis</code></li>
@@ -3257,7 +3247,7 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 </li>
 <li><strong>iets3</strong><ul>
 <li>build and publish: <code>gradle build publish</code><ul>
-<li>depends on mbeddr platform</li>
+<li>depends on the mbeddr platform</li>
 <li>builds are only triggered for specific naming conventions and some special branches: <em>master</em>, <em>feature/*</em>, <em>bugfix/*</em>, <em>refactor/*</em>, <em>maintenance/*</em></li>
 </ul>
 </li>
@@ -3277,18 +3267,18 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 </ul>
 </li>
 </ul>
-<p>The following diagram show a simplified version of the <a href="https://www.jetbrains.com/help/teamcity/build-chain.html">build chain</a> that shows the dependencies between the projects/configurations:</p>
+<p>The following diagram shows a simplified version of the <a href="https://www.jetbrains.com/help/teamcity/build-chain.html">build chain</a> that shows the dependencies between the projects/configurations:</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp1kLEOwjAMRPd8hX-gUzcG1KUDAxJS2SqG0LglInGi2Ij276lS0gGJzT4_3Z3csOgkL-8UPy1FnbSHIfgYCEk6WRxCwkE0TQ6V6s-XrmpnQWIbiG-gGXAW1fs7GpMgOi1jSD4fyqL6U3vt6qxZFK4LnpVt3B00abcwMgiybAFFUmqNgirZ6SHVcbeHAxiMSAZpWCCMaj9UJrxpJXPof6oYbg1-uW-vnSptfrlmndc3fgDY3HhQ?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1kLEOwjAMRPd8hX-gUzcG1KUDAxJS2SqG0LglInGi2Ij276lS0gGJzT4_3Z3csOgkL-8UPy1FnbSHIfgYCEk6WRxCwkE0TQ6V6s-XrmpnQWIbiG-gGXAW1fs7GpMgOi1jSD4fyqL6U3vt6qxZFK4LnpVt3B00abcwMgiybAFFUmqNgirZ6SHVcbeHAxiMSAZpWCCMaj9UJrxpJXPof6oYbg1-uW-vnSptfrlmndc3fgDY3HhQ?" /></a></p>
-<p>Although all these repositories use Gradle for the build management, TeamCity has a lot of bundled plugins. Many are described in <a href="https://www.jetbrains.com/help/teamcity/configuring-build-steps.html">Configuring Build steps | TeamCity On-Premises</a>. The builds are executed by <a href="https://www.jetbrains.com/help/teamcity/build-agent.html">build agents</a>. The Docker image of the agents can be found in the <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">mbeddr.build.docker</a> repository.</p>
-<p>9 agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and in the cloud). They agents are running Linux, except one agent which is running
-Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open Source / Operating System">OS</abbr> X, version 10.15.7.</p>
+<p>Although all these repositories use Gradle for build management, TeamCity has a lot of bundled plugins. Many are described in <a href="https://www.jetbrains.com/help/teamcity/configuring-build-steps.html">Configuring Build steps | TeamCity On-Premises</a>. The builds are executed by <a href="https://www.jetbrains.com/help/teamcity/build-agent.html">build agents</a>. The Docker image of the agents can be found in the <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">mbeddr.build.docker</a> repository.</p>
+<p>9 agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and the cloud). The agents are running Linux, except one agent which is running
+Windows 10 and one agent that is running Mac <abbr title="Open Source / Operating System">OS</abbr> X, version 10.15.7.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3297,6 +3287,8 @@ Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open So
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3425,6 +3417,8 @@ Windows 10, version 10.0, and one agent that is running Mac <abbr title="Open So
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

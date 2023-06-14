@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -1939,7 +1939,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#jars" class="md-nav__link">
-    Jars
+    JARs
   </a>
   
 </li>
@@ -2966,8 +2966,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2990,20 +2988,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3575,7 +3559,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#jars" class="md-nav__link">
-    Jars
+    JARs
   </a>
   
 </li>
@@ -3620,29 +3604,29 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h4 id="plugin-aspect">Plugin aspect<a class="headerlink" href="#plugin-aspect" title="Permanent link">&para;</a></h4>
 <p>Although this aspect adheres to the <a href="#mps-plugin-model">plugin model</a> naming convention, don&rsquo;t use it. Use it only to define <abbr title="Meta Programming System">MPS</abbr> extension points (from language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins>).</p>
 <h3 id="test-model">Test model<a class="headerlink" href="#test-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution in a specific folder named <code>tests</code> with specific icon in the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below solution in a specific folder named <code>tests</code> with a specific icon in the logical view</p>
 <p>A model containing tests. Defined by the <em>&commat;tests</em> stereotype.</p>
 <h3 id="generator-model">Generator model<a class="headerlink" href="#generator-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry with specific icon below generator in the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry with a specific icon below generator in the logical view</p>
 <p>A model containing the generator, defined by the <em>&commat;generator</em> stereotype.</p>
 <h3 id="transient-model">Transient model<a class="headerlink" href="#transient-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: last entry below project in logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: last entry below project in the logical view</p>
 <p>Temporary models produced during generation, defined by <em>&commat;transient«someNumber»</em> or <em>&commat;«someNumber»</em> stereotype.</p>
 <h3 id="accessories-model">Accessories model<a class="headerlink" href="#accessories-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a specific folder named <em>accessories</em> in the logical view or entry below the solution in the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a specific folder named <em>accessories</em> in the logical view or entry below the solution in the logical view</p>
 <p>A model specially selected by a language. Nodes contained in these models are implicitly available on the Java classpath and the <a href="#dependencies">dependencies</a> of any model using this language. A use case would be a default library of concept instances to be available at any place you use the Language.</p>
-<p>You can store accessory models in two places: either as an aspect of a language (recommended), or as a regular model below a solution. In both cases, the model needs to be added to the module runtime language settings.</p>
+<p>You can store accessory models in two places: either as an aspect of a language (recommended) or as a regular model below a solution. In both cases, the model needs to be added to the module runtime language settings.</p>
 <h3 id="utility-model">Utility model<a class="headerlink" href="#utility-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a special folder named <em><abbr title="utilities">util</abbr> models</em> in the logical view.</p>
-<p>It includes code required in other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation or a generator needs to do complex model traversals. Create them as regular models within the language.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below language in a special folder named <em><abbr title="utilities">util</abbr> models</em> in the logical view</p>
+<p>It includes code required in other parts of a language or generator. If, for example, the behavior method logic is too complex for inline implementation, or a generator needs to do complex model traversals. Create them as regular models within the language.</p>
 <h3 id="build-model">Build model<a class="headerlink" href="#build-model" title="Permanent link">&para;</a></h3>
-<p>**<abbr title="User Interface">UI</abbr>: entry below a solution in the logical view</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: entry below a solution in the logical view</p>
 <p>It includes nodes from the <a href="#build-language">build language</a>.</p>
 <h3 id="mps-plugin-model"><abbr title="Meta Programming System">MPS</abbr> plugin model<a class="headerlink" href="#mps-plugin-model" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: model within a solution in the logical view.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: model within a solution in the logical view</p>
 <p>It includes <abbr title="Meta Programming System">MPS</abbr> plugins. The model name needs to adhere to the naming convention <em>«moduleName».plugin</em>.</p>
 <h2 id="model-stereotype">Model stereotype<a class="headerlink" href="#model-stereotype" title="Permanent link">&para;</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: attached to the model name, separated by <em>@</em>.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: attached to the model name, separated by <em>@</em></p>
 <p>A model may have a stereotype. To change, add, or remove a stereotype, use
 <em>Rename Model Refactoring</em> in the context menu of a model.</p>
 <p>Using custom stereotypes interferes with lots of <abbr title="Meta Programming System">MPS</abbr> internals and thus isn&rsquo;t advised to do.</p>
@@ -3659,7 +3643,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><strong><abbr title="User Interface">UI</abbr></strong>: tab in the model properties dialog</p>
 <p>It lists other models this model contains references to.</p>
 <h3 id="used-languages-model-settings">Used languages model settings<a class="headerlink" href="#used-languages-model-settings" title="Permanent link">&para;</a></h3>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: tab in model properties dialog</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: tab in the model properties dialog</p>
 <p>It lists languages used in this Model. Any <em>Used Language</em> listed in a model, needs to be in the list of <em>Used Languages</em> of the containing module.</p>
 <h3 id="advanced-model-settings">Advanced model settings<a class="headerlink" href="#advanced-model-settings" title="Permanent link">&para;</a></h3>
 <p><strong><abbr title="User Interface">UI</abbr></strong>: tab in the model properties dialog</p>
@@ -3671,7 +3655,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Abstracted <a href="https://ant.apache.org/">Apache Ant</a> files used to build and package <abbr title="Meta Programming System">MPS</abbr> Modules outside the <abbr title="Integrated Development Environment">IDE</abbr>.
 It&rsquo;s used in <a href="#build-model">build models</a>. <abbr title="Meta Programming System">MPS</abbr> can execute them via the <em>Run «Build Model name»</em> context menu entry of the build model in the logical view.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: section within build model</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: a section within the build model</p>
 <p>This is the scope import for all references to other build models.
 It provides access to resulting artifacts of other build models.</p>
 <h2 id="idea-plugin-dependencies">IDEA plugin dependencies<a class="headerlink" href="#idea-plugin-dependencies" title="Permanent link">&para;</a></h2>
@@ -3679,21 +3663,21 @@ It provides access to resulting artifacts of other build models.</p>
 <p>It contains the contents of <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">IDEA plugin.xml</a> <em>depends</em>-tags.</p>
 <p>This plugin only loads if all dependencies listed here load before. The contents of dependencies are available for this IDEA plugin.</p>
 <h2 id="module-dependencies">Module Dependencies<a class="headerlink" href="#module-dependencies" title="Permanent link">&para;</a></h2>
-<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>mps group</em> in <em>Build Model</em>, subsection <em>solution</em>/<em>module</em>, inspector section <em>dependencies</em>.</p>
-<p>It contains a copy of relations of the described module.</p>
+<p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>mps group</em> in <em>Build Model</em>, subsection <em>solution</em>/<em>module</em>, inspector section <em>dependencies</em></p>
+<p>It contains a copy of the relations of the described module.</p>
 <h2 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h2>
-<p>It contains a copy of module runtime language settings.</p>
-<h2 id="jars">Jars<a class="headerlink" href="#jars" title="Permanent link">&para;</a></h2>
+<p>It contains a copy of the module runtime language settings.</p>
+<h2 id="jars">JARs<a class="headerlink" href="#jars" title="Permanent link">&para;</a></h2>
 <p><strong><abbr title="User Interface">UI</abbr></strong>: section <em>default layout</em> in <em>Build Model</em></p>
 <p>You have to include all jars included in any Java module settings somewhere in this section.
-<em>.java</em> files (from Java source paths) need to be compiled as java sources inside corresponding build script and manually included into the resulting build layout: corresponding <em>.class</em> files should be jared, .java files should be places in corresponding location if they are referenced by java_source_stub model root.</p>
+<em>.java</em> files (from Java source paths) need to be compiled as Java sources inside the corresponding build script and manually included into the resulting build layout: corresponding <em>.class</em> files should be jared, .java files should be placed in the corresponding location if they are referenced by java_source_stub model root.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

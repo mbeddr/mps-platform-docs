@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2533,8 +2533,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
         
           <li class="md-nav__item">
-  <a href="#other-places-behaviorconstraintactionstypesystemtextgen-aspect-generator" class="md-nav__link">
-    Other places (behavior/constraint/actions/typesystem/textGen aspect, generator)
+  <a href="#other-places" class="md-nav__link">
+    Other places
   </a>
   
 </li>
@@ -2864,8 +2864,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2888,20 +2886,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3355,8 +3339,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
         
           <li class="md-nav__item">
-  <a href="#other-places-behaviorconstraintactionstypesystemtextgen-aspect-generator" class="md-nav__link">
-    Other places (behavior/constraint/actions/typesystem/textGen aspect, generator)
+  <a href="#other-places" class="md-nav__link">
+    Other places
   </a>
   
 </li>
@@ -3404,12 +3388,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>Accessing the project</h1>
 
-<p>There are lot of of different ways to get the <abbr title="Meta Programming System">MPS</abbr>/IntelliJ project, some of them are hacks that should be avoided. This page
-only lists the recommended approaches on purpose. There are only few useful methods in the project class. Namely, access to scope, repository and core components. The idea is that user-triggered action take what&rsquo;s necessary (e.g. a command lock) and then the code down the execution path shall not care to take one.</p>
+<p>There are a lot of of different ways to get the <abbr title="Meta Programming System">MPS</abbr>/IntelliJ project, some of them are hacks that should be avoided. This page
+only lists the recommended approaches on purpose. There are only a few useful methods in the project class. Namely, access to scope, repository, and core components. The idea is that user-triggered actions take what&rsquo;s necessary (e.g. a command lock) and then the code down the execution path shall not care to take one.</p>
 <h2 id="what-are-the-different-project-classes">What are the different project classes?<a class="headerlink" href="#what-are-the-different-project-classes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em><abbr title="commercial/common/communication">com</abbr>.intellij.openapi.project.Project</em>: a <a href="https://plugins.jetbrains.com/docs/intellij/project.html">project</a> in the IntelliJ platform. There are <a href="https://plugins.jetbrains.com/docs/intellij/project.html#how-to-get-a-project-instance">different ways</a> to access the project instance, most of them are not available in <abbr title="Meta Programming System">MPS</abbr>. Everytime you interact with the IntelliJ platform, you need this class.</li>
-<li><em><abbr title="organization">org</abbr>.jetbrains.mps.openapi.project.Project</em>: the <abbr title="Meta Programming System">MPS</abbr> equivalent of a project. It provides access to the repository, its name and modules and to the model access class for reading and writing models</li>
+<li><em><abbr title="commercial/common/communication">com</abbr>.intellij.openapi.project.Project</em>: a <a href="https://plugins.jetbrains.com/docs/intellij/project.html">project</a> in the IntelliJ platform. There are <a href="https://plugins.jetbrains.com/docs/intellij/project.html#how-to-get-a-project-instance">different ways</a> to access the project instance, most of them are not available in <abbr title="Meta Programming System">MPS</abbr>. Every time you interact with the IntelliJ platform, you need this class.</li>
+<li><em><abbr title="organization">org</abbr>.jetbrains.mps.openapi.project.Project</em>: the <abbr title="Meta Programming System">MPS</abbr> equivalent of a project. It provides access to the repository, its name and modules, and to the model access class for reading and writing models</li>
 <li><em>jetbrains.mps.project.Project</em>:  <abbr title="Meta Programming System">MPS</abbr> Project abstraction. The project may rely on the idea Project or not. It has a scope and a corresponding project repository to store modules in it.</li>
 <li><em>jetbrains.mps.project.ProjectBase</em>: <abbr title="Meta Programming System">MPS</abbr> Project basic implementation. This project is tied to the <abbr title="Meta Programming System">MPS</abbr> platform and gives access to the <abbr title="Meta Programming System">MPS</abbr> core platform and components it comprises.</li>
 <li><em>jetbrains.mps.project.MPSProject</em>: represents a project based on the idea platform project. It is in use in <abbr title="Meta Programming System">MPS</abbr> as an IDEA plugin. The method <code>getProject()</code> returns the IntelliJ project.</li>
@@ -3419,21 +3403,21 @@ only lists the recommended approaches on purpose. There are only few useful meth
 <p>There are a few different places where you might need access to a project. Not all of them can access it.</p>
 <h3 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Actions</a> provide access to the <abbr title="Meta Programming System">MPS</abbr>/IntelliJ project,
-the project frame and other information via action context parameters. The official documentation also explains the classes that 
-need to be imported to access those. The available actions can be found on the page <a href="../../reference/actions/">reference:actions</a>.
+the project frame, her information via action context parameters. The official documentation also explains the classes that 
+need to be imported to access those. The available actions can be found on the page <a href="../../reference/actions/">Actions | Reference</a>.
 There is no need to convert between different project classes because all parameters are available.</p>
 <h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
-<p>This is also explained on the Specific Languages Blog: <a href="https://specificlanguages.com/posts/how-to-get-current-project-from-editor/">How to get the current <abbr title="Meta Programming System">MPS</abbr> project from within the editor</a>. Components in the IntelliJ platform can implement the interface <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider">DataProvider</a>
+<p>This is also explained on the Specific Languages blog: <a href="https://specificlanguages.com/posts/how-to-get-current-project-from-editor/">How to get the current <abbr title="Meta Programming System">MPS</abbr> project from within the editor</a>. Components in the IntelliJ platform can implement the interface <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider">DataProvider</a>
 to provide data that can be accessed through the <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide%28MPS.IDEA%2F%29%2F%7EDataManager">DataManager</a> class. A common data provider is the editor component, actions also support the DataManager:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Component</span><span class="w"> </span><span class="n">editorComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">();</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">MPSProject</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataKeys</span><span class="p">.</span><span class="na">MPS_PROJECT</span><span class="p">.</span><span class="na">getData</span><span class="p">(</span><span class="n">DataManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getDataContext</span><span class="p">(</span><span class="n">component</span><span class="p">));</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-This is the recommended way to access the project in the editor or in swing component cells. The following simpler approach
+This is the recommended way to access the project in the editor or in Java Swing component cells. The following simpler approach
 also works but depends on implementation details that might change in the future:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Project</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">getProject</span><span class="p">(</span><span class="n">editorContext</span><span class="p">.</span><span class="na">getRepository</span><span class="p">());</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>For most features like transformation menus, style sheets and action maps, the editor context is available.</p>
+<p>For most features like transformation menus, style sheets, and action maps, the editor context is available.</p>
 <h3 id="intentions">Intentions<a class="headerlink" href="#intentions" title="Permanent link">&para;</a></h3>
 <p>Intentions always have the <code>editorContext</code> available and can access the project the same way as the editor. If you need to
 access the project or other context information, you might also want to consider using an action instead. Actions can be shown
@@ -3442,9 +3426,9 @@ in the right-click menu of the editor if you need them closer to the editor.</p>
 <p>In tests, the <code>project</code> expression is available, although it should be rarely needed except when invoking the generator or resolving
 nodes through the global repository.</p>
 <h3 id="plugin-solutionplugin-aspect">Plugin solution/plugin aspect<a class="headerlink" href="#plugin-solutionplugin-aspect" title="Permanent link">&para;</a></h3>
-<p>If you need access the project, you can use a project plugin where an <code>MPSProject</code> instance is available in the <abbr title="initialization">init</abbr> and dispose block.
-The instance can be passed to other classes as well. To get the IntelliJ project use <code>!#java ProjectHelper.toIdeaProject(project)</code>.</p>
-<h3 id="other-places-behaviorconstraintactionstypesystemtextgen-aspect-generator">Other places (behavior/constraint/actions/typesystem/textGen aspect, generator)<a class="headerlink" href="#other-places-behaviorconstraintactionstypesystemtextgen-aspect-generator" title="Permanent link">&para;</a></h3>
+<p>If you need access the project object, you can use a project plugin where an <code>MPSProject</code> instance is available in the <abbr title="initialization">init</abbr> and dispose block.
+The instance can be passed to other classes as well. To get the IntelliJ project use <code class="highlight"><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">)</span><span class="w"></span></code>.</p>
+<h3 id="other-places">Other places<a class="headerlink" href="#other-places" title="Permanent link">&para;</a></h3>
 <p>Some low-level code, like behaviors, are not supposed to start a command or interact with the <abbr title="User Interface">UI</abbr> (where some dialogs require the project/<abbr title="Integrated Development Environment">IDE</abbr> frame). There&rsquo;s always a project for user-triggered actions, and this is the moment proper command access gets started, and various <abbr title="User Interface">UI</abbr> stuff happens. It&rsquo;s wrong to invoke some behavior that would try to guess the project down the road. Normally, there also should not be a need to access the project in the generator.</p>
 <h3 id="code-to-avoid">Code to avoid<a class="headerlink" href="#code-to-avoid" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3460,12 +3444,12 @@ The instance can be passed to other classes as well. To get the IntelliJ project
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>It will fail with the following exception: <code>GlobalModelAccess does not support actions which require a command to run. One needs a project to run such actions</code>. In those cases, it is possible to access the project and write <code>project.getRepository()</code>. Use one of the mentioned methods and don&rsquo;t guess the project. Ask yourself: do I need to invoke the code here or is there a better place to invoke it?</p>
+<p>It will fail with the following exception: <code>GlobalModelAccess does not support actions that require a command to run. One needs a project to run such actions</code>. In those cases, it is possible to access the project and write <code>project.getRepository()</code>. Use one of the mentioned methods and don&rsquo;t guess the project. Ask yourself: do I need to invoke the code here or is there a better place to invoke it?</p>
 <h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://jetbrains.github.io/MPS-extensions/extensions/utils/model-listener/">Model listeners</a> don&rsquo;t have access to the project.</li>
 <li>The project is necessary for project-wide find usage/project scope.</li>
-<li>The class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.project%28MPS.Platform%2F%29%2F%7EProjectHelper">ProjectHelper</a> can be used to convert between different projects, <abbr title="Semantic Repository">SRepository</abbr> instances and frames.</li>
+<li>The class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.project%28MPS.Platform%2F%29%2F%7EProjectHelper">ProjectHelper</a> can be used to convert between different projects, <abbr title="Semantic Repository">SRepository</abbr> instances, and frames.</li>
 </ul>
 
   <hr>
@@ -3473,7 +3457,7 @@ The instance can be passed to other classes as well. To get the IntelliJ project
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

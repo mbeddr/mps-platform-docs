@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2760,8 +2760,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2784,20 +2782,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3346,10 +3330,10 @@ Other types of dependencies on modules include: <em>Java stubs</em> (in combinat
 <h2 id="plugin-disambiguation">Plugin disambiguation<a class="headerlink" href="#plugin-disambiguation" title="Permanent link">&para;</a></h2>
 <p>The term &ldquo;plugin&rdquo; is used at various places throughout <abbr title="Meta Programming System">MPS</abbr>. It describes different things:</p>
 <ul>
-<li>IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which <abbr title="Meta Programming System">MPS</abbr> is based upon.</li>
-<li><abbr title="Meta Programming System">MPS</abbr> plugins: automatically loaded Models.</li>
-<li>Plugin language aspect: model inside a language defining extension points.</li>
-<li>Build model plugins: part of the build model language providing new entries for build models.</li>
+<li>IDEA plugins: a packaged set of contributions to the IntelliJ IDEA platform, which <abbr title="Meta Programming System">MPS</abbr> is based upon</li>
+<li><abbr title="Meta Programming System">MPS</abbr> plugins: automatically loaded models</li>
+<li>plugin language aspect: model inside a language defining extension points</li>
+<li>build model plugins: part of the build model language providing new entries for build models.</li>
 </ul>
 <h2 id="non-project-sources">Non-project sources<a class="headerlink" href="#non-project-sources" title="Permanent link">&para;</a></h2>
 <p>Non-project sources are</p>
@@ -3360,9 +3344,9 @@ Other types of dependencies on modules include: <em>Java stubs</em> (in combinat
 <li>common and Java module settings regarding Java classes and Java source files</li>
 <li>IDEA plugins referenced by a module</li>
 </ul>
-<p>These directories or jar files are recursively scanned for <em>.mpl</em> (languages), <em>.msd</em> (solutions), and <em>.devkit</em> (devkit) files. If found, the corresponding content is added to the modules pool.</p>
+<p>These directories or <abbr title="Java Archive">JAR</abbr> files are recursively scanned for <em>.mpl</em> (languages), <em>.msd</em> (solutions), and <em>.devkit</em> (devkit) files. If found, the corresponding content is added to the modules pool.</p>
 <h2 id="java-classpath-versus-relations">Java classpath versus relations<a class="headerlink" href="#java-classpath-versus-relations" title="Permanent link">&para;</a></h2>
-<p>The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations in a different way.
+<p>The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations differently.
 As a rule of thumb, the classpath has all Java classes reachable through any kind of relation. The Classpath is populated generously.</p>
 <p>On the contrary, the relations are populated reluctantly, for example, they need to be specified explicitly.
 The dependency relations on modules and models are completely separated from the used language relations on modules and models. Thus, no dependency requires a <em>Used Language</em> or vice versa.</p>
@@ -3379,9 +3363,9 @@ The dependency relations on modules and models are completely separated from the
 <h2 id="executed-generators">Executed generators<a class="headerlink" href="#executed-generators" title="Permanent link">&para;</a></h2>
 <p><em>GeneratorA</em> contained in <em>LanguageA</em> (containing <em>ConceptA</em>) will be executed for <em>ModelS</em> (contained in <em>ModuleS</em>) if and only if</p>
 <ul>
-<li><em>ModelS</em> uses <em>LanguageA</em> and contains an instance of <em>ConceptA</em></li>
-<li><em>ModelS</em> lists <em>LanguageA</em> in Languages engaged on generation</li>
-<li>The preceding conditions match <em>LanguageB</em> containing <em>GeneratorB</em> extending <em>GeneratorA</em></li>
+<li><em>ModelS</em> uses <em>LanguageA</em> and contains an instance of <em>ConceptA</em>.</li>
+<li><em>ModelS</em> lists <em>LanguageA</em> in Languages engaged on generation.</li>
+<li>The preceding conditions match <em>LanguageB</em> containing <em>GeneratorB</em> extending <em>GeneratorA</em>.</li>
 </ul>
 <p>For discussion, we establish a continued scenario:</p>
 <p>(The Relations listed here are not complete to reduce clutter. The <a href="https://github.com/enikao/mps-dependencies">complete example</a> is available.)</p>
@@ -3420,7 +3404,7 @@ languages used in applied Generators) are not added to the output model. Implici
 <p>The Stereotype enables</p>
 <ul>
 <li>the <em>Run Tests</em> entry in the solution and test model context menu.</li>
-<li>Build language test instruction to search the model for tests.</li>
+<li>Build language test instructions to search the model for tests.</li>
 </ul>
 <p>As soon as you are using any concepts from language <em>jetbrains.mps.<abbr title="language">lang</abbr>.test</em>, you need to have a <em>TestInfo</em> root node in the same model. The <em>TestInfo</em> node needs to refer to a project to be used to execute the tests. This reference may not use a <em>&#36;{module}</em>, <em>&#36;{language_descriptor}</em>, <em>&#36;{solution_descriptor}</em>, or <em>&#36;{project}</em> builtin path variables. It needs to refer to a project containing the test.</p>
 
@@ -3429,7 +3413,7 @@ languages used in applied Generators) are not added to the output model. Implici
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

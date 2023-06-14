@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2827,8 +2827,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2851,20 +2849,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3342,7 +3326,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </blockquote>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/mps-generator.html">official documentation</a></li>
-<li><a href="https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/">Getting started with generation in <abbr title="Meta Programming System">MPS</abbr>: extracting a generator</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/">Getting started with generation in <abbr title="Meta Programming System">MPS</abbr>: extracting a generator</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -3372,7 +3356,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Scope: ReferenceConstraintsContext <strong>_context</strong></li>
 </ul>
 </li>
-<li>Typesystem:<ul>
+<li>Type-system:<ul>
 <li>all rules: IsApplicable2Status <strong>status</strong>, TypeCheckingContext <strong>typeCheckingContext</strong></li>
 <li>comparison rule: <abbr title="Semantic Node">SNode</abbr> <strong>node1</strong>, <abbr title="Semantic Node">SNode</abbr> <strong>node2</strong>, </li>
 <li>inequation replacement rule<ul>
@@ -3395,20 +3379,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </details>
 <div class="admonition question">
 <p class="admonition-title">How does the <abbr title="Integrated Development Environment">IDE</abbr> collect generators to engage on a model?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/">How <abbr title="Meta Programming System">MPS</abbr> collects generators to engage on a model</a></p>
+<p><a href="https://specificlanguages.com/posts/how-mps-collects-generators-to-engage-on-a-model/">How <abbr title="Meta Programming System">MPS</abbr> collects generators to engage on a model</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">genplan (in devkit) vs. generator priorities?</p>
-<p>The genplan is applied instead of the generator priorities. If your generator should be applied in a model using a genplan, your generator has to be part of the genplan.
-When developing a language, which is used within an aspect, e.g. typesystem, the <abbr title="Meta Programming System">MPS</abbr> aspect&rsquo;s genplan can block the generator.</p>
+<p class="admonition-title">generation plan (in devkit) vs. generator priorities?</p>
+<p>The generation plan is applied instead of the generator priorities. If your generator should be applied in a model using a generation plan, your generator has to be part of the generation plan.
+When developing a language, which is used within an aspect, e.g. type-system, the <abbr title="Meta Programming System">MPS</abbr> aspect&rsquo;s generation plan can block the generator.</p>
 </div>
 <details class="question">
-<summary>How can you use generated classes which implement an extension-point?</summary>
+<summary>How can you use generated classes which implement an extension point?</summary>
 <blockquote>
-<p>Let <span class="arithmatex">\(L_A\)</span> be a language which offers an extension-point over class <span class="arithmatex">\(E\)</span>. Then it is quite simple to provide a static implementation for extension-point for <span class="arithmatex">\(E\)</span> for example in another language. What if we have want map a concept <span class="arithmatex">\(Q\)</span> of <span class="arithmatex">\(B\)</span> to that extension-point? We want to be able to generated Code <span class="arithmatex">\(C\)</span> from a oncept instance of <span class="arithmatex">\(Q\)</span> which is a subclass of <span class="arithmatex">\(E\)</span>, such that we can use it for the extension-point over class <span class="arithmatex">\(E\)</span>.</p>
+<p>Let <span class="arithmatex">\(L_A\)</span> be a language that offers an extension point over class <span class="arithmatex">\(E\)</span>. Then it is quite simple to provide a static implementation for extension point for <span class="arithmatex">\(E\)</span> for example in another language. What if we want to map a concept <span class="arithmatex">\(Q\)</span> of <span class="arithmatex">\(B\)</span> to that extension point? We want to be able to generate code <span class="arithmatex">\(C\)</span> from a concept instance of <span class="arithmatex">\(Q\)</span> which is a subclass of <span class="arithmatex">\(E\)</span>, such that we can use it for the extension point over class <span class="arithmatex">\(E\)</span>.</p>
 </blockquote>
 <ul>
-<li>Create the extension point in the plugin aspect of language <span class="arithmatex">\(L_A\)</span>.</li>
+<li>Create the extension point in the plugin aspect of a language <span class="arithmatex">\(L_A\)</span>.</li>
 </ul>
 <p><a class="glightbox" href="../../img/extension_point_ModelMergeExt.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="extension point ModelMergeExt" src="../../img/extension_point_ModelMergeExt.png" width="600px" /></a></p>
 <ul>
@@ -3417,20 +3401,26 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 <p><a class="glightbox" href="../../img/ModelMergeExt_generator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ModelMergeExt generator" src="../../img/ModelMergeExt_generator.png" width="600px" /></a></p>
 <ul>
 <li>map_ModelMerge maps <span class="arithmatex">\(Q\)</span> to a class which extends <span class="arithmatex">\(E\)</span> (here <code>ConceptMergeSpec</code>).</li>
-<li>map_ModelMerge_extension will generate an extension for <span class="arithmatex">\(Q\)</span>. It is a extension RootMapping which can be selected from the intention. </li>
+<li>map_ModelMerge_extension will generate an extension for <span class="arithmatex">\(Q\)</span>. It is an extension RootMapping which can be selected from the intention. </li>
 </ul>
 <p><a class="glightbox" href="../../img/ModelMergeExt_root_template.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ModelMergeExt root template" src="../../img/ModelMergeExt_root_template.png" /></a></p>
 <p>The code for the Reference-Macro in the figure above should look like this.
 <a class="glightbox" href="../../img/ModelMergeExt_reference_macro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="../img/ModelMergeExt_reference_macro.png" src="../../img/ModelMergeExt_reference_macro.png" /></a></p>
 <p>Make sure you have <ins>jetbrains.mps.<abbr title="language">lang</abbr>.extension</ins> included as language in the plugin.</p>
 <ul>
-<li>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</li>
-</ul>
-<p>1.the generated class 
-2.the generated extension 
-3.an <code>ExtensionDescriptor</code> which provides all found extensions</p>
-<ul>
-<li>Now you should be able to locate your extension with a code fragment like this:</li>
+<li>
+<p>Now create a solution, not a sandbox. Set <em>Solution Kind</em> in the properties to <em>Other</em>. Afterwards, create a model named <em>plugin</em> (not optional). Add an instance of <span class="arithmatex">\(Q\)</span> to your model plugin and build it. Looking now at your last transient model, there must be 3 artifacts related to <span class="arithmatex">\(Q\)</span>:</p>
+</li>
+<li>
+<p>the generated class </p>
+</li>
+<li>the generated extension </li>
+<li>
+<p>an <code>ExtensionDescriptor</code> which provides all found extensions</p>
+</li>
+<li>
+<p>Now you should be able to locate your extension with a code fragment like this:</p>
+</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -3447,8 +3437,8 @@ When developing a language, which is used within an aspect, e.g. typesystem, the
 <div class="admonition question">
 <p class="admonition-title">Can you access the output model in a property macro?</p>
 <blockquote>
-<p>In reference macros in generators, I can use the provided &ldquo;outputNode&rdquo; parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
-Can I do something similar in property macros? For those, there obviously is no &ldquo;outputNode&rdquo;. I&rsquo;d still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?</p>
+<p>In reference macros in generators, I can use the provided <em>outputNode</em> parameter as an entry point into the output model of the current transformation and e.g. use this to find the root node my generated reference will be contained in.
+Can I do something similar in property macros? For those, there is no <em>outputNode</em>. I&rsquo;d still like to find, for example, the Node in my output model that my generated property belongs to. Is there a way to do that?</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></p>
 <p>You can try to use the <em>post-processing</em> function of a <code>$MAP_SRC$</code> macro.   </p>
@@ -3458,21 +3448,21 @@ Can I do something similar in property macros? For those, there obviously is no 
 <ul>
 <li>Custom generation facet: if there is a <abbr title="Generation Plan">GP</abbr> defined, this plan is used.</li>
 <li>Devkits: first, <abbr title="Meta Programming System">MPS</abbr> looks if any devkit specifies a <abbr title="Generation Plan">GP</abbr>. The first devKit with an associated plan is consulted, if any, and no further lookup is done.
-  If there are no devkits with associated plans, <abbr title="Meta Programming System">MPS</abbr> checks the facets of the devkit modules if any is an <abbr title="Generation Plan">GP</abbr> provider.
+  If there are no devkits with associated plans, <abbr title="Meta Programming System">MPS</abbr> checks the facets of the devkit modules if any is a <abbr title="Generation Plan">GP</abbr> provider.
   The first found facet serves as a provider.</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What is cross-model generation?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-04/22-cross-model-generation/">What is cross-model generation and why do you care?</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/22-cross-model-generation/">What is cross-model generation and why do you care?</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <h2 id="how-to-generate-xy">How to generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">What can be generated?</p>
 <p>Have a look at the <a href="https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository">language repository</a>. You
-might also find other languages on GitHub. In general there doesn&rsquo;t have to be an existing language. Any text can be
+might also find other languages on GitHub. In general, there doesn&rsquo;t have to be an existing language. Any text can be
 generated with TextGen or Plaintextgen from <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
@@ -3480,12 +3470,12 @@ generated with TextGen or Plaintextgen from <span class="twemoji">
     />
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>. It&rsquo;s also possible to generate code from an action or
-pre/post-processing script in the generator by using an existing Java library such as Apache Poi. A tutorial for example 
-for excel can be found <a href="https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi">here</a>.</p>
+pre/post-processing script in the generator by using an existing Java library such as <a href="https://poi.apache.org/">Apache POI</a>. A tutorial for example 
+for Excel can be found <a href="https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi">here</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I want to create multi outputs for a language.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Use a dummy concept or a generation plan with a fork. This quesion is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
+<p>Use a dummy concept or a generation plan with a fork. This question is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you generate latex files?</p>
@@ -3523,8 +3513,8 @@ Generation plans should be used when the generation order is simple.</p>
 <details class="question">
 <summary>How can you make sure that a generator B can use the output of a generator A?</summary>
 <ol>
-<li>Define priorities or a fixed genplan for <span class="arithmatex">\(B\)</span> (and maybe <span class="arithmatex">\(A\)</span>)</li>
-<li>If you can&rsquo;t run / don&rsquo;t want to run both generators in the same “phase”, configure them to run one after each other.</li>
+<li>Define priorities or a fixed generation plan for <span class="arithmatex">\(B\)</span> (and maybe <span class="arithmatex">\(A\)</span>)</li>
+<li>If you can&rsquo;t run/don&rsquo;t want to run both generators in the same “phase”, configure them to run one after the other.</li>
 </ol>
 <p>Solution <strong>1</strong>:</p>
 <ul>
@@ -3543,7 +3533,7 @@ Generation plans should be used when the generation order is simple.</p>
 </ul>
 <p>Solution <strong>4</strong>:</p>
 <ul>
-<li>Define a fixed genplan with checkpoints.</li>
+<li>Define a fixed generation plan with checkpoints.</li>
 <li>Organize the whole generation process manually.</li>
 </ul>
 </details>
@@ -3553,18 +3543,18 @@ Generation plans should be used when the generation order is simple.</p>
 <p>Given I <abbr title="abstract module">am</abbr> writing a generator and it generates a java string for a string property.
 That property holds a string of more than 64000 characters and the java compiler gives me a <em>constant string too long</em> error.
 What can I do?</p>
-<p>This is how it looks like so far:</p>
+<p>This is what it looks like so far:</p>
 <p><a class="glightbox" href="../../img/long_string_property_macro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="long string property macro" src="../../img/long_string_property_macro.png" width="600px" /></a></p>
 </blockquote>
 <p><strong>Option 1</strong>: Extract into a separate file</p>
-<p>Of course it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.</p>
+<p>Of course, it would be better to not fill the java file too much and instead generate the string into a file that gets loaded at this place.</p>
 <p><strong>Option 2</strong>: Split and join again</p>
 <p>The restriction only applies to the size of string literals. However, at runtime, it is allowed to have larger strings. So that we can split it into a concatenation that gets assembled at runtime then:</p>
 <ul>
 <li>Here we use the <a href="https://github.com/google/guava">Guiva</a> classes <a href="https://github.com/google/guava">Joiner</a> and <a href="https://github.com/google/guava">Splitter</a> from <code>MPS.Core/google.common.base</code> and <code>java.util.Arrays</code>.</li>
-<li>We use the splitter at generation time to split it into parts of maximal 50000 characters.</li>
-<li>Then we map it onto an arbitrary node that has a string property, as <code>$LOOP$</code> requires a node</li>
-<li>In the property macro inside the loop, we simply pull that property <abbr title="output">out</abbr> of the node again (the inspector of this is not visible in the screenshot)</li>
+<li>We use the splitter at generation time to split it into parts of maximum 50000 characters.</li>
+<li>Then we map it onto an arbitrary node that has a string property, as <code>$LOOP$</code> requires a node.</li>
+<li>In the property macro inside the loop, we simply pull that property <abbr title="output">out</abbr> of the node again (the inspector of this is not visible in the screenshot).</li>
 <li>It is just a coincidence that we create nodes of the same concept and use the same property for the loop content, than for the outside context node. You may light-quote anything of type string here.</li>
 </ul>
 <p><a class="glightbox" href="../../img/long_string_improved_macro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="long string improved macro" src="../../img/long_string_improved_macro.png" /></a></p>
@@ -3579,7 +3569,7 @@ What can I do?</p>
 <p class="admonition-title">How do you get the output path for a solution?</p>
 <ul>
 <li>To get an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.vfs%28MPS.Core%2F%29%2F%7EIFile">IFile</a>, call <code class="highlight"><span class="n">SModelOperations</span><span class="p">.</span><span class="na">getOutputLocation</span><span class="p">(</span><span class="n">model</span><span class="p">)</span><span class="w"></span></code>.</li>
-<li>To get an string, call <code class="highlight"><span class="n">ProjectPathUtil</span><span class="p">.</span><span class="na">getGeneratorOutputPath</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="na">getModuleDescriptor</span><span class="p">())</span><span class="w"></span></code>. You have to first cast the module to an <code>AbstractModule.</code></li>
+<li>To get a string, call <code class="highlight"><span class="n">ProjectPathUtil</span><span class="p">.</span><span class="na">getGeneratorOutputPath</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="na">getModuleDescriptor</span><span class="p">())</span><span class="w"></span></code>. You have to first cast the module to an <code>AbstractModule.</code></li>
 </ul>
 </div>
 <details class="question">
@@ -3598,7 +3588,7 @@ What is the source of this information, and how reliable is it?</p>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">ModelGenerationStatusManager</span><span class="w"> </span><span class="n">statusManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="na">getComponent</span><span class="p">(</span><span class="n">ModelGenerationStatusManager</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">statusManager</span><span class="p">.</span><span class="na">generationRequired</span><span class="p">(</span><span class="n">model</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-<p>Unfortunately, it does&rsquo;nt seem to be reliable, e.g. when changing something in the model, the <abbr title="Application Programming Interface">API</abbr> behaves correctly in the first place. But after executing the <em>Synchronize</em> action, <abbr title="Meta Programming System">MPS</abbr> for some reason believes that generation is not required any more (even though the change would have an effect on the output and <em>Synchronize</em> doesn&rsquo;t execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).</p>
+<p>Unfortunately, it doesn&rsquo;t seem to be reliable, e.g. when changing something in the model, the <abbr title="Application Programming Interface">API</abbr> behaves correctly in the first place. But after executing the <em>Synchronize</em> action, <abbr title="Meta Programming System">MPS</abbr> for some reason believes that generation is not required anymore (even though the change would have an effect on the output and <em>Synchronize</em> doesn&rsquo;t execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></p>
 </details>
 <div class="admonition question">
@@ -3630,16 +3620,16 @@ What is the source of this information, and how reliable is it?</p>
 <div class="admonition failure">
 <p class="admonition-title">java.<abbr title="language">lang</abbr>.NoSuchMethodError</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/">NoSuchMethodError</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/">NoSuchMethodError</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I debug generators?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators</a></p>
+<p><a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The generated code has no debug symbols.</p>
-<p>Locate the build solution in <abbr title="Meta Programming System">MPS</abbr> that is building your languages and adjust the java settings:</p>
+<p>Locate the build solution in <abbr title="Meta Programming System">MPS</abbr> that is building your languages and adjust the Java settings:</p>
 <div class="codehilite"><pre><span></span><code>java options &lt;project default&gt; 
   generate debug info false 
   generate no warnings false 
@@ -3651,7 +3641,7 @@ What is the source of this information, and how reliable is it?</p>
 </code></pre></div>
 
 <p>Then set <em>generate debug <abbr title="information">info</abbr></em> to true.</p>
-<p>If no java options exist in your build solution, simply add one in the project structure.</p>
+<p>If no Java options exist in your build solution, simply add one to the project structure.</p>
 </div>
 <details class="question">
 <summary>How can you debug the differences of generation between command line and <abbr title="Meta Programming System">MPS</abbr>?</summary>
@@ -3660,22 +3650,22 @@ What is the source of this information, and how reliable is it?</p>
 When I run the same in a command line then I see a compile error.
 How can I debug this?</p>
 </blockquote>
-<p>The issue behind this kind of issues usually lies in one of these three things:</p>
-<p><strong>Issue Area 1</strong>: Settings (inplace, threading)</p>
+<p>The cause behind this kind of issues usually lies in one of these three things:</p>
+<p><strong>Issue Area 1</strong>: Settings (in place, threading)</p>
 <p>Try turning off <em>Apply transformations in place</em> in your <abbr title="Meta Programming System">MPS</abbr> settings under <em>Build, Execution, Deployment</em> &rarr; <em>Generator</em> &rarr; <em>General</em>, as this is unset in the command line (note, that this setting doesn&rsquo;t appear in the search):</p>
 <p><a class="glightbox" href="../../img/generator_settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="generator settings" src="../../img/generator_settings.png" width="600px" /></a></p>
 <p>Also, disabling the build in parallel threads may help.</p>
 <p><strong>Issue Area 2</strong>: Dependencies</p>
 <p>A second issue may originate from the separate type of class loading and dependency loading in the command line.</p>
 <p><strong>Issue Area 3</strong>: Generation plans</p>
-<p>The command line build runs the generator plans that are included in the devkits of a model, or that are explicitly added to the <em>generator</em> facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could be the culprit. (Remember, right-clicking a model and <em>Show Generation Plan</em> to see if all looks as expected).</p>
-<p>Remark 1: Inplace transformations are on or off depending on your build script, same applied to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build not project is opened, which means anything that tried to access the project including virtual files will fail.</p>
-<p>Remark 2: One potential source of problems could be packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.</p>
+<p>The command line build runs the generator plans that are included in the devkits of a model, or that are explicitly added to the <em>generator</em> facet+tab of a module. If your code starts the build for an explicit generation plan other than that, consider if a different plan could be the culprit. (Remember, right-click a model and <em>Show Generation Plan</em> to see if all looks as expected).</p>
+<p>Remark 1: Inplace transformations are on or off depending on your build script, the same applies to parallel generation. On the command line if nothing specified it defaults to 4 threads. The biggest difference is that in the command line build no project is opened, which means anything that tried to access the project including virtual files will fail.</p>
+<p>Remark 2: One potential source of problems could be the packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <h2 id="blog-posts">Blog posts<a class="headerlink" href="#blog-posts" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.f1re.io/mps-generators">Introduction <abbr title="Meta Programming System">MPS</abbr> Generators</a><small>(<em>F1RE&rsquo;s blog</em>)</small></li>
+<li><a href="https://www.f1re.io/mps-generators">Introduction <abbr title="Meta Programming System">MPS</abbr> Generators</a>(<em>F1RE&rsquo;s blog</em>)</li>
 </ul>
 <div class="footnote">
 <hr />
@@ -3684,7 +3674,7 @@ How can I debug this?</p>
 <p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps"><abbr title="Meta Programming System">MPS</abbr> forum - I want to export multiple languages from <abbr title="Meta Programming System">MPS</abbr></a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-"><abbr title="Meta Programming System">MPS</abbr> forum - Is it possible to export a <abbr title="Domain Specific Language">DSL</abbr> compiler created with <abbr title="Meta Programming System">MPS</abbr> and use it independently</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-"><abbr title="Meta Programming System">MPS</abbr> forum - Is it possible to export a <abbr title="Domain-Specific Language">DSL</abbr> compiler created with <abbr title="Meta Programming System">MPS</abbr> and use it independently</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260-Generator-error-uncaught-exception-no-classifier-"><abbr title="Meta Programming System">MPS</abbr> forum - Generator error: uncaught exception ?no classifier?</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
@@ -3697,7 +3687,7 @@ How can I debug this?</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

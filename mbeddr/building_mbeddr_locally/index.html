@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2802,8 +2802,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2826,20 +2824,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3294,7 +3278,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>Building Mbeddr locally</h1>
 
-<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn&rsquo;t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr></a>, especially the C related tools, if you want to get everything build.</p>
+<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn&rsquo;t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr></a>, especially the C-related tools, if you want to get everything built.</p>
 <h2 id="automatic-build">Automatic build<a class="headerlink" href="#automatic-build" title="Permanent link">&para;</a></h2>
 <ol>
 <li><code>git clone git@github.com:mbeddr/mbeddr.core.git</code></li>
@@ -3306,7 +3290,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ol>
 <h2 id="manual-build">Manual build<a class="headerlink" href="#manual-build" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don&rsquo;t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, that needs to be installed to be able to use the language.</li>
+<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don&rsquo;t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, which needs to be installed to be able to use the language.</li>
 <li>
 <p>You can now build all projects. Start with these projects in this order:</p>
 <ul>
@@ -3318,8 +3302,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </li>
 </ol>
-<p>If you get compilation error, try a different order. Some projects like <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> and <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr>.aspect</em> don&rsquo;t have as many dependencies to other projects as other projects.</p>
-<p>If many errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you probably don&rsquo;t have the spawner plugin installed.</p>
+<p>If you get compilation errors, try a different order. Some projects like <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> and <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr>.aspect</em> don&rsquo;t have as many dependencies on other projects as other projects.</p>
+<p>If a lot of errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you probably don&rsquo;t have the spawner plugin installed.</p>
 <div class="admonition warning">
 <p class="admonition-title">When anything goes wrong, and you want to start over, just clean the generated files: <code>git clean -xdf</code>. After you&rsquo;ve made a change, just (re)build the parts of the project that you&rsquo;ve changed and push the branch so that the build server can make a full build + execute the tests.</p>
 </div>
@@ -3332,7 +3316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

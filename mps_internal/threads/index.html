@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2760,8 +2760,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2784,20 +2782,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3278,20 +3262,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li><a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">Modality and invokeLater() | IntelliJ Platform SDK</a></li>
 <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Event Dispatch Thread | Oracle Java documentation</a></li>
 </ul>
-<p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to performed holding an appropriate lock.
+<p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to be performed holding an appropriate lock.
 IntelliJ IDEA also needs read and write locks in its platform. The IDEA&rsquo;s lock is acquired first and only then the <abbr title="Meta Programming System">MPS</abbr>&lsquo;s lock is acquired when using the <abbr title="Meta Programming System">MPS</abbr> access language.
 The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 <h2 id="main-thread">Main thread<a class="headerlink" href="#main-thread" title="Permanent link">&para;</a></h2>
 <ul>
-<li>some operations need to be run in thus thread to keep race conditions from occurring</li>
+<li>some operations need to be run in this thread to keep race conditions from occurring</li>
 <li>the <abbr title="User Interface">UI</abbr> freezes when operations take a long time (run them in the background)</li>
 <li>Write <abbr title="Meta Programming System">MPS</abbr> model: <code>write action with</code></li>
 <li>Read <abbr title="Meta Programming System">MPS</abbr> model: <code>read action with</code></li>
 </ul>
 <h2 id="awt-event-dispatch-thread-edt-ui-editor-thread">AWT event dispatch thread (<abbr title="Event Dispatch Thread">EDT</abbr>) / <abbr title="User Interface">UI</abbr> / Editor Thread<a class="headerlink" href="#awt-event-dispatch-thread-edt-ui-editor-thread" title="Permanent link">&para;</a></h2>
 <ul>
-<li>drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Swing</a></li>
-<li>Swing isn&rsquo;t thread safe, most of the Swing code runs in <abbr title="Event Dispatch Thread">EDT</abbr>.</li>
+<li>drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Java Swing</a></li>
+<li>Swing isn&rsquo;t thread-safe, most of the Swing code runs in <abbr title="Event Dispatch Thread">EDT</abbr>.</li>
 <li><abbr title="Event Dispatch Thread">EDT</abbr> = series of short tasks such as the <code>actionPerformed</code> method of a button.</li>
 <li>Tasks must be short or the <abbr title="User Interface">UI</abbr> becomes unresponsive.</li>
 <li>Synchronously write/read <abbr title="Meta Programming System">MPS</abbr> model: <code>command with</code>.</li>
@@ -3317,7 +3301,7 @@ The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

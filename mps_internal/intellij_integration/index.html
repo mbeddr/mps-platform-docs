@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2761,8 +2763,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2785,20 +2785,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3185,7 +3171,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3208,6 +3196,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3233,9 +3223,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components</a>. <code>application-components</code> are activated when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code>
 are activated when a project is opened.</p>
-<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. For a list of all extension points and listener have a look at
-<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK</a>. New extensions points are declared in a section <em>extensionPoints</em> where
-a qualified name and the interface to implement has to be provided. The interface has to contain an extension point name
+<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. For a list of all extension points and listeners have a look at
+<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK</a>. New extension points are declared in a section <em>extensionPoints</em> where
+a qualified name and the interface to implement have to be provided. The interface has to contain an extension point name
 declaration. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -3284,7 +3274,7 @@ declaration. Example:</p>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml">PlatformActions</a></li>
 </ul>
 <p>All the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter</a> for error reporting.
-This allows reporting errors to YouTrack. Another notable extension is the declaration of the mps language library. For example:
+This allows reporting errors to YouTrack. Another notable extension is the declaration of the <abbr title="Meta Programming System">MPS</abbr> language library. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;mps.LanguageLibrary</span> <span class="na">dir=</span><span class="s">&quot;/languages&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div></td></tr></table></div></p>
 <p>It tells <abbr title="Meta Programming System">MPS</abbr> where in the plugin folder the compiled <abbr title="Meta Programming System">MPS</abbr> languages can be found.</p>
@@ -3294,7 +3284,7 @@ This allows reporting errors to YouTrack. Another notable extension is the decla
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3303,6 +3293,8 @@ This allows reporting errors to YouTrack. Another notable extension is the decla
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3431,6 +3423,8 @@ This allows reporting errors to YouTrack. Another notable extension is the decla
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

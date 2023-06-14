@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2821,8 +2821,6 @@ IETS3
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2845,20 +2843,6 @@ IETS3
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3327,7 +3311,7 @@ IETS3
 
   <h1>Build folder</h1>
 
-<p>This page describes the <em>build</em> folder of the different platforms that is located in the root folder of the corresponding project. The folder contains files that are checked into Git such as Gradle files as well as generated Ant build files and other temporary files.</p>
+<p>This page describes the <em>build</em> folder of the different platforms that are located in the root folder of the corresponding project. The folder contains files that are checked into Git such as Gradle files as well as generated Ant build files and other temporary files.</p>
 <p>Some folders that are described in the <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> section, are located at the root level in the other repository. They are also described
 because they belong to the build process.</p>
 <h2 id="mps-extensions"><span class="twemoji">
@@ -3350,12 +3334,12 @@ resolves the <abbr title="Meta Programming System">MPS</abbr> dependency from th
 </svg>
 </span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a><a class="headerlink" href="#mbeddr" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.allScripts</em> contains the generated ant script that includes all other build scripts. It is checked into version control.</li>
+<li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.allScripts</em> contains the generated Ant script that includes all other build scripts. It is checked into version control.</li>
 <li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.analyses.cbmc</em> folder contains old shell scripts for building <a href="https://github.com/diffblue/cbmc"><abbr title="Bounded Model Checker for C and C++ programs">CBMC</abbr></a> on Window, macOS, and Linux.</li>
 <li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.release</em> folder contains a shell script for publishing mbeddr on GitHub.</li>
-<li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr</em> folder contains the general build script (<em>build.gradle</em>) as well as all the build script for all subprojects.</li>
+<li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr</em> folder contains the general build script (<em>build.gradle</em>) as well as all the build scripts for all subprojects.</li>
 <li>The <em>publishing</em> folder contains a Gradle script for publishing mbeddr.</li>
-<li>The <em>thirdparty</em> folder contains build scripts for third party tools used by mbeddr (<a href="https://graphviz.org/">Graphviz</a>).</li>
+<li>The <em>thirdparty</em> folder contains build scripts for third-party tools used by mbeddr (<a href="https://graphviz.org/">Graphviz</a>).</li>
 <li>The <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.x</em> folders contain the generated build scripts for building the languages and tests.</li>
 </ul>
 <h2 id="iets3"><span class="twemoji">
@@ -3366,17 +3350,17 @@ resolves the <abbr title="Meta Programming System">MPS</abbr> dependency from th
 </svg>
 </span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a><a class="headerlink" href="#iets3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <em>artifacts</em> folder contains the generated files of the ant scripts. This includes the compiled <abbr title="Meta Programming System">MPS</abbr> plugins as well as the
-build all script and the plugin for the tests.</li>
-<li>The <em><abbr title="configuration">config</abbr></em> folder contains nothing except an empty ssl folder (TODO: where does this folder come from?)</li>
+<li>The <em>artifacts</em> folder contains the generated files of the Ant scripts. This includes the compiled <abbr title="Meta Programming System">MPS</abbr> plugins as well as the
+build-all script and the plugin for the tests.</li>
+<li>The <em><abbr title="configuration">config</abbr></em> folder contains nothing except an empty <em>ssl</em> folder (TODO: where does this folder come from?)</li>
 <li>The <em>dependencies</em> folder contains the downloaded dependencies of the project. In this case, it contains the mbeddr platform + <abbr title="Meta Programming System">MPS</abbr>-extensions.</li>
 <li>The <em>distributions</em> folder contains the generated artifacts of the languages and tests as zip folders.</li>
 <li>The <em>junitreport</em> folder contains the results of the test execution as an HTML report (<em>index.html</em>).</li>
 <li>See: <em>mps</em> folder in <abbr title="Meta Programming System">MPS</abbr>-extensions.</li>
-<li>The <em>scripts</em> folder contains the ant scripts that where generated from the <abbr title="Meta Programming System">MPS</abbr> build language. (TODO: why is there a nested build folder?)</li>
+<li>The <em>scripts</em> folder contains the Ant scripts that were generated from the <abbr title="Meta Programming System">MPS</abbr> build language. (TODO: why is there a nested build folder?)</li>
 <li>The <em>system</em> folder is the temporary <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#system-directory">system directory</a> for the test execution.</li>
 <li>The <em><abbr title="temporary/temperature">tmp</abbr></em> folder contains temporary files generated by the Java compiler.</li>
-<li>The <em>jbrDownload</em> folder contains the downloaded <abbr title="JetBrains Runtime">JBR</abbr> version is used for the build. The <a href="https://github.com/mbeddr/mps-gradle-plugin#download-jetbrains-runtime">downloadJbr</a> Gradle task
+<li>The <em>jbrDownload</em> folder contains the downloaded <abbr title="JetBrains Runtime">JBR</abbr> version that is used for the build. The <a href="https://github.com/mbeddr/mps-gradle-plugin#download-jetbrains-runtime">downloadJbr</a> Gradle task
 comes from the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>.</li>
 </ul>
 
@@ -3385,7 +3369,7 @@ comes from the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

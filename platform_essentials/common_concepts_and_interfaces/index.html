@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -3081,8 +3081,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -3105,20 +3103,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3858,7 +3842,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Common concepts and interfaces</h1>
 
 <p>This list explains some common abstract concepts and interfaces that you can use to extend or use the functionality of the platforms.
-Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
+Identifiers starting with a capital &ldquo;I&rdquo; refer to interfaces.</p>
 <h2 id="mbeddr">Mbeddr<a class="headerlink" href="#mbeddr" title="Permanent link">&para;</a></h2>
 <h3 id="base">Base<a class="headerlink" href="#base" title="Permanent link">&para;</a></h3>
 <h4 id="assessment"><a href="http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814">Assessment</a><a class="headerlink" href="#assessment" title="Permanent link">&para;</a></h4>
@@ -3870,7 +3854,7 @@ Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
 <p>Example:</p>
 <p><a class="glightbox" href="../images/example_library.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: simple library with an import" src="../images/example_library.png" /></a></p>
 <h4 id="icommentable">ICommentable<a class="headerlink" href="#icommentable" title="Permanent link">&para;</a></h4>
-<p>Concepts or interfaces that implement <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229556133800">ICommentable</a> can be commented <abbr title="output">out</abbr> by typing <code>//</code> or <code>/*</code> as long as it is not trigger by a node that implements <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067">IEmpty</a>.</p>
+<p>Concepts or interfaces that implement <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229556133800">ICommentable</a> can be commented <abbr title="output">out</abbr> by typing <code>//</code> or <code>/*</code> as long as it is not triggered by a node that implements <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067">IEmpty</a>.</p>
 <h4 id="idocumentable">IDocumentable<a class="headerlink" href="#idocumentable" title="Permanent link">&para;</a></h4>
 <p>Add support for documenting nodes when implementing the <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F3857533489766146432">IDocumentable</a> interface. The text node is using the language <code>de.slisson.mps.richtext</code> and supported text and embedded nodes.</p>
 <h4 id="itreeviewable">ITreeViewable<a class="headerlink" href="#itreeviewable" title="Permanent link">&para;</a></h4>
@@ -3878,22 +3862,22 @@ Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
 <p>Example: <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> call tree of functions</p>
 <p><a class="glightbox" href="../images/iets3_calltree.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="iets3 call tree of functions" src="../images/iets3_calltree.png" /></a></p>
 <h4 id="icontainerofuniquenames">IContainerOfUniqueNames<a class="headerlink" href="#icontainerofuniquenames" title="Permanent link">&para;</a></h4>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5095889050031055796">IContainerOfUniqueNames</a> checks that the provided names are indeed unique and shows and error otherwise. For qualified names, implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5227231181399633032">IHasQualifiedName</a>.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5095889050031055796">IContainerOfUniqueNames</a> checks that the provided names are indeed unique and shows an error otherwise. For qualified names, implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5227231181399633032">IHasQualifiedName</a>.</p>
 <h4 id="idetectcycle">IDetectCycle<a class="headerlink" href="#idetectcycle" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F5939454523704167063">IDetectCycle</a> can be implemented to detect cyclic dependencies. This feature is used, for example, with chunks that import other chunks.</p>
 <h4 id="iempty">IEmpty<a class="headerlink" href="#iempty" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067">IEmpty</a> can be implemented to support empty lines. Error messages are automatically suppressed and the node is also not shown in the outline.</p>
 <h4 id="name-related-interfaces">Name related interfaces<a class="headerlink" href="#name-related-interfaces" title="Permanent link">&para;</a></h4>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291">IIdentifierNamedConcept</a> can be used for concept that should have a valid identifier. Check the <a href="http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296">property constraint</a> to understand how it works.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291">IIdentifierNamedConcept</a> can be used for concepts that should have valid identifiers. Check the <a href="http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296">property constraint</a> to understand how it works.</p>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193612">INameAllUpperCase</a>, <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224192794">INameFirstCharLowerCase</a> and <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F8628579007224193610">INameFirstCharUpperCase</a> can be used to further constraint the identifier name.</p>
 <h4 id="imbeddrideroot">IMbeddrIDERoot<a class="headerlink" href="#imbeddrideroot" title="Permanent link">&para;</a></h4>
-<p>Concepts that implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829">IMbeddrIDERoot</a> show up in the <em>New Roots</em> menu that&rsquo;s shown above the normal <em>new</em> menu of the context menu. It adds the following features: custom name for the menu entry, root concept sorting and custom categories for the root concepts.</p>
+<p>Concepts that implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F13085436577882829">IMbeddrIDERoot</a> show up in the <em>New Roots</em> menu that&rsquo;s shown above the normal <em>new</em> menu of the context menu. It adds the following features: a custom name for the menu entry, root concept sorting, and custom categories for the root concepts.</p>
 <h2 id="iets3"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr><a class="headerlink" href="#iets3" title="Permanent link">&para;</a></h2>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <h4 id="isolvable">ISolvable<a class="headerlink" href="#isolvable" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F5067755556171617239">ISolvable</a> can be implemented to create solver tasks that could be executed by a solver such as <a href="https://github.com/Z3Prover/z3">Z3</a>. To enable the solver for a node, implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F9051170899708928820">IUseSolver</a>. A solver task must extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F8571724170506775997">AbstractSolverTask</a>. The concept that can be mapped to the solver must implement <a href="http://127.0.0.1:63320/node?ref=r%3A9e71c0de-f9ab-4b67-96cc-7d9c857513f6%28org.iets3.analysis.base.structure%29%2F5553107600697040451">ICanBeMappedToSolver</a>.</p>
 <h4 id="icanruncheckmanually">ICanRunCheckManually<a class="headerlink" href="#icanruncheckmanually" title="Permanent link">&para;</a></h4>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F4450571177430728250">ICanRunCheckManually</a> can be implemented to support running checks that are executed through one of the actions (runAllManuallyOnModel, runAllManuallyOnRoot, runManuallyOnContainer etc.) or are executed through intentions. The result of a check can be stored as a user object of a node. The interface also supports updating the editor with the test results, for example, highlighting the background of a test with a color and refreshing the editor.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f36-4e61-ae17-20f02b8630ad%28org.iets3.core.base.structure%29%2F4450571177430728250">ICanRunCheckManually</a> can be implemented to support running checks that are executed through one of the actions (runAllManuallyOnModel, runAllManuallyOnRoot, runManuallyOnContainer) or are executed through intentions. The result of a check can be stored as a user object of a node. The interface also supports updating the editor with the test results, for example, highlighting the background of a test with color and refreshing the editor.</p>
 <p>Example:</p>
 <p><a class="glightbox" href="../gifs/run_check_manually.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KernelF: run check manually" src="../gifs/run_check_manually.gif" /></a></p>
 <h4 id="ioptionallynamed">IOptionallyNamed<a class="headerlink" href="#ioptionallynamed" title="Permanent link">&para;</a></h4>
@@ -3903,28 +3887,28 @@ Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
 <h3 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h3>
 <p>To add a new expression, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928347719">Expression</a>. The new concept can be commented <abbr title="output">out</abbr> and documented by default.</p>
 <h4 id="icanbelvalue">ICanBeLValue<a class="headerlink" href="#icanbelvalue" title="Permanent link">&para;</a></h4>
-<p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068">ICanBeLValue</a> when the concept can be used as the <a href="https://en.wikipedia.org/wiki/Value_(computer_science)?oldformat=true#Assignment:_l-values_and_r-values">left value</a> of expressions such as assignments. Variable references, paths and dot expression can be left values.</p>
+<p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F195141004745586068">ICanBeLValue</a> when the concept can be used as the <a href="https://en.wikipedia.org/wiki/Value_(computer_science)?oldformat=true#Assignment:_l-values_and_r-values">left value</a> of expressions such as assignments. Variable references, paths, and dot expressions can be left values.</p>
 <h4 id="idottarget">IDotTarget<a class="headerlink" href="#idottarget" title="Permanent link">&para;</a></h4>
-<p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">IDotTarget</a> to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines and many more.</p>
+<p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">IDotTarget</a> to support custom operations for the dot expression. It can be used, for example, to add new operations for collections, enumerations, math, state machines, and many more.</p>
 <h4 id="iemptyliteral">IEmptyLiteral<a class="headerlink" href="#iemptyliteral" title="Permanent link">&para;</a></h4>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F915344943735946072">IEmptyLiteral</a> is a marker interface used to mark literals that at runtime evaluate to an empty value.</p>
 <h4 id="iliteral">ILiteral<a class="headerlink" href="#iliteral" title="Permanent link">&para;</a></h4>
 <p>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7782108600710395780">ILiteral</a> to add support for a new literal. For primitive types such as integers and strings, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8379605524044170035">PrimitiveLiteral</a> instead. Register an extension for the <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F1085994689350268573">primitiveTypeMapper</a> extension point when using custom primitive literals. The standard implementation is the <a href="http://127.0.0.1:63320/node?ref=r%3A5bf19129-2710-45a6-906e-9ee2d0977853%28org.iets3.core.expr.simpleTypes.plugin%29%2F3910975805742593968">SimpleTypesPrimitiveTypeMapper</a>.</p>
 <h4 id="effects">Effects<a class="headerlink" href="#effects" title="Permanent link">&para;</a></h4>
-<p>Since KernelF is by default immutable, some language extensions allow side effects such as the language <em><abbr title="organization">org</abbr>.iets3.core.<abbr title="expression">expr</abbr>.mutable</em>. To add custom concepts that have affects, implement the interfaces <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116">IMayAllowEffect</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166">IMayHaveEffect</a>.</p>
+<p>Since KernelF is by default immutable, some language extensions allow side effects such as the language <em><abbr title="organization">org</abbr>.iets3.core.<abbr title="expression">expr</abbr>.mutable</em>. To add custom concepts that have effects, implement the interfaces <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F952298261448780116">IMayAllowEffect</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7791618349053901166">IMayHaveEffect</a>.</p>
 <h4 id="ioptionallytyped">IOptionallyTyped<a class="headerlink" href="#ioptionallytyped" title="Permanent link">&para;</a></h4>
-<p>Use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724">IOptionallyTyped</a> to add an optional type to an expression. The expression automatically used the provided type as its own type.</p>
+<p>Use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7089558164905593724">IOptionallyTyped</a> to add an optional type to an expression. The expression automatically used the provided type as its type.</p>
 <h4 id="itraceroot">ITraceRoot<a class="headerlink" href="#itraceroot" title="Permanent link">&para;</a></h4>
 <p>Nodes that want to be the root of <a href="../../languages/kernelf/#tracing">tracing</a>, should implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874">ITraceRoot</a></p>
 <h4 id="custom-types">Custom types<a class="headerlink" href="#custom-types" title="Permanent link">&para;</a></h4>
 <p>Custom types must extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928349204">Type</a>. If the type supports a default value (e.g. <code>false</code> for the boolean type and <code>0</code> for a numeric type), also implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6932772747669856399">ITypeSupportsDefaultValue</a>.</p>
 <h4 id="iwantnewline">IWantNewLine<a class="headerlink" href="#iwantnewline" title="Permanent link">&para;</a></h4>
-<p>The concepts of expressions that need to be on a new line such as try expressions, block expressions and sometimes tables, need to implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890">IWantNewLine</a>. This interface affects the layout of some expressions such as if expressions and function bodies.</p>
+<p>The concepts of expressions that need to be on a new line such as try expressions, block expressions, and sometimes tables, need to implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F1134276681297127890">IWantNewLine</a>. This interface affects the layout of some expressions such as if expressions and function bodies.</p>
 <h4 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h4>
 <p>To add a new test statement, extend the concept <a href="http://127.0.0.1:63320/node?ref=r%3Aba7faab6-2b80-43d5-8b95-0c440665312c%28org.iets3.core.expr.tests.structure%29%2F8219602584783477664">AbstractTestItem</a>. If the editor needs to be updated after the test item was executed, override the method <a href="http://127.0.0.1:63320/node?ref=r%3A7961970e-5737-42e2-b144-9bef3ad8d077%28org.iets3.core.expr.tests.behavior%29%2F4314247060317840957">performAdditionalEditorUpdate</a>.</p>
 <h3 id="top-level">Top-level<a class="headerlink" href="#top-level" title="Permanent link">&para;</a></h3>
 <h4 id="itoplevelexprcontent">IToplevelExprContent<a class="headerlink" href="#itoplevelexprcontent" title="Permanent link">&para;</a></h4>
-<p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Ada65683e-ff6f-430d-ab68-32a77df72c93%28org.iets3.core.expr.toplevel.structure%29%2F2861782275883475449">IToplevelExprContent</a> to allow an expression to be used at the topmost level like the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123155">ExpressionStatement</a> in <em>baselanguage</em>.</p>
+<p>Implement the interface <a href="http://127.0.0.1:63320/node?ref=r%3Ada65683e-ff6f-430d-ab68-32a77df72c93%28org.iets3.core.expr.toplevel.structure%29%2F2861782275883475449">IToplevelExprContent</a> to allow an expression to be used at the topmost level like the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123155">ExpressionStatement</a> in Base Language.</p>
 <h3 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h3>
 <p>When implementing custom operations for collections such as maps, lists and sets, use one of the provided concepts as the base concept (for example <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339795488">NoArgCollectionOp</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283340020764">OneArgCollectionOp</a>). If no suitable concept is available, implement one of the interfaces such as <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339790458">ICollectionOp</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7757419675865128281">IMapOneArgOp</a>. If this is still not possible, you can still implement <a href="http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146">IDotTarget</a> directly.</p>
 <h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
@@ -3937,7 +3921,7 @@ Identifiers starting with a capital <em>I</em> refer to interfaces.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

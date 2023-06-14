@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -1310,8 +1310,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#baselanguage-internal" class="md-nav__link">
-    Baselanguage internal
+  <a href="#base-language-internal" class="md-nav__link">
+    Base Language internal
   </a>
   
 </li>
@@ -2918,8 +2918,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2942,20 +2940,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3428,8 +3412,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#baselanguage-internal" class="md-nav__link">
-    Baselanguage internal
+  <a href="#base-language-internal" class="md-nav__link">
+    Base Language internal
   </a>
   
 </li>
@@ -3530,25 +3514,25 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage</ins></p>
 </blockquote>
-<p>For a full list of <em>baselanguage</em> bugs and feature requests, have a look at <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage">this ticket search</a>.</p>
+<p>For a full list of Base Language bugs and feature requests, have a look at <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage">this ticket search</a>.</p>
 <h3 id="blog-posts">Blog posts<a class="headerlink" href="#blog-posts" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://specificlanguages.com/posts/get-feedback-from-users-with-generic-comments/">Get feedback from users with generic comments</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
-<li><a href="https://specificlanguages.com/posts/2022-04/06-empty-lines-and-comments/">Empty lines and comments</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/get-feedback-from-users-with-generic-comments/">Get feedback from users with generic comments</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/06-empty-lines-and-comments/">Empty lines and comments</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Paste as Java class doesn&rsquo;t work.</p>
 <p>Not all newer Java features can be pasted such as the double colon operator(::) and static imports (fixed in the newest <abbr title="Meta Programming System">MPS</abbr> versions). Loops with more
-than one variable also don&rsquo;t work.</p>
+than one variable also doesn&rsquo;t work.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Set the `Export flag at the moduleX import.</p>
+<p class="admonition-title">Set the Export flag at the moduleX import.</p>
 <p>You are using a class that extends another class that is situated in another solution. That means that the export flag for the other
-solutions should be set in the current module, so that there is automatically a dependency to this module.
+solutions should be set in the current module so that there is automatically a dependency on this module.
 More information can be found in <a href="../../mps_internal/dependencies/#export-flag">dependencies: export flag</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What Java language features aren&rsquo;t supported in <em>baselanguage</em>?</p>
+<p class="admonition-title">What Java language features aren&rsquo;t supported in Base Language?</p>
 <p>The following features are not supported (yet):</p>
 <ul>
 <li><a href="https://www.baeldung.com/java-nested-classes">local classes</a></li>
@@ -3561,9 +3545,9 @@ More information can be found in <a href="../../mps_internal/dependencies/#expor
 </ul>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">A function with <em>baselanguage</em> code doesn&rsquo;t return anything when called.</p>
-<p><em>baselanguage</em> permits implicit returns. The last statement is automatically returned. In some
-places implicit returns aren&rsquo;t supported, such as when returning a new <code>ListScope</code> class. Make sure to add a return
+<p class="admonition-title">A function with Base Language code doesn&rsquo;t return anything when called.</p>
+<p>Base Language permits implicit returns. The last statement is automatically returned. In some
+places, implicit returns aren&rsquo;t supported, such as when returning a new <code>ListScope</code> class. Make sure to add a return
 statement in such places.</p>
 </div>
 <div class="admonition question">
@@ -3578,7 +3562,7 @@ statement in such places.</p>
 <blockquote>
 <p><ins>jetbrains.mps.baselanguage.varVariable</ins></p>
 </blockquote>
-<p>This extension allows to declare local variables with the type automatically inferred from the initializer which must not be empty. Example:</p>
+<p>This extension allows declaring local variables with the type automatically inferred from the initializer which must not be empty. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ISimple</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="kd">var</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="n">c710</span><span class="w"></span>
@@ -3593,8 +3577,8 @@ the <em><abbr title="variable">var</abbr></em> variable of the same language is 
 <p><ins>jetbrains.mps.baselanguage.closures</ins></p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Exception when passing closure literal as a parameter in a behaviour method call</p>
-<p>Closures can&rsquo;t be used for functional interface types such as <code>java.util.Runnable</code> in behaviour methods (see <a href="https://youtrack.jetbrains.com/issue/MPS-31866"><abbr title="Meta Programming System">MPS</abbr>-31866</a>)</p>
+<p class="admonition-title">Exception when passing closure literal as a parameter in a behavior method call</p>
+<p>Closures can&rsquo;t be used for functional interface types such as <code>java.util.Runnable</code> in behavior methods (see <a href="https://youtrack.jetbrains.com/issue/MPS-31866"><abbr title="Meta Programming System">MPS</abbr>-31866</a>)</p>
 </div>
 <h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -3604,14 +3588,14 @@ the <em><abbr title="variable">var</abbr></em> variable of the same language is 
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you convert from a Java <em>ArrayList</em> to a <em>baselanguage</em> list?</p>
+<p class="admonition-title">How do you convert from a Java <em>ArrayList</em> to a Base Language list?</p>
 <p>Use the copy constructor: 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">new</span><span class="w"> </span><span class="n">arraylist</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">copy</span><span class="p">:</span><span class="w"> </span><span class="n">yourArrayList</span><span class="p">)</span><span class="err">`</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you convert <em>baselanguage</em> collections to Java streams?</p>
-<p>First convert your collection to a list that you downcast to a Java list.
+<p class="admonition-title">How do you convert Base Language collections to Java streams?</p>
+<p>First, convert your collection to a list that you downcast to a Java list.
 Then you can convert it into a stream <code class="highlight"><span class="n">StreamSupport</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="n">list</span><span class="o">/</span><span class="p">.</span><span class="na">spliterator</span><span class="p">(),</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"></span></code></p>
 </div>
 <div class="admonition question">
@@ -3647,7 +3631,7 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn&r
 </blockquote>
 <ul>
 <li>voids <code>NullPointerException</code> when Java executes a method call on a null variable. For example, it won&rsquo;t throw a <code>NullPointerException</code>, if <code>myObject</code> is null.</li>
-<li><strong>bold</strong> methods or dot-expressions are null safe, for example <code>new arraylist&lt;string&gt;()</code>.<strong>where</strong><code>({~it =&gt; })</code></li>
+<li><strong>bold</strong> methods or dot-expressions are null safe, for example, <code>new arraylist&lt;string&gt;()</code>.<strong>where</strong><code>({~it =&gt; })</code></li>
 </ul>
 <h2 id="access-language">Access language<a class="headerlink" href="#access-language" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -3661,10 +3645,10 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn&r
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.structure</ins></p>
 </blockquote>
 <ul>
-<li>An intention can mark a regular property-cell such as string, <abbr title="integer">int</abbr>, and boolean as transactional.</li>
+<li>An intention can mark a regular property cell such as string, <abbr title="integer">int</abbr>, and boolean as transactional.</li>
 <li><abbr title="Meta Programming System">MPS</abbr> updates the editor, when the cursor leaves the cell (= commit).</li>
 <li>You must define the commit handler in the inspector. The benefit is that the editor isn&rsquo;t permanently updated on every key typed.</li>
-<li>Can be useful, for example, if you set your text-color dynamically.</li>
+<li>Can be useful, for example, if you set your text color dynamically.</li>
 </ul>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -3678,15 +3662,15 @@ I tried <code>myNode.children/.sort(Ordering.lexical())</code>, but that doesn&r
   </p>
 <figcaption>example: image cell</figcaption>
 </figure>
-<h2 id="baselanguage-internal">Baselanguage internal<a class="headerlink" href="#baselanguage-internal" title="Permanent link">&para;</a></h2>
+<h2 id="base-language-internal">Base Language internal<a class="headerlink" href="#base-language-internal" title="Permanent link">&para;</a></h2>
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/">Poor man&rsquo;s cross-model generation: baseLanguageInternal</a></p>
 <h2 id="sax-parser">Sax parser<a class="headerlink" href="#sax-parser" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins>jetbrains.mps.core.xml.sax</ins></p>
 </blockquote>
-<p><a href="https://www.baeldung.com/java-sax-parser">SAX</a>, also known as the Simple <abbr title="Application Programming Interface">API</abbr> for XML, is used for parsing XML documents. This language allows to create sax parsers. The parser can take parameters and save data into variables. You start by specifying the <em>root</em> element and then at <em>rules</em> for XML tags.</p>
+<p><a href="https://www.baeldung.com/java-sax-parser">SAX</a>, also known as the Simple <abbr title="Application Programming Interface">API</abbr> for XML, is used for parsing XML documents. This language allows creating sax parsers. The parser can take parameters and save data into variables. You start by specifying the <em>root</em> element and then at <em>rules</em> for XML tags.</p>
 <h3 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h3>
-<p>The rule can have an optional <em>creator</em> which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (<em><abbr title="attribute">attr</abbr></em>) and children which take can have an optional handler. It has two arguments: the <em>result</em> which has the same type as the type of the rule and the <em>child</em> which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The <em>default</em> child block can be used for children with any tags. Next there can be a <em>text</em> handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the <em>validate</em> method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the <em>global text handler text</em>. 
+<p>The rule can have an optional <em>creator</em> which creates a Java object from the current element. They support a full and compact view. You can then declare attributes (<em><abbr title="attribute">attr</abbr></em>) and children which take can have an optional handler. It has two arguments: the <em>result</em> which has the same type as the type of the rule and the <em>child</em> which is the parsed child object. The attribute can be mandatory, the child can override the tag and supports conditional invocation. The <em>default</em> child block can be used for children with any tags. Next, there can be a <em>text</em> handler which supports an optional handler that can process the text content of an XML element. At last, the element can be validated in the <em>validate</em> method which should return a boolean value depending on if the validation succeeds or fails. Text handling can also be done through the <em>global text handler text</em>. 
 Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -3776,13 +3760,13 @@ Example:</p>
 <a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">  </span><span class="n">global</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">&lt;</span><span class="n">no</span><span class="w"> </span><span class="n">globalText</span><span class="o">&gt;</span><span class="w"> </span>
 <a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>To use the generated parser, you have to use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024">InternalClassCreator</a> from Baselanguage Internal. Example:</p>
+<p>To use the generated parser, you have to use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895903ac%28jetbrains.mps.baseLanguageInternal.structure%29%2F1100832983841311024">InternalClassCreator</a> from Base Language Internal. Example:</p>
 <p><code class="highlight"><span class="k">new</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="n">XMLSAXHandler</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">smodel</span><span class="p">.</span><span class="na">persistence</span><span class="p">.</span><span class="na">def</span><span class="p">.</span><span class="na">v8</span><span class="p">.</span><span class="na">LineToContentMapReader8Handler</span><span class="w"> </span><span class="p">(</span><span class="n">withPropertyValues</span><span class="p">,</span><span class="w"> </span><span class="n">withAssociationTarget</span><span class="p">)</span><span class="w"></span></code></p>
 <h2 id="property-references">Property references<a class="headerlink" href="#property-references" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.checkedName</ins></p>
 </blockquote>
-<p>This language can be used to reference properties. <code>property/&lt;node&gt;,&lt;role&gt;/</code>is the main expression which has the type <code>propRef&lt;&gt;</code>. To access the value use <code>.value</code>. Example: 
+<p>This language can be used to reference properties. <code>property/&lt;node&gt;,&lt;role&gt;/</code>is the main expression that has the type <code>propRef&lt;&gt;</code>. To access the value use <code>.value</code>. Example: 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">propRef</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">property</span><span class="o">/</span><span class="n">node</span><span class="o">/</span><span class="n">Class</span><span class="o">/</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">name</span><span class="o">/</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">property</span><span class="p">.</span><span class="na">value</span><span class="p">;</span><span class="w"></span>
@@ -3792,7 +3776,7 @@ This expression is the node pendant for the <code>property/&lt;concept&gt;:&lt;n
 <blockquote>
 <p><ins>jetbrains.mps.core.properties</ins></p>
 </blockquote>
-<p>This language adds support for <a href="https://en.wikipedia.org/wiki/.properties">Java .properties</a> files. The keys and values are escaped automatically when they contain special characters. The generated properties file has encoding ISO-8859-1.
+<p>This language adds support for <a href="https://en.wikipedia.org/wiki/.properties">Java .properties</a> files. The keys and values are escaped automatically when they contain special characters. The generated properties file has the encoding ISO-8859-1.
 Example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
@@ -3810,13 +3794,13 @@ Example:
 <blockquote>
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.forms</ins></p>
 </blockquote>
-<p>This language add support for checkboxes. Text based checkboxes (text checkbox <abbr title="User Interface">UI</abbr>) and image checkboxes (platform checkbox <abbr title="User Interface">UI</abbr>) are available. The text-based checkbox can be styled like any other constant text. The checkbox cell has an <em><abbr title="user interface">ui</abbr></em> parameter which allows to switch between both styles. The state is backed by a boolean property. The visible text is specified by the <em>label</em>. The checkbox can be toggled through clicking and pressing space. The</p>
+<p>This language adds support for checkboxes. Text-based checkboxes (text checkbox <abbr title="User Interface">UI</abbr>) and image checkboxes (platform checkbox <abbr title="User Interface">UI</abbr>) are available. The text-based checkbox can be styled like any other constant text. The checkbox cell has an <em><abbr title="user interface">ui</abbr></em> parameter which allows switching between both styles. The state is backed by a boolean property. The visible text is specified by the <em>label</em>. The checkbox can be toggled by clicking and pressing space.</p>
 <p><a class="glightbox" href="../../img/forms_checkbox.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="forms: checkbox" src="../../img/forms_checkbox.png" /></a></p>
 <h3 id="image-generation-for-nodes">Image generation for nodes<a class="headerlink" href="#image-generation-for-nodes" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor.imageGen</ins></p>
 </blockquote>
-<p>The single concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484">ImageGenerator</a> can generate an image for a node. It accepts a file name, a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node <abbr title="identification/identifier">id</abbr> must be provided. The image is generated through the facet <a href="http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862">GenerateImages</a> which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
+<p>The single concept <a href="http://127.0.0.1:63320/node?ref=r%3Aa7cbf330-9260-4b6d-8d53-3b6cb70171c0%28jetbrains.mps.lang.editor.imageGen.structure%29%2F2359976223559993484">ImageGenerator</a> can generate an image for a node. It accepts a file name, and a scale (1 is 100%), and needs a reference to a node. If the reference is not set, a node <abbr title="identification/identifier">id</abbr> must be provided. The image is generated through the facet <a href="http://127.0.0.1:63320/node?ref=r%3Ac3ac4b0a-a487-4481-b87d-bcfbfdd6a85d%28jetbrains.mps.lang.editor.imageGen.plugin%29%2F448727181061901862">GenerateImages</a> which is executed after the generate facet. Execute the following code on the console to get the list of supported file formats:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
@@ -3839,7 +3823,7 @@ Example:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

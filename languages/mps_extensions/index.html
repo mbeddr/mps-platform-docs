@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -1339,8 +1339,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#tool-tips" class="md-nav__link">
-    Tool tips
+  <a href="#tooltips" class="md-nav__link">
+    Tooltips
   </a>
   
 </li>
@@ -2832,8 +2832,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2856,20 +2854,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3308,8 +3292,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#tool-tips" class="md-nav__link">
-    Tool tips
+  <a href="#tooltips" class="md-nav__link">
+    Tooltips
   </a>
   
 </li>
@@ -3352,24 +3336,24 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins>slisson.richtext</ins></p>
 </blockquote>
-<p>A multi-line text-block that&rsquo;s extendable (e.g. for images). It looks a bit latex-like.
-The mbeddr <abbr title="document/documentation">doc</abbr> language used it for generating xhtml, latex, and markdown.</p>
+<p>A multi-line text block that&rsquo;s extendable (e.g. for images).
+The mbeddr <abbr title="document/documentation">doc</abbr> language uses it for generating XHTML, Latex, and markdown.</p>
 <div class="admonition warning">
 <p class="admonition-title">The ordering of text and IWords can&rsquo;t be arbitrary,</p>
-<p>A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be betweeen two embedded nodes and there are noo two consecutive Words.</p>
+<p>A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be between two embedded nodes and there are no two consecutive Words.</p>
 </div>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins>de.itemis.mps.editor.diagram</ins></p>
 </blockquote>
 <div class="admonition question">
-<p class="admonition-title">What Java libraries does the diagram language use?</p>
+<p class="admonition-title">What Java libraries are used by the diagram language?</p>
 <p>For the graphs itself, it uses <a href="https://jgraph.github.io/mxgraph/docs/manual_javavis.html">JGraphX</a>. The layouting is
 done by the <a href="https://www.eclipse.org/elk/">Eclipse Layout Kernel (ELK)</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">I encountered a bug.</p>
-<p>Check the <a href="https://github.com/JetBrains/MPS-extensions/issues/120"><abbr title="metadata">meta</abbr> Issue</a> on Github.</p>
+<p>Check the <a href="https://github.com/JetBrains/MPS-extensions/issues/120"><abbr title="metadata">meta</abbr> Issue</a> on GitHub.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use this language?</p>
@@ -3392,15 +3376,15 @@ LayoutMapEntry.key is the property where this string is used (<a href="https://j
 </blockquote>
 <p>Use <em>slisson-tables</em> instead of <em>mps-tables</em> because the language is more flexible (and not deprecated).
 The language displays content in a tabular format. The table can be hard-coded or can consist of complex queries/dynamic content.
-You have to add new cells and rows in the editor. They can also be readonly.
-You need a little experience (trial-and-error) to create these tables.
+You have to add new cells and rows in the editor. They can also be read-only.
+You need a little experience (trial and error) to create these tables.
 Features:</p>
 <ul>
 <li>table cell queries</li>
 <li>partial tables</li>
 <li>grid queries</li>
 </ul>
-<p>Strumenta&rsquo;s blog: <a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/">Tabular projections in Jetbrains <abbr title="Meta Programming System">MPS</abbr>: let’s start building an accounting system</a></p>
+<p><a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/">Tabular projections in Jetbrains <abbr title="Meta Programming System">MPS</abbr>: let’s start building an accounting system</a>(<em>Strumenta&rsquo;s blog</em>)</p>
 <details class="question">
 <summary>How do you get rid of the small little extra grid lines on the outside of the table rows? (<a href="https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700">original question</a>)</summary>
 <p>Change these properties to true. </p>
@@ -3423,7 +3407,7 @@ Features:</p>
 </blockquote>
 <div class="admonition question">
 <p class="admonition-title">Grammar cells seem to need a dummy component. Is this necessary?</p>
-<p>Yes it is, otherwise the generator doesn&rsquo;t get used(<a href="https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300">source</a>).</p>
+<p>Yes, it is, otherwise the generator doesn&rsquo;t get used(<a href="https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300">source</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What combinations of cells aren&rsquo;t supported?</p>
@@ -3435,35 +3419,35 @@ Features:</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you enter enumerations easier?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/">Entering enumerations easier with grammar cells</a></p>
+<p><a href="https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/">Entering enumerations easier with grammar cells</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <h2 id="querylist">Querylist<a class="headerlink" href="#querylist" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.editor.querylist</ins></p>
 </blockquote>
 <p>You can use nodes in the editor, which aren&rsquo;t directly available in the current context. The language is more 
-powerful than (readonly) model access (displays a string).
+powerful than (read-only) model access (displays a string).
 You can have editor cells, which can have actions and all other normal cell features.
-<a href="http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197">queryListNode</a> allows to access the surrounding context node in the editor definition (which otherwise isn&rsquo;t available).</p>
+<a href="http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197">queryListNode</a> allows accessing the surrounding context node in the editor definition (which otherwise isn&rsquo;t available).</p>
 <div class="admonition question">
-<p class="admonition-title">How do I fold collections returned by a querylist?</p>
-<p>Surround the querylist with a vertical collection and and set the cell layout of the querylist (not its content) to vertical.</p>
+<p class="admonition-title">How do I fold collections returned by a query list?</p>
+<p>Surround the query list with a vertical collection and set the cell layout of the querylist (not it&rsquo;s content) to vertical.</p>
 </div>
 <details class="question">
-<summary>How do I make cells in querylists navigatable?</summary>
+<summary>How do I make cells in query lists navigatable?</summary>
 <blockquote>
-<p>I&rsquo;m trying to create a list of navigatable cells via querylist from mpsutil.</p>
-<p>The querylists query collects some nodes from my model, and I&rsquo;d like to make it so that each cell produced with this querylist navigates to its respective node.</p>
+<p>I&rsquo;m trying to create a list of navigatable cells via query list from mpsutil.</p>
+<p>The query lists query collects some nodes from my model, and I&rsquo;d like to make it so that each cell produced with this query list navigates to its respective node.</p>
 <p>Using the <em>navigatable-node</em> style attribute (returning <code>node</code>, the node from the query) on these cells doesn&rsquo;t seem to work though - <abbr title="control">ctrl</abbr>+clicking them doesn&rsquo;t do anything.</p>
-<p>How can I make the cells in a querylist navigatable to that node?</p>
+<p>How can I make the cells in a query list navigatable to that node?</p>
 </blockquote>
-<p>The <code>navigatable-node</code> style attribute won&rsquo;t allow you to point directly to the node from the querylist&rsquo;s query. <br />
+<p>The <code>navigatable-node</code> style attribute won&rsquo;t allow you to point directly to the node from the query list&rsquo;s query. <br />
 Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsutil) to make the navigation work, and the <code>hyperlink-style</code> attribute to make it look like a regular reference:</p>
 <p><a class="glightbox" href="../../img/external_questions/hyperlink_node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hyperlink node" src="../../img/external_questions/hyperlink_node.png" /></a>  </p>
 <p>A common workaround to get similar behavior with <em>navigatable-node</em> is to point it to a child or parent of the desired node instead of that node itself.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></p>
 </details>
-<h2 id="tool-tips">Tool tips<a class="headerlink" href="#tool-tips" title="Permanent link">&para;</a></h2>
+<h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins>de.itemis.mps.tooltips.structure</ins></p>
 </blockquote>
@@ -3475,7 +3459,7 @@ You have to define a regular editor and a hover editor.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

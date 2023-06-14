@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2823,8 +2823,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2847,20 +2845,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3336,34 +3320,34 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>Interpreter, coverage and tracing</h1>
 
-<p>The interpreter let you interpret code on the fly. You can use it instead of the normal approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g. executing baselanguage code). The result of invoking the interpreter is a Java object.</p>
+<p>The interpreter lets you interpret code on the fly. You can use it instead of the normal approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g. executing Base Language code). The result of invoking the interpreter is a Java object.</p>
 <p><a class="glightbox" href="../gifs/interpreter_testcase.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px" /></a></p>
 <p>In the GIF you can see the interpreter executing a test case that contains assertions written with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn&rsquo;t involved in the execution at all.</p>
 <h2 id="creating-an-interpreter">Creating an interpreter<a class="headerlink" href="#creating-an-interpreter" title="Permanent link">&para;</a></h2>
 <p>To create a new interpreter, create a new solution that contains the interpreter and import the language <code>com.mbeddr.mpsutil.interpreter</code>.
-Make sure to set the the solution kind to <code>Other</code> in the module properties.</p>
+Make sure to set the solution kind to <code>Other</code> in the module properties.</p>
 <p><a class="glightbox" href="../images/interpreter_solution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="interpreter: Solution Kind configuration" src="../images/interpreter_solution.png" /></a></p>
-<p>Now create a new model inside your new solution, create the new interpreter and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use other categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses its own category <code>java</code>. You don&rsquo;t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
-<p>In the related interpreter section, you can define that the current interpret should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterwards.</p>
+<p>Now create a new model inside your new solution, create the new interpreter, and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use other categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses its own category <code>java</code>. You don&rsquo;t have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
+<p>In the related interpreter section, you can define that the current interpreter should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: the collections operations should be interpreted first because they are reduced to simpler statements. The lambda and base interpreter should be run afterward.</p>
 <p>The type mappings section can declare mappings from types that implement the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface to either a java type or another custom type that implements the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface.</p>
 <p><a class="glightbox" href="../images/exprSimpleInterpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KernelF: expression simple interpreter" src="../images/exprSimpleInterpreter.png" /></a></p>
-<p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enabling caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking <em>Tools</em> &rarr; <em>Enable Interpreter Cache</em> in the main menu.</p>
+<p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enable caching. When the same value is accessed again, the cached value is returned instead of recalculation a value. The interpreter cache can be disabled by unchecking <em>Tools</em> &rarr; <em>Enable Interpreter Cache</em> in the main menu.</p>
 <p><a class="glightbox" href="../images/literals_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px" /></a></p>
-<p>The right side contains is an expression or a block and must return a value. The <em>node</em> expression refers to the current evaluated expression. A few expressions start with <em>#</em>, that are explained in their corresponding short descriptions. The <em>#-&gt;</em> expression is used to call functions (search for usages globally).
-The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expressions is the <em><abbr title="environment">env</abbr></em> expression. It&rsquo;s an array that can be used to save values for other evaluators. The key must be a node. If you don&rsquo;t have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
+<p>The right side contains an expression or a block and must return a value. The <em>node</em> expression refers to the currently evaluated expression. A few expressions start with <em>#</em>, which are explained in their corresponding short descriptions. The <em>#-&gt;</em> expression is used to call functions (search for usages globally).
+The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the <em><abbr title="environment">env</abbr></em> expression. It&rsquo;s an array that can be used to save values for other evaluators. The key must be a node. If you don&rsquo;t have a node available, you can also use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand e.g. <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
 <p><a class="glightbox" href="../images/startswith_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png" /></a></p>
 <p>When the current interpreter is not suitable for interpreting the current node, the expression <em>tryOtherInterpreter</em> can be used to use the next interpreter to interpret the current node:</p>
 <p><a class="glightbox" href="../images/tryOtherInterpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png" /></a></p>
-<p>The <em>castUp</em> expression can be used to case a Java (baselanguage) expression to a type.
-For example, if the expression is of type Number (numberInput) and the target type is float,
+<p>The <em>castUp</em> expression can be used to cast a Java (Base Language) expression to a type.
+For example, if the expression is of type Number (<em>numberInput</em>) and the target type is float,
 <code>numberInput.floatValue()</code> would be called.
-The <em>$</em> expression returns the concept&rsquo;s type. It can be used for type mappings but also for child type constraints that can be entered in the middle of evaluators. For example: the evaluator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn&rsquo;t be used:</p>
+The <em>$</em> expression returns the concept&rsquo;s type. It can be used for type mappings but also for child-type constraints that can be entered in the middle of evaluators. For example: the evaluator of a modulo operator might require that the left and right expressions are of type integer otherwise the evaluator shouldn&rsquo;t be used:</p>
 <p><a class="glightbox" href="../images/mod_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of modulus" src="../images/mod_evaluator.png" width="600px" /></a></p>
-<p>The <em>context</em> expression can be used to access the interpreter configurations, the cache, the root interpreter and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The topmost environment in the stack is used. The is evaluable expression (#?) can be used to check if an evaluator for a specific node is available.</p>
+<p>The <em>context</em> expression can be used to access the interpreter configurations, the cache, and the root interpreter, and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The topmost environment in the stack is used. The is-evaluable expression (#?) can be used to check if an evaluator for a specific node is available.</p>
 <h2 id="code-coverage">Code coverage<a class="headerlink" href="#code-coverage" title="Permanent link">&para;</a></h2>
 <p>There&rsquo;s also support for coverage that&rsquo;s displayed inside the editor. Code coverage checks which part of the code was executed by the interpreter. For more information, consult the <a href="https://en.wikipedia.org/wiki/Code_coverage">Wikipedia page</a>. This way you can, for example, find <abbr title="output">out</abbr> which parts of the code aren&rsquo;t covered by tests:</p>
 <p><a class="glightbox" href="../images/example_coverage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: code coverage" src="../images/example_coverage.png" /></a></p>
-<p>There&rsquo;s support for coverage of single nodes but also branches. An example for branches would be, for example, the if and else block of an if statement. To register branches use the <em>register branches</em> statement. To visit a branch, use the <em>branch</em> statement. When visiting a node, the node, the node&rsquo;s concept and the evaluator are automatically marked as covered. For the children of the node, there&rsquo;s the <em>list coverage</em> statement which visits a list of nodes and there&rsquo;s also the simple <em>cover</em> statement. The former is, for example, used for the elements of a map literal. The coverage information can be accessed and set through the <em>coverage</em> variable.</p>
+<p>There&rsquo;s support for coverage of single nodes but also branches. An example for branches would be, for example, the if and else blocks of an if statement. To register branches use the <em>register branches</em> statement. To visit a branch, use the <em>branch</em> statement. When visiting a node, the node, the node&rsquo;s concept , and the evaluator are automatically marked as covered. For the children of the node, there&rsquo;s the <em>list coverage</em> statement which visits a list of nodes and there&rsquo;s also the simple <em>cover</em> statement. The former is, for example, used for the elements of a map literal. The coverage information can be accessed and set through the <em>coverage</em> variable.</p>
 <p><a class="glightbox" href="../images/if_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of if expression" src="../images/if_evaluator.png" /></a></p>
 <h2 id="calling-the-interpreter">Calling the interpreter<a class="headerlink" href="#calling-the-interpreter" title="Permanent link">&para;</a></h2>
 <p>For <abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> use the class <code>IETS3ExprEvalHelper</code>. If you can&rsquo;t use this class, use the following code:
@@ -3383,10 +3367,10 @@ The <em>$</em> expression returns the concept&rsquo;s type. It can be used for t
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
-<p>Other methods don&rsquo;t need coverage, a context object and so forth. The easiest method is <code>helper.evaluate</code> which returns a Java expression.</p>
+<p>Other methods don&rsquo;t need coverage, a context object, and so forth. The easiest method is <code>helper.evaluate</code> which returns a Java expression.</p>
 <h2 id="final-notes">Final notes<a class="headerlink" href="#final-notes" title="Permanent link">&para;</a></h2>
 <p>The interpreter doesn&rsquo;t support multithreading. It can also be slow when called too many times.</p>
-<p>It&rsquo;s also recommended to not call the interpreter from the generator because when searching for interpreters, <abbr title="Meta Programming System">MPS</abbr> might deadlock because it starts indexing. You might get away with it by calling the interpreter inside the runnable of <code>DumbService.getInstance(project).suspendIndexingAndRun()</code>. You can&rsquo;t return the value from the runnable, but you can assign it in a method of an object that&rsquo;s outside the runnable.</p>
+<p>It&rsquo;s also recommended to not call the interpreter from the generator because when searching for interpreters. <abbr title="Meta Programming System">MPS</abbr> might deadlock because it starts indexing. You might get away with it by calling the interpreter inside the runnable of <code>DumbService.getInstance(project).suspendIndexingAndRun()</code>. You can&rsquo;t return the value from the runnable, but you can assign it in a method of an object that&rsquo;s outside the runnable.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
 <li>KernelF: <a href="http://127.0.0.1:63320/node?ref=r%3A31fd8edf-66c5-44d7-84a8-5940badb4d17%28org.iets3.core.expr.base.interpreter.plugin%29%2F553080662195419964">ExprBaseInterpreter</a></li>
@@ -3398,7 +3382,7 @@ The <em>$</em> expression returns the concept&rsquo;s type. It can be used for t
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

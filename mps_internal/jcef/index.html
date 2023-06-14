@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2795,8 +2795,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2819,20 +2817,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3286,9 +3270,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Java Chromium Embedded Framework</h1>
 
 <p>Start with the page <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> - Java Chromium Embedded Framework</a> of the IntelliJ platform plugin SDK.</p>
-<p>It should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
-because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a swing component cell.
-For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTMl code. The code can be created by Java or by
+<p><abbr title="Java Chromium Embedded Framework">JCEF</abbr> should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
+because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a Java Swing component cell.
+For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTML code. The content can be created by Java or by
 calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a href="http://localhost:8000/mps-platform-docs/aspects/textgen">TextGen</a>.</p>
 <p>Existing Java documentation and examples on the web:</p>
 <ul>
@@ -3299,9 +3283,9 @@ calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a hre
 </ul>
 <p>The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (<abbr title="Meta Programming System">MPS</abbr>): You have
 to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication is done through JS. You then have a <code>subscribe</code> method that you can use to
-listening to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
+listen to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
 <p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
-are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>&lsquo; reloading capabilities, it is important to correctly dispose the browser when it isn&rsquo;t needed anymore. The following code registers a listener for the editor component
+are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>&lsquo; reloading capabilities, it is important to correctly dispose of the browser when it isn&rsquo;t needed anymore. The following code registers a listener for the editor component
 dispose event and also closes the browser:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -3329,16 +3313,16 @@ dispose event and also closes the browser:</p>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>When the browser is not correctly disposed, it might be drawn in different components, on top of <abbr title="Meta Programming System">MPS</abbr> editors etc. Some issues are known where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
+<p>When the browser is not correctly disposed of, it might be drawn in different components or on top of <abbr title="Meta Programming System">MPS</abbr> editors. Some issues are known where <abbr title="Java Chromium Embedded Framework">JCEF</abbr> makes the <abbr title="Integrated Development Environment">IDE</abbr> crash (<a href="https://youtrack.jetbrains.com/issue/JBR-4667"><abbr title="JetBrains Runtime">JBR</abbr>-4667</a> + linked related issues, <a href="https://youtrack.jetbrains.com/issue/JBR-2206"><abbr title="JetBrains Runtime">JBR</abbr>-2206</a> + linked related issues).  </p>
 <h2 id="demo-websockets">Demo + WebSockets<a class="headerlink" href="#demo-websockets" title="Permanent link">&para;</a></h2>
-<p>A demo for the <abbr title="Java Chromium Embedded Framework">JCEF</abbr> integration can be found in the repository <a href="https://github.com/alexanderpann/mps_jcef_minimal">mps_jcef_minialm</a>. Read the readme for more information. The demo contains two branches, one shows the internal communication via JS, the other branch uses WebSocket for the communication. The WebSocket server is modeled after this <a href="https://medium.com/@irunika/how-to-write-a-http-websocket-server-using-netty-f3c136adcba9">tutorial</a> and uses the existing IntelliJ libraries of Netty. Handling of web socket frames is described in more detail in <a href="https://livebook.manning.com/book/netty-in-action/chapter-12/40">Chapter 12. WebSocket - Netty in Action</a>.</p>
+<p>A demo for the <abbr title="Java Chromium Embedded Framework">JCEF</abbr> integration can be found in the repository <a href="https://github.com/alexanderpann/mps_jcef_minimal">mps_jcef_minimal</a>. Read the readme for more information. The demo contains two branches, one shows the internal communication via JS, and the other branch uses WebSocket for the communication. The WebSocket server is modeled after this <a href="https://medium.com/@irunika/how-to-write-a-http-websocket-server-using-netty-f3c136adcba9">tutorial</a> and uses the existing IntelliJ libraries of Netty. The handling of web socket frames is described in more detail in <a href="https://livebook.manning.com/book/netty-in-action/chapter-12/40">Chapter 12. WebSocket - Netty in Action</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

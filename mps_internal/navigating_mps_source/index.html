@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2892,8 +2892,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2916,20 +2914,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3477,20 +3461,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
 More information can be found in the readme of the repository.</p>
 <h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h2>
-<p>The <code>artifacts</code> directory contains the artifact related settings. More <abbr title="information">info</abbr> can be found
+<p>The <code>artifacts</code> directory contains the artifact-related settings. More <abbr title="information">info</abbr> can be found
 in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
 <p><a class="glightbox" href="../../img/mps_artifacts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png" /></a></p>
-<p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr> and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
-many other IntelliJ specific project settings,</p>
+<p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr>, and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
+many other IntelliJ-specific project settings,</p>
 <h2 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">&para;</a></h2>
 <p>This folder also contains run configurations and scopes but also other settings:</p>
 <ul>
-<li><em>codeStyleSettings.xml</em>: style settings used for baselanguage (e.g. default field and parameter prefix)</li>
+<li><em>codeStyleSettings.xml</em>: style settings used for Base Language (e.g. default field and parameter prefix)</li>
 <li><em>compiler.xml</em>: the version of the Java compiler (currently: 11)</li>
 <li><em>encodings.xml</em>: encoding of the files (should be: UTF-8)</li>
-<li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in current project </li>
-<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g. settings of favourites manager)</li>
+<li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in the current project </li>
+<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g. settings of favorites manager)</li>
 <li><em>modules.xml</em>: a list of modules of this project that are loaded in <abbr title="Meta Programming System">MPS</abbr></li>
 <li><em>vcs.xml</em>: version control settings</li>
 <li><em>version.xml</em>: project version (not used anymore)</li>
@@ -3498,7 +3482,7 @@ many other IntelliJ specific project settings,</p>
 </ul>
 <h2 id="bin"><abbr title="binary">bin</abbr><a class="headerlink" href="#bin" title="Permanent link">&para;</a></h2>
 <p>This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr> specific files:</p>
+operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr>-specific files:</p>
 <ul>
 <li>
 <p>Linux</p>
@@ -3553,16 +3537,16 @@ The <code>artifacts</code> folder contains the generated jar files. An artifact 
 <p>The <code>tests</code> folder contains Ant scripts for executing tests.
 The <code>tools</code> folder contains scripts for signing and creating DMGs and also
 a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
-The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects etc.).
+The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects, etc.).
 The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
 on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
 <h2 id="core">core<a class="headerlink" href="#core" title="Permanent link">&para;</a></h2>
 <p>The <code>aspects</code> folder contains the languages for the language aspects.
-The <code>baselanguage</code> folder contains the baselanguage implementation and all its extensions such as extensions methods, closures or the collection language.</p>
+The <code>baselanguage</code> folder contains the Base Language implementation and all its extensions such as extension methods, closures, or the collection language.</p>
 <p>The folder <code>devkit</code> contains the four main devkits:</p>
 <ul>
 <li><ins>jetbrains.mps.devkit.bootstrap-languages</ins>: contains all the jetbrains.mps.<abbr title="language">lang</abbr> languages</li>
-<li><ins>jetbrains.mps.devkit.general-purpose</ins>: baselanguage + smodel + text +  quotation language</li>
+<li><ins>jetbrains.mps.devkit.general-purpose</ins>: Base Language + smodel + text +  quotation language</li>
 <li><ins>jetbrains.mps.devkit.language-design</ins> + the previous 2 devkits + an intermediate language for baselanguage (baseLanguageInternal) + a language for resources</li>
 <li><ins>jetbrains.mps.devkit.templates</ins>: general-purpose + generator languages</li>
 </ul>
@@ -3570,23 +3554,23 @@ The <code>baselanguage</code> folder contains the baselanguage implementation an
 <p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
 make classes and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
 <h3 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h3>
-<p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern and so forth.</p>
+<p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern, and so forth.</p>
 <h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">&para;</a></h3>
 <p>Everything related to the make facet is situated in this folder.</p>
 <h3 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">&para;</a></h3>
 <p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g. stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
 <h3 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">&para;</a></h3>
-<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool related classes such as accessing Ant from Java.</p>
+<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool-related classes such as accessing Ant from Java.</p>
 <h2 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h2>
 <p>This folder contains languages and solutions for the following platform features:</p>
 <ul>
 <li>build language</li>
 <li>console</li>
-<li>http server</li>
+<li><abbr title="Hypertext Transfer Protocol">HTTP</abbr> server</li>
 <li>make</li>
 <li>migrations</li>
 <li>model checker</li>
-<li>Java to mps parsing</li>
+<li>Java to <abbr title="Meta Programming System">MPS</abbr> parsing</li>
 <li>spell checker</li>
 <li>debugging information (traceInfo)</li>
 <li>version control</li>
@@ -3594,7 +3578,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <li>integration for <abbr title="Meta Programming System">MPS</abbr> plugin into IntelliJ IDEA</li>
 </ul>
 <h2 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">&para;</a></h2>
-<p>This folder contains the samples that are ship with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
+<p>This folder contains the samples that are shipped with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
 <h2 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <p>This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.</p>
 <h2 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">&para;</a></h2>
@@ -3603,7 +3587,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
 <li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions</a></li>
 <li>editor related actions</li>
-<li>run configurations + execution of baselanguage and other languages</li>
+<li>run configurations + execution of Base Language and other languages</li>
 <li>refactorings</li>
 <li><abbr title="User Interface">UI</abbr> components and tools such as the dependency viewer, the new module dialog as well as different finders</li>
 <li>all other actions (jetbrains.mps.ide and jetbrains.mps.ide.mpsdevkit)</li>
@@ -3615,7 +3599,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

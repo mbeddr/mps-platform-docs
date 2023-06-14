@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -451,6 +451,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2768,8 +2770,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2792,20 +2792,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3192,7 +3178,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3217,6 +3205,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3246,17 +3236,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>No, even in <abbr title="Meta Programming System">MPS</abbr> languages there are just a few use cases.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can you link to an example that demonstrate this aspect?</p>
+<p class="admonition-title">Can you link to an example that demonstrates this aspect?</p>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3Ad9efd362-28b8-4f70-9bcd-fb582528d11c%28jetbrains.mps.lang.core.refactorings%29%2F1347577327951770664">Rename</a> implements the refactoring.
 <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943353">RenameNode</a> implements the action.
 The action is part of the group <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943351">CoreNodeRefactorings</a> which belongs to the
-<a href="http://127.0.0.1:63320/node?ref=r%3Ade82dfab-9448-49ba-813e-2b0579f7fb15%28jetbrains.mps.ide.platform.actions%29%2F6714826334259354054">NodeRefactoring</a> group. Baselanguage has its own group called <a href="http://127.0.0.1:63320/node?ref=r%3Adfc27cab-2d08-4c79-ac99-e95209e18392%28jetbrains.mps.baseLanguage.pluginSolution.plugin%29%2F225095413451945663">RefactoringAdditions</a>.</p>
+<a href="http://127.0.0.1:63320/node?ref=r%3Ade82dfab-9448-49ba-813e-2b0579f7fb15%28jetbrains.mps.ide.platform.actions%29%2F6714826334259354054">NodeRefactoring</a> group. Base Language has its own group called <a href="http://127.0.0.1:63320/node?ref=r%3Adfc27cab-2d08-4c79-ac99-e95209e18392%28jetbrains.mps.baseLanguage.pluginSolution.plugin%29%2F225095413451945663">RefactoringAdditions</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you change the concept of a node while keeping all properties, references, and children?</p>
-<p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept</a> with your node and new concept als parameters. 
-In this class there are also some othere useful methods such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink)</a>.</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node</a></p>
+<p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept</a> with your node and new concept as parameters. 
+In this class, there are also some other useful methods such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink)</a>.</p>
+<p><a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What should I put in the applicable block of the refactoring and its action?</p>
@@ -3269,7 +3259,7 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3278,6 +3268,8 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3406,6 +3398,8 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -451,6 +451,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2768,8 +2770,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2792,20 +2792,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3192,7 +3178,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3217,6 +3205,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3257,9 +3247,9 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
 </div>
 <details class="question">
-<summary>Can I implement TextGen for another language?</summary>
+<summary>Can I implement text generation for another language?</summary>
 <blockquote>
-<p>I would like to implement a textgen for language A in a separate language B. Concretely, I need a <em>different</em> textgen for some of the KernelF concepts. When I try to do this, I get a compile error, because it looks like the generated descriptor does not include &ldquo;inherited&rdquo; concepts:</p>
+<p>I would like to implement text generation for language A in a separate language B. Concretely, I need <em>different</em> text generation for some of the KernelF concepts. When I try to do this, I get a compile error, because it looks like the generated descriptor does not include &ldquo;inherited&rdquo; concepts:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -3290,10 +3280,10 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 <p>It&rsquo;s not possible this way. So far the two ways I found to make this happen are:</p>
 <ol>
 <li>
-<p>Extend the original language (A.<abbr title="exception/executor">ex</abbr>) and create subconcepts of all the concepts you need to specialise the textgen. You will then need to do <abbr title="Model to Model">M2M</abbr> transformation to replace the extended concepts. You can do this in a generic way by using a script the generator that searches for all node of concepts that are extended in A.<abbr title="exception/executor">ex</abbr> and replaces them by using the <code>RefactoringRuntime.replaceWithNewConcept</code> method.</p>
+<p>Extend the original language (A.<abbr title="exception/executor">ex</abbr>) and create subconcepts of all the concepts you need to specialize the textgen. You will then need to do <abbr title="Model to Model">M2M</abbr> transformation to replace the extended concepts. You can do this generically by using a script the generator that searches for all nodes of concepts that are extended in A.<abbr title="exception/executor">ex</abbr> and replaces them by using the <code>RefactoringRuntime.replaceWithNewConcept</code> method.</p>
 </li>
 <li>
-<p>Create annotations that override the text <abbr title="generation">gen</abbr> of the concepts and attache them in a generator. Then <abbr title="Meta Programming System">MPS</abbr> will first call the text <abbr title="generation">gen</abbr> of the annotation and you can override it there. </p>
+<p>Create annotations that override the text generation of the concepts and attach them in a generator. Then <abbr title="Meta Programming System">MPS</abbr> will first call the text <abbr title="generation">gen</abbr> of the annotation and you can override it there. </p>
 </li>
 </ol>
 <p>There is <a href="https://youtrack.jetbrains.com/issue/MPS-22092"><abbr title="Meta Programming System">MPS</abbr>-22092</a> which describes this request.</p>
@@ -3305,7 +3295,7 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3314,6 +3304,8 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3442,6 +3434,8 @@ It only works for root nodes such as <a href="http://127.0.0.1:63320/node?ref=r%
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

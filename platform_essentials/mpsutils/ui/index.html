@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2411,8 +2411,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#margin-cell-review" class="md-nav__link">
-    Margin cell / review
+  <a href="#margin-cellreview" class="md-nav__link">
+    Margin cell/review
   </a>
   
 </li>
@@ -2911,8 +2911,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2935,20 +2933,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3381,8 +3365,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#margin-cell-review" class="md-nav__link">
-    Margin cell / review
+  <a href="#margin-cellreview" class="md-nav__link">
+    Margin cell/review
   </a>
   
 </li>
@@ -3495,7 +3479,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h1 id="ui"><abbr title="User Interface">UI</abbr><a class="headerlink" href="#ui" title="Permanent link">&para;</a></h1>
 <h3 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">&para;</a></h3>
 <h4 id="asynccell">AsyncCell<a class="headerlink" href="#asynccell" title="Permanent link">&para;</a></h4>
-<p>The <abbr title="asynchronous">async</abbr> cell allows displaying a text based loading indicator as long as the return string is null.</p>
+<p>The <abbr title="asynchronous">async</abbr> cell allows displaying a text-based loading indicator as long as the return string is null.</p>
 <p>Create a new <code>$custom cell$</code> editor cell and return a new AsyncCellProvider:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -3518,7 +3502,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li><strong>frame-color</strong>: the color of the frame (default: black)</li>
 <li><strong>frame-width</strong>: the thickness of the frame (default: 1 pixel)</li>
-<li><strong>frame-padding</strong>: the space between the containing cell and the frame (default: 3 pixel)</li>
+<li><strong>frame-padding</strong>: the space between the containing cell and the frame (default: 3 pixels)</li>
 </ul>
 <p>An example can be seen in the documentation language:</p>
 <p><a class="glightbox" href="../../images/framecell_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: framecell" src="../../images/framecell_example.png" /></a></p>
@@ -3529,20 +3513,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     />
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a> can also be used for customizing the border and margins around a cell. Its documentation can be found <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/">here</a>.</p>
-<h3 id="margin-cell-review">Margin cell / review<a class="headerlink" href="#margin-cell-review" title="Permanent link">&para;</a></h3>
+<h3 id="margin-cellreview">Margin cell/review<a class="headerlink" href="#margin-cellreview" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.margincell</ins> and <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins></p>
 </blockquote>
 <p>Margin cells are editor cells that are shown beyond the right editor margin, a bit like comments in Word.
-In fact, the ReviewNote cell implements exactly Word&rsquo;s comment facility as an example of the margin cell. Here is a screenshot:</p>
+The ReviewNote cell implements exactly Word&rsquo;s comment facility as an example of the margin cell. Here is a screenshot:</p>
 <p><a class="glightbox" href="../../images/margincell_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: margin cell" src="../../images/margincell_example.png" /></a></p>
 <p>To use the review notes, just include the respective language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.review</ins>; intentions are available to attach review notes to editor cells.</p>
-<p>To put your own cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model&rsquo;s language being aware of it.</p>
+<p>To put your cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the <em>margincell-cell-width</em> and <em>margincell-dashed-line-interval</em> style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model&rsquo;s language being aware of it.</p>
 <h3 id="placeholder-text-list">Placeholder text list<a class="headerlink" href="#placeholder-text-list" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.placeholderTextList</ins></p>
 </blockquote>
-<p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregation with a custom placeholder text.</p>
+<p>This language adds a new <a href="http://127.0.0.1:63320/node?ref=r%3Ae633d72e-7309-4abb-b48b-c0511f07461b%28com.mbeddr.mpsutil.placeholderTextList.structure%29%2F1739942158294184652">cell model</a> that supports multiple aggregations with a custom placeholder text.</p>
 <p>The placeholder can be specified in the inspector by creating a query function for the <em>placeholder text</em>.</p>
 <h3 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h3>
 <h4 id="concept-diagram">Concept diagram<a class="headerlink" href="#concept-diagram" title="Permanent link">&para;</a></h4>
@@ -3567,7 +3551,7 @@ section.</p>
 <p>A classic widget to select a date from a pop-up calendar.</p>
 <p><a class="glightbox" href="../../images/datepicker_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: datepicker" src="../../images/datepicker_example.png" /></a></p>
 <div class="admonition warning">
-<p class="admonition-title">There&rsquo;s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the datepicker doesn&rsquo;t work when the theme is set to macOS light.</p>
+<p class="admonition-title">There&rsquo;s a <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">known issue</a> where the date picker doesn&rsquo;t work when the theme is set to macOS light.</p>
 </div>
 <p>This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.</p>
 <h2 id="editor-utils">Editor utils<a class="headerlink" href="#editor-utils" title="Permanent link">&para;</a></h2>
@@ -3576,7 +3560,7 @@ section.</p>
 </blockquote>
 <p>The class <a href="http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d-a811-70d97e847917%2Fr%3Af4ae6487-fb1d-418f-8dd3-759f9604156f%28com.mbeddr.mpsutil.editor.utils%2Fcom.mbeddr.mpsutil.editor.utils.runtime%29%2F4912572611769853192">EditorRuntimeUtil</a> contains a few helpful editor utility methods:</p>
 <ul>
-<li><strong>getErrorText(EditorContext)</strong>: returns the error text of the current selected cell in the editor</li>
+<li><strong>getErrorText(EditorContext)</strong>: returns the error text of the currently selected cell in the editor</li>
 <li><strong>collectAllOpenEditors(Project)</strong>: returns all opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
 <li><strong>collectAllOpenEditorComponents(Project)</strong>: return all opened editor components</li>
 </ul>
@@ -3584,7 +3568,7 @@ section.</p>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.filepicker</ins></p>
 </blockquote>
-<p>This language contains text-based file and folder pickers. The paths can be directly entered in
+<p>This language contains the text-based files and folder pickers. The paths can be directly entered in
 the editor. There&rsquo;s also an intention <code>Open File Chooser Dialog</code> that shows a file chooser dialog. The following file pickers are supported:</p>
 <ul>
 <li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F4881264737620519319">file system <abbr title="directory">dir</abbr> picker</a></li>
@@ -3601,12 +3585,12 @@ the editor. There&rsquo;s also an intention <code>Open File Chooser Dialog</code
 </blockquote>
 <p>Hyperlink cells can be used for references in <abbr title="Meta Programming System">MPS</abbr>. In contrast to normal reference cells they automatically become blue and underlined if the mouse hovers over them (no Ctrl is necessary). The following style attributes are supported:</p>
 <ul>
-<li><strong>hyperlink-reference</strong>: make a reference a hyperlink</li>
+<li><strong>hyperlink-reference</strong>: create a link for a node reference</li>
 <li><strong>hyperlink-handler</strong>: a function that&rsquo;s called when the link is clicked. The <em><abbr title="utilities">util</abbr></em> parameter object contains a method
   <em>openInBrowser</em> for opening a URL with the default web browser.</li>
 <li><strong>hyperlink-style</strong>: can be URl or reference. The reference style forces the usage of the key <em><abbr title="control">ctrl</abbr></em> to activate the hyperlink.</li>
 <li><strong>hyperlink-node</strong>: the node that should be displayed after the link was clicked</li>
-<li><strong>hyperlink-focus</strong>: focus the target node of the hyperlink after navigating to it.</li>
+<li><strong>hyperlink-focus</strong>: set the focus on the target node of the hyperlink after navigating to it.</li>
 <li><strong>hyperlink-select</strong>: select the target node of the hyperlink after navigating to it.</li>
 </ul>
 <h2 id="jfreechart">JFreeChart<a class="headerlink" href="#jfreechart" title="Permanent link">&para;</a></h2>
@@ -3617,7 +3601,7 @@ the editor. There&rsquo;s also an intention <code>Open File Chooser Dialog</code
 an extra tool <em>Chart</em> by calling the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">ChartManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">editorContext</span><span class="p">).</span><span class="na">setChart</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">createChart</span><span class="p">())</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>where <code>createChart</code> return instance of <a href="http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart">JFreeChart</a>.</p>
+<p>where <code>createChart</code> returns an instance of <a href="http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart">JFreeChart</a>.</p>
 <p><a class="glightbox" href="../../images/jfreechart_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: jfreechart" src="../../images/jfreechart_example.png" /></a></p>
 <h2 id="target-chooser">Target chooser<a class="headerlink" href="#target-chooser" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -3640,15 +3624,15 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 </code></pre></div></td></tr></table></div>
 <p>The <em>options</em> object has the following setters:</p>
 <ul>
-<li><strong>setInitial</strong>: set the initial selected item. This can be a node or a model.</li>
-<li><strong>setSelectionValidator</strong>: the selection validator checks if the selected target is valid or shows an error message when it&rsquo;s invalid. By default, no validation takes places (an empty validator is used).</li>
+<li><strong>setInitial</strong>: set the initially selected item. This can be a node or a model.</li>
+<li><strong>setSelectionValidator</strong>: the selection validator checks if the selected target is valid or shows an error message when it&rsquo;s invalid. By default, no validation takes place (an empty validator is used).</li>
 <li><strong>setSNodeFilter</strong>: this filter decides which nodes should be visible in the dialog (within the selected scope).
   To show a node, you also have to return true for the root node, but not for all ancestors.</li>
 <li><strong>setModuleScope</strong>: this scope defines the available modules that will be the sources for the nodes that will be displayed.</li>
 <li><strong>addModuleFilter</strong>: an additional boolean filter for the modules of the module scope.</li>
 <li><strong>showModulesPool</strong>: a flag that decides if the modules pool (last entry in logical view) should also be displayed in the dialog.</li>
 <li><strong>setModelFilter</strong>: only keep the models of the specified scope where the filter returns true</li>
-<li><strong>setScope</strong>: sets the scope for the items that should be displayed in the dialog. This can be in instance of
+<li><strong>setScope</strong>: sets the scope for the items that should be displayed in the dialog. This can be an instance of
   <a href="http://127.0.0.1:63320/node?ref=r%3A24b43531-125c-4436-b4b0-f3444d2173fd%28com.mbeddr.mpsutil.targetchooser%29%2F7547442689028637169">TargetChooserScope</a> or a sequence of nodes (+ ancestor filter). By default, the specified modules scope
   with the specified model and node filers applied is used.</li>
 </ul>
@@ -3663,7 +3647,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
 <li><strong>Foreground</strong>: equivalent to <em>text-foreground-color</em></li>
 <li><strong>Background</strong>: equivalent to <em>text-background-color</em></li>
 <li><strong>Bold</strong>: equivalent to <em>font-style: bold</em></li>
-<li><strong>Italic</strong>: equivalent to *font-style: italic</li>
+<li><strong>Italic</strong>: equivalent to <em>font-style: italic</em></li>
 <li><strong>Effects: Dotted lines, bold underscored, underscored, underwaved</strong>: equivalent to <em>underlined</em></li>
 <li><strong>Effects: strikeout</strong>: equivalent to <em>strike-<abbr title="output">out</abbr></em></li>
 </ul>
@@ -3678,7 +3662,7 @@ an extra tool <em>Chart</em> by calling the following code:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

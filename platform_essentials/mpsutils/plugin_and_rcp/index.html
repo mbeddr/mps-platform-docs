@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2829,8 +2829,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2853,20 +2851,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3340,10 +3324,10 @@ actions profile. Actions in the section <code>specify toolbar</code> are display
 that&rsquo;s located at the top left of the window.</p>
 <p><a class="glightbox" href="../../images/actionsfilter_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: actions filter" src="../../images/actionsfilter_example.png" /></a></p>
 <div class="admonition note">
-<p class="admonition-title">To use the language, not only the language has to be installed but also the corresponding Intellij plugin. <code>./gradlew install</code> can install this plugin. Without the plugin the language won&rsquo;t load at all.</p>
+<p class="admonition-title">To use the language, not only the language has to be installed but also the corresponding IntelliJ plugin. <code>./gradlew install</code> can install this plugin. Without the plugin, the language won&rsquo;t load at all.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not readonly. Execute <code>./gradlew install</code> to install the plugin after making a change and restart <abbr title="Meta Programming System">MPS</abbr> to test it.</p>
+<p class="admonition-title">Development tip: when making changes to the language, make sure to disable the plugin in the preferences, so that the model is not read-only. Execute <code>./gradlew install</code> to install the plugin after making a change and restart <abbr title="Meta Programming System">MPS</abbr> to test it.</p>
 </div>
 <p>The predefined actions profiles can be customized by the user in <em>preferences</em> &rarr; <em>Appearance &amp; Behavior</em> &rarr; <em>Actions</em>. New profiles can be created by clicking the <em>+</em> button and deleted by clicking the <em>-</em> button.</p>
 <p><a class="glightbox" href="../../images/actionsfilter_preferences.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="actions filter preferences" src="../../images/actionsfilter_preferences.png" /></a></p>
@@ -3357,9 +3341,9 @@ mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/do
 <p><a class="glightbox" href="../../images/preferenceform_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: preference form" src="../../images/preferenceform_example.png" /></a></p>
 <p>It supports the following options:</p>
 <ul>
-<li><strong>scope</strong>: save the preferences on application or project level</li>
+<li><strong>scope</strong>: save the preferences on the application or project level</li>
 <li><strong>help topic</strong>: The help topic is an internal identifier that can link a page in the <abbr title="Meta Programming System">MPS</abbr> documentation.
-  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
+  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined as the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names, search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and/or the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
 </ul>
 <p>The preference form supports a few different input elements:</p>
 <ul>
@@ -3378,7 +3362,7 @@ that reference the values of the preference form. The input fields can be access
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">HttpServerConfig</span><span class="p">.</span><span class="na">setCurrentConfig</span><span class="p">(</span><span class="n">config</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">extensionPoint</span><span class="o">/</span><span class="n">HttpServerConfigChangeListener</span><span class="o">/</span><span class="p">.</span><span class="na">objects</span><span class="p">.</span><span class="na">forEach</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">serverChanged</span><span class="p">(</span><span class="n">config</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The <em>after read</em> method is called, after the state is loaded (for example: when the preference form is opened).</p>
+<p>The <em>after read</em> method is called after the state is loaded (for example: when the preference form is opened).</p>
 <h2 id="wizard-process">Wizard (process)<a class="headerlink" href="#wizard-process" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.process</ins></p>
@@ -3406,7 +3390,7 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <ul>
 <li><strong>name</strong>: the name of the new action</li>
 <li><strong>caption</strong>: the text that&rsquo;s shown for the action</li>
-<li><strong>user can change persistence</strong>: boolean flag that decides if the user can change the model&rsquo;s persistence type.</li>
+<li><strong>user can change persistence</strong>: a boolean flag that decides if the user can change the model&rsquo;s persistence type.</li>
 <li><strong>default persistence</strong>: the type of model persistence that&rsquo;s used when the model is created</li>
 <li><strong>optional devkits</strong>: devkits that are automatically added when the model is created</li>
 <li><strong>show model properties</strong>: open the model properties after the model was created</li>
@@ -3415,7 +3399,7 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.spreferences</ins></p>
 </blockquote>
-<p>This extension allows the definition of preference pages by using <abbr title="Meta Programming System">MPS</abbr> models; so in the preference page you get a normal <abbr title="Meta Programming System">MPS</abbr> editor, as exemplified by mbeddr&rsquo;s platform templates preference page:</p>
+<p>This extension allows the definition of preference pages by using <abbr title="Meta Programming System">MPS</abbr> models. In the preference page you get a normal <abbr title="Meta Programming System">MPS</abbr> editor, as exemplified by the mbeddr platform templates preference page:</p>
 <p><a class="glightbox" href="../../images/spreference_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: spreferences" src="../../images/spreference_example.png" /></a></p>
 <p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check <abbr title="output">out</abbr> the root &ldquo;Platform Templates&rdquo; as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
 <p><a class="glightbox" href="../../images/spreferences_query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="spreferences: query" src="../../images/spreferences_query.png" /></a></p>
@@ -3425,7 +3409,7 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

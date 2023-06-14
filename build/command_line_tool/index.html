@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2761,8 +2763,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2785,20 +2785,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3185,7 +3171,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3208,6 +3196,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3315,7 +3305,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Why all the reflection tricks and why not call the class directly instead? The answer is that when <abbr title="Meta Programming System">MPS</abbr> is initialized and a project is opened, it sets up classloaders, putts on the classpath any dependencies that module <code>Baz</code> might have, so that you don&rsquo;t have to specify them ourselves.</p>
+<p>Why all the reflection tricks and why not call the class directly instead? The answer is that when <abbr title="Meta Programming System">MPS</abbr> is initialized and a project is opened, it sets up classloaders, puts on the classpath any dependencies that module <code>Baz</code> might have so that you don&rsquo;t have to specify them ourselves.</p>
 <p>We still need to have on the classpath the initial set of JARs to run our class and start <abbr title="Meta Programming System">MPS</abbr>. Here is how you would run our tool from Gradle:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -3327,7 +3317,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">classpath</span><span class="w"> </span><span class="n">fileTree</span><span class="o">(</span><span class="s2">&quot;$mps_home/lib&quot;</span><span class="o">)</span><span class="w"> </span><span class="c1">// $mps_home points to the MPS installation</span><span class="w"></span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="o">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>You can also add <abbr title="Meta Programming System">MPS</abbr> to the gradle dependencies block:</p>
+<p>You can also add <abbr title="Meta Programming System">MPS</abbr> to the Gradle dependencies block:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -3344,7 +3334,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3353,6 +3343,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3481,6 +3473,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

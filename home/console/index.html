@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2761,8 +2763,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2785,20 +2785,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3185,7 +3171,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3208,6 +3196,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3233,43 +3223,44 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <div class="admonition warning">
 <p class="admonition-title">I can&rsquo;t enter the print statement.</p>
-<p>It can&rsquo;t be used in nested structures. Use it at the top level instead.</p>
+<p>It can&rsquo;t be used in nested structures (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656</a>). Use it at the top level instead. If you need to output multiple objects,
+save them to a list first and output the list at the top level.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you enter more than one statement into the console?</p>
-<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list in baselanguage) and enter your statements.</p>
+<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list in Base Language) and enter your statements.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find all System.<abbr title="output">out</abbr>.println statements?</p>
 <p><a href="https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc">Code snippet:</a></p>
 <p><a class="glightbox" href="../../img/find_print_statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find print statements" src="../../img/find_print_statement.png" /></a>]</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">#nodes, #models, #usages etc. don&rsquo;t show any result. What went wrong?</p>
+<div class="admonition warning">
+<p class="admonition-title">#nodes, #models, #usages etc. don&rsquo;t show any result.</p>
 <p>Make sure that your query is correct. You also have to set a scope for these statements in square brackets such as
 <code class="highlight"><span class="err">#</span><span class="n">nodes</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="w"></span></code> to find all the nodes in the global scope.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is the console a regular root node?</p>
-<p>Yes, it is of concept <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot</a>
+<p>Yes, it is an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot</a>
 and is located in a temporary model. It is possible to open it in a normal tab. Right-click in the console (for example at the top) and click 
 <em>Show Node in Explorer</em>. Click the <em>ConsoleRoot</em> and it will open in a new tab (keyboard shortcuts such as run line won&rsquo;t work here).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">After executing the current line, an error says that the console class wasn&rsquo;t found.</p>
 <p>This can happen when the compilation of the model of the console was not successful. It can happen if you import a custom generation
-plan into the console that disables some generators. It can also happen if you import a solution that doesn&rsquo;t have the java facet enabled
+plan into the console that disables some generators. It can also happen if you import a solution that doesn&rsquo;t have the Java facet enabled
 or has a different solution kind such as <em>other</em>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What does the expression #internalMode do?</p>
 <p>It tells you if the internal mode is activated. It can be achieved by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
 or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The exact functionality of this flag can be found by looking at the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
-One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu in Intellij <abbr title="Integrated Development Environment">IDE</abbr>&lsquo;s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
+One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu in IntelliJ <abbr title="Integrated Development Environment">IDE</abbr>&lsquo;s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
 for more <abbr title="information">info</abbr>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you open the selected node in console?</p>
+<p class="admonition-title">How do you open the selected node in the console?</p>
 <blockquote>
 <p>Given I have a node selected in the editor. How can I select it to manipulate it in the <abbr title="Meta Programming System">MPS</abbr> console?</p>
 </blockquote>
@@ -3290,7 +3281,7 @@ for more <abbr title="information">info</abbr>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3299,6 +3290,8 @@ for more <abbr title="information">info</abbr>.</p>
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3427,6 +3420,8 @@ for more <abbr title="information">info</abbr>.</p>
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

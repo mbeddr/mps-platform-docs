@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2849,8 +2849,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2873,20 +2871,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3373,11 +3357,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.buildassistant</ins></p>
 </blockquote>
-<p>This language adds actions to make or rebuild models/modules or projects and also include their
+<p>This language adds actions to make or rebuild models/modules or projects and also includes their
 dependencies.</p>
-<div class="admonition question">
-<p class="admonition-title">TODO: Do the official actions already provide this capability?</p>
-</div>
+<p>TODO: Do the official actions already provide the same functionality?</p>
 <h2 id="generic-actions">Generic actions<a class="headerlink" href="#generic-actions" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.genericactions</ins></p>
@@ -3389,7 +3371,7 @@ dependencies.</p>
 <li><strong>Reset <abbr title="Meta Programming System">MPS</abbr> Editor Font Size</strong>:: reset the font size to the default size (<abbr title="control">ctrl</abbr> + 0, 13 pixels)</li>
 <li><strong>File Manager in Output Folder</strong>: a new action in the context menu of models that opens the path of the generated files.
   This action won&rsquo;t work if the model does not generate output files.</li>
-<li><strong>File Manager in Module Folder</strong>: a new action in the context menu of modules that opens the path of <abbr title="throwable">th</abbr> module.</li>
+<li><strong>File Manager in Module Folder</strong>: a new action in the context menu of modules that opens the path of the module.</li>
 </ul>
 <h2 id="node-access">Node access<a class="headerlink" href="#node-access" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -3398,8 +3380,8 @@ dependencies.</p>
 <p>This language adds a new group of actions called <em>Copy/Paste Special</em> to the editor popup that opens when right-clicking
 in the editor:</p>
 <ul>
-<li><strong>Copy Node as XML</strong>: serialize the selected node to XML and copy it to the system clipboard.</li>
-<li><strong>Paste XML Node</strong>: deserialize a previously copied node and insert it next to the current selected node.</li>
+<li><strong>Copy Node as XML</strong>: serializes the selected node to XML and copies it to the system clipboard.</li>
+<li><strong>Paste XML Node</strong>: deserializes a previously copied node and inserst it next to the currently selected node.</li>
 <li><strong>Copy Node Info to Clipboard</strong>: copies some information (project, module, model, node, URL) about a node to the system
   clipboard.</li>
 </ul>
@@ -3428,7 +3410,7 @@ be defined in <em>shortcut</em>. Refactoring parameters can be specified in <em>
 the refactoring dialog for the value of the parameters:</p>
 <ul>
 <li><em>string</em>: chooser for selecting a text</li>
-<li>+node*: chooser for selecting a node using a filter. The filter is a function which has a list of nodes to refactor as a parameter and
+<li>+node*: chooser for selecting a node using a filter. The filter is a function that has a list of nodes to refactor as a parameter and
   should return a new filtered sequence of nodes.</li>
 <li><em>project tree node</em>: chooser for selecting a node from the project tree</li>
 </ul>
@@ -3438,7 +3420,7 @@ the refactoring dialog for the value of the parameters:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

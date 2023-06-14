@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2864,8 +2864,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2888,20 +2886,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3403,7 +3387,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.dataflow</ins></p>
 </blockquote>
-<p><abbr title="Meta Programming System">MPS</abbr>-DF is a data-flow extension for <abbr title="Meta Programming System">MPS</abbr>. Please visit the following page for more information:</p>
+<p><abbr title="Meta Programming System">MPS</abbr>-DF is a data-flow extension for <abbr title="Meta Programming System">MPS</abbr>. Part of the code was included in <abbr title="Meta Programming System">MPS</abbr> itself. Please visit the following page for more information:</p>
 <p><a href="https://szabta89.github.io/projects/df.html">An Extensible Framework for Variable-precision Data-flow Analyses in <abbr title="Meta Programming System">MPS</abbr> | Tamás Szabó</a></p>
 <h2 id="default-values-for-properties">Default values for properties<a class="headerlink" href="#default-values-for-properties" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -3444,21 +3428,21 @@ The default value can be set by invoking the code completion on an existing prop
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.extensionclass</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> already provides a language for <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">defining extension methods</a>, for example, methods to be called on an object without being part of the Object&rsquo;s class. This language extends this mechanism to provide all static methods of a class as extension methods. They can be invoked on the type of the method&rsquo;s first parameter.</p>
-<p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass</a> root node. Reference the Java class containing the static methods. Method annotations can be added to overwrite parameter names, so that they&rsquo;re more elaborate than &ldquo;p0&rdquo; or &ldquo;p2&rdquo;.</p>
+<p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass</a> root node. Reference the Java class containing the static methods. Method annotations can be added to overwrite parameter names so that they&rsquo;re more elaborate than &ldquo;p0&rdquo; or &ldquo;p2&rdquo;.</p>
 <p>As a starting point, create a dependency to the model <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.extensionclass.annotation.apache.commons.lang3</ins> which provides extension methods with useful parameter names for Apache Commons StringUtils, ObjectUtils, and StringEscapeUtils.</p>
 <p><a class="glightbox" href="../../images/extensionclass_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: extension class" src="../../images/extensionclass_example.png" /></a></p>
 <h2 id="language-plugin-extensions">Language plugin extensions<a class="headerlink" href="#language-plugin-extensions" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.<abbr title="language">lang</abbr>.plugin.extensions</ins></p>
 </blockquote>
-<p>This language contains extensions for <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. It mainly adds support for adding actions not only at a specific position but also supports the anchors first, last, before and after. Example:
+<p>This language contains extensions for <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins>. It mainly adds support for adding actions not only at a specific position but also supports the anchors first, last, before, and after. Example:
 <code>add to NewProjectOrModuleGroup after position NewProject</code></p>
 <h2 id="parameterized-menu">Parameterized menu<a class="headerlink" href="#parameterized-menu" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.parameterizedMenu</ins></p>
 </blockquote>
-<p>This language is an extension to the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
-iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or create a dynamic submenu based on
+<p>This language is an extension of the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
+iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or creating a dynamic submenu based on
 the parameter object (<em>parameterized submenu</em>).</p>
 <p><a class="glightbox" href="../../images/ccmenu_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example:ccmenu" src="../../images/ccmenu_example.png" /></a></p>
 <p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling</a> instead</p>
@@ -3475,7 +3459,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <ul>
 <li><a href="http://127.0.0.1:63320/node?ref=r%3Ad5deda81-7a35-4c2b-bda1-1fdc1db99e3b%28com.mbeddr.mpsutil.suppresswarning.structure%29%2F9116320848000879251">all</a>: suppress all warnings</li>
 </ul>
-<p>In <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.core.modules</ins> two more data flow specific kinds exist:</p>
+<p>In <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.core.modules</ins>, two more data flow-related kinds exist:</p>
 <ul>
 <li><strong>liveness</strong>: suppress dataflow liveness warning</li>
 <li><strong>dataflow</strong>: suppress dataflow warning</li>
@@ -3487,7 +3471,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <div class="admonition warning">
 <p class="admonition-title">This language doesn&rsquo;t work anymore.</p>
 </div>
-<p>This language modifies the different typesystem concepts like comparison rule, non typesystem rules etc. to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem</a> into a typesystem aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens a tool named <code>Type System Performance Data</code> that shows the collected information.</p>
+<p>This language modifies the different type-system concepts such as comparison rule or non-type-system rules to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem</a> into a type-system aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens a tool named <code>Type System Performance Data</code> that shows the collected information.</p>
 <h2 id="xml-fix">XML fix<a class="headerlink" href="#xml-fix" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.xml.fix</ins></p>
@@ -3508,7 +3492,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

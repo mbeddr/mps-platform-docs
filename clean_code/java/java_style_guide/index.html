@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2763,8 +2765,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2787,20 +2787,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3187,7 +3173,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3210,6 +3198,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3237,9 +3227,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: write a comment why a fall-through is necessary in a switch statement.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Default case is present</a>: always write a default case for switch statements.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: identifiers use only ASCII letters and digits, and, in a few cases noted below, underscores. Don&rsquo;t use prefixes or suffixes with particular meanings. For example, these names don&rsquo;t adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em> and <em>kName</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: identifiers use only ASCII letters and digits, and, in a few cases noted below, underscores. Don&rsquo;t use prefixes or suffixes with particular meanings. For example, these names don&rsquo;t adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em>, and <em>kName</em>.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names</a>: package names are all lowercase, with consecutive words concatenated together (no underscores). For example, <em><abbr title="commercial/common/communication">com</abbr>.example.deepspace</em>, not <em><abbr title="commercial/common/communication">com</abbr>.example.deepSpace</em> or <em><abbr title="commercial/common/communication">com</abbr>.example.deep_space</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases. For example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>), but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they&rsquo;re testing, and ending with Test. For example, <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases. For example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>), but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they&rsquo;re testing, and end with Test. For example, <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases. For example: <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, for example <em>pop_emptyStack</em>. No correct way exists for naming test methods.</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names</a>: use all uppercase letters, with each word separated from the next by a single underscore</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases. For example, <em>computedValues</em> or <em>index</em>.</li>
@@ -3250,14 +3240,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don&rsquo;t ignore caught exceptions</a>
   (see also: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=16">Avoid empty catch blocks</a>)</li>
 </ul>
-<p>Additional java practises can be found at <a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr></a>.</p>
+<p>Additional Hava practices can be found at <a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr></a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3266,6 +3256,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3394,6 +3386,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

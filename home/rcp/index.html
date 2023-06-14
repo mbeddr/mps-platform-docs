@@ -114,7 +114,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -446,6 +446,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -2761,8 +2763,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2785,20 +2785,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3185,7 +3171,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3208,6 +3196,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
                   
   
+  
+
 
   <nav class="md-tags" >
     
@@ -3234,24 +3224,24 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><abbr title="Rich Client Platform">RCP</abbr> stands for Rich Client Platform. The topic is explained in <a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html">Building standalone IDEs for your languages | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">A plugin is incompatible with the current <abbr title="Rich Client Platform">RCP</abbr> version.</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/plugin-incompatible-with-current-version/">Fixing the &lsquo;Plugin incompatible with the current [CUSTOM <abbr title="Rich Client Platform">RCP</abbr>] version&rsquo; error</a></p>
+<p><a href="https://specificlanguages.com/posts/plugin-incompatible-with-current-version/">Fixing the &lsquo;Plugin incompatible with the current [CUSTOM <abbr title="Rich Client Platform">RCP</abbr>] version&rsquo; error</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you customize the welcome screen in an <abbr title="Rich Client Platform">RCP</abbr>?</p>
 <ul>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/">Customizing your <abbr title="Rich Client Platform">RCP</abbr> welcome screen: removing unwanted tabs</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/">Customizing your <abbr title="Rich Client Platform">RCP</abbr> welcome screen: removing unwanted tabs</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 <p>The used library <a href="https://github.com/dnault/xml-patch/">xml-patch</a> uses XPath path selectors. A cheat sheet for the syntax can be found <a href="https://devhints.io/xpath">here</a>. </p>
 <ul>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/">Customizing your <abbr title="Rich Client Platform">RCP</abbr> welcome screen: stripping down even further</a></li>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/">A fully custom welcome screen</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/">Customizing your <abbr title="Rich Client Platform">RCP</abbr> welcome screen: stripping down even further</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/">A fully custom welcome screen</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you reduce the size of an <abbr title="Rich Client Platform">RCP</abbr>?</p>
 <ul>
-<li>Remove all packaged plugins that you don&rsquo;t need</li>
-<li>Use a <abbr title="JetBrains Runtime">JBR</abbr> version without <abbr title="Java Chromium Embedded Framework">JCEF</abbr> if you don&rsquo;t need an embedded browser (jbr_nomod).</li>
+<li>Remove all packaged plugins that you don&rsquo;t need.</li>
+<li>Use a <abbr title="JetBrains Runtime">JBR</abbr> version without <abbr title="Java Chromium Embedded Framework">JCEF</abbr> if you don&rsquo;t need an embedded browser (<em>jbr_nomod</em>).</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -3259,7 +3249,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li>Remove the plugin that contains the preference page.</li>
 <li>For <code>SPreference</code> pages: they are project plugins, so you can find them through <code class="highlight"><span class="n">ProjectPluginManager</span><span class="p">.</span><span class="na">getPlugins</span><span class="w"></span></code> and then call <code class="highlight"><span class="n">dispose</span><span class="w"></span></code>
-or you could unregister the preference pages itself. For example:
+or you could unregister the preference pages themselves. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -3295,15 +3285,15 @@ How can I know?</p>
 </svg>
 </span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>: The easiest way to get the correct platform for an <abbr title="Meta Programming System">MPS</abbr> version is by running ant in the root of your <abbr title="Meta Programming System">MPS</abbr> sources:</p>
 <p><code>ant -f build/getDependencies.xml download-platform</code></p>
-<p>It will place the platform in the folder <em>mps-platform</em> of the repository and is automatically imported into the intelliJ project where you can read the sources and also step into them when debugging.</p>
+<p>It will place the platform in the folder <em>mps-platform</em> of the repository and is automatically imported into the IntelliJ project where you can read the sources and also step into them when debugging.</p>
 <p>In case you&rsquo;re looking at an <abbr title="Rich Client Platform">RCP</abbr>: <code>build.number</code> and <code>build.txt</code> provide this information and more, <abbr title="engaged generator/example given">eg</abbr> <code>idea.platform.build.number=MPS—203.7717.56</code>.</p>
 <p>The platform version is part of the build information e.g. <abbr title="Meta Programming System">MPS</abbr>—211.7442.1291</p>
-<p>To get the baseline version e.g. 211, programatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">getBaselineVersion</span><span class="p">()</span><span class="w"></span></code></p>
-<p>To get the full version e.g. 211.7442.1291, programatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">currentVersion</span><span class="p">().</span><span class="na">asString</span><span class="p">()</span><span class="w"></span></code></p>
+<p>To get the baseline version e.g. 211, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">getBaselineVersion</span><span class="p">()</span><span class="w"></span></code></p>
+<p>To get the full version e.g. 211.7442.1291, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">currentVersion</span><span class="p">().</span><span class="na">asString</span><span class="p">()</span><span class="w"></span></code></p>
 </details>
 <details class="question">
-<summary>How can you show a custom implemented project view instead of the <abbr title="Meta Programming System">MPS</abbr> logical view?</summary>
-<p>Assume that the view was build with <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.projectview</ins>:    </p>
+<summary>How can you show a custom-implemented project view instead of the <abbr title="Meta Programming System">MPS</abbr> logical view?</summary>
+<p>Assume that the view was built with <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.projectview</ins>:    </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -3325,7 +3315,7 @@ How can I know?</p>
 <span class="normal"><a href="#__codelineno-1-19">19</a></span>
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="n">list</span><span class="o">&lt;</span><span class="n">AbstractProjectViewPane</span><span class="o">&gt;</span><span class="w"> </span><span class="n">viewsToRemove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">linkedlist</span><span class="o">&lt;</span><span class="n">AbstractProjectViewPane</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="n">ProjectView</span><span class="w"> </span><span class="n">projectView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProjectView</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">project</span><span class="p">.</span><span class="na">getProject</span><span class="p">());</span><span class="w"></span>
@@ -3350,15 +3340,15 @@ How can I know?</p>
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="admonition question">
-<p class="admonition-title">How can you customise the <em>New Roots</em> (mbeddr.platform) or <em>New dialog</em> of <abbr title="Meta Programming System">MPS</abbr>/mbeddr?</p>
+<p class="admonition-title">How can you customize the <em>New Roots</em> (mbeddr.platform) or <em>New dialog</em> of <abbr title="Meta Programming System">MPS</abbr>/mbeddr?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">CreateRootFilterEP</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">addFilter</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">how to change (or turn off) the exception submission dialog?</p>
+<p class="admonition-title">How can you change or turn off the exception submission dialog?</p>
 <ul>
 <li>Remove all error handlers like <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36">this</a>.</li>
-<li>Remove <code>&lt;appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender"&gt;</code> from the log.xml file. This will also disable the error pop ups in the <abbr title="Integrated Development Environment">IDE</abbr> where you can see the exception. Note: There were some <a href="https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration">changes related to the logging configuration</a> in <abbr title="Meta Programming System">MPS</abbr> 2022.2 where this answer is not valid anymore.</li>
+<li>Remove <code>&lt;appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender"&gt;</code> from the log.xml file. This will also disable the error pop-ups in the <abbr title="Integrated Development Environment">IDE</abbr> where you can see the exception. Note: There were some <a href="https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration">changes related to the logging configuration</a> in <abbr title="Meta Programming System">MPS</abbr> 2022.2 where this answer is not valid anymore.</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -3378,14 +3368,14 @@ How can I know?</p>
 <div class="admonition question">
 <p class="admonition-title">How can I install a custom editor color scheme?</p>
 <p>Follow the guideline <a href="https://blog.jetbrains.com/platform/2017/12/export-intellij-editor-themes-as-plugins/">Export IntelliJ editor themes as plugins | JetBrains blog</a> to export a jar file. You can copy this <abbr title="Java Archive">JAR</abbr> file to the
-<em>plugins</em> folder of the <abbr title="Rich Client Platform">RCP</abbr>. You can enable the color scheme by default with the following code in an applicaiton plugin:</p>
+<em>plugins</em> folder of the <abbr title="Rich Client Platform">RCP</abbr>. You can enable the color scheme by default with the following code in an application plugin:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>EditorColorsScheme colorScheme = EditorColorsManager.getInstance().getAllSchemes().asSequence.findFirst({~it =&gt; it.getDisplayName() :eq: &quot;[NAME_OF_YOUR_SCHEME]&quot;; }); 
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you disable an <abbr title="Meta Programming System">MPS</abbr>/Intellij tool window?</p>
+<p class="admonition-title">How do you disable an <abbr title="Meta Programming System">MPS</abbr>/IntelliJ tool window?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -3419,7 +3409,7 @@ How can I know?</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add an action to the menu bar of an IntelliJ tool window?</p>
-<p>Example base on the project view:</p>
+<p>The Example is based on the project view:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
@@ -3449,7 +3439,7 @@ How can I know?</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
       
     
   </small>
@@ -3458,6 +3448,8 @@ How can I know?</p>
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3586,6 +3578,8 @@ How can I know?</p>
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

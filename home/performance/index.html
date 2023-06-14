@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2863,8 +2863,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2887,20 +2885,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3410,13 +3394,13 @@ If you want to know about slow software in general (e.g. hardware-related slowne
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
-<li>Do not invalidate the cache when restarting the project, if it isn&rsquo;t necessary. The reindexing can take quiet a while for large projects.</li>
+<li>Do not invalidate the cache when restarting the project, if it isn&rsquo;t necessary. The reindexing can take a while for large projects.</li>
 <li><a href="Speeding up model checks with Scope Cache">Speeding up model checks with Scope Cache</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
 <li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java</a>)</li>
-<li>Don&rsquo;t recalculate expensive calculation but rather save the results in variables.</li>
-<li>Different data structure have different time and space complexities. For example, selecting a different list implementation can have big improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
-<li>Make sure to iterate nodes or editor cell trees efficiently. Narrow don&rsquo;t the nodes that you want to iterate over e.g. <code>model.roots(ClassConcept)</code> instead of
- <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create huge scopes. The same is true for searching in the console: snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code>can also be quiet expensive.</li>
+<li>Don&rsquo;t recalculate expensive calculations but rather save the results in variables.</li>
+<li>Different data structures have different time and space complexities. For example, selecting a different list implementation can have big improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
+<li>Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over e.g. <code>model.roots(ClassConcept)</code> instead of
+ <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create huge scopes. The same is true for searching in the console: snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code>can also be expensive.</li>
 <li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope</a>. Try to also use the following snippets for filtering models that often shouldn&rsquo;t be searched because they are not indexed:<ul>
 <li><code>#modules.where({~it =&gt; it.isPackaged() })</code>to filter <abbr title="output">out</abbr> modules that are installed</li>
 <li><code>#models.where({~it =&gt; TemporaryModels.isTemporary(it) })</code> to filter temporary models</li>
@@ -3429,7 +3413,7 @@ If you want to know about slow software in general (e.g. hardware-related slowne
 <ul>
 <li>
 <p>Disabling transient models through the button in the bottom right corner of the <abbr title="Meta Programming System">MPS</abbr> frame will increase generation performance significantly especially
-  in combination with the generator option &ldquo;Apply transformations in place&rdquo;.</p>
+  in combination with the generator option <em>Apply transformations in place</em>.</p>
 </li>
 <li>
 <p>TODO: add generator performance slides from the <abbr title="Meta Programming System">MPS</abbr> Meetup</p>
@@ -3438,10 +3422,10 @@ If you want to know about slow software in general (e.g. hardware-related slowne
 <h3 id="model-pruning">Model pruning<a class="headerlink" href="#model-pruning" title="Permanent link">&para;</a></h3>
 <p>Often, not all nodes have to be processed in the generator. We might have different build configurations where we are interested
 in only a subset of nodes, or we don&rsquo;t use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a> and
-need to copy nodes from different models to the current model. Sometimes additional information is attached to nodes such as attributes
+need to copy nodes from different models to the current model. Sometimes additional information is attached to nodes. Such attributes
 or nodes don&rsquo;t have to be generated at all. Having too many nodes to be processed can have memory impacts as well as make the generator a lot slower.</p>
 <p>Model pruning can be achieved by using an allowlist or blocklist approach: either specify which nodes should be processed or which nodes
-shouldn&rsquo;t be processed. Both approaches can also be combined. The following simplified approach is on possible solution to achieve this:</p>
+shouldn&rsquo;t be processed. Both approaches can also be combined. The following simplified approach is one possible solution to achieve this:</p>
 <ol>
 <li>Collect all original root nodes: <code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">roots</span><span class="p">(</span><span class="o">&lt;</span><span class="n">all</span><span class="o">&gt;</span><span class="p">).</span><span class="na">select</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">genContext</span><span class="p">.</span><span class="na">get</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nf">for</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"></span></code></li>
 <li>Create a pruning condition that decides which nodes can be pruned and collect the other nodes (relevant nodes). You might also want to keep a list of relevant root concepts that shouldn&rsquo;t be pruned.</li>
@@ -3458,17 +3442,17 @@ How big is too big? Thousands of descendants are going to take several seconds t
 too often (manually or programmatically).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
 <h3 id="long-running-checking-rules-on-big-roots">Long-running checking rules on big roots<a class="headerlink" href="#long-running-checking-rules-on-big-roots" title="Permanent link">&para;</a></h3>
-<p>When a root is displayed in the editor, checking rules are run in the background. The background checker can be interrupted between rules but not during the execution of a rule. When checking rules are too expensive for live checking set the flag <code>do not apply on the fly</code> to true.
+<p>When a root is displayed in the editor, checking rules are run in the background. The background checker can be interrupted between rules but not during the execution of a rule. When checking rules are too expensive for live checking set the flag <em>do not apply on the fly</em> to true.
 Type system calculations are cached by default but can also impact performance when they have to be recalculated too often. </p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
 <h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in nodes attributes. That means
+<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in node attributes. That means
  that auto re-layouting the diagram creates a lot of changes in the <abbr title="difference">diff</abbr> view for this root node. The auto-layouting can be influenced through
- an option in the editor definition of the diagram.</li>
-<li>Tables and diagrams disable incremental rendering. That means that the editor will not be updated incremental causing a full update on each typed character.
-  This might also affect the typesystem calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
-<li>Using horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>) will cause a top-down layout algorithm to be activated for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> relayout and is also called more often for some reason, slowing down the incremental editor update.</li>
+ an option in the editor&rsquo;s definition of the diagram.</li>
+<li>Tables and diagrams disable incremental rendering. That means that the editor will not be updated incrementally causing a full update on each typed character.
+  This might also affect the type-system calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
+<li>Using horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>) will cause a top-down layout algorithm to be activated for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> re-layout and is also called more often for some reason, slowing down the incremental editor update.</li>
 </ul>
 <h2 id="kernelf">KernelF<a class="headerlink" href="#kernelf" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3494,7 +3478,7 @@ have to empty it after some time with <code>DefaultCoverageAnalyzer.reset()</cod
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

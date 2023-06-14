@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2758,8 +2758,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2782,20 +2780,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3331,7 +3315,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <div class="admonition question">
 <p class="admonition-title">What does the dollar sign in error messages mean?</p>
-<p>This indicates an anomyous class (<a href="https://stackoverflow.com/questions/11388840/java-compiled-classes-contain-dollar-signs">more information</a>).</p>
+<p>This indicates an anonymous class (<a href="https://stackoverflow.com/questions/11388840/java-compiled-classes-contain-dollar-signs">more information</a>).</p>
 </div>
 <p>For a list of common Java exceptions have a look at <a href="https://docstore.mik.ua/orelly/java/langref/ch09_04.htm">The Exception Hierarchy</a> and <a href="https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/">Types of Exception in Java with Examples</a>. <a href="https://docs.oracle.com/javase/7/docs/api/allclasses-noframe.html">This list</a> includes documentation for all kinds of exceptions.</p>
 <p>Here is some more information for exceptions that often occur in <abbr title="Meta Programming System">MPS</abbr>:</p>
@@ -3357,17 +3341,17 @@ Install the plugin/open the project containing the language/fetch the dependency
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Cycle in extended language hierarchy.</p>
-<p>The languages extends each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
+<p>The languages extend each other in a way that creates a cycle hierarchy e.g. two languages extend each other.
 Read the documentation section about <a href="https://www.jetbrains.com/help/mps/mps-dependencies.html">dependencies</a>. Use the <a href="https://www.jetbrains.com/help/mps/dependencies-analyzer-analyze-model-dependencies.html">dependency analyzer</a> to better understand the cycle.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Subconcepts for language x found, missing extends dependency.</p>
 <p>One or multiple concepts extend concepts from another language but don&rsquo;t have an extends dependency on the other language. 
-<a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#dependencies-2">Add a extends dependecy</a> to the other language in the dependency section of the module properties.</p>
+<a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#dependencies-2">Add a extends dependency</a> to the other language in the dependency section of the module properties.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Superfluous extended module x, not referenced from structure aspect.</p>
-<p>The dependency was accidental added or is needed for a custom aspect and not the structure or editor aspect. Remove the dependency in the first case, keep it for the second case.</p>
+<p>The dependency was accidentally added or is needed for a custom aspect and not the structure or editor aspect. Remove the dependency in the first case, and keep it for the second case.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Missing runtime module x.</p>
@@ -3418,7 +3402,7 @@ The plugin containing the solution was not installed / the dependency was not fe
 </tr>
 <tr>
 <td><a href="https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/smodel/source/jetbrains/mps/smodel/IllegalModelAccessException.java#L25">IllegalModelAccessException</a></td>
-<td>Accessing a model from a swing button handler (e.g. you can read model only inside read actions).</td>
+<td>Accessing a model from a Java Swing button handler (e.g. you can read model only inside read actions).</td>
 <td>Indicates forbidden operations over a SModel/<abbr title="Semantic Node">SNode</abbr> (<a href="https://www.jetbrains.com/help/mps/2021.3/smodel-language.html#accesslanguage">official documentation</a>).</td>
 </tr>
 <tr>
@@ -3429,7 +3413,7 @@ The plugin containing the solution was not installed / the dependency was not fe
 <tr>
 <td>Position n is not allowed for X</td>
 <td>The caret is the first position but the first position was disabled in the style.</td>
-<td>The caret is at a position that is not allowed.</td>
+<td>The caret is in a position that is not allowed.</td>
 </tr>
 <tr>
 <td>ModuleClassLoaderIsDisposedException</td>
@@ -3491,7 +3475,7 @@ The plugin containing the solution was not installed / the dependency was not fe
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>

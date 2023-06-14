@@ -119,7 +119,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>.
+If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
 
           </div>
           
@@ -2834,8 +2834,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2858,20 +2856,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <li class="md-nav__item">
       <a href="../../reference/programmer_knowledge/" class="md-nav__link">
         Programmer knowledge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/reading_list/" class="md-nav__link">
-        Reading list
       </a>
     </li>
   
@@ -3358,7 +3342,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">What happens when you press <span class="keys"><kbd class="key-f5">F5</kbd></span> in the editor?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a></p>
+<p><a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
@@ -3368,13 +3352,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p class="admonition-title">Is there a way to prevent users from adding and removing elements in a list in the <abbr title="Meta Programming System">MPS</abbr> editor? The elements in the list should still be editable, but adding/removing shouldn&rsquo;t be allowed?</p>
 <p>There are 2 solutions:</p>
 <ol>
-<li>Use a querylist with empty insert/delete handlers.</li>
+<li>Use a query list with empty insert/delete handlers.</li>
 <li>Create an action map/inline action cell with empty blocks for the actions <code>INSERT</code> and <code>INSERT_BEFORE</code>.</li>
 </ol>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I&rsquo;ve set a color of type java.awt.Color in a style property query but the color is different when using the darcula theme.</p>
-<p>The return type of those functions indicate that they return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can be found 
+<p class="admonition-title">I&rsquo;ve set a color of type java.awt.Color in a style property query but the color is different when using the Darcula theme.</p>
+<p>The return type of those functions indicates that the return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can be found 
 <a href="../../patterns/user_experience/#dark-theme">here</a>.</p>
 </div>
 <div class="admonition question">
@@ -3386,9 +3370,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
 <div class="admonition hint">
-<p class="admonition-title">Explain the different menu related terms.</p>
+<p class="admonition-title">Explain the different menu-related terms.</p>
 <ul>
-<li><strong>Menu definitions</strong> have two flavours <em>named</em> and +default+ and can be defined in transformation or substitute menus.</li>
+<li><strong>Menu definitions</strong> have two flavours <em>named</em> and <em>default</em> and can be defined in transformation or substitute menus.</li>
 <li>
 <ul>
 <li>
@@ -3401,12 +3385,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li><strong>Transformation menus</strong>
     define <abbr title="User Interface">UI</abbr> actions that will be shown in various locations. The menu is defined as a list of sections.
     Each section contains a list of menu parts for a set of locations. 
-    At runtime the menu parts and locations are used to generate the content of the completion menu.
+    At runtime, the menu parts and locations are used to generate the content of the completion menu.
     The contents of the completion menu are called menu items.</li>
 <li><strong>Parameterized actions</strong>
     allow to calculate a list of elements of a specific type to be shown in the completion menu.
-    They calculate all elements for the substitution menu and have an influence on the node creation.
-    Moreover, they definesthe selection where the cursor should be placed.</li>
+    They calculate all elements for the substitution menu and influence the node creation.
+    Moreover, they define the selection where the cursor should be placed.</li>
 </ul>
 </li>
 </ul>
@@ -3417,7 +3401,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you add smart references using the transformation menus?</p>
-<p>F1RE Blog: <a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus</a></p>
+<p><a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus</a>(<em>F1RE&rsquo;s blog</em>)</p>
 </div>
 <details class="question">
 <summary>What&rsquo;s the best way to improve the autocomplete description of concepts?</summary>
@@ -3433,8 +3417,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><a class="glightbox" href="../../img/autocompletion_int16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion int16" src="../../img/autocompletion_int16.png" /></a></p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
-<p>In general, it&rsquo;s up to the users and specific context to decide what makes sense to put to the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.</p>
-<p>The short description in the concept is the original, simple way to provide static description in the code completion menu. You can also add your own substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
+<p>In general, it&rsquo;s up to the users and specific context to decide what makes sense to put into the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.</p>
+<p>The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
 <p><a class="glightbox" href="../../img/DataItem_substituteMenu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DataItem SubstituteMenu" src="../../img/DataItem_substituteMenu.png" width="800px" /></a></p>
 <p><a class="glightbox" href="../../img/data_autocompletion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="data autocompletion" src="../../img/data_autocompletion.png" width="800px" /></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/wsafonov" title="GitHub User: wsafonov">@wsafonov</a><sub></p>
@@ -3463,8 +3447,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <div class="admonition question">
 <p class="admonition-title">How do you create clickable links?</p>
 <ul>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a></li>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a></li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -3479,19 +3463,19 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <h2 id="editor-declaration">Editor declaration<a class="headerlink" href="#editor-declaration" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Is there a disadvantage by using the indent layout instead of the indent cell mode?</p>
+<p class="admonition-title">Is there a disadvantage to use the indent layout instead of the indent cell mode?</p>
 <p>No. There used to be performance issues with bigger models that were fixed in <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use an empty text for empty cells?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells</a></p>
+<p><a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">How can you set editor hints?</p>
 <ul>
 <li>you can set hints via <code class="highlight"><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">().</span><span class="na">getUpdater</span><span class="p">()</span><span class="w"></span></code><ul>
 <li>explicit hints for nodes</li>
-<li>initial hints globally; they behave similar to pushed hints.</li>
+<li>initial hints globally; they behave similarly to pushed hints.</li>
 </ul>
 </li>
 <li>
@@ -3516,7 +3500,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li><strong>(A)</strong> What it looks like after creation</li>
 <li><strong>(B)</strong> Initial situation with cursor at <strong>(1)</strong>: pressing <span class="keys"><kbd class="key-enter">Enter</kbd></span> leads to <strong>(C)</strong></li>
 </ul>
-<p>The problem is, that in <strong>(C)</strong> the cursor is at <strong>(2)</strong>, right before a read-only cell and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is at position <strong>(3)</strong>.</p>
+<p>The problem is, that in <strong>(C)</strong> the cursor is at <strong>(2)</strong>, right before a read-only cell, and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is at position <strong>(3)</strong>.</p>
 <p>Structure of the new node in <strong>(C)</strong>:</p>
 </blockquote>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" /></a></p>
@@ -3525,14 +3509,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><a class="glightbox" href="../../img/example_c_node_editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example c:node editor" src="../../img/example_c_node_editor.png" /></a></p>
 </blockquote>
 <p>Usually, you would set the <em>attracts focus</em> property of the cell, where the cursor should be positioned, to <code>attractsFocus</code> or <code>FirstEditableCell</code>.
-But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behaviour is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
-<p>Therefore, change the first part of your editor to a querylist cell <strong>(A)</strong>, which references the &ldquo;member&rdquo; in the cell properties <strong>(B)</strong> and set the read-only property on the querylist.</p>
+But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behavior is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
+<p>Therefore, change the first part of your editor to a query list cell <strong>(A)</strong>, which references the &ldquo;member&rdquo; in the cell properties <strong>(B)</strong>, and set the read-only property on the query list.</p>
 <p><a class="glightbox" href="../../img/CompoundInitializerMember_editor_new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new editor for CompoundInitializerMember" src="../../img/CompoundInitializerMember_editor_new.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">Is it possible to access the selected value of one swing component from inside another swing component?</p>
-<p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one swing component from inside another swing component? | <abbr title="Meta Programming System">MPS</abbr> forum</a></p>
+<p class="admonition-title">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component?</p>
+<p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component? | <abbr title="Meta Programming System">MPS</abbr> forum</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you access an icon stored in a concept?</p>
@@ -3568,39 +3552,39 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">(...)</span><span class="w"></span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">highlightManager</span><span class="p">.</span><span class="na">mark</span><span class="p">(((</span><span class="n">SNode</span><span class="p">)</span><span class="w"> </span><span class="n">ref</span><span class="p">),</span><span class="w"> </span><span class="n">HighlightConstants</span><span class="p">.</span><span class="na">INSTANCES_COLOR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;usage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">messageOwner</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The second approach has a better performance, because the highlighter runs asynchronously and not during the editor rebuild.</p>
+<p>The second approach has a better performance because the highlighter runs asynchronously and not during the editor rebuild.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you hide a custom cell in the editor? (<em>show if</em> property)</p>
 <blockquote>
 <p>Custom cells expect only a cell provider in the inspector, but don&rsquo;t offer the possibility to specify other attributes to set e.g. &ldquo;show if&rdquo;. How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
 </blockquote>
-<p>The <abbr title="metadata">meta</abbr> model actually allows to specify the <em>show if</em> property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.</p>
-<p>Since these attributes are hidden and you need this knowledge to find them, the alternative for a better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
+<p>The <abbr title="metadata">meta</abbr>-model allows specifying the <em>show if</em> property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.</p>
+<p>Since these attributes are hidden and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you split child collections?</p>
-<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in editor</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></p>
+<p class="admonition-title">How do you split child collections?</p>
+<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in editor</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <h2 id="inspector">Inspector<a class="headerlink" href="#inspector" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">How can you open the inspector programmatically?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">openInspector</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically</a></li>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners</a></li>
-<li>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you focus on a node in the inspector?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector</a><small>(<em>Specific Languages&rsquo; blog</em>)</small></li>
+<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
 <div class="admonition warning">
@@ -3640,12 +3624,12 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you find <abbr title="output">out</abbr> if an editor cell is readonly?</p>
+<p class="admonition-title">How can you find <abbr title="output">out</abbr> if an editor cell is read-only?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">ReadOnlyUtil</span><span class="p">.</span><span class="na">isCellsReadOnlyInEditor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">editorComponent</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">singleton</span><span class="o">&lt;</span><span class="n">EditorCell</span><span class="o">&gt;</span><span class="p">(</span><span class="n">editorCell</span><span class="p">))</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you get an editor for a node as a swing component?</p>
+<p class="admonition-title">How do you get an editor for a node as a Java Swing component?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">HeadlessEditorComponent</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HeadlessEditorComponent</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">.</span><span class="na">getRepository</span><span class="p">());</span><span class="w"> </span>
@@ -3667,7 +3651,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to you get the selection/ selected node in the editor?</p>
+<p class="admonition-title">How do you get the selection/selected node in the editor?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectedNode</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -3682,7 +3666,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find all open editors?</p>
-<p>Specific Languages&rsquo; blog: <a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors</a></p>
+<p><a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you programmatically collapse editor cells?</p>
@@ -3699,7 +3683,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p class="admonition-title">Is there a callback/hook when an editor tab closes?</p>
 <blockquote>
 <p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.</p>
-<p>In my code, I want to react on this editor-close event. Is there are way to implement a callback or hook which is called when an editor tab is closed?</p>
+<p>In my code, I want to react to this editor-close event. Is there a way to implement a callback or hook which is called when an editor tab is closed?</p>
 </blockquote>
 <p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example</a>).</p>
 </div>
@@ -3727,7 +3711,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
       
     
   </small>
