@@ -1,5 +1,7 @@
 ---
 title: Refactorings aspect
+hide:
+- toc
 tags:
 - aspect
 ---

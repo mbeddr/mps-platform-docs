@@ -1,5 +1,7 @@
 ---
 title: Scripts aspect
+hide:
+- toc
 tags:
 - aspect
 ---

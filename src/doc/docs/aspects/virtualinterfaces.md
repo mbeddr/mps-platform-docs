@@ -1,5 +1,7 @@
 ---
 title: Virtual Interfaces aspect
+hide:
+- toc
 tags:
 - aspect
 ---

@@ -1,5 +1,7 @@
 ---
 title: TextGen aspect
+hide:
+- toc
 tags:
 - aspect
 ---

@@ -1,4 +1,6 @@
 ---
+hide:
+- toc
 tags:
 - baselanguage
 - best_practise

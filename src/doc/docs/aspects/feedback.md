@@ -1,5 +1,7 @@
 ---
 title: Feedback aspect
+hide:
+- toc
 tags:
 - aspect
 ---

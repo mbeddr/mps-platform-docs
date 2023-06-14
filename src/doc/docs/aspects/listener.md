@@ -1,5 +1,7 @@
 ---
 title: Listener aspect
+hide:
+- toc
 tags:
 - aspect
 ---

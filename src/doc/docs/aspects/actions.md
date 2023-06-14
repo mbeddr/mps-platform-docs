@@ -1,5 +1,7 @@
 ---
 title: Action aspect
+hide:
+- toc
 tags:
 - aspect
 ---

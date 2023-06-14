@@ -1,5 +1,7 @@
 ---
 title: polymorphic functions aspect
+hide:
+- toc
 tags:
 - aspect
 ---

@@ -1,5 +1,7 @@
 ---
 title: Documentation aspect
+hide:
+- toc
 tags:
 - aspect
 ---

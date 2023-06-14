@@ -1,4 +1,6 @@
 ---
+hide:
+- toc
 tags:
 - baselanguage
 - baselanguage-extension

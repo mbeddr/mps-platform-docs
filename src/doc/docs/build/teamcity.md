@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 All platforms use [TeamCity](https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/) for [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration). [Extensive official documentation](https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html) is available for TeamCity on the web. The TeamCity server can be reached at [build.mbeddr.com](https://build.mbeddr.com). When a new commit is pushed to a branch in one of the Git repositories, the platforms are built on the server, tested, and published to the [itemis Nexus repository](https://artifacts.itemis.cloud/#browse/browse:maven-mps).
 This is configured through [VCS triggers](https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html).
 

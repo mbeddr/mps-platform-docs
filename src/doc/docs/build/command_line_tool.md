@@ -1,4 +1,6 @@
 ---
+hide:
+- toc
 tags:
 - guide
 - java_integration

@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 The following example shows the internal structure of MPS in regard to the [Swing](https://docs.oracle.com/javase/tutorial/uiswing/) components.
 Most of the structure is predetermined by the IntelliJ platform. There is a [UI inspector
 ](https://plugins.jetbrains.com/docs/intellij/internal-ui-inspector.html) in IntelliJ products for debugging purposes

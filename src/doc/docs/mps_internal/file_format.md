@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 A few different persistence formats can be selected when creating a new model (`Model` --> `storage format`):
 
 - **Pre-installed XML-based format**

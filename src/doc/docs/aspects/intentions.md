@@ -1,5 +1,7 @@
 ---
 title: Intentions aspect
+hide:
+- toc
 tags:
 - aspect
 ---

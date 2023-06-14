@@ -1,4 +1,6 @@
 ---
+hide:
+- toc
 tags:
 - java
 - best_practise

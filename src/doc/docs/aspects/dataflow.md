@@ -1,5 +1,7 @@
 ---
 title: Dataflow aspect
+hide:
+- toc
 tags:
 - aspect
 ---

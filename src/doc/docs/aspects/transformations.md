@@ -1,5 +1,7 @@
 ---
 title: Transformations aspect
+hide:
+- toc
 tags:
 - aspect
 ---

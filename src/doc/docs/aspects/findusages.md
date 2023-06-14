@@ -1,5 +1,7 @@
 ---
 title: FindUsages aspect
+hide:
+- toc
 tags:
 - aspect
 ---
