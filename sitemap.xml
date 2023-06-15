@@ -2,657 +2,657 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/tags/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/about/editing_this_guide/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/about/new_pages/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/about/original_authors/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/accessory_models/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/actions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/behavior/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/constraints/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/dataflow/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/documentation/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/editor/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/feedback/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/findusages/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/generator/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/intentions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/listener/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/migration/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/plugin/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/polyfun/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/refactorings/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/scripts/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/structure/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/test/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/textgen/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/transformations/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/typesystem/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/vcs/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/aspects/virtualinterfaces/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/advanced_github_workflow/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/ci/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/command_line_tool/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/git/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/gradle/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/build/teamcity/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/java/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/java/java_style_guide/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/java/programming_principles/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/mps/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/mps/deprecation/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/clean_code/mps/readability_maintainability/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/console/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/debugging/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/external_files_and_tools/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/general/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/performance/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/platform_specific_bugs/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/plugins/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/rcp/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/trouble_shooting_guide/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/home/visual_guide/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/includes/abbreviations/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/includes/code_abbreviations/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/language_reference/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/language_reference/org.iets3.core.expr.base/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/language_reference/org.iets3.core.expr.collections/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/language_reference/org.iets3.core.expr.toplevel/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/baselanguage/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/cell_layout/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/double_dispatch/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/kernelf/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/mps_extensions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/big_project/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/building_mbeddr_locally/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/development_guide/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mbeddr/misc_topics/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/classloading/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/dependencies/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/file_format/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/gui/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/intellij_integration/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/intellij_sdk/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/java_design_patterns_in_mps_sources/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/jcef/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/models/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/mps_startup/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/navigating_mps_source/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/open_api/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/platform_ui_inspector/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/recipes/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/terminology_and_ui_for_access/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/utility_classes/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/writing_mps_plugin_with_kotlin/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/deps_and_classpath/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/threads/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/threads/named_threads/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/threads/read_write_action_examples/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/patterns/language_design/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/patterns/ui_patterns/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/patterns/user_experience/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/accessing_the_project/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/build_folder/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/common_concepts_and_interfaces/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/contributing/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/how_everything_is_connected/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/interpreter/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/platform_build_scripts/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/testing/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/actions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/baselanguage_extensions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/common/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/deprecated/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/generator/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/importer_and_exporter/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/language_extensions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/languages/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/plugin_and_rcp/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/testing/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/tools/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/platform_essentials/mpsutils/ui/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/abbreviations/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/actions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/code_abbreviations/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/core_languages/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/exceptions/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/extension_points/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/gitignore/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/icons/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/included_libraries/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/issue_trackers/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/programmer_knowledge/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/standard_plugins/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/reference/tips_for_os_maintainers/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://mbeddr.com/mps-platform-docs/tags/</loc>
-         <lastmod>2023-06-14</lastmod>
+         <lastmod>2023-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
