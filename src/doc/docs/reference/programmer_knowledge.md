@@ -6,7 +6,7 @@ sheer amount of linked information, this page is meant to be a reference.
 
 - [40 Key Computer Science Concepts Explained In Layman’s Terms](https://carlcheo.com/compsci)
 - [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) (average and worst case time/space complexity of common data structures/algorithms)
-- [Learn regex the easy way](https://github.com/ziishaned/learn-regex)
+- [Learn regex the easy way](https://github.com/ziishaned/learn-regex) + [regex101](https://regex101.com/) for testing regular expressions
 - [Command Line for Beginners](https://www.freecodecamp.org/news/command-line-for-beginners/)
 - [Learn how to use Git and GitHub](https://www.deployhq.com/git)
 - [Programming Principles](https://github.com/webpro/programming-principles)

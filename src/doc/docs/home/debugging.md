@@ -9,7 +9,8 @@ tags:
 > 
 > (Brian Kernighan)
 
-For more in-depth explanations, visit:
+If you are unsure how do debug in general, read: [How do I Debug my Program?](http://websites.umich.edu/~eecs381/generalFAQ/Debugging.html).
+For more in-depth explanations regarding debugging in MPS, visit:
 
 - [Debugging in MPS](https://specificlanguages.com/articles/debugging/){{ blog('sl') }}
 - [White paper on Debugging in MPS](https://dslfoundry.com/whitepaper-on-debugging-in-mps/){{ blog('dslf') }}

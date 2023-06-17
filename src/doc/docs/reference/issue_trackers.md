@@ -6,7 +6,8 @@ tags:
 
 ## Reporting bugs
 
-This page should help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
+Before reporting bugs, you might want to read: [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
+This page should then help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
 issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor-related languages
 (diagrams, tables, tree notations...) are located in {{ mps_extensions() }}. The following list gives a rough overview:
 
