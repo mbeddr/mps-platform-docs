@@ -83,6 +83,15 @@ have to empty it after some time with `#! DefaultCoverageAnalyzer.reset()` or st
   There might be [faster alternatives](https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/) that are currently not
  implemented though.
 
+## Startup
+
+The startup of MPS can be analyzed with a standard Java profiler such as [YourKit](https://www.yourkit.com/). For IntelliJ [components](https://plugins.jetbrains.com/docs/intellij/plugin-components.html), [services](https://plugins.jetbrains.com/docs/intellij/plugin-services.html) and [extensions](https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html),
+it is also possible to use the [IntelliJ Report Analyzer](https://ij-perf.jetbrains.com/#/report). Click on the button
+*Get from running instance* to fetch the data from the opened MPS instance. Make sure that the *productCode* in the left textarea
+says *MPS* because other IntelliJ IDEs such as IntelliJ IDEA uses the same port.
+
+![IntelliJ report analyzer](intellij_report_analyzer.png){width="600px"}
+
 ## Java
 
 If you are interested in internal performance-related topics about Java and its compiler, you might find the following articles helpful:
