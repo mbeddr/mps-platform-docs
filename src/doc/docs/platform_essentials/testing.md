@@ -148,3 +148,45 @@ While it is possible to find many bugs with one or a handful of developers and u
 to get bugs reported and fixed quickly. Sometimes it is good enough when somebody just finds a workaround.
 
 Other times, like in the MPS platforms, some bugs would have never been identified, were there not that many users and developers that use them daily. There are always new unexplored use cases when the platforms are included in a new project and more edge cases are detected when more users test features. While this quote was originally referring to open-source projects, this also applies to closed-source projects.
+
+## [Stackexchange: Software Quality Assurance & Testing](https://sqa.stackexchange.com/)
+
+These are some questions on the site Stack Exchange that are relevant for MPS projects where there are dedicated testers
+or testing is done by the developers themselves or another member of the team.
+
+=== "Tests and testing"
+
+    - [What's the difference between a good test and a bad test?](https://sqa.stackexchange.com/questions/30734/whats-the-difference-between-a-good-test-and-a-bad-test)
+    - [Testing using real data of the customer](https://sqa.stackexchange.com/questions/39246/testing-using-real-data-of-the-customer)
+    - [How do you know if you are writing high quality tests?](https://sqa.stackexchange.com/questions/27238/how-do-you-know-if-you-are-writing-high-quality-tests)
+    - [What would be the strategy when too many bugs are found in the final round of testing?](https://sqa.stackexchange.com/questions/31934/what-would-be-the-strategy-when-too-many-bugs-are-found-in-the-final-round-of-te)
+
+=== "Bugs"
+
+    - [What is your approach to low-priority bugs?](https://sqa.stackexchange.com/questions/47630/what-is-your-approach-to-low-priority-bugs)
+    - [Best guidelines for bug reporting?](https://sqa.stackexchange.com/questions/1920/best-guidelines-for-bug-reporting)
+    - [What is common practice for labels of the bug severity?](https://sqa.stackexchange.com/questions/7531/what-is-common-practice-for-labels-of-the-bug-severity)
+    - [How to isolate a bug?](https://sqa.stackexchange.com/questions/3226/how-to-isolate-a-bug)
+    - [Who is ultimately responsible for issues that are found after software is released?](https://sqa.stackexchange.com/questions/893/who-is-ultimately-responsible-for-issues-that-are-found-after-software-is-releas)
+    - [How should a Software Tester deal with missed Defects/bugs in Production?](https://sqa.stackexchange.com/questions/27622/how-should-a-software-tester-deal-with-missed-defects-bugs-in-production)
+    - [Should tester fix bugs?](https://sqa.stackexchange.com/questions/5194/should-tester-fix-bugs)
+
+=== "For developers"
+
+    - [Actual data for why developers shouldn't be the only ones testing their code?](https://sqa.stackexchange.com/questions/28926/actual-data-for-why-developers-shouldnt-be-the-only-ones-testing-their-code)
+    - [What kind of testing should a developer do before passing a build to the QA team?](https://sqa.stackexchange.com/questions/423/what-kind-of-testing-should-a-developer-do-before-passing-a-build-to-the-qa-team)
+    - [How can developers be assured that their software is fault free?](https://sqa.stackexchange.com/questions/17613/how-can-developers-be-assured-that-their-software-is-fault-free)
+    - [How to deal with flaky tests that have intermittent failures?](https://sqa.stackexchange.com/questions/28204/how-to-deal-with-flaky-tests-that-have-intermittent-failures)
+    - [Is it normal to spend as much, if not more, time writing tests than actual code?](https://softwareengineering.stackexchange.com/questions/299796/is-it-normal-to-spend-as-much-if-not-more-time-writing-tests-than-actual-code)
+
+=== "For testers"
+
+    - [Why is a dedicated QA team member necessary?](https://sqa.stackexchange.com/questions/40146/why-is-a-dedicated-qa-team-member-necessary)
+    - [Should a tester feel bad about finding too many defects/bugs in the product?](https://sqa.stackexchange.com/questions/25034/should-a-tester-feel-bad-about-finding-too-many-defects-bugs-in-the-product)
+    - [What should be reported when a bug only happens 50% of the time?](https://sqa.stackexchange.com/questions/28135/what-should-be-reported-when-a-bug-only-happens-50-of-the-time)
+    - [Should Testers first discuss a bug with the developers before writing a bug report?](https://sqa.stackexchange.com/questions/16640/should-testers-first-discuss-a-bug-with-the-developers-before-writing-a-bug-repo)
+    - [Should QA report bugs on features before they are fully implemented?](https://sqa.stackexchange.com/questions/16715/should-qa-report-bugs-on-features-before-they-are-fully-implemented)
+    - [How does a tester decide how much debugging/investigation to do before handing an issue over to development?](https://sqa.stackexchange.com/questions/1610/how-does-a-tester-decide-how-much-debugging-investigation-to-do-before-handing-a)
+    - [How can a Software Tester use "Out of the Box" thinking approach to find more bugs?](https://sqa.stackexchange.com/questions/8156/how-can-a-software-tester-use-out-of-the-box-thinking-approach-to-find-more-bu)
+    - [Can knowing too much about the tested code be a disadvantage?](https://sqa.stackexchange.com/questions/33922/can-knowing-too-much-about-the-tested-code-be-a-disadvantage)
+    - [Should QA or tester mention the root cause for a bug?](https://sqa.stackexchange.com/questions/27962/should-qa-or-tester-mention-the-root-cause-for-a-bug)
