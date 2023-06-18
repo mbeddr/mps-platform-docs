@@ -92,6 +92,9 @@ plugins:
       use_relative_link: true
   - webcontext:
       context: mps-platform-docs
+  - redirects:
+      redirect_maps:
+        'mps_internal/jcef.md': 'mps_internal/intellij_sdk/jcef.md'
   - autolink_references:
       autolinks:
         - reference_prefix: MPS-
@@ -224,30 +227,36 @@ nav:
       - Advanced GitHub workflow: build/advanced_github_workflow.md
   - MPS internals:
       - mps_internal/index.md
-      - Open API: mps_internal/open_api.md
-      - Dependencies and classpath:
-        - General: mps_internal/deps_and_classpath/index.md
-        - Terminology and UI for access: mps_internal/terminology_and_ui_for_access.md
-        - Models: mps_internal/models.md
-        - Dependencies: mps_internal/dependencies.md
-        - Recipes: mps_internal/recipes.md
-      - Classloading: mps_internal/classloading.md
-      - Threading:
-          - mps_internal/threads/index.md
-          - Example actions using locks: mps_internal/threads/read_write_action_examples.md
-          - Named threads: mps_internal/threads/named_threads.md
-      - Utility classes: mps_internal/utility_classes.md
-      - GUI: mps_internal/gui.md
-      - Editor development: mps_internal/editor_development.md
-      - IntelliJ SDK: mps_internal/intellij_sdk.md
-      - Java Chromium Embedded Framework: mps_internal/jcef.md
-      - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
-      - IntelliJ integration: mps_internal/intellij_integration.md
-      - Navigating the MPS sources: mps_internal/navigating_mps_source.md
-      - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
-      - What happens on MPS startup : mps_internal/mps_startup.md
-      - Platform UI inspector : mps_internal/platform_ui_inspector.md
-      - File format: mps_internal/file_format.md
+      - Code:
+          - Open API: mps_internal/open_api.md
+          - Utility classes: mps_internal/utility_classes.md#
+          - Navigating the MPS sources: mps_internal/navigating_mps_source.md
+          - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
+      - UI:
+          - Editor development: mps_internal/editor_development.md
+          - IntelliJ UI: mps_internal/gui.md
+          - Platform UI inspector : mps_internal/platform_ui_inspector.md
+      - IntelliJ SDK: 
+          - General: mps_internal/intellij_sdk.md
+          - IntelliJ integration: mps_internal/intellij_integration.md
+          - Java Chromium Embedded Framework: mps_internal/intellij_sdk/jcef.md
+      - Advanced topics:
+          - What happens on MPS startup : mps_internal/mps_startup.md
+          - Dependencies and classpath:
+              - General: mps_internal/deps_and_classpath/index.md
+              - Terminology and UI for access: mps_internal/terminology_and_ui_for_access.md
+              - Models: mps_internal/models.md
+              - Dependencies: mps_internal/dependencies.md
+              - Recipes: mps_internal/recipes.md
+          - Classloading: mps_internal/classloading.md
+          - Threading:
+              - mps_internal/threads/index.md
+              - Example actions using locks: mps_internal/threads/read_write_action_examples.md
+              - Named threads: mps_internal/threads/named_threads.md
+      - Reference:
+        - File format: mps_internal/file_format.md
+        - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
+
   - Platform essentials:
       - platform_essentials/index.md
       - How everything is connected: platform_essentials/how_everything_is_connected.md

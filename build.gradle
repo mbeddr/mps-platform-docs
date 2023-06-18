@@ -23,6 +23,7 @@ python.pip 'mkdocs-gen-files:0.5.0'
 python.pip 'mdx-spanner:0.0.5'
 python.pip 'mkdocs-alias-plugin:0.6.0'
 python.pip 'mkdocs-webcontext-plugin:0.1.0'
+python.pip 'mkdocs-redirects:1.2.0'
 
 task serveFast(type: MkdocsTask) {
     command = 'serve --dirtyreload'
