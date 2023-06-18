@@ -4,6 +4,8 @@ tags:
 - best_practise
 ---
 
+# Java (Base language)
+
 To learn more information about advanced Java topics such as the Java virtual machine, collections language, and many more topics,
 visit [baeldung.com](https://www.baeldung.com/category/java).
 
