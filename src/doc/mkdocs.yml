@@ -211,12 +211,16 @@ nav:
           - General: languages/mps_extensions.md
           - Cell Layout: languages/cell_layout.md
       - KernelF: languages/kernelf.md
-  - Mbeddr:
-      - mbeddr/index.md
-      - Building Mbeddr locally: mbeddr/building_mbeddr_locally.md
-      - BigProject: mbeddr/big_project.md
-      - Development guide: mbeddr/development_guide.md
-      - Miscellaneous topics: mbeddr/misc_topics.md
+  - Platform essentials:
+      - platform_essentials/index.md
+      - How everything is connected: platform_essentials/how_everything_is_connected.md
+      - Contributing: platform_essentials/contributing.md
+      - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
+      - Interpreter, coverage and tracing: platform_essentials/interpreter.md
+      - Platform build scripts: platform_essentials/platform_build_scripts.md
+      - Build folder: platform_essentials/build_folder.md
+      - Testing: platform_essentials/testing.md
+      - Accessing the project: platform_essentials/accessing_the_project.md
   - Build:
       - Build: build/index.md
       - CI: build/ci.md
@@ -229,7 +233,7 @@ nav:
       - mps_internal/index.md
       - Code:
           - Open API: mps_internal/open_api.md
-          - Utility classes: mps_internal/utility_classes.md#
+          - Utility classes: mps_internal/utility_classes.md
           - Navigating the MPS sources: mps_internal/navigating_mps_source.md
           - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
       - UI:
@@ -237,7 +241,7 @@ nav:
           - IntelliJ UI: mps_internal/gui.md
           - Platform UI inspector : mps_internal/platform_ui_inspector.md
       - IntelliJ SDK: 
-          - General: mps_internal/intellij_sdk.md
+          - mps_internal/intellij_sdk.md
           - IntelliJ integration: mps_internal/intellij_integration.md
           - Java Chromium Embedded Framework: mps_internal/intellij_sdk/jcef.md
       - Advanced topics:
@@ -256,13 +260,9 @@ nav:
       - Reference:
         - File format: mps_internal/file_format.md
         - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
-
-  - Platform essentials:
-      - platform_essentials/index.md
-      - How everything is connected: platform_essentials/how_everything_is_connected.md
-      - Contributing: platform_essentials/contributing.md
-      - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
-      - Interpreter, coverage and tracing: platform_essentials/interpreter.md
+  - Mbeddr:
+      - mbeddr/index.md
+      - Building Mbeddr locally: mbeddr/building_mbeddr_locally.md
       - Mbeddr utilities:
           - platform_essentials/mpsutils/index.md
           - Common: platform_essentials/mpsutils/common.md
@@ -274,13 +274,13 @@ nav:
           - Language extensions: platform_essentials/mpsutils/language_extensions.md
           - Tools: platform_essentials/mpsutils/tools.md
           - UI: platform_essentials/mpsutils/ui.md
-          - Testing: platform_essentials/mpsutils/testing.md   
+          - Testing: platform_essentials/mpsutils/testing.md
           - Plugin and RCP: platform_essentials/mpsutils/plugin_and_rcp.md
           - Deprecated languages and solutions: platform_essentials/mpsutils/deprecated.md
-      - Platform build scripts: platform_essentials/platform_build_scripts.md
-      - Build folder: platform_essentials/build_folder.md
-      - Testing: platform_essentials/testing.md
-      - Accessing the project: platform_essentials/accessing_the_project.md
+      - Mbeddr Doc documentation: http://mbeddr.com/files/documentationdocumentation.pdf
+      - BigProject: mbeddr/big_project.md
+      - Development guide: mbeddr/development_guide.md
+      - Miscellaneous topics: mbeddr/misc_topics.md
   - Clean code:
       - clean_code/mps/index.md
       - Readability/maintainability: clean_code/mps/readability_maintainability.md
