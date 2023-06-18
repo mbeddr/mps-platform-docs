@@ -1,7 +1,8 @@
 This page looks behind the hood of the startup process of MPS 2021.1.4 and newer. For most parts, similar code will be executed
 for other MPS versions.
 
-The application starts with [Main.kt](https://github.com/JetBrains/intellij-community/blob/master/platform/bootstrap/src/com/intellij/idea/Main.kt) where it sets some flags about the execution environment such as the headless
+The application starts with [Launcher.java](https://github.com/JetBrains/MPS/blob/master/startup/src/jetbrains/mps/Launcher.java) where it sets some IntelliJ-specific properties such as the file watcher path and the platform prefix, and collects the plugin paths when running MPS from sources.
+It then calls [Main.kt](https://github.com/JetBrains/intellij-community/blob/master/platform/bootstrap/src/com/intellij/idea/Main.kt) where it sets some flags about the execution environment such as the headless
 mode or if the application is invoked from the command line. The system properties are also loaded and populated with data.
 The class loader is also loaded in [BootstrapClassLoaderUtil#initClassLoader()](https://github.com/JetBrains/intellij-community/blob/master/platform/bootstrap/src/com/intellij/idea/BootstrapClassLoaderUtil.java#L56). Afterwards, [MainImpl.kt](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-main/src/com/intellij/idea/MainImpl.kt) is looked up
 and executed. It mainly redirects the initialization of the application to the [ApplicationLoader#initApplication](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-impl/src/com/intellij/idea/ApplicationLoader.kt#L63) method.
