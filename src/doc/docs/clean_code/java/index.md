@@ -33,6 +33,17 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
   - If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225).
 - Have a look at common sources of [complexity](https://web.archive.org/web/20210425130253/http://www.javapractices.com/topic/TopicAction.do?Id=287).
 
+## [Stackexchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
+
+- [When do you use float and when do you use double](https://softwareengineering.stackexchange.com/questions/188721/when-do-you-use-float-and-when-do-you-use-double)
+- [What's wrong with circular references?](https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references)
+- [Are null references really a bad thing?](https://softwareengineering.stackexchange.com/questions/12777/are-null-references-really-a-bad-thing)
+- [Exceptions: Why throw early? Why catch late?](https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late)
+- [How do quick & dirty programmers know they got it right?](https://softwareengineering.stackexchange.com/questions/124835/how-do-quick-dirty-programmers-know-they-got-it-right)
+- [Why is Global State so Evil?](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil)
+- [How would you know if you've written readable and easily maintainable code?](https://softwareengineering.stackexchange.com/questions/141005/how-would-you-know-if-youve-written-readable-and-easily-maintainable-code)
+- [How do you know you're writing good code?](https://softwareengineering.stackexchange.com/questions/61655/how-do-you-know-youre-writing-good-code)
+
 [^1]:[Naming 101: A Programmer's Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)
 [^2]:[Rule of 30 – When is a Method, Class or Subsystem Too Big?](https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or)
 [^3]:[Avoid basic style errors](http://www.javapractices.com/topic/TopicAction.do?Id=227)

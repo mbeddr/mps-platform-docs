@@ -178,6 +178,7 @@ or testing is done by the developers themselves or another member of the team.
     - [How can developers be assured that their software is fault free?](https://sqa.stackexchange.com/questions/17613/how-can-developers-be-assured-that-their-software-is-fault-free)
     - [How to deal with flaky tests that have intermittent failures?](https://sqa.stackexchange.com/questions/28204/how-to-deal-with-flaky-tests-that-have-intermittent-failures)
     - [Is it normal to spend as much, if not more, time writing tests than actual code?](https://softwareengineering.stackexchange.com/questions/299796/is-it-normal-to-spend-as-much-if-not-more-time-writing-tests-than-actual-code)
+    - [How do I review my own code?](https://softwareengineering.stackexchange.com/questions/139321/how-do-i-review-my-own-code)  
 
 === "For testers"
 

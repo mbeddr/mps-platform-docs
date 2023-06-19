@@ -14,6 +14,7 @@ Code reviews:
 
 - [The Code Reviewer's Guide | google.github.io](https://google.github.io/eng-practices/review/reviewer/)
 - [The Change Author's Guide | google.github.io](https://google.github.io/eng-practices/review/developer/)
+- [How to find positive things in a code review?](https://softwareengineering.stackexchange.com/questions/333853/how-to-find-positive-things-in-a-code-review)
 
 Tools (general):
 
@@ -36,3 +37,4 @@ Licenses
 Reference:
 
 - [Github vs Gitlab vs Bitbucket](https://disbug.io/en/blog/github-vs-gitlab-vs-bitbucket)
+- [Why do programmers write closed source applications and then make them free?](https://softwareengineering.stackexchange.com/questions/3233/why-do-programmers-write-closed-source-applications-and-then-make-them-free)

@@ -30,3 +30,10 @@ tags:
 - Check for redundant variable initializers (type system warning).
 - Use empty lines between statements (for example method declarations) for readability.
 - Use virtual packages to organize your code.
+
+## [Stackexchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
+
+- [What's wrong with comments that explain complex code?](https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code)
+- [When is a BIG Rewrite the answer?](https://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer)
+- [How can I convince management to deal with technical debt?](https://softwareengineering.stackexchange.com/questions/43948/how-can-i-convince-management-to-deal-with-technical-debt)
+- [How do I know how reusable my methods should be?](https://softwareengineering.stackexchange.com/questions/382069/how-do-i-know-how-reusable-my-methods-should-be)
