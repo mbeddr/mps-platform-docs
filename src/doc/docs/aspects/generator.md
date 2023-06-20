@@ -121,6 +121,28 @@ tags:
 
     - [What is cross-model generation and why do you care?](https://specificlanguages.com/posts/2022-04/22-cross-model-generation/){{ blog('sl') }}
 
+!!! question "How to get rid of errors for missing generator dependencies?"
+
+    If you use a generation plan, you can add those languages to the end of the generation plan or create a new plan
+    *ignoredLanguages* that you add to your existing plan. When languages don't generate anything, their generators should also
+    be deleted. Two tickets with some more information: MPS-32687, MPS-33874
+
+!!! question "How do you keep some context when using the `$LOOP$` macro in the generator?"
+
+    There are a few solutions when you want to save additional information: you can use the `VAR` macro which introduces one or more named values into the generator context, which can then be obtained from the `genContext`. You can save information in the session/step/transient object which can also be accessed through `genContext` (this is, for example, a parameter in the `$COPY_SRC$` macro). When you use the `$CALL` macro to call a template, you can call the template with parameters. You can also use `node/.putUserObject` and `node/.getUserObject` to store additional Java objects directly in nodes.
+
+!!! question "What is the best way to preserve SModelAttributes when weaving in a new node during generation? The newly weaved-in node does not contain the `SModelAttributes` from the input and I am looking for a way to add these to the output node."
+
+    Weaving isn’t reduction so MPS doesn’t know if the new node should have the attributes or not. MPS_SRC is the best way as you have input and output available.
+
+!!! question "What is an alias for a generator?"
+
+    It is just an additional qualifier to distinguish the generator from other generators for the same language.
+
+!!! question "Is there something similar to the `outputNode` in reference macros in property macros?"
+
+    No but you can try to use the post-processing function of a `$MAP_SRC$` macro.
+
 ## How to generate XY
 
 !!! question "What can be generated?"
@@ -131,9 +153,13 @@ tags:
     pre/post-processing script in the generator by using an existing Java library such as [Apache POI](https://poi.apache.org/). A tutorial for example 
     for Excel can be found [here](https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi).
 
-!!! hint "I want to create multi outputs for a language.[^1]"
+!!! hint "I want to create multiple outputs for a language.[^1]"
 
-    Use a dummy concept or a generation plan with a fork. This question is also answered in [the generator cookbook](https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode).
+    - You can use a non-root concept in your root mapping rule e.g. use the concept of the children in the root mapping rule. It will create multiple roots as long as the generated files have different names.
+    - Use a preprocessing script to create new root nodes (maybe a new concept if necessary) for the children and create a root mapping rule for the newly introduced concept.
+    - Use a dummy concept or a generation plan with a fork.
+
+    This question is also answered in [the generator cookbook](https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode).
 
 !!! question "How can you generate latex files?"
 
@@ -208,6 +234,19 @@ tags:
     ![long string improved macro](long_string_improved_macro.png)
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "How do I generate a unique numeric id?"
+
+    `genContext.name from ("")0 in context (node)` works well for this.
+
+    Note that the one-based version (`genContext.name from ("") in context (node)`) will yield an empty string in the first iteration. This is because it is designed to generate things like "myVar", "myVar1", "myVar2".
+
+    {{ contribution_by('abstraktor') }}
+
+!!! question "How do you report errors in the generator?"
+
+    Use the statement `genContext.show error` and attach the node as the second parameter. Don't just throw exceptions as people don't need so see fatal errors in the lower right corner when something in the generator goes wrong. The generator might not stop immediately and finish
+    the current step when using this statement.
 
 ## Open API
 
@@ -319,6 +358,22 @@ tags:
     Remark 2: One potential source of problems could be the packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to MPS-32026 that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.
 
     {{ contribution_by('abstraktor') }}
+
+!!! question "When getting a warning/log message when building an MPS model, I would like to jump to the source of the message."
+
+    For model generation errors you can enable *Build* --> *Check models* before generation to catch errors early.
+    If you enable [save transient models](https://www.jetbrains.com/help/mps/finding-your-way-out.html#savetransientmodels), you can, for example, click on textgeneration error messages and it will open the node in the transient model.
+    There, you can `right-click the node -> *Language debug* -> *Reveal original node* to go to the original node where the error occurred.
+    For other messages in the messages tool, sometimes there is a stack trace attached that can be found in the right-click menu of the message.
+    Advanced: additional information for other internal exceptions:
+
+    For other exceptions, such as IDE fatal errors (lower right corner of the window) you can copy the error message from the dialog and go to *main menu* --> *Analyze* --> *Analyze stack trace*. It will provide links to the places in your project where the error happened.
+    For internal exceptions of MPS or the IntelliJ platform, you can do [remote debugging](https://specificlanguages.com/articles/debugging/) (stop on exceptions) with [MPS](https://github.com/JetBrains/MPS) and [IntelliJ Community](https://github.com/JetBrains/intellij-community) sources locally cloned, so that you can jump to the exception directly.
+    
+    Regarding full-text search, you can try *edit* --> *find* --> *find text in project* (++ctrl+alt+shift+f++). All the node properties in the project are indexed, so it just searches those properties.
+    
+    If there are errors/warnings in the editor, you can do *Language Debug* --> *Go to Rule Which Caused Error* from the context menu to find the code which produced the error. A similar feature is *Show Node Messages*, which allows copying/pasting the message.
+
 
 ## Blog posts
 

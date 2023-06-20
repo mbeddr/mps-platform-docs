@@ -33,6 +33,38 @@ tags:
 
     Use the book on the following page: http://farhadg.github.io/init/landing/
 
+!!! question "During conflict resolution, what does *Resolve automatically and exit* do exactly?"
+
+    This button merges non conflicting changes in roots and in the meta data.
+    
+    A) A change in roots is not conflicting if:
+
+    - there are [merge hints](https://www.jetbrains.com/help/mps/mergehints.html)
+    - the node ID [changed](https://www.jetbrains.com/help/mps/resolving-conflicts.html#cd808d10)
+    - the resolve info [changed](https://www.jetbrains.com/help/mps/resolving-conflicts.html#e052970a)
+
+    B) Meta data changes are:
+
+    - a dependency was deleted/added
+    - do not generate flag was set
+    - an engaged language on generated was added/removed
+    - an imported model was added/deleted
+    - a model attribute was changed (e.g. model user objects)
+    - a module dependency was added/deleted
+    - a used languages was added/deleted/changed
+
+      Those are two different merge sessions. TODO: How does the automatic resolving works with the meta data changes? (It seems like A and B are applied to the meta models).
+
+!!! question "When I shut down + change files on disk (e.g. git pull) + restart MPS, it asks me if I want to reload the files from disks or use the cached models. Why?"
+
+    Excerpt from MPS documentation:
+    > MPS automatically saves changes that you make in your files. Saving is triggered by various events, such as compiling, running, debugging, performing version control operations, closing a file or a project, or quitting the IDE. Saving files can be also triggered by third-party plugins.
+    
+    Maybe an external change is done by accident e.g. the project is on a shared drive and someone else changes some files but not on purpose. You might also edit some MPS files with a different editor to fix some issues, so there must be the option to decide which version to use. The feature itself comes from the IntelliJ platform, this is not MPS specific:
+    
+    > If an external process changes a file that was opened and unsaved in IntelliJ IDEA, it results in two conflicting versions of the file.
+
+
 ## General
 
 - [Git cheat sheet](https://github.com/arslanbilal/git-cheat-sheet)

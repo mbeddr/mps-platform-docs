@@ -43,6 +43,10 @@ The editor aspect defines the projectional editor of a concept.
     
     In a nutshell, `empty cell` is a very stripped-down version of a `constant cell` and also has a somewhat different implementation because of the different base class.
 
+!!! question "I have click actions in my language, and they seem to also trigger for right mouse clicks. Any way to prevent that generally or manually/programmatically detecting which mouse button was clicked?"
+
+    No, the click action is executed for the selected cell. Without the original MouseEvent that is not forwarded to the editor cell you won't get this information. The event can't be restored. It would be possible to register a new mouse listener for the editor component through an [editor extension](http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions) that not only creates the click action for the selected cell but also saved the mouse button somewhere. The original implementation in the editor component can be found [here](https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472).
+
 ## Menus
 
 !!! hint "Explain the different menu-related terms."
@@ -218,6 +222,10 @@ The editor aspect defines the projectional editor of a concept.
 
     [Advanced editors: splitting child collection in editor](https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/){{ blog('sl') }}
 
+!!! question "How can I show an editor element only if the edited node/sub-nodes are currently being edited/actively selected?"
+
+    You can impliment a cell that is similar to the cell [EditorCell_MathEnd](http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058) in {{ mps_extensions() }}.
+
 ## Inspector
 
 - [Move rarely needed information to the Inspector](https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/){{ blog('sl') }}
@@ -239,6 +247,20 @@ The editor aspect defines the projectional editor of a concept.
 
     Known bug (MPS-32350). Pressing ++f5++ helps.
 
+## Other UI components
+
+!!! question "I am using `NodeHighlightManager.mark()` to highlight AST nodes. MPS then uses the provided color for the background of the cell, and a slightly darker color for an additional border. Is it possible to change this, i.e., only paint the background, but not the border?"
+
+    Yes, but you have to create a class that extends DefaultEditorMessage and overwrites the [paintWithColor](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196) method. The color of the border is defined on line [203](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203). Instead of calling this method:
+    
+    ```java
+    public void mark(SNode node, Color color, String messageText, EditorMessageOwner owner) {
+    if (node == null) return;
+    mark(new DefaultEditorMessage(node, color, messageText, owner));
+    }
+    ```
+
+    You have to initialize your message object and supply it to the mark method.
 
 ## Open API
 
@@ -327,6 +349,10 @@ The editor aspect defines the projectional editor of a concept.
     > In my code, I want to react to this editor-close event. Is there a way to implement a callback or hook which is called when an editor tab is closed?
 
     You can register an [EditorComponentCreateListener](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener), that also receives an editorComponentDisposed event ([example](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84)).
+
+!!! question "How can I customise the behaviour when pressing the ++tab++ key in the editor?"
+
+    You can specify the action `NEXT` in an [action map](https://www.jetbrains.com/help/mps/editor.html#actionmaps) to override this behavior ([MPS source reference](https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809)). The default action is declared [here](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57) with its default implementation in [NodeEditorActions](https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401)(it jumps to the next editable leaf of the editor cell tree).
 
 !!! question "Is there a utility class related to editor hints?"
 

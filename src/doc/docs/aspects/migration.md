@@ -78,6 +78,29 @@ tags:
     references.forEach({~it => resultObject/.setReferenceTarget(it.link, reuseact); });
     }
     ```
+!!! question "What are module versions and how/why can other modules depend on modules with different version then the current module version?"
+
+    You start with language and module version 0.
+    Reasons why the language version of a language updates:
+    
+    - a new migration was added manually
+    -you've executed the action "Correct Language Version"
+    - you've set it manually in the module properties
+    - a concept was moved to a different language through the refactoring menu and a migration script was written
+    
+    Reasons why the module version of a language updates:
+    
+    - you've set it manually in the module properties
+    - a concept/property/link was moved to a different language through the refactoring menu and a refactoring log was written
+    
+    Reason why both versions don't update:
+    
+    - the language was renamed
+    - nodes/models are moved to a different solution
+    
+    The module version of a solution can't change automatically. I also don't know why you would change it manually. Devkits don't even have the option to change the module version.
+    A good example for a language with different language and module versions is ^^jetbrains.mps.lang.feedback.problem.scopes^^ (language: 0, module: 1) because it only has a refactoring step but no other migrations.
+
 ## Troubleshooting
 
 - [The migration frustration](https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/){{ blog('sl') }}

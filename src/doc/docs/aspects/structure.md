@@ -121,3 +121,10 @@ The structure aspect contains all the concept and interface declarations of a la
         it.references.any({~it => it.target == null; });
     })
     ```
+
+!!! warning "Deleting references doesn't work when using the editor cell ref. presentation"
+
+    Example: `[> thingref [> ( % thing % -> ref. presentation ) <] <]`
+
+    Ref presentation automatically uses the name of the interface *INamedConcept*. If you add `auto-deletable: true` to the cell and the cardinality is `[1]`, the name is deleted but the reference is not removed. When the cardinality is `[0..1]` the reference is deleted. This behavior is expected
+    because in the first case, the reference is mandatory, in the second case it is optional.

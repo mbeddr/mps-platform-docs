@@ -7,6 +7,16 @@ alias: performance
 This page explains common bottlenecks regarding memory consumption and performance in MPS in general and how to solve those problems.
 If you want to know about slow software in general (e.g. hardware-related slowness), read: [Slow Software | Ink & Switch](https://www.inkandswitch.com/slow-software/).
 
+!!! question "How are expensive model traversals handled in MPS?"
+
+    There is no API for indexing model traversal results (e.g. getParent(), getAncestors()) the way it is implemented in frameworks like Xtext.
+    
+    Find Usages of concepts is efficiently implemented though. There is a class[FastNodeFinderManager](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager) that is used internally which can efficiently return the list of instances of a concept for a model. The descendants of a concept are also cached in the [ConceptDescendantsCache](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache).
+    
+    The indexing at startup collects [some information](https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java) about MPS models such as instances of concepts, imports and property values (used for the [Find Text in Node Properties](https://www.jetbrains.com/help/mps/find-text-in-project.html) action). The [virtual files](https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html) that represent root nodes in the filesystem are probably also indexed.
+    
+    The initial indexing also integrates Base Language into the IntelliJ search functionality ([implementation in MPS](https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83)). When using MPS as an IntelliJ plugin this should allow the normal search for [usages](https://www.jetbrains.com/help/idea/find-highlight-usages.html) and maybe [structural search](https://www.jetbrains.com/help/idea/structural-search-and-replace.html) to work with Base Language classes and interfaces.
+
 ## General
 
 - Read the page [Advanced Configuration](https://www.jetbrains.com/help/mps/tuning-the-ide.html) in the official documentation. You are especially interested in setting `-Xmx` and `-Xms`.

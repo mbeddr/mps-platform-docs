@@ -151,9 +151,9 @@ The behavior aspect can be used for defining methods for the concepts of the lan
 
 ## Bugs/missing features
 
-!!! question "How can you use generic return types?[^1]"
+!!! question "How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?[^1]"
 
-    No, it is not possible (MPS-22502).
+    This is not possible (MPS-22502). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of [Java type erasure](https://www.baeldung.com/java-type-erasure).
 
 !!! question "Can you use a more specific return type while overriding a behavior method?"
 
@@ -166,5 +166,7 @@ The behavior aspect can be used for defining methods for the concepts of the lan
 !!! question "Can you enter a *throws* clause in behavior methods?"
 
     No, it is not possible (MPS-22306).
+
+
 
 [^1]: [MPS forum - Generics for return type of behavior method](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010808559-Generics-for-return-type-of-behavior-method)

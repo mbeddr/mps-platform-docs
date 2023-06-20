@@ -152,6 +152,15 @@ tags:
 
     {{ contribution_by('abstraktor') }}
 
+!!! question "Can I configure MPS path variables per project?"
+
+    No, this is not possible. Most of the time, this problem arises, when multiple clones of the same project should be opened with MPS.
+    It is possible to create localized MPS configurations that enable running multiple independent instances of various MPS versions.
+    For Linux you can use [nkoester/mps-zookeeper](https://github.com/nkoester/mps-zookeeper).
+    
+    As a general solution, you can download multiple instances of MPS and edit the following paths in [bin/idea.properties](https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties): *idea.config.path*, *idea.system.path*, *idea.plugins.path* and *idea.log.path*.
+    When you have a repository repo, you can, for example, replace the name of the MPS version with repo1, repo2, repo3, or a different naming scheme.
+
 !!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
 
     JBR is a fork of OpenJDK with specific bug fixes and improvements for JetBrains IDEs. More info can be found in @JetBrains/JetBrainsRuntime. In some of the platform build scripts the environment variable `JB_JAVA11_HOME` can be used to set the JDK home.

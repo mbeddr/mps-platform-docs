@@ -26,6 +26,19 @@ Some parts of MPS are different to the IntelliJ platforms and therefore those ch
     Create a [lightweight service](https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services) using the
     [@Service](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.components%28MPS.IDEA%2F%29%2F7879151873219801267) annotation. An example service *MyService* could then be accessed through `#!java ApplicationManager.getApplication().getService(MyService.class)`
 
+!!! question "How do you add a custom action to a toolbar?"
+
+    It is assumed that this is a toolbar group that is populated with custom actions. There is an `addJavaAction` that can be used in the ActionGroupDeclaration (example from [IETS3](http://127.0.0.1:63320/node?ref=r%3Ae3e5593b-dfcd-4a2e-b10f-f1ed4a43f093%28org.iets3.core.expr.plugin.plugin%29%2F4189697348346388716)) which lets you add objects of type AnAction like the ToggleAction in the example. You can just circumvent the MPS ActionDeclarations this way.
+
+    For custom swing components, it is enough to extend AnAction and implement [CustomComponentAction](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem.ex%28MPS.IDEA%2F%29%2F%7ECustomComponentAction). Before implementing this, search the IntelliJ/MPS code base for such classes. There are, for example, [TextFieldAction](https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-api/src/com/intellij/openapi/vcs/ui/TextFieldAction.java) and [JButtonAction](https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/util/ui/JButtonAction.kt). Search for [Button|Text|..]Action in MPS to find such instances and look for existing components in the UI that look like the components that you need.
+
+    The general documentation for IntelliJ actions is located at [Actions | IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html)
+
+!!! question "How to make messages in the [messages view](https://www.jetbrains.com/help/mps/logging.html) clickable?"
+
+    Note: technically, the messages view is unrelated to the IntelliJ platform but rather an MPS tool. The message statement has a throwable parameter that can be used to attach exceptions. In the generator, there is `genContext.show error <messageText> -> <node>` which takes a message and a node. In MPS 2022.3 there is also support for a `hintObject` in the message statement so that you can jump directly to a node, model, or module.
+
+
 ## Message bus and listeners (message interface)
 
 Reference:
