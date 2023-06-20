@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3039,8 +3039,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3625,8 +3625,8 @@ superConcept()
 </div>
 <h2 id="bugsmissing-features">Bugs/missing features<a class="headerlink" href="#bugsmissing-features" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">How can you use generic return types?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>).</p>
+<p class="admonition-title">How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can&rsquo;t be used in this place. There are ways to circumvent this by using lower level code but it won&rsquo;t help. I think you also can&rsquo;t really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you use a more specific return type while overriding a behavior method?</p>
@@ -3654,7 +3654,7 @@ superConcept()
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

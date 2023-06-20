@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3034,8 +3034,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3510,6 +3510,16 @@ Two additional resources are also helpful if you want to understand how IntelliJ
 <p>Create a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">lightweight service</a> using the
 <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.components%28MPS.IDEA%2F%29%2F7879151873219801267">@Service</a> annotation. An example service <em>MyService</em> could then be accessed through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">getService</span><span class="p">(</span><span class="n">MyService</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"></span></code></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How do you add a custom action to a toolbar?</p>
+<p>It is assumed that this is a toolbar group that is populated with custom actions. There is an <code>addJavaAction</code> that can be used in the ActionGroupDeclaration (example from <a href="http://127.0.0.1:63320/node?ref=r%3Ae3e5593b-dfcd-4a2e-b10f-f1ed4a43f093%28org.iets3.core.expr.plugin.plugin%29%2F4189697348346388716"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>) which lets you add objects of type AnAction like the ToggleAction in the example. You can just circumvent the <abbr title="Meta Programming System">MPS</abbr> ActionDeclarations this way.</p>
+<p>For custom swing components, it is enough to extend AnAction and implement <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem.ex%28MPS.IDEA%2F%29%2F%7ECustomComponentAction">CustomComponentAction</a>. Before implementing this, search the IntelliJ/<abbr title="Meta Programming System">MPS</abbr> code base for such classes. There are, for example, <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-api/src/com/intellij/openapi/vcs/ui/TextFieldAction.java">TextFieldAction</a> and <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/util/ui/JButtonAction.kt">JButtonAction</a>. Search for [Button|Text|..]Action in <abbr title="Meta Programming System">MPS</abbr> to find such instances and look for existing components in the <abbr title="User Interface">UI</abbr> that look like the components that you need.</p>
+<p>The general documentation for IntelliJ actions is located at <a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Actions | IntelliJ Platform Plugin SDK</a></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How to make messages in the <a href="https://www.jetbrains.com/help/mps/logging.html">messages view</a> clickable?</p>
+<p>Note: technically, the messages view is unrelated to the IntelliJ platform but rather an <abbr title="Meta Programming System">MPS</abbr> tool. The message statement has a throwable parameter that can be used to attach exceptions. In the generator, there is <code>genContext.show error &lt;messageText&gt; -&gt; &lt;node&gt;</code> which takes a message and a node. In <abbr title="Meta Programming System">MPS</abbr> 2022.3 there is also support for a <code>hintObject</code> in the message statement so that you can jump directly to a node, model, or module.</p>
+</div>
 <h2 id="message-bus-and-listeners-message-interface">Message bus and listeners (message interface)<a class="headerlink" href="#message-bus-and-listeners-message-interface" title="Permanent link">&para;</a></h2>
 <p>Reference:</p>
 <ul>
@@ -3561,7 +3571,7 @@ You don&rsquo;t have to store and remove each listener you added, you can just d
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3053,8 +3053,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3664,6 +3664,28 @@ Can I do something similar in property macros? For those, there is no <em>output
 <li><a href="https://specificlanguages.com/posts/2022-04/22-cross-model-generation/">What is cross-model generation and why do you care?</a>(<em>Specific Languages&rsquo; blog</em>)</li>
 </ul>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How to get rid of errors for missing generator dependencies?</p>
+<p>If you use a generation plan, you can add those languages to the end of the generation plan or create a new plan
+<em>ignoredLanguages</em> that you add to your existing plan. When languages don&rsquo;t generate anything, their generators should also
+be deleted. Two tickets with some more information: <a href="https://youtrack.jetbrains.com/issue/MPS-32687"><abbr title="Meta Programming System">MPS</abbr>-32687</a>, <a href="https://youtrack.jetbrains.com/issue/MPS-33874"><abbr title="Meta Programming System">MPS</abbr>-33874</a></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you keep some context when using the <code>$LOOP$</code> macro in the generator?</p>
+<p>There are a few solutions when you want to save additional information: you can use the <code>VAR</code> macro which introduces one or more named values into the generator context, which can then be obtained from the <code>genContext</code>. You can save information in the session/step/transient object which can also be accessed through <code>genContext</code> (this is, for example, a parameter in the <code>$COPY_SRC$</code> macro). When you use the <code>$CALL</code> macro to call a template, you can call the template with parameters. You can also use <code>node/.putUserObject</code> and <code>node/.getUserObject</code> to store additional Java objects directly in nodes.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What is the best way to preserve SModelAttributes when weaving in a new node during generation? The newly weaved-in node does not contain the <code>SModelAttributes</code> from the input and I <abbr title="abstract module">am</abbr> looking for a way to add these to the output node.</p>
+<p>Weaving isn’t reduction so <abbr title="Meta Programming System">MPS</abbr> doesn’t know if the new node should have the attributes or not. MPS_SRC is the best way as you have input and output available.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What is an alias for a generator?</p>
+<p>It is just an additional qualifier to distinguish the generator from other generators for the same language.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Is there something similar to the <code>outputNode</code> in reference macros in property macros?</p>
+<p>No but you can try to use the post-processing function of a <code>$MAP_SRC$</code> macro.</p>
+</div>
 <h2 id="how-to-generate-xy">How to generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">What can be generated?</p>
@@ -3680,8 +3702,13 @@ pre/post-processing script in the generator by using an existing Java library su
 for Excel can be found <a href="https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi">here</a>.</p>
 </div>
 <div class="admonition hint">
-<p class="admonition-title">I want to create multi outputs for a language.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Use a dummy concept or a generation plan with a fork. This question is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
+<p class="admonition-title">I want to create multiple outputs for a language.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<ul>
+<li>You can use a non-root concept in your root mapping rule e.g. use the concept of the children in the root mapping rule. It will create multiple roots as long as the generated files have different names.</li>
+<li>Use a preprocessing script to create new root nodes (maybe a new concept if necessary) for the children and create a root mapping rule for the newly introduced concept.</li>
+<li>Use a dummy concept or a generation plan with a fork.</li>
+</ul>
+<p>This question is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you generate latex files?</p>
@@ -3766,6 +3793,17 @@ What can I do?</p>
 <p><a class="glightbox" href="../../img/long_string_improved_macro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="long string improved macro" src="../../img/long_string_improved_macro.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
+<div class="admonition question">
+<p class="admonition-title">How do I generate a unique numeric <abbr title="identification/identifier">id</abbr>?</p>
+<p><code>genContext.name from ("")0 in context (node)</code> works well for this.</p>
+<p>Note that the one-based version (<code>genContext.name from ("") in context (node)</code>) will yield an empty string in the first iteration. This is because it is designed to generate things like &ldquo;myVar&rdquo;, &ldquo;myVar1&rdquo;, &ldquo;myVar2&rdquo;.</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you report errors in the generator?</p>
+<p>Use the statement <code>genContext.show error</code> and attach the node as the second parameter. Don&rsquo;t just throw exceptions as people don&rsquo;t need so see fatal errors in the lower right corner when something in the generator goes wrong. The generator might not stop immediately and finish
+the current step when using this statement.</p>
+</div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you preview the generated text programmatically?</p>
@@ -3869,6 +3907,18 @@ How can I debug this?</p>
 <p>Remark 2: One potential source of problems could be the packaging of languages and generators. Because in the command line build generators might need to be loaded from packaged jars, any issues with that packaging could affect the generation. For example, as it currently may happen due to <a href="https://youtrack.jetbrains.com/issue/MPS-32026"><abbr title="Meta Programming System">MPS</abbr>-32026</a> that whole generator models with templates are not loaded and therefore not applied during the generation in the command line.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
+<div class="admonition question">
+<p class="admonition-title">When getting a warning/log message when building an <abbr title="Meta Programming System">MPS</abbr> model, I would like to jump to the source of the message.</p>
+<p>For model generation errors you can enable <em>Build</em> &rarr; <em>Check models</em> before generation to catch errors early.
+If you enable <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#savetransientmodels">save transient models</a>, you can, for example, click on textgeneration error messages and it will open the node in the transient model.
+There, you can `right-click the node -&gt; <em>Language debug</em> -&gt; <em>Reveal original node</em> to go to the original node where the error occurred.
+For other messages in the messages tool, sometimes there is a stack trace attached that can be found in the right-click menu of the message.
+Advanced: additional information for other internal exceptions:</p>
+<p>For other exceptions, such as <abbr title="Integrated Development Environment">IDE</abbr> fatal errors (lower right corner of the window) you can copy the error message from the dialog and go to <em>main menu</em> &rarr; <em>Analyze</em> &rarr; <em>Analyze stack trace</em>. It will provide links to the places in your project where the error happened.
+For internal exceptions of <abbr title="Meta Programming System">MPS</abbr> or the IntelliJ platform, you can do <a href="https://specificlanguages.com/articles/debugging/">remote debugging</a> (stop on exceptions) with <a href="https://github.com/JetBrains/MPS"><abbr title="Meta Programming System">MPS</abbr></a> and <a href="https://github.com/JetBrains/intellij-community">IntelliJ Community</a> sources locally cloned, so that you can jump to the exception directly.</p>
+<p>Regarding full-text search, you can try <em>edit</em> &rarr; <em>find</em> &rarr; <em>find text in project</em> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span>). All the node properties in the project are indexed, so it just searches those properties.</p>
+<p>If there are errors/warnings in the editor, you can do <em>Language Debug</em> &rarr; <em>Go to Rule Which Caused Error</em> from the context menu to find the code which produced the error. A similar feature is <em>Show Node Messages</em>, which allows copying/pasting the message.</p>
+</div>
 <h2 id="blog-posts">Blog posts<a class="headerlink" href="#blog-posts" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.f1re.io/mps-generators">Introduction <abbr title="Meta Programming System">MPS</abbr> Generators</a>(<em>F1RE&rsquo;s blog</em>)</li>
@@ -3893,7 +3943,7 @@ How can I debug this?</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

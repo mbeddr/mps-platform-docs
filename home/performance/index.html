@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3096,8 +3096,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3611,6 +3611,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <p>This page explains common bottlenecks regarding memory consumption and performance in <abbr title="Meta Programming System">MPS</abbr> in general and how to solve those problems.
 If you want to know about slow software in general (e.g. hardware-related slowness), read: <a href="https://www.inkandswitch.com/slow-software/">Slow Software | Ink &amp; Switch</a>.</p>
+<div class="admonition question">
+<p class="admonition-title">How are expensive model traversals handled in <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p>There is no <abbr title="Application Programming Interface">API</abbr> for indexing model traversal results (e.g. getParent(), getAncestors()) the way it is implemented in frameworks like Xtext.</p>
+<p>Find Usages of concepts is efficiently implemented though. There is a class<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager">FastNodeFinderManager</a> that is used internally which can efficiently return the list of instances of a concept for a model. The descendants of a concept are also cached in the <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache">ConceptDescendantsCache</a>.</p>
+<p>The indexing at startup collects <a href="https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java">some information</a> about <abbr title="Meta Programming System">MPS</abbr> models such as instances of concepts, imports and property values (used for the <a href="https://www.jetbrains.com/help/mps/find-text-in-project.html">Find Text in Node Properties</a> action). The <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">virtual files</a> that represent root nodes in the filesystem are probably also indexed.</p>
+<p>The initial indexing also integrates Base Language into the IntelliJ search functionality (<a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83">implementation in <abbr title="Meta Programming System">MPS</abbr></a>). When using <abbr title="Meta Programming System">MPS</abbr> as an IntelliJ plugin this should allow the normal search for <a href="https://www.jetbrains.com/help/idea/find-highlight-usages.html">usages</a> and maybe <a href="https://www.jetbrains.com/help/idea/structural-search-and-replace.html">structural search</a> to work with Base Language classes and interfaces.</p>
+</div>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
@@ -3704,7 +3711,7 @@ says <em><abbr title="Meta Programming System">MPS</abbr></em> because other Int
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

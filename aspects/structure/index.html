@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3046,8 +3046,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3623,13 +3623,19 @@ Whith this implementation, every change in the property names are always calcula
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">})</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Deleting references doesn&rsquo;t work when using the editor cell <abbr title="reference">ref</abbr>. presentation</p>
+<p>Example: <code>[&gt; thingref [&gt; ( % thing % -&gt; ref. presentation ) &lt;] &lt;]</code></p>
+<p>Ref presentation automatically uses the name of the interface <em>INamedConcept</em>. If you add <code>auto-deletable: true</code> to the cell and the cardinality is <code>[1]</code>, the name is deleted but the reference is not removed. When the cardinality is <code>[0..1]</code> the reference is deleted. This behavior is expected
+because in the first case, the reference is mandatory, in the second case it is optional.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

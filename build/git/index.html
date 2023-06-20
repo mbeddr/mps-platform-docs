@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3032,8 +3032,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3511,6 +3511,38 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p class="admonition-title">How can I go to the first commit in a project on GitHub?</p>
 <p>Use the book on the following page: <a href="http://farhadg.github.io/init/landing/">http://farhadg.github.io/init/landing/</a></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">During conflict resolution, what does <em>Resolve automatically and exit</em> do exactly?</p>
+<p>This button merges non conflicting changes in roots and in the <abbr title="metadata">meta</abbr> data.</p>
+<p>A) A change in roots is not conflicting if:</p>
+<ul>
+<li>there are <a href="https://www.jetbrains.com/help/mps/mergehints.html">merge hints</a></li>
+<li>the node ID <a href="https://www.jetbrains.com/help/mps/resolving-conflicts.html#cd808d10">changed</a></li>
+<li>the resolve <abbr title="information">info</abbr> <a href="https://www.jetbrains.com/help/mps/resolving-conflicts.html#e052970a">changed</a></li>
+</ul>
+<p>B) Meta data changes are:</p>
+<ul>
+<li>a dependency was deleted/added</li>
+<li>do not generate flag was set</li>
+<li>an engaged language on generated was added/removed</li>
+<li>an imported model was added/deleted</li>
+<li>a model attribute was changed (e.g. model user objects)</li>
+<li>a module dependency was added/deleted</li>
+<li>a used languages was added/deleted/changed</li>
+</ul>
+<p>Those are two different merge sessions. TODO: How does the automatic resolving works with the <abbr title="metadata">meta</abbr> data changes? (It seems like A and B are applied to the <abbr title="metadata">meta</abbr> models).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">When I shut down + change files on disk (e.g. git pull) + restart <abbr title="Meta Programming System">MPS</abbr>, it asks me if I want to reload the files from disks or use the cached models. Why?</p>
+<p>Excerpt from <abbr title="Meta Programming System">MPS</abbr> documentation:</p>
+<blockquote>
+<p><abbr title="Meta Programming System">MPS</abbr> automatically saves changes that you make in your files. Saving is triggered by various events, such as compiling, running, debugging, performing version control operations, closing a file or a project, or quitting the <abbr title="Integrated Development Environment">IDE</abbr>. Saving files can be also triggered by third-party plugins.</p>
+</blockquote>
+<p>Maybe an external change is done by accident e.g. the project is on a shared drive and someone else changes some files but not on purpose. You might also edit some <abbr title="Meta Programming System">MPS</abbr> files with a different editor to fix some issues, so there must be the option to decide which version to use. The feature itself comes from the IntelliJ platform, this is not <abbr title="Meta Programming System">MPS</abbr> specific:</p>
+<blockquote>
+<p>If an external process changes a file that was opened and unsaved in IntelliJ IDEA, it results in two conflicting versions of the file.</p>
+</blockquote>
+</div>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/arslanbilal/git-cheat-sheet">Git cheat sheet</a></li>
@@ -3545,7 +3577,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

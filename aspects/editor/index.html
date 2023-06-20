@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -850,6 +850,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <li class="md-nav__item">
   <a href="#inspector" class="md-nav__link">
     Inspector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ui-components" class="md-nav__link">
+    Other UI components
   </a>
   
 </li>
@@ -3060,8 +3067,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3502,6 +3509,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
+  <a href="#other-ui-components" class="md-nav__link">
+    Other UI components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#open-api" class="md-nav__link">
     Open API
   </a>
@@ -3573,6 +3587,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p><code>constant cell</code> supports the cell actions <code>LEFT, RIGHT, LOCAL</code><em><code>HOME/END,SELECT</code></em><code>RIGHT/LEFT, SELECT</code><em><code>LOCAL</code></em><code>HOME/END, COPY, PASTE, CUT</code> and <code>CLEAR_SELECTION</code> which it inherits from the internal label cell class. It has methods to validate the text (well, the only correct text is the specified text in the editor) and to synchronize the cell with the model (that means going back to the original text after editing the text).</p>
 <p><code>empty cell</code> inherits from the internal basic cell which supports only left and right transformations (<code>LEFT_TRANSFORM</code>, <code>RIGHT_TRANSFORM</code>). It also doesn&rsquo;t support the <code>editable</code> style sheet item which means no support for editing the text.</p>
 <p>In a nutshell, <code>empty cell</code> is a very stripped-down version of a <code>constant cell</code> and also has a somewhat different implementation because of the different base class.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">I have click actions in my language, and they seem to also trigger for right mouse clicks. Any way to prevent that generally or manually/programmatically detecting which mouse button was clicked?</p>
+<p>No, the click action is executed for the selected cell. Without the original MouseEvent that is not forwarded to the editor cell you won&rsquo;t get this information. The event can&rsquo;t be restored. It would be possible to register a new mouse listener for the editor component through an <a href="http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions">editor extension</a> that not only creates the click action for the selected cell but also saved the mouse button somewhere. The original implementation in the editor component can be found <a href="https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472">here</a>.</p>
 </div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
 <div class="admonition hint">
@@ -3773,6 +3791,16 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p class="admonition-title">How do you split child collections?</p>
 <p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in editor</a>(<em>Specific Languages&rsquo; blog</em>)</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can I show an editor element only if the edited node/<abbr title="subtraction">sub</abbr>-nodes are currently being edited/actively selected?</p>
+<p>You can impliment a cell that is similar to the cell <a href="http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058">EditorCell_MathEnd</a> in <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,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"
+    />
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</div>
 <h2 id="inspector">Inspector<a class="headerlink" href="#inspector" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a>(<em>Specific Languages&rsquo; blog</em>)</li>
@@ -3797,10 +3825,24 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p class="admonition-title">Highlighting of constraint errors in inspector doesn&rsquo;t work.</p>
 <p>Known bug (<a href="https://youtrack.jetbrains.com/issue/MPS-32350"><abbr title="Meta Programming System">MPS</abbr>-32350</a>). Pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> helps.</p>
 </div>
+<h2 id="other-ui-components">Other <abbr title="User Interface">UI</abbr> components<a class="headerlink" href="#other-ui-components" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">I <abbr title="abstract module">am</abbr> using <code>NodeHighlightManager.mark()</code> to highlight <abbr title="Abstract Syntax Tree">AST</abbr> nodes. <abbr title="Meta Programming System">MPS</abbr> then uses the provided color for the background of the cell, and a slightly darker color for an additional border. Is it possible to change this, i.e., only paint the background, but not the border?</p>
+<p>Yes, but you have to create a class that extends DefaultEditorMessage and overwrites the <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196">paintWithColor</a> method. The color of the border is defined on line <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203">203</a>. Instead of calling this method:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mark</span><span class="p">(</span><span class="n">SNode</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">messageText</span><span class="p">,</span><span class="w"> </span><span class="n">EditorMessageOwner</span><span class="w"> </span><span class="n">owner</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">mark</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DefaultEditorMessage</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">messageText</span><span class="p">,</span><span class="w"> </span><span class="n">owner</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>You have to initialize your message object and supply it to the mark method.</p>
+</div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you open the editor for a node programmatically?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">NavigationSupport</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">openNode</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">NavigationSupport</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">openNode</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
@@ -3815,7 +3857,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you get the font of an editor?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">nodeEditor</span><span class="p">.</span><span class="na">EditorSettings</span><span class="err">#</span><span class="n">getDefaultEditorFont</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">nodeEditor</span><span class="p">.</span><span class="na">EditorSettings</span><span class="err">#</span><span class="n">getDefaultEditorFont</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
@@ -3826,48 +3868,48 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get the text of an EditorCell programmatically?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">EditorCell</span><span class="p">.</span><span class="na">renderText</span><span class="p">().</span><span class="na">getText</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">EditorCell</span><span class="p">.</span><span class="na">renderText</span><span class="p">().</span><span class="na">getText</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find <abbr title="output">out</abbr> if an editor cell is read-only?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">ReadOnlyUtil</span><span class="p">.</span><span class="na">isCellsReadOnlyInEditor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">editorComponent</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">singleton</span><span class="o">&lt;</span><span class="n">EditorCell</span><span class="o">&gt;</span><span class="p">(</span><span class="n">editorCell</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">ReadOnlyUtil</span><span class="p">.</span><span class="na">isCellsReadOnlyInEditor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">editorComponent</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">singleton</span><span class="o">&lt;</span><span class="n">EditorCell</span><span class="o">&gt;</span><span class="p">(</span><span class="n">editorCell</span><span class="p">))</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get an editor for a node as a Java Swing component?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">HeadlessEditorComponent</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HeadlessEditorComponent</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">.</span><span class="na">getRepository</span><span class="p">());</span><span class="w"> </span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">component</span><span class="p">.</span><span class="na">editNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">return</span><span class="w"> </span><span class="n">component</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">HeadlessEditorComponent</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HeadlessEditorComponent</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">.</span><span class="na">getRepository</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">component</span><span class="p">.</span><span class="na">editNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">return</span><span class="w"> </span><span class="n">component</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get a <em>Project</em> instance for an <em>ActionEvent</em>?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">button</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">Project</span><span class="w"> </span><span class="n">mpsProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UiUtils</span><span class="p">.</span><span class="na">getMpsProjectFromActionEvent</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">button</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="n">Project</span><span class="w"> </span><span class="n">mpsProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UiUtils</span><span class="p">.</span><span class="na">getMpsProjectFromActionEvent</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get the selection/selected node in the editor?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectedNode</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectedNode</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you select a node in the editor?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">setSelection</span><span class="o">/</span><span class="n">pushSelection</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1">// or</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">getNodeEditorComponent</span><span class="p">().</span><span class="na">selectNode</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">setSelection</span><span class="o">/</span><span class="n">pushSelection</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="c1">// or</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">getNodeEditorComponent</span><span class="p">().</span><span class="na">selectNode</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
@@ -3876,13 +3918,13 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you programmatically collapse editor cells?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="w"> </span><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">fold</span><span class="p">()</span><span class="o">/</span><span class="n">unfold</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="c1">// You can check if is foldable by calling:</span><span class="w"></span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">isFoldable</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w"> </span><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">fold</span><span class="p">()</span><span class="o">/</span><span class="n">unfold</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// You can check if is foldable by calling:</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">isFoldable</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
@@ -3892,6 +3934,10 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <p>In my code, I want to react to this editor-close event. Is there a way to implement a callback or hook which is called when an editor tab is closed?</p>
 </blockquote>
 <p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example</a>).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How can I customise the behaviour when pressing the <span class="keys"><kbd class="key-tab">Tab</kbd></span> key in the editor?</p>
+<p>You can specify the action <code>NEXT</code> in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a> to override this behavior (<a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809"><abbr title="Meta Programming System">MPS</abbr> source reference</a>). The default action is declared <a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57">here</a> with its default implementation in <a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401">NodeEditorActions</a>(it jumps to the next editable leaf of the editor cell tree).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a utility class related to editor hints?</p>
@@ -3917,7 +3963,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

@@ -396,7 +396,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -3032,8 +3032,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3568,6 +3568,29 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What are module versions and how/why can other modules depend on modules with different version then the current module version?</p>
+<p>You start with language and module version 0.
+Reasons why the language version of a language updates:</p>
+<ul>
+<li>a new migration was added manually
+-you&rsquo;ve executed the action &ldquo;Correct Language Version&rdquo;</li>
+<li>you&rsquo;ve set it manually in the module properties</li>
+<li>a concept was moved to a different language through the refactoring menu and a migration script was written</li>
+</ul>
+<p>Reasons why the module version of a language updates:</p>
+<ul>
+<li>you&rsquo;ve set it manually in the module properties</li>
+<li>a concept/property/link was moved to a different language through the refactoring menu and a refactoring log was written</li>
+</ul>
+<p>Reason why both versions don&rsquo;t update:</p>
+<ul>
+<li>the language was renamed</li>
+<li>nodes/models are moved to a different solution</li>
+</ul>
+<p>The module version of a solution can&rsquo;t change automatically. I also don&rsquo;t know why you would change it manually. Devkits don&rsquo;t even have the option to change the module version.
+A good example for a language with different language and module versions is <ins>jetbrains.mps.<abbr title="language">lang</abbr>.feedback.problem.scopes</ins> (language: 0, module: 1) because it only has a refactoring step but no other migrations.</p>
+</div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration</a>(<em>Specific Languages&rsquo; blog</em>)</li>
@@ -3590,7 +3613,7 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>

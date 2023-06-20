@@ -391,7 +391,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/programmer_knowledge/" class="md-tabs__link">
+      <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -2989,8 +2989,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
     <li class="md-nav__item">
-      <a href="../../reference/programmer_knowledge/" class="md-nav__link">
-        Programmer knowledge
+      <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+        Being a good developer
       </a>
     </li>
   
@@ -3593,6 +3593,14 @@ We usually have a <code>./gradlew setup</code> task in our projects that replace
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <div class="admonition question">
+<p class="admonition-title">Can I configure <abbr title="Meta Programming System">MPS</abbr> path variables per project?</p>
+<p>No, this is not possible. Most of the time, this problem arises, when multiple clones of the same project should be opened with <abbr title="Meta Programming System">MPS</abbr>.
+It is possible to create localized <abbr title="Meta Programming System">MPS</abbr> configurations that enable running multiple independent instances of various <abbr title="Meta Programming System">MPS</abbr> versions.
+For Linux you can use <a href="https://github.com/nkoester/mps-zookeeper">nkoester/mps-zookeeper</a>.</p>
+<p>As a general solution, you can download multiple instances of <abbr title="Meta Programming System">MPS</abbr> and edit the following paths in <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties"><abbr title="binary">bin</abbr>/idea.properties</a>: <em>idea.<abbr title="configuration">config</abbr>.path</em>, <em>idea.system.path</em>, <em>idea.plugins.path</em> and <em>idea.log.path</em>.
+When you have a repository <abbr title="repository">repo</abbr>, you can, for example, replace the name of the <abbr title="Meta Programming System">MPS</abbr> version with repo1, repo2, repo3, or a different naming scheme.</p>
+</div>
+<div class="admonition question">
 <p class="admonition-title">Why is <abbr title="Meta Programming System">MPS</abbr> shipped with <abbr title="JetBrains Runtime">JBR</abbr> instead of using an installed <abbr title="Java Development Kit">JDK</abbr>/<abbr title="Java Runtime Environment">JRE</abbr>?</p>
 <p><abbr title="JetBrains Runtime">JBR</abbr> is a fork of OpenJDK with specific bug fixes and improvements for JetBrains IDEs. More <abbr title="information">info</abbr> can be found in <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/JetBrains/JetBrainsRuntime" title="GitHub Repository: JetBrains/JetBrainsRuntime">JetBrains/JetBrainsRuntime</a>. In some of the platform build scripts the environment variable <code>JB_JAVA11_HOME</code> can be used to set the <abbr title="Java Development Kit">JDK</abbr> home.
 For older <abbr title="Meta Programming System">MPS</abbr> versions that used Java 8, there was the environment variable <code>JB_JAVA8_HOME</code>.</p>
@@ -3612,7 +3620,7 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>
