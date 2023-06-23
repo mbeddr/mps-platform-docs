@@ -7,6 +7,11 @@ alias: ux
 
 # User experience and user interfaces
 
+!!! question "How can I start learning about user experience?"
+
+    The [articles](https://www.nngroup.com/articles/) of the Nielsen Norman Group are good. There are [study guides](https://www.nngroup.com/topic/study-guide/)
+    consisting of articles and videos that deal with different topics such as UX basics, psychology for UX, visual design and UX writing.
+
 ??? question ":fontawesome-solid-flask: Why do my users ignore certain tools such as the [context action tool](https://www.jetbrains.com/help/mps/context-actions-tool.html)?"
 
     According to [Fitt's law](https://www.wikiwand.com/en/Fitts%27s_law), the time required to move to a target area is a function of the distance to the target divided by the width of the target. The target area in our case is the button that opens the tool window.

@@ -42,7 +42,7 @@ issue belongs to. Most of the time, the package name tells you the correct proje
 
 ## MPS (YouTrack)
 
-This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue.
+This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue. YouTrack follows the [CommonMark specification](http://spec.commonmark.org/0.30/) with extensions that support key features like autolinks and tables: [YouTrack Markdown Reference](https://issues.hibernatingrhinos.com/markup)
 
 - [open critical/show-stopper issues](https://youtrack.jetbrains.com/issues/MPS?q=%23Critical%20%23Show-stopper%20%20%23Open%20)
 - [open critical/major issues](https://youtrack.jetbrains.com/issues/MPS?q=Priority:%20Major%20Priority:%20Critical%20%23Open%20)

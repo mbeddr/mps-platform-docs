@@ -47,6 +47,11 @@ The editor aspect defines the projectional editor of a concept.
 
     No, the click action is executed for the selected cell. Without the original MouseEvent that is not forwarded to the editor cell you won't get this information. The event can't be restored. It would be possible to register a new mouse listener for the editor component through an [editor extension](http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions) that not only creates the click action for the selected cell but also saved the mouse button somewhere. The original implementation in the editor component can be found [here](https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472).
 
+!!! question "I want to create a DSL using diagrams or a visual programming language. Are there any inspirations?"
+
+    Have a look at [Visual Programming Languages - Snapshots | interfacevision.com](http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/). This page has a lot of examples for visual programming languages
+    dating back to 1963 up to recent languages like Scratch. Diagrams are supported by {{ mps_extensions() }}([documentation](https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/)) and can be used as the base building block of a new language.
+
 ## Menus
 
 !!! hint "Explain the different menu-related terms."
