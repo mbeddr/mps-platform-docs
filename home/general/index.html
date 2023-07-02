@@ -524,6 +524,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           
         
+          
+        
       
       
         
@@ -647,6 +649,138 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <a href="../trouble_shooting_guide/" class="md-nav__link">
         Trouble shooting guide
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+          Overcoming obstacles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Overcoming obstacles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/overcoming_obstacles/" class="md-nav__link">
+        Introduction to overcoming obstacles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/understanding_the_problem/" class="md-nav__link">
+        Understanding the problem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/debugging_problems/" class="md-nav__link">
+        Debugging problems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/syntax_problems/" class="md-nav__link">
+        Syntax problems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/thinking_problems/" class="md-nav__link">
+        Thinking problems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overcoming_obstacles/general_tips/" class="md-nav__link">
+        General tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3594,11 +3728,13 @@ We usually have a <code>./gradlew setup</code> task in our projects that replace
 </details>
 <div class="admonition question">
 <p class="admonition-title">Can I configure <abbr title="Meta Programming System">MPS</abbr> path variables per project?</p>
-<p>No, this is not possible. Most of the time, this problem arises, when multiple clones of the same project should be opened with <abbr title="Meta Programming System">MPS</abbr>.
+<p>No, this is not possible. Most of the time, this problem arises, when multiple instances (e.g. different branches) of the same project should be opened with <abbr title="Meta Programming System">MPS</abbr>.
 It is possible to create localized <abbr title="Meta Programming System">MPS</abbr> configurations that enable running multiple independent instances of various <abbr title="Meta Programming System">MPS</abbr> versions.
 For Linux you can use <a href="https://github.com/nkoester/mps-zookeeper">nkoester/mps-zookeeper</a>.</p>
 <p>As a general solution, you can download multiple instances of <abbr title="Meta Programming System">MPS</abbr> and edit the following paths in <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties"><abbr title="binary">bin</abbr>/idea.properties</a>: <em>idea.<abbr title="configuration">config</abbr>.path</em>, <em>idea.system.path</em>, <em>idea.plugins.path</em> and <em>idea.log.path</em>.
-When you have a repository <abbr title="repository">repo</abbr>, you can, for example, replace the name of the <abbr title="Meta Programming System">MPS</abbr> version with repo1, repo2, repo3, or a different naming scheme.</p>
+When you have a repository &ldquo;<abbr title="repository">repo</abbr>&rdquo;, you can, for example, replace the name of the <abbr title="Meta Programming System">MPS</abbr> version with repo1, repo2, repo3, or a different naming scheme.
+When you are using <a href="https://specificlanguages.com/articles/remote-debugging/">remote debugging</a>, make sure to use different ports for the <abbr title="Meta Programming System">MPS</abbr>
+instances (e.g.5005, 5006&hellip;500n) or <abbr title="Meta Programming System">MPS</abbr> won&rsquo;t start at all.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Why is <abbr title="Meta Programming System">MPS</abbr> shipped with <abbr title="JetBrains Runtime">JBR</abbr> instead of using an installed <abbr title="Java Development Kit">JDK</abbr>/<abbr title="Java Runtime Environment">JRE</abbr>?</p>
@@ -3620,7 +3756,7 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 2, 2023</span>
       
     
   </small>
