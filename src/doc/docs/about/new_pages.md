@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## July 2023
+
+- [Home: Overcoming obstacle](overcoming_obstacles.md)
+
 ## June 2023
 
 - [Reference: Being a good developer](being_a_good_developer.md)

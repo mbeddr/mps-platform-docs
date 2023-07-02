@@ -1,3 +1,7 @@
+---
+alias: mpsutils_common
+---
+
 # Common
 
 > ^^com.mbeddr.mpsutil.common^^

@@ -5,6 +5,7 @@ tags:
 - general
 - beginner
 - troubleshooting
+alias: general
 ---
 
 !!! question "Who is MPS for?"
@@ -154,12 +155,14 @@ tags:
 
 !!! question "Can I configure MPS path variables per project?"
 
-    No, this is not possible. Most of the time, this problem arises, when multiple clones of the same project should be opened with MPS.
+    No, this is not possible. Most of the time, this problem arises, when multiple instances (e.g. different branches) of the same project should be opened with MPS.
     It is possible to create localized MPS configurations that enable running multiple independent instances of various MPS versions.
     For Linux you can use [nkoester/mps-zookeeper](https://github.com/nkoester/mps-zookeeper).
     
     As a general solution, you can download multiple instances of MPS and edit the following paths in [bin/idea.properties](https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties): *idea.config.path*, *idea.system.path*, *idea.plugins.path* and *idea.log.path*.
-    When you have a repository repo, you can, for example, replace the name of the MPS version with repo1, repo2, repo3, or a different naming scheme.
+    When you have a repository "repo", you can, for example, replace the name of the MPS version with repo1, repo2, repo3, or a different naming scheme.
+    When you are using [remote debugging](https://specificlanguages.com/articles/remote-debugging/), make sure to use different ports for the MPS
+    instances (e.g.5005, 5006...500n) or MPS won't start at all.
 
 !!! question "Why is MPS shipped with JBR instead of using an installed JDK/JRE?"
 

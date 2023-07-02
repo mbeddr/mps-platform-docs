@@ -2,6 +2,7 @@
 title: Generator aspect
 tags:
 - aspect
+alias: generator_aspect
 ---
 
 # Generator aspect

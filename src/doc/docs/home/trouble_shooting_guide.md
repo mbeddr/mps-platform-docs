@@ -7,7 +7,8 @@ tags:
 # Troubleshooting guide
 
 This is a non-exhaustive list of common problems with MPS and platform projects. It is assumed that Gradle is used for building the project.
-For general MPS problems, read [Finding your way out](https://www.jetbrains.com/help/mps/finding-your-way-out.html)first.
+For general MPS problems, read [Finding your way out](https://www.jetbrains.com/help/mps/finding-your-way-out.html) first.
+If you are still stuck with your problem, read [overcoming obstacles](overcoming_obstacles.md) next.
 
 ## MPS and platforms
 
