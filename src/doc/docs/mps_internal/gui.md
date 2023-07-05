@@ -10,6 +10,14 @@ tags:
 - [Fixing ugly trees](https://specificlanguages.com/posts/2022-05/18-fixing-ugly-trees){{ blog('sl') }}
 - [Centering dialogs](https://specificlanguages.com/posts/2022-05/24-centering-dialogs/){{ blog('sl') }}
 
+## Swing components
+
+- Use components from the IntelliJ platform. The
+  IntelliJ Platform Plugin SDK mentions [some more components](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html). Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.
+- Capitalization: most of the short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (*a*, *an*, *the*, *and*, *or*, *so*, *yet*, etc.), that don't appear as the first or last word.
+  If the text isn't short, then you should use the capitalization used in ordinary prose (sentence capitalization) instead.
+- Read the [Swing tutorials](https://docs.oracle.com/javase/tutorial/uiswing/index.html) to get a better understanding of the components.
+
 !!! question "Where can you find an overview of the user interface?"
     It can be found in the IntelliJ IDEA [documentation](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html).
     A more technical explanation can be found in the [IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/user-interface-components.html).
