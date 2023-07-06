@@ -1,4 +1,5 @@
 ---
+status: deprecated
 tags:
 - mbeddr
 - guide
