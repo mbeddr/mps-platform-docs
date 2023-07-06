@@ -28,7 +28,8 @@ theme:
     - search.share
     - announce.dismiss
     - content.code.copy
-
+    - navigation.prune
+  
   custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.png
