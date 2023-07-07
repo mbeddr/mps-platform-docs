@@ -1822,13 +1822,24 @@ adding and removing children or value changes of properties.</p>
 <p class="admonition-title">Are they executed synchronously or asynchronously?</p>
 <p>They are executed synchronously.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What are read world examples where listeners are used?</p>
+<ul>
+<li>update other nodes when children are removed or added</li>
+<li>add missing references when the model changes</li>
+<li>update components that previews nodes</li>
+<li>remove cache entries when a nodes is removed</li>
+<li>calculate IDs or updated calculated hashes when the model changes</li>
+<li>populating the list of results when the specified scope of a node changes that fetches information from the model</li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2023</span>
       
     
   </small>
