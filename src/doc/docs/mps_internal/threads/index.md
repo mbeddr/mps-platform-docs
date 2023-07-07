@@ -4,7 +4,7 @@ tags:
 - intellij
 - ui
 ---
-TODO: write action also automatically read. Can't upgrade read lock to write lock
+
 # Threading
 
 Regardless of the calling thread, writing and reading MPS models always need to be performed holding an appropriate lock.
