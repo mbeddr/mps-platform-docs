@@ -27,7 +27,7 @@ resolves the MPS dependency from the *mps* configuration and copies it to this f
 
 - The *artifacts* folder contains the generated files of the Ant scripts. This includes the compiled MPS plugins as well as the
 build-all script and the plugin for the tests.
-- The *config* folder contains nothing except an empty *ssl* folder (TODO: where does this folder come from?)
+- The *config* folder contains is the IntelliJ IDEA configuration directory that contains user-defined IDE settings, such as keymaps, color schemes, custom VM options, platform properties, and so on. For MPS, only an empty SSl subfolder exists.
 - The *dependencies* folder contains the downloaded dependencies of the project. In this case, it contains the mbeddr platform + MPS-extensions.
 - The *distributions* folder contains the generated artifacts of the languages and tests as zip folders.
 - The *junitreport* folder contains the results of the test execution as an HTML report (*index.html*).
