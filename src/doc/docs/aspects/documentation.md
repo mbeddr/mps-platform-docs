@@ -15,6 +15,8 @@ This aspect is contributed by the language ^^com.mbeddr.doc^^ in {{ mbeddr() }}.
 Documented Concept* while defining a new section as part of a chapter, the documentation for this concept will be shown
 in the *Documentation* tool at the bottom part of the screen.
 
+![mbeddr documentation tool](mbeddr_documentation_tool.png)
+
 !!! question "How do you export the documentation?"
 
     Click *make* or *rebuild* in the menu of the model that contains the documentation. A new folder *doc_gen* will get generated.
