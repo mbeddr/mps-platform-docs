@@ -5,9 +5,7 @@
 > ^^com.mbeddr.mpsutil.buildassistant^^
 
 This language adds actions to make or rebuild models/modules or projects and also includes their
-dependencies.
-
-TODO: Do the official actions already provide the same functionality?
+dependencies. They don't have shortcuts and can only be invoked through the *Find Actions* menu.
 
 ## Generic actions
 
