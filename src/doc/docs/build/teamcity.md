@@ -51,3 +51,14 @@ Although all these repositories use Gradle for build management, TeamCity has a 
 
 9 agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and the cloud). The agents are running Linux, except one agent which is running
 Windows 10 and one agent that is running Mac OS X, version 10.15.7.
+
+## Docker
+
+{{ mbeddr() }}, {{ mps_extensions() }}, {{ iets3() }}
+
+Docker is a Linux container technology that the platform projects use a lot. You can think of it as a lightweight virtual machine. Besides the container runtime, Docker also includes the tools required to build preconfigured images that are then executed in the container.
+These images are built from a Dockerfile.
+
+Essentially, everything in the infrastructure is provisioning using docker from the TeamCity frontend over the database to the build agent. For the building agent, this approach allows us to keep the building agents consistent with their installed software and their versions. The Dockerfile for our general-purpose agents can be found on GitHub. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.
+
+The complete docker configuration for our build server is hosted on GitLab. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we are using docker-compose as an orchestration tool. 

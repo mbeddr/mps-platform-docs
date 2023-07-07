@@ -96,13 +96,3 @@ tags:
 
     Specific Languages blog: [Exit code 137](https://specificlanguages.com/posts/2022-07/14-exit-code-137)
 
-## Docker
-
-{{ mbeddr() }}, {{ mps_extensions() }}, {{ iets3() }}
-
-Docker is a Linux container technology that the platform projects use a lot. You can think of it as a lightweight virtual machine. Besides the container runtime, Docker also includes the tools required to build preconfigured images that are then executed in the container.
-These images are built from a Dockerfile.
-
-Essentially, everything in the infrastructure is provisioning using docker from the TeamCity frontend over the database to the build agent. For the building agent, this approach allows us to keep the building agents consistent with their installed software and their versions. The Dockerfile for our general-purpose agents can be found on GitHub. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.
-
-The complete docker configuration for our build server is hosted on GitLab. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we are using docker-compose as an orchestration tool. 
