@@ -55,3 +55,9 @@ tags:
     There is MPS-22092 which describes this request.
 
     {{ answer_by('coolya') }}
+
+!!! question "Which useful builtin languages do not use the generator but only text generation?"
+
+    - ^^jetbrains.mps.baseLanguage.javadoc^^
+    - ^^jetbrains.mps.core.properties^^
+    - ^^jetbrains.mps.core.xml^^

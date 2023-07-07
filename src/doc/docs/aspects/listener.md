@@ -24,3 +24,12 @@ adding and removing children or value changes of properties.
 !!! question "Are they executed synchronously or asynchronously?"
 
     They are executed synchronously.
+
+!!! question "What are read world examples where listeners are used?"
+
+    - update other nodes when children are removed or added
+    - add missing references when the model changes
+    - update components that previews nodes
+    - remove cache entries when a nodes is removed
+    - calculate IDs or updated calculated hashes when the model changes
+    - populating the list of results when the specified scope of a node changes that fetches information from the model

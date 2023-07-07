@@ -22,3 +22,9 @@ tags:
 !!! question "How do you avoid merge conflicts?"
     
     [Avoiding merge conflicts](https://specificlanguages.com/posts/2022-02/01-avoiding-merge-conflicts/){{ blog('sl') }}
+
+!!! question "What are some real word use cases of merge hints?"
+
+    - accepting our node when it contains a calculated hash or calculated result
+    - accepting our node for nodes where the graphical representation changed (e.g. diagrams)
+    - accepting our node when it contains additional informations such as node attributes 
