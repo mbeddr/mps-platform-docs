@@ -1,12 +1,12 @@
 ---
-title: TextGen aspect
+title: TextGen Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# TextGen aspect
+# TextGen Aspect
 
 > The TextGen language aspect defines a model to text transformation.
 >

@@ -5,7 +5,7 @@ tags:
 
 # Tools
 
-## Context actions
+## Context Actions
 
 > ^^com.mbeddr.mpsutil.contextactions^^
 
@@ -14,7 +14,7 @@ tags:
 This language adds a tool with context-specific editor actions that can be navigated by the mouse. For more information about the
 JetBrains implementation, visit the page [Context actions tool | MPS](https://www.jetbrains.com/help/mps/context-actions-tool.html)
 
-## Editing guide
+## Editing Guide
 
 > ^^com.mbeddr.mpsutil.editingGuide^^
 
@@ -34,7 +34,7 @@ temporary model is created which contains the editable task.
 ![editing guide: exercise](editingguide_exercise.png)
 
 
-## Favourites plugin
+## Favourites Plugin
 
 > ^^com.mbeddr.mpsutil.favourites.plugin^^
 
@@ -45,7 +45,7 @@ The favourites view is implemented using the language ^^com.mbeddr.mpsutil.proje
 There's an action `Add to Favourites` to add a node to this view. The node can be removed by executing the action
 `Remove from Favourites`. Internally, the plugin is implemented using node annotations.
 
-## Generated artifacts review
+## Generated Artifacts Review
 
 > ^^com.mbeddr.mpsutil.genreview^^
 
@@ -71,7 +71,7 @@ a [GraphViz](https://graphviz.org/) SVG.
 
 ![example: graphstream](graphstream_example.png)
 
-## JUNG framework
+## JUNG Framework
 
 > ^^com.mbeddr.mpsutil.jung^^
 
@@ -114,14 +114,14 @@ This provides an integration of [PlantUML](https://plantuml.com/) with MPS. Watc
 To use it in your languages, implement the [IVisualizable](http://127.0.0.1:63320/node?ref=b4d28e19-7d2d-47e9-943e-3a41f97a0e52%2Fr%3A4903509f-5416-46ff-9a8b-44b5a178b568%28com.mbeddr.mpsutil.plantuml.node%2Fcom.mbeddr.mpsutil.plantuml.node.structure%29%2F3225038607917463880) interface in your language concept. Each concept can have several visualizations, called categories. The `getCategories()` method returns the list (just strings). The `getVisualization()` method then returns the actual visualization. It gets the user-requested category as an argument, as well as an empty VisGraph object. The `getVisualization()` method then has to fill the VisGraph with the actual visualization. This is done simply by using the `add()` method to build a native, textual PlantUML visualization. Check out the existing implementations of the interface to learn the details; in particular, There's a helper method on VisGraph that creates a URL for users to click in the graph: `createUrl(node)`.
 
 
-## Tool runner
+## Tool Runner
 
 > ^^com.mbeddr.mpsutil.toolrunner.plugin^^
 
 This solution provides an extension point ToolsSanityCheckerProvider that allows registering instances of [ToolsAvailabilityChecker](http://127.0.0.1:63320/node?ref=r%3Aeb55a79e-712e-453c-8ff8-d50d0340bc94%28com.mbeddr.mpsutil.toolrunner%29%2F8869103559931921994)
 This interface checks the availability of external tools and their proper configuration and can be called through `ToolsInstallationSanityChecker.check`. There's also a class [ToolRunnerBase](http://127.0.0.1:63320/node?ref=r%3Aeb55a79e-712e-453c-8ff8-d50d0340bc94%28com.mbeddr.mpsutil.toolrunner%29%2F4775168500935975079), a base class for running external tools. It supports running the tool with a progress indicator, a customizable timeout, and reading the (error) output.
 
-## Trace explorer
+## Trace Explorer
 
 > ^^com.mbeddr.mpsutil.traceExplorer^^
 

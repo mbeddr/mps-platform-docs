@@ -13,7 +13,7 @@ The headers link to explanations and examples for the corresponding design patte
 - [AbstractEditorBuilder](https://www.jetbrains.com/help/mps/editor-language-generation-api.html#languageruntime:%C2%A0abstracteditorbuilder)
 - [EditorConfigurationBuilder.java](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/configuration/EditorConfigurationBuilder.java)
 
-### [Factory method](https://refactoring.guru/design-patterns/factory-method)
+### [Factory Method](https://refactoring.guru/design-patterns/factory-method)
 
 - [AbstractContainerTest.java](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/tests/jetbrains/mps/nodeEditor/cells/collections/AbstractContainerTest.java)
 - [EditorCellFactory.java](https://github.com/JetBrains/MPS/blob/master/editor/editor-api/source/jetbrains/mps/openapi/editor/cells/EditorCellFactory.java)
@@ -89,7 +89,7 @@ The headers link to explanations and examples for the corresponding design patte
 - [State.java](https://github.com/JetBrains/MPS/blob/master/core/typesystemEngine/source/jetbrains/mps/newTypesystem/state/State.java)
 - [CheckpointState.java](https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/plan/CheckpointState.java)
 
-### [Template method](https://refactoring.guru/design-patterns/template-method)
+### [Template Method](https://refactoring.guru/design-patterns/template-method)
 
 ### [Command](https://refactoring.guru/design-patterns/command)
 

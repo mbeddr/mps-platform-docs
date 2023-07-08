@@ -1,12 +1,12 @@
 ---
-title: Documentation aspect
+title: Documentation Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Documentation aspect
+# Documentation Aspect
 
 - [documentation](http://mbeddr.com/files/documentationdocumentation.pdf)
 

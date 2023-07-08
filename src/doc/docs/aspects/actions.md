@@ -1,12 +1,12 @@
 ---
-title: Action aspect
+title: Action Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Action aspect
+# Action Aspect
 
 The action aspect defines node factories and copy/paste related handlers.
 

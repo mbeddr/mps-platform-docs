@@ -1,4 +1,4 @@
-# Baselanguage extensions
+# Baselanguage Extensions
 
 ## BLDoc
 

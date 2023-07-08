@@ -1,10 +1,10 @@
 ---
-title: Editor aspect
+title: Editor Aspect
 tags:
 - aspect
 ---
 
-# Editor aspect
+# Editor Aspect
 
 The editor aspect defines the projectional editor of a concept.
 
@@ -126,7 +126,7 @@ The editor aspect defines the projectional editor of a concept.
 
     Use the language ^^com.mbeddr.mpsutil.editor.querylist^^ from {{ mps_extensions() }}.
 
-## Editor declaration
+## Editor Declaration
 
 !!! question "Is there a disadvantage to use the indent layout instead of the indent cell mode?"
 
@@ -252,7 +252,7 @@ The editor aspect defines the projectional editor of a concept.
 
     Known bug (MPS-32350). Pressing ++f5++ helps.
 
-## Other UI components
+## Other UI Components
 
 !!! question "I am using `NodeHighlightManager.mark()` to highlight AST nodes. MPS then uses the provided color for the background of the cell, and a slightly darker color for an additional border. Is it possible to change this, i.e., only paint the background, but not the border?"
 

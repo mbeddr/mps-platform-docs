@@ -1,12 +1,12 @@
 ---
-title: Feedback aspect
+title: Feedback Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Feedback aspect
+# Feedback Aspect
 
 The feedback aspect defines custom messages to show to the user when an error or a warning is detected in the model.
 

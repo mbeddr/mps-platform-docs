@@ -6,7 +6,7 @@ tags:
 - ui
 ---
 
-# UI Patterns and Anti patterns
+# UI Patterns and Anti Patterns
 
 Go through your editors and check the following list.
 

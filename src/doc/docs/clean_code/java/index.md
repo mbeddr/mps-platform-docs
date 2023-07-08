@@ -23,17 +23,17 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 - Avoid hardcoded values.
 - Use lazy initialization if performance is [critical](http://www.javapractices.com/topic/TopicAction.do?Id=34) or use [caching](https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/) if necessary.
 
-## Utility and helper classes
+## Utility and Helper Classes
 - Utility class: they include only static methods and are stateless. Don't create an instance of such a class.
 - Helper class: they can be utility classes, or they can be stateful or require an instance. It can be any class whose design is to aid another class.
 - Try to make the name of the utility or helper class more specific (for example: *AdministrationHelper*, *LoginHelper* instead of *Helper*).
 
-## More tips
+## More Tips
 - If you use functional interfaces, use the [standard java ones](http://www.javapractices.com/topic/TopicAction.do?Id=277). If you want to understand the functional style, consult the page: [Understand the functional style](http://www.javapractices.com/topic/TopicAction.do?Id=274).
   - If you want to use newer Java features, have a look at [Modernize old code](http://www.javapractices.com/topic/TopicAction.do?Id=225).
 - Have a look at common sources of [complexity](https://web.archive.org/web/20210425130253/http://www.javapractices.com/topic/TopicAction.do?Id=287).
 
-## [Stackexchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
+## [Stack Exchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
 
 - [When do you use float and when do you use double](https://softwareengineering.stackexchange.com/questions/188721/when-do-you-use-float-and-when-do-you-use-double)
 - [What's wrong with circular references?](https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references)

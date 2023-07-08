@@ -57,7 +57,7 @@ Example: IETS3 call tree of functions
 
 [IEmpty](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F1049346859912912067) can be implemented to support empty lines. Error messages are automatically suppressed and the node is also not shown in the outline.
 
-#### Name related interfaces
+#### Name-Related Interfaces
 
 [IIdentifierNamedConcept](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7024921229555594291) can be used for concepts that should have valid identifiers. Check the [property constraint](http://127.0.0.1:63320/node?ref=r%3A7a2f88d6-4108-4d29-b499-cc4de14ea970%28com.mbeddr.core.base.constraints%29%2F7024921229555594296) to understand how it works.
 
@@ -125,7 +125,7 @@ Use the interface [IOptionallyTyped](http://127.0.0.1:63320/node?ref=r%3A66e07cb
 
 Nodes that want to be the root of [[kernelf#tracing|tracing]], should implement the interface [ITraceRoot](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F8505972469205863874)
 
-#### Custom types
+#### Custom Types
 
 Custom types must extend the concept [Type](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F7425695345928349204). If the type supports a default value (e.g. `false` for the boolean type and `0` for a numeric type), also implement the interface [ITypeSupportsDefaultValue](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F6932772747669856399).
 
@@ -147,7 +147,7 @@ Implement the interface [IToplevelExprContent](http://127.0.0.1:63320/node?ref=r
 
 When implementing custom operations for collections such as maps, lists and sets, use one of the provided concepts as the base concept (for example [NoArgCollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339795488) and [OneArgCollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283340020764)). If no suitable concept is available, implement one of the interfaces such as [ICollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339790458) and [IMapOneArgOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7757419675865128281). If this is still not possible, you can still implement [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) directly.
 
-## MPS-extensions
+## MPS-Extensions
 
 ### Richtext
 

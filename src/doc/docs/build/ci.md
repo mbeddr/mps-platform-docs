@@ -38,7 +38,7 @@ CI with MPS projects can provide some challenges:
   are installed. A common solution is doing [CI with Docker](https://docs.docker.com/build/ci/). When using the [modelcheck](https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check) plugin from the mps-gradle-plugin, additionally plugins might need to be loaded through *pluginsProperty* if your MPS languages depend on one of the core MPS plugins. This Gradle plugin starts MPS only with a bare minimum number of plugins.
 - MPS projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. This may require additional tools or plugins to compile, test, and deploy the generated code. Example: the Dockerfile that is used for building most of the MPS platforms, including mbeddr can be found [here](https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile).
 
-## Blog posts
+## Blog Posts
 
 - [Setting up CI with MPS: self-contained projects](https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/){{ blog('sl') }}
 - [Maturity levels of MPS deployment](https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/){{ blog('sl') }}

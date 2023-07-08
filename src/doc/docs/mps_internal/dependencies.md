@@ -29,7 +29,7 @@ It exports a Module Dependency again to be used by modules depending on this mod
 
 *Extends Scope* is a superset of *Default Scope*, for example, you never need to have both a *Default Scope* and an *Extends Scope* dependency on another module.
 
-### Extends scope for languages
+### Extends Scope for Languages
 
 *LanguageB* (containing *ConceptB*) must extend *LanguageA* (containing *ConceptA* and *ConceptInterfaceA*) if and only if
 
@@ -53,7 +53,7 @@ Another case is if *LanguageB* defines a generator outputting *ConceptA* and *La
 
 To be precise, it is possible to remove all errors flagged on behaviors and constraints in *LanguageB*. However, they aren't taken into account for *ConceptA*.
 
-### Extends scope for generators
+### Extends Scope for Generators
 
 *GeneratorB* (inside *LanguageB*, and containing *ConceptB*) must extend *GeneratorA* (inside *LanguageA*, and containing *ConceptA*), if and only if *GeneratorB*...
 
@@ -61,13 +61,13 @@ To be precise, it is possible to remove all errors flagged on behaviors and cons
 @from_file:mps_internal/diagrams/dependencies_6.puml
 ```
 
-## Implicit dependencies
+## Implicit Dependencies
 
 MPS adds some dependencies implicitly without listing them in the corresponding dialog.
 
 Warning: even if the dependencies described below are established implicitly, they aren't taken into account in every aspect of MPS. So if an error occurs, make sure you didn't rely on some implicit dependency. If in doubt, make the dependency explicit.
 
-### Implicit dependencies inherited by a generator from its language
+### Implicit Dependencies Inherited by a Generator From Its Language
 
 A Generator inherits some dependencies from the language where it's defined in:
 
@@ -77,11 +77,11 @@ A Generator inherits some dependencies from the language where it's defined in:
 
 Except in the case of generating a concept of a language that has a runtime solution, there's no requirement on the language's dependencies or *Used Languages* stemming from the generator.
 
-### Implicit exports of used language and language structure aspect
+### Implicit Exports of Used Language and Language Structure Aspect
 
 Both a *Used Language* and the language structure aspect implicitly make it possible to access the language's behavior methods. However, they don't export the complete behavior aspect again. For example, a Base Language class contained in the behavior Aspect isn't visible.
 
-### Implicit exports of runtime language settings
+### Implicit Exports of Runtime Language Settings
 
 Runtime solutions are
 
@@ -96,7 +96,7 @@ Accessory Models are
 
 Neither runtime solutions nor accessory models constitute a dependency from the language to the referenced solution or model.
 
-## Cyclic dependencies
+## Cyclic Dependencies
 
 Cyclic dependencies between modules should be avoided in general. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic *Extends Scope* dependency. Cycles between models in the same module are fine.
 Starting with MPS 2021.1, there's a higher chance that you could run into troubles with cyclic dependencies. The reason is the new Javax compiler that doesn't act as forgiving as the earlier one (ECJ).

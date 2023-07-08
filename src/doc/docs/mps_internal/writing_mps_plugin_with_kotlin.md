@@ -8,7 +8,7 @@ tags:
 
 When you are using Kotlin to write an MPS plugin, the guidelines for the [IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) apply.
 
-## Folder structure
+## Folder Structure
 
 The folder structure should look like this:
 
@@ -91,7 +91,7 @@ Don't forget to add dependencies to the MPS plugins in this file:
 </idea-plugin>
 ```
 
-## Links to sections in the documentation
+## Links to Sections in the Documentation
 
 - [Actions](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html): extend the class *AnAction*
 - [Tool window](https://plugins.jetbrains.com/docs/intellij/tool-windows.html#declarative-setup)
@@ -102,11 +102,11 @@ Don't forget to add dependencies to the MPS plugins in this file:
 
 For everything else, have a look at the [extension point and listener list](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html).
 
-## Building the plugin
+## Building the Plugin
 
 When you are ready, you can build the plugin by executing `./gradlew buildPlugin`. All the other tasks are explained on the page [Gradle IntelliJ plugin](https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html). Now there should be a folder `build/distributions` which contains the zipped plugin that can be installed through the MPS plugin manager.
 
-## Running the plugin
+## Running the Plugin
 
 Open the file `build.gradle.kts` in the `ide-plugin` folder and change the `intellij` block to use a local
 path and disable instrumentation of the code, e.g.:

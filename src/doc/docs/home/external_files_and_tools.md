@@ -4,7 +4,7 @@ tags:
 - tools
 ---
 
-## Import/export
+## Import/Export
 
 !!! question "How do you write an importer?"
 

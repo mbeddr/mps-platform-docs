@@ -1,12 +1,12 @@
 # Deprecated languages and solutions
 
-## Build utilities
+## Build Utilities
 
 > ^^com.mbeddr.mpsutil.buildutil^^
 
 !!! warning "This language was an attempt to automatically update build scripts during the build. It will be removed in the future."
 
-## Code completion menu
+## Code Completion Menu
 
 > ^^com.mbeddr.mpsutil.ccmenu^^
 
@@ -22,7 +22,7 @@ targets. The contributions were made in a plugin solution by creating a [CCMenuE
 !!! warning "This is an unfinished language that was probably intended to be used in ^^com.mbeddr.mpsutil.process^^. This language will be removed soon."
 
 
-## Gradle support
+## Gradle Support
 
 > ^^com.mbeddr.mpsutil.gradlesupport^^
 
@@ -30,20 +30,20 @@ This language was an attempt to create Gradle files from MPS. It has concepts fo
 text files, single lines, and multiple lines. If you want to generate text files, use one of the
 [text generator plugins](https://jetbrains.github.io/MPS-extensions/extensions/generator/plaintext-gen/) from {{ mps_extensions() }}.
 
-## HTTP support
+## HTTP Support
 
 > ^^com.mbeddr.mpsutil.httpsupport^^
 
 !!! warning "This was the old HTTP support plugin. Please use the language jetbrains.mps.ide.httpsupport instead."
 
 
-## Icon char
+## Icon Char
 
 > ^^com.mbeddr.mpsutil.iconchar^^
 
 !!! warning "This language was used to programmatically create icons but is deprecated. Please use the official [Icon description](https://www.jetbrains.com/help/mps/icon-description.html) language instead."
 
-## Language stats
+## Language Stats
 
 > ^^com.mbeddr.mpsutil.langstats^^
 
@@ -68,7 +68,7 @@ testgens 0
 LOC: 1962.1999999999998  
 ```
 
-## License manager
+## License Manager
 
 > ^^com.mbeddr.mpsutil.licensemanager.common^^
 
@@ -89,31 +89,31 @@ LOC: 1962.1999999999998
 The idea behind this language was to store text translations in properties files and load the through the Java [ResourceBundle](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ResourceBundle.html) class. The documentation for the language
 can be found [here as a PDF](../../files/multilingual.pdf) and is located in the virtual package ^^doc.com.mbeddr.mpsutil^^.
 
-## Node difference
+## Node Difference
 
 > ^^com.mbeddr.mpsutil.nodediff^^
 
 !!! warning "These actions were used to structurally compare two nodes and are deprecated. Please use the official action [Compare Two Nodes](http://127.0.0.1:63320/node?ref=r%3A5ec7bf64-acd2-448b-8f9b-ce1b8d920038%28jetbrains.mps.vcs.plugin%29%2F8199015172308449938) instead."
 
-## RCP configuration
+## RCP Configuration
 
 > ^^com.mbeddr.mpsutil.rcpconfig^^
 
 !!! warning "This solution contains an old build script for the mbeddr RCP. It is deprecated and will be removed soon."
 
-## Run configuration
+## Run Configuration
 
 > ^^com.mbeddr.mpsutil.runconfiguration^^
 
 !!! warning "This language was used as a workaround for accessing the debugged node in [breakpoint creators](http://127.0.0.1:63320/node?ref=r%3Af516737e-c915-4042-896e-de34190042b2%28jetbrains.mps.debugger.api.lang.structure%29%2F3157158168562217892). The expression is now officially supported, this language is deprecated and will be removed soon."
 
-## Test scope
+## Test Scope
 
 > ^^com.mbeddr.mpsutil.testScope^^
 
 !!! warning "This language is deprecated. Please use the official [testing scopes](https://www.jetbrains.com/help/mps/testing-languages.html#testingscopes) instead."
 
-## Var scope
+## Var Scope
 
 > ^^com.mbeddr.mpsutil.varscope^^
 

@@ -6,21 +6,21 @@ tags:
 
 These actions use the IntelliJ platform or access MPS models and need additional locks because they are running on a different thread. Especially MPS read and write locks should be available in every language aspect and manually locking isn't necessary.
 
-## Example of actions that require MPS locks
+## Example of Actions That Require MPS Locks
 
-### Write actions
+### Write Actions
 
 - reload/add/remove/modify
     - projects
     - modules
     - models
 
-### Read actions
+### Read Actions
 
 - resolve node references
 - read nodes/models/modules
 
-### Read actions in EDT
+### Read Actions in EDT
 
 - select a node in the tree view
 - clear the marks in the highlight manager
@@ -34,7 +34,7 @@ These actions use the IntelliJ platform or access MPS models and need additional
 - show the completion menu
 - re-highlight nodes
 
-## Examples of actions that require IDEA locks
+## Examples of Actions That Require Idea Locks
 
 Useful methods:
 
@@ -43,7 +43,7 @@ Useful methods:
 - Write action: `#!java Applicationmanager.getApplication.runWriteAction()`
 - Write action allowed: `#!java ApplicationManager.getApplication().assertWriteAccessAllowed()`
 
-### Write actions
+### Write Actions
 
 - VFS-related actions
     - refresh files
@@ -52,12 +52,12 @@ Useful methods:
 - paste data
 - create facets
 
-### Read actions
+### Read Actions
 
 - find files
 - get a list of file editors
 
-### Actions executed on EDT 
+### Actions Executed in EDT 
 
 They are executed in the lambda of `#!java ApplicationManager.getApplication().invokeLater/invokeAndWait)`.
 
@@ -74,7 +74,7 @@ They are executed in the lambda of `#!java ApplicationManager.getApplication().i
 - perform refactorings
 - unload models
 
-### Actions that are executed on a pooled thread
+### Actions That Are Executed on a Pooled Thread
 
 They are executed in the lambda of `#!java ApplicationManager.getApplication().executeOnPooledThread`
 

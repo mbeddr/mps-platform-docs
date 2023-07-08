@@ -1,12 +1,12 @@
 ---
-title: Scripts aspect
+title: Scripts Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Scripts aspect
+# Scripts Aspect
 
 > The scripts aspect lets you perform changes to your models in batches.
 >

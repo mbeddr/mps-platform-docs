@@ -1,12 +1,12 @@
 ---
-title: Dataflow aspect
+title: Dataflow Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Dataflow aspect
+# Dataflow Aspect
 
 > A language's data flow aspect allows you to find unreachable statements, detect unused assignments, or check whether a variable might not be initialized before it's read.
 > 

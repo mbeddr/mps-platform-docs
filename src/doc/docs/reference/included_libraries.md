@@ -1,8 +1,8 @@
-# Included Java libraries
+# Included Java Libraries
 
 The following list contains the Java libraries in the *lib* folder that are installed in MPS 2021.1 and later by default:
 
-## MPS runtime classes
+## MPS Runtime Classes
 
 - mps-tuples.jar
 - mps-closures.jar
@@ -14,7 +14,7 @@ The following list contains the Java libraries in the *lib* folder that are inst
 
 ## IntelliJ
 
-### Lib folder
+### Lib Folder
 
 - ant/lib
     - *ant.jar*: [Ant](https://ant.apache.org/)
@@ -45,7 +45,7 @@ The following list contains the Java libraries in the *lib* folder that are inst
 - *microba.jar*: [Microba controls](https://github.com/DataGrip/microba) (set of Java Swing components)
 - *miglayout-swing.jar*: [MigLayout](https://www.miglayout.com/) (Java layout manager)
 
-### plugins folder
+### Plugins Folder
 
 - *devkit/lib/devkit-jps.jar*
 - git4idea/lib
@@ -70,5 +70,9 @@ TODO
 TODO
 
 ## Changes in 2022.2
+
+TODO
+
+## Changes in 2022.3
 
 TODO

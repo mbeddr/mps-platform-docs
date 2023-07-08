@@ -4,11 +4,11 @@ tags:
 alias: mps_utils
 ---
 
-# Mbeddr MPS utilities
+# Mbeddr MPS Utilities
 
 This documentation gives an introduction to the subproject *com.mbeddr.mpsutil* of {{ mbeddr() }}.
 
-## Incremental computation
+## Incremental Computation
 
 > ^^com.mbeddr.mpsutil.incrementalcomputation^^
 

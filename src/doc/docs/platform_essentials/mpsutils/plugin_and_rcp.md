@@ -4,7 +4,7 @@ alias: mpsutils_plugin_rcp
 
 # Plugin and RCP
 
-## Actions filter
+## Actions Filter
 
 > ^^com.mbeddr.mpsutil.actionsfilter^^
 
@@ -24,7 +24,7 @@ The predefined actions profiles can be customized by the user in *preferences* -
 
 ![actions filter preferences](actionsfilter_preferences.png)
 
-## Preference form
+## Preference Form
 
 > ^^com.mbeddr.mpsutil.preferenceform^^
 
@@ -61,7 +61,7 @@ extensionPoint/HttpServerConfigChangeListener/.objects.forEach({~it => it.server
 
 The *after read* method is called after the state is loaded (for example: when the preference form is opened).
 
-## Wizard (process)
+## Wizard (Process)
 
 > ^^com.mbeddr.mpsutil.process^^
 

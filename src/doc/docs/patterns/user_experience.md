@@ -167,7 +167,7 @@ Illegal, invalid, bad (use incorrect or not valid instead)
 Abort, kill, terminate (use stop instead)
 Catastrophic, fatal (use serious instead)
 
-## Dark theme
+## Dark Theme
 
 Use the predefined colors in MPS or define your colors using the class [JBColor](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor) with the constructor `JBColor(light theme color, dark theme color)`. By using this class, it shouldn't be necessary to verify if the user is [using the Darcula theme](https://stackoverflow.com/c/itemis-mps/questions/426). The MPS colors already support the light and dark theme because they inherit from `JBColor`. As seen in the screenshot below, the colors can be different when using the dark theme (for example the white and black colors). Don't use hard-coded hex colors or the class [Color](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor).
 

@@ -9,7 +9,7 @@ tags:
 
 !!! warning "This document describes how the mbeddr team used Git for contributing changes in the past. The guide was written some years ago, so it might not reflect the workflow and guidelines of newer committers anymore."
 
-## Commit messages
+## Commit Messages
 
 In general, try to follow [this guide](https://chris.beams.io/posts/git-commit/) with some exceptions for minor changes:
 
@@ -147,7 +147,7 @@ All test code should be placed in a special folder in the file system:
 
 ## Build
 
-### Build script setup
+### Build Script Setup
 
 In mbeddr, different build scripts exist. They are used on the local machines for building the languages and on the build server for various build-related tasks, such as testing or packaging.
 This documentation guides you to following the mbeddr standards for setting up your *BuildProject* and integrating it into Mbeddr's build infrastructure.
@@ -178,7 +178,7 @@ folder sl-all.artifacts = $artifacts.root/mps-sl-all
 folder platform.artifacts = $artifacts.root/com.mbeddr.platform
 ```
 
-#### Type system tests
+#### Type System Tests
 
 When you want to build type system tests that require a specific path macro (for example: for specifying the project location inside your `TestInfo`), then you must create a *BuildFolderMacro* for this path macro.
 The name of this *BuildFolderMacro* should start with *mps\.macro*, followed by the name of the respective path macro.
@@ -198,7 +198,7 @@ To get your tests executed, you first need to add the *module-tests* plugin to y
 When you can't add the node *module-tests* to this section, import it from *jetbrains.mps.build.mps.tests.accessories*.
 Finally, create a *BuildMpsLayout_TestModules* (a _test configuration_) at the bottom of your *BuildProject* and list there all solutions that contain type system tests to be executed.
 
-#### Configurations for generator and compiler
+#### Configurations for Generator and Compiler
 
 To make sure code is generated and compiled the same way as in MPS, you have to add the following configurations (*BuildSource_JavaOptions* and *BuildMps_GeneratorOptions*) to your *BuildProject*'s project structure. Those configurations control the generator engine and the Java compiler to make sure we have the same build behavior as in the IDE.
 
@@ -221,7 +221,7 @@ java options <project default>
   copy resources false 
 ```
 
-### Building a release
+### Building a Release
 
 For preparing a mbeddr release, you can modify the version number that is set for the mbeddr plugins by overwriting the values of *major\.version*, *minor.version* and *build*(see screenshot below).
 However, you don't change these values inside the MPS build scripts, instead, either you change them in the global gradle script (*mbeddr.core/build.gradle*), or you overwrite them via the command line while spawning a new release build:

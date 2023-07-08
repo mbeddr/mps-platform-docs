@@ -1,10 +1,10 @@
 ---
-title: Structure aspect
+title: Structure Aspect
 tags:
 - aspect
 ---
 
-# Structure aspect
+# Structure Aspect
 
 The structure aspect contains all the concept and interface declarations of a language.
 

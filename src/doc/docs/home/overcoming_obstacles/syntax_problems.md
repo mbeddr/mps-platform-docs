@@ -1,18 +1,18 @@
-## [Syntax problems in the editor](https://pythonprinciples.com/blog/getting-unstuck/#syntax-problems)
+## [Syntax Problems in the Editor](https://pythonprinciples.com/blog/getting-unstuck/#syntax-problems)
 
 Because of the projectional editing approach, syntax problems don't exist in MPS. Sometimes it can be difficult to enter text though. A general approach that often works is to search for instances of a concept in the current project or globally to figure out how it works if there is no documentation provided for it.
 Open a concept --> right-click --> *Find Usage Settings* --> Check *Concept Instances* and select the scope in which you want to find instances of
 the concept.
 The following list contains some common reasons why you might be stuck entering text:
 
-### A [constraint](https://www.jetbrains.com/help/mps/constraints.html) prevents you from entering code
+### A [Constraint](https://www.jetbrains.com/help/mps/constraints.html) Prevents You From Entering Code
 
 If you know the name of the concept, you can navigate to the constraints aspect to search for the reasons. In general, it is recommended
 to allow users to enter text and tell them afterward that their action was incorrect or invalid at the inserted location than restrict them from
 entering text at all. From a usability perspective, there is nothing more frustrating than not being able to enter information and not knowing
 why you can't enter some text. Another solution would be to show text that can be entered in the code completion menu, in the side transformation popup, or some other place but disable the entries. Those entries then should contain descriptions that explain why the entries can't be selected at the moment.
 
-### A reference can't be entered because of its scope
+### A Reference Can’t Be Entered Because of Its Scope
 
 Please read the documentation about [scopes](https://www.jetbrains.com/help/mps/scopes.html) first.
 A common mistake is to not add an import to the model that contains the node that should be referenced. Depending on how the scope works, you might
@@ -22,7 +22,7 @@ References will still work if the target can't be found but will show an out-of-
 Partially related to scopes: sometimes it can be helpful to check why a certain item appears in the code completion menu to figure out why another item doesn't appear.
 Open the code completion menu and press the mentioned shortcut at the bottom of the list to open the [menu trace tool](https://www.jetbrains.com/help/mps/menu-trace-tool-window.html).
 
-### Style sheet items/actions prevent entering text
+### Style Sheet Items/Actions Prevent Entering Text
 
 For side transformations to work, cells must not have the *punctuation-left* or *punctuation-right* item set to false on the side where the side transformation should be available because otherwise text can't be entered because the cursor is not allowed at that position. To figure out the available input options and actions, right-click in the editor --> *Go To* --> *Editor Declaration* to open the corresponding editor of the concept. For more detailed information, right-click in the editor -> *Language Debug* --> *Show Cell in Explorer*. The cell explorer shows the full tree of editor cells that describe the currently opened editor.
 
@@ -32,7 +32,7 @@ On the right side, you can see basic properties of the editor cell such as the r
 The last section deals with style items such as the text color or the focus policy. Some properties that are often important concerning debugging are
 *punctuation-left*, *punctuation-right*, *editable* and *read-only* because they affect the ability to enter text.
 
-### The editing is supposed to be done differently
+### The Editing Is Supposed to Be Done Differently
 
 Many ways exist to change MPS models. You can enter text directly in the editor or use
 
@@ -48,16 +48,16 @@ Make sure to read the documentation or have a look at the implementation of the 
 you can always use the MPS console to modify a model. Click a cell in the editor, use the copy shortcut, and paste it into the console. The node should be an instance of
 PastedNodeReference and can be manipulated. For entering more complex nodes, the [quotation](https://www.jetbrains.com/help/mps/quotations.html) language can be used. Make sure to enter a curly brace in the console to start a Base Language statement block, so that you can enter multiple statements.
 
-## Syntax errors on compilation
+## Syntax Errors on Compilation
 
 Before the generation fails, make sure to run the model checker to check if the model is in a valid state. Errors can still happen for various reasons:
 
-### The generator of the language has a bug that must be fixed
+### The Generator of the Language Has a Bug That Must Be Fixed
 
 A common source of errors are cross-references to other models that are not handled
 correctly. Wrong assumptions about which parts of the model are optional and which parts are mandatory often lead to incorrectly generated code. Depending on the target of the generator, the target language can also help with catching errors through the type system. Even if the code is not generated as part of a template fragment, the code in the generator shouldn't display any errors. For example: when a method is called that needs an argument of type string, don't call it with a different argument type in the template even if the parameter is replaced by a reference macro anyway. Casting nodes to a different concept should also be done carefully. An *as* cast will return null if the node can't be cast to the referenced concept.
 
-### The Base Language code is not valid Java code
+### The Base Language Code Is Not Valid Java Code
 
 Despite the similarities between Java and Base Language, they are not fully compatible. Read the page [MPS Java compatibility](https://www.jetbrains.com/help/mps/mps-java-compatibility.html) in the MPS documentation. Build scripts can also have a section *java options* which lets you select the used compiler. Some compilers deal with cyclic dependencies in the generated Java code better than others. That also means that the compilation will fail with some of them when switching the compiler by accident.
 

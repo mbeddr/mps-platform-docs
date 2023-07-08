@@ -28,7 +28,7 @@ The icons can be used in this repository by inserting the corresponding code in 
 |-------------------|-----------------|--------------------|----------------------|-------------------------|
 | `:mps-ant-build:` | :mps-ant-build: | :mps-ant-build_2x: | :mps-ant-build_dark: | :mps-ant-build_2x_dark: |
 
-## Cell explorer
+## Cell Explorer
 
 | Code                               | Icon                             | Icon_2x                             | Icon_dark                            | Icon_2x_dark                            |
 |------------------------------------|----------------------------------|-------------------------------------|--------------------------------------|-----------------------------------------|

@@ -7,7 +7,7 @@ tags:
 - theory
 ---
 
-# Language design
+# Language Design
 
 ## Patterns
 
@@ -69,6 +69,7 @@ tags:
 - [The hidden layer between the Fachlichkeit and the -ilities](https://markusvoelter.medium.com/the-hidden-layer-between-the-fachlichkeit-and-the-ilities-7d850fde00bf){{ blog('mv') }}
 
 ## Programming
+
 - [Teaching the Basics of Programming to Domain Experts](https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86){{ blog('mv') }}
 - [Thinking vs. Coding](https://markusvoelter.medium.com/thinking-vs-coding-9d11a77e7ac7){{ blog('mv') }}
 - [ProgrammingBasics - How to think like a programmer](https://markusvoelter.github.io/ProgrammingBasics/)
@@ -80,13 +81,13 @@ tags:
 - [Using Language Workbenches and Domain-Specific Languages
   for Safety-Critical Software Development](http://voelter.de/data/pub/MPS-in-Safety-1.0.pdf){{ blog('mv') }}
 
-## Formal methods
+## Formal Methods
 
 - [An Overview of Program Analysis using Formal	Methods](http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf)
 - [Thoughts on Formal Verification and DSLs](https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48){{ blog('mv') }}
 - [Thoughts on X-by-Construction](https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024){{ blog('mv') }}
 
-### Z3 theorem prover
+### Z3 Theorem Prover
 
 - [Programming Z3 (tutorial)](https://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [Program verification with Z3 (course slides)](https://www.pm.inf.ethz.ch/education/courses/program-verification.html#:~:text=lec%C2%ADtures%20%26%20ex%C2%ADer%C2%ADcises)

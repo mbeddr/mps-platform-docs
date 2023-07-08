@@ -3,7 +3,7 @@ tags:
 - guide
 ---
 
-# Editing this guide
+# Editing This Guide
 
 This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 The markdown version is [Python-Markdown](https://python-markdown.github.io/). [This page](https://squidfunk.github.io/mkdocs-material/reference/) contains the reference for the material theme.

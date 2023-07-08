@@ -1,12 +1,12 @@
 ---
-title: Refactorings aspect
+title: Refactorings Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Refactorings aspect
+# Refactorings Aspect
 
 > Simple refactorings can be written using the ^^jetbrains.mps.lang.refactoring^^ language.
 >

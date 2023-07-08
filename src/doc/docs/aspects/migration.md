@@ -1,10 +1,10 @@
 ---
-title: Migration aspect
+title: Migration Aspect
 tags:
 - aspect
 ---
 
-# Migration aspect
+# Migration Aspect
 
 > To nicely support language evolution, migrations automatically upgrade client code to use the latest version of a language or multiple languages.
 >

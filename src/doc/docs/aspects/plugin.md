@@ -1,10 +1,10 @@
 ---
-title: Plugin aspect
+title: Plugin Aspect
 tags:
 - aspect
 ---
 
-# Plugin aspect
+# Plugin Aspect
 
 > Plugins are a way to integrate your code with the MPS IDE functionality.
 >
@@ -113,7 +113,7 @@ tags:
 
     {{ contribution_by('dbinkele') }}
 
-## Languages/features
+## Languages/Features
 
 !!! hint "I want to merge models."
 

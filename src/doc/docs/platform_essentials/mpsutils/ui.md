@@ -35,7 +35,7 @@ An example can be seen in the documentation language:
 
 In most cases, the language ^^de.itemis.mps.editor.celllayout^^ from {{ mps_extensions() }} can also be used for customizing the border and margins around a cell. Its documentation can be found [here](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/).
 
-### Margin cell/review
+### Margin Cell/Review
 
 > ^^com.mbeddr.mpsutil.margincell^^ and ^^com.mbeddr.mpsutil.review^^
 
@@ -48,7 +48,7 @@ To use the review notes, just include the respective language ^^com.mbeddr.mpsut
 
 To put your cells into the right margin, your cell must implement the IMarginCellContent interface. The editor of your cell may use the *margincell-cell-width* and *margincell-dashed-line-interval* style attributes to design the width and line style. You also have to have the actual margin cell on the root element of the editor. However, as illustrated by the CommentAnnotationContainer from the review language, you can use an annotation for this. Hence, margin comments can essentially be added to every model, without the model's language being aware of it.
 
-### Placeholder text list
+### Placeholder Text List
 
 > ^^com.mbeddr.mpsutil.placeholderTextList^^
 
@@ -59,7 +59,7 @@ The placeholder can be specified in the inspector by creating a query function f
 
 ### Diagrams
 
-#### Concept diagram
+#### Concept Diagram
 
 > ^^com.mbeddr.mpsutil.conceptdiagram^^
 
@@ -69,7 +69,7 @@ Create a new root node of type [ConceptDiagram](http://127.0.0.1:63320/node?ref=
 from the *Diagram Palette* to the diagram. If nodes from other languages are needed, add the language to the *languages*
 section.
 
-#### Dependencies diagram
+#### Dependencies Diagram
 
 > ^^com.mbeddr.mpsutil.dependenciesdiagram^^
 
@@ -79,7 +79,7 @@ Drag a model or module reference from the diagram palette to the diagram. Depend
 
 ![example: dependency diagram](dependencydiagram_example.png)
 
-## Date picker
+## Date Picker
 
 > ^^com.mbeddr.mpsutil.datepicker^^
 
@@ -91,7 +91,7 @@ A classic widget to select a date from a pop-up calendar.
 
 This is only the control, i.e. the developer handles synchronizing the control with the source of the shown date. We provide hooks executed before showing the calendar, for determining whether a date is valid, and to process a selected date.
 
-## Editor utils
+## Editor Utils
 
 > ^^com.mbeddr.mpsutil.editor.utils^^
 
@@ -101,7 +101,7 @@ The class [EditorRuntimeUtil](http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d
 - **collectAllOpenEditors(Project)**: returns all opened MPS editors
 - **collectAllOpenEditorComponents(Project)**: return all opened editor components
 
-## File picker
+## File Picker
 
 > ^^com.mbeddr.mpsutil.filepicker^^
 
@@ -179,7 +179,7 @@ The *options* object has the following setters:
   [TargetChooserScope](http://127.0.0.1:63320/node?ref=r%3A24b43531-125c-4436-b4b0-f3444d2173fd%28com.mbeddr.mpsutil.targetchooser%29%2F7547442689028637169) or a sequence of nodes (+ ancestor filter). By default, the specified modules scope
   with the specified model and node filers applied is used.
 
-## User styles
+## User Styles
 
 > ^^com.mbeddr.mpsutil.userstyles^^
 

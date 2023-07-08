@@ -11,7 +11,7 @@ The interpreter lets you interpret code on the fly. You can use it instead of th
 
 In the GIF you can see the interpreter executing a test case that contains assertions written with [KernelF](https://voelter.de/data/books/kernelf-designEvoUse.pdf). The MPS generator isn't involved in the execution at all.
 
-## Creating an interpreter
+## Creating an Interpreter
 
 To create a new interpreter, create a new solution that contains the interpreter and import the language `com.mbeddr.mpsutil.interpreter`.
 Make sure to set the solution kind to `Other` in the module properties.
@@ -48,7 +48,7 @@ The *$* expression returns the concept's type. It can be used for type mappings 
 
 The *context* expression can be used to access the interpreter configurations, the cache, and the root interpreter, and contains some other useful. It can, for example, be used to access the environment from a Java class by executing a method with the context as a parameter. Then the environment can be accessed by calling `context.getEnvironment()`. The environment can be nested by calling `push` and `pop`. The topmost environment in the stack is used. The is-evaluable expression (#?) can be used to check if an evaluator for a specific node is available.
 
-## Code coverage
+## Code Coverage
 
 There's also support for coverage that's displayed inside the editor. Code coverage checks which part of the code was executed by the interpreter. For more information, consult the [Wikipedia page](https://en.wikipedia.org/wiki/Code_coverage). This way you can, for example, find out which parts of the code aren't covered by tests:
 
@@ -58,7 +58,7 @@ There's support for coverage of single nodes but also branches. An example for b
 
 ![evaluator of if expression](if_evaluator.png)
 
-## Calling the interpreter
+## Calling the Interpreter
 
 For IETS3 use the class `IETS3ExprEvalHelper`. If you can't use this class, use the following code:
 ```java
@@ -74,7 +74,7 @@ class Coverage {
 
 Other methods don't need coverage, a context object, and so forth. The easiest method is `helper.evaluate` which returns a Java expression.
 
-## Final notes
+## Final Notes
 
 The interpreter doesn't support multithreading. It can also be slow when called too many times.
 

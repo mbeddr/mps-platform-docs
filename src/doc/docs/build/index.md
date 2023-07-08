@@ -4,7 +4,7 @@ tags:
 - build
 ---
 
-# Build language
+# Build Language
 
 - [official documentation](https://www.jetbrains.com/help/mps/build-language.html)
 - [Escaping to Ant from the build language](https://specificlanguages.com/posts/2022-03/24-escaping-to-ant-from-build-language/){{ blog('sl') }}
@@ -70,7 +70,7 @@ tags:
 
     - [Measuring code coverage with the MPS build language](https://specificlanguages.com/posts/2022-06/25-measuring-code-coverage-with-mps-build-language/){{ blog('sl') }}
 
-## MPS build script
+## MPS Build Script
 
 The build language is one of the oldest parts of MPS, designed to generate the Apache Ant files more easily, but it isn't refactored until today. The generator of the build language has to find out what, for example, “solution needs baselanguage” means at the runtime-level. To execute code from the solution, the JVM needs the baselanguage.jar on the classpath. The more dependencies the solution has, the more complex becomes the generated Ant file, because the generator has to consider all these transitive dependencies. The generator needs to know what artifact a module generates and how the generated artifact/module is used at runtime. Therefore, the jars must be on the classpath.
 
@@ -82,7 +82,7 @@ The code generator of the build language has to verify for dependencies like jar
 
 Many problems that the generator finds, could also be found by the model checker, but the checks are done at generation time and implemented as "gencontext.show error" in the generator.
 
-## Generated Ant scripts (*build.xml*)
+## Generated Ant Scripts (*build.xml*)
 
 The mps build scripts are generated into Ant scripts, which then generate the modules.
 The Ant script starts a headless MPS instance with all required dependencies, puts JARs on the classpath, and does some further magic.
@@ -99,7 +99,7 @@ The Ant script needs to know where the local MPS is installed and where your mod
 The headless MPS, which is started by the Ant script, behaves sometimes differently compared to an IDE-MPS. For example, circular dependencies can be resolved in the IDE by just applying *Make Project* multiple times, which doesn't work on the command line and thus also fails on the CI.
 Dependencies which are visible in the IDE aren't always visible in the MPS build script/Ant script and can result in failing builds. MPS holds one big global repository, where all modules are loaded into the modules pool (project libraries, global libraries, …). In the IDE everything's always visible and wrong dependencies can be resolved but on the command line the build can fail, because the referenced model isn't loaded. The build language generator doesn't check the nodes, for example, that references out of scope (like the model-checker does), it only looks into meta-data/model-properties and relies on that information.
 
-## Shell scripts
+## Shell Scripts
 
 Some scripts like the start script of MPS are developed using Windows Batch Scripting on Windows and Bash Shell Scripting on Mac/Linux. To learn more about
 those two scripting languages, consult the following list:

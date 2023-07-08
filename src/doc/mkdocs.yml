@@ -170,19 +170,19 @@ nav:
     - index.md
     - General: home/general.md
     - Plugins: home/plugins.md
-    - External files and tools: home/external_files_and_tools.md
+    - External Files and Tools: home/external_files_and_tools.md
     - Console: home/console.md
-    - OS-specific bugs: home/platform_specific_bugs.md
+    - OS-Specific bugs: home/platform_specific_bugs.md
     - RCP: home/rcp.md
-    - Trouble shooting guide: home/trouble_shooting_guide.md
-    - Overcoming obstacles: 
-      - Introduction to overcoming obstacles: home/overcoming_obstacles/overcoming_obstacles.md
-      - Understanding the problem: home/overcoming_obstacles/understanding_the_problem.md
-      - Debugging problems: home/overcoming_obstacles/debugging_problems.md
-      - Syntax problems: home/overcoming_obstacles/syntax_problems.md
-      - Thinking problems: home/overcoming_obstacles/thinking_problems.md
-      - General tips: home/overcoming_obstacles/general_tips.md
-    - Visual guide: home/visual_guide.md
+    - Trouble Shooting Guide: home/trouble_shooting_guide.md
+    - Overcoming Obstacles: 
+      - Introduction to Overcoming Obstacles: home/overcoming_obstacles/overcoming_obstacles.md
+      - Understanding the Problem: home/overcoming_obstacles/understanding_the_problem.md
+      - Debugging Problems: home/overcoming_obstacles/debugging_problems.md
+      - Syntax Problems: home/overcoming_obstacles/syntax_problems.md
+      - Thinking Problems: home/overcoming_obstacles/thinking_problems.md
+      - General Tips: home/overcoming_obstacles/general_tips.md
+    - Visual Guide: home/visual_guide.md
     - Debugging: home/debugging.md
     - Performance: home/performance.md
   - Aspects:
@@ -204,8 +204,8 @@ nav:
     - Migration: aspects/migration.md
     - VCS: aspects/vcs.md
     - Generator: aspects/generator.md
-    - Accessory models: aspects/accessory_models.md
-    - Contributed aspects:
+    - Accessory Models: aspects/accessory_models.md
+    - Contributed Aspects:
       - Documentation: aspects/documentation.md
       - Listener: aspects/listener.md
       - Polyfun: aspects/polyfun.md
@@ -213,115 +213,115 @@ nav:
       - Transformations: aspects/transformations.md
   - Languages:
       - languages/index.md
-      - Baselanguage and extensions: languages/baselanguage.md
-      - Double dispatch: languages/double_dispatch.md
-      - MPS-extensions: 
+      - Baselanguage and Extensions: languages/baselanguage.md
+      - Double Dispatch: languages/double_dispatch.md
+      - MPS-Extensions: 
           - General: languages/mps_extensions.md
           - Cell Layout: languages/cell_layout.md
       - KernelF: languages/kernelf.md
-  - Platform essentials:
+  - Platform Essentials:
       - platform_essentials/index.md
-      - How everything is connected: platform_essentials/how_everything_is_connected.md
+      - How Everything is Connected: platform_essentials/how_everything_is_connected.md
       - Contributing: platform_essentials/contributing.md
-      - Common concepts and interfaces: platform_essentials/common_concepts_and_interfaces.md
-      - Interpreter, coverage and tracing: platform_essentials/interpreter.md
-      - Platform build scripts: platform_essentials/platform_build_scripts.md
-      - Build folder: platform_essentials/build_folder.md
+      - Common Concepts and Interfaces: platform_essentials/common_concepts_and_interfaces.md
+      - Interpreter, Coverage and Tracing: platform_essentials/interpreter.md
+      - Platform Build Scripts: platform_essentials/platform_build_scripts.md
+      - Build Folder: platform_essentials/build_folder.md
       - Testing: platform_essentials/testing.md
-      - Accessing the project: platform_essentials/accessing_the_project.md
+      - Accessing the Project: platform_essentials/accessing_the_project.md
   - Build:
       - Build: build/index.md
       - CI: build/ci.md
       - Gradle: build/gradle.md
-      - Creating a command line tool: build/command_line_tool.md
+      - Creating a Command Line Tool: build/command_line_tool.md
       - Git: build/git.md
       - TeamCity: build/teamcity.md
-      - Advanced GitHub workflow: build/advanced_github_workflow.md
-  - MPS internals:
+      - Advanced GitHub Workflow: build/advanced_github_workflow.md
+  - MPS Internals:
       - mps_internal/index.md
       - Code:
           - Open API: mps_internal/open_api.md
-          - Utility classes: mps_internal/utility_classes.md
-          - Navigating the MPS sources: mps_internal/navigating_mps_source.md
-          - Writing an MPS plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
+          - Utility Classes: mps_internal/utility_classes.md
+          - Navigating the MPS Sources: mps_internal/navigating_mps_source.md
+          - Writing an MPS Plugin with Kotlin: mps_internal/writing_mps_plugin_with_kotlin.md
       - UI:
-          - Editor development: mps_internal/editor_development.md
+          - Editor Development: mps_internal/editor_development.md
           - IntelliJ UI: mps_internal/gui.md
-          - Platform UI inspector : mps_internal/platform_ui_inspector.md
+          - Platform UI Inspector : mps_internal/platform_ui_inspector.md
       - IntelliJ SDK: 
           - mps_internal/intellij_sdk.md
-          - IntelliJ integration: mps_internal/intellij_integration.md
+          - IntelliJ Integration: mps_internal/intellij_integration.md
           - Java Chromium Embedded Framework: mps_internal/intellij_sdk/jcef.md
-      - Advanced topics:
-          - What happens on MPS startup : mps_internal/mps_startup.md
-          - Dependencies and classpath:
+      - Advanced Topics:
+          - What Happens on MPS Startup : mps_internal/mps_startup.md
+          - Dependencies and Classpath:
               - General: mps_internal/deps_and_classpath/index.md
-              - Terminology and UI for access: mps_internal/terminology_and_ui_for_access.md
+              - Terminology and UI for Access: mps_internal/terminology_and_ui_for_access.md
               - Models: mps_internal/models.md
               - Dependencies: mps_internal/dependencies.md
               - Recipes: mps_internal/recipes.md
           - Classloading: mps_internal/classloading.md
           - Threading:
               - mps_internal/threads/index.md
-              - Example actions using locks: mps_internal/threads/read_write_action_examples.md
-              - Named threads: mps_internal/threads/named_threads.md
+              - Example Actions Using Locks: mps_internal/threads/read_write_action_examples.md
+              - Named Threads: mps_internal/threads/named_threads.md
       - Reference:
-        - File format: mps_internal/file_format.md
-        - Java design patterns in the MPS sources: mps_internal/java_design_patterns_in_mps_sources.md
+        - File Format: mps_internal/file_format.md
+        - Java Design Patterns in the MPS Sources: mps_internal/java_design_patterns_in_mps_sources.md
   - Mbeddr:
       - mbeddr/index.md
-      - Building Mbeddr locally: mbeddr/building_mbeddr_locally.md
+      - Building Mbeddr Locally: mbeddr/building_mbeddr_locally.md
       - Mbeddr utilities:
           - platform_essentials/mpsutils/index.md
           - Common: platform_essentials/mpsutils/common.md
           - Actions: platform_essentials/mpsutils/actions.md
-          - BaseLanguage extensions: platform_essentials/mpsutils/baselanguage_extensions.md
+          - BaseLanguage Extensions: platform_essentials/mpsutils/baselanguage_extensions.md
           - Generator: platform_essentials/mpsutils/generator.md
-          - Importer and exporter: platform_essentials/mpsutils/importer_and_exporter.md
+          - Importer and Exporter: platform_essentials/mpsutils/importer_and_exporter.md
           - Languages: platform_essentials/mpsutils/languages.md
-          - Language extensions: platform_essentials/mpsutils/language_extensions.md
+          - Language Extensions: platform_essentials/mpsutils/language_extensions.md
           - Tools: platform_essentials/mpsutils/tools.md
           - UI: platform_essentials/mpsutils/ui.md
           - Testing: platform_essentials/mpsutils/testing.md
           - Plugin and RCP: platform_essentials/mpsutils/plugin_and_rcp.md
-          - Deprecated languages and solutions: platform_essentials/mpsutils/deprecated.md
-      - Mbeddr Doc documentation: http://mbeddr.com/files/documentationdocumentation.pdf
+          - Deprecated Languages and Solutions: platform_essentials/mpsutils/deprecated.md
+      - Mbeddr Doc Documentation: http://mbeddr.com/files/documentationdocumentation.pdf
       - BigProject: mbeddr/big_project.md
-      - Development guide: mbeddr/development_guide.md
-      - Miscellaneous topics: mbeddr/misc_topics.md
-  - Clean code:
+      - Development Guide: mbeddr/development_guide.md
+      - Miscellaneous Topics: mbeddr/misc_topics.md
+  - Clean Code:
       - clean_code/mps/index.md
-      - Readability/maintainability: clean_code/mps/readability_maintainability.md
+      - Readability/Maintainability: clean_code/mps/readability_maintainability.md
       - Deprecation: clean_code/mps/deprecation.md
       - Java (Base Language):
         - clean_code/java/index.md
-        - Programming principles: clean_code/java/programming_principles.md
-        - Java style guide: clean_code/java/java_style_guide.md
+        - Programming Principles: clean_code/java/programming_principles.md
+        - Java Style Guide: clean_code/java/java_style_guide.md
   - Language/UI patterns:
-      - Language design: patterns/language_design.md
-      - User experience: patterns/user_experience.md
-      - UI patterns: patterns/ui_patterns.md
+      - Language Design: patterns/language_design.md
+      - User Experience: patterns/user_experience.md
+      - UI Patterns: patterns/ui_patterns.md
   - Reference:
-    - Being a good developer: reference/being_a_good_developer.md
-    - Tips for open source maintainers: reference/tips_for_os_maintainers.md
+    - Being a good Developer: reference/being_a_good_developer.md
+    - Tips for Open Source Maintainers: reference/tips_for_os_maintainers.md
     - Icons: reference/icons.md
-    - Core languages: reference/core_languages.md
-    - Standard plugins: reference/standard_plugins.md
-    - Included libraries: reference/included_libraries.md
-    - Extension points: reference/extension_points.md
+    - Core Languages: reference/core_languages.md
+    - Standard Plugins: reference/standard_plugins.md
+    - Included Libraries: reference/included_libraries.md
+    - Extension Points: reference/extension_points.md
     - Exceptions: reference/exceptions.md
     - Actions: reference/actions.md
     - Abbreviations: reference/abbreviations.md
-    - Code abbreviations: reference/code_abbreviations.md
-    - Gitignore file: reference/gitignore.md
-    - Issue trackers: reference/issue_trackers.md
+    - Code Abbreviations: reference/code_abbreviations.md
+    - Gitignore File: reference/gitignore.md
+    - Issue Trackers: reference/issue_trackers.md
   - Language Reference (WIP):
     - language_reference/index.md
     - org.iets3.core.expr.base: language_reference/org.iets3.core.expr.base.md
     - org.iets3.core.expr.collections: language_reference/org.iets3.core.expr.collections.md
     - org.iets3.core.expr.toplevel: language_reference/org.iets3.core.expr.toplevel.md
   - About:
-    - Editing this guide: about/editing_this_guide.md
-    - Original authors: about/original_authors.md
-    - New pages: about/new_pages.md
+    - Editing This Guide: about/editing_this_guide.md
+    - Original Authors: about/original_authors.md
+    - New Pages: about/new_pages.md
     - Tags: tags.md

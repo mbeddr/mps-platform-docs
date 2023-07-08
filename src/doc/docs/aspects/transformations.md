@@ -1,12 +1,12 @@
 ---
-title: Transformations aspect
+title: Transformations Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Transformations aspect
+# Transformations Aspect
 
 This language is part of [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels) in {{ mps_extensions() }}. Consult the [documentation](https://jetbrains.github.io/MPS-extensions/extensions/shadowmodels/)
 for more information.

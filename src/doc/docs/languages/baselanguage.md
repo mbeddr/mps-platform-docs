@@ -9,7 +9,7 @@ tags:
 
 For a full list of Base Language bugs and feature requests, have a look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open%20%23BaseLanguage).
 
-### Blog posts
+### Blog Posts
 
 - [Get feedback from users with generic comments](https://specificlanguages.com/posts/get-feedback-from-users-with-generic-comments/){{ blog('sl') }}
 - [Empty lines and comments](https://specificlanguages.com/posts/2022-04/06-empty-lines-and-comments/){{ blog('sl') }}
@@ -124,20 +124,20 @@ var x=0c710
 
     {{ contribution_by('abstraktor') }}
 
-## Checked dots
+## Checked Dots
 
 > ^^jetbrains.mps.baselanguage.checkeddots^^
 
 - voids `NullPointerException` when Java executes a method call on a null variable. For example, it won't throw a `NullPointerException`, if `myObject` is null.
 - **bold** methods or dot-expressions are null safe, for example, `new arraylist<string>()`.**where**`({~it => })`
 
-## Access language 
+## Access Language 
 
 > ^^jetbrains.mps.lang.access^^
 
 - [Managing concurrent access | MPS](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage)
 
-## Transactional property cells
+## Transactional Property Cells
 
 > ^^jetbrains.mps.lang.editor.structure^^
 
@@ -157,11 +157,11 @@ var x=0c710
   <figcaption>example: image cell</figcaption>
 </figure>
 
-## Base Language internal
+## Base Language Internal
 
 Specific Languages blog: [Poor man's cross-model generation: baseLanguageInternal](https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/)
 
-## Sax parser
+## Sax Parser
 
 > ^^jetbrains.mps.core.xml.sax^^
 
@@ -223,7 +223,7 @@ To use the generated parser, you have to use [InternalClassCreator](http://127.0
 
 `#!java new [ XMLSAXHandler ] jetbrains.mps.smodel.persistence.def.v8.LineToContentMapReader8Handler (withPropertyValues, withAssociationTarget)`
 
-## Property references
+## Property References
 
 > ^^jetbrains.mps.lang.checkedName^^
 
@@ -234,7 +234,7 @@ propRef<string> property = property/node/Class/ | name/;
 ```
 This expression is the node pendant for the `property/<concept>:<name>/` expression from `jetbrains.mps.lang.smodel` which takes a concept as an argument and returns an instance of class [SProperty](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.language%28MPS.OpenAPI%2F%29%2F~SProperty).
 
-## Properties file
+## Properties File
 
 > ^^jetbrains.mps.core.properties^^
 
@@ -257,7 +257,7 @@ This language adds support for checkboxes. Text-based checkboxes (text checkbox 
 
 ![forms: checkbox](forms_checkbox.png)
 
-### Image generation for nodes
+### Image Generation for Nodes
 
 > ^^jetbrains.mps.lang.editor.imageGen^^
 

@@ -6,7 +6,7 @@ tags:
 
 # IntelliJ SDK
 
-## Existing documentation
+## Existing Documentation
 
 The best place to learn more about the IntelliJ platform is the [IntelliJ Platform SDK documentation](https://plugins.jetbrains.com/docs/intellij/welcome.html).
 Two additional resources are also helpful if you want to understand how IntelliJ plugins are written ([Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)), and how the IDEA threading model works([Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)).
@@ -39,7 +39,7 @@ Some parts of MPS are different to the IntelliJ platforms and therefore those ch
     Note: technically, the messages view is unrelated to the IntelliJ platform but rather an MPS tool. The message statement has a throwable parameter that can be used to attach exceptions. In the generator, there is `genContext.show error <messageText> -> <node>` which takes a message and a node. In MPS 2022.3 there is also support for a `hintObject` in the message statement so that you can jump directly to a node, model, or module.
 
 
-## Message bus and listeners (message interface)
+## Message Bus and Listeners (Message Interface)
 
 Reference:
 

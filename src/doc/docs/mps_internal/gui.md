@@ -10,7 +10,7 @@ tags:
 - [Fixing ugly trees](https://specificlanguages.com/posts/2022-05/18-fixing-ugly-trees){{ blog('sl') }}
 - [Centering dialogs](https://specificlanguages.com/posts/2022-05/24-centering-dialogs/){{ blog('sl') }}
 
-## Swing components
+## Swing Components
 
 - Use components from the IntelliJ platform. The
   IntelliJ Platform Plugin SDK mentions [some more components](https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html). Use the [IntelliJ platform UI guidelines](https://jetbrains.github.io/ui/) to create consistent and usable user interfaces.

@@ -6,7 +6,7 @@ tags:
 - iets3
 ---
 
-# Platform build scripts
+# Platform Build Scripts
 
 This page describes the {{ mps_extensions() }} and {{ iets3() }} build scripts. They might look different in the future but this guide should still be helpful. The build scripts from {{ mbeddr() }} work
 similar but there's more than just one, so let's focus on the other two platforms.
@@ -80,6 +80,6 @@ by KernelF (e.g. *org.iets3.core.expr.datetime.runtime* for the datetime languag
 
 [Line 409-421](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L409): This task reads project libraries from projectlibraries.properties and generates *libraries.xml* in the *.mps* directory. Libraries are loaded in MPS during the start. A library is, for example, mbeddr. The task is used by the *setup* tasks which should be executed when cloning the project.
 
-## Mbeddr build scripts
+## Mbeddr Build Scripts
 
 The main [build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle) can be found in the root directory. A *build* subfolder exists. The most important build files are [com.mbeddr/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle) which build mbeddr itself and [com.mbeddr/platform/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle) which builds the mbeddr platform.

@@ -9,7 +9,7 @@ The conversion is between an XML file and an MPS model. The importer can import 
 
 Access the action by right-clicking a model and opening the *Ecore Transformation tools* group.
 
-## XML import
+## XML Import
 
 > ^^com.mbeddr.mpsutil.xmlImport.plugin^^
 

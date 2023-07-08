@@ -1,4 +1,4 @@
-# [Thinking problems](https://pythonprinciples.com/blog/getting-unstuck/#thinking-problems)
+# [Thinking Problems](https://pythonprinciples.com/blog/getting-unstuck/#thinking-problems)
 
 When you have an easy coding problem, you can do it without much thought. When you have to deal with a new topic that you are not familiar with,
 or have to dive into a large code base (with little documentation), you start guessing and trying things with the hope that something eventually will work.
@@ -9,7 +9,7 @@ When the code base is complex or there is some technical debt, it can be difficu
 
 Finding the root cause of your problem should always be done before implementing a workaround or writing badly designed code. For working in the MPS platforms this can be a challenging task. The problem could be located in the current project but also in one of the MPS platforms or even MPS itself. Don't focus only on the code that you think contains the bug but also consider all other platforms. Try disabling offending languages and methodically go through all layers of code that might be responsible for the problem. Comment out chunks of code to see if the problem persists. To rule out MPS itself, try a simple example in MPS itself, without any additional languages and plugins installed. Also, check if the issue still arises in the latest MPS version if you are still using an older version.
 
-## Devise a strategy
+## Devise a Strategy
 
 Write down in plain English what you want to achieve before writing code. You can even go a step further as described in [Stuck on a Coding Problem? Here are 5 Steps to Solve It|Adrian Prieto](https://medium.com/learn-love-code/stuck-on-a-coding-problem-here-are-5-steps-to-solve-it-8be04c4b4f19):
 

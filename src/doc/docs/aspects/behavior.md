@@ -1,10 +1,10 @@
 ---
-title: Behavior aspect
+title: Behavior Aspect
 tags:
 - aspect
 ---
 
-# Behavior aspect
+# Behavior Aspect
 
 The behavior aspect can be used for defining methods for the concepts of the language.
 
@@ -149,7 +149,7 @@ The behavior aspect can be used for defining methods for the concepts of the lan
     `#!java concept/MyConcept/.new initialized instance()` provides this behavior.
 
 
-## Bugs/missing features
+## Bugs/Missing Features
 
 !!! question "How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?[^1]"
 

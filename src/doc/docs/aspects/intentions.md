@@ -1,12 +1,12 @@
 ---
-title: Intentions aspect
+title: Intentions Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Intentions aspect
+# Intentions Aspect
 
 >  Intentions provide fast access to the most used operations with syntactical constructions of a language.
 >

@@ -1,4 +1,4 @@
-# Standard plugins in MPS
+# Standard Plugins in MPS
 
 The following list contains the plugins that are installed in MPS 2021.1 and later by default:
 
@@ -30,7 +30,7 @@ The following list contains the plugins that are installed in MPS 2021.1 and lat
 - mps-trove: Custom containers designed to work with primitive data types ([trove4j Java library](https://trove4j.sourceforge.net/html/overview.html))
 - mps-vcs: [version control integration](https://www.jetbrains.com/help/mps/version-control-integration.html) (*jetbrains.mps.vcs*)
 
-## IntelliJ plugins
+## IntelliJ Plugins
 
 The sources for most of the plugins can be found in the [plugins folder](https://github.com/JetBrains/intellij-community/tree/master/plugins) of the IntelliJ community repository.
 
@@ -59,3 +59,5 @@ The sources for most of the plugins can be found in the [plugins folder](https:/
 - mps-ant-make: make execution code (*jetbrains.mps.tool.make*)
 - mps-kotlin: MPS Kotlin implementation (*jetbrains.mps.kotlin*)
 - mps-navbar: [navigation bar](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html#navigation-bar) that supports the MPS model hierarchy (*jetbrains.mps.navbar*)
+
+TODO 2022.2, 2022.3

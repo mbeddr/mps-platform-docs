@@ -1,7 +1,7 @@
 There are a lot of of different ways to get the MPS/IntelliJ project, some of them are hacks that should be avoided. This page
 only lists the recommended approaches on purpose. There are only a few useful methods in the project class. Namely, access to scope, repository, and core components. The idea is that user-triggered actions take what's necessary (e.g. a command lock) and then the code down the execution path shall not care to take one.
 
-## What are the different project classes?
+## What Are the Different Project Classes?
 
 - *com.intellij.openapi.project.Project*: a [project](https://plugins.jetbrains.com/docs/intellij/project.html) in the IntelliJ platform. There are [different ways](https://plugins.jetbrains.com/docs/intellij/project.html#how-to-get-a-project-instance) to access the project instance, most of them are not available in MPS. Every time you interact with the IntelliJ platform, you need this class.
 - *org.jetbrains.mps.openapi.project.Project*: the MPS equivalent of a project. It provides access to the repository, its name and modules, and to the model access class for reading and writing models
@@ -50,16 +50,16 @@ in the right-click menu of the editor if you need them closer to the editor.
 In tests, the `project` expression is available, although it should be rarely needed except when invoking the generator or resolving
 nodes through the global repository.
 
-### Plugin solution/plugin aspect
+### Plugin Solution/Plugin Aspect
 
 If you need access the project object, you can use a project plugin where an `MPSProject` instance is available in the init and dispose block.
 The instance can be passed to other classes as well. To get the IntelliJ project use `#!java ProjectHelper.toIdeaProject(project)`.
 
-### Other places
+### Other Places
 
 Some low-level code, like behaviors, are not supposed to start a command or interact with the UI (where some dialogs require the project/IDE frame). There's always a project for user-triggered actions, and this is the moment proper command access gets started, and various UI stuff happens. It's wrong to invoke some behavior that would try to guess the project down the road. Normally, there also should not be a need to access the project in the generator.
 
-### Code to avoid
+### Code to Avoid
 
 - guessing the project through `#!java ProjectManager.getInstance().getOpenedProjects()`
 - guessing the project through the owners of `(MPSModuleRepository) (model/.getRepository())`

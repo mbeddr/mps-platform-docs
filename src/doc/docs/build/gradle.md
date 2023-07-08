@@ -7,7 +7,7 @@ Documentation for Gradle can be found on [gradle.org](https://docs.gradle.org/cu
 The used features of the Groovy languages are explained in [A Groovy Build Script Primer](https://docs.gradle.org/current/userguide/groovy_build_script_primer.html). If you want to use Kotlin instead, start with the [Gradle Kotlin DSL Primer](https://docs.gradle.org/current/userguide/kotlin_dsl.html). [Migrating build logic from Groovy to Kotlin](https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html) might also be helpful. To automatically convert between Groovy and Kotlin syntax, you can try using [Gradle Kotlinize](https://gradle-kotlinize.web.app/). Many manual corrections are still
 necessary.
 
-## Useful Gradle plugins for MPS projects
+## Useful Gradle Plugins for MPS Projects
 
 - **[mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin)**: Miscellaneous tasks that were found useful when building MPS-based projects with Gradle.
 - **[Maven publish plugin](https://docs.gradle.org/current/userguide/publishing_maven.html)**: a Gradle plugin for publishing build artifacts to Apache Maven repositories (such as nexus repositories)
@@ -171,12 +171,12 @@ For defining the Gradle scripts you can use groove (`build.gradle`) or Kotlin (`
 
 ## Dependencies
 
-### Dependencies inside the buildScript{...} block
+### Dependencies Inside the buildscript{...} Block
 
 - are placed on the classpath of the build script itself (for the current Gradle file which will also be compiled (like java))
 - To be able to compile the build script into bytecode, its dependencies need to be resolved
 
-### Dependencies outside the buildScript{...} block
+### Dependencies Outside the buildScript{...} Block
 
 - are project dependencies
 - these dependencies are added to the project code’s classpath
@@ -186,7 +186,7 @@ If the dependency is only used in the build script (i.e. only from the `build.gr
 
 A good explanation of Gradle configurations can be found in [Gradle Configurations Explained: What is the difference between API and Implementation? | medium.com](https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35).
 
-## Creating a Gradle plugin
+## Creating a Gradle Plugin
 
 You have to decide between three choices:
 
@@ -194,7 +194,7 @@ You have to decide between three choices:
 - buildSrc project
 - standalone project
 
-### Standalone project
+### Standalone Project
 - define all dependencies in Gradle file
 - create a properties file in the resource folder with the same name as the plugin id
     - example:  `org.samples.greeting.properties` in `src/main/resources/META-INF/gradle-plugins/`

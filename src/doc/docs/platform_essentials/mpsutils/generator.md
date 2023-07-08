@@ -1,6 +1,6 @@
 # Generator
 
-## Generator facade
+## Generator Facade
 
 > ^^com.mbeddr.mpsutil.generatorfacade^^
 
@@ -24,7 +24,7 @@ the *setref* statement which takes a key, a context node (here: the newly create
 a new user object for this node. For normal values, *setref* and *getref* should be used to set and retrieve
 values from the user object respectively. For int values, *setint* and *getint* can be used.
 
-## Mapping labels
+## Mapping Labels
 
 > ^^com.mbeddr.mpsutil.mappingLabels^^
 
@@ -56,7 +56,7 @@ generated files postprocessor facet testGen
 
 For simple duplicating the TextGen outcome, There's also the built-in JetBrains annotation [CopyOutcome](http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F1223283106984741523).
 
-## XModel actions
+## XModel Actions
 
 > ^^com.mbeddr.mpsutil.xmodel.actions^^
 

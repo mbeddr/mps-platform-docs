@@ -1,11 +1,11 @@
 ---
-title: Generator aspect
+title: Generator Aspect
 tags:
 - aspect
 alias: generator_aspect
 ---
 
-# Generator aspect
+# Generator Aspect
 
 > Generator is a part of language specification that defines the denotational semantics for the concepts in the language.
 >
@@ -144,7 +144,7 @@ alias: generator_aspect
 
     No but you can try to use the post-processing function of a `$MAP_SRC$` macro.
 
-## How to generate XY
+## How to Generate XY
 
 !!! question "What can be generated?"
 
@@ -376,7 +376,7 @@ alias: generator_aspect
     If there are errors/warnings in the editor, you can do *Language Debug* --> *Go to Rule Which Caused Error* from the context menu to find the code which produced the error. A similar feature is *Show Node Messages*, which allows copying/pasting the message.
 
 
-## Blog posts
+## Blog Posts
 
 - [Introduction MPS Generators](https://www.f1re.io/mps-generators){{ blog('F1RE') }}
 

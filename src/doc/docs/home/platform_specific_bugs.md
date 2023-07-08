@@ -7,7 +7,7 @@ tags:
 - native
 ---
 
-## Native crashes
+## Native Crashes
 
 Native crashes are crashes where MPS crashes internally (C/C++ code) and an error dialog is shown. First search the following Youtrack projects:
 

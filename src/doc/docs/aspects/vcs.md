@@ -1,12 +1,12 @@
 ---
-title: VCS aspect
+title: VCS Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# VCS aspect
+# VCS Aspect
 
 - [official documentation](https://www.jetbrains.com/help/mps/mergehints.html)
 

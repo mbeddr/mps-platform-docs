@@ -5,7 +5,7 @@ tags:
 - iets3
 ---
 
-# Platform essentials
+# Platform Essentials
 
 The following pages give an introduction to the most important languages of the platforms.
 Additionally, make sure to check out sandboxes and test cases in the corresponding languages.

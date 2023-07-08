@@ -1,12 +1,12 @@
 ---
-title: FindUsages aspect
+title: FindUsages Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# FindUsages aspect
+# FindUsages Aspect
 
 - [official documentation](https://www.jetbrains.com/help/mps/find-usages.html#specificstatements)
 

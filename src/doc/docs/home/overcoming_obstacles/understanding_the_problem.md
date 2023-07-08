@@ -1,4 +1,4 @@
-# [Understanding the problem](https://pythonprinciples.com/blog/getting-unstuck/#incomplete-understanding)
+# [Understanding the Problem](https://pythonprinciples.com/blog/getting-unstuck/#incomplete-understanding)
 
 Not understanding the problem 100%, is often the problem. Read the problem several times until you can explain it to someone else. If you don't fully
 understand a problem, you can't solve it.

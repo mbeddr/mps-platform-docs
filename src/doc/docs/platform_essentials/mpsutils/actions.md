@@ -1,13 +1,13 @@
 # Actions
 
-## Build assistant
+## Build Assistant
 
 > ^^com.mbeddr.mpsutil.buildassistant^^
 
 This language adds actions to make or rebuild models/modules or projects and also includes their
 dependencies. They don't have shortcuts and can only be invoked through the *Find Actions* menu.
 
-## Generic actions
+## Generic Actions
 
 > ^^com.mbeddr.mpsutil.genericactions^^
 
@@ -20,7 +20,7 @@ As the name already implies, this language adds some new generic actions:
   This action won't work if the model does not generate output files.
 - **File Manager in Module Folder**: a new action in the context menu of modules that opens the path of the module.
 
-## Node access
+## Node Access
 
 > ^^com.mbeddr.mpsutil.nodeaccess^^
 
@@ -45,7 +45,7 @@ editor with a printer. If the operating system permits it, this action can also 
 
 This language adds support for a projection mode switcher and refactoring actions.
 
-### Projection mode switcher
+### Projection Mode Switcher
 
 The mbeddr platform has a group *Projection* which is a top-level menu in MPS:
 
@@ -59,7 +59,7 @@ be enabled for a specific concept, add a concept to *only in editor with instanc
 
 ![example: projection mode switcher](projection_mode_switcher_example.png)
 
-### Refactoring action
+### Refactoring Action
 
 The concept [RefactoringAction](http://127.0.0.1:63320/node?ref=1fc20ffe-f35b-4791-a0b7-d706bad5c49a%2Fr%3A18d75373-a465-46d0-9749-aacc22a947bc%28com.mbeddr.mpsutil.refactoring%2Fcom.mbeddr.mpsutil.refactoring.structure%29%2F7518061998923573137) can create an action for a [simple refactoring](https://www.jetbrains.com/help/mps/mps-refactoring.html). The title of the action can be specified with *caption,* and the keyboard shortcut can
 be defined in *shortcut*. Refactoring parameters can be specified in *parameters*. A few different choosers will be shown in

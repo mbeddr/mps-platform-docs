@@ -9,12 +9,12 @@ Otherwise, migrations pop up for other people who work on other parts of mbeddr.
 To avoid this, you could open all the projects in `mbeddr.core\code\languages` individually and run the migration wizard, but this is tedious.
 A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in the individual projects, thus you can run a migration once that executes on all these modules.
 
-## New usage
+## New Usage
 
 - From the command line: run `gradlew.bat :BigProject:run` or `./gradlew :BigProject:run` from the Git checkout root.
 - From IntelliJ IDEA: open the Git checkout root as a (Gradle) project in IDEA and run Generate Big Project run configuration.
 
-## Old usage
+## Old Usage
 
 1. Open project `mbeddr.core\tools\BigProject` with IntelliJ IDEA community edition.
 2. In Idea click in the menu on *Run* --> *Run BigProjectGenerator*.
@@ -30,7 +30,7 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
     Devkits: 22
    ```
    
-## Next steps
+## Next Steps
 
 1. Open project `mbeddr.core\tools\BigProject` with MPS.
 2. When the migration wizard starts automatically, execute migrations, otherwise

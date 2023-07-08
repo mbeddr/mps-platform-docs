@@ -48,7 +48,7 @@ This document lists some recommendations for code written it MPS. For a general 
 - Use logging for troubleshooting purposes. Remove logging statements from production code or at least reduce the log level
   to debug. Do not output log messages when they are not necessary.
 
-## Null safety
+## Null Safety
 
 -   Use the language [checkedDots](https://www.jetbrains.com/help/mps/other-languages.html) for saver access of possible null values. You can check nodes for null: [node.isNull](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870)
 -   Use the annotation`@NotNull`and`@Nullable`for baselanguage code. A specific type system rule in MPS checks these annotations. The annotations are also enforced at runtime by the compiler.
@@ -63,7 +63,7 @@ node<ClassConcept> n = null;
 
 MPS also has a null analyzer for Java that is part of the data flow analysis ([nullable analyzer](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c2%28jetbrains.mps.baseLanguage.dataFlow%29%2F6868777471677432036), [short explanation how it works](https://szabta89.github.io/projects/df.html#:~:text=Null-,analysis,-for%20Java%20(Nullable))). It is checked by the type system, and you get a warning when, for example, a method call might throw a `NullPointerException`.
 
-## Exceptions and warnings
+## Exceptions and Warnings
 
 - Use checked exceptions (e.g. IOException) for recoverable conditions and run-time exceptions (e.g. NullPointerException) for programming errors ([Checked versus unchecked exceptions](http://www.javapractices.com/topic/TopicAction.do?Id=129)).
 - Consider alternative ways of showing errors than throwing exceptions such as showing [notifications](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons). Examples for such notifications are balloons and dialogs.

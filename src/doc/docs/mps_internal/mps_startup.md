@@ -22,7 +22,7 @@ MPS can be started from MPS itself through [MPSEnvironment.java](https://github.
   The repository consists of library modules, project modules, and several special modules.
 - [ClassLoaderManager.java](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.classloading%28MPS.Core%2F%29%2F%7EClassLoaderManager) which is responsible for loading classes within MPS.
 
-## MPS platform
+## MPS Platform
 
 The MPS platform contains so-called component plugins that are registered through PlatformBase:
 

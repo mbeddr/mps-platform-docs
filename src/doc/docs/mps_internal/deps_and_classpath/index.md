@@ -7,7 +7,7 @@ tags:
 - solution
 ---
 
-# Dependencies and classpath in MPS
+# Dependencies and Classpath in MPS
 
 This page describes the meaning and effect of different types of dependencies within MPS, including the effects on the applicable Java classpath. It describes both the expected state and all bugs deviating from the expectations.
 
@@ -29,7 +29,7 @@ MPS Plugins need to be contained in MPS plugin models.
 
 We need to add a *StandalonePluginDescriptor* (defined in Language ^^jetbrains.mps.lang.plugin.standalone^^) as a root node if an MPS plugin model uses any concept from the language ^^jetbrains.mps.lang.plugin^^. Other concepts from the language ^^jetbrains.mps.lang.plugin.standalone^^ don't need a *StandalonePluginDescriptor*.
 
-## Plugin disambiguation
+## Plugin Disambiguation
 
 The term "plugin" is used at various places throughout MPS. It describes different things:
 
@@ -38,7 +38,7 @@ The term "plugin" is used at various places throughout MPS. It describes differe
 - plugin language aspect: model inside a language defining extension points
 - build model plugins: part of the build model language providing new entries for build models.
 
-## Non-project sources
+## Non-Project Sources
 
 Non-project sources are
 
@@ -50,7 +50,7 @@ Non-project sources are
 
 These directories or JAR files are recursively scanned for *.mpl* (languages), *.msd* (solutions), and *.devkit* (devkit) files. If found, the corresponding content is added to the modules pool.
 
-## Java classpath versus relations
+## Java Classpath Versus Relations
 
 The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations differently.
 As a rule of thumb, the classpath has all Java classes reachable through any kind of relation. The Classpath is populated generously.
@@ -58,7 +58,7 @@ As a rule of thumb, the classpath has all Java classes reachable through any kin
 On the contrary, the relations are populated reluctantly, for example, they need to be specified explicitly.
 The dependency relations on modules and models are completely separated from the used language relations on modules and models. Thus, no dependency requires a *Used Language* or vice versa.
 
-## Used languages
+## Used Languages
 
 No implicitly *Used Languages* are available except described for generators. Specifically, if *LanguageB* has an *Extends Scope* dependency on *LanguageA* and *ModuleC* uses *LanguageB*, *LanguageA* isn't a *Used Language* within *ModuleC*.
 
@@ -70,7 +70,7 @@ You must add *LanguageA* (containing *ConceptA*) to *ModuleB's* and contained *M
 - *ModelB* uses editors from *LanguageA* by selecting an editor hint but *not* if *LanguageA* only defines the editor hint.
 - *ModuleB* is a generator and outputs instance of *ConceptA*.
 
-## Executed generators
+## Executed Generators
 
 *GeneratorA* contained in *LanguageA* (containing *ConceptA*) will be executed for *ModelS* (contained in *ModuleS*) if and only if
 
@@ -131,7 +131,7 @@ the same language as the generator. The Generator doesn't extend any other appli
 All nodes within *SolutionExtendsGen2* get transformed, as an instance of *ConceptExtendsGen2* was found,
 and the generator *GeneratorExtendsGen2* contained in the same language extends *GeneratorBase*.
 
-## Generated relations
+## Generated Relations
 
 Relations on the output model are defined only by the contents of the output model that was created by the generator. Thus,
 

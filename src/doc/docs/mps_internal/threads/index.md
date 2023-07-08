@@ -14,7 +14,7 @@ all reads have to be finished. The IDEA platform's lock is acquired first and on
 The MPS locks are described in [Managing concurrent access | MPS](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage)
 and are **only necessary** if you are accessing the model or specific features of the IntelliJ platform from a different thread. All aspects in your language and declared actions have the necessary lock by default (command access). You most likely only need locking when accessing MPS models from a Swing event handler such as in the `actionPerformed` method of a button. The locks are of type [ReentrantReadWriteLock](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html) (read the JavaDoc for more info).
 
-## AWT event dispatch thread (EDT)
+## AWT Event Dispatch Thread (EDT)
 
 Drawing of components in MPS/IntelliJ IDEA is done through [Java Swing](https://www.tutorialspoint.com/swing/swing_quick_guide.htm). The [event dispatch thread or Swing thread](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html) is used for handling events in Swing because it is not thread-safe, so most of the Swing code runs in this thread. It also handles events from the [Abstract Window Toolkit](https://docs.oracle.com/javase/8/docs/technotes/guides/awt/) and has the thread name *AWT-EventQueue-0*.
 In the IntelliJ platform/MPS it is also called the *UI thread* or *editor thread*. Any writes to the IntelliJ IDE data model ([PSI](https://plugins.jetbrains.com/docs/intellij/psi.html), [VFS](https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html), [project root model](https://plugins.jetbrains.com/docs/intellij/project-structure.html)) must also happen on the *write thread*, which can be the same as EDT in IntelliJ products. In MPS, it is the same thread.
@@ -46,7 +46,7 @@ The reason for those methods is that the so-called [modality state](https://plug
 be taken into account i.e., the stack of modal dialogs under which the call is allowed to execute. Alternatively, there is
 also the class `ThreadUtils` which contains the method `runInUIThreadAndWait` which takes a `Runnable` instance as a parameter and uses the right method based on the calling context.
 
-## Background threads
+## Background Threads
 
 Every code that is executed on the EDT should finish quickly. Long-running code blocks the thread and the UI becomes unresponsive. Run long-running tasks in the background: [Progress indicators | MPS](https://www.jetbrains.com/help/mps/progress-indicators.html)
 The class [Task](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.progress%28MPS.IDEA%2F%29%2F%7ETask) can be extended and run in a modal dialog or in the background. When many tasks should be executed, pooled threads can be used: [Introduction to Thread Pools in Java | baeldung.com](https://www.baeldung.com/thread-pool-java-and-guava). There's also a method for that: `ApplicationManager.getApplication().executeOnPooledThread`.
@@ -55,7 +55,7 @@ The class [Task](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e
 
 In the following examples, a node is accessed from a background thread or the EDT.
 
-### Reading the model
+### Reading the Model
 
 === ":white_check_mark: Different thread with lock"
 
@@ -92,7 +92,7 @@ In the following examples, a node is accessed from a background thread or the ED
     }
     ```
 
-### Writing the model (different thread)
+### Writing the Model (Different Thread)
 
 === ":white_check_mark: command in EDT lock"
 
@@ -139,7 +139,7 @@ In the following examples, a node is accessed from a background thread or the ED
     )
     ```
 
-### Writing the model (EDT)
+### Writing the Model (EDT)
 
 === ":white_check_mark: command lock"
 
@@ -207,7 +207,7 @@ In the following examples, a node is accessed from a background thread or the ED
     }
     ```
 
-### Showing a notification with information from the model
+### Showing a Notification With Information From the Model
 
 In this example, additional information is shown to the user through a [top-level notification](https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons) (balloon).
 
@@ -257,7 +257,7 @@ In this example, additional information is shown to the user through a [top-leve
     )
     ```
 
-### Elevating model access
+### Elevating Model Access
 
 It depends on the current thread and active locks but most of the time, read locks can't be upgraded. A lock that is higher in the hierarchy, also
 has the permissions of the lower locks: *read* < *write* < *command*.
@@ -319,7 +319,7 @@ has the permissions of the lower locks: *read* < *write* < *command*.
     }
     ```
 
-## Additional references
+## Additional References
 
 - [IDEA threading model | developerlife.com](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model)
 - [Common Concurrency Pitfalls in Java](https://www.baeldung.com/java-common-concurrency-pitfalls)

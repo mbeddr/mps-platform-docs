@@ -36,7 +36,7 @@ You might have to deal with one of the following topics when you develop a new f
 
 ## Questions
 
-### [Self-improvement](https://softwareengineering.stackexchange.com/questions/tagged/self-improvement)
+### [Self-Improvement](https://softwareengineering.stackexchange.com/questions/tagged/self-improvement)
 
 === "General"
 
@@ -64,7 +64,7 @@ You might have to deal with one of the following topics when you develop a new f
     - [How to write efficient code despite heavy deadlines](https://softwareengineering.stackexchange.com/questions/55692/how-to-write-efficient-code-despite-heavy-deadlines)
     - [Writing robust code vs. overengineering](https://softwareengineering.stackexchange.com/questions/110227/writing-robust-code-vs-overengineering)
 
-### [Interpersonal skills](https://interpersonal.stackexchange.com/questions?tab=Votes)
+### [Interpersonal Skills](https://interpersonal.stackexchange.com/questions?tab=Votes)
 
 === "Communication"
 

@@ -175,7 +175,7 @@ new Thread({ => System.out.println("Thread"); }).start()
   double w = y * (1 - z) * (1 + x); // What is the meaning of this expression?
   System.out.println("The result is " + w); // What is the result 
   ```
-## [Stackexchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
+## [Stack Exchange: Software Engineering](https://softwareengineering.stackexchange.com/questions)
 
 - [What's wrong with comments that explain complex code?](https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code)
 - [When is a BIG Rewrite the answer?](https://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer)

@@ -5,7 +5,7 @@ alias: testing
 This page explains some testing ideas in MPS according to general ideas in [software testing](https://en.wikipedia.org/wiki/Software_testing).
 For a specific MPS testing introduction, visit [Testing language | MPS documentation](https://www.jetbrains.com/help/mps/testing-languages.html).
 
-## Testing techniques
+## Testing Techniques
 
 The following techniques are considered typical [black-box](https://en.wikipedia.org/wiki/Black-box_testing) design techniques which means you examine the functionality of an application without peering into its internal structures or workings.
 
@@ -15,7 +15,7 @@ The following techniques are considered typical [black-box](https://en.wikipedia
   also be detected with this technique. The example for the previous technique also shows a case of boundary-value analysis.
 - [Decision tables](https://en.wikipedia.org/wiki/Decision_table): They are used to test different input combinations/conditions in a tabular form. They are [directly supported](https://voelter.de/data/books/kernelf-designEvoUse.pdf#page=38) in KernelF.
 
-## What is a bug and what should be tested
+## What Is a Bug and What Should Be Tested
 
 > A software bug is an error, flaw, or fault in the design, development, or operation of computer software that causes it to produce an incorrect or unexpected result, or to behave in unintended ways. [software bug | Wikipedia](https://en.wikipedia.org/wiki/Software_bug)
 
@@ -36,7 +36,7 @@ Have a look at the [quick navigation table | MPS documentation](https://www.jetb
 While the generator can be tested with generator tests as explained in the documentation, they are often not fine-grained enough to test exactly what you want to test. You might also want to
 exclude certain nodes or properties or show the result in a diff tool. An alternative approach is to invoke the generator yourself through [com.mbeddr.mpsutil.generatorfacade.GeneratorFacade#runGenerator](http://127.0.0.1:63320/node?ref=r%3A00bd75cf-1225-4ef5-9a7e-390aed8718dd%28com.mbeddr.mpsutil.generatorfacade.runtime%29%2F5915735921188923345) and compare the expected and actual output yourself with `com.mbeddr.mpsutil.compare.structure.AssertNodeEquals`.
 
-### Manually testing
+### Manually Testing
 
 - Is there documentation for a new feature/change?
 - Is the change mentioned in the changelog?
@@ -47,23 +47,23 @@ exclude certain nodes or properties or show the result in a diff tool. An altern
 - Do any actions throw exceptions?
 - Are there any exceptions in the log file?
 
-## Testing approaches
+## Testing Approaches
 
 - *Functional review* ([black-box-testing](https://en.wikipedia.org/wiki/Black-box_testing)): The tester doesn't look at the code but rather checks the functionality of an application and if it meets the specification.
   - *Code review* ([white-box testing](https://en.wikipedia.org/wiki/White-box%20testing)): a different developer (e.g. from the same team) checks the code for
   logical errors, code standard violations, and other issues. If, for example, GitHub is used for hosting the project and [reviews are required](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) before a branch can be merged, a reviewer can comment on a PR, approve it or request changes.
 
-### [Continuous testing](https://en.wikipedia.org/wiki/Continuous_testing)
+### [Continuous Testing](https://en.wikipedia.org/wiki/Continuous_testing)
 
 MPS [tests](https://www.jetbrains.com/help/mps/testing-languages.html) such as unit, nodes, and editor tests can be executed on the command line and as part of the CI pipeline. To execute tests with the [mps-gradle-plugin](https://github.com/mbeddr/mps-gradle-plugin), use the [TestLanguages](https://github.com/mbeddr/mps-gradle-plugin#runantscript) task ([example](https://github.com/JetBrains/MPS-extensions/blob/7a7619ece4068098ffb8f09b44791713063587e7/build.gradle#L255)). To run the model checker, use the [Model Check](https://github.com/mbeddr/mps-gradle-plugin#model-check) task. It can be configured to make the
 build fail when there is a model check error and also show the failures as normal JUnit test fails. The model checking can be combined with the [linters](https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md) from the [mps-qa](https://github.com/mbeddr/mps-qa) project to further
 improve the code quality.
 
-### [Usability testing](https://en.wikipedia.org/wiki/Usability_testing)
+### [Usability Testing](https://en.wikipedia.org/wiki/Usability_testing)
 
 Start by looking through the [UI patterns](ui_patterns.md) list. To get started with testing with users, read [Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101/).
 
-#### [Expert review](https://en.wikipedia.org/wiki/Usability_testing?oldformat=true#Expert_review)
+#### [Expert Review](https://en.wikipedia.org/wiki/Usability_testing?oldformat=true#Expert_review)
 
 This is another general method of usability testing. Check the [Nielsen's usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/):
 
@@ -105,40 +105,40 @@ This is another general method of usability testing. Check the [Nielsen's usabil
     - Do the users have help available? (e.g. Show Help for X in right-click context menu, external documentation, a tooltip that shows additional information or text in the inspector, or a dedicated documentation tool such as ^^com.mbeddr.doc.aspect^^)
 ### [Performance testing](https://en.wikipedia.org/wiki/Software_performance_testing)
 
-#### [Load testing](https://en.wikipedia.org/wiki/Software_load_testing)
+#### [Load Testing](https://en.wikipedia.org/wiki/Software_load_testing)
 
 - Do bigger models still generate fast enough? Are there any timeouts while generating?
 - Do bigger root nodes still render fast enough in the editor?
 - When you are using an importer to create nodes: is it fast enough for big input files? Where is the limit? Is a progress bar necessary?
 - Does the application load fast enough on startup for many, and big models/modules?
 
-#### [Stress testing](https://en.wikipedia.org/wiki/Stress_testing_(software))
+#### [Stress Testing](https://en.wikipedia.org/wiki/Stress_testing_(software))
 
 - Does the application still works when there is no internet connection? 
 - What is the maximal size of a model that generates in a timely fashion? Is [[performance#model-pruning|model pruning]] needed?
 - What happens when you enter the power save mode? Do things like the automatic type-system checks and background threads work again when you leave the mode?
 
-#### [Soak testing](https://en.wikipedia.org/wiki/Soak_testing)
+#### [Soak Testing](https://en.wikipedia.org/wiki/Soak_testing)
 
 - Does the memory consumption rises after longer use? (memory indicator in the lower right corner) Is there maybe a memory leak?
 - Are all models loaded into memory after some time? (memory indicator). Models are lazily loaded which means that they are only loaded when they are needed. When all models are loaded this indicates that the models are probably accessed by accident e.g. through a global find usage search.
 - Do any suspicious messages appear in the [log file](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory) such as warnings about memory leaks or broken models?
 - Is memory released after some time or are not needed objects never garbage collected? If not, read about Java JVM options on [this page](../mps_internal/index.md#:~:text=where%20can%20you%20find%20information%20about%20environment%2Fjvm%20variables%20that%20are%20set%20in%20mps%3F).
 
-#### Spike testing
+#### Spike Testing
 
 - Does the action `Reload all` cause any issues such as memory leaks or freezes?
 - Are there any issues when clicking the memory indicator to unload all models?
 - Does the main project still has good performance when you open other projects in the background?
 
-#### Configuration testing
+#### Configuration Testing
 
 - Does the application work on all supported operating systems? (e.g. Windows, Linux, Mac + M1 chip)
 - Does the application works if a non-bundled Java Runtime is used? (e.g. JDK 11 instead of JBR 11 which might be needed for JCEF support)
 - Can the application be started with insufficient initial memory specific in the custom VM options? (`Xms`)
 - Does the editor still work when switching between different editor themes? (e.g. Light Theme, Darcula Theme, Mac Theme)
 
-## Final words
+## Final Words
 
 > Given enough eyeballs, all bugs are shallow.
 >
@@ -149,7 +149,7 @@ to get bugs reported and fixed quickly. Sometimes it is good enough when somebod
 
 Other times, like in the MPS platforms, some bugs would have never been identified, were there not that many users and developers that use them daily. There are always new unexplored use cases when the platforms are included in a new project and more edge cases are detected when more users test features. While this quote was originally referring to open-source projects, this also applies to closed-source projects.
 
-## [Stackexchange: Software Quality Assurance & Testing](https://sqa.stackexchange.com/)
+## [Stack Exchange: Software Quality Assurance & Testing](https://sqa.stackexchange.com/)
 
 These are some questions on the site Stack Exchange that are relevant for MPS projects where there are dedicated testers
 or testing is done by the developers themselves or another member of the team.

@@ -1,10 +1,10 @@
 ---
-title: Test aspect
+title: Test Aspect
 tags:
 - aspect
 ---
 
-# Test aspect
+# Test Aspect
 
 > Testing is an essential part of a language designer's work.
 >
@@ -123,7 +123,7 @@ tags:
 
      {{ contribution_by('abstraktor') }}
 
-## How to test
+## How to Test
 
 !!! question "How do you implement custom tests?"
 

@@ -1,10 +1,10 @@
 ---
-title: Constraints aspect
+title: Constraints Aspect
 tags:
 - aspect
 ---
 
-# Constraints aspect
+# Constraints Aspect
 
 The constraints aspect defines constraints for the concepts of the language.
 

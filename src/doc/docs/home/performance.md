@@ -40,7 +40,7 @@ If you want to know about slow software in general (e.g. hardware-related slowne
 
 - TODO: add generator performance slides from the MPS Meetup
 
-### Model pruning
+### Model Pruning
 
 Often, not all nodes have to be processed in the generator. We might have different build configurations where we are interested
 in only a subset of nodes, or we don't use [cross-model generation](https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration) and
@@ -60,7 +60,7 @@ include also other nodes that are not reachable by reference that are still need
 
 ## Editor
 
-### Big roots render slowly
+### Big Roots Render Slowly
 
 The initial rendering time increases with the size of the AST. MPS tries to cache parts of the editor once built and after the initial render it will only update the parts that require changes, but collecting the necessary dependency information to achieve this incrementality takes time.
 How big is too big? Thousands of descendants are going to take several seconds to render. Re-layouting the editor should therefore also not be invoked
@@ -68,7 +68,7 @@ too often (manually or programmatically).
 
 {{ contribution_by('sergej-koscejev') }}
 
-### Long-running checking rules on big roots
+### Long-Running Checking Rules on Big Roots
 
 When a root is displayed in the editor, checking rules are run in the background. The background checker can be interrupted between rules but not during the execution of a rule. When checking rules are too expensive for live checking set the flag *do not apply on the fly* to true.
 Type system calculations are cached by default but can also impact performance when they have to be recalculated too often. 

@@ -10,7 +10,7 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
 For general MPS problems, read [Finding your way out](https://www.jetbrains.com/help/mps/finding-your-way-out.html) first.
 If you are still stuck with your problem, read [overcoming obstacles](overcoming_obstacles.md) next.
 
-## MPS and platforms
+## MPS and Platforms
 
 !!! warning "The IDE is sluggish and doesn't work the way it should."
 

@@ -74,7 +74,7 @@ tags:
 - [git-extras](https://github.com/tj/git-extras)(extra git commands)
 - [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
 
-## GitHub publishing checklist
+## GitHub Publishing Checklist
 
 - Ready to use templates
     - [Template #1](https://github.com/cfpb/open-source-project-template)

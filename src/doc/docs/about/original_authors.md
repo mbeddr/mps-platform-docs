@@ -5,7 +5,7 @@ tags:
 - reference
 ---
 
-# Original authors
+# Original Authors
 
 This site includes documents and contributions from different sites. If you have contributed content and aren't listed on this page,
 please add yourself. This repository includes knowledge of the following people (and probably more) in alphabetical order:

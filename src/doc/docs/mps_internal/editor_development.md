@@ -39,7 +39,7 @@ When initializing an editor component, an [editor configuration](http://127.0.0.
 
 The editor component itself extends [JComponent](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/JComponent.html), has [antialiasing enabled](https://github.com/JetBrains/MPS/blob/e5db64ce7b7a419b0ea746dfa0d2f1e7bfabcf72/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L224) and has a left margin of 15 pixels, and top margin of 10 pixels. The gap between the content and the scrollbars is 15 pixels. The editor contains objects of type [EditorCell](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7EEditorCell), arranged in a tree structure. You can right-click in the editor and select *Language Debug* --> *Show Cell in Explorer* to show the currently selected cell in the cell explorer tool. The editor component is not only responsible for the content of the editor but also interacts with the type-checking thread, the highlighter (left highlighter column but also the message gutter on the right side).
 
-## Left highlighter
+## Left Highlighter
 
 The left editor highlighter contains the buttons for folding editor cells and other buttons such as *implements interface* and
 *overrides method*. Two different ways of adding new information to the highlighter exist:
@@ -98,7 +98,7 @@ When text is entered next to a cell (side transformation), a new [EditorCell_StH
 `EditorCell_STHint.getSTHintCell(node, editorComponent`). The information about the side and cell id of the hint cell is
 saved in a [sideTransformInfo](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F779128492853369165) attribute.
 
-### Custom cells
+### Custom Cells
 
 Extend one of the existing EditorCell implementations like EditorCell_Collection or EditorCell_Constant to use as the basis for the new
 cell. Override the *paintContent* method, to draw custom stuff in the editor (e.g. [EditorCell_DropDown](http://127.0.0.1:63320/node?ref=r%3A2da81fb8-b6c6-47b8-8c70-4c760b6faf63%28de.itemis.mps.editor.dropdown.runtime%29%2F8584963402264447319) in {{ mps_extensions() }}).
@@ -112,7 +112,7 @@ myHeight = myImages.getWidth();
 }
 ```
 
-### Manipulation/traversal
+### Manipulation/Traversal
 
 - [CellTraversalUtil](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellTraversalUtil): navigation of the editor cell tree. The method *iterateTree* returns an iterator, that can be used to iterate through a tree.
 - [CellFinderUtil](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.cells%28MPS.Editor%2F%29%2F%7ECellFinderUtil)
@@ -200,7 +200,7 @@ In {{ mps_extensions() }} there are some more selections:
 - [TableRangeSelection](http://127.0.0.1:63320/node?ref=r%3A2a738fcb-23b4-4d1d-9f52-870528559e28%28de.slisson.mps.tables.runtime.selection%29%2F8034681417260815117): for table selection from a start column/row to an end column/row.
 - [GraphSelection](http://127.0.0.1:63320/node?ref=r%3A7fc96130-6279-4a55-aeeb-422a6879539d%28de.itemis.mps.editor.diagram.runtime.jgraph%29%2F4854440943569238589): a selection used inside diagrams
 
-## Editor extensions
+## Editor Extensions
 
 The editor can be enhanced throw editor extensions. Implement the class [EditorExtensions](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.extensions%28MPS.Editor%2F%29%2F%7EEditorExtension)
 and register it through a project plugin. An example of the mouse listener plugin:
@@ -261,7 +261,7 @@ as the backing data structure ([Guide to WeakHashMap in Java](https://www.baeldu
 map<EditorComponent, YourListener> instances = new weakHashMap<EditorComponent, YourListener>;` To let the garbage collector
 delete a referenced editor component in the listener when it is not needed anymore, and store it in a weak reference: `#!java myEditorComponent = new WeakReference<EditorComponent>(editorComponent)`
 
-### Disposing of resources
+### Disposing of Resources
 
 Register a dispose-listener for the editor component and execute your *uninstall* method in the body:
 
@@ -290,6 +290,6 @@ Editor components support additional painting through the methods *addAdditional
 allow registering/unregistering objects of class [AdditionalPainter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EAdditionalPainter).
 The highlighting of the currently selected line and red highlighting of the breakpoint line is implemented that way.
 
-## Additional reference
+## Additional Reference
 
 - [Editor language generation API](https://www.jetbrains.com/help/mps/editor-language-generation-api.html)

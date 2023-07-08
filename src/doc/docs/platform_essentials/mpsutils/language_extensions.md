@@ -8,7 +8,7 @@ MPS-DF is a data-flow extension for MPS. Part of the code was included in MPS it
 
 [An Extensible Framework for Variable-precision Data-flow Analyses in MPS | Tamás Szabó](https://szabta89.github.io/projects/df.html)
 
-## Default values for properties
+## Default Values for Properties
 
 > ^^com.mbeddr.mpsutil.propertydefault^^
 
@@ -32,7 +32,7 @@ default: "empty"
 }
 ```
 
-## Extension class
+## Extension Class
 
 > ^^com.mbeddr.mpsutil.extensionclass^^
 
@@ -44,7 +44,7 @@ As a starting point, create a dependency to the model ^^com.mbeddr.mpsutil.exten
 
 ![example: extension class](extensionclass_example.png)
 
-## Language plugin extensions
+## Language Plugin Extensions
 
 > ^^com.mbeddr.mpsutil.lang.plugin.extensions^^
 
@@ -52,7 +52,7 @@ This language contains extensions for ^^jetbrains.mps.lang.plugin^^. It mainly a
 `add to NewProjectOrModuleGroup after position NewProject`
 
 
-## Parameterized menu
+## Parameterized Menu
 
 > ^^com.mbeddr.mpsutil.parameterizedMenu^^
 
@@ -71,7 +71,7 @@ For completion styling and item priorities, use [completion styling](https://blo
 This language extends the language ^^jetbrains.mps.lang.resources^^ by providing more customizations. [CircleCustomizable](http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260) adds support for drawing the circle with a different thickness. [TextCustomizable](http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509) adds support for specifying the font style (plain, bold, italic), font family and offsets for the text.
 
 
-## Suppress warning
+## Suppress Warning
 
 > ^^com.mbeddr.mpsutil.suppresswarning^^
 
@@ -84,7 +84,7 @@ In ^^com.mbeddr.core.modules^^, two more data flow-related kinds exist:
 - **liveness**: suppress dataflow liveness warning
 - **dataflow**: suppress dataflow warning
 
-## Type system trace
+## Type System Trace
 
 > ^^com.mbeddr.mpsutil.typesystem.trace^^
 
@@ -92,13 +92,13 @@ In ^^com.mbeddr.core.modules^^, two more data flow-related kinds exist:
 
 This language modifies the different type-system concepts such as comparison rule or non-type-system rules to collect information about the runtime execution time. To use it, place an instance of [TraceTypesystem](http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786) into a type-system aspect to include the generator of this language and set the *enabled* flag to true. The model contains a new action `Benchmark Typesystem` that opens a tool named `Type System Performance Data` that shows the collected information.
 
-## XML fix
+## XML Fix
 
 > ^^com.mbeddr.mpsutil.xml.fix^^
 
 This language contains fixes for the [XML language](https://www.jetbrains.com/help/mps/xml-language.html). It [escapes XMl values](https://commons.apache.org/proper/commons-lang/javadocs/api-3.3/org/apache/commons/lang3/StringEscapeUtils.html#escapeXml10(java.lang.String)) for XML 1.0/1.1.
 
-## Unique names
+## Unique Names
 
 > ^^com.mbeddr.mpsutil.uniquenames^^
 

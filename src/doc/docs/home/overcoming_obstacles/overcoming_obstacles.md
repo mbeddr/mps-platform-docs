@@ -1,4 +1,4 @@
-# Overcoming obstacles
+# Overcoming Obstacles
 
 You probably already read [troubleshooting guide](trouble_shooting_guide.md), [Finding your way out | MPS User's Guide](https://www.jetbrains.com/help/mps/finding-your-way-out.html), and [Debugging](debugging.md) but are still stuck with an issue.
 The following pages combine the issue of getting stuck while developing in MPS with being stuck with a certain programming problem. It doesn't matter if you are working on a new feature, fixing a bug, or just playing around with a toy project. It is important to recognize that you are stuck before spending unnecessary time
@@ -29,7 +29,7 @@ Some problems can't be reproduced at all or only under certain conditions. Try t
 - external conditions such as race conditions, non-deterministic code, different development environments
 - not fully and cleanly build projects: a common issue when regenerating MPS modules/models is to just make the module instead of rebuilding them which is necessary for certain aspects such as the generator aspect.
 
-## Implementing a non-perfect solution
+## Implementing a Non-Perfect Solution
 
 You are now at the stage where the problem can be solved but a perfect or even just a standard solution cannot be achieved.
 As a developer, you might always strive for perfection but one of the following factors might prevent you from achieving your goal:
@@ -42,7 +42,7 @@ As a developer, you might always strive for perfection but one of the following 
 Implementing a non-perfect solution, a workaround, or even a hack is still better than no solution at all. As a developer, you want to deliver high-quality
 code all the time, that is performant, follows best practices, and is reusable. Sometimes this non-perfect solution can be the best as long as you make things work and the code doesn't fail. While this solution might introduce [technical debt](https://www.outsystems.com/glossary/what-is-technical-debt/) that has to be dealt with in the future, it doesn't have to be this way: the solution might be just overengineered, is pre-optimized or deals with uses cases that might not even occur in the future. If it is a rapidly changing project, the code might even get thrown out in the next release. If you decide to ship this solution, document somewhere (e.g. in the code, ticket, a design document) why the solution is implemented the way it is.
 
-## Let it go
+## Let It Go
 
 There will be obstacles that you can't overcome, problems that you can't fix and features that can't be developed. Some problems are located in MPS platforms or MPS where no workaround exists
 or the priority of the issue is so low that it doesn't impact the user's experience or compromises business logic. In other cases, the issue is so complex that nobody can solve it, or it isn't reproducible.

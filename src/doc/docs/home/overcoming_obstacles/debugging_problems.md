@@ -3,11 +3,11 @@
 Different kinds of problems can occur in MPS. Some of them are bugs that you have to fix, other problems might be unfixable or caused by an unusual approach to
 tackling a problem (e.g. [accessing a project instance](accessing_the_project.md) from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces,  run code on the MSP console, or use [remote debugging](https://specificlanguages.com/articles/debugging/).
 
-## Deal with errors
+## Deal With Errors
 
 Error messages can appear in different places:
 
-### Errors in the editor
+### Errors in the Editor
 
 Those errors (red squiggly line) are caused by [checking rules](https://www.jetbrains.com/help/mps/typesystem.html#checkingrules) or type system rules.
 Right-click the offending cell in the editor --> *Language Debug* --> *Go to Rule Which Caused Error* to navigate to the statement that causes the error.
@@ -15,7 +15,7 @@ When there is an error calculating a type, the [type system trace](https://www.j
 debug menu also contains an entry *Show Type* that shows the calculated type. Most of the time, it is easier using this action + understanding the type system check
 than using the tracing tool.
 
-### IDE fatal errors
+### IDE Fatal Errors
 
 Those errors can be found by clicking on the error icon in the bottom right corner of the window.
 
@@ -28,11 +28,11 @@ if the exception is caused by MPS.
 To analyze the exception itself, open the error dialog and copy the error message. Then click in the main menu on *Analyze* --> *Analyze Stack Trace* and press *ok*.
 The stack trace will be opened in the run window. For lines where the sources are available, a link to the corresponding source is provided.
 
-### Errors in the [log file](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory)
+### Errors in the [Log File](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory)
 
 Errors in this file can be written by log statements, MPS platforms, MPS and the IntelliJ platform. Many of those exceptions can't be fixed easily if they don't come from your languages but sometimes can still contain useful hints. Example: When the automatic module maker at startup fails, only the number of errors and warnings is shown in the error tooltip. The exact stack trace can be found in the error log. Messages about models that can't be loaded are also saved in this file.
 
-### The editor can't be rendered
+### The Editor Can’t Be Rendered
 
 ![error creating editor cell](error_creating_editor_cell.png)
 
@@ -42,7 +42,7 @@ this happens, locate the MPS module that causes the freeze in your local file ex
 module is not active anymore, and you can start debugging. The same approach can be done for application and project plugins that crash the MPS instance.
 If the exception is not caused by your language, please report the issue to the developer of the language.
 
-## Dealing with wrong outputs
+## Dealing With Wrong Outputs
 
 Wrong outputs could be seen in many places: a Base Language method that calculates a wrong value, an incorrectly initialized node
 that is created via an intention, an error message that shows null instead of an error message, a generator that generates the wrong output, and so forth. Most of those cases can be checked automatically with the [testing languages](https://www.jetbrains.com/help/mps/testing-languages.html). The [quick navigation table](https://www.jetbrains.com/help/mps/testing-languages.html#quicknavigationtable) provides information on how to test certain

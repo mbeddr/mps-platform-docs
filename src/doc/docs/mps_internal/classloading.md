@@ -29,11 +29,11 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 | /plugins/<plugin-name>/lib       | IDEA plugin class loader                | com.intellij.ide.plugins.cl.PluginClassLoader |
 | any mps module with a java facet | module class loader                     | jetbrains.mps.classloading.ModuleClassLoader  |
 
-## How to use Java classes shipped in MPS plugins
+## How to Use Java Classes Shipped in Mps Plugins
 
 For this example, assume that you want to use classes from the *git4idea* plugin inside your code.
 
-### Solution (old)
+### Solution (Old)
 
 1. Create a solution *MySolution*.
 2. Create a model ending with ".plugin," for example *MySolution.plugin*.
@@ -52,7 +52,7 @@ Now the classes within *git4idea* are available within *MySolution*.
 
 Attention: MPS IDE won't build the code within solution *MySolution* anymore. Run the build script to activate any changes.
 
-### Solution (new)
+### Solution (New)
 
 You can find an example [here](https://github.com/modelix/modelix/blob/master/mps/solutions/org.modelix.git4idea.withJavaFacet/org.modelix.git4idea.withJavaFacet.msd).
 
@@ -90,7 +90,7 @@ You can find an example [here](https://github.com/modelix/modelix/blob/master/mp
 
 The JAR files are directly referenced from the MPS plugins folder. The JARs are then loaded as part of the Git4Idea facet.
 
-## Classloading issues
+## Classloading Issues
 
 Sometimes you might get conflicts with existing libraries that MPS already ships. For instance, while using the `SAXBuilder`. In these cases, you will get a class version exception or similar. As a workaround, you can set the classloader and the current thread while instantiating such classes:
 

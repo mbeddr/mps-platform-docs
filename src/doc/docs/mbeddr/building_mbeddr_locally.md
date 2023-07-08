@@ -6,7 +6,7 @@ tags:
 
 When trying to build [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, you have to overcome some stumbling blocks. This article isn't a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. You probably need to install all tools from the page [Required Tools and Versions | mbeddr.com](http://mbeddr.com/download.html#RequiredToolsAndVersions), especially the C-related tools, if you want to get everything built.
 
-## Automatic build
+## Automatic Build
 
 1. `git clone git@github.com:mbeddr/mbeddr.core.git`
 2. Switch to the branch that you need, if it isn't the master branch e.g. MPS 2021.1.4: `git checkout maintenance/mps20211`
@@ -15,7 +15,7 @@ When trying to build [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, yo
 5. Run `./gradlew -PdisableMavenLocal=true` instead to only build the platform.
 6. The tests and sandboxes are not built and have to be built manually.
 
-## Manual build
+## Manual Build
 
 1. Open the *com.mbeddr.debugger* project in MPS (multiple projects are located in the code/languages folder) and run `./gradlew install` on Mac/Linux or `gradlew.bat install` on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don't have to start this command from inside MPS but when you execute it on the normal command line, you might need to pass `-PMPS_PATHS_SELECTOR`to gradle to set the path to the MPS home directory. When everything works, the script should install a plugin named *spawner* into your MPS installation. This plugin contains libraries for the [Eclipse C/C++ development tooling](https://www.eclipse.org/cdt/) and needs to be installed. It also installs the idea plugin for the actions-filter language, which needs to be installed to be able to use the language.
 2. You can now build all projects. Start with these projects in this order:

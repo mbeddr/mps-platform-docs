@@ -1,12 +1,12 @@
 ---
-title: Listener aspect
+title: Listener Aspect
 hide:
 - toc
 tags:
 - aspect
 ---
 
-# Listener aspect
+# Listener Aspect
 
 - [documentation](https://jetbrains.github.io/MPS-extensions/extensions/utils/model-listener/)
 

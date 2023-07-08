@@ -4,7 +4,7 @@ tags:
 - troubleshooting
 ---
 
-## Reporting bugs
+## Reporting Bugs
 
 Before reporting bugs, you might want to read: [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
 This page should then help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
@@ -40,7 +40,7 @@ issue belongs to. Most of the time, the package name tells you the correct proje
     - ^^org.w3c.*^^
     - ^^org.xml.sax.*^^
 
-## MPS (YouTrack)
+## MPS(YouTrack)
 
 This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue. YouTrack follows the [CommonMark specification](http://spec.commonmark.org/0.30/) with extensions that support key features like autolinks and tables: [YouTrack Markdown Reference](https://issues.hibernatingrhinos.com/markup)
 
@@ -52,7 +52,7 @@ This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains
 - [MPS X Release Notes (example)](https://youtrack.jetbrains.com/releaseNotes/MPS?q=%23Resolved%20Fix%20versions:%202021.1.4&title=MPS%202021.1.4%20Release%20Notes&_ga=2.50080358.1125194593.1665382985-2058359210.1628057624&_gl=1*19vge7b*_ga*MjA1ODM1OTIxMC4xNjI4MDU3NjI0*_ga_9J976DJZ68*MTY2NTM4NTY0My4zMzMuMS4xNjY1Mzg1ODE5LjQxLjAuMA..)
 - [tickets which encourage contributions](https://youtrack.jetbrains.com/issues/MPS?q=%23mps-contribution%20%23Open%20)
 
-## MPS-extensions
+## MPS-Extensions
 
 If you are unsure which languages are part of this platform, please consult the [full extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/) page.
 
@@ -76,7 +76,7 @@ This issue tracker is most of the time needed for tickets related to [KernelF](h
 
 - [open issue](https://github.com/IETS3/iets3.opensource/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
-## IntelliJ platform
+## IntelliJ Platform
 
 This issue tracker contains issues for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The used IntelliJ platform can be found on the 
 [MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consists

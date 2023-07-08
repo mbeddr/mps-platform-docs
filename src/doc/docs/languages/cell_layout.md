@@ -12,7 +12,7 @@ In the MPS layout algorithms, the children decide about their width and height, 
 The box model defines how the editor elements are modeled in the cell layout language. It is like a simplified version
 of the [CSS box model](https://en.wikipedia.org/wiki/CSS_box_model).
 
-### Layout box
+### Layout Box
 
 A layout box has a *position* (x,y) and a *dimension* (width, height). These properties can be saved together in a
 [Bounds](http://127.0.0.1:63320/node?ref=r%3A6107a535-c9ce-47d9-a4cd-4df6fd2db517%28de.itemis.mps.editor.celllayout.boxmodel%29%2F6454451880331308523) object which also has methods for checking if another bounds or point is contained in it.
@@ -109,7 +109,7 @@ There are *innerX* methods for getting the position and dimension as well as a m
 
 A [Grid](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991452) is a 2D structure and consists of [GridElement](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714)s and has a dimension. Internally a 1D array is used to store the elements.
 
-#### Extending and scaling
+#### Extending and Scaling
 
 Each row has an ascent and descent, and all columns can have different widths. A column's width can be extended. It is kept the same if the new with is smaller than the existing width. It can also extend to an unlimited size. The row's height can also be extended by providing a new ascent and descent. The sum of both values has to be greater than zero. When the old values are greater, nothing changes. The contained cells of the grid can also be extended by providing a size getter that determines a new size for each ILayoutable.
 
@@ -137,7 +137,7 @@ The main method of the grid is *growElement* which takes a grid element, an offs
 
 A [GridElement](http://127.0.0.1:63320/node?ref=r%3A12584d60-2d80-4ca9-9c6e-b79d499da0cf%28de.itemis.mps.editor.celllayout.layout%29%2F4615632674301991714) has a ILayoutable and different *extendN* methods: extendSize works by changing the ascent of the ILayoutable. The descent is calculated by subtracting the ascent from the height. There are further methods for extending the width and extending the columns.
 
-### Standard layouts
+### Standard Layouts
 
 Default implementations for the standard MPS layouts are provided:
 

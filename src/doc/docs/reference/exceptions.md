@@ -16,7 +16,7 @@ Here is some more information for exceptions that often occur in MPS:
 
 ## MPS
 
-### Module validation
+### Module Validation
 
 !!! failure "Can't find / couldn't load X (language, devkit...)."
 
@@ -74,7 +74,7 @@ Here is some more information for exceptions that often occur in MPS:
 
     The models are used to generate some code, this is not the best way to utilize accessory models. The models shall be marked as 'do not generate'.
 
-### Type of exceptions
+### Type of Exceptions
 
 | name                                                                                                                                                                                                                                                  | example                                                                                                | description                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|

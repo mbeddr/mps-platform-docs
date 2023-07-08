@@ -1,4 +1,4 @@
-# Terminology and user interface for access
+# Terminology and User Interface for Access
 
 This section lists terms that aren't mentioned in the MPS guide or aren't explained well. [MPS project structure](https://www.jetbrains.com/help/mps/mps-project-structure.html) should give an overview of the most important terms.
 
@@ -8,7 +8,7 @@ This section lists terms that aren't mentioned in the MPS guide or aren't explai
 
 All global and project settings.
 
-### IDE settings (aka global settings)
+### Ide Settings (AKA Global Settings)
 
 Settings applied to all projects opened with this MPS installation ([official documentation](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.htm)).
 
@@ -26,13 +26,13 @@ Contained in one of the following places:
 MPS plugins bear no relationship to IDEA Plugins.
 However, you can package MPS plugins into IDEA plugins, just as any other content of MPS.
 
-### Project settings
+### Project Settings
 
 **UI**: Entry in the settings dialog
 
 Settings applied to one project. Stored in *${project}/.mps/*.
 
-## Modules pool
+## Modules Pool
 
 **UI**: second root entry in the logical view
 
@@ -41,7 +41,7 @@ All content known to MPS is contained in its modules pool. This modules pool is 
 If a module is contained more than once in the modules pool (e.g. present both in the current project and in a global Library), the behavior is undefined (i.e. will mess up badly, don't do this).
 
 
-## MPS window
+## MPS Window
 
 **UI**: If already open: *Window* menu, *New* File* menu: *Open...* --> *New Window*
 

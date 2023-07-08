@@ -40,7 +40,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
     - JDI Internal Event Handler
     - JDI Target VM Interface
 
-## IntelliJ platform threads
+## IntelliJ Platform Threads
 
 - Alarm Pool ([Alarm](https://github.com/JetBrains/intellij-community/blob/4ca3ccd49776e9a298773fcf26f6cb4a10afc06c/platform/ide-core/src/com/intellij/util/Alarm.java#L32))
 - Flushing Daemon ([FlushingDaemon](https://github.com/JetBrains/intellij-community/blob/master/platform/ide-core-impl/src/com/intellij/util/FlushingDaemon.java))
@@ -60,7 +60,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 - fsnotifier: native file system notifier
 - [DestroyJavaVM](https://stackoverflow.com/a/61063914/16577108)
 
-## MPS threads
+## MPS Threads
 
 - Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run for example inside this thread ([Highlighter](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java)).
 - HighlightUsages: highlights references to the node at the cursor position in the editor ([HighlightUsagesSupport](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java)).
@@ -73,7 +73,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 - generation-thread: generator thread ([GenerationTaskPool](https://github.com/JetBrains/MPS/blob/master/core/generator/source/jetbrains/mps/generator/impl/GenerationTaskPool.java))
 - TextGen-thread: text generator thread ([TextGeneratorEngine](https://github.com/JetBrains/MPS/blob/76b099c00163c96001d9a1f75c4ae7f59a10e8a4/core/textgen/source/jetbrains/mps/text/TextGeneratorEngine.java#L50))
 
-## Other threads
+## Other Threads
 
 - AnimatorThread (removed class of com.intellij.util.ui.Timer)
 - Poller SunPKCS11-Darwin (macOS-specific thread)
