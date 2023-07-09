@@ -4,7 +4,7 @@ tags:
 - examples
 ---
 
-These actions use the IntelliJ platform or access MPS models and need additional locks because they are running on a different thread. Especially MPS read and write locks should be available in every language aspect and manually locking isn't necessary.
+These actions use the IntelliJ platform or access MPS models and need additional locks because they are running on a different thread. Especially MPS read and write locks should be available in every language aspect, and manually locking isn't necessary.
 
 ## Example of Actions That Require MPS Locks
 

@@ -5,11 +5,9 @@ tags:
 - java
 ---
 
-
 Start with the page [JCEF - Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html) of the IntelliJ platform plugin SDK.
 
-JCEF should work with MPS 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older MPS versions
-because of classloading issues. The browser itself (`JBCefBrowser`) can be embedded in the MPS editor with a Java Swing component cell.
+JCEF should work with MPS 2021.1.4 and higher. Although introduced in IntelliJ IDEA 2020.1, it might not work in older MPS versions because of classloading issues. You can embed The browser (`JBCefBrowser`) in the MPS editor with a Java Swing component cell.
 For simple use cases, it is enough to call `browser.loadHTML` to load some HTML code. The content can be created by Java or by
 calling the MPS generator or [TextGen](http://localhost:8000/mps-platform-docs/aspects/textgen).
 
@@ -21,11 +19,10 @@ Existing Java documentation and examples on the web:
 - [CEF documentation (non Java version)](https://bitbucket.org/chromiumembedded/cef/wiki/Home)
 
 The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (MPS): You have
-to create a browser pipe between Java ([implementation](https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138)) and JS ([implementation](https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html)). The communication is done through JS. You then have a `subscribe` method that you can use to
+to create a browser pipe between Java ([implementation](https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138)) and JS ([implementation](https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html)). The communication uses JS. You then have a `subscribe` method that you can use to
 listen to events posted through a specific tag or create an event using the `post` method. These methods are available in Java and JS.
 
-**Warning**: MPS and the IntelliJ IDEA use Swing to create all the UI components. They are considered lightweight because they 
-are drawn by Java itself. JCEF uses native code, it is a heavyweight component. Especially with MPS' reloading capabilities, it is important to correctly dispose of the browser when it isn't needed anymore. The following code registers a listener for the editor component
+**Warning**: MPS and the IntelliJ IDEA use Swing to create all the UI components. They are considered lightweight because Java itself draws them. JCEF uses native code, and it is a heavyweight component. Especially with MPS' reloading capabilities, t is important to dispose of the browser when it isn't needed. The following code registers a listener for the editor component
 dispose event and also closes the browser:
 
 ```java

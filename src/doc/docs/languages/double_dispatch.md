@@ -6,9 +6,9 @@ tags:
 - baselanguage-extension
 ---
 
-This article explains the language ^^jetbrains.mps.baselanguage.doubleDispatch^^. The example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
+This article explains the language ^^jetbrains.mps.baselanguage.doubleDispatch^^. The used example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
 
-Most OOP programming languages support single dispatch, more commonly known as virtual methods. For example, consider the following code:
+Most OOP programming languages support single dispatch, commonly known as virtual methods. For example, consider the following code:
 
 
 ``` java title="Single dispatch"
@@ -31,9 +31,9 @@ System.out.println(ship.GetShipType()); // output: (1)
 
 1. ApolloSpacecraft
 
-The actual method implementation which should be called, is chosen at runtime based solely on the actual type of ship. So, only the type of single object is used to select the method, hence the name single dispatch.
+The actual method implementation, which the interpreter should call, is chosen at runtime based solely on the actual type of ship. The interpreter only uses the type of a *single* object to select the method, hence the name single dispatch.
 
-Note: *Single dispatch* is one form of *dynamic dispatch*, for example, the method is chosen at runtime. If the method is chosen at compile time (true for all non-virtual methods), it’s called *static dispatch*.
+Note: *Single dispatch* is one form of *dynamic dispatch*. For example, the interpreter chooses the method at runtime. If the compiler decides the method at compile time (valid for all non-virtual methods), it's called *static dispatch*.
 
 Now add some asteroids:
 
@@ -101,7 +101,7 @@ public class DoubleDispatch {
 7. Asteroid hit an ApolloSpacecraft
 8. ExplodingAsteroid hit a SpaceShip
 
-The desired result here would be *ExplodingAsteroid hit an ApolloSpacecraft*, but instead you get *ExplodingAsteroid hit a SpaceShip*.
+The desired result here would be *ExplodingAsteroid hit an ApolloSpacecraft*, but instead, you get *ExplodingAsteroid hit a SpaceShip*.
 To support double dispatch, import the dispatch language and include dispatch modifiers in ExplodingAsteroid:
 
 ``` java

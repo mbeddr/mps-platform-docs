@@ -27,27 +27,27 @@ tags:
 
 !!! question "I want to migrate an MPS project that's many years old. How do you do that?"
 
-    First of all, make sure that you don't skip too many MPS versions, otherwise the migration won't succeed. For old projects, you have to edit the module files manually because the structure slightly changed. Open the .mpl files in a text editor
+    First of all, make sure that you don't skip too many MPS versions; otherwise, the migration won't succeed. For old projects, you have to edit the module files manually because the structure slightly changed. Open the .mpl files in a text editor
     and change all occurrences of `<language id="%ID" fqName="%FQNAME" version="%VERSION" />` into 
     `<language slang="l:%ID:%FQNAME" version="%VERSION" />`. 
 
     The next step is to start the migration assistant. It will fail because it can't find migrations for some language versions.
-    For example ^^jetbrains.mps.lang.editor^^ only has a migration starting with version 7. You have to find all occurrences
+    For example, ^^jetbrains.mps.lang.editor^^ only has a migration starting with version 7. You have to find all occurrences
     of this language in your project with a text editor and change the attribute version to 7. Then run the migration assistant again and hope that everything
-    works. Some concepts cannot be migrated automatically such as the substitute and transformation menus. There will also be other issues that have to be fixed manually.
+    works. Some concepts cannot be migrated automatically, such as the substitute and transformation menus. There will also be other issues that have to be fixed manually.
 
-!!! hint "I want to replace node *A* with another node *B* where *A* and *B* share the same super concept."
+!!! hint "I want to replace node *A* with another node *B* where *A* and *B* share the same super-concept."
 
-    Use the class [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346). This class can be used to set/unset property or replace nodes with other ones.
+    Use the class [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346). This class can be used to set/unset properties or replace nodes with other ones.
     Example: `RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentConfigRef/)`
 
-!!! question "Are there any best practices about feature branches and language migrations?"
+!!! question "Are there any best practices for feature branches and language migrations?"
 
     - [languageengineering.io: MPS, Feature Branches and Language Migrations: DOs and DON'Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d)
 
 !!! question "How can you detect that migrations are running?"
 
-    > I have code that needs to know if migrations are currently executed e.g. model listeners that update the model when a change by the user appears.
+    > I have code that needs to know if migrations are currently executed, e.g., model listeners that update the model when a change by the user appears.
     
     > I would like to detect when migrations are executed to prevent this code from executing in the middle of a migration to prevent manipulating the model in an incomplete state during the migration.
 
@@ -63,7 +63,7 @@ tags:
     ```
     {{ contribution_by('abstraktor') }}
 
-!!! question "How can you find all references to a specified root node and change these references, so they point to another root node?"
+!!! question "How can you find all references to a specified root node and change these references so they point to another root node?"
 
     Search through the methods in [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346).
 
@@ -78,28 +78,28 @@ tags:
     references.forEach({~it => resultObject/.setReferenceTarget(it.link, reuseact); });
     }
     ```
-!!! question "What are module versions and how/why can other modules depend on modules with different version then the current module version?"
+!!! question "What are module versions, and how/why can other modules depend on modules with different versions than the current module version?"
 
     You start with language and module version 0.
     Reasons why the language version of a language updates:
     
-    - a new migration was added manually
-    -you've executed the action "Correct Language Version"
-    - you've set it manually in the module properties
-    - a concept was moved to a different language through the refactoring menu and a migration script was written
+    - A new migration was added manually.
+    - You've executed the action "Correct Language Version."
+    - You've set it manually in the module properties.
+    - A concept was moved to a different language through the refactoring menu, and a migration script was written.
     
     Reasons why the module version of a language updates:
     
-    - you've set it manually in the module properties
-    - a concept/property/link was moved to a different language through the refactoring menu and a refactoring log was written
+    - You've set it manually in the module properties.
+    - A concept/property/link was moved to a different language through the refactoring menu, and a refactoring log was written.
     
-    Reason why both versions don't update:
+    Reasons why both versions don't update:
     
-    - the language was renamed
-    - nodes/models are moved to a different solution
+    - The language was renamed.
+    - Nodes/models are moved to a different solution.
     
     The module version of a solution can't change automatically. I also don't know why you would change it manually. Devkits don't even have the option to change the module version.
-    A good example for a language with different language and module versions is ^^jetbrains.mps.lang.feedback.problem.scopes^^ (language: 0, module: 1) because it only has a refactoring step but no other migrations.
+    A good example of a language with different language and module versions is ^^jetbrains.mps.lang.feedback.problem.scopes^^ (language: 0, module: 1) because it only has a refactoring step but no other migrations.
 
 ## Troubleshooting
 

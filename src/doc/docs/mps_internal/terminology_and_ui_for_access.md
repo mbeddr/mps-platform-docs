@@ -1,6 +1,6 @@
 # Terminology and User Interface for Access
 
-This section lists terms that aren't mentioned in the MPS guide or aren't explained well. [MPS project structure](https://www.jetbrains.com/help/mps/mps-project-structure.html) should give an overview of the most important terms.
+This section lists terms that need to be mentioned in the MPS guide or be explained better. [MPS project structure](https://www.jetbrains.com/help/mps/mps-project-structure.html) should give an overview of the most important terms.
 
 ## Settings
 
@@ -16,7 +16,7 @@ Settings applied to all projects opened with this MPS installation ([official do
 
 **UI**: entry in the settings dialog
 
-A packaged set of contributions to the [IntelliJ IDEA platform](https://plugins.jetbrains.com/docs/intellij/welcome.html), on which MPS is based upon.
+Plugins are a packaged set of contributions to the [IntelliJ IDEA platform](https://plugins.jetbrains.com/docs/intellij/welcome.html), on which MPS is based upon.
 
 Contained in one of the following places:
 
@@ -36,16 +36,16 @@ Settings applied to one project. Stored in *${project}/.mps/*.
 
 **UI**: second root entry in the logical view
 
-All content known to MPS is contained in its modules pool. This modules pool is shared between all windows of the same MPS installation. In some future MPS version, every window should have its independent modules pool.
+All content known to MPS is contained in its modules pool. It is shared between all windows of the same MPS installation. In the future, every window should have its independent modules pool.
 
-If a module is contained more than once in the modules pool (e.g. present both in the current project and in a global Library), the behavior is undefined (i.e. will mess up badly, don't do this).
+If a module is contained more than once in the modules pool (e.g., present both in the current project and in a global Library), the behavior is undefined (i.e., will mess up badly, don't do this).
 
 
 ## MPS Window
 
 **UI**: If already open: *Window* menu, *New* File* menu: *Open...* --> *New Window*
 
-Every Project is contained in its own window.
+Every project is contained in its window.
 
 ## Project
 
@@ -53,7 +53,7 @@ Every Project is contained in its own window.
 
 A project is a collection of modules. A module can be part of more than one project. They can be added via the *Project Paths* context menu entry of the project.
 
-Modules can be nested in folders. These folders are stored in the project, i.e. the same module can be in different folders inside different Projects. Folders are only for visual organization, they don't have any effect on storage location, generation, or anything else.
+Modules can be nested in folders. These folders are stored in the project, i.e., the same module can be in different folders inside different Projects. Folders are only for visual organization. They don't affect storage location, generation, or anything else.
 
 !!! question "What are some known predefined path variables?"
 
@@ -62,7 +62,7 @@ Modules can be nested in folders. These folders are stored in the project, i.e. 
     - *&#36{language_descriptor}*: the descriptor file of the  current language
     - *&#36{solution_descriptor}*: the descriptor file of the current solution
     - *&#36{project}*: the directory containing the project
-    - *&#36{mps_home}*: the directory of th MPS installation
+    - *&#36{mps_home}*: the directory of the MPS installation
     
     Don't point path variables to a subpath of another path variable. MPS always applies the first (predefined before user-defined, user-defined in order of definition) one matching.
 

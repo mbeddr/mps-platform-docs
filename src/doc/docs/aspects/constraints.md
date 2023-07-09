@@ -3,7 +3,6 @@ title: Constraints Aspect
 tags:
 - aspect
 ---
-
 # Constraints Aspect
 
 The constraints aspect defines constraints for the concepts of the language.
@@ -18,7 +17,7 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "Are there any useful helper classes?"
 
-    - {{ mps_url("@mps.ModelConstraints") }}: This class can be used to calculate the constraint/scope of a specific concept/node programmatically.
+    - {{ mps_url("@mps.ModelConstraints") }}: This class can calculate the constraint/scope of a specific concept/node programmatically.
 
 ## Properties
 
@@ -40,11 +39,12 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "How do you filter scopes? Which scopes are available?"
 
-    [FilteringScope](http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664) takes an existing scope and can therefore be used for filtering. Some other scope implementations are also listed in [Using reference scope | MPS documentation](https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope).
+    [FilteringScope](http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664) takes an existing scope and can do the filtering. [Using reference scope | MPS documentation](https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope)
+    lists some other scope implementations.
 
 ??? question "What's the best way to wrap a list of nodes into a *Scope*?"
 
-    > I have a list of nodes and want to wrap them into a scope
+    > I have a list of nodes and want to wrap them into a scope.
     > How do you do that?
 
     You're probably looking for `#!java ListScope.forResolvableElements(sequence<node<>> elements)`.
@@ -68,5 +68,5 @@ The constraints aspect defines constraints for the concepts of the language.
 
 !!! question "What's the difference between *parent scope* and *super.getScope*?"
 
-    `parent scope` asks your node or up in the hierarchy for the scope until it finds a scope provider.
-    `super.getScope` will use the implementation from the super concept.
+    A parent scope asks your node or up in the hierarchy for the scope until it finds a scope provider.
+    `super.getScope` will use the implementation from the super-concept.

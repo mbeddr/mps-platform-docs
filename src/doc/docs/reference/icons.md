@@ -6,7 +6,7 @@ tags:
 
 ## Actions
 
-The icons can be used in this repository by inserting the corresponding code in a markdown file.
+You can use the icons in the documentation by inserting the corresponding code in a markdown file.
 
 | Code                                    | Icon                                  | Icon_2x                                  | Icon_dark                                  | Icon_2x_dark                                  |
 |-----------------------------------------|---------------------------------------|------------------------------------------|--------------------------------------------|-----------------------------------------------|

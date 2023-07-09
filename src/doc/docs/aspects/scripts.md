@@ -20,5 +20,5 @@ tags:
 
 !!! question "Where can I find all available enhancement scripts?"
 
-    Go to Tools --> Scripts --> Enhancements and select a script or go to the *All scripts* page and select
+    Go to Tools --> Scripts --> Enhancements and select a script or go to the *All Scripts* page and select
     a few of them to run.

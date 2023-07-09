@@ -4,16 +4,14 @@
 
 > ^^com.mbeddr.mpsutil.json^^
 
-This language implements a simple JSON language that can be used as a generator target. The [JSON file](http://127.0.0.1:63320/node?ref=r%3Abe665d13-1e1d-44cd-9817-8bd4d610f422%28com.mbeddr.mpsutil.json.structure%29%2F4342692121161094115) root node
-supports an additional package name which is used as the folder inside the generation folder where the file is generated
-into.
+This language implements a simple JSON language you can use as a generator target. The [JSON file](http://127.0.0.1:63320/node?ref=r%3Abe665d13-1e1d-44cd-9817-8bd4d610f422%28com.mbeddr.mpsutil.json.structure%29%2F4342692121161094115) root node supports an additional package name used as the folder inside the generation folder.
 
-An example of a file that can be generated:
+An example of a file that you can generate:
 
 ```json
 { 
-  "description" : "This is a json file", 
-  "name" : "my json file", 
+  "description" : "This is a JSON file", 
+  "name" : "my JSON file", 
   "this is an object" : { 
     "And another object" : { 
       "With a description" : "object description", 
@@ -30,4 +28,4 @@ An example of a file that can be generated:
 }
 ```
 
-An importer also exist for the language. It can import all JSON files in a folder or just single files.
+An importer also exists for the language. It can import all JSON files in a folder or just single files.

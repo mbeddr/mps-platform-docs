@@ -37,7 +37,7 @@ tags:
 
     Put the following code in an application plugin:
     ```java
-    // set default project location 
+    // Set default project location 
     string defaultProjectDir = Paths.get(System.getProperty("user.home"), "NewProjectDir").toString();
     GeneralSettings.getInstance().setDefaultProjectDirectory(defaultProjectDir);
     ```
@@ -53,16 +53,16 @@ tags:
     ActionUtils.updateAndPerformAction(action<openHtmlReport>, event);
     ```
     
-    Since this is based on IDEA components, we need to get the `getNodeEditorComponent`, which is not part of the openapi. That's why we need to downcast it to the EditorComponent class.
+    Since this code is based on IDEA components, we need to get the `getNodeEditorComponent`, which is not part of the Open API. That's why we need to downcast it to the EditorComponent class.
 
     Note: `action<…>` comes from the ^^jetbrains.mps.lang.plugin^^ language.
 
 !!! question "How to shut down MPS programmatically?"
 
-    In normal conditions, one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, an exception
-     can be thrown on purpose. 
+    In normal conditions, one can use `#!java ApplicationManager.getApplication().exit()`. If this doesn't work, throw an exception
+    on purpose. 
 
-!!! question "How can you react to opening and closing of projects?"
+!!! question "How can you react to the opening and closing of projects?"
 
     Register a {{ mps_url("jetbrains.mps.project.ProjectManagerListener") }} in a plugin via the class 
     {{ mps_url("jetbrains.mps.project.ProjectManager") }}.
@@ -104,7 +104,7 @@ tags:
     Get the model-to-be-deleted as SModel (interface) and use `#!java new ModelDeleteHelper(model).delete();`
     For more context see: [DeleteModeHelper](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java)
 
-!!! question "How can you add a language to the *Used Languages* settings of a model programmatically?"
+!!! question "How can you programmatically add a language to the *Used Languages* settings of a model?"
 
     - Module level: `#!java ((AbstractModule) moduleA).addDependency(moduleB.getModuleReference(), false)`
     - Model level: `#!java new ModelImports(model).addUsedLanguage(language)`
@@ -129,7 +129,7 @@ tags:
 
     Use `SRepository.saveAll()`.
 
-    For a single project, e.g. `ProjectHelper.getProjectRepository(project).saveAll();`
+    For a single project, e.g., `ProjectHelper.getProjectRepository(project).saveAll();`
 
     For all opened projects, e.g.
     

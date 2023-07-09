@@ -7,20 +7,20 @@ alias: reference-actions
 
 ## CommonDataKeys
 
-| name                    | description                                                                                            | Available in MPS   |
-|-------------------------|--------------------------------------------------------------------------------------------------------|--------------------|
-| CARET                   | Returns a caret instance (in host or injected editor, depending on context).                           | :no_entry:         |
-| EDITOR                  | Returns the currently focused editor instance.                                                         | :no_entry:         |
-| EDITOR_EVEN_IF_INACTIVE | Returns an editor even if focus currently is in find bar.                                              | :no_entry:         |
-| EDITOR_VIRTUAL_SPACE    | Returns whether the current location relates to a virtual space in an editor.                          | :no_entry:         |
-| HOST_EDITOR             | Returns a reference to host an editor instance, in case EDITOR key is referring to an injected editor. | :no_entry:         |
-| NAVIGATABLE             | Returns a `Navigatable` instance.                                                                      | :no_entry:         |
-| NAVIGATABLE_ARRAY       | Returns several navigatables, e.g.                                                                     | :no_entry:         |
-| PROJECT                 | Returns a project if a project node is selected (in project view)                                      | :white_check_mark: |
-| PSI_ELEMENT             | Returns a `PsiElement` instance.                                                                       | :no_entry:         |
-| PSI_FILE                | Returns the currently selected `PsiFile` instance.                                                     | :no_entry:         |
-| VIRTUAL_FILE            | Returns a `VirtualFile` instance.                                                                      | :white_check_mark: |
-| VIRTUAL_FILE_ARRAY      | Returns several `VirtualFile` instances                                                                | :white_check_mark: |
+| name                    | description                                                                                           | Available in MPS   |
+|-------------------------|-------------------------------------------------------------------------------------------------------|--------------------|
+| CARET                   | Returns a caret instance (in host or injected editor, depending on context).                          | :no_entry:         |
+| EDITOR                  | Returns the currently focused editor instance.                                                        | :no_entry:         |
+| EDITOR_EVEN_IF_INACTIVE | Returns an editor even if the focus currently is in the find bar.                                     | :no_entry:         |
+| EDITOR_VIRTUAL_SPACE    | Returns whether the current location relates to a virtual space in an editor.                         | :no_entry:         |
+| HOST_EDITOR             | Returns a reference to host an editor instance in case the *EDITOR* key refers to an injected editor. | :no_entry:         |
+| NAVIGATABLE             | Returns a `Navigatable` instance.                                                                     | :no_entry:         |
+| NAVIGATABLE_ARRAY       | Returns several navigatables, e.g.                                                                    | :no_entry:         |
+| PROJECT                 | Returns a project if a project node is selected (in project view)                                     | :white_check_mark: |
+| PSI_ELEMENT             | Returns a `PsiElement` instance.                                                                      | :no_entry:         |
+| PSI_FILE                | Returns the currently selected `PsiFile` instance.                                                    | :no_entry:         |
+| VIRTUAL_FILE            | Returns a `VirtualFile` instance.                                                                     | :white_check_mark: |
+| VIRTUAL_FILE_ARRAY      | Returns several `VirtualFile` instances                                                               | :white_check_mark: |
 
 ## PlatformDataKeys
 
@@ -53,4 +53,4 @@ alias: reference-actions
 | STATUS_BAR                   | Returns the status bar class                                                                                                                                        | :no_entry:         |
 | TOOL_WINDOW                  | Returns the current tool window                                                                                                                                     | :white_check_mark: |
 | TREE_EXPANDER                || :no_entry:                                                                                                                                                          |
-| UI_DISPOSABLE                | Returns the class responsible for disposing of an UI component                                                                                                      | :no_entry:         |
+| UI_DISPOSABLE                | Returns the class responsible for disposing of a UI component                                                                                                       | :no_entry:         |

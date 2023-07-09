@@ -8,7 +8,7 @@ tags:
 
 # TextGen Aspect
 
-> The TextGen language aspect defines a model to text transformation.
+> The TextGen language aspect defines a model-to-text transformation.
 >
 > — <cite>MPS documentation</cite>
 
@@ -17,7 +17,7 @@ tags:
 !!! question "How do you get the TextGen for a node?"
     
     Use the class{{ mps_url("@mps.TextGeneratorEngine") }}.
-    It only works for root nodes such as {{ mps_url("@mps.ClassConcept") }} and returns null when there is no text output.
+    It only works for root nodes such as {{ mps_url("@mps.ClassConcept") }} and returns null when no text output exists.
 
 !!! question "Can you also generate the text from the generator aspect?"
 
@@ -25,7 +25,7 @@ tags:
 
 ??? question "Can I implement text generation for another language?"
 
-    >I would like to implement text generation for language A in a separate language B. Concretely, I need *different* text generation for some of the KernelF concepts. When I try to do this, I get a compile error, because it looks like the generated descriptor does not include "inherited" concepts:
+    >I want to implement text generation for language A in a separate language B. I need *different* text generation for some of the KernelF concepts. When I try to do this, I get a compile error because it looks like the generated descriptor does not include "inherited" concepts:
 
     > ```java
     > public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
@@ -46,17 +46,17 @@ tags:
 
     {{ question_by('markusvoelter') }}
 
-    It's not possible this way. So far the two ways I found to make this happen are:
+    It's not possible this way. So far, the two ways I have found to make this happen are:
 
-    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialize the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this generically by using a script the generator that searches for all nodes of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
+    1. Extend the original language (A.ex) and create subconcepts of all the concepts you need to specialize the textgen. You will then need to do M2M transformation to replace the extended concepts. You can do this generically by using a script. The generator that searches for all nodes of concepts that are extended in A.ex and replaces them by using the `RefactoringRuntime.replaceWithNewConcept` method.
 
-    2. Create annotations that override the text generation of the concepts and attach them in a generator. Then MPS will first call the text gen of the annotation and you can override it there. 
+    2. Create annotations that override the text generation of the concepts and attach them in a generator. TThen MPS will first call the annotation's text gen, and you can override it there.
 
     There is MPS-22092 which describes this request.
 
     {{ answer_by('coolya') }}
 
-!!! question "Which useful builtin languages do not use the generator but only text generation?"
+!!! question "Which built-in languages do not use the generator but only text generation?"
 
     - ^^jetbrains.mps.baseLanguage.javadoc^^
     - ^^jetbrains.mps.core.properties^^

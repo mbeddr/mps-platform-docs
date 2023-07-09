@@ -4,9 +4,8 @@ tags:
 - infrastructure
 ---
 
-More than one correct *\.gitignore* file exists for MPS. It's recommended to ignore generated files but there can also be cases
+More than one correct *\.gitignore* file exists for MPS. It's recommended to ignore generated files, but there can also be cases
 where you can't execute your generated files, so you have to add them to version control and check the difference manually.
-This isn't a complete list.
 
 ## Generated Files (MPS)
 
@@ -56,7 +55,7 @@ This isn't a complete list.
 ## IntelliJ Files
 
 - *.idea*: the folder of an [IntelliJ project](https://www.jetbrains.com/help/idea/creating-and-managing-projects.html) 
-- *workspace.xml*: a file that saves [project specific settings](https://plugins.jetbrains.com/docs/intellij/project.html)
+- *workspace.xml*: a file that saves [project-specific settings](https://plugins.jetbrains.com/docs/intellij/project.html)
 - [JetBrains.gitignore](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore)
 
 ## IntelliJ Plugins

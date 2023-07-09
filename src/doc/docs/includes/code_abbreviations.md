@@ -181,7 +181,7 @@
 *[hor]: horizontal
 *[horz]: horizontal
 *[href]: hyper-reference
-*[hs]: hashset
+*[hs]: HashSet
 *[hsb]: hue/saturation/brightness
 *[id]: identification/identifier
 *[idx]: index

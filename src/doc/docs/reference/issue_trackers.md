@@ -6,10 +6,10 @@ tags:
 
 ## Reporting Bugs
 
-Before reporting bugs, you might want to read: [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
+Before reporting bugs, you should read: [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
 This page should then help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
 issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor-related languages
-(diagrams, tables, tree notations...) are located in {{ mps_extensions() }}. The following list gives a rough overview:
+(diagrams, tables, tree notations, etc.) are located in {{ mps_extensions() }}. The following list gives a rough overview:
 
 - {{ mps() }}
     - ^^[jetbrains.*](core_languages.md)^^
@@ -42,7 +42,7 @@ issue belongs to. Most of the time, the package name tells you the correct proje
 
 ## MPS(YouTrack)
 
-This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue. YouTrack follows the [CommonMark specification](http://spec.commonmark.org/0.30/) with extensions that support key features like autolinks and tables: [YouTrack Markdown Reference](https://issues.hibernatingrhinos.com/markup)
+This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue. YouTrack follows the [CommonMark specification](http://spec.commonmark.org/0.30/) with extensions that support key features like auto links and tables: [YouTrack Markdown Reference](https://issues.hibernatingrhinos.com/markup)
 
 - [open critical/show-stopper issues](https://youtrack.jetbrains.com/issues/MPS?q=%23Critical%20%23Show-stopper%20%20%23Open%20)
 - [open critical/major issues](https://youtrack.jetbrains.com/issues/MPS?q=Priority:%20Major%20Priority:%20Critical%20%23Open%20)
@@ -50,7 +50,7 @@ This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains
 - [open issues sorted by comments](https://youtrack.jetbrains.com/issues/MPS?q=sort%20by:%20comments%20%20desc%20%23Open%20)
 - [search query reference | jetbrains.com](https://www.jetbrains.com/help/youtrack/server/Search-and-Command-Attributes.html)
 - [MPS X Release Notes (example)](https://youtrack.jetbrains.com/releaseNotes/MPS?q=%23Resolved%20Fix%20versions:%202021.1.4&title=MPS%202021.1.4%20Release%20Notes&_ga=2.50080358.1125194593.1665382985-2058359210.1628057624&_gl=1*19vge7b*_ga*MjA1ODM1OTIxMC4xNjI4MDU3NjI0*_ga_9J976DJZ68*MTY2NTM4NTY0My4zMzMuMS4xNjY1Mzg1ODE5LjQxLjAuMA..)
-- [tickets which encourage contributions](https://youtrack.jetbrains.com/issues/MPS?q=%23mps-contribution%20%23Open%20)
+- [tickets that encourage contributions](https://youtrack.jetbrains.com/issues/MPS?q=%23mps-contribution%20%23Open%20)
 
 ## MPS-Extensions
 
@@ -58,12 +58,12 @@ If you are unsure which languages are part of this platform, please consult the 
 
 - [open issues](https://github.com/JetBrains/MPS-extensions/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 - [reference: search issues and pull requests | github.com](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
-- [diagram:meta issue](https://github.com/JetBrains/MPS-extensions/issues/120)
+- [diagram: meta issue](https://github.com/JetBrains/MPS-extensions/issues/120)
 
 ## Mbeddr
 
 This is the issue tracker related to [mbeddr.core](https://github.com/mbeddr/mbeddr.core). You can find there issues related
-to the [mbeddr platform](http://mbeddr.com/platform.html) which is used, for example, by IETS3.OS. Please note that nearly
+to the [mbeddr platform](http://mbeddr.com/platform.html), which is used, for example, by IETS3.OS. Please note that nearly
 all editor-related languages were moved to {{ mps_extensions() }}, so please submit those tickets in the corresponding issue tracker.
 
 
@@ -78,9 +78,9 @@ This issue tracker is most of the time needed for tickets related to [KernelF](h
 
 ## IntelliJ Platform
 
-This issue tracker contains issues for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The used IntelliJ platform can be found on the 
+This issue tracker contains issues for IntelliJ IDEA/[the IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) which MPS is based on. The version of the IntelliJ platform can be found on the 
 [MPS download page](https://www.jetbrains.com/de-de/mps/download/) or through MPS --> About MPS. The build number consists
-of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, and the IntelliJ platform version is 213.7172 which
+of three parts. Example: `MPS 2021.3.1 Build: 213.7172.958`. *213* stands for 2021.3, and the IntelliJ platform version is 213.7172, which
 can be checked by visiting the [IntelliJ IDEA download page](https://www.jetbrains.com/de-de/idea/download/other.html).
 If an MPS issue is related to the platform, it is forwarded by the MPS team to the platform team.
 
@@ -88,23 +88,23 @@ If an MPS issue is related to the platform, it is forwarded by the MPS team to t
 
 ## JetBrains Runtime
 
-> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements and general bugfixes.
+> JetBrains Runtime is a fork of OpenJDK available for Windows, Mac OS X, and Linux. It includes several enhancements in font rendering, HiDPI support, windowing/focus subsystems, performance improvements, and general bug fixes.
 
 !!!info "It's highly unlikely that you have to submit an issue to this tracker yourself."
 
-This issue tracker is relevant for [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html), UI-related glitches and
-complete Java crashes as MPS is using the JetBrains Runtime instead of the normal JRE. The JetBrains runtime is installed
-in the *jbr* folder of the MPS installation. The corresponding JBR version for an IntelliJ platform release can be found
-in the [JetBrainsRuntime readme](https://github.com/JetBrains/JetBrainsRuntime#releases-based-on-jdk-11).
+This issue tracker is relevant for [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html), UI-related glitches, and
+complete Java crashes, as MPS uses the JetBrains Runtime instead of the normal JRE. The JetBrains runtime is installed
+in the *jbr* folder of the MPS installation.
+[JetBrainsRuntime readme](https://github.com/JetBrains/JetBrainsRuntime#releases-based-on-jdk-11) contains
+the corresponding JBR version for an IntelliJ platform release.
 
 - [open issues](https://youtrack.jetbrains.com/issues/JBR?q=%23Open%20)
 - [open JCEF issues](https://youtrack.jetbrains.com/issues/JBR?q=%23Open%20%23jcef%20)
 
 ## OpenJDK
 
-!!!info "It's highly unlikely that you have to submit an issue to this tracker yourself."
+!!!info "It's improbable that you have to submit an issue to this tracker yourself."
 
-This issue tracker is only listed for reference purposes. If there's an OpenJDK issue that affects JetBrains products, it
-will likely be fixed in the JetBrains Runtime.
+This issue tracker is only listed for reference purposes. If an OpenJDK issue affects JetBrains products, it will likely be fixed in the JetBrains Runtime.
 
 - [open issues](https://bugs.openjdk.org/projects/JDK/issues/)

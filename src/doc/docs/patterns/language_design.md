@@ -26,16 +26,16 @@ tags:
 - [My DSL development process](https://specificlanguages.com/posts/my-dsl-development-process/){{ blog('sl') }}
 - [Evolving your language gracefully](https://specificlanguages.com/posts/evolving-your-language-gracefully/){{ blog('sl') }}
 - [Making distinctions](https://specificlanguages.com/posts/2022-01/21-making-distinctions/){{ blog('sl') }}
-- [DSLs vs business rules](https://specificlanguages.com/posts/2022-01/28-dsls-vs-business-rules/){{ blog('sl') }}
-- [The Philosophy behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps\-9e9c48d8e15b){{ blog('mv') }}
+- [DSLs vs. business rules](https://specificlanguages.com/posts/2022-01/28-dsls-vs-business-rules/){{ blog('sl') }}
+- [The Philosophy Behind Language Engineering with MPS](https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps\-9e9c48d8e15b){{ blog('mv') }}
 - [Thoughts on Declarativeness](https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832){{ blog('mv') }}
 - [Why an Agile Process is not Enough](https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6){{ blog('langio') }}
 - [What makes a good Business DSL](https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99){{ blog('langio') }}
-- [What goes into Language Design … Beyond the Domain](https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600){{ blog('langio') }}
-- [Categorising the Complexities in Programming](https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513){{ blog('langio') }}
+- [What Goes into Language Design … Beyond the Domain](https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600){{ blog('langio') }}
+- [Categorizing the Complexities in Programming](https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513){{ blog('langio') }}
 - [Fusing Modeling and Programming into Language-Oriented Programming](https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7){{ blog('mv') }}
 - [Context Boundaries in Language Engineering Projects](https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/){{ blog('lv') }}
-- [Why documents shouldn't be the basis of a domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
+- [Why documents shouldn't be the basis of domain analysis](https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a){{ blog('mv') }}
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
 - [What is Model Driven Engineering](https://www.f1re.io/model-driven-engineering){{ blog('F1RE') }}
 - [Domain-driven design vs. language engineering](https://specificlanguages.com/posts/2022-04/19-ddd-vs-le/){{ blog('sl') }}
@@ -59,7 +59,7 @@ tags:
 ### Comparisons
 
 - [DSLs vs. "Learning Languages"](https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9){{ blog('mv') }}
-- [Low Code or Domain Specific Languages?](https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/){{ blog('lv') }}
+- [Low Code or Domain-Specific Languages?](https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/){{ blog('lv') }}
 - [Tool Lock-in vs. Semantic Lock-in](https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44){{ blog('mv') }}
 
 ### Fachlichkeit
@@ -83,7 +83,7 @@ tags:
 
 ## Formal Methods
 
-- [An Overview of Program Analysis using Formal	Methods](http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf)
+- [An Overview of Program Analysis Using Formal	Methods](http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf)
 - [Thoughts on Formal Verification and DSLs](https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48){{ blog('mv') }}
 - [Thoughts on X-by-Construction](https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024){{ blog('mv') }}
 

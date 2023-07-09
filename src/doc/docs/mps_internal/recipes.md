@@ -8,26 +8,25 @@ If not specified otherwise, you should add all dependencies.
 - If a dependency (no matter which scope and export flag) exists: no change
 
 The IDE often creates the required relations on the module level automatically if we add a relation on the model
-level. However, this doesn't work always, so double-check if the module level relation was
-created correctly if errors exist.
+level. However, this doesn't always work, so double-check if the module level relation was correctly created if errors exist.
 
 ## Use a Java Type
 
 *ClassB* inside *ModelB* inside *ModuleB* wants to create a variable of
 type *ClassA* inside *ModelA* inside *ModuleA*.
 
-- To *ModelB*, add dependency to *ModelA*.  
+- To *ModelB*, add a dependency to *ModelA*.  
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *ModuleB* to *ModuleA*.
 
 ## Reuse (AKA Extend, Reference) An External Java Type
 
 *ClassB* inside *ModelB* inside *ModuleB* extends *ClassA* inside *ModelA* inside *ModuleA*.
-*ClassC* inside *ModelC* inside *ModuleC* wants to use *ClassB* as simple as possible.
+*ClassC* inside *ModelC* inside *ModuleC* wants to use *ClassB* as simply as possible.
 
 - To *ModuleB*, add the export flag to the dependency on *ModuleA*.
-- To *ModelC*, add dependency to *ModelB*.  
-  Even if the IDE complains about the Dependency being "out of scope," click *ok*.
+- To *ModelC*, add a dependency to *ModelB*.  
+  Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *ModuleC* to *ModuleB*.
 
 Remark: not sure if we should add the export flag to the dependency on *ModuleA* here.
@@ -38,7 +37,7 @@ Directly (aka root node) or indirectly (aka child node) within *ModelB* inside *
 
 - To *ModelB*, add *Used Language* to *LanguageA*.  
   Even if the IDE complains about the *Used Language* being "out of scope," click *ok*.
-- MPS automatically add a *Used Language* from *ModuleB* to *LanguageA*.
+- MPS automatically adds a *Used Language* from *ModuleB* to *LanguageA*.
 
 ## Use an Intention
 
@@ -82,7 +81,7 @@ Make sure that *GeneratorC* defined in *LanguageC* for *ConceptA* inside *Langua
 
 *ClassB* inside *ModelB* inside *ModuleB* wants to call behavior method *opA* inside *ConceptA* inside *LanguageA*.
 
-- To *ModelB*, add dependency to *LanguageA.structure*.  
+- To *ModelB*, add a dependency to *LanguageA.structure*.  
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *ModuleB* to *LanguageA*.
 
@@ -94,7 +93,7 @@ to depend on *LanguageA.structure* anyway (to be able to access the type), the p
 *ConceptB* inside *LanguageB* wants to have a child or reference of
 type *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.structure*, add dependency to *LanguageA.structure*.  
+- To *LanguageB.structure*, add a dependency to *LanguageA.structure*.  
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a *Used Language* from *LanguageB* to *LanguageA*.
 
@@ -102,10 +101,10 @@ type *ConceptA* inside *LanguageA*.
 
 *ConceptB* inside *LanguageB* wants to extend/implement *ConceptA*/*ConceptInterfaceA* inside *LanguageA*.
 
-- To *LanguageB.structure*, add dependency to *LanguageA.structure*.  
+- To *LanguageB.structure*, add a dependency to *LanguageA.structure*.  
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
-- Make sure the dependency from *LanguageB* to *LanguageA* has extends Scope, either by
+- Make sure the dependency from *LanguageB* to *LanguageA* has *extends* scope, either by
   setting it manually or by using the intention on the error appearing on *ConceptB*.
 
 ## Create an Editor
@@ -113,8 +112,8 @@ type *ConceptA* inside *LanguageA*.
 *LanguageB* wants to define a new editor for *EditorHintC* defined in *LanguageC* for
 *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.editor*, add dependency to *LanguageC.editor*.
-- To *LanguageB.editor*, add dependency to *LanguageA.structure*.
+- To *LanguageB.editor*, add a dependency to *LanguageC.editor*.
+- To *LanguageB.editor*, add a dependency to *LanguageA.structure*.
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageC*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
@@ -124,7 +123,7 @@ type *ConceptA* inside *LanguageA*.
 
 *LanguageB* wants to define a new editor component for *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.editor*, add dependency to *LanguageA.structure*.
+- To *LanguageB.editor*, add a dependency to *LanguageA.structure*.
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
 - Make sure the dependency from *LanguageB*to *LanguageA* has *Extends Scope*.
@@ -133,8 +132,8 @@ type *ConceptA* inside *LanguageA*.
 
 *LanguageB* wants to use *EditorComponentC* defined in *LanguageC* for *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.editor*, add dependency to *LanguageC.editor*.
-- To *LanguageB.editor*, add dependency to *LanguageA.structure*.
+- To *LanguageB.editor*, add a dependency to *LanguageC.editor*.
+- To *LanguageB.editor*, add a dependency to *LanguageA.structure*.
   Even if MPS complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageC*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
@@ -144,7 +143,7 @@ type *ConceptA* inside *LanguageA*.
 
 *LanguageB* wants to define a new type system rule for *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.typesystem*, add dependency to *LanguageA.structure*.
+- To *LanguageB.typesystem*, add a dependency to *LanguageA.structure*.
   Even if MPS complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
 - Make sure the dependency from *LanguageB*to *LanguageA* has *Extends Scope*.
@@ -161,7 +160,7 @@ Example:
 
 Then:
 
-- For *ConceptZ*, type system rule *ConceptZTypeRule* gets evaluated.
+- For *ConceptZ*, the type system rule *ConceptZTypeRule* gets evaluated.
 - For *ConceptY*, type system rules *ConceptYTypeRule1* and *ConceptYTypeRule2* get evaluated.  
   *ConceptZTypeRule* is not evaluated, as at least one rule for *ConceptY* defines:*[override=true]*.
 - For *ConceptX*, type system rules *ConceptYTypeRule1*, *ConceptYTypeRule2* and  
@@ -175,7 +174,7 @@ Then:
 
 *LanguageB* wants to define a new intention for *ConceptA* inside *LanguageA*.
 
-- To *LanguageB.intentions*, add dependency to *LanguageA.structure*.
+- To *LanguageB.intentions*, add a dependency to *LanguageA.structure*.
   Even if the IDE complains about the dependency being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *LanguageB* to *LanguageA*.
 
@@ -190,7 +189,7 @@ Create Generator includes
 *GeneratorB* inside *LanguageB* wants to create a generator transforming *ConceptA* inside *LanguageA*
 into *ConceptC* inside *LanguageC*.
 
-- To *GeneratorB.main@generator*, add dependency to *LanguageA.structure*.
+- To *GeneratorB.main@generator*, add a dependency to *LanguageA.structure*.
 - To *GeneratorB.main@generator*, add *Used Language* to *LanguageC*.
   Even if the IDE complains about the dependency or used language being "out of scope," click *ok*.
 - Don't forget to sort your generator into the generation process by defining some [mapping priorities](https://www.jetbrains.com/help/mps/mapping-priorities.html).
@@ -210,7 +209,7 @@ into *ConceptC* inside *LanguageC*.
 *GeneratorA* transforms *ConceptC* inside *LanguageC* into *ConceptD* inside *LanguageD*.  
 *GeneratorB* transforms *ConceptE* inside *LanguageE* into *ConceptF* inside *LanguageF*.
 
-- To *#GeneratorB.main@generator*, add dependency to *GeneratorA.main@generator*.
+- To *GeneratorB.main@generator*, add a dependency to *GeneratorA.main@generator*.
   Even if the IDE complains about the dependency being *out of scope*, click *ok*.
 - MPS automatically adds a dependency from *GeneratorB* to *GeneratorA*.
 - Make sure the dependency from *GeneratorB*to *GeneratorA* has *Extends Scope*.
@@ -219,15 +218,15 @@ into *ConceptC* inside *LanguageC*.
 
 *GeneratorB* inside *LanguageB* wants to transform *ConceptA* inside *LanguageA* into a *ConceptAJavaClass* extending *ConceptAJavaClassBase* inside *ModelC* inside *SolutionC*.
 
-- To *#!java GeneratorB.main@generator*, add dependency to *LanguageA.structure*.
-- To *#!java GeneratorB.main@generator*, add dependency to *ModelC*.
-- To *#!java GeneratorB.main@generator*, add *Used Language* to *BaseLanguage*.
+- To *#GeneratorB.main@generator*, add a dependency to *LanguageA.structure*.
+- To *#GeneratorB.main@generator*, add a dependency to *ModelC*.
+- To *#GeneratorB.main@generator*, add *Used Language* to *BaseLanguage*.
   Even if the IDE complains about the dependency or *Used Language* being "out of scope," click *ok*.
 - MPS automatically adds a dependency from *GeneratorB* to *LanguageA*.
 - MPS automatically adds a dependency from *GeneratorB* to *SolutionC*.
 - MPS automatically adds a *Used Language* from *GeneratorB* to *BaseLanguage*.
 - To *LanguageB*, add *Extends Scope* dependency to *BaseLanguage* (because *BaseLanguage* defines a runtime solution).
-- To *LanguageB*, add runtime solution to *SolutionC*.
+- To *LanguageB*, add a runtime solution to *SolutionC*.
 
 ## Define a Runtime Solution
 
@@ -239,10 +238,10 @@ Note: We don't need any other relation, specifically, **no** dependency from *La
 
 ## Define an Accessories Model (AKA Make Concept Instances Available Everywhere a Language Is Used)
 
-*BuiltInNodeA* as instance of *BuiltInConcept* inside *LanguageA* should be available to be referenced anywhere *LanguageA*
+*BuiltInNodeA*, as an instance of *BuiltInConcept* inside *LanguageA*, should be available to be referenced anywhere *LanguageA*
 is a *Used Language*.
 
-- Create *AccessoryModel* as aspect in *LanguageA*
+- Create *AccessoryModel* as an aspect of *LanguageA*
 - To *AccessoryModel*, add *Used Language* to *LanguageA*.
 - Create *BuiltInNodeA* inside *AccessoryModel*.
 - To *LanguageA*, add an accessory Model to *AccessoryModel* (if not present already).
@@ -251,10 +250,11 @@ Note: We don't need any other relation, specifically, no dependency from *Langua
 
 ## Create a Utility Model (AKA Create Complex Implementations for Behavior Methods or Generators)
 
-*complexBehavior()* defined for *ConceptA* inside *LanguageA* needs *ComplexBehaviorInternalJavaClass* for its implementation or
-*GeneratorA* inside *LanguageA* needs *ComplexGeneratorInternalJavaClass* for its execution (e.g. for a complex condition or *macro*).
+*complexBehavior()* defined for *ConceptA* inside *LanguageA* needs *ComplexBehaviorInternalJavaClass* for its implementation, or
+*GeneratorA* inside *LanguageA* needs *ComplexGeneratorInternalJavaClass* for its execution (e.g., for a complex condition or *macro*).
 
-- Create *BehaviorUtilityModel* / *GeneratorUtilityModel* as regular Model within *LanguageA*.
+- Create *BehaviorUtilityModel* / *GeneratorUtilityModel* as a regular model within *LanguageA*.
 - To *BehaviorUtilityModel* / *GeneratorUtilityModel*, add Used Language to *BaseLanguage*.
 - Create *ComplexBehaviorInternalJavaClass* / *ComplexBehaviorInternalJavaClass* within *BehaviorUtilityModel* / *GeneratorUtilityModel*.
-- To *LanguageA.behavior* / *GeneratorA.main@generator* add dependency to *BehaviorUtilityModel* / *GeneratorUtilityModel*
+- To *LanguageA.behavior* add dependency to *BehaviorUtilityModel*
+- To *GeneratorA.main@generator* add dependency to *GeneratorUtilityModel*

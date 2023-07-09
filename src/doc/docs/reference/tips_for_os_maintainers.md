@@ -8,7 +8,7 @@ tags:
 Best practices:
 
 - [Best practices for maintainers | opensource.guide](https://opensource.guide/best-practices/)
-- [Seven ways to be an effective Open Source Maintainer](https://www.semasoftware.com/blog/how-can-you-be-an-effective-open-source-maintainer)
+- [Seven Ways to Be an Effective Open Source Maintainer](https://www.semasoftware.com/blog/how-can-you-be-an-effective-open-source-maintainer)
 
 Code reviews:
 
@@ -31,10 +31,10 @@ Tools (GitHub):
 
 Licenses
 
-- [Choose an open source license](https://choosealicense.com/)
+- [Choose an open-source license](https://choosealicense.com/)
 - [How open source licenses work](https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94)
 
 Reference:
 
 - [Github vs Gitlab vs Bitbucket](https://disbug.io/en/blog/github-vs-gitlab-vs-bitbucket)
-- [Why do programmers write closed source applications and then make them free?](https://softwareengineering.stackexchange.com/questions/3233/why-do-programmers-write-closed-source-applications-and-then-make-them-free)
+- [Why do programmers write closed-source applications and then make them free?](https://softwareengineering.stackexchange.com/questions/3233/why-do-programmers-write-closed-source-applications-and-then-make-them-free)

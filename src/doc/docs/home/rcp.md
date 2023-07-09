@@ -6,7 +6,7 @@ tags:
 - customization
 ---
 
-RCP stands for Rich Client Platform. The topic is explained in [Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html).
+RCP stands for Rich Client Platform. [Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html) explains this topic.
 
 !!! warning "A plugin is incompatible with the current RCP version."
     
@@ -16,7 +16,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
     - [Customizing your RCP welcome screen: removing unwanted tabs](https://specificlanguages.com/posts/2022-06/13-simplifying-welcome-screen/){{ blog('sl') }}
     
-    The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. A cheat sheet for the syntax can be found [here](https://devhints.io/xpath). 
+    The used library [xml-patch](https://github.com/dnault/xml-patch/) uses XPath path selectors. [https://devhints.io](https://devhints.io/xpath) has a cheat sheet for the syntax. 
     
     - [Customizing your RCP welcome screen: stripping down even further](https://specificlanguages.com/posts/2022-06/14-simplifying-welcome-screen-even-further/){{ blog('sl') }}
     - [A fully custom welcome screen](https://specificlanguages.com/posts/2022-06/16-custom-welcome-screen/){{ blog('sl') }}
@@ -29,8 +29,8 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 !!! question "How can I deactivate a preference page?"
 
     - Remove the plugin that contains the preference page.
-    - For `SPreference` pages: they are project plugins, so you can find them through `#!java ProjectPluginManager.getPlugins` and then call `#!java dispose`
-    or you could unregister the preference pages themselves. For example:
+    - `SPreference` pages are project plugins. You can find them through `#!java ProjectPluginManager.getPlugins` and then call `#!java dispose`
+    , or you could unregister the preference pages themselves. For example:
     ```java
     Project ideaProject = ProjectPluginManager.getInstance(ProjectHelper.toIdeaProject(#project);
     list<BaseProjectPlugin> plugins = new arraylist<BaseProjectPlugin>(copy: ideaProject.getPlugins());
@@ -47,25 +47,25 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
 ??? question "How can you tell which IntelliJ version MPS runs with?"
 
-    > Given I want to know, which version of [IntelliJ Community](https://github.com/JetBrains/intellij-community) my MPS is built from.
-    > How can I know?
+    > Which version of [IntelliJ Community](https://github.com/JetBrains/intellij-community) is my MPS built from? How can I know?
 
     {{ mbeddr() }}: The easiest way to get the correct platform for an MPS version is by running ant in the root of your MPS sources:
 
     `ant -f build/getDependencies.xml download-platform`
 
-    It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the IntelliJ project where you can read the sources and also step into them when debugging.
+    It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the IntelliJ project where you can read the sources and step into them when debugging.
 
-    In case you're looking at an RCP: `build.number` and `build.txt` provide this information and more, eg `idea.platform.build.number=MPS—203.7717.56`.
+    If you're looking at an RCP: `build.number` and `build.txt` provide this information and more, e.g., `idea.platform.build.number=MPS—203.7717.56`.
 
-    The platform version is part of the build information e.g. MPS—211.7442.1291
+    The platform version is part of the build information e.g., MPS—211.7442.1291
 
-    To get the baseline version e.g. 211, programmatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
+    To get the baseline version e.g., 211, programmatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
 
-    To get the full version e.g. 211.7442.1291, programmatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
+    To get the full version e.g., 211.7442.1291, programmatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
 
 ??? question "How can you show a custom-implemented project view instead of the MPS logical view?"
-    Assume that the view was built with ^^com.mbeddr.mpsutil.projectview^^:    
+    
+    Assume that you built the view with ^^com.mbeddr.mpsutil.projectview^^:    
 
     ```java
     ApplicationManager.getInstance().invokeLater(new Runnable() { 
@@ -101,7 +101,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 !!! question "How can you change or turn off the exception submission dialog?"
 
     - Remove all error handlers like [this](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/blame/IntelliJReporterReplacer.java#L34-L36).
-    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This will also disable the error pop-ups in the IDE where you can see the exception. Note: There were some [changes related to the logging configuration](https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration) in MPS 2022.2 where this answer is not valid anymore.
+    - Remove `<appender name="DIALOG" class="com.intellij.diagnostic.DialogAppender">` from the log.xml file. This change will also turn off error pop-ups in the IDE, where you can see the exception. Note: There were some [changes related to the logging configuration](https://www.jetbrains.com/help/mps/migration-guide.html#changesinloggingconfiguration) in MPS 2022.2, where this answer is not valid anymore.
 
 !!! question "Where can you find the latest MPS and IntelliJ icons?"
 
@@ -125,7 +125,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
     EditorColorsManager.getInstance().setGlobalScheme(colorScheme);
     ```
 
-!!! question "How do you disable an MPS/IntelliJ tool window?"
+!!! question "How do you deactivate an MPS/IntelliJ tool window?"
 
     ```Java
     Project ideaProject = ProjectHelper.toIdeaProject(project);
@@ -148,7 +148,7 @@ RCP stands for Rich Client Platform. The topic is explained in [Building standal
 
 !!! question "How do you add an action to the menu bar of an IntelliJ tool window?"
 
-    The Example is based on the project view:
+    The example is based on the project view:
 
     ```Java
     ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(ToolWindowId.PROJECT_VIEW);

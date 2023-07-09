@@ -172,7 +172,7 @@ nav:
     - Plugins: home/plugins.md
     - External Files and Tools: home/external_files_and_tools.md
     - Console: home/console.md
-    - OS-Specific bugs: home/platform_specific_bugs.md
+    - OS-Specific Bugs: home/platform_specific_bugs.md
     - RCP: home/rcp.md
     - Trouble Shooting Guide: home/trouble_shooting_guide.md
     - Overcoming Obstacles: 
@@ -213,7 +213,7 @@ nav:
       - Transformations: aspects/transformations.md
   - Languages:
       - languages/index.md
-      - Baselanguage and Extensions: languages/baselanguage.md
+      - Base Language and Extensions: languages/baselanguage.md
       - Double Dispatch: languages/double_dispatch.md
       - MPS-Extensions: 
           - General: languages/mps_extensions.md
@@ -221,10 +221,10 @@ nav:
       - KernelF: languages/kernelf.md
   - Platform Essentials:
       - platform_essentials/index.md
-      - How Everything is Connected: platform_essentials/how_everything_is_connected.md
+      - How Everything Is Connected: platform_essentials/how_everything_is_connected.md
       - Contributing: platform_essentials/contributing.md
       - Common Concepts and Interfaces: platform_essentials/common_concepts_and_interfaces.md
-      - Interpreter, Coverage and Tracing: platform_essentials/interpreter.md
+      - Interpreter, Coverage, and Tracing: platform_essentials/interpreter.md
       - Platform Build Scripts: platform_essentials/platform_build_scripts.md
       - Build Folder: platform_essentials/build_folder.md
       - Testing: platform_essentials/testing.md
@@ -275,7 +275,7 @@ nav:
           - platform_essentials/mpsutils/index.md
           - Common: platform_essentials/mpsutils/common.md
           - Actions: platform_essentials/mpsutils/actions.md
-          - BaseLanguage Extensions: platform_essentials/mpsutils/baselanguage_extensions.md
+          - Base Language Extensions: platform_essentials/mpsutils/baselanguage_extensions.md
           - Generator: platform_essentials/mpsutils/generator.md
           - Importer and Exporter: platform_essentials/mpsutils/importer_and_exporter.md
           - Languages: platform_essentials/mpsutils/languages.md
@@ -302,7 +302,7 @@ nav:
       - User Experience: patterns/user_experience.md
       - UI Patterns: patterns/ui_patterns.md
   - Reference:
-    - Being a good Developer: reference/being_a_good_developer.md
+    - Being a Good Developer: reference/being_a_good_developer.md
     - Tips for Open Source Maintainers: reference/tips_for_os_maintainers.md
     - Icons: reference/icons.md
     - Core Languages: reference/core_languages.md

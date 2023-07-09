@@ -9,25 +9,25 @@ tags:
 
 # Dependencies and Classpath in MPS
 
-This page describes the meaning and effect of different types of dependencies within MPS, including the effects on the applicable Java classpath. It describes both the expected state and all bugs deviating from the expectations.
+This page describes the meaning and effect of different types of dependencies within MPS, including the impact on the applicable Java classpath. It describes both the expected state and all bugs deviating from the expectations.
 
 ## Overview
 
 The module pool has all content known to MPS.
 The modules pool is filled from *modules* in the current *project* and all *non-project sources*.
-MPS in general cares about dependencies between modules. The dependencies on *models* only constrain further the dependencies of the modules.
-Two main types of *relations* exist: *dependencies* are needed for any reference to something in another module. *Used Languages* are needed to use something defined in a language. We refer to relations if we address both types.
+MPS, in general, cares about dependencies between modules. The dependencies on *models* only further constrain the dependencies of the modules.
+Two main types of *relations* exist: You need *dependencies* for any reference to something in another module. You need *Used Languages* to use something defined in a language. We refer to relations if we address both types.
 Other types of dependencies on modules include: *Java stubs* (in combination with *Java libraries*), *Java source stubs* (in combination with *Java source paths*), *runtime solutions* and *accessory models* (only available for languages), and *languages engaged on generation*.
-*Build models* abstract Ant files to build and package modules and *IDEA plugins*. They contain a copy of the relations defined in the modules, and dependencies to other build models and IDEA plugins.
+*Build models* abstract Ant files to build and package modules and *IDEA plugins*. They contain a copy of the relations defined in the modules and dependencies to other build models and IDEA plugins.
 
 ## MPS Plugins
 
-MPS Plugins are automatically loaded according to the solution Kind set in Java module settings.
+MPS Plugins are automatically loaded according to the solution kind set in Java module settings.
 MPS Plugins need to be contained in MPS plugin models.
 
 #### StandalonePluginDescriptor
 
-We need to add a *StandalonePluginDescriptor* (defined in Language ^^jetbrains.mps.lang.plugin.standalone^^) as a root node if an MPS plugin model uses any concept from the language ^^jetbrains.mps.lang.plugin^^. Other concepts from the language ^^jetbrains.mps.lang.plugin.standalone^^ don't need a *StandalonePluginDescriptor*.
+We need to add a *StandalonePluginDescriptor* (defined in the language ^^jetbrains.mps.lang.plugin.standalone^^) as a root node if an MPS plugin model uses any concept from the language ^^jetbrains.mps.lang.plugin^^. Other concepts from the language ^^jetbrains.mps.lang.plugin.standalone^^ don't need a *StandalonePluginDescriptor*.
 
 ## Plugin Disambiguation
 
@@ -52,10 +52,10 @@ These directories or JAR files are recursively scanned for *.mpl* (languages), *
 
 ## Java Classpath Versus Relations
 
-The various settings on models and modules specify both the Java classpath and the relations of a model. However, these settings affect classpath and relations differently.
-As a rule of thumb, the classpath has all Java classes reachable through any kind of relation. The Classpath is populated generously.
+The various settings on models and modules specify both the Java classpath and a model's relations. However, these settings affect classpath and relations differently.
+As a rule of thumb, the classpath has all Java classes reachable through any relation. The classpath is populated generously.
 
-On the contrary, the relations are populated reluctantly, for example, they need to be specified explicitly.
+On the contrary, the relations are populated reluctantly. For example, they need to be specified explicitly.
 The dependency relations on modules and models are completely separated from the used language relations on modules and models. Thus, no dependency requires a *Used Language* or vice versa.
 
 ## Used Languages
@@ -67,7 +67,7 @@ You must add *LanguageA* (containing *ConceptA*) to *ModuleB's* and contained *M
 - *ModelB* instantiates *ConceptA* within the IDE.
 - *ModelB* executes intentions from *LanguageA*.
 - *ModelB* requires type checks from *LanguageA*.
-- *ModelB* uses editors from *LanguageA* by selecting an editor hint but *not* if *LanguageA* only defines the editor hint.
+- *ModelB* uses editors from *LanguageA* by selecting an editor hint, but *not* if *LanguageA* only defines the editor hint.
 - *ModuleB* is a generator and outputs instance of *ConceptA*.
 
 ## Executed Generators
@@ -94,7 +94,7 @@ For discussion, we establish a continued scenario:
 
 *SolutionBaseGen* doesn't change during generation either, as it doesn't contain any instances from
 *LanguageBaseGen*, thus removing *LanguageBaseGen* from the list of applicable generators, ending up with
-no generators at all.
+no generators.
 
 ```kroki-plantuml
 @from_file:mps_internal/deps_and_classpath/diagrams/diagram3.puml
@@ -107,13 +107,13 @@ no generators at all.
 ```
 
 *SolutionBaseGenExtends* ends up with an unchanged *NodeBase*, but a transformed *NodeBase2*.
-*GeneratorBaseExtends* gets executed, because *LanguageBaseGenExtends* is listed in *Languages engaged in generation*. However, the Dependencies of the Language aren't considered for selecting the running Generators.
+*GeneratorBaseExtends* gets executed because *LanguageBaseGenExtends* is listed in *Languages engaged in generation*. However, the Dependencies of the Language aren't considered for selecting the running Generators.
 
 ```kroki-plantuml
 @from_file:mps_internal/deps_and_classpath/diagrams/diagram5.puml
 ```
 
-In *SolutionBaseGenExtends2* both *NodeBase* and *NodeBase2* will be transformed, as *LanguageBaseGenExtends2*
+In *SolutionBaseGenExtends2*, both *NodeBase* and *NodeBase2* will be transformed, as *LanguageBaseGenExtends2*
 is listed in *Languages engaged in generation* and *GeneratorBaseExtends2* extends *GeneratorBase*.
 
 ```kroki-plantuml
@@ -122,7 +122,7 @@ is listed in *Languages engaged in generation* and *GeneratorBaseExtends2* exten
 
 Only *NodeExtendsGen* will be transformed in *SolutionExtendsGen*, as the only active Generator is
 *GeneratorExtendsGen*. The reason is that we found an instance of *ConceptExtendsGen* contained in
-the same language as the generator. The Generator doesn't extend any other applicable Generator.
+the same language as the generator. The generator doesn't extend any other applicable Generator.
 
 ```kroki-plantuml
 @from_file:mps_internal/deps_and_classpath/diagrams/diagram7.puml
@@ -143,13 +143,13 @@ languages used in applied Generators) are not added to the output model. Implici
 
 ## Tests
 
-Tests are regular or extended [JUnit](http://junit.org/) tests that can be executed within MPS or stand-alone.
+Tests are regular or extended [JUnit](http://junit.org/) tests that can be executed within MPS or standalone.
 
-Test models contain tests, defined by the *@tests* stereotype.
+Test models contain tests defined by the *@tests* stereotype.
 
 The Stereotype enables
 
 - the *Run Tests* entry in the solution and test model context menu.
 - Build language test instructions to search the model for tests.
 
-As soon as you are using any concepts from language *jetbrains.mps.lang.test*, you need to have a *TestInfo* root node in the same model. The *TestInfo* node needs to refer to a project to be used to execute the tests. This reference may not use a *&#36{module}*, *&#36{language_descriptor}*, *&#36{solution_descriptor}*, or *&#36{project}* builtin path variables. It needs to refer to a project containing the test.
+As soon as you use any concepts from language *jetbrains.mps.lang.test*, you need to have a *TestInfo* root node in the same model. The *TestInfo* node needs to refer to a project to be used to execute the tests. This reference may not use a *&#36{module}*, *&#36{language_descriptor}*, *&#36{solution_descriptor}*, or *&#36{project}* builtin path variables. It needs to refer to a project containing the test.

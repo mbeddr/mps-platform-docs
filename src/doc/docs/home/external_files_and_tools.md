@@ -19,13 +19,13 @@ tags:
 !!! question "How do you deal with errors when writing an importer?"
 
     - Create a new tab in the messages view and show the errors.
-    - Create error concepts in the language. If the import fails for a particular node, it can be replaced with one of these error nodes in the output model and some error message can be appended. This way you can also implement checking rules for the error nodes so that the errors are also displayed as part of model checking. You can also use finders to find all occurrences of errors in the model.
+    - Create error concepts in the language. If the import fails for a particular node, replace it with one of these error nodes in the output model. You can append some error messages. This way, you can also implement checking rules for the error nodes to display the errors as part of model checking. You can also use finders to find all occurrences of errors in the model.
 
-!!! question "Is there a wizard available to set up an MPS language based on an XML schema (defined in .xsd files)?"
+!!! question "Is a wizard available to set up an MPS language based on an XML schema (defined in .xsd files)?"
 
-    No, not possible at the moment but you can create new projects from local or GitHub-hosted templates with [Lochkarte](https://github.com/coolya/Lochkarte)(experimental).
+    No, not possible at the moment, but you can create new projects from local or GitHub-hosted templates with [Lochkarte](https://github.com/coolya/Lochkarte)(experimental).
 
-!!! question "Where do I put my Java JARs that I want to use as dependencies?"
+!!! question "Where do I put the Java JARs that I want to use as dependencies?"
     
     [Where do I put my JARs?](https://specificlanguages.com/posts/2022-03/04-where-do-i-put-my-jars/){{ blog('sl') }}
 
@@ -33,16 +33,16 @@ tags:
 
 !!! question "How can you run an LSP server for MPS grammars?"
 
-    There is no support for this in IntelliJ products (see IDEABKL-7409) and also no implementation exists in MPS.
+    IntelliJ products have no support for LSP servers (see IDEABKL-7409), and no implementation exists in MPS.
 
 !!! question "How can you use databases in MPS?"
 
-    - MPS doesn't have any special support for databases or for frameworks such as Spring Boot (unlike IntelliJ IDEA).
+    - MPS has no dedicated support for databases or frameworks such as Spring Boot (unlike IntelliJ IDEA).
     - [MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/){{ blog('sl') }}
 
 !!! question "How can you create a standalone utility (not a complete IDE) for language generation with MPS?[^2]"
 
-    This is not possible at the moment but you can interact with MPS models from Java when you set up the necessary dependencies:
+    This feature is not available at the moment, but you can interact with MPS models from Java when you set up the necessary dependencies:
 
     ```java
     import jetbrains.mps.smodel.ModelAccess;
@@ -79,12 +79,12 @@ tags:
 
 !!! question "How can you run MPS in the browser?"
 
-    You can try [Skadi Cloud](https://skadi.cloud/). There is also [Modelix](https://github.com/modelix/modelix), [JetBrains Projector](https://blog.logv.ws/2021/03/16/jetbrains-projector-a-game-changer-for-jetbrains-mps-projects/). [
-LIonWeb](https://github.com/LIonWeb-org) is the newest project that also has [some information](https://github.com/LIonWeb-org#history) about other projects.
+    You can try [Skadi Cloud](https://skadi.cloud/). There is also [Modelix](https://github.com/modelix/modelix) and [JetBrains Projector](https://blog.logv.ws/2021/03/16/jetbrains-projector-a-game-changer-for-jetbrains-mps-projects/). [
+LIonWeb](https://github.com/LIonWeb-org) is the newest project with [some information](https://github.com/LIonWeb-org#history) about other projects.
 
 !!! question "How can you embed a web browser in MPS?"
 
-    Since Intellij 2020.1 it is possible to use the [Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html).
+    Since IntelliJ 2020.1, it is possible to use the [Java Chromium Embedded Framework](https://plugins.jetbrains.com/docs/intellij/jcef.html).
     Create a new Java Swing component in the editor:
     ```java
     JBCefBrowser myBrowser = new JBCefBrowser(myUrl);
@@ -93,7 +93,7 @@ LIonWeb](https://github.com/LIonWeb-org) is the newest project that also has [so
 
     For more information, read the page about [JCEF](jcef.md).
 
-!!! question "What is the future of MPS especially regarding the cloud?"
+!!! question "What is the future of MPS, especially regarding the cloud?"
 
     - [What is the future of MPS?](https://specificlanguages.com/posts/2022-06/22-what-is-the-future-of-mps/){{ blog('sl') }}
 

@@ -3,18 +3,18 @@ tags:
 - mps-extensions
 ---
 
-**The improved documentation is hosted on [GitHub](https://jetbrains.github.io/MPS-extensions/).**
+**[GitHub](https://jetbrains.github.io/MPS-extensions/) contains the official documentation.**
 
 ## Richtext
 
 > ^^slisson.richtext^^
 
-A multi-line text block that's extendable (e.g. for images).
+This language provides an extendable multi-line text block (e.g., for images).
 The mbeddr doc language uses it for generating XHTML, Latex, and markdown.
 
 !!! warning "The ordering of text and IWords can't be arbitrary,"
 
-    A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a Word and a Word must always be between two embedded nodes and there are no two consecutive Words.
+    A checking rule enforces that the text is normalized: There has to be at least one child, it must start with a `Word`, a `Word` must always be between two embedded nodes, and there are no two consecutive Words.
 
 
 ## Diagram
@@ -23,8 +23,7 @@ The mbeddr doc language uses it for generating XHTML, Latex, and markdown.
 
 !!! question "What Java libraries are used by the diagram language?"
 
-    For the graphs itself, it uses [JGraphX](https://jgraph.github.io/mxgraph/docs/manual_javavis.html). The layouting is
-    done by the [Eclipse Layout Kernel (ELK)](https://www.eclipse.org/elk/).
+    For the graphs itself, it uses [JGraphX](https://jgraph.github.io/mxgraph/docs/manual_javavis.html).[Eclipse Layout Kernel (ELK)](https://www.eclipse.org/elk/) layouts the diagram.
 
 !!! warning "I encountered a bug."
 
@@ -44,16 +43,14 @@ The mbeddr doc language uses it for generating XHTML, Latex, and markdown.
 > ^^de.slisson.mps.tables^^
 
 Use *slisson-tables* instead of *mps-tables* because the language is more flexible (and not deprecated).
-The language displays content in a tabular format. The table can be hard-coded or can consist of complex queries/dynamic content.
-You have to add new cells and rows in the editor. They can also be read-only.
-You need a little experience (trial and error) to create these tables.
-Features:
+The language displays content in a tabular format. The table can be hard-coded or contain complex queries/dynamic content.
+You must add new cells and rows in the editor (they can be read-only). They include the following features:
 
 - table cell queries
 - partial tables
 - grid queries
 
-[Tabular projections in Jetbrains MPS: let’s start building an accounting system](https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/){{ blog('Strumenta') }}
+[Tabular projections in Jetbrains MPS: Let's start building an accounting system](https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system/){{ blog('Strumenta') }}
 
 ??? question "How do you get rid of the small little extra grid lines on the outside of the table rows? ([original question](https://jetbrains-mps.slack.com/archives/C99H1FR42/p1632226340005700))"
 
@@ -74,9 +71,9 @@ Features:
 
 > ^^de.itemis.mps.grammarcells^^
 
-!!! question "Grammar cells seem to need a dummy component. Is this necessary?"
+!!! question "Grammar cells need a dummy component. Is this necessary?"
 
-    Yes, it is, otherwise the generator doesn't get used([source](https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300)).
+    Yes, it is. Otherwise, the generator doesn't get used([source](https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300)).
 
 !!! question "What combinations of cells aren't supported?"
 
@@ -93,27 +90,27 @@ Features:
 
 > ^^com.mbeddr.mpsutil.editor.querylist^^
 
-You can use nodes in the editor, which aren't directly available in the current context. The language is more 
+You can use nodes in the editor which aren't directly available in the current context. The language is more 
 powerful than (read-only) model access (displays a string).
-You can have editor cells, which can have actions and all other normal cell features.
-[queryListNode](http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197) allows accessing the surrounding context node in the editor definition (which otherwise isn't available).
+You can have editor cells with actions and all other regular cell features.
+[queryListNode](http://127.0.0.1:63320/node?ref=120e1c9d-4e27-4478-b2af-b2c3bd3850b0%2Fr%3Aea4f2df6-5e5c-49de-8679-6112ec7dd9c3%28com.mbeddr.mpsutil.editor.querylist%2Fcom.mbeddr.mpsutil.editor.querylist.structure%29%2F2239254897981410197) allows accessing the surrounding context node in the editor definition (otherwise unavailable).
 
 !!! question "How do I fold collections returned by a query list?"
 
-    Surround the query list with a vertical collection and set the cell layout of the querylist (not it's content) to vertical.
+    Surround the query list with a vertical collection and set the cell layout of the query list (not its content) to vertical.
 
 ??? question "How do I make cells in query lists navigatable?"
 
-    > I'm trying to create a list of navigatable cells via query list from mpsutil.
+    > I'm creating a list of navigatable cells via a query list from mpsutil.
     >
     > The query lists query collects some nodes from my model, and I'd like to make it so that each cell produced with this query list navigates to its respective node.
     >
-    > Using the *navigatable-node* style attribute (returning `node`, the node from the query) on these cells doesn't seem to work though - ctrl+clicking them doesn't do anything.
+    > Using the *navigatable-node* style attribute (returning `node`, the node from the query) ) on these cells doesn't work, though - ctrl+clicking them doesn't do anything.
     >
     > How can I make the cells in a query list navigatable to that node?
     
     The `navigatable-node` style attribute won't allow you to point directly to the node from the query list's query.   
-    Instead, you can use the *hyperlink-node* style attribute (also from mpsutil) to make the navigation work, and the `hyperlink-style` attribute to make it look like a regular reference:
+    Instead, you can use the *hyperlink-node* style attribute (also from mpsutil) to make the navigation work    and the `hyperlink-style` attribute to make it look like a regular reference:
     
     ![hyperlink node](hyperlink_node.png)  
 
@@ -125,5 +122,5 @@ You can have editor cells, which can have actions and all other normal cell feat
 
 > ^^de.itemis.mps.tooltips.structure^^
 
-This language is deprecated, use ^^jetbrains.mps.lang.editor.tooltips^^ instead. It provides tooltips on hover.
+This language is deprecated. Use the language ^^jetbrains.mps.lang.editor.tooltips^^ instead. It provides tooltips on hover.
 You have to define a regular editor and a hover editor.

@@ -3,9 +3,9 @@ tags:
 - infrastructure
 ---
 
-# Continuous integration
+# Continuous Integration
 
-Continuous integration (CI) is a software development practice that integrates code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests are then run. Automated tools are used to assert the new code’s correctness before integration. A source code version control system is the crux of the CI process. The version control system is also supplemented with other checks like automated code quality tests, syntax style review tools, and more.
+Continuous integration (CI) is a software development practice integrating code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests are run. Automated tools assert the new code’s correctness before integration. A VCS is the crux of the CI process. The version control system also has other checks like automated code quality tests, syntax style review tools, and more.
 
 The main benefits of continuous integration are:
 
@@ -16,27 +16,24 @@ The main benefits of continuous integration are:
 
 ## Tools
 
-Some examples of CI tools that were used with MPS projects in the past are:
+Some MPS projects used the following CI tools in the past:
 
-- [Jenkins](https://www.jenkins.io/): An open source CI server that supports a wide range of plugins and integrations.
-- [Bamboo](https://www.atlassian.com/de/software/bamboo): a commercial CI server that integrates with Jira, Bitbucket, and other Atlassian products.
+- [Jenkins](https://www.jenkins.io/) is an open-source CI server that supports various plugins and integrations.
+- [Bamboo](https://www.atlassian.com/de/software/bamboo): is a commercial CI server that integrates with Jira, Bitbucket, and other Atlassian products.
 
-Some popular CI tools that are used with MPS projects are:
+Some MPS projects used the following popular CI tools:
 
-- [TeamCity](https://www.jetbrains.com/teamcity/): a commercial CI server that supports a wide range of languages, platforms, and technologies. It offers real-time feedback, smart triggers, code quality analysis, and more. It is used by itemis and JetBrains.
-- [GitLab CI](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/): A cloud-based or self-hosted CI service that integrates with GitLab, a web-based Git repository manager. It allows you to define your pipelines as code, run tests in parallel, deploy to any environment, and more.
-- [GitHub Actions](https://github.com/features/actions): A cloud-based CI service that integrates with GitHub, a web-based Git repository hosting service. It allows you to create workflows that automate your software development lifecycle, such as building, testing, and deploying your code. You can also use pre-built actions from the GitHub Marketplace or create your custom actions.
+- [TeamCity](https://www.jetbrains.com/teamcity/) is a commercial CI server that supports various languages, platforms, and technologies. It offers real-time feedback, smart triggers, code quality analysis, and more. Itemis and JetBrains use it.
+- [GitLab CI](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/) is a cloud-based or self-hosted CI service that integrates with GitLab, a web-based Git repository manager. It allows you to define your pipelines as code, run tests in parallel, deploy to any environment, and more.
+- [GitHub Actions](https://github.com/features/actions) is a cloud-based CI service that integrates with GitHub, a web-based Git repository hosting service. It allows you to create workflows that automate your software development lifecycle, such as building, testing, and deploying your code. You can also use pre-built actions from the GitHub Marketplace or create custom actions.
 
 ## Challenges
 
 CI with MPS projects can provide some challenges:
 
-- MPS projects are not text-based, but use an abstract syntax tree (AST) representation that is stored in XML files. That means that all model-related changes
-  have to be reviewed in MPS. When opening PRs, other checks can still be done: wrong merges/rebases can be detected manually by reviewing the commit history,
-  and conflicting files will be detected by the CI tool itself. Failing tests and/or model check errors can be reported as normal JUnit test results and compilation errors when building the MPS modules will also fail the build. Other checks that can be automated or done manually are explained in [Advanced GitHub workflow](advanced_github_workflow.md).
-- MPS projects may depend on external libraries or plugins that need to be installed and configured on the CI agents. This may require additional steps or scripts to ensure the compatibility and availability of the dependencies. A good approach is to use isolated environments where all the dependencies
-  are installed. A common solution is doing [CI with Docker](https://docs.docker.com/build/ci/). When using the [modelcheck](https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check) plugin from the mps-gradle-plugin, additionally plugins might need to be loaded through *pluginsProperty* if your MPS languages depend on one of the core MPS plugins. This Gradle plugin starts MPS only with a bare minimum number of plugins.
-- MPS projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. This may require additional tools or plugins to compile, test, and deploy the generated code. Example: the Dockerfile that is used for building most of the MPS platforms, including mbeddr can be found [here](https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile).
+- MPS projects are not text-based but use an abstract syntax tree (AST) representation that MPS stores in XML files. That means that you have to review all model-related changes in MPS. When opening PRs, you can still do other checks: incorrect merges/rebasing can be detected manually by examining the commit history. The CI tool will detect conflicting files, and failing tests or model check errors can be reported as typical JUnit test results. Compilation errors when building the MPS modules will also fail the build. [Advanced GitHub workflow](advanced_github_workflow.md) mentions other checks that can be automated or done manually.
+- MPS projects may depend on external libraries or plugins that must be installed and configured on the CI agents. Those dependencies may require additional steps or scripts to ensure compatibility and availability. A good approach is to use isolated environments where you install all the dependencies. A standard solution is doing [CI with Docker](https://docs.docker.com/build/ci/). When using the [model check](https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check) plugin from the mps-gradle-plugin, additional plugins might need to be loaded through *pluginsProperty* if your MPS languages depend on one of the core MPS plugins. This Gradle plugin starts MPS only with a bare minimum number of plugins.
+- MPS projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. These additional languages may require other tools or plugins to compile, test, and deploy the generated code. Example: Most MPS platforms, including mbeddr, use this [DockerFile](https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile) for building.
 
 ## Blog Posts
 
@@ -46,9 +43,9 @@ CI with MPS projects can provide some challenges:
 
 ??? question "How to attach the debugger to a CI build on GitHub actions?"
 
-    Note: GitHub actions can be run locally with [act](https://github.com/nektos/act).
+    *Note*: GitHub actions can be run locally with [act](https://github.com/nektos/act).
 
-    The plan is to first teach the build to open up a reachable SSH connection, and then tunnel a local port onto it so that we can connect IntelliJ to it.
+    The plan is first to teach the build to open up a reachable SSH connection and then tunnel a local port onto it so that we can connect IntelliJ to it.
 
     - Sign up with ngrok and get your auth token
 
@@ -56,7 +53,7 @@ CI with MPS projects can provide some challenges:
 
     - Open ssh from your `.github/workflows/build.yml`
 
-    There are prepared GitHub actions that start sshd with ngrok. I used [debug-via-ssh](https://github.com/marketplace/actions/debug-via-ssh). All we need to give it is our `ngrok authtoken` from above, and our public ssh key of the key that we want to use to get into the machine.
+    There are prepared GitHub actions that start sshd with ngrok. I used [debug-via-ssh](https://github.com/marketplace/actions/debug-via-ssh). All we need to give it is our `ngrok authtoken` from above and our public ssh key of the key we want to use to get into the machine.
 
     Given we already have `.github/workflows/build.yml`, I added a step right before the failing step:
 
@@ -72,11 +69,11 @@ CI with MPS projects can provide some challenges:
 
     Since this is a private repository, I was fine with pasting my authtoken and public SSH key into it (I didn't have permission to add secrets to the repo). After the whole session, I reset my ngrok auth token.
 
-    Another note worth mentioning is, that we trust the author of the action and ngrok to not man-in-the-middle us.
+    Another note worth mentioning is that we trust the author of the action and ngrok to not man-in-the-middle us.
 
-    - Tell MPS to wait for us
+    - Tell MPS to wait for us.
 
-    Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. In the [endpoints list](https://dashboard.ngrok.com/endpoints/status), our agent should be listed with a domain name and port. Taking the two, we can now ssh into it:
+    Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. Our agent should be listed with a domain name and port in the [endpoints list](https://dashboard.ngrok.com/endpoints/status). Taking the two, we can now ssh into it:
 
     ```
     # SSH through ngrok onto the build machine, already forwarding local 5020 to the remote machine
@@ -84,11 +81,11 @@ CI with MPS projects can provide some challenges:
     ```
 
     If you are asked for a password, fix the casing of *-p*.
-    If still asked for a password, check which user is running the build. On GitHub, that user seems to be called *runner* right now. Even though he has sudo rights.
+    If still asked for a password, check which user runs the build. On GitHub, that user is called *runner* right now. Even though he has sudo rights.
 
-    We now want to teach MPS to open the debug ports and wait for us to connect before running any tests. On CLI, this doesn't work with *.vmoptions* files, but instead, we're running the tests from an ant-file in this project.
+    We now want to teach MPS to open the debug ports and wait for us to connect before running any tests. On CLI, this doesn't work with *.vmoptions* files. Instead, we're running the tests from an ant-file in this project.
 
-    Since the *allScripts* generation was already performed, we only need to open the ant-file and add a JVM argument. I like to open `build/myProject/build-tests.xml` with Vim and then execute the following search expression: `%s/<\/jvmargs>/  <arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>\r      <\/jvmargs>/g`. In other terms: Look for `</jvmargs>` and add `<arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>` right in front of it. The `suspend=y` will tell Java to not start doing anything before we are connected, while the `address=5020` tells it to be welcoming us on port 5020.
+    Since the *allScripts* generation was already performed, we only need to open the ant-file and add a JVM argument. I like to open `build/myProject/build-tests.xml` with Vim and then execute the following search expression: `%s/<\/jvmargs>/  <arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>\r      <\/jvmargs>/g`. In other terms: Look for `</jvmargs>` and add `<arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/>` right in front of it. The `suspend=y` will tell Java not to start doing anything before we are connected, while the `address=5020` tells it to welcome us on port 5020.
 
     ```
     --- build/myProject/build-tests.xml    2021-09-17 21:15:50.000000000 +0200
@@ -117,15 +114,15 @@ CI with MPS projects can provide some challenges:
 
     We should now see the MPS start-up command line and say it is waiting for us on *5020*.
 
-    - Connect with your local IntelliJ
+    - Connect with your local IntelliJ instance.
 
-    Assuming, that you have the MPS sources checked out, opened it in IntelliJ, and added the sources of your project as a module, we should be ready to connect now:
+    Assuming that you have the MPS sources checked out, opened it in IntelliJ, and added the sources of your project as a module, we should be ready to connect now:
 
-    Just start a remote debugging session on port 5020. It will forward the requests over SSH to the agent machine. Once connected, you'll be able to set breakpoints (for example, I set an Exception breakpoint for `StackOverflowError`), and then proceed the build to run into the breakpoint.
+    Just start a remote debugging session on port 5020. It will forward the requests over SSH to the agent machine. Once connected, you can set breakpoints (for example, I set an Exception breakpoint for `StackOverflowError`) and then proceed the build to run into the breakpoint.
 
     - Cleanup
 
-    After you found your issue and everything is shiny, remember to remove the step from your GitHub workflow again and reset your ngrok auth token.
+    After you find your issue and everything is shiny, remember to remove the step from your GitHub workflow again and reset your ngrok auth token.
 
 !!! warning "The build fails with exit code 137"
 

@@ -11,7 +11,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 ## Java Threads
 
 - AWT threads
-    - AWT-AppKit: macOS-specific Thread
+    - AWT-AppKit: macOS-specific thread
     - AWT-EventQueue: = EDT
     - [AWT-Windows](https://stackoverflow.com/a/21597955/16577108)
     - [AWT-Shutdown](http://srcrr.com/java/oracle/openjdk/6/reference/sun/awt/AWTAutoShutdown.html)
@@ -47,9 +47,9 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 - ApplicationImpl ([ApplicationImpl](https://github.com/JetBrains/intellij-community/blob/79bf4b1ae08162fb2154fd0d058d8a8e31fa23a2/platform/core-api/src/com/intellij/openapi/application/Application.java#L20))
 - Periodic tasks thread ([AppDelayQueue](https://github.com/JetBrains/intellij-community/blob/4ca3ccd49776e9a298773fcf26f6cb4a10afc06c/platform/util/src/com/intellij/util/concurrency/AppDelayQueue.java#L14))
 - BaseDataReader ([com.intellij.util.io.BaseDataReader](https://github.com/JetBrains/intellij-community/blob/master/platform/util/src/com/intellij/util/io/BaseDataReader.java))
-    - error stream of X
-    - output stream of X
-    - setsid stream of X
+    - the error stream of X
+    - the output stream of X
+    - the setsid stream of X
 - I/O pool ([ProcessIOExecutorService](https://github.com/JetBrains/intellij-community/blob/4ca3ccd49776e9a298773fcf26f6cb4a10afc06c/platform/util/src/com/intellij/execution/process/ProcessIOExecutorService.java#L12))
 - JobScheduler FJ pool ([IdeaForkJoinWorkerThreadFactory](https://github.com/JetBrains/intellij-community/blob/master/platform/boot/src/com/intellij/concurrency/IdeaForkJoinWorkerThreadFactory.java))
 - Document Committing Pool ([DocumentCommitThread](https://github.com/JetBrains/intellij-community/blob/master/platform/core-impl/src/com/intellij/psi/impl/DocumentCommitThread.java))
@@ -62,7 +62,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 
 ## MPS Threads
 
-- Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run for example inside this thread ([Highlighter](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java)).
+- Highlighter: performs model checks in update sessions and updates the editor. Checking rules are run, for example, inside this thread ([Highlighter](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/Highlighter.java)).
 - HighlightUsages: highlights references to the node at the cursor position in the editor ([HighlightUsagesSupport](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source_gen/jetbrains/mps/editor/runtime/HighlightUsagesSupport.java)).
 - CompletionHelper: automatically opens the code completion menu that was introduced in MPS 2021.2 ([CompletionHelper](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cellMenu/CompletionHelper.java)).
 - MPS EDT Executor: invokes read/write/command task asynchronously on the EDT thread ([EDTExecutorInternal](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/smodel/EDTExecutorInternal.java)).

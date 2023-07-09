@@ -1,8 +1,7 @@
 # Included Java Libraries
 
-The following list contains the Java libraries in the *lib* folder that are installed in MPS 2021.1 and later by default.
-Jars that are removed in later MPS versions are not mentioned because it is too hard to figure out if they were just merged
-into one of the 3rd-party JARs.
+The following list contains the Java libraries in the *lib* folder installed in MPS 2021.1 and later by default.
+Jars removed in later MPS versions are not mentioned because it is too hard to determine if they were merged into one of the 3rd-party JARs.
 
 ## MPS
 
@@ -20,8 +19,8 @@ into one of the 3rd-party JARs.
 - *mps-core.jar* - the core plugin of MPS
 - *mps-editor-api.jar* - Java API of the [editor](https://www.jetbrains.com/help/mps/editor.html) aspect
 - *mps-editor-runtime.jar* - Java runtime classes of the [editor](https://www.jetbrains.com/help/mps/editor.html) aspect
-- *mps-editor.jar* - all classed needed for the [editor](https://www.jetbrains.com/help/mps/editor.html) aspect
-- *mps-environment.jar* - the Java classes that describe the environment that MPS is started with (e.g. standalone or as an IntelliJ IDEA plugin)
+- *mps-editor.jar* - all classes needed for the [editor](https://www.jetbrains.com/help/mps/editor.html) aspect
+- *mps-environment.jar* - the Java classes that describe the environment that MPS is started with (e.g., standalone or as an IntelliJ IDEA plugin)
 - *mps-feedback-api.jar* - Java API of the [feedback](https://www.jetbrains.com/help/mps/feedback.html) aspect
 - *mps-generator.jar* - Java runtime classes of the [generator](https://www.jetbrains.com/help/mps/mps-generator.html) aspect
 - *mps-icons.jar* - the JAR file that contains all [icons](icons.md)
@@ -43,14 +42,14 @@ into one of the 3rd-party JARs.
 - *mps-textgen.jar* - Java runtime classes of the [TextGen](https://www.jetbrains.com/help/mps/textgen.html) aspect
 - *mps-tips.jar* - contains the [tips of the day](https://www.jetbrains.com/help/mps/getting-started.html#d070c87c)
 - *mps-tuples.jar* - Java runtime classes of the [tuples](https://www.jetbrains.com/help/mps/tuples.html) language
-- *mps-workbench.jar* - Java runtime classes of the workbench. It provides integration with the IntelliJ Platform, the implementation of many UI elements, and it supports execution and debugging.
+- *mps-workbench.jar* contains the Java runtime classes of the workbench. It provides integration with the IntelliJ Platform, implements many UI elements, and supports execution and debugging.
 - *resources.jar* - the resources for MPS
 - *resources_en.jar* - the English resources for MPS
 
 ## Ant
 
 All the files are located in the folder */lib/ant/lib* and are used by [Apache Ant](https://ant.apache.org/). Most of the JARs
-contain [tasks](https://ant.apache.org/manual/index.html) that can be executed by Ant.
+contain [tasks](https://ant.apache.org/manual/index.html) that Ant can execute.
 
 - *ant-antlr.jar* - a [task](https://ant.apache.org/manual/Tasks/antlr.html) that integrates the ANTLR parser generator
 - *ant-apache-bcel.jar* - a task that uses the [Apache BCEL](https://commons.apache.org/proper/commons-bcel/) library to manipulate bytecode
@@ -59,7 +58,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *ant-apache-oro.jar* - a [task](https://ant.apache.org/manual/Types/regexp.html) that provides regular expression support using the [Apache ORO](https://jakarta.apache.org/oro/) library
 - *ant-apache-regexp.jar* - a [task](https://ant.apache.org/manual/Types/regexp.html) that provides regular expression support using the [Jakarta Regexp](https://jakarta.apache.org/regexp/) library
 - *ant-apache-resolver.jar* - a task that resolves XML entities using the [Apache XML Commons Resolver](https://xerces.apache.org/xml-commons/components/resolver/#overview)
-- *ant-apache-xalan2.jar* - a [task](https://ant.apache.org/manual/Tasks/style.html) for that performs XSL transformations using the [Xalan-J 2.x processor](https://xml.apache.org/xalan-j/)
+- *ant-apache-xalan2.jar* - a [task](https://ant.apache.org/manual/Tasks/style.html) that performs XSL transformations using the [Xalan-J 2.x processor](https://xml.apache.org/xalan-j/)
 - *ant-commons-logging.jar* - a task that enables logging using the [Jakarta Commons Logging API](https://commons.apache.org/proper/commons-logging/)
 - *ant-commons-net.jar* - a task that provides network-related tasks using the [Jakarta Commons Net library](https://commons.apache.org/proper/commons-net/)
 - *ant-jai.jar* - a [task](https://ant.apache.org/manual/Tasks/image.html) that performs image processing operations using the [Java Advanced Imaging API](https://www.oracle.com/java/technologies/advanced-imaging-api.html)
@@ -91,27 +90,27 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *blockmap.jar* - [BlockMap](https://github.com/JetBrains/plugin-blockmap-patches) is a library for efficient block-based file operations
 - *bouncy-castle-provider.jar* - the [Bouncy Castle Provider](https://www.bouncycastle.org/) is a Java cryptography API that provides implementations of various cryptographic algorithms, protocols, and standards
 - *byte-buddy-agent.jar* - the Java agent for [Byte Buddy](https://bytebuddy.net) is a code generation and manipulation library for creating and modifying Java classes during the runtime of a Java application and without the help of a compiler
-- *caffeine.jar* - [Caffeine](https://github.com/ben-manes/caffeine) is a high performance, near-optimal caching library
+- *caffeine.jar* - [Caffeine](https://github.com/ben-manes/caffeine) is a high-performance, near-optimal caching library
 - *cds/classesLogAgent.jar* - a library for logging class-loading events
 - *cglib-nodep.jar* - [cglib](https://github.com/cglib/cglib) is a high-level API to generate and transform JAVA byte code
 - *classgraph.jar* - [ClassGraph](https://github.com/classgraph/classgraph) is an uber-fast parallelized classpath scanner and module scanner
 - *cli-parser.jar* - [CLI Parser](https://github.com/spullara/cli-parser) is a library for parsing various kinds of command line arguments or property lists
-- *commons-cli.jar* - [Apache Commons CLI](https://commons.apache.org/proper/commons-cli/) provides an API for parsing command line options passed to programs. It's also able to print help messages detailing the options available for a command line tool.
-- *commons-codec.jar* - [Apache Commons Codec](https://commons.apache.org/proper/commons-codec/) provides implementations of common encoders and decoders such as Base64, Hex, Phonetic and URLs.
+- *commons-cli.jar* - [Apache Commons CLI](https://commons.apache.org/proper/commons-cli/) provides an API for parsing command line options passed to programs. It can also print help messages detailing the options for a command line tool.
+- *commons-codec.jar* - [Apache Commons Codec](https://commons.apache.org/proper/commons-codec/) provides implementations of common encoders and decoders such as base64, hex, phonetic, and URLs.
 - *commons-collections.jar* - [Apache Commons Collections](https://commons.apache.org/proper/commons-collections/) extends and augments the Java Collections Framework
 - *commons-compress.jar* - [Apache Commons Compress](https://commons.apache.org/proper/commons-compress/) defines an API for working with ar, cpio, Unix dump, tar, zip, gzip, XZ, Pack200, bzip2, 7z, arj, lzma, snappy, DEFLATE, lz4, Brotli, Zstandard, DEFLATE64, and Z files.
 - *commons-httpclient.jar* - [Apache Commons HttpClient](https://hc.apache.org/httpclient-legacy/) was a library for accessing HTTP resources
 - *commons-imaging.jar* - [Apache Commons Imaging](https://commons.apache.org/proper/commons-imaging/) is a library that reads and writes a variety of image formats, including fast parsing of image info (size, color space, ICC profile, etc.) and metadata.
-- *commons-io.jar* - [Apache Commons IO](https://commons.apache.org/proper/commons-io/) is a library of utilities to help with developing IO functionality.
+- *commons-io.jar* - [Apache Commons IO](https://commons.apache.org/proper/commons-io/) is a library of utilities to help develop IO functionality.
 - *commons-lang3.jar* - [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/) is a library for enhancing the core Java classes
 - *commons-logging.jar* - [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) a library for logging abstraction
 - *dom-impl.jar* - DOM implementation for the IntelliJ platform
 - *dom-openapi.jar* - DOM Open API for the IntelliJ platform
 - *ecj.jar*: [Eclipse Compiler for Java](https://wiki.eclipse.org/JDT_Core_Programmer_Guide/ECJ)
 - *error_prone_annotations.jar* - Annotations for [Error Prone](https://github.com/google/error-prone), a static analysis tool for Java that catches common programming mistakes at compile-time
-- *ext/diffutils.jar* - [DiffUtils](https://github.com/java-diff-utils/java-diff-utils) is a library for performing the comparison operations between texts: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future displaying (like side-by-side view) and so on.
+- *ext/diffutils.jar* - [DiffUtils](https://github.com/java-diff-utils/java-diff-utils) is a library for performing the comparison operations between texts: computing diffs, applying patches, generating unified diffs or parsing them, and generating diff output for easy future displaying (like side-by-side view)
 - *external-system-rt.jar* - [External System Runtime](https://github.com/JetBrains/intellij-community/tree/master/platform/external-system-rt) library of the IntelliJ platform
-- *fluent-hc.jar* - the [Fluent API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fluent.html) of client of [Apache HttpComponents](https://hc.apache.org/)
+- *fluent-hc.jar* - the [Fluent API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fluent.html) of the client of [Apache HttpComponents](https://hc.apache.org/)
 - *forms-preview.jar* - previewer of [JGoodies Forms](https://github.com/JFormDesigner/swing-jgoodies-forms), a framework that helps you lay out and implement elegant Swing panels quickly and consistently
 - *forms_rt.jar* - runtime classes of [JGoodies Forms](https://github.com/JFormDesigner/swing-jgoodies-forms)
 - *grazie-spellchecker.jar* - [Grazie Spellchecker](https://blog.jetbrains.com/idea/2019/11/meet-grazie-the-ultimate-spelling-grammar-and-style-checker-for-intellij-idea/), the spell checking in IntelliJ IDEA
@@ -120,7 +119,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *groovy-jsr223.jar* - a [library](https://groovy-lang.org/integrating.html) for scripting with Groovy and JSR 223
 - *groovy-templates.jar* - a [library](https://docs.groovy-lang.org/docs/next/html/documentation/template-engines.html) for template engines with Groovy
 - *groovy-xml.jar* - a [library](https://groovy-lang.org/processing-xml.html) for XML processing with Groovy
-- *grpc-core.jar* - [gRPC Core](https://github.com/grpc/grpc-java), the Java implementation of gRPC. gRPC is a high-performance, open source, general-purpose RPC framework.
+- *grpc-core.jar* - [gRPC Core](https://github.com/grpc/grpc-java), the Java implementation of gRPC. gRPC is a high-performance, open-source, general-purpose RPC framework.
 - *grpc-kotlin-stub.jar* - [gRPC Kotlin Stub](https://github.com/grpc/grpc-kotlin) is a Kotlin implementation of gRPC, providing runtime support for client-stubs and server-side code.
 - *grpc-netty-shaded.jar* - support for [Netty-based](https://github.com/grpc/grpc-java/tree/master/netty/shaded) transport for gRPC
 - *grpc-protobuf.jar* - [Protobuf](https://github.com/grpc/grpc-java/tree/master/protobuf) support for gRPC which allows defining service contracts and data structures using the Protocol Buffers language
@@ -142,7 +141,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *ion-java.jar* - [Ion](https://github.com/amazon-ion/ion-java) is a Java implementation of the Ion data notation
 - *isorelax.jar* - [ISO RELAX](https://iso-relax.sourceforge.net/) contains public interfaces useful for applications to support RELAX Core
 - *jackson-core.jar* - [Jackson Core](https://github.com/FasterXML/jackson-core) contains the core low-level incremental ("streaming") parser and generator abstractions used by the [Jackson Data Processor](https://github.com/FasterXML/jackson)
-- *jackson-databind.jar* - [Jackson Databind](https://github.com/FasterXML/jackson-databind) contains the general-purpose data-binding functionality and tree-model for [Jackson Data Processor](https://github.com/FasterXML/jackson)
+- *jackson-databind.jar* - [Jackson Databind](https://github.com/FasterXML/jackson-databind) contains the general-purpose data-binding functionality and tree model for [Jackson Data Processor](https://github.com/FasterXML/jackson)
 - *jackson-module-kotlin.jar* - adds support for serialization/deserialization of [Kotlin](https://github.com/FasterXML/jackson-module-kotlin) classes and data classes [Kotlin support]() for the Jackson library
 - *java-api.jar* - API of the IntelliJ Java plugin
 - *java-compatibility.jar* - [Java9Compatibility](https://github.com/JetBrains/intellij-deps-java-compatibility) contains classes from JDK8 excluded from JDK9
@@ -150,7 +149,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *java-string-similarity.jar* - the [Java String Similarity](https://github.com/tdebatty/java-string-similarity) library, a library for string similarity metrics
 - *java_resources_en.jar* - the English resources for the MPS Java module
 - *javac2.jar* - [IntelliJ-specific implementation](https://github.com/JetBrains/intellij-community/blob/master/java/compiler/javac2/src/com/intellij/ant/Javac2.java) of javac with special support for checking \@NotNull annotation at runtime.
-- *javax.activation.jar*: [JavaBeans(TM) Activation Framework](https://www.oracle.com/java/technologies/java-beans-activation.html) is a Java library that provides a way to handle data of different types and formats in a uniform way. It allows applications to determine the type of a piece of data, access it, and perform operations on it using JavaBeans components
+- *javax.activation.jar*: [JavaBeans(TM) Activation Framework](https://www.oracle.com/java/technologies/java-beans-activation.html) is a Java library that provides a way to handle data of different types and formats uniformly. It allows applications to determine the type of a piece of data, access it, and perform operations on it using JavaBeans components.
 - *javax.annotation-api.jar* - [Jakarta Annotations](https://github.com/jakartaee/common-annotations-api) defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies
 - *jaxb-api.jar* - [Java XML Binding API](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxb/index.html) provides an API and tools that automate the mapping between XML documents and Java objects.
 - *jaxb-api.jar*: [Jakarta XML API](https://github.com/jakartaee/jaxb-api) provides an API and tools that automate the mapping between XML documents and Java objects.
@@ -164,7 +163,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *jing.jar* - [Jing](https://relaxng.org/jclark/jing.html) is a [RELAX NG](https://relaxng.org/) validator
 - *jna-platform.jar* - [JNA platform](https://github.com/java-native-access/jna) is a library for native access to platform-specific libraries
 - *jna.jar* - [JNA](https://github.com/java-native-access/jna) is a library for native access to shared libraries
-- *jps-model.jar* - Model part of [JPS](https://github.com/JetBrains/intellij-community/tree/master/jps). JPGS is a Gant-based build framework + DSL.
+- *jps-model.jar* is the model part of [JPS](https://github.com/JetBrains/intellij-community/tree/master/jps). JPGS is a Gant-based build framework + DSL.
 - *jps/jps-build-test.jar* - Jar that belongs to [JPS](https://github.com/JetBrains/intellij-community/tree/master/jps)
 - *jsch.jar* - [JSch](http://www.jcraft.com/jsch/) is a Java implementation of the [SSH2 protocol](https://datatracker.ietf.org/wg/secsh/about/).
 - *jshell-frontend.jar* - the [JShell](https://www.jetbrains.com/help/idea/jshell-console.html) Frontend library, a library for JShell integration
@@ -188,7 +187,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *miglayout-swing.jar*: [MigLayout](https://www.miglayout.com/) is a Java Layout Manager for Swing, SWT, and JavaFX
 - *nanoxml.jar*: [nanoxml](https://github.com/saulhidalgoaular/nanoxml) is a non-validating XML parser
 - *netty-buffer.jar*: Netty Buffer is an abstraction of a byte buffer, the fundamental data structure to represent a low-level binary and text message [JavaDoc](https://netty.io/4.0/api/io/netty/buffer/package-summary.html)
-- *netty-codec-http*: encoder, decoder and their related message types for HTTP ([JavaDoc](https://netty.io/4.0/api/io/netty/handler/codec/http/package-summary.html))
+- *netty-codec-http*: encoder, decoder, and their related message types for HTTP ([JavaDoc](https://netty.io/4.0/api/io/netty/handler/codec/http/package-summary.html))
 - *netty-handler-proxy.jar* - Netty Handler Proxy library, a library that provides proxy handler implementations for Netty, which is a high-performance, asynchronous, event-driven framework for network applications
 - *ngram-slp.jar* - [Ngram SLP](https://github.com/JetBrains/intellij-community/tree/master/plugins/completion-ml-ranking/src/com/intellij/completion/ml/ngram) is a library for n-gram language models
 - *objenesis.jar* - [Objenesis](https://github.com/easymock/objenesis) is a library dedicated to bypassing the constructor when creating an object
@@ -209,7 +208,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 - *rd-swing.jar* - is the swing integration for [RD Framework](https://github.com/JetBrains/rd)
 - *rhino-runtime.jar* - the [runtime](https://p-bakker.github.io/rhino/docs/runtime/) of the [Rhino JavaScript engine](https://github.com/mozilla/rhino)
 - *rngom.jar* - [RNGOM](https://linuxsoft.cern.ch/cern/centos/7/updates/x86_64/repoview/rngom.html) is a library for parsing RELAX NG grammars
-- *roaringbitmap.jar* - [RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap) is a library for roaring bitmaps. These are compressed bitmaps that tend to outperform conventional compressed bitmaps such as WAH, EWAH, or Concise.
+- *roaringbitmap.jar* - [RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap) is a library for roaring bitmaps. Compressed bitmaps tend to outperform conventional compressed bitmaps such as WAH, EWAH, or Concise.
 - *serviceMessages.jar* - [Service messages](https://www.jetbrains.com/help/teamcity/service-messages.html) are specially constructed pieces of text that pass commands/information about the build from the build script to the TeamCity server.
 - *slf4j.jar* - [SLF4J](https://slf4j.org/) serves as a simple facade or abstraction for various logging frameworks
 - *snakeyaml.jar* - [SnakeYAML](https://github.com/snakeyaml/snakeyaml) is a library for YAML processing
@@ -246,7 +245,7 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 
 ## Changes in 2021.3.x
 
-- *3rd-party-rt.jar*: a jar file containing the runtime classes of various third-party libraries that are used by IntelliJ IDEA, such as JNA, ASM, and Log4j.
+- *3rd-party-rt.jar*: is a JAR file containing the runtime classes of IntelliJ IDEA's various third-party libraries, such as JNA, ASM, and Log4j.
 - *eclipse.jar*: a jar file containing the core classes of the Eclipse platform, such as the runtime, resources, and workspace APIs.
 - *annotations.jar* was renamed to *jetbrains-annotations*.
 - *kotlinx-metadata-jvm*: the Kotlinx Metadata JVM library, which is a Kotlin library for reading and writing JVM metadata in Kotlin class files and Android DEX files.
@@ -259,21 +258,21 @@ contain [tasks](https://ant.apache.org/manual/index.html) that can be executed b
 
 ## Changes in 2022.2.x
 
-- *3rd-party.jar* was removed again. That means that some JARs exist as standalone JARs again (e.g. asm libraries)
+- *3rd-party.jar* was removed again. That means that some JARs exist as standalone JARs again (e.g., asm libraries)
 - *externalProcess-rt.jar*: a jar file containing the external process runtime library, which is a Java library for launching and communicating with external processes in a platform-independent way.
-- *groovy.jar*: a jar file for the [Groovy](https://groovy-lang.org/) language, which is a dynamic scripting language for the Java platform that supports multiple paradigms, such as object-oriented, functional, and imperative programming.
+- *groovy.jar*: a jar file for the [Groovy](https://groovy-lang.org/) language, a dynamic scripting language for the Java platform that supports multiple paradigms, such as object-oriented, functional, and imperative programming.
 - *jffi.jar*: [JFFI](https://github.com/jnr/jffi) is a Java library for interfacing with native code using JNA
 - *jffi-native.jar*: Native part of [JFFI](https://github.com/jnr/jffi)
 - *jnr-a64asm.jar*: [JNR A64ASM](https://github.com/jnr/jnr-a64asm) is a Java library for generating ARM64 assembly code at runtime
 - *jnr-ffi.jar*: [JNR FFI](https://github.com/jnr/jnr-ffi) is a Java library for interfacing with native code using libffi
-- *jnr-x86asm.jar*: a jar file containing the [JNR X86ASM](https://github.com/jnr/jnr-x86asm) library, which is a Java library for generating x86 assembly code at runtime.
+- *jnr-x86asm.jar*: a jar file containing the [JNR X86ASM](https://github.com/jnr/jnr-x86asm) library, a Java library for generating x86 assembly code at runtime.
 - *kotlin-compiler-client-embeddable.jar*: a jar file containing an embeddable version of the [Kotlin compiler](https://kotlinlang.org/docs/command-line.html)
 - *kotlinx-metadata-jvm.jar*: [Kotlinx Metadata JVM library](https://github.com/JetBrains/kotlin/blob/master/libraries/kotlinx-metadata/jvm/ReadMe.md) provides an API to read and modify metadata of binary files generated by the Kotlin/JVM compiler, namely `.class` and `.kotlin_module` files.
-- *lz4-java.jar*: [LZ4 compression library for Java](https://github.com/lz4/lz4-java) is a Java port of the LZ4 compression algorithm that offers fast compression and decompression speeds1.
-- *util_rt.jar*: [utility runtime](https://github.com/JetBrains/intellij-community/tree/master/platform/util-rt) is a Java library that provides various utility classes and methods for common tasks, such as logging, configuration, reflection, and concurrency.
+- *lz4-java.jar*: The [LZ4 compression library for Java](https://github.com/lz4/lz4-java) is a Java port of the LZ4 compression algorithm that offers fast compression and decompression speeds1.
+- *util_rt.jar*: [Utility runtime](https://github.com/JetBrains/intellij-community/tree/master/platform/util-rt) is a Java library that provides utility classes and methods for common tasks, such as logging, configuration, reflection, and concurrency.
 
 ## Changes in 2022.3.x
 
 - *ant-imageio.jar*: [Ant ImageIO](https://ant.apache.org/manual/Tasks/imageio.html) is an Ant task that allows reading and writing image files using the Java ImageIO API2.
 - *tools-testsBootstrap.jar*: [tools tests bootstrap library](https://www.jetbrains.com/help/idea/testing.html)  is a Java library that provides test utilities and helpers for testing tools and applications.
-- *xml-dom-impl.jar*: [XML DOM implementation](https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/package-summary.html) is a library that provides an implementation of the W3C Document Object Model (DOM) API for manipulating XML documents.
+- *xml-dom-impl.jar*: [XML DOM implementation](https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/package-summary.html) is a library that implements the W3C Document Object Model (DOM) API for manipulating XML documents.

@@ -9,7 +9,7 @@ This guide uses [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https:
 The markdown version is [Python-Markdown](https://python-markdown.github.io/). [This page](https://squidfunk.github.io/mkdocs-material/reference/) contains the reference for the material theme.
 Install extra MkDocs plugins in build.gradle + mkdocs.yml.
 
-If you are using IntelliJ for editing, it is recommended to install the plugin [Grazie Professional](https://plugins.jetbrains.com/plugin/16136-grazie-professional) for spell checking. 
+If you are using IntelliJ for editing, it is recommended to install the plugin [Grazie Professional](https://plugins.jetbrains.com/plugin/16136-grazie-professional) for spell-checking. 
 
 ## Editing
 
@@ -42,8 +42,8 @@ Besides the Material extensions, the project used the following [Pymdown](https:
 - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/): subscript text via tilde
 - [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): support for custom Emojis. Some example icons are in [MPS Icons](icons.md).
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): support for lists with checkboxes
-- [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for markdown in HTML
-- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link related features 
+- [mk_in_html](https://python-markdown.github.io/extensions/md_in_html/): support for Markdown in HTML
+- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): additional link-related features 
 - [mdx-spanner](https://pypi.org/project/mdx-spanner): enables row and column spanning in Markdown tables
 
 ## Macros

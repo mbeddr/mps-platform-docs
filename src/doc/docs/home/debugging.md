@@ -9,7 +9,7 @@ tags:
 > 
 > (Brian Kernighan)
 
-If you are unsure how do debug in general, read: [How do I Debug my Program?](http://websites.umich.edu/~eecs381/generalFAQ/Debugging.html).
+If you need help with general debugging topics, read: [How do I Debug my Program?](http://websites.umich.edu/~eecs381/generalFAQ/Debugging.html)
 For more in-depth explanations regarding debugging in MPS, visit:
 
 - [Debugging in MPS](https://specificlanguages.com/articles/debugging/){{ blog('sl') }}
@@ -19,21 +19,21 @@ For more in-depth explanations regarding debugging in MPS, visit:
 The following list shows some debugging tips:
 
 - The menu entry *Tools* --> *Internal Actions* provides many useful debugging features, for example, the UI Inspector (Swing debugging).
-- Right-click --> *Preview Generated Text*: show the result of the M2T transformation (for example generated code) for the current node
-- Inspect Node: right-click --> *Show Node in Explorer*
-- Inspector: right-click --> *Inspect Node*
-- Right-click --> *Language Debug*
-    - *Show Type*: show type system type of the current node.
-    - *Rule which caused Error*: find checking rule/constraint, which caused the error.
-    - *Cell in Explorer*: debug editor cells and collections.
-    - *Generation Traceback*: debug the generator. In transient models, you can find the source node for the generated (intermediate) node.
+- Right-click --> *Preview Generated Text*: Show the result of the M2T transformation (for example, generated code) for the current node
+- To inspect the node, right-click --> *Show Node in Explorer*
+- To open the inspector, right-click --> *Inspect Node*
+- Right-click in the editor and select *Language Debug*:
+    - *Show Type*: Show the type system type of the current node.
+    - *Rule which caused Error*: Find the checking rule/constraint which caused the error.
+    - *Cell in Explorer*: Debug editor cells and collections.
+    - *Generation Traceback*: Debug the generator. In transient models, you can find the generated (intermediate) node's source node.
 - Find Action: *Help* --> *Find Action* or ++ctrl+shift+a++ if you forgot the name of your action.
 - Changing IDE settings
     - 2 locations: bin folder (MPS/IDE folder) and preferences folder (overwrites bin folder)
     - JVM: *bin/mps.vmoptions* (RAM/Xmx, debugger port, …)
     - Log-level (Log4J): *bin/log.xml* 	
     - IDEA properties: *bin/idea.properties*: change default paths, advanced IDE settings
-- Log file: is stored in the logs folder, e.g. `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
+- Log file: is stored in the logs folder, e.g., `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
 
 !!! question "How do I debug action maps?"
 
@@ -44,24 +44,24 @@ The following list shows some debugging tips:
 !!! warning "Especially VisualVM tends to freeze MPS. A better profiler is [YourKit](https://www.yourkit.com/java/profiler/features/) which is a commercial product."
 
 - [VisualVM](https://quinnkeast.medium.com/word-choices-and-language-in-ux-part-three-user-interface-labels-messages-c1a383793e6a)
-    - display process configuration and environment (e.g. Java/MPS version, JVM arguments, system properties)
-    - monitor process performance and memory (e.g. CPU/heap usage, loaded classes, threads)
-    - visualize process threads (e.g. dispatch thread)
-    - profile performance and memory usage (e.g. CPU usage)
-    - take and display thread dumps (e.g. find [deadlocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html))
-    - take and browse heap dumps (e.g. find memory leaks)
-    - analyze core dumps (e.g. crashed Java processes)
+    - display process configuration and environment (e.g., Java/MPS version, JVM arguments, system properties)
+    - monitor process performance and memory (e.g., CPU/heap usage, loaded classes, threads)
+    - visualize process threads (e.g., dispatch thread)
+    - profile performance and memory usage (e.g., CPU usage)
+    - take and display thread dumps (e.g., find [deadlocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html))
+    - take and browse heap dumps (e.g., find memory leaks)
+    - analyze core dumps (e.g., crashed Java processes)
 
     ![VisualVM](visualvm.png)
 
 - [Memory Analyzer (MAT)](https://www.eclipse.org/mat/)
-    - find memory related issues such as memory leaks
+    - find memory-related issues such as memory leaks
 
     ![Memory Analyzer (MAT)](http://www.eclipse.org/mat/about/overview.png)
 
 - [JDK Mission Control](https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html)
     - [troubleshoot memory leaks](https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshooting-memory-leaks.html#GUID-8090B138-6E0C-4926-9659-BE739062AB75)
-    - [troubleshoot performance issues using flight recorder](https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshoot-performance-issues-using-jfr.html#GUID-0FE29092-18B5-4BEB-8D8D-0CBA7A4FEA1D)
+    - [Troubleshoot Performance Issues Using Flight Recorder](https://docs.oracle.com/en/java/javase/11/troubleshoot/troubleshoot-performance-issues-using-jfr.html#GUID-0FE29092-18B5-4BEB-8D8D-0CBA7A4FEA1D)
 
     ![JDK Mission control](https://docs.oracle.com/en/java/javase/11/troubleshoot/img/garbage_collection_performance_automated_analysis_results_7_1_2.png)
 
@@ -70,7 +70,7 @@ The following list shows some debugging tips:
 ## Decompiler
 
 Decompiling jar files usually shouldn't be necessary because the source code of [MPS](https://github.com/JetBrains/MPS), [IntelliJ Community](https://github.com/JetBrains/intellij-community), [JetBrainsRuntime](https://github.com/JetBrains/JetBrainsRuntime), and the MPS platforms is open source and available on GitHub. For all other cases,
-use the [JD Java Decompiler](http://java-decompiler.github.io/). The [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) can also be used for this task.
+use the [JD Java Decompiler](http://java-decompiler.github.io/). The [Java Decompiler IntelliJ plugin](https://plugins.jetbrains.com/plugin/7100-java-decompiler) also is capable of doing this task.
 
 ## General Blog Posts
 

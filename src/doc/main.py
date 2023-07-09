@@ -79,7 +79,7 @@ def define_env(env):
             
     @env.macro
     def mps_extensions():
-        return ':mps_extensions:[MPS-extensions](https://github.com/JetBrains/MPS-extensions)'
+        return ':mps_extensions:[MPS Extensions](https://github.com/JetBrains/MPS-extensions)'
         
     @env.macro
     def mps():

@@ -7,7 +7,7 @@ The selection is tailored to MPS developers.
 
     - [40 Key Computer Science Concepts Explained In Layman’s Terms](https://carlcheo.com/compsci)
     - [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
-        - average and worst case time/space complexity of common data structures/algorithms
+        - average and worst-case time/space complexity of common data structures/algorithms
     - [Learn regex the easy way](https://github.com/ziishaned/learn-regex) + [regex101](https://regex101.com/) for testing regular expressions
     - [Command Line for Beginners](https://www.freecodecamp.org/news/command-line-for-beginners/)
     - [Learn how to use Git and GitHub](https://www.deployhq.com/git)
@@ -23,12 +23,12 @@ The selection is tailored to MPS developers.
 
 ## [Falsehoods Programmers Believe in](https://github.com/kdeldycke/awesome-falsehood)
 
-> A falsehood is an idea that you initially believed was true, but in reality, it is proven to be false.
+> Falsehood is an idea you initially believed was true, but in reality, it is proven false.
 
 You might have to deal with one of the following topics when you develop a new feature or language:
 
 - [dates and time](https://github.com/kdeldycke/awesome-falsehood#dates-and-time) (applicable to date- and time-related languages)
-- [internationalization](https://github.com/kdeldycke/awesome-falsehood#internationalization) (applicable to languages that should support English and/or a second language)
+- [internationalization](https://github.com/kdeldycke/awesome-falsehood#internationalization) (applicable to languages that should support English and a second language)
 - [system of measurement](https://www.stevemoser.org/posts/dev/falsehoods-programmers-believe-about-systems-of-measurement.html) (applicable to units-related languages)
 - [software engineering](https://github.com/kdeldycke/awesome-falsehood#software-engineering) (versioning, paths, usernames, identifiers)
 - [uppercase and lowercase text](https://www.b-list.org/weblog/2018/nov/26/case/)
@@ -72,8 +72,8 @@ You might have to deal with one of the following topics when you develop a new f
     - [How do I become better on the phone?](https://interpersonal.stackexchange.com/questions/764/how-do-i-become-better-on-the-phone)
     - [Anxious during conference calls](https://interpersonal.stackexchange.com/questions/3265/anxious-during-conference-calls)
     - [When is it okay to ask "stupid" questions in the workplace?](https://interpersonal.stackexchange.com/questions/1701/when-is-it-okay-to-ask-stupid-questions-in-the-workplace)
-    - [Knowing when you should send message instead of asking in person](https://interpersonal.stackexchange.com/questions/20992/knowing-when-you-should-send-message-instead-of-asking-in-person)
-    - [How to make sure I understood a work assignment correctly?](https://interpersonal.stackexchange.com/questions/5481/how-to-make-sure-i-understood-a-work-assignment-correctly)
+    - [Knowing when you should send a message instead of asking in person](https://interpersonal.stackexchange.com/questions/20992/knowing-when-you-should-send-message-instead-of-asking-in-person)
+    - [How to make sure I understandd a work assignment correctly?](https://interpersonal.stackexchange.com/questions/5481/how-to-make-sure-i-understood-a-work-assignment-correctly)
     - [How to respond when you are asked for an estimate?](https://softwareengineering.stackexchange.com/questions/648/how-to-respond-when-you-are-asked-for-an-estimate)
 
 === "Customers"

@@ -6,12 +6,11 @@ tags:
 - intellij
 ---
 
-The different plugins of MPS are declared using a [plugin configuration file](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html). The functionality is split into [plugin components](https://plugins.jetbrains.com/docs/intellij/plugin-components.html). `application-components` are activated when MPS starts, `project-components`
-are activated when a project is opened.
+The different plugins of MPS are declared using a [plugin configuration file](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html). The functionality is split into [plugin components](https://plugins.jetbrains.com/docs/intellij/plugin-components.html). `application-components` active when MPS starts, `project-components` active when a project opens.
 
-MPS uses existing [IntelliJ extension points](https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html). For a list of all extension points and listeners have a look at
-[Extension Point and Listener List | IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html). New extension points are declared in a section *extensionPoints* where
-a qualified name and the interface to implement have to be provided. The interface has to contain an extension point name
+MPS uses existing [IntelliJ extension points](https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html). Look at
+[Extension Point and Listener List | IntelliJ Platform Plugin SDK](https://plugins.jetbrains.com/docs/intellij/extension-point-list.html) for a list of all extension points and listeners. Declare new extension points in a section *extensionPoints* where
+you must provide a qualified name and the interface to implement. The interface has to contain an extension point name
 declaration. Example:
 
 ```java
@@ -23,7 +22,7 @@ public interface IntentionActionsProvider {
 }
 ```
 
-The extensions can be registered in an *extensions* block in the *plugin.xml*. The default extension namespace has to be
+You can register the extensions in an *extensions* block in the *plugin.xml*. The default extension namespace has to be
 `com.intellij` ([example](https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/IdeaPlugin/mps-vcs/META-INF/plugin.xml#L37)). The extension can also have attributes ([example](https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/workbench/mps-platform/source/jetbrains/mps/LanguageLibrary.java#L26)).
 
 Link to different MPS plugin.xml files:
@@ -59,9 +58,9 @@ Included in other plugins:
 - [PlatformActions](https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml)
 
 All the plugins use the [charisma reporter](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java) for error reporting.
-This allows reporting errors to YouTrack. Another notable extension is the declaration of the MPS language library. For example:
+This class makes it possible to report errors to YouTrack. Another notable extension is the declaration of the MPS language library. For example:
 ```xml
 <mps.LanguageLibrary dir="/languages" />
 ```
 
-It tells MPS where in the plugin folder the compiled MPS languages can be found.
+It tells MPS where to find the compiled MPS languages in the plugin folder.

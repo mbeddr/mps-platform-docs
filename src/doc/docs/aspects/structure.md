@@ -28,14 +28,13 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?"
 
-    The used algorithm is a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
-    You can try it yourself, for example for the concept {{ mps_url("@mps.ClassConcept") }}:
+    The used algorithm is a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept {{ mps_url("@mps.ClassConcept") }}:
     ```java
     BehaviorRegistryImpl r = (BehaviorRegistryImpl) ConceptRegistry.getInstance().getBehaviorRegistry();
     BHDescriptor d = r.getBHDescriptor(concept/ClassConcept/);
     #print r.getMRO().calcLinearization(_SAbstractConcept.wrap(concept/ClassConcept/));
     ```
-    If you want to call a specific `#!java type()` implementation, you have to just cast the node to the corresponding concept and then call the method e.g. `#!java myNode as MyITypeable.type()`
+    If you want to call a specific `#!java type()` implementation, you have just to cast the node to the corresponding concept and then call the method, e.g., `#!java myNode as MyITypeable.type()`
 
 !!! question "How can you get the short node ID from the node ID and vice versa?"
 
@@ -52,15 +51,15 @@ The structure aspect contains all the concept and interface declarations of a la
 
     ![find nodes on the console by ID](node_by_id_console.png)
 
-    There is also the action *Go to node by ID* that can be found in the *Navigate* main menu.
+    The *Navigate* main menu also contains an action *Go to node by ID*.
 
-!!! question "Can I cast concept objects to super concept objects?"
+!!! question "Can I cast concept objects to super-concept objects?"
 
     > I have the following successful boolean check: `someConcept.isSubConceptOf(MySuperConcept)`
-    > But if I put this code below, it fails with an exception that the cast cannot be performed: `((concept<MySuperConcept>) someConcept)`
+    > But if I put this code below, it fails with an exception that it cannot perform the cast: `((concept<MySuperConcept>) someConcept)`
     > The type of the expression someConcept is `concept<>.`
 
-    There is a [special cast](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152) for that. For example:
+    There is a [cast](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152) for that. For example:
     ```java
     concept<> cls = node/AbstractMethodError/.concept;
     #print cls:BaseConcept.getLanguage().getQualifiedName();
@@ -68,13 +67,13 @@ The structure aspect contains all the concept and interface declarations of a la
 
 ## Interfaces
 
-!!! warning "The concept implements {{ mps_url("@mps.ISuppressErrors") }} but errors are still shown for the node."
+!!! warning "The concept implements {{ mps_url("@mps.ISuppressErrors") }}, but the node still contains errors."
 
-    You have to implement {{ mps_url("@mps.IDontApplyTypesystemRules") }} and {{ mps_url("@mps.ISkipConstraintsChecking") }}. More information can be found in [Suppressing Errors | MPS](https://www.jetbrains.com/help/mps/suppressing-errors.html).
+    You have to implement {{ mps_url("@mps.IDontApplyTypesystemRules") }} and {{ mps_url("@mps.ISkipConstraintsChecking") }}. [Suppressing Errors | MPS](https://www.jetbrains.com/help/mps/suppressing-errors.html) has some more information.
 
 !!! question "What's {{ mps_url("@mps.IMainClass") }} used for?"
 
-    It allows to execute Base Language code. An example can be found in [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode).
+    It allows to execute Base Language code. [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode) contains an example.
 
 ## Properties
 
@@ -88,13 +87,13 @@ The structure aspect contains all the concept and interface declarations of a la
 
 !!! question "Can properties be overridden?"
 
-    No, more info can be found in MPS-17143.
+    No, MPS-17143 contains more information.
 
 !!! question "How to get the name of a concept property?"
 
     The easiest way to do this is via [PropertyIdRefExpression](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080). Then you can directly reference the property in question like this:
     `property/MyConcept : myProperty/.getName()`
-    Whith this implementation, every change in the property names are always calculated properly.
+    With this implementation, every property name change is calculated correctly.
 
     {{ contribution_by('abstraktor') }}
 
@@ -126,5 +125,4 @@ The structure aspect contains all the concept and interface declarations of a la
 
     Example: `[> thingref [> ( % thing % -> ref. presentation ) <] <]`
 
-    Ref presentation automatically uses the name of the interface *INamedConcept*. If you add `auto-deletable: true` to the cell and the cardinality is `[1]`, the name is deleted but the reference is not removed. When the cardinality is `[0..1]` the reference is deleted. This behavior is expected
-    because in the first case, the reference is mandatory, in the second case it is optional.
+    Ref presentation automatically uses the name of the interface *INamedConcept*. If you add `auto-deletable: true` to the cell and the cardinality is `[1]`, MPS deletes the name but doesn't remove the reference. When the cardinality is [0..1], it deletes the reference. You expect this behavior because the reference is mandatory in the first case; in the second case, it is optional.

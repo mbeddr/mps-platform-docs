@@ -4,13 +4,12 @@ tags:
 - sources
 ---
 
-This page describes the folder structure of the MPS sources that can be checked out with Git from https://github.com/JetBrains/MPS.
-More information can be found in the readme of the repository.
+This page describes the folder structure of the MPS sources that you can check out with Git from https://github.com/JetBrains/MPS.
+The readme of the repository contains more information.
 
 ## .idea
 
-The `artifacts` directory contains the artifact-related settings. More info can be found
-in [Artifacts | IntelliJ IDEA](https://www.jetbrains.com/help/idea/working-with-artifacts.html). Artifacts in this project are the generated jar files
+The `artifacts` directory contains the artifact-related settings. [Artifacts | IntelliJ IDEA](https://www.jetbrains.com/help/idea/working-with-artifacts.html) contains more information. Artifacts in this project are the generated jar files
 such as `mps-core.jar` and `vcs-core.jar`:
 
 ![mps artifacts dialog](mps_artifacts.png)
@@ -22,20 +21,19 @@ many other IntelliJ-specific project settings,
 
 This folder also contains run configurations and scopes but also other settings:
 
-- *codeStyleSettings.xml*: style settings used for Base Language (e.g. default field and parameter prefix)
+- *codeStyleSettings.xml*: style settings used for Base Language (e.g., default field and parameter prefix)
 - *compiler.xml*: the version of the Java compiler (currently: 11)
 - *encodings.xml*: encoding of the files (should be: UTF-8)
 - *migration.xml*: list of executed MPS migrations in the current project 
-- *misc.xml*: miscellaneous settings (e.g. settings of favorites manager)
-- *modules.xml*: a list of modules of this project that are loaded in MPS
+- *misc.xml*: miscellaneous settings (e.g., settings of favorites manager)
+- *modules.xml*: a list of modules of this project MPS loads on startup
 - *vcs.xml*: version control settings
 - *version.xml*: project version (not used anymore)
-- *settings of different components* (e.g. console history, messages view tool, project view)
+- *settings of different components* (e.g., console history, messages view tool, project view)
 
 ## bin
 
-This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS-specific files:
+This folder contains executable files for the different operating systems (Windows, Mac, Linux). All of them use the executable *fsnotifier* to react to file system changes. OS-specific files:
 
 - Linux
     - *libdgbm*: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX *dbm* function [source](https://packages.debian.org/de/sid/libgdbm-dev)
@@ -48,27 +46,27 @@ operating systems (Windows, Mac, Linux). All of them use the executable *fsnotif
   
 - Windows
     - *breakgen(64).dll*: gracefully shut down a running process (not possible with Java).
-    - *elevator.exe*: sudo-like tool for windows to deal with UAC ([source](https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update))
+    - *elevator.exe*: a sudo-like tool for Windows to deal with UAC ([source](https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update))
     - *IdeaWin32/64.dll*: native file system functions
     - *launcher.exe*: launches MPS
     - *restarter.exe*: restarts MPS
-    - *runnerw.exe*: old library for Windows process management. Superseded by [WinP](https://github.com/jenkinsci/winp).
-    - *WinProcessListHelper.exe*: lists windows processes
+    - *runnerw.exe*: an old library for Windows process management. [WinP](https://github.com/jenkinsci/winp) superseded it.
+    - *WinProcessListHelper.exe*: lists Windows processes
     - *WinShellIntegrationBridge.dll*: integration with the Windows shell
     - *wslhash*: hash calculation(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
     - *wslproxy*: proxy(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 
 ## build
 
-The used dependency manager is [Apache Ivy](https://ant.apache.org/ivy/). The corresponding folder is `build/ivy`.
-[Apache Ant](https://ant.apache.org/) is used as the build tool.
+The dependency manager of the project is [Apache Ivy](https://ant.apache.org/ivy/). The corresponding folder is `build/ivy`.
+ The build tool is [Apache Ant](https://ant.apache.org/).
 The `artifacts` folder contains the generated jar files. An artifact might look like this:
 
 - *languages*: contains MPS languages
 - *modules*: contains Java classes
 - *lib*: Jar dependencies
 - *META-INF*: contains the [plugin configuration file](https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html)
-- *build.properties*: contains the MPS version and IntelliJ plugin that this artifact belongs to.
+- *build.properties*: contains the MPS version and IntelliJ plugin this artifact belongs to.
 
 The `dependencies` folder contains the [Gradle configuration properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties).
 
@@ -77,20 +75,19 @@ The `dependencies` folder contains the [Gradle configuration properties](https:/
 The `resources` folder contains image resources as well as the following files:
 
 - *mps*: executable file to start MPS
-- *mps-dmg.sh*: create an [Apple Disk image](https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/) for macOS
+- *mps-dmg.sh*: Create an [Apple Disk image](https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/) for macOS
 - *mps-sign.sh*: [signs](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) the MPS macOS application
 
 The `tests` folder contains Ant scripts for executing tests.
-The `tools` folder contains scripts for signing and creating DMGs and also
-a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
+The `tools` folder contains scripts for signing and creating DMGs and a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
 The other XML files are also Ant scripts for different tasks (getting dependencies, building MPS languages, migration projects, etc.).
 The `run_build.sh` and `run_test.sh` can be used to run the build and tests
-on Linux/Mac respectively. `update.xml` lists all MPS versions and is used to show automatic updates for MPS.
+on Linux/Mac. `update.xml` lists all MPS versions and helps with the automatic MPS update management.
 
 ## core
 
 The `aspects` folder contains the languages for the language aspects.
-The `baselanguage` folder contains the Base Language implementation and all its extensions such as extension methods, closures, or the collection language.
+The `baselanguage` folder contains the Base Language implementation and all its extensions, such as extension methods, closures, or the collection language.
 
 The folder `devkit` contains the four main devkits:
 
@@ -102,23 +99,23 @@ The folder `devkit` contains the four main devkits:
 ### kernel
 
 It contains core languages of MPS such as loaders for Java stubs, classes for persistence, language checkers,
-make classes and runtime classes for smodel such as `SConceptOperations.java` and `SModelOperations.java`.  
+make classes, and runtime classes for smodel such as `SConceptOperations.java` and `SModelOperations.java`.  
 
 ### languages
 
-This folder contains all core languages such as smodel, quotation, access, quotations, pattern, and so forth.
+This folder contains all core languages such as smodel, quotation, access, quotations, and pattern.
 
 ### make
 
-Everything related to the make facet is situated in this folder.
+Everything related to the make facet is in this folder.
 
 ### stub
 
-This folder contains all stub models provided by MPS, e.g. stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g. `java.util.List`) and all MPS related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g. MPS.Core).
+This folder contains all stub models provided by MPS, e.g., stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g., `java.util.List`), and all MPS-related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g., MPS.Core).
 
 ### tool
 
-This folder contains classes for accessing MPS from Java (e.g. `MPSEnvironment) and other tool-related classes such as accessing Ant from Java.
+This folder contains classes for accessing MPS from Java (e.g., `MPSEnvironment`) and other tool-related classes, such as accessing Ant from Java.
 
 ## platform
 
@@ -139,11 +136,11 @@ This folder contains languages and solutions for the following platform features
 
 ## samples
 
-This folder contains the samples that are shipped with MPS. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.
+This folder contains the samples that MPS ships with. When first accessed through the start screen, MPS unpacks them automatically into a folder in the home directory.
 
 ## tests
 
-This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.
+This folder contains classes for executing tests and all kinds of tests, such as generator tests or tests for the constraint aspect.
 
 ## workbench
 
