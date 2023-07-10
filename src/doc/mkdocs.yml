@@ -118,7 +118,8 @@ plugins:
 markdown_extensions:
   - mdx_spanner
   - abbr
-  - smarty
+  - smarty:
+      smart_quotes: false    
   - admonition
   - codehilite:
       guess_lang: false
