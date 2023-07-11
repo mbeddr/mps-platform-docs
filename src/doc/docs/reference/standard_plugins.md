@@ -1,6 +1,7 @@
 # Standard Plugins in MPS
 
-The following list contains the plugins that are installed in MPS 2021.1 and later by default:
+The following list contains the plugins that are installed in MPS 2021.1 and later by default. The changes were collected on the 
+command line by executing: `diff -rq path1 path2`
 
 ## MPS 
 
@@ -60,4 +61,13 @@ The sources for most of the plugins are in the [plugins folder](https://github.c
 - mps-kotlin: MPS Kotlin implementation (*jetbrains.mps.kotlin*)
 - mps-navbar: [navigation bar](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html#navigation-bar) that supports the MPS model hierarchy (*jetbrains.mps.navbar*)
 
-TODO 2022.2, 2022.3
+## Changes in 2022.2
+
+No changes.
+
+## Changes in 2022.3
+
+- vcs-git: Git support for IntelliJ products + [git4idea](https://github.com/JetBrains/intellij-community/tree/master/plugins/git4idea/src/git4idea) runtime classes
+- vcs-github: GitHub support for IntelliJ products
+- vcs-svn: SVN support for IntelliJ products + SQLite library
+- Removed plugins: git4idea, github, settings-repository, svn4idea
