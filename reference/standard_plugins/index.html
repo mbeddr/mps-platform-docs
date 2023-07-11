@@ -121,7 +121,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="http://mbeddr.com/mps-platform-docs/about/new_pages">new pages</a>
+If you are a returning visitor, make sure to check out the page about <a href="../../about/new_pages">new pages</a>
 
           </div>
           
@@ -1239,6 +1239,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changes-in-20222" class="md-nav__link">
+    Changes in 2022.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-20223" class="md-nav__link">
+    Changes in 2022.3
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1562,6 +1576,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changes-in-20222" class="md-nav__link">
+    Changes in 2022.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-20223" class="md-nav__link">
+    Changes in 2022.3
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1585,7 +1613,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 
 <h1 id="standard-plugins-in-mps">Standard Plugins in <abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#standard-plugins-in-mps" title="Permanent link">&para;</a></h1>
-<p>The following list contains the plugins that are installed in <abbr title="Meta Programming System">MPS</abbr> 2021.1 and later by default:</p>
+<p>The following list contains the plugins that are installed in <abbr title="Meta Programming System">MPS</abbr> 2021.1 and later by default. The changes were collected on the 
+command line by executing: <code>diff -rq path1 path2</code></p>
 <h2 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://plugins.jetbrains.com/plugin/7078-mps-build-languages">mps-build</a>: <a href="https://www.jetbrains.com/help/mps/build-language.html">Build languages</a> (<em>jetbrains.mps.build</em>)</li>
@@ -1643,14 +1672,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>mps-kotlin: <abbr title="Meta Programming System">MPS</abbr> Kotlin implementation (<em>jetbrains.mps.kotlin</em>)</li>
 <li>mps-navbar: <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html#navigation-bar">navigation bar</a> that supports the <abbr title="Meta Programming System">MPS</abbr> model hierarchy (<em>jetbrains.mps.navbar</em>)</li>
 </ul>
-<p>TODO 2022.2, 2022.3</p>
+<h2 id="changes-in-20222">Changes in 2022.2<a class="headerlink" href="#changes-in-20222" title="Permanent link">&para;</a></h2>
+<p>No changes.</p>
+<h2 id="changes-in-20223">Changes in 2022.3<a class="headerlink" href="#changes-in-20223" title="Permanent link">&para;</a></h2>
+<ul>
+<li>vcs-git: Git support for IntelliJ products + <a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/git4idea/src/git4idea">git4idea</a> runtime classes</li>
+<li>vcs-github: GitHub support for IntelliJ products</li>
+<li>vcs-svn: SVN support for IntelliJ products + SQLite library</li>
+<li>Removed plugins: git4idea, github, settings-repository, svn4idea</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>
