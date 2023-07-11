@@ -316,11 +316,11 @@ nav:
     - Code Abbreviations: reference/code_abbreviations.md
     - Gitignore File: reference/gitignore.md
     - Issue Trackers: reference/issue_trackers.md
-  - Language Reference (WIP):
-    - language_reference/index.md
-    - org.iets3.core.expr.base: language_reference/org.iets3.core.expr.base.md
-    - org.iets3.core.expr.collections: language_reference/org.iets3.core.expr.collections.md
-    - org.iets3.core.expr.toplevel: language_reference/org.iets3.core.expr.toplevel.md
+    - Language Reference (WIP):
+      - language_reference/index.md
+      - org.iets3.core.expr.base: language_reference/org.iets3.core.expr.base.md
+      - org.iets3.core.expr.collections: language_reference/org.iets3.core.expr.collections.md
+      - org.iets3.core.expr.toplevel: language_reference/org.iets3.core.expr.toplevel.md
   - About:
     - Editing This Guide: about/editing_this_guide.md
     - Original Authors: about/original_authors.md
