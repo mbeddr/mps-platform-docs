@@ -164,9 +164,9 @@ or another team member does the testing.
     - [Best guidelines for bug reporting?](https://sqa.stackexchange.com/questions/1920/best-guidelines-for-bug-reporting)
     - [What is common practice for labels of the bug severity?](https://sqa.stackexchange.com/questions/7531/what-is-common-practice-for-labels-of-the-bug-severity)
     - [How to isolate a bug?](https://sqa.stackexchange.com/questions/3226/how-to-isolate-a-bug)
-    - [Who is ultimately responsible for issues that are found after software is released?](https://sqa.stackexchange.com/questions/893/who-is-ultimately-responsible-for-issues-that-are-found-after-software-is-releas)
+    - [Who is ultimately responsible for issues that are found after the software is released?](https://sqa.stackexchange.com/questions/893/who-is-ultimately-responsible-for-issues-that-are-found-after-software-is-releas)
     - [How should a Software Tester deal with missed Defects/bugs in Production?](https://sqa.stackexchange.com/questions/27622/how-should-a-software-tester-deal-with-missed-defects-bugs-in-production)
-    - [Should tester fix bugs?](https://sqa.stackexchange.com/questions/5194/should-tester-fix-bugs)
+    - [Should testers fix bugs?](https://sqa.stackexchange.com/questions/5194/should-tester-fix-bugs)
 
 === "For developers"
 
@@ -185,6 +185,6 @@ or another team member does the testing.
     - [Should Testers first discuss a bug with the developers before writing a bug report?](https://sqa.stackexchange.com/questions/16640/should-testers-first-discuss-a-bug-with-the-developers-before-writing-a-bug-repo)
     - [Should QA report bugs on features before they are fully implemented?](https://sqa.stackexchange.com/questions/16715/should-qa-report-bugs-on-features-before-they-are-fully-implemented)
     - [How does a tester decide how much debugging/investigation to do before handing an issue over to development?](https://sqa.stackexchange.com/questions/1610/how-does-a-tester-decide-how-much-debugging-investigation-to-do-before-handing-a)
-    - [How can a Software Tester use "Out of the Box" thinking approach to find more bugs?](https://sqa.stackexchange.com/questions/8156/how-can-a-software-tester-use-out-of-the-box-thinking-approach-to-find-more-bu)
+    - [How can a Software Tester use an "Out of the Box" thinking approach to find more bugs?](https://sqa.stackexchange.com/questions/8156/how-can-a-software-tester-use-out-of-the-box-thinking-approach-to-find-more-bu)
     - [Can knowing too much about the tested code be a disadvantage?](https://sqa.stackexchange.com/questions/33922/can-knowing-too-much-about-the-tested-code-be-a-disadvantage)
     - [Should QA or tester mention the root cause for a bug?](https://sqa.stackexchange.com/questions/27962/should-qa-or-tester-mention-the-root-cause-for-a-bug)

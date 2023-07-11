@@ -1,4 +1,4 @@
-    # [Debugging problems](https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems)
+# [Debugging problems](https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems)
 
 Different kinds of problems can occur in MPS. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., [accessing a project instance](accessing_the_project.md) from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces,  run code on the MSP console, or use [remote debugging](https://specificlanguages.com/articles/debugging/).
 

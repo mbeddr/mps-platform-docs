@@ -15,11 +15,11 @@ The selection is tailored to MPS developers.
 === "Advanced"
 
     - [Programming Principles](https://github.com/webpro/programming-principles)
-    - [hacker-laws](https://github.com/dwmkerr/hacker-laws): Laws, Theories, Principles and Patterns that developers will find useful.
+    - [hacker-laws](https://github.com/dwmkerr/hacker-laws): Laws, Theories, Principles, and Patterns that developers will find useful.
     - [Lessons Learned in Software Development](https://henrikwarne.com/2015/04/16/lessons-learned-in-software-development/)
     - [Things I Learnt The Hard Way](https://blog.juliobiason.me/thoughts/things-i-learnt-the-hard-way/)
     - [50 ideas that changed my life](https://perell.com/essay/50-ideas-that-changed-my-life/)
-    - [20 Things I’ve Learned in my 20 Years as a Software Engineer](https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/)
+    - [20 Things I’ve Learned in My 20 Years as a Software Engineer](https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/)
 
 ## [Falsehoods Programmers Believe in](https://github.com/kdeldycke/awesome-falsehood)
 
@@ -53,7 +53,7 @@ You might have to deal with one of the following topics when you develop a new f
     - [How do you keep from running into the same problems over and over?](https://softwareengineering.stackexchange.com/questions/19317/how-do-you-keep-from-running-into-the-same-problems-over-and-over)
     - [What is the most productive way to handle development-related failures?](https://softwareengineering.stackexchange.com/questions/23075/what-is-the-most-productive-way-to-handle-development-related-failures)
     - [Is there such a thing as Programmer's block?](https://softwareengineering.stackexchange.com/questions/34867/is-there-such-a-thing-as-programmers-block)
-    - [Stuck due to "knowing too much"](https://softwareengineering.stackexchange.com/questions/150549/stuck-due-to-knowing-too-much)
+    - [Stuck due to "knowing too much."](https://softwareengineering.stackexchange.com/questions/150549/stuck-due-to-knowing-too-much)
 
 === "Workflow"
 
@@ -84,9 +84,9 @@ You might have to deal with one of the following topics when you develop a new f
 === "Coworkers"
 
     - [How can I avoid coming across as condescending when telling a coworker I can't work on an issue right now?](https://interpersonal.stackexchange.com/questions/14824/how-can-i-avoid-coming-across-as-condescending-when-telling-a-coworker-i-cant-w)
-    - [How can I tactfully suggest improvements to others' badly designed code during review?](https://softwareengineering.stackexchange.com/questions/113593/how-can-i-tactfully-suggest-improvements-to-others-badly-designed-code-during-r)
+    - [How can I tactfully suggest improvements to others' badly designed code during a review?](https://softwareengineering.stackexchange.com/questions/113593/how-can-i-tactfully-suggest-improvements-to-others-badly-designed-code-during-r)
     - [Dealing with a person who continuously needs help](https://interpersonal.stackexchange.com/questions/3697/dealing-with-a-person-who-continuously-needs-help)
-    - [Best way to tell colleague that chat is not a channel for direct response?](https://interpersonal.stackexchange.com/questions/7265/best-way-to-tell-colleague-that-chat-is-not-a-channel-for-direct-response)
+    - [What is the best way to tell colleagues that chat is not a channel for a direct response?](https://interpersonal.stackexchange.com/questions/7265/best-way-to-tell-colleague-that-chat-is-not-a-channel-for-direct-response)
     - [How to stop someone from helping you?](https://interpersonal.stackexchange.com/questions/21372/how-to-stop-someone-from-helping-you)
 
 === "Programmers"
