@@ -58,7 +58,7 @@ features of the Groovy languages. If you want to use Kotlin instead, start with 
 
         - Ensure you authorize the PAT for the SSO org (warning: this resets when changing permissions!)
 
-    Next, you need to access this special token in your workflow yaml file, e.g.,:
+    Next, you need to access this special token in your workflow yaml file, for example:
 
     ```yaml
         name: Build and Test Languages

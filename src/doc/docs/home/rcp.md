@@ -55,13 +55,13 @@ RCP stands for Rich Client Platform. [Building standalone IDEs for your language
 
     It will place the platform in the folder *mps-platform* of the repository and is automatically imported into the IntelliJ project where you can read the sources and step into them when debugging.
 
-    If you're looking at an RCP: `build.number` and `build.txt` provide this information and more, e.g., `idea.platform.build.number=MPS—203.7717.56`.
+    If you're looking at an RCP: `build.number` and `build.txt` provide this information and more, for example, `idea.platform.build.number=MPS—203.7717.56`.
 
-    The platform version is part of the build information e.g., MPS—211.7442.1291
+    The platform version is part of the build information, for example, `MPS—211.7442.1291`.
 
-    To get the baseline version e.g., 211, programmatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
+    To get the baseline version, for example, 211, programmatically: `#!java ApplicationInfo.getInstance().getBuild().getBaselineVersion()`
 
-    To get the full version e.g., 211.7442.1291, programmatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
+    To get the full version, for example, 211.7442.1291, programmatically: `#!java ApplicationInfo.getInstance().getBuild().currentVersion().asString()`
 
 ??? question "How can you show a custom-implemented project view instead of the MPS logical view?"
     

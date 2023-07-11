@@ -111,7 +111,7 @@ Everything related to the make facet is in this folder.
 
 ### stub
 
-This folder contains all stub models provided by MPS, e.g., stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g., `java.util.List`), and all MPS-related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g., MPS.Core).
+This folder contains all stub models provided by MPS, for example, stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g., `java.util.List`), and all MPS-related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g., MPS.Core).
 
 ### tool
 

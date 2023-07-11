@@ -27,7 +27,7 @@ If you are still stuck with your problem, read [overcoming obstacles](overcoming
 
     Try [invalidating the cache](https://www.jetbrains.com/help/mps/invalidate-caches.html) and check what other non-MPS
     plugins you have installed. Some IntelliJ plugins that can be found on the marketplace can interfere with
-    MPS plugins, e.g., make the indexing break or throw errors because they expect a text editor and not the projectional
+    MPS plugins, for example, make the indexing break or throw errors because they expect a text editor and not the projectional
     editor from MPS. Firewalls and [proxies](https://www.jetbrains.com/help/mps/settings-http-proxy.html) could also affect MPS negatively.
 
 !!! failure "MPS cannot find languages/solutions."
@@ -40,7 +40,7 @@ If you are still stuck with your problem, read [overcoming obstacles](overcoming
 
     There could also be some other reasons:
 
-    - A wrong version of the platform is used, e.g., MPS-Extensions 2021.1 with MPS 2021.2. The major and minor versions have
+    - A wrong version of the platform is used, for example, MPS-Extensions 2021.1 with MPS 2021.2. The major and minor versions have
     to be the same. Bug fix versions (e.g., 2021.1.4) should be compatible with the major/minor version of the platform.
     In rare cases, there can be an incompatibility because a bugfix/feature was backported from a newer MPS version, and the change
     is a breaking change.

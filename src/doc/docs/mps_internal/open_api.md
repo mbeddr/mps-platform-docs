@@ -129,7 +129,7 @@ tags:
 
     Use `SRepository.saveAll()`.
 
-    For a single project, e.g., `ProjectHelper.getProjectRepository(project).saveAll();`
+    For a single project, for example, `ProjectHelper.getProjectRepository(project).saveAll();`
 
     For all opened projects, e.g.
     

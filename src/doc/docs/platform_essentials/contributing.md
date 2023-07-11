@@ -8,7 +8,7 @@ This guide shows how to contribute to one of the platforms. It takes {{ iets3() 
 
 1. Make sure that you have Git installed.
 2. Clone the repository: `git clone https://github.com/IETS3/iets3.opensource.git` or [Check out a project from a remote host](https://www.jetbrains.com/help/mps/set-up-a-git-repository.html#clone-repo) for the GUI way.
-3. Decide which branch you want to use as the template for the contribution. The README should list the supported MPS version. Older branches are named maintenance/mpsX, e.g., maintenance/mps20203. The main branch is the *master* branch.
+3. Decide which branch you want to use as the template for the contribution. The README should list the supported MPS version. Older branches are named maintenance/mpsX, for example, maintenance/mps20203. The main branch is the *master* branch.
 4. If you have already checked out the repository before, [fetch](https://www.jetbrains.com/help/mps/manage-branches.html#checkout-branch) all the changes from the remote repository.
 5. [Create a new branch from the selected branch](https://www.jetbrains.com/help/mps/manage-branches.html#create-branch-from-selected). Some common names are feature/X, bugfix/X, and refactoring/X, where X stands for a description of the branch and maybe the targeted MPS version, such as feature/my_feature_20211.
 6. [Push the changes](https://www.jetbrains.com/help/mps/commit-and-push-changes.html) to the repository. Editing the [repository history](https://www.jetbrains.com/help/mps/edit-project-history.html) is only allowed on your branch.

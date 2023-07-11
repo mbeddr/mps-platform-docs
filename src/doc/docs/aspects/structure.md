@@ -34,7 +34,7 @@ The structure aspect contains all the concept and interface declarations of a la
     BHDescriptor d = r.getBHDescriptor(concept/ClassConcept/);
     #print r.getMRO().calcLinearization(_SAbstractConcept.wrap(concept/ClassConcept/));
     ```
-    If you want to call a specific `#!java type()` implementation, you have just to cast the node to the corresponding concept and then call the method, e.g., `#!java myNode as MyITypeable.type()`
+    If you want to call a specific `#!java type()` implementation, you have just to cast the node to the corresponding concept and then call the method, for example, `#!java myNode as MyITypeable.type()`
 
 !!! question "How can you get the short node ID from the node ID and vice versa?"
 

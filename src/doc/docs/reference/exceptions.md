@@ -34,7 +34,7 @@ Here is some more information for exceptions that often occur in MPS:
 
 !!! warning "Cycle in extended language hierarchy."
 
-    The languages extend each other in a way that creates a cycle hierarchy, e.g., two languages extend each other.
+    The languages extend each other in a way that creates a cycle hierarchy, for example, two languages extend each other.
     Read the documentation section about [dependencies](https://www.jetbrains.com/help/mps/mps-dependencies.html). Use the [dependency analyzer](https://www.jetbrains.com/help/mps/dependencies-analyzer-analyze-model-dependencies.html) to understand the cycle better.
 
 !!! warning "Subconcepts for language x found, missing extends dependency."

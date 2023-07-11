@@ -118,7 +118,7 @@ An expert review is another general method of usability testing. Check [Nielsen'
 #### [Soak Testing](https://en.wikipedia.org/wiki/Soak_testing)
 
 - Does the memory consumption rise after longer use? (memory indicator in the lower right corner) Could there be a memory leak?
-- Are all models loaded into memory after some time? (memory indicator). Models are lazily loaded, which means that they are only loaded when they are needed. When all models are loaded, this indicates that the models are probably accessed by accident, e.g., through a global find usage search.
+- Are all models loaded into memory after some time? (memory indicator). Models are lazily loaded, which means that they are only loaded when they are needed. When all models are loaded, this indicates that the models are probably accessed by accident, for example, through a global find usage search.
 - Do suspicious messages appear in the [log file](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory), such as warnings about memory leaks or broken models?
 - Is memory released after some time, or are not needed objects never garbage collected? Read about Java JVM options on [this page](../mps_internal/index.md#:~:text=where%20can%20you%20find%20information%20about%20environment%2Fjvm%20variables%20that%20are%20set%20in%20mps%3F) if it doesn't happen.
 

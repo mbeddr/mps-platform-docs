@@ -32,7 +32,7 @@ The class EditorComponent implements the MPS editor. A few similar classes/inter
 [jetbrains.mps.openapi.editor.EditorComponent](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor%28MPS.Editor%2F%29%2F%7EEditorComponent) is the interface that provides the API for interacting with the editor component.
 [jetbrains.mps.nodeEditor.EditorComponent](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent) contains the actual implementation. It has some subclasses where only [jetbrains.mps.editor.HeadlessEditorComponent](http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F7398401354080376432)
 is interesting. Use this editor component in the headless mode. Create instances of this editor component
-to render the node tree as a projection-specific text, render the node tree as a picture, and call some editor-specific actions, e.g., substitute
+to render the node tree as a projection-specific text, render the node tree as a picture, and call some editor-specific actions, for example, substitute
 and other use cases ([source](http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F8425027850913231105)).
 
 When you initialize an editor component, you can provide an [editor configuration](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.configuration%28MPS.Editor%2F%29%2F%7EEditorConfiguration). The property *notifies* informs the editor component to send out
@@ -183,7 +183,7 @@ A selection contains the following information and methods:
 
  - The selection info (*getSelectionInfo()*) is persisted and is used to restore the selection when the editor is reopened.
  - Use *canExecuteAction* and *executeAction* to execute an action for the selected cells. The available actions are listed in the enum
-[CellActionType](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType). The different types are implemented as actions in plugin solutions, e.g., the action [SelectLocalHome](http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003) calls `#!java editorComponent.getSelectionManager().getSelection().executeAction(CellActionType.SELECT_LOCAL_HOME)`.
+[CellActionType](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType). The different types are implemented as actions in plugin solutions, for example, the action [SelectLocalHome](http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003) calls `#!java editorComponent.getSelectionManager().getSelection().executeAction(CellActionType.SELECT_LOCAL_HOME)`.
 
 A few built-in selections exist:
 

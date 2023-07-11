@@ -58,7 +58,7 @@ alias: generator_aspect
 !!! question "generation plan (in devkit) vs. generator priorities?"
 
     The generation plan is applied instead of the generator priorities. If your generator should be applied in a model using a generation plan, your generator has to be part of the generation plan.
-    When developing a language, which is used within an aspect, e.g., type system, the MPS aspect's generation plan can block the generator.
+    When developing a language, which is used within an aspect, for example, type system, the MPS aspect's generation plan can block the generator.
 
 ??? question "How can you use generated classes which implement an extension point?"
 
@@ -104,7 +104,7 @@ alias: generator_aspect
 
 !!! question "Can you access the output model in a property macro?"
 
-    > In reference macros in generators, I can use the provided *outputNode* parameter as an entry point into the output model of the current transformation and, e.g., use this to find the root node my generated reference will be contained in.
+    > In reference macros in generators, I can use the provided *outputNode* parameter as an entry point into the output model of the current transformation and, for example, use this to find the root node my generated reference will be contained in.
     > Can I do something similar in property macros? For those, there is no *outputNode*. I'd still like to find, for example, the node in my output model that my generated property belongs to. Is there a way to do that?
 
     {{ question_by('jonaskraemer') }}
@@ -156,7 +156,7 @@ alias: generator_aspect
 
 !!! hint "I want to create multiple outputs for a language.[^1]"
 
-    - You can use a non-root concept in your root mapping rule e.g., use the concept of the children in the root mapping rule. It will create multiple roots as long as the generated files have different names.
+    - You can use a non-root concept in your root mapping rule. For example, use the concept of the children in the root mapping rule. It will create multiple roots as long as the generated files have different names.
     - Use a preprocessing script to create new root nodes (maybe a new concept if necessary) for the children and create a root mapping rule for the newly introduced concept.
     - Use a dummy concept or a generation plan with a fork.
 
@@ -251,7 +251,7 @@ alias: generator_aspect
 
 !!! question "How can you preview the generated text programmatically?"
 
-    Use the MPS action [TextPreviewModel](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769) or call the methods in [TextGeneratorEngine](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine) if you want to use the text generator, e.g., `#!java TextGeneratorEngine.generateText(node)`
+    Use the MPS action [TextPreviewModel](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769) or call the methods in [TextGeneratorEngine](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine) if you want to use the text generator, for example, `#!java TextGeneratorEngine.generateText(node)`
 
 !!! question "How do you get the output path for a solution?"
 
@@ -274,7 +274,7 @@ alias: generator_aspect
     if (statusManager.generationRequired(model)) { /* ... */ } 
     ```
     
-    Unfortunately, it isn't reliable, e.g., when changing something in the model, the API behaves correctly in the first place. But after executing the *Synchronize* action, MPS believes that generation is not required anymore (even though the change would affect the output and *Synchronize* doesn't execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).
+    Unfortunately, it isn't reliable. For example, when changing something in the model, the API behaves correctly in the first place. But after executing the *Synchronize* action, MPS believes that generation is not required anymore (even though the change would affect the output and *Synchronize* doesn't execute the generation). This odd behavior can also be seen in the project view (note: this might be outdated information).
 
     {{ contribution_by('till-f') }}
 

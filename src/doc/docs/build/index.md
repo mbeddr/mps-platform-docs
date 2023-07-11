@@ -92,7 +92,7 @@ Modules have several models with dependencies. For example, for a language, the 
 
 MPS consists of hundreds of JAR files that must be on the classpath for the code generation and compilation, which leads to giant Ant scripts (with some thousand lines). Even simple MPS build scripts, which only use Base Language, result in big Ant scripts.
 
-The build layout in the MPS build script defines the packaging of your modules, e.g., as Zip files containing multiple plugins, as a simple plugin folder, as a lib folder with a flat list of JARs, etc.
+The build layout in the MPS build script defines the packaging of your modules, for example, as Zip files containing multiple plugins, as a simple plugin folder, as a lib folder with a flat list of JARs, etc.
 
 The Ant script needs to know the path to the local MPS installation and where your modules and dependencies are. This is usually done using folder macros in the MPS build script, generated as "properties" in the Ant script. This approach makes the build independent of your local machine, and you can execute the Ant script on the CI or any other machine.
 

@@ -19,7 +19,7 @@ The feedback aspect defines custom messages to show to the user when an error or
 
 !!! question "Can I use parameters such as the node or concept in the custom message? Can I add new parameters?"
 
-    Use the code completion in the show message part of the editor, e.g., `%concept`. New parameters can't be added because
+    Use the code completion in the show message part of the editor, for example, `%concept`. New parameters can't be added because
     they are hard coded.
 
 !!! question "Where can I find these messages in the MPS source code?"

@@ -9,7 +9,7 @@ When building [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, you must 
 ## Automatic Build
 
 1. `git clone git@github.com:mbeddr/mbeddr.core.git`
-2. Switch to the branch that you need, if it isn't the master branch e.g., MPS 2021.1.4: `git checkout maintenance/mps20211`
+2. Switch to the branch that you need, if it isn't the master branch, for example, MPS 2021.1.4: `git checkout maintenance/mps20211`
 3. If not also set, open MPS, go to preferences --> *Appearance&Behavior*-->*Path Variables*, and set *mbeddr.github.core.home* to the root directory of the mbeddr\.core repository.
 4. Run `./gradlew build_mbeddr -PdisableMavenLocal=true` to build mbeddr fully.
 5. Run `./gradlew -PdisableMavenLocal=true` instead to only build the platform.

@@ -215,7 +215,7 @@ The `relayout` method calculates the layout bounds based on a size constraint an
 - `relayout` is called if the size has changed.
 - `moveChildren` is called when the position has changed.
 
-When one of those two events has occurred but no layouter is present, *relayout* is called. The *getLayouter* method returns a suitable ILayouter based on the existing layout e.g., HorizontalLayout for CellLayout_Horizontal. If the cell or any of its superclasses overwrites the method *relayoutImpl*, *null* is returned.
+When one of those two events has occurred but no layouter is present, *relayout* is called. The *getLayouter* method returns a suitable ILayouter based on the existing layout, for example, HorizontalLayout for CellLayout_Horizontal. If the cell or any of its superclasses overwrites the method *relayoutImpl*, *null* is returned.
 
  The inner position and dimension methods are based on the box model's content box. The total gap is the content's position minus the margin's position. To switch between the outer and inner sizes, use the the methods *toInnerSize* and *toOuterSize*.  The ascent equals the children's ascent plus the total gap at the top. When the different sizes, like maximum, minimum, and preferred size, are calculated, the values are first looked up in the cache. If no value can be found, the sizes are guessed from the cached values: if the size was already smaller for a more strict constraint, that value is used. If there is still no value returned, the value is calculated.
 

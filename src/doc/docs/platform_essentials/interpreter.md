@@ -31,7 +31,7 @@ An evaluator consists of a left and right side: the left side is a concept that 
 ![evaluator of literals concept](literals_evaluator.png){width="600px"}
 
 The right side contains an expression or a block and must return a value. The *node* expression refers to the currently evaluated expression. A few expressions start with *#*. Their corresponding short descriptions explain them. Use the *#->* expression to call functions (search for usages globally).
-The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the *env* expression. Use this array to save values for other evaluators. The key must be a node. If you don't have a node, you can use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand, e.g., `"hello".startswith("he")`. `startswith()` is the operation, `"hello"` is the operand:
+The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the *env* expression. Use this array to save values for other evaluators. The key must be a node. If you don't have a node, you can use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand, for example, `"hello".startswith("he")`. `startswith()` is the operation, `"hello"` is the operand:
 
 ![evaluator of startswith concept](startswith_evaluator.png)
 

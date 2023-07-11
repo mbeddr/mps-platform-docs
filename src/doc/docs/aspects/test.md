@@ -34,7 +34,7 @@ tags:
 
 !!! question "How do you enter multiple words when using the *type* statement in an editor test?
 
-    Enter them as one long word without spaces in between, e.g., *publictransientclass*.
+    Enter them as one long word without spaces in between, for example, *publictransientclass*.
 
 !!! warning "How to know if some MPS code is inside a test?"
 
@@ -117,7 +117,7 @@ tags:
     - It is easy to be confused by that and draw false conclusions, especially when stepping through tests.
     - Whenever your code queries for the nodes of a model, be ready to see duplicates for each test (as in the *dataRef* example). You may test this by asserting that something is included or excluded instead of asserting true equality of the expected and actual lists.
     - Another source for duplicates is if the test model imports itself.
-    - If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. [jetbrains.mps.smodel.TestModelFactory](https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java) allows to do that, e.g., the [ModelListenerTest](https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java) uses that TestModelFactory. It is unfortunately not available as stubs, so you'll need to copy it to your project.
+    - If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. [jetbrains.mps.smodel.TestModelFactory](https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java) allows to do that, for example, the [ModelListenerTest](https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java) uses that TestModelFactory. It is unfortunately not available as stubs, so you'll need to copy it to your project.
 
      {{ contribution_by('abstraktor') }}
 

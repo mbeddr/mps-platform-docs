@@ -33,7 +33,7 @@ The following list shows some debugging tips:
     - JVM: *bin/mps.vmoptions* (RAM/Xmx, debugger port, …)
     - Log-level (Log4J): *bin/log.xml* 	
     - IDEA properties: *bin/idea.properties*: change default paths, advanced IDE settings
-- Log file: is stored in the logs folder, e.g., `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
+- Log file: is stored in the logs folder, for example, `Logs/<My-MPS-/My-RCP-Identifier>/idea.log`
 
 !!! question "How do I debug action maps?"
 

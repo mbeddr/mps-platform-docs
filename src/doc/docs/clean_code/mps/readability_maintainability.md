@@ -11,7 +11,7 @@ written by one person but has to be maintained by someone else. Understanding th
 especially if they don't follow any patterns and the code is (visually) hard to read.
 
 Maintaining code means dealing with technical debt, reducing it, and cleaning up the codebase periodically.
-That also means that sometimes code must be deprecated and removed after some time. Or it must be rewritten when it uses deprecated code, e.g.,
+That also means that sometimes code must be deprecated and removed after some time. Or it must be rewritten when it uses deprecated code, for example,
 after upgrading to a new MPS version. Neglecting those tasks makes maintaining the code more difficult in the future.
 
 ## Readability

@@ -147,7 +147,7 @@ The editor aspect defines the projectional editor of a concept.
 
     - Via an {{ mps_url("@mpsutil.EditorHintToggleAction") }} (e.g., in action declarations)
         - They are not visible in the push Editor hints menu.
-        - If you need the same behavior, e.g., in intentions, you can use code from there (via [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent))
+        - If you need the same behavior, for example, in intentions, you can use code from there (via [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent))
     - Set explicit hints for nodes and hints via {{ mps_url("@mpsutil.EditorHintToggleAction") }}.
       The usage of [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState) is not so obvious.
 
@@ -216,7 +216,7 @@ The editor aspect defines the projectional editor of a concept.
 
 !!! question "How can you hide a custom cell in the editor? (*show if* property)"
 
-    > Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, e.g., "show if." How can I hide a custom cell under a specific condition? (MPS-33195)
+    > Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, for example, "show if." How can I hide a custom cell under a specific condition? (MPS-33195)
 
     The meta-model allows specifying the *show if* property and other attributes on a custom cell, and the generator will generate the correct code for it. The editor for the inspector doesn't include it. You can use the reflective editor to specify the condition.
 

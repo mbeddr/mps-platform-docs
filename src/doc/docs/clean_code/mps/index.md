@@ -5,7 +5,7 @@ This document lists some recommendations for code written in MPS. For a general 
 
 - [Prefer composition over inheritance](https://specificlanguages.com/posts/prefer-composition-over-inheritance/){{ blog('sl') }}
 - Implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in concepts that should have a name. The name property will be returned when you call `node.getName()`. MPS uses the name in editor tabs, the logical view, as the default presentation for references and other places.
-- Use [isInstanceOf](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865) to check if a node is an instance of a concept instead of using the Java instanceof operator, e.g., `#!java node.isInstanceOf(IfStatement)`. Alternatively, use the `ifInstanceOf` statement to save the converted expression in a variable directly. For example:
+- Use [isInstanceOf](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865) to check if a node is an instance of a concept instead of using the Java instanceof operator, for example, `#!java node.isInstanceOf(IfStatement)`. Alternatively, use the `ifInstanceOf` statement to save the converted expression in a variable directly. For example:
  ```java 
   ifInstanceOf (node is IfStatement ifStatement) {
 
@@ -17,7 +17,7 @@ This document lists some recommendations for code written in MPS. For a general 
   list<string> listOfStrings = new linkedlist<string>(copy: new string[]{"ab", "ba", "aaaa"}); 
   #print listOfStrings.where({it => it.startsWith("a"); }).join(",");
   ```
-  For lists of nodes, there is the particular list type `nlist`, e.g., `#!java nlist<ClassConcept> classes = new nlist<ClassConcept>;`
+  For lists of nodes, there is the particular list type `nlist`, for example, `#!java nlist<ClassConcept> classes = new nlist<ClassConcept>;`
   [Choose the right collection](http://www.javapractices.com/topic/TopicAction.do?Id=65) for your task.
 - Use the [access language](https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage) instead of directly calling [ModelAccess](http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EModelAccess) methods.
   For example:
@@ -31,7 +31,7 @@ This document lists some recommendations for code written in MPS. For a general 
 - Don't try to use features in MPS at places that don't officially support them. Not supported means that the official documentation doesn't mention it, and you can access the feature only through hacks and workarounds. Examples:
     - invoking the generator in type system rules
     - UI code in the behavior aspect
-    - accessing the project instance in unsupported places, e.g., the generator
+    - accessing the project instance in unsupported places, for example, the generator
 - [Avoid strict node casts](https://specificlanguages.com/posts/2022-06/02-avoid-strict-node-casts/){{ blog('sl') }}
 - [Use Java Streams to Write Clean Java Code](https://sweetcode.io/use-java-streams-to-write-clean-java-code/). *Warning*: While streams
   can be helpful, consider using the [MPS collections language](https://www.jetbrains.com/help/mps/collections-language.html) for most cases. It

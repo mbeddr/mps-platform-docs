@@ -60,7 +60,7 @@ tags:
     Excerpt from MPS documentation:
     > MPS automatically saves changes that you make in your files. Various events trigger saving, such as compiling, running, debugging, performing version control operations, closing a file or a project, or quitting the IDE. Saving files can also be triggered by third-party plugins.
     
-    An external change could be done by accident, e.g., the project is on a shared drive, and someone else changes some files but not on purpose. You might also edit some MPS files with a different editor to fix some issues, so there must be the option to decide which version to use. The feature itself comes from the IntelliJ platform and is not MPS-specific:
+    An external change could be done by accident, for example, the project is on a shared drive, and someone else changes some files but not on purpose. You might also edit some MPS files with a different editor to fix some issues, so there must be the option to decide which version to use. The feature itself comes from the IntelliJ platform and is not MPS-specific:
     
     > If an external process changes a file that was opened and unsaved in IntelliJ IDEA, it results in two conflicting versions.
 

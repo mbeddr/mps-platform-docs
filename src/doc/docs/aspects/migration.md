@@ -47,7 +47,7 @@ tags:
 
 !!! question "How can you detect that migrations are running?"
 
-    > I have code that needs to know if migrations are currently executed, e.g., model listeners that update the model when a change by the user appears.
+    > I have code that needs to know if migrations are currently executed, for example, model listeners that update the model when a change by the user appears.
     
     > I would like to detect when migrations are executed to prevent this code from executing in the middle of a migration to prevent manipulating the model in an incomplete state during the migration.
 

@@ -24,7 +24,7 @@ This page explains typical MPS memory consumption and performance bottlenecks an
 - Often accessed data should be cached ([How to implement caching in Java](https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2))
 - Don't recalculate expensive calculations but rather save the results in variables.
 - Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance ([Big-O Cheat Sheet](https://www.bigocheatsheet.com/))
-- Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over, e.g., `model.roots(ClassConcept)` instead of
+- Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over, for example, `model.roots(ClassConcept)` instead of
  `model.nodes(<all>)`. `nodesIncludingImported()` can also create immense scopes. The same is true for searching in the console: avoid snippets such as `#nodes<scope = global>` should be avoided. For deep structures, `node.descendants` can also be expensive.
 - When using scopes, avoid using a [GlobalScope](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope). Try to also use the following snippets for filtering models that often shouldn't be searched because they are not indexed:
     - `#modules.where({~it => it.isPackaged() })`to filter out modules that are installed

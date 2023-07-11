@@ -48,4 +48,4 @@ Implement custom finders for discovering related nodes in this aspect.
     
     - `#!java module.isPackaged()` to check for installed languages/solutions/devkits
     - `#!java model.isReadOnly()` to check if a model allows updates
-    - `#!java SModelStereotype.isX()` to check if the model has a specific stereotype, e.g., the model is a test model
+    - `#!java SModelStereotype.isX()` to check if the model has a specific stereotype, for example, the model is a test model
