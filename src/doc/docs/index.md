@@ -19,7 +19,7 @@ Platform-specific instructions are indicated with an icon when possible. Long an
 
 If you have any suggestions, please write a comment at the bottom of the page or open an issue on GitHub.
 
-- Latest version: {{ mps_latest }} Minimum version in doc: {{ mps_author }}
+- MPS versions: {{ mps_minimum }} - {{ mps_maximum }} (the documentation is most of the time still true for newer versions)
 
 If you aren't already a member, consider joining MPS on :material-slack:[Slack](http://slack-mps.jetbrains.com/).
 

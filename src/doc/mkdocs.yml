@@ -48,8 +48,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-  mps_latest: MPS 2022.2
-  mps_author: MPS 2021.1.4
+  mps_minimum: 2021.1.4
+  mps_maximum: 2022.3
   analytics:
     provider: google
     property: G-3FEXS9GHRT
