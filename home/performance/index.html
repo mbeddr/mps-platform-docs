@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -665,7 +665,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    External files and tools
+    External Files and Tools
   </span>
   
 
@@ -705,7 +705,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    OS-specific bugs
+    OS-Specific Bugs
   </span>
   
 
@@ -745,7 +745,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Trouble shooting guide
+    Trouble Shooting Guide
   </span>
   
 
@@ -789,7 +789,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Overcoming obstacles
+    Overcoming Obstacles
   </span>
   
 
@@ -815,7 +815,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Visual guide
+    Visual Guide
   </span>
   
 
@@ -909,7 +909,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#model-pruning" class="md-nav__link">
-    Model pruning
+    Model Pruning
   </a>
   
 </li>
@@ -929,14 +929,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#big-roots-render-slowly" class="md-nav__link">
-    Big roots render slowly
+    Big Roots Render Slowly
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#long-running-checking-rules-on-big-roots" class="md-nav__link">
-    Long-running checking rules on big roots
+    Long-Running Checking Rules on Big Roots
   </a>
   
 </li>
@@ -948,7 +948,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#mps-extensions" class="md-nav__link">
-    MPS-Extensions
+    MPS Extensions
   </a>
   
 </li>
@@ -1158,7 +1158,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1262,7 +1262,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1362,7 +1362,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1616,7 +1616,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#model-pruning" class="md-nav__link">
-    Model pruning
+    Model Pruning
   </a>
   
 </li>
@@ -1636,14 +1636,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#big-roots-render-slowly" class="md-nav__link">
-    Big roots render slowly
+    Big Roots Render Slowly
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#long-running-checking-rules-on-big-roots" class="md-nav__link">
-    Long-running checking rules on big roots
+    Long-Running Checking Rules on Big Roots
   </a>
   
 </li>
@@ -1655,7 +1655,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#mps-extensions" class="md-nav__link">
-    MPS-Extensions
+    MPS Extensions
   </a>
   
 </li>
@@ -1706,94 +1706,80 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Performance</h1>
 
 <div class="admonition warning">
-<p class="admonition-title">This is a page about advanced topics. Please skip it if you are a beginner.</p>
+<p class="admonition-title">This page is about advanced topics. Please skip it if you are a beginner.</p>
 </div>
-<p>This page explains common bottlenecks regarding memory consumption and performance in <abbr title="Meta Programming System">MPS</abbr> in general and how to solve those problems.
-If you want to know about slow software in general (e.g. hardware-related slowness), read: <a href="https://www.inkandswitch.com/slow-software/">Slow Software | Ink &amp; Switch</a>.</p>
+<p>This page explains typical <abbr title="Meta Programming System">MPS</abbr> memory consumption and performance bottlenecks and how to solve those problems. If you want to know about slow software in general (e.g., hardware-related slowness), read <a href="https://www.inkandswitch.com/slow-software/">Slow Software | Ink &amp; Switch</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">How are expensive model traversals handled in <abbr title="Meta Programming System">MPS</abbr>?</p>
-<p>There is no <abbr title="Application Programming Interface">API</abbr> for indexing model traversal results (e.g. getParent(), getAncestors()) the way it is implemented in frameworks like Xtext.</p>
-<p>Find Usages of concepts is efficiently implemented though. There is a class<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager">FastNodeFinderManager</a> that is used internally which can efficiently return the list of instances of a concept for a model. The descendants of a concept are also cached in the <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache">ConceptDescendantsCache</a>.</p>
-<p>The indexing at startup collects <a href="https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java">some information</a> about <abbr title="Meta Programming System">MPS</abbr> models such as instances of concepts, imports and property values (used for the <a href="https://www.jetbrains.com/help/mps/find-text-in-project.html">Find Text in Node Properties</a> action). The <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">virtual files</a> that represent root nodes in the filesystem are probably also indexed.</p>
-<p>The initial indexing also integrates Base Language into the IntelliJ search functionality (<a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83">implementation in <abbr title="Meta Programming System">MPS</abbr></a>). When using <abbr title="Meta Programming System">MPS</abbr> as an IntelliJ plugin this should allow the normal search for <a href="https://www.jetbrains.com/help/idea/find-highlight-usages.html">usages</a> and maybe <a href="https://www.jetbrains.com/help/idea/structural-search-and-replace.html">structural search</a> to work with Base Language classes and interfaces.</p>
+<p>There is no <abbr title="Application Programming Interface">API</abbr> for indexing model traversal results (e.g., getParent(), getAncestors()) the way frameworks like Xtext implement it.</p>
+<p>The implementation of <em>Find usages</em> of concepts is efficient, though. The internal class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager">FastNodeFinderManager</a> can efficiently return the list of instances of a concept for a model. <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache">ConceptDescendantsCache</a> also caches the descendants of a concept.</p>
+<p>The startup indexing collects <a href="https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java">information</a> about <abbr title="Meta Programming System">MPS</abbr> models, such as instances of concepts, imports, and property values (used for the <a href="https://www.jetbrains.com/help/mps/find-text-in-project.html">Find Text in Node Properties</a> action). The <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">virtual files</a> representing root nodes in the filesystem are probably also indexed.</p>
+<p>The initial indexing also integrates Base Language into the IntelliJ search functionality (<a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83">implementation in <abbr title="Meta Programming System">MPS</abbr></a>). As an IntelliJ plugin, <abbr title="Meta Programming System">MPS</abbr> should allow the standard search for <a href="https://www.jetbrains.com/help/idea/find-highlight-usages.html">usages</a> and <a href="https://www.jetbrains.com/help/idea/structural-search-and-replace.html">structural search</a> to work with Base Language classes and interfaces.</p>
 </div>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
-<li>Do not invalidate the cache when restarting the project, if it isn&rsquo;t necessary. The reindexing can take a while for large projects.</li>
-<li><a href="Speeding up model checks with Scope Cache">Speeding up model checks with Scope Cache</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
+<li>Do not invalidate the cache when restarting the project if it isn't necessary. The reindexing can take a while for large projects.</li>
+<li><a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache">Speeding up model checks with Scope Cache</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
 <li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java</a>)</li>
-<li>Don&rsquo;t recalculate expensive calculations but rather save the results in variables.</li>
-<li>Different data structures have different time and space complexities. For example, selecting a different list implementation can have big improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
-<li>Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over e.g. <code>model.roots(ClassConcept)</code> instead of
- <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create huge scopes. The same is true for searching in the console: snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code>can also be expensive.</li>
-<li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope</a>. Try to also use the following snippets for filtering models that often shouldn&rsquo;t be searched because they are not indexed:<ul>
+<li>Don't recalculate expensive calculations but rather save the results in variables.</li>
+<li>Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
+<li>Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over, e.g., <code>model.roots(ClassConcept)</code> instead of
+ <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create immense scopes. The same is true for searching in the console: avoid snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code> can also be expensive.</li>
+<li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope</a>. Try to also use the following snippets for filtering models that often shouldn't be searched because they are not indexed:<ul>
 <li><code>#modules.where({~it =&gt; it.isPackaged() })</code>to filter <abbr title="output">out</abbr> modules that are installed</li>
 <li><code>#models.where({~it =&gt; TemporaryModels.isTemporary(it) })</code> to filter temporary models</li>
 </ul>
 </li>
-<li>Throwing exceptions and especially fatal errors that are shown in the lower right corner of the window are slow. Short
-  freezes before the errors are thrown are sometimes the result of that.</li>
+<li>Throwing exceptions and especially fatal errors shown in the window's lower right corner is slow. Short freezes before <abbr title="Meta Programming System">MPS</abbr> throws the errors are sometimes the result of that.</li>
 </ul>
 <h2 id="generator">Generator<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Disabling transient models through the button in the bottom right corner of the <abbr title="Meta Programming System">MPS</abbr> frame will increase generation performance significantly especially
-  in combination with the generator option <em>Apply transformations in place</em>.</p>
+<p>Disabling transient models through the button in the bottom right corner of the <abbr title="Meta Programming System">MPS</abbr> frame will increase generation performance significantly, especially with the generator option <em>Apply transformations in place</em>.</p>
 </li>
 <li>
-<p>TODO: add generator performance slides from the <abbr title="Meta Programming System">MPS</abbr> Meetup</p>
+<p>TODO: Add generator performance slides from the <abbr title="Meta Programming System">MPS</abbr> Meetup</p>
 </li>
 </ul>
-<h3 id="model-pruning">Model pruning<a class="headerlink" href="#model-pruning" title="Permanent link">&para;</a></h3>
-<p>Often, not all nodes have to be processed in the generator. We might have different build configurations where we are interested
-in only a subset of nodes, or we don&rsquo;t use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a> and
-need to copy nodes from different models to the current model. Sometimes additional information is attached to nodes. Such attributes
-or nodes don&rsquo;t have to be generated at all. Having too many nodes to be processed can have memory impacts as well as make the generator a lot slower.</p>
-<p>Model pruning can be achieved by using an allowlist or blocklist approach: either specify which nodes should be processed or which nodes
-shouldn&rsquo;t be processed. Both approaches can also be combined. The following simplified approach is one possible solution to achieve this:</p>
+<h3 id="model-pruning">Model Pruning<a class="headerlink" href="#model-pruning" title="Permanent link">&para;</a></h3>
+<p>Often, the generator doesn't have to process all nodes. You might have different build configurations where you are interested in only a subset of nodes or don't use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a>. You copy nodes from other models to the current model instead. Sometimes additional information is attached to nodes. <abbr title="Meta Programming System">MPS</abbr> doesn't have to generate such attributes or nodes. Having too many nodes to be processed can impact memory and slow the generator.</p>
+<p>You can achieve Model pruning using an allowlist or blocklist approach: specify which nodes should or shouldn’t be processed. Both approaches are combinable. The following simplified approach is one possible solution to achieve this:</p>
 <ol>
 <li>Collect all original root nodes: <code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">roots</span><span class="p">(</span><span class="o">&lt;</span><span class="n">all</span><span class="o">&gt;</span><span class="p">).</span><span class="na">select</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">genContext</span><span class="p">.</span><span class="na">get</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nf">for</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"></span></code></li>
-<li>Create a pruning condition that decides which nodes can be pruned and collect the other nodes (relevant nodes). You might also want to keep a list of relevant root concepts that shouldn&rsquo;t be pruned.</li>
-<li>Start from a specific node and iterate through its descendants and follow only the references that are allowed by the pruning condition. You might want to
-include also other nodes that are not reachable by reference that are still needed for the generation.</li>
-<li>Make copies of the roots of nodes that are relevant and shouldn&rsquo;t be pruned.</li>
+<li>Create a pruning condition that decides which nodes can be pruned and collect the other nodes (relevant nodes). Also, list pertinent root concepts the generator shouldn't prune.</li>
+<li>Start from a specific node, iterate through its descendants, and follow only the references allowed by the pruning condition. You should also include other nodes that the generator needs that are not reachable by reference.</li>
+<li>Make copies of the roots of nodes that are relevant, and the generator shouldn't prune.</li>
 <li>Iterate through the children of the copies. If a child is not a relevant node, detach it from its parent node.</li>
 <li>Clear the original content from the input model and add the relevant roots to the input model.</li>
 </ol>
 <h2 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h2>
-<h3 id="big-roots-render-slowly">Big roots render slowly<a class="headerlink" href="#big-roots-render-slowly" title="Permanent link">&para;</a></h3>
-<p>The initial rendering time increases with the size of the <abbr title="Abstract Syntax Tree">AST</abbr>. <abbr title="Meta Programming System">MPS</abbr> tries to cache parts of the editor once built and after the initial render it will only update the parts that require changes, but collecting the necessary dependency information to achieve this incrementality takes time.
-How big is too big? Thousands of descendants are going to take several seconds to render. Re-layouting the editor should therefore also not be invoked
-too often (manually or programmatically).</p>
+<h3 id="big-roots-render-slowly">Big Roots Render Slowly<a class="headerlink" href="#big-roots-render-slowly" title="Permanent link">&para;</a></h3>
+<p>The initial rendering time increases with the size of the <abbr title="Abstract Syntax Tree">AST</abbr>. <abbr title="Meta Programming System">MPS</abbr> tries to cache parts of the editor once built, and after the initial render, it will only update the cells that require changes, but collecting the necessary dependency information to achieve this incrementality takes time. How big is too big? Thousands of descendants are going to take several seconds to render. Calling the <em>relayout</em> method should be invoked sparingly (manually or programmatically).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
-<h3 id="long-running-checking-rules-on-big-roots">Long-running checking rules on big roots<a class="headerlink" href="#long-running-checking-rules-on-big-roots" title="Permanent link">&para;</a></h3>
-<p>When a root is displayed in the editor, checking rules are run in the background. The background checker can be interrupted between rules but not during the execution of a rule. When checking rules are too expensive for live checking set the flag <em>do not apply on the fly</em> to true.
-Type system calculations are cached by default but can also impact performance when they have to be recalculated too often. </p>
+<h3 id="long-running-checking-rules-on-big-roots">Long-Running Checking Rules on Big Roots<a class="headerlink" href="#long-running-checking-rules-on-big-roots" title="Permanent link">&para;</a></h3>
+<p>When the editor displays a root node, checking rules are run in the background. The background checker can be interrupted between rules rather than during the execution of them. When checking rules are too expensive for live checking, set the flag <em>do not apply on the fly</em> to true.
+The Type system caches calculations by default, which can also impact performance when recalculated too often. </p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
-<h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
+<h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in node attributes. That means
- that auto re-layouting the diagram creates a lot of changes in the <abbr title="difference">diff</abbr> view for this root node. The auto-layouting can be influenced through
- an option in the editor&rsquo;s definition of the diagram.</li>
-<li>Tables and diagrams disable incremental rendering. That means that the editor will not be updated incrementally causing a full update on each typed character.
-  This might also affect the type-system calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
-<li>Using horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>) will cause a top-down layout algorithm to be activated for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> re-layout and is also called more often for some reason, slowing down the incremental editor update.</li>
+<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in node attributes. That means that automatically laying <abbr title="output">out</abbr> the diagram causes a lot of changes in the <abbr title="difference">diff</abbr> view for this root node.. An option in the editor's diagram definition can influence auto layouting.</li>
+<li>Tables and diagrams turn off incremental rendering. That means the editor will not be updated incrementally, causing a full update on each typed character. It might also affect the type system calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
+<li>When you use horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>), a top-down layout algorithm activates for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> re-layout, slowing down the incremental editor update.</li>
 </ul>
 <h2 id="kernelf">KernelF<a class="headerlink" href="#kernelf" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <a href="http://localhost:8000/mps-platform-docs/platform_essentials/interpreter/#code-coverage">code coverage collection</a> is global. That means that you either
+<li>The <a href="http://localhost:8000/mps-platform-docs/platform_essentials/interpreter/#code-coverage">code coverage collection</a> is global. That means you either
 have to empty it after some time with <code>DefaultCoverageAnalyzer.reset()</code> or start the interpreter without coverage. The class
 <a href="http://127.0.0.1:63320/node?ref=r%3A83e946de-2a7f-4a4c-b3c9-4f671aa7f2db%28org.iets3.core.expr.base.behavior%29%2F4065005624681052837">IETS3ExprEvalHelper</a> has methods for evaluating nodes with and without coverage.</li>
-<li>The <a href="http://mbeddr.com/interpreter/Interpreter.html">interpreter</a> framework can be slow when the interpreter is invoked often.
-  There might be <a href="https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/">faster alternatives</a> that are currently not
- implemented though.</li>
+<li>The <a href="http://mbeddr.com/interpreter/Interpreter.html">interpreter</a> framework can be slow when you invoke the interpreter often.
+  There may be <a href="https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/">faster alternatives</a> that are currently not
+ implemented.</li>
 </ul>
 <h2 id="startup">Startup<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h2>
-<p>The startup of <abbr title="Meta Programming System">MPS</abbr> can be analyzed with a standard Java profiler such as <a href="https://www.yourkit.com/">YourKit</a>. For IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">components</a>, <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">services</a> and <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">extensions</a>,
+<p>You can analyze <abbr title="Meta Programming System">MPS</abbr>'s startup with a standard Java profiler like <a href="https://www.yourkit.com/">YourKit</a>. For IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">components</a>, <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">services</a>, and <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">extensions</a>,
 it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">IntelliJ Report Analyzer</a>. Click on the button
-<em>Get from running instance</em> to fetch the data from the opened <abbr title="Meta Programming System">MPS</abbr> instance. Make sure that the <em>productCode</em> in the left textarea
-says <em><abbr title="Meta Programming System">MPS</abbr></em> because other IntelliJ IDEs such as IntelliJ IDEA uses the same port.</p>
+<em>Get from running instance</em> to fetch the data from the opened <abbr title="Meta Programming System">MPS</abbr> instance. Ensure that the <em>productCode</em> in the left text area says <em><abbr title="Meta Programming System">MPS</abbr></em> because other IntelliJ IDEs, such as IntelliJ IDEA, use the same port.</p>
 <p><a class="glightbox" href="../../img/home/intellij_report_analyzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IntelliJ report analyzer" src="../../img/home/intellij_report_analyzer.png" width="600px" /></a></p>
 <h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <p>If you are interested in internal performance-related topics about Java and its compiler, you might find the following articles helpful:</p>
@@ -1810,7 +1796,7 @@ says <em><abbr title="Meta Programming System">MPS</abbr></em> because other Int
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

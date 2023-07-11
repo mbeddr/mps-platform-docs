@@ -26,7 +26,7 @@
     
     
       
-        <title>Java style guide - MPS Platform Docs</title>
+        <title>Java Style Guide - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Java style guide
+              Java Style Guide
             
           </span>
         </div>
@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -356,7 +356,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -873,7 +873,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -978,7 +978,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -993,7 +993,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Clean code
+            Clean Code
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1009,7 +1009,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Readability/maintainability
+    Readability/Maintainability
   </span>
   
 
@@ -1105,7 +1105,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Programming principles
+    Programming Principles
   </span>
   
 
@@ -1132,7 +1132,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Java style guide
+    Java Style Guide
   </span>
   
 
@@ -1412,33 +1412,33 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Java style guide</h1>
+  <h1>Java Style Guide</h1>
 
 <p>These are some points taken from the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> that make sense in <abbr title="Meta Programming System">MPS</abbr>.</p>
 <ul>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: write a comment why a fall-through is necessary in a switch statement.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Default case is present</a>: always write a default case for switch statements.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: identifiers use only ASCII letters and digits, and, in a few cases noted below, underscores. Don&rsquo;t use prefixes or suffixes with particular meanings. For example, these names don&rsquo;t adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em>, and <em>kName</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names</a>: package names are all lowercase, with consecutive words concatenated together (no underscores). For example, <em><abbr title="commercial/common/communication">com</abbr>.example.deepspace</em>, not <em><abbr title="commercial/common/communication">com</abbr>.example.deepSpace</em> or <em><abbr title="commercial/common/communication">com</abbr>.example.deep_space</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases. For example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>), but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they&rsquo;re testing, and end with Test. For example, <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases. For example: <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, for example <em>pop_emptyStack</em>. No correct way exists for naming test methods.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names</a>: use all uppercase letters, with each word separated from the next by a single underscore</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases. For example, <em>computedValues</em> or <em>index</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names</a> should be <em>lowerCamelCase</em>. One-character parameter names in public methods should be avoided.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names</a> should be in lowerCamelCase. Even when final and immutable, local variables are not considered to be constants, and should not be styled as constants.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names</a>: each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>) or a name in the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: Write a comment on why a fall-through is necessary inside a switch statement.</li>
+<li>The <a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">default case is present</a>: Always write a default case for switch statements.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: Identifiers use only ASCII letters and digits and, in a few cases noted below, underscores. Don't use prefixes or suffixes with particular meanings. For example, these names don't adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em>, and <em>kName</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names</a> are all lowercase, with consecutive words concatenated together (no underscores). For example, <em><abbr title="commercial/common/communication">com</abbr>.example.deepspace</em>, not <em><abbr title="commercial/common/communication">com</abbr>.example.deepSpace</em> or <em><abbr title="commercial/common/communication">com</abbr>.example.deep_space</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases, e.g., <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>) but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they're testing and end with Test, e.g., <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases, e.g., <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, e.g., <em>pop_emptyStack</em>. No correct way exists for naming test methods.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names</a>: Use all uppercase letters, with each word separated from the next by a single underscore</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: Non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases, e.g., <em>computedValues</em> or <em>index</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names</a> should be <em>lowerCamelCase</em>. Avoid one-character parameter names in public methods.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names</a> should be in lowerCamelCase. Even when final and immutable, local variables are not considered constants, and you should not style them as constants.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names</a>: Each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>), or a name in the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
 <li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Camel case: defined</a>: tutorial on how to write camelcase</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don&rsquo;t ignore caught exceptions</a>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don't ignore caught exceptions</a>
   (see also: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=16">Avoid empty catch blocks</a>)</li>
 </ul>
-<p>Additional Hava practices can be found at <a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr></a>.</p>
+<p><a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr></a> contains additional java practices.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1584,7 +1584,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../programming_principles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programming principles" rel="prev">
+          <a href="../programming_principles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programming Principles" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1594,20 +1594,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                 Previous
               </span>
               <div class="md-ellipsis">
-                Programming principles
+                Programming Principles
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../patterns/language_design/" class="md-footer__link md-footer__link--next" aria-label="Next: Language design" rel="next">
+          <a href="../../../patterns/language_design/" class="md-footer__link md-footer__link--next" aria-label="Next: Language Design" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Language design
+                Language Design
               </div>
             </div>
             <div class="md-footer__button md-icon">

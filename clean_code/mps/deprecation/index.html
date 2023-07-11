@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -356,7 +356,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -873,7 +873,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -978,7 +978,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -993,7 +993,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Clean code
+            Clean Code
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1009,7 +1009,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Readability/maintainability
+    Readability/Maintainability
   </span>
   
 
@@ -1357,19 +1357,19 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Deprecation</h1>
 
 <ul>
-<li>Don&rsquo;t use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>).</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532">node/myNode</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413">node-<abbr title="pointer">ptr</abbr></a>(myNode).resolve(repository) instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698">model/myModel</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879">model-<abbr title="pointer">ptr</abbr></a>(myModel).resolve(repository) instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969021681">module/myModule</a> or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969069898">language-module</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1678062499342629858">module-reference/myModule</a> instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1226359078165">linkNode/concept:link/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474301421077">link:concept:link/</a> instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1172424058054">conceptNode/concept/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474300074836">concept/concept/</a> instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1140133623887">node.delete</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1228341669568">node.detach</a> instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1960721196051541146">node.containingRole</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7504436213544206332">node.getContainmentLink</a> instead.</li>
-<li>Don&rsquo;t use interface the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819">IDon&rsquo;tSubstituteByDefault</a>. Create an empty default substitute menu for the concept instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208">print</a>, <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="w"></span></code> or <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="w"></span></code> for logging. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">log</a> for low-level logging or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325">message</a> for high-level logging instead.</li>
+<li>Don't use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>).</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532">node/myNode</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413">node-<abbr title="pointer">ptr</abbr></a>(myNode).resolve(repository) instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698">model/myModel</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879">model-<abbr title="pointer">ptr</abbr></a>(myModel).resolve(repository) instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969021681">module/myModule</a> or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969069898">language-module</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1678062499342629858">module-reference/myModule</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1226359078165">linkNode/concept:link/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474301421077">link:concept:link/</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1172424058054">conceptNode/concept/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474300074836">concept/concept/</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1140133623887">node.delete</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1228341669568">node.detach</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1960721196051541146">node.containingRole</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7504436213544206332">node.getContainmentLink</a> instead.</li>
+<li>Don't use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819">IDon'tSubstituteByDefault</a>. Create an empty default substitute menu for the concept instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208">print</a>, <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="w"></span></code> or <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="w"></span></code> for logging. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">log</a> for low-level logging or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325">message</a> for high-level logging instead.</li>
 <li>Use the explicit presentation of a node when used in a string. For example: <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">getPresentation</span><span class="p">()</span><span class="w"></span></code> instead of <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="w"></span></code>.</li>
-<li>Don&rsquo;t use counter variables in LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> in the code instead.</li>
-<li>Don&rsquo;t use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more <abbr title="information">info</abbr> in the attached comment of the interface.</li>
+<li>Don't use counter variables in LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> in the code instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more <abbr title="information">info</abbr> in the attached comment on the interface.</li>
 <li>Avoid getting the repository from the opened project or using the global repository. The code might break in the future.</li>
 </ul>
 
@@ -1378,7 +1378,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1524,7 +1524,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../readability_maintainability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Readability/maintainability" rel="prev">
+          <a href="../readability_maintainability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Readability/Maintainability" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1534,7 +1534,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                 Previous
               </span>
               <div class="md-ellipsis">
-                Readability/maintainability
+                Readability/Maintainability
               </div>
             </div>
           </a>

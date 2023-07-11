@@ -26,7 +26,7 @@
     
     
       
-        <title>Migration aspect - MPS Platform Docs</title>
+        <title>Migration Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration aspect
+              Migration Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1106,7 +1106,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1148,7 +1148,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1262,7 +1262,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1366,7 +1366,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1466,7 +1466,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1750,7 +1750,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="migration-aspect">Migration aspect<a class="headerlink" href="#migration-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="migration-aspect">Migration Aspect<a class="headerlink" href="#migration-aspect" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>To nicely support language evolution, migrations automatically upgrade client code to use the latest version of a language or multiple languages.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
@@ -1758,47 +1758,47 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/migrations.html">official documentation</a></li>
 <li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d"><abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON’Ts</a>(languageengineering.io)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/">Preparing migrations with Git rebase</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/02-checking-for-pending-">Checking for pending migrations</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/">Preparing migrations with Git rebase</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/02-checking-for-pending-">Checking for pending migrations</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do I search for instances of a deprecated concept?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/">Migrations: Searching for instances</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/">Migrations: Searching for instances</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I remove migrations?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/21-removing-migrations/">Removing migrations</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/21-removing-migrations/">Removing migrations</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">I want to migrate an <abbr title="Meta Programming System">MPS</abbr> project that&rsquo;s many years old. How do you do that?</p>
-<p>First of all, make sure that you don&rsquo;t skip too many <abbr title="Meta Programming System">MPS</abbr> versions, otherwise the migration won&rsquo;t succeed. For old projects, you have to edit the module files manually because the structure slightly changed. Open the .mpl files in a text editor
+<p class="admonition-title">I want to migrate an <abbr title="Meta Programming System">MPS</abbr> project that's many years old. How do you do that?</p>
+<p>First of all, make sure that you don't skip too many <abbr title="Meta Programming System">MPS</abbr> versions; otherwise, the migration won't succeed. For old projects, you have to edit the module files manually because the structure slightly changed. Open the .mpl files in a text editor
 and change all occurrences of <code>&lt;language id="%ID" fqName="%FQNAME" version="%VERSION" /&gt;</code> into 
 <code>&lt;language slang="l:%ID:%FQNAME" version="%VERSION" /&gt;</code>. </p>
-<p>The next step is to start the migration assistant. It will fail because it can&rsquo;t find migrations for some language versions.
-For example <ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor</ins> only has a migration starting with version 7. You have to find all occurrences
+<p>The next step is to start the migration assistant. It will fail because it can't find migrations for some language versions.
+For example, <ins>jetbrains.mps.<abbr title="language">lang</abbr>.editor</ins> only has a migration starting with version 7. You have to find all occurrences
 of this language in your project with a text editor and change the attribute version to 7. Then run the migration assistant again and hope that everything
-works. Some concepts cannot be migrated automatically such as the substitute and transformation menus. There will also be other issues that have to be fixed manually.</p>
+works. Some concepts cannot be migrated automatically, such as the substitute and transformation menus. There will also be other issues that have to be fixed manually.</p>
 </div>
 <div class="admonition hint">
-<p class="admonition-title">I want to replace node <em>A</em> with another node <em>B</em> where <em>A</em> and <em>B</em> share the same super concept.</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime</a>. This class can be used to set/unset property or replace nodes with other ones.
+<p class="admonition-title">I want to replace node <em>A</em> with another node <em>B</em> where <em>A</em> and <em>B</em> share the same super-concept.</p>
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime</a>. This class can be used to set/unset properties or replace nodes with other ones.
 Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentConfigRef/)</code></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Are there any best practices about feature branches and language migrations?</p>
+<p class="admonition-title">Are there any best practices for feature branches and language migrations?</p>
 <ul>
-<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d">languageengineering.io: <abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON&rsquo;Ts</a></li>
+<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d">languageengineering.io: <abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON'Ts</a></li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you detect that migrations are running?</p>
 <blockquote>
-<p>I have code that needs to know if migrations are currently executed e.g. model listeners that update the model when a change by the user appears.</p>
+<p>I have code that needs to know if migrations are currently executed, e.g., model listeners that update the model when a change by the user appears.</p>
 <p>I would like to detect when migrations are executed to prevent this code from executing in the middle of a migration to prevent manipulating the model in an incomplete state during the migration.</p>
 </blockquote>
 <p><code class="highlight"><span class="n">PersistenceRegistry</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">isFastSearch</span><span class="p">()</span><span class="w"></span></code> returns <code>false</code> while migrations are running. You can check it in the model lister:</p>
@@ -1817,7 +1817,7 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 <sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you find all references to a specified root node and change these references, so they point to another root node?</p>
+<p class="admonition-title">How can you find all references to a specified root node and change these references so they point to another root node?</p>
 <p>Search through the methods in <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime</a>.</p>
 <p>Example with finders:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1836,31 +1836,31 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What are module versions and how/why can other modules depend on modules with different version then the current module version?</p>
+<p class="admonition-title">What are module versions, and how/why can other modules depend on modules with different versions than the current module version?</p>
 <p>You start with language and module version 0.
 Reasons why the language version of a language updates:</p>
 <ul>
-<li>a new migration was added manually
--you&rsquo;ve executed the action &ldquo;Correct Language Version&rdquo;</li>
-<li>you&rsquo;ve set it manually in the module properties</li>
-<li>a concept was moved to a different language through the refactoring menu and a migration script was written</li>
+<li>A new migration was added manually.</li>
+<li>You've executed the action "Correct Language Version."</li>
+<li>You've set it manually in the module properties.</li>
+<li>A concept was moved to a different language through the refactoring menu, and a migration script was written.</li>
 </ul>
 <p>Reasons why the module version of a language updates:</p>
 <ul>
-<li>you&rsquo;ve set it manually in the module properties</li>
-<li>a concept/property/link was moved to a different language through the refactoring menu and a refactoring log was written</li>
+<li>You've set it manually in the module properties.</li>
+<li>A concept/property/link was moved to a different language through the refactoring menu, and a refactoring log was written.</li>
 </ul>
-<p>Reason why both versions don&rsquo;t update:</p>
+<p>Reasons why both versions don't update:</p>
 <ul>
-<li>the language was renamed</li>
-<li>nodes/models are moved to a different solution</li>
+<li>The language was renamed.</li>
+<li>Nodes/models are moved to a different solution.</li>
 </ul>
-<p>The module version of a solution can&rsquo;t change automatically. I also don&rsquo;t know why you would change it manually. Devkits don&rsquo;t even have the option to change the module version.
-A good example for a language with different language and module versions is <ins>jetbrains.mps.<abbr title="language">lang</abbr>.feedback.problem.scopes</ins> (language: 0, module: 1) because it only has a refactoring step but no other migrations.</p>
+<p>The module version of a solution can't change automatically. I also don't know why you would change it manually. Devkits don't even have the option to change the module version.
+A good example of a language with different language and module versions is <ins>jetbrains.mps.<abbr title="language">lang</abbr>.feedback.problem.scopes</ins> (language: 0, module: 1) because it only has a refactoring step but no other migrations.</p>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <div class="admonition failure">
 <p class="admonition-title">When creating root nodes as part of language migration via <em>java model.add root(someRoot)</em>, it throws the exception <em>UnsupportedOperationException</em>.</p>
@@ -1880,7 +1880,7 @@ A good example for a language with different language and module versions is <in
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

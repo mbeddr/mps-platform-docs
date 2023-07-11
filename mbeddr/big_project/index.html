@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -876,7 +876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -965,7 +965,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Building Mbeddr locally
+    Building Mbeddr Locally
   </span>
   
 
@@ -1051,7 +1051,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Mbeddr Doc documentation
+    Mbeddr Doc Documentation
   </span>
   
 
@@ -1110,21 +1110,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#new-usage" class="md-nav__link">
-    New usage
+    New Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#old-usage" class="md-nav__link">
-    Old usage
+    Old Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
-    Next steps
+    Next Steps
   </a>
   
 </li>
@@ -1148,7 +1148,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Development guide
+    Development Guide
   </span>
   
     
@@ -1175,7 +1175,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Miscellaneous topics
+    Miscellaneous Topics
   </span>
   
     
@@ -1231,7 +1231,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1470,21 +1470,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#new-usage" class="md-nav__link">
-    New usage
+    New Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#old-usage" class="md-nav__link">
-    Old usage
+    Old Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
-    Next steps
+    Next Steps
   </a>
   
 </li>
@@ -1528,21 +1528,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>BigProject</h1>
 
 <p>If you have introduced a migration to mbeddr and need to execute it, you need to execute it on all <abbr title="Meta Programming System">MPS</abbr> projects contained in mbeddr.
-Otherwise, migrations pop up for other people who work on other parts of mbeddr. This is an unclean workflow.
+Otherwise, migrations pop up for people working on other parts of mbeddr. This workflow would be unclean.
 To avoid this, you could open all the projects in <code>mbeddr.core\code\languages</code> individually and run the migration wizard, but this is tedious.
-A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in the individual projects, thus you can run a migration once that executes on all these modules.</p>
-<h2 id="new-usage">New usage<a class="headerlink" href="#new-usage" title="Permanent link">&para;</a></h2>
+A better approach is to use the BigProject contained in the mbeddr repository. This project loads all languages and solutions available in individual projects. Thus you can run a migration once that executes on all these modules.</p>
+<h2 id="new-usage">New Usage<a class="headerlink" href="#new-usage" title="Permanent link">&para;</a></h2>
 <ul>
 <li>From the command line: run <code>gradlew.bat :BigProject:run</code> or <code>./gradlew :BigProject:run</code> from the Git checkout root.</li>
-<li>From IntelliJ IDEA: open the Git checkout root as a (Gradle) project in IDEA and run Generate Big Project run configuration.</li>
+<li>From IntelliJ IDEA: Open the Git checkout root as a (Gradle) project in IDEA and run Generate Big Project run configuration.</li>
 </ul>
-<h2 id="old-usage">Old usage<a class="headerlink" href="#old-usage" title="Permanent link">&para;</a></h2>
+<h2 id="old-usage">Old Usage<a class="headerlink" href="#old-usage" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Open project <code>mbeddr.core\tools\BigProject</code> with IntelliJ IDEA community edition.</li>
-<li>In Idea click in the menu on <em>Run</em> &rarr; <em>Run BigProjectGenerator</em>.<ol>
-<li>If an SDK isn&rsquo;t configured, follow the error message in the bottom right corner or via project settings and select a Java 11 SDK that&rsquo;s installed on your system.</li>
+<li>In IntelliJ IDEA, click in the menu on <em>Run</em> &rarr; <em>Run BigProjectGenerator</em>.<ol>
+<li>If you didn't configure an SDK, follow the error message in the bottom right corner or via project settings and select a Java 11/17 SDK (depending on the <abbr title="Meta Programming System">MPS</abbr> version) installed on your system.</li>
 <li>Use <em>default</em> for the project language level.</li>
-<li>If a project compiler output path isn&rsquo;t configured, set it to <code>mbeddr.core\tmp\BigProject</code>.</li>
+<li>If you didn't configure a project compiler output path, set it to <code>mbeddr.core/tmp/BigProject</code>.</li>
 <li>Close and open the project again to run the project generator.</li>
 </ol>
 </li>
@@ -1556,11 +1556,11 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a> Devkits: 22
 </code></pre></div></td></tr></table></div></li>
 </ol>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Open project <code>mbeddr.core\tools\BigProject</code> with <abbr title="Meta Programming System">MPS</abbr>.</li>
-<li>When the migration wizard starts automatically, execute migrations, otherwise<ol>
-<li>Check for the popup <em>Migration suspended</em> in the right bottom corner. It tells you, which languages aren&rsquo;t built /deployed.</li>
+<li>When the migration wizard starts automatically, execute migrations, otherwise:<ol>
+<li>Check for the popup <em>Migration suspended</em> in the bottom right corner. It tells you which languages need to be built/deployed.</li>
 <li>Build or rebuild all languages in that list. Usually, <abbr title="Meta Programming System">MPS</abbr> must build all languages and a set of solutions for the wizard to start automatically.</li>
 </ol>
 </li>
@@ -1571,7 +1571,7 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1713,7 +1713,7 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../platform_essentials/mpsutils/deprecated/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deprecated languages and solutions" rel="prev">
+          <a href="../../platform_essentials/mpsutils/deprecated/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deprecated Languages and Solutions" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1723,20 +1723,20 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
                 Previous
               </span>
               <div class="md-ellipsis">
-                Deprecated languages and solutions
+                Deprecated Languages and Solutions
               </div>
             </div>
           </a>
         
         
           
-          <a href="../development_guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Development guide" rel="next">
+          <a href="../development_guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Development Guide" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Development guide
+                Development Guide
               </div>
             </div>
             <div class="md-footer__button md-icon">

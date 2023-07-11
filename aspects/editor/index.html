@@ -26,7 +26,7 @@
     
     
       
-        <title>Editor aspect - MPS Platform Docs</title>
+        <title>Editor Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Editor aspect
+              Editor Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -776,7 +776,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#editor-declaration" class="md-nav__link">
-    Editor declaration
+    Editor Declaration
   </a>
   
 </li>
@@ -790,7 +790,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#other-ui-components" class="md-nav__link">
-    Other UI components
+    Other UI Components
   </a>
   
 </li>
@@ -1141,7 +1141,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1183,7 +1183,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1297,7 +1297,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1401,7 +1401,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1501,7 +1501,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1763,7 +1763,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#editor-declaration" class="md-nav__link">
-    Editor declaration
+    Editor Declaration
   </a>
   
 </li>
@@ -1777,7 +1777,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#other-ui-components" class="md-nav__link">
-    Other UI components
+    Other UI Components
   </a>
   
 </li>
@@ -1820,7 +1820,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="editor-aspect">Editor aspect<a class="headerlink" href="#editor-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="editor-aspect">Editor Aspect<a class="headerlink" href="#editor-aspect" title="Permanent link">&para;</a></h1>
 <p>The editor aspect defines the projectional editor of a concept.</p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/editor.html">official documentation</a></li>
@@ -1829,52 +1829,52 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">What happens when you press <span class="keys"><kbd class="key-f5">F5</kbd></span> in the editor?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
 <p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script</a> that can remove properties.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Is there a way to prevent users from adding and removing elements in a list in the <abbr title="Meta Programming System">MPS</abbr> editor? The elements in the list should still be editable, but adding/removing shouldn&rsquo;t be allowed?</p>
-<p>There are 2 solutions:</p>
+<p class="admonition-title">Is there a way to prevent users from adding and removing elements in a list in the <abbr title="Meta Programming System">MPS</abbr> editor? The elements in the list should still be editable, but adding/removing shouldn't be allowed.</p>
+<p>There are two solutions:</p>
 <ol>
 <li>Use a query list with empty insert/delete handlers.</li>
 <li>Create an action map/inline action cell with empty blocks for the actions <code>INSERT</code> and <code>INSERT_BEFORE</code>.</li>
 </ol>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I&rsquo;ve set a color of type java.awt.Color in a style property query but the color is different when using the Darcula theme.</p>
-<p>The return type of those functions indicates that the return type is <code>java.awt.Color</code> but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid this mappings is to use custom factories. More <abbr title="information">info</abbr> about theme-dependent colors can be found 
-<a href="../../patterns/user_experience/#dark-theme">here</a>.</p>
+<p class="admonition-title">I've set a color of type java.awt.Color in a style property query, but the color is different when using the Darcula theme.</p>
+<p>The return type of those functions indicates that the return type is <code>java.awt.Color</code>, but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid these mappings is to use custom factories. <a href="../../patterns/user_experience/#dark-theme">here</a>
+contains more information about theme-dependent colors.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What is the difference between an empty cell and a simple constant cell without any content?</p>
-<p>Both cell work with an internal text line, but the <code>constant cell</code> supports more styling for the text line. This also results in different-looking cursors, I believe.</p>
-<p><code>constant cell</code> supports the cell actions <code>LEFT, RIGHT, LOCAL</code><em><code>HOME/END,SELECT</code></em><code>RIGHT/LEFT, SELECT</code><em><code>LOCAL</code></em><code>HOME/END, COPY, PASTE, CUT</code> and <code>CLEAR_SELECTION</code> which it inherits from the internal label cell class. It has methods to validate the text (well, the only correct text is the specified text in the editor) and to synchronize the cell with the model (that means going back to the original text after editing the text).</p>
-<p><code>empty cell</code> inherits from the internal basic cell which supports only left and right transformations (<code>LEFT_TRANSFORM</code>, <code>RIGHT_TRANSFORM</code>). It also doesn&rsquo;t support the <code>editable</code> style sheet item which means no support for editing the text.</p>
-<p>In a nutshell, <code>empty cell</code> is a very stripped-down version of a <code>constant cell</code> and also has a somewhat different implementation because of the different base class.</p>
+<p class="admonition-title">What is the difference between an empty cell and a simple constant cell without content?</p>
+<p>Both cells work with an internal text line, but the <code>constant cell</code> supports more styling for the text line. The cursor also looks different.</p>
+<p>A constant cell supports the cell actions <code>LEFT, RIGHT, LOCAL</code><em><code>HOME/END,SELECT</code></em><code>RIGHT/LEFT, SELECT</code><em><code>LOCAL</code></em><code>HOME/END, COPY, PASTE, CUT</code>, and <code>CLEAR_SELECTION</code>, which it inherits from the internal label cell class. It has methods to validate the text (the only correct text is the specified text in the editor) and synchronize the cell with the model (that means returning to the original text after editing the text).</p>
+<p>The empty cell inherits from the  basic internal cell, which supports only left and right transformations (<code>LEFT_TRANSFORM</code>, <code>RIGHT_TRANSFORM</code>). It also doesn't support the <code>editable</code> style sheet item, which means no support for editing the text.</p>
+<p>An empty cell is a very stripped-down version of a constant cell and also has a somewhat different implementation because of the other base classes.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">I have click actions in my language, and they seem to also trigger for right mouse clicks. Any way to prevent that generally or manually/programmatically detecting which mouse button was clicked?</p>
-<p>No, the click action is executed for the selected cell. Without the original MouseEvent that is not forwarded to the editor cell you won&rsquo;t get this information. The event can&rsquo;t be restored. It would be possible to register a new mouse listener for the editor component through an <a href="http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions">editor extension</a> that not only creates the click action for the selected cell but also saved the mouse button somewhere. The original implementation in the editor component can be found <a href="https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472">here</a>.</p>
+<p class="admonition-title">I have actions for mouse clicks in my language, and they also trigger for right mouse clicks. Can we prevent that generally or by manually/programmatically detecting which mouse button fired the event?</p>
+<p>No, the selection manager executes the click action for the selected cell. You will only get this information with the original MouseEvent that the editor does not forward to the editor cell. You can't restore the event. It would be possible to register a new mouse listener for the editor component through an <a href="http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions">editor extension</a> that not only creates the click action for the selected cell but also saves the mouse button somewhere. The <a href="https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472">EditorComponent</a> contains the original implementation.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">I want to create a <abbr title="Domain-Specific Language">DSL</abbr> using diagrams or a visual programming language. Are there any inspirations?</p>
-<p>Have a look at <a href="http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/">Visual Programming Languages - Snapshots | interfacevision.<abbr title="commercial/common/communication">com</abbr></a>. This page has a lot of examples for visual programming languages
-dating back to 1963 up to recent languages like Scratch. Diagrams are supported by <span class="twemoji">
+<p>Have a look at <a href="http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/">Visual Programming Languages - Snapshots | interfacevision.<abbr title="commercial/common/communication">com</abbr></a>. This page has a lot of examples of visual programming languages
+dating back to 1963 up to recent languages like Scratch. <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>(<a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">documentation</a>) and can be used as the base building block of a new language.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>(<a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">documentation</a>) supports diagrams, and you can use them as the base building block of a new language.</p>
 </div>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Explain the different menu-related terms.</p>
 <ul>
-<li><strong>Menu definitions</strong> have two flavours <em>named</em> and <em>default</em> and can be defined in transformation or substitute menus.</li>
+<li><strong>Menu definitions</strong> have two flavors <em>named</em> and <em>default</em> and can be defined in transformation or substitute menus.</li>
 <li>
 <ul>
 <li>
@@ -1885,42 +1885,43 @@ dating back to 1963 up to recent languages like Scratch. Diagrams are supported 
 <p><strong>Default menu</strong></p>
 <ul>
 <li><strong>Transformation menus</strong>
-    define <abbr title="User Interface">UI</abbr> actions that will be shown in various locations. The menu is defined as a list of sections.
+    define <abbr title="User Interface">UI</abbr> actions that show up in various locations. The menu consists of a list of sections.
     Each section contains a list of menu parts for a set of locations. 
-    At runtime, the menu parts and locations are used to generate the content of the completion menu.
+    At runtime, the menu parts and locations decide the content of the completion menu.
     The contents of the completion menu are called menu items.</li>
 <li><strong>Parameterized actions</strong>
-    allow to calculate a list of elements of a specific type to be shown in the completion menu.
+    allow calculating a list of elements of a specific type to be shown in the completion menu.
     They calculate all elements for the substitution menu and influence the node creation.
-    Moreover, they define the selection where the cursor should be placed.</li>
+    Moreover, they define the selection of where the cursor should be placed.</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find <abbr title="output">out</abbr> where a substitute menu entry is coming from?</p>
-<p>Use the <em>Menu Trace Tool</em> window. More information can be found in <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p>Use the <em>Menu Trace Tool</em> window. <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr></a> contains
+more information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you add smart references using the transformation menus?</p>
-<p><a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus</a>(<em>F1RE&rsquo;s blog</em>)</p>
+<p><a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus</a>(<em>F1RE's blog</em>)</p>
 </div>
 <details class="question">
-<summary>What&rsquo;s the best way to improve the autocomplete description of concepts?</summary>
+<summary>What's the best way to improve the autocomplete description of concepts?</summary>
 <blockquote>
 <p>As you can see in the screenshot, the concepts of both opening braces are indistinguishable.</p>
 <p><a class="glightbox" href="../../img/autocompletion_myUnion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion myUnion" src="../../img/autocompletion_myUnion.png" /></a></p>
-<p>By changing the short description in the concept structure, I can change the description.</p>
+<p>I can change the description by modifying the short description in the concept structure.</p>
 <ol>
-<li>What&rsquo;s the best format to improve these descriptions?</li>
-<li>Is this way the correct/best one to change the autocomplete concept description?</li>
+<li>What's the best format to improve these descriptions?</li>
+<li>Is this the correct/best way to change the autocomplete concept description?</li>
 </ol>
 <p><a class="glightbox" href="../../img/bracketInitializer_concept.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="concept BracketInitializer" src="../../img/bracketInitializer_concept.png" /></a></p>
 <p><a class="glightbox" href="../../img/autocompletion_int16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion int16" src="../../img/autocompletion_int16.png" /></a></p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
-<p>In general, it&rsquo;s up to the users and specific context to decide what makes sense to put into the description text. Usually it should provide additional semantic information to those not familiar with the language to help them to pick up the right concept from the code completion menu.</p>
-<p>The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get full control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
+<p>Generally, it's up to the users and specific context to decide what makes sense to put into the description text. It should provide additional semantic information to those unfamiliar with the language to help them pick up the right concept from the code completion menu.</p>
+<p>The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get complete control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
 <p><a class="glightbox" href="../../img/DataItem_substituteMenu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DataItem SubstituteMenu" src="../../img/DataItem_substituteMenu.png" width="800px" /></a></p>
 <p><a class="glightbox" href="../../img/data_autocompletion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="data autocompletion" src="../../img/data_autocompletion.png" width="800px" /></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/wsafonov" title="GitHub User: wsafonov">@wsafonov</a><sub></p>
@@ -1928,17 +1929,17 @@ dating back to 1963 up to recent languages like Scratch. Diagrams are supported 
 <h2 id="languages">Languages<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">I need a specific graphical notation/feature for the editor.</p>
-<p>Have a look at the <a href="https://jetbrains.github.io/MPS-extensions/extensions/all/#editor">full extension list</a> from <span class="twemoji">
+<p>Have a look at the <a href="https://jetbrains.github.io/MPS-extensions/extensions/all/#editor">complete extension list</a> from <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I need hyperlinks.</p>
-<p>Use the language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.hyperlink</ins> from <span class="twemoji">
+<p>Use the language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.hyperlink</ins> from the <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
@@ -1949,48 +1950,48 @@ dating back to 1963 up to recent languages like Scratch. Diagrams are supported 
 <div class="admonition question">
 <p class="admonition-title">How do you create clickable links?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you include non-child relations in the editor?.</p>
+<p class="admonition-title">How can you include non-child relations in the editor?</p>
 <p>Use the language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.editor.querylist</ins> from <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
-<h2 id="editor-declaration">Editor declaration<a class="headerlink" href="#editor-declaration" title="Permanent link">&para;</a></h2>
+<h2 id="editor-declaration">Editor Declaration<a class="headerlink" href="#editor-declaration" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Is there a disadvantage to use the indent layout instead of the indent cell mode?</p>
+<p class="admonition-title">Is there a disadvantage to using the indent layout instead of the indent cell mode?</p>
 <p>No. There used to be performance issues with bigger models that were fixed in <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use an empty text for empty cells?</p>
-<p><a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">How can you set editor hints?</p>
 <ul>
-<li>you can set hints via <code class="highlight"><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">().</span><span class="na">getUpdater</span><span class="p">()</span><span class="w"></span></code><ul>
-<li>explicit hints for nodes</li>
-<li>initial hints globally; they behave similarly to pushed hints.</li>
+<li>You can set hints via <code class="highlight"><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">().</span><span class="na">getUpdater</span><span class="p">()</span><span class="w"></span></code><ul>
+<li>Set explicit hints for nodes.</li>
+<li>Set initial hints globally. They behave similarly to pushed hints.</li>
 </ul>
 </li>
 <li>
-<p>via right-click: push editor hints and select a specific one.</p>
+<p>Via right-click: Push editor hints and select a specific one.</p>
 </li>
 <li>
-<p>via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g. in action declarations)</p>
+<p>Via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g., in action declarations)</p>
 <ul>
 <li>They are not visible in the push Editor hints menu.</li>
-<li>If you need the same behavior e.g. in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
+<li>If you need the same behavior, e.g., in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
 </ul>
 </li>
-<li>Explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a>.
+<li>Set explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a>.
   The usage of <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState">ConceptEditorHintSettingsComponent.HintsState</a> is not so obvious.</li>
 </ul>
 </div>
@@ -2002,7 +2003,7 @@ dating back to 1963 up to recent languages like Scratch. Diagrams are supported 
 <li><strong>(A)</strong> What it looks like after creation</li>
 <li><strong>(B)</strong> Initial situation with cursor at <strong>(1)</strong>: pressing <span class="keys"><kbd class="key-enter">Enter</kbd></span> leads to <strong>(C)</strong></li>
 </ul>
-<p>The problem is, that in <strong>(C)</strong> the cursor is at <strong>(2)</strong>, right before a read-only cell, and thus editing or moving to the next cell is not possible. I would like the cursor to jump to the first editable cell, which is at position <strong>(3)</strong>.</p>
+<p>The problem is that in <strong>(C)</strong>, the cursor is at <strong>(2)</strong>, right before a read-only cell, and thus editing or moving to the next cell is impossible. I want the cursor to jump to the first editable cell at position <strong>(3)</strong>.</p>
 <p>Structure of the new node in <strong>(C)</strong>:</p>
 </blockquote>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" /></a></p>
@@ -2012,12 +2013,12 @@ dating back to 1963 up to recent languages like Scratch. Diagrams are supported 
 </blockquote>
 <p>Usually, you would set the <em>attracts focus</em> property of the cell, where the cursor should be positioned, to <code>attractsFocus</code> or <code>FirstEditableCell</code>.
 But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behavior is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
-<p>Therefore, change the first part of your editor to a query list cell <strong>(A)</strong>, which references the &ldquo;member&rdquo; in the cell properties <strong>(B)</strong>, and set the read-only property on the query list.</p>
+<p>Therefore, change the first part of your editor to a query list cell <strong>(A)</strong>, which references the "member" in the cell properties <strong>(B)</strong>, and set the read-only property on the query list.</p>
 <p><a class="glightbox" href="../../img/CompoundInitializerMember_editor_new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new editor for CompoundInitializerMember" src="../../img/CompoundInitializerMember_editor_new.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component?</p>
+<p class="admonition-title">Can the selected value of one Java Swing component be accessed from inside another Java Swing component?</p>
 <p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component? | <abbr title="Meta Programming System">MPS</abbr> forum</a></p>
 </div>
 <div class="admonition question">
@@ -2041,7 +2042,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you paint the background of certain editor cells with a different color based on analysis of the model?</p>
+<p class="admonition-title">How can you paint the background of specific editor cells with a different color based on the analysis of the model?</p>
 <ul>
 <li>with the help of a conditional editor</li>
 <li>by using the class <code>NodeHighlightManager</code>:</li>
@@ -2054,59 +2055,59 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">(...)</span><span class="w"></span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">highlightManager</span><span class="p">.</span><span class="na">mark</span><span class="p">(((</span><span class="n">SNode</span><span class="p">)</span><span class="w"> </span><span class="n">ref</span><span class="p">),</span><span class="w"> </span><span class="n">HighlightConstants</span><span class="p">.</span><span class="na">INSTANCES_COLOR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;usage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">messageOwner</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The second approach has a better performance because the highlighter runs asynchronously and not during the editor rebuild.</p>
+<p>The second approach performs better because the highlighter runs asynchronously, not during the editor rebuild.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you hide a custom cell in the editor? (<em>show if</em> property)</p>
 <blockquote>
-<p>Custom cells expect only a cell provider in the inspector, but don&rsquo;t offer the possibility to specify other attributes to set e.g. &ldquo;show if&rdquo;. How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
+<p>Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, e.g., "show if." How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
 </blockquote>
-<p>The <abbr title="metadata">meta</abbr>-model allows specifying the <em>show if</em> property and other attributes on a custom cell and the generator will generate the correct code for it. It is just not included in the editor for the inspector. You can use the reflective editor to specify the condition.</p>
-<p>Since these attributes are hidden and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
+<p>The <abbr title="metadata">meta</abbr>-model allows specifying the <em>show if</em> property and other attributes on a custom cell, and the generator will generate the correct code for it. The editor for the inspector doesn't include it. You can use the reflective editor to specify the condition.</p>
+<p>Since these attributes are not visible and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you split child collections?</p>
-<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in editor</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in the editor</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can I show an editor element only if the edited node/<abbr title="subtraction">sub</abbr>-nodes are currently being edited/actively selected?</p>
-<p>You can impliment a cell that is similar to the cell <a href="http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058">EditorCell_MathEnd</a> in <span class="twemoji">
+<p class="admonition-title">How can I show an editor cell only if the edited node/<abbr title="subtraction">sub</abbr>-nodes are currently the active selected nodes?</p>
+<p>You can implement a cell similar to the cell <a href="http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058">EditorCell_MathEnd</a> in <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <h2 id="inspector">Inspector<a class="headerlink" href="#inspector" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">How can you open the inspector programmatically?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">openInspector</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you focus on a node in the inspector?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Highlighting of constraint errors in inspector doesn&rsquo;t work.</p>
+<p class="admonition-title">Highlighting constraint errors in the inspector doesn't work.</p>
 <p>Known bug (<a href="https://youtrack.jetbrains.com/issue/MPS-32350"><abbr title="Meta Programming System">MPS</abbr>-32350</a>). Pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> helps.</p>
 </div>
-<h2 id="other-ui-components">Other <abbr title="User Interface">UI</abbr> components<a class="headerlink" href="#other-ui-components" title="Permanent link">&para;</a></h2>
+<h2 id="other-ui-components">Other <abbr title="User Interface">UI</abbr> Components<a class="headerlink" href="#other-ui-components" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">I <abbr title="abstract module">am</abbr> using <code>NodeHighlightManager.mark()</code> to highlight <abbr title="Abstract Syntax Tree">AST</abbr> nodes. <abbr title="Meta Programming System">MPS</abbr> then uses the provided color for the background of the cell, and a slightly darker color for an additional border. Is it possible to change this, i.e., only paint the background, but not the border?</p>
-<p>Yes, but you have to create a class that extends DefaultEditorMessage and overwrites the <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196">paintWithColor</a> method. The color of the border is defined on line <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203">203</a>. Instead of calling this method:</p>
+<p class="admonition-title">I <abbr title="abstract module">am</abbr> using <code>NodeHighlightManager.mark()</code> to highlight <abbr title="Abstract Syntax Tree">AST</abbr> nodes. <abbr title="Meta Programming System">MPS</abbr> then uses the provided color for the cell's background and a slightly darker shade for an additional border. Can we change this, i.e., only paint the background, but not the border?</p>
+<p>Yes, but you must create a class that extends DefaultEditorMessage and overwrites the <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196">paintWithColor</a> method. Line <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203">203</a> defined the color of the border. Instead of calling this method:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -2115,7 +2116,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">mark</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DefaultEditorMessage</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">messageText</span><span class="p">,</span><span class="w"> </span><span class="n">owner</span><span class="p">));</span><span class="w"></span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>You have to initialize your message object and supply it to the mark method.</p>
+<p>You must initialize your message object and supply it to the mark method.</p>
 </div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -2131,7 +2132,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you get the font of an editor?</p>
@@ -2192,7 +2193,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find all open editors?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you programmatically collapse editor cells?</p>
@@ -2201,21 +2202,21 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
 <span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w"> </span><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">fold</span><span class="p">()</span><span class="o">/</span><span class="n">unfold</span><span class="p">()</span><span class="w"></span>
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// You can check if is foldable by calling:</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// You can check if it is foldable by calling:</span><span class="w"></span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">EditorCell_Collection</span><span class="p">.</span><span class="na">isFoldable</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a callback/hook when an editor tab closes?</p>
 <blockquote>
-<p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node all highlighting is gone.</p>
-<p>In my code, I want to react to this editor-close event. Is there a way to implement a callback or hook which is called when an editor tab is closed?</p>
+<p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node, all highlighting is gone.</p>
+<p>In my code, I want to react to this editor-close event. Can a callback or hook be implemented, which the editor calls when an editor tab is closed?</p>
 </blockquote>
 <p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example</a>).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can I customise the behaviour when pressing the <span class="keys"><kbd class="key-tab">Tab</kbd></span> key in the editor?</p>
-<p>You can specify the action <code>NEXT</code> in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a> to override this behavior (<a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809"><abbr title="Meta Programming System">MPS</abbr> source reference</a>). The default action is declared <a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57">here</a> with its default implementation in <a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401">NodeEditorActions</a>(it jumps to the next editable leaf of the editor cell tree).</p>
+<p class="admonition-title">How can I customize the behavior when pressing the Tab key in the editor?</p>
+<p>To override this behavior, you can specify the action <code>NEXT</code> in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a> (<a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809"><abbr title="Meta Programming System">MPS</abbr> source reference</a>). The default action is declared <a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57">here</a> with its default implementation in <a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401">NodeEditorActions</a>(it jumps to the next editable leaf of the editor cell tree).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a utility class related to editor hints?</p>
@@ -2241,7 +2242,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

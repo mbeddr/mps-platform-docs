@@ -26,7 +26,7 @@
     
     
       
-        <title>FindUsages aspect - MPS Platform Docs</title>
+        <title>FindUsages Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FindUsages aspect
+              FindUsages Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1064,7 +1064,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1106,7 +1106,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1220,7 +1220,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1324,7 +1324,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1424,7 +1424,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1690,46 +1690,46 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="findusages-aspect">FindUsages aspect<a class="headerlink" href="#findusages-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="findusages-aspect">FindUsages Aspect<a class="headerlink" href="#findusages-aspect" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/find-usages.html#specificstatements">official documentation</a></li>
 </ul>
-<p>Custom finders for discovering related nodes can be implemented in this aspect.</p>
+<p>Implement custom finders for discovering related nodes in this aspect.</p>
 <div class="admonition warning">
-<p class="admonition-title">I click <em>Find usages</em> in the context menu of a node, and it doesn&rsquo;t find anything.</p>
+<p class="admonition-title">I click <em>Find Usages</em> in the context menu of a node, and it doesn't find anything.</p>
 <p>The standard search scope is the project. Try to expand it to global in the find usages settings. Check also that
-you are using the correcting finders in the <em>Finders</em> section of the settings. </p>
+you are using the correcting finders in the <em>Finders</em> section of the dialog. </p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I want to execute <em>Find usages</em> more than once, but the result tab gets overridden.</p>
+<p class="admonition-title">I want to execute <em>Find Usages</em> repeatedly, but the result tab gets overridden.</p>
 <p>Select the option <em>Open in new tab</em> in the section <em>View</em> of the <em>Find usages</em> preferences or pin the result tabs by right-clicking and selecting <em>Pin Tab</em>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to restrict the scope of a <em>Finder</em> execution?</p>
 <blockquote>
-<p>I <abbr title="abstract module">am</abbr> using this <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959035b%28jetbrains.mps.lang.findUsages.structure%29%2F2005690715325995353">finder</a> and would like to restrict the scope from <em>global</em>, to lets say <em>project</em>. </p>
+<p>I use this <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959035b%28jetbrains.mps.lang.findUsages.structure%29%2F2005690715325995353">finder</a> and would like to restrict the scope from <em>global</em> to <em>project</em>. </p>
 <p>How do I do this?</p>
 </blockquote>
-<p>You can pass any <em>FindUsages Scope</em> implementation to the expression, for instance the <a href="http://127.0.0.1:63320/node?ref=r%3A3189948c-a57a-415e-beba-405572f2d13c%28jetbrains.mps.ide.findusages.model.scopes%29%2F8568892084424440553">ProjectScope</a>:</p>
+<p>You can pass any <em>FindUsages Scope</em> implementation to the expression, for instance, the <a href="http://127.0.0.1:63320/node?ref=r%3A3189948c-a57a-415e-beba-405572f2d13c%28jetbrains.mps.ide.findusages.model.scopes%29%2F8568892084424440553">ProjectScope</a>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">SearchResults</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="nf">finders</span><span class="p">(</span><span class="n">NodeUsages</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProjectScope</span><span class="p">(</span><span class="n">project</span><span class="p">),</span><span class="w"> </span><span class="o">&lt;</span><span class="k">default</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I invoke the find usages manager programmatically without <abbr title="User Interface">UI</abbr>?</p>
 <p>Use one of the methods in <code>#project.getComponent(FindUsagesmanager.class)</code>. If no project is available, you can use the deprecated method
-<code>FindUsagesManager.getInstance()</code>. If the method needs a Consumer, just use the class
-<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.util%28MPS.Core%2F%29%2F~CollectConsumer">CollectConsumer</a> which adds the results to the provided collection. There is also the method <code>getResults()</code> to get back
+<code>FindUsagesManager.getInstance()</code>. If the function needs a Consumer, use the class
+<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.util%28MPS.Core%2F%29%2F~CollectConsumer">CollectConsumer</a> , which adds the results to the provided collection. There is also the method <code>getResults()</code> to get back
 the collection.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Fast usages search is not supported for a model.</p>
-<p>When specifying the scope, make sure to exclude models that don&rsquo;t support fast usages search (e.g. temporary models such as the console model).
-Models are only loaded when they are accessed, so make sure to keep the scope of the find usages call at a minimum.
-If you are filtering a global or similar scope, the following methods might be useful: </p>
+<p class="admonition-title">A model doesn't support <em>fast usages</em> search.</p>
+<p>When specifying the scope, exclude models that don't support fast usages search (e.g., temporary models such as the console model).
+Models are only loaded when accessed, so keep the scope of the <em>find usages</em>.
+If you are filtering a global or similar scope, the following methods might be helpful: </p>
 <ul>
 <li><code class="highlight"><span class="n">module</span><span class="p">.</span><span class="na">isPackaged</span><span class="p">()</span><span class="w"></span></code> to check for installed languages/solutions/devkits</li>
 <li><code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">isReadOnly</span><span class="p">()</span><span class="w"></span></code> to check if a model allows updates</li>
-<li><code class="highlight"><span class="n">SModelStereotype</span><span class="p">.</span><span class="na">isX</span><span class="p">()</span><span class="w"></span></code> to check if the model has a specific stereotype e.g. the model is a test model</li>
+<li><code class="highlight"><span class="n">SModelStereotype</span><span class="p">.</span><span class="na">isX</span><span class="p">()</span><span class="w"></span></code> to check if the model has a specific stereotype, e.g., the model is a test model</li>
 </ul>
 </div>
 
@@ -1738,7 +1738,7 @@ If you are filtering a global or similar scope, the following methods might be u
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

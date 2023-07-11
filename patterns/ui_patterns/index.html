@@ -26,7 +26,7 @@
     
     
       
-        <title>UI patterns - MPS Platform Docs</title>
+        <title>UI Patterns - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UI patterns
+              UI Patterns
             
           </span>
         </div>
@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -401,7 +401,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -774,7 +774,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -878,7 +878,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -978,7 +978,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1047,7 +1047,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Language design
+    Language Design
   </span>
   
 
@@ -1067,7 +1067,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    User experience
+    User Experience
   </span>
   
 
@@ -1096,7 +1096,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    UI patterns
+    UI Patterns
   </span>
   
 
@@ -1327,23 +1327,24 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="ui-patterns-and-anti-patterns"><abbr title="User Interface">UI</abbr> Patterns and Anti patterns<a class="headerlink" href="#ui-patterns-and-anti-patterns" title="Permanent link">&para;</a></h1>
+<h1 id="ui-patterns-and-anti-patterns"><abbr title="User Interface">UI</abbr> Patterns and Anti Patterns<a class="headerlink" href="#ui-patterns-and-anti-patterns" title="Permanent link">&para;</a></h1>
 <p>Go through your editors and check the following list.</p>
 <details class="hint">
 <summary>Texts are readable.</summary>
-<p>The contrast ratio between the background color and the foreground text color should be at least 4.5:1 <a href="https://www.majesticsignstudio.com/blog/best-color-combinations-for-readability/">article</a>.
+<p>The contrast ratio between the background and foreground text colors should be at least 4.5:1 (<a href="https://www.majesticsignstudio.com/blog/best-color-combinations-for-readability/">article</a>).
 <a href="https://webaim.org/resources/contrastchecker">Contrast checkers</a> can also help you.
 Here are some colors with high contrast:</p>
 <p><a class="glightbox" href="../../img/languagePatterns/colors.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="colors with good contrast ratio" src="../../img/languagePatterns/colors.png" /></a></p>
-<p>When using a grayscale color, make sure that the text color doesn&rsquo;t exceed 48% brightness (<a href="https://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/">source</a>). Make also sure to provide different colors for different color schemes (e.g. Darcula theme vs light theme).</p>
+<p>When using a grayscale color, ensure the text color doesn't exceed 48% brightness (<a href="https://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/">source</a>). Ensure to provide different colors for different color schemes (e.g., Darcula theme vs light theme).</p>
 <p><strong>Bad example #1</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/bad_readability_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bad readability" src="../../img/languagePatterns/bad_readability_1.png" /></a></p>
 <p><strong>Bad example #2</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/bad_readability_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bad readability" src="../../img/languagePatterns/bad_readability_2.png" /></a></p>
 </details>
 <details class="hint">
-<summary>Bold and underline aren&rsquo;t used together.</summary>
-<p>This is an anti-pattern. More information can be found in <a href="https://blog.velocitymedia.agency/bold-italics-and-underlines-how-to-use-them-effectively">this article</a>.
+<summary>Bold and underline aren't used together.</summary>
+<p>This combination is an anti-pattern. <a href="https://blog.velocitymedia.agency/bold-italics-and-underlines-how-to-use-them-effectively">This article</a>
+contains some more information.
 <abbr title="Meta Programming System">MPS</abbr>-related summary:</p>
 <ul>
 <li>Bold<ul>
@@ -1366,49 +1367,49 @@ Here are some colors with high contrast:</p>
 </details>
 <details class="hint">
 <summary>You use buttons correctly.</summary>
-<p>(Swing) Buttons use appropriate symbols/text to make clear what they do. Buttons can also be used as up and down keys. Buttons can also be hidden to not disrupt the text editing:
+<p>(Swing) Buttons use appropriate symbols/text to make clear what they do. You can also use buttons as up and down keys. You can hide them to not to disrupt the text editing:
 <a class="glightbox" href="../../img/languagePatterns/hide_buttons.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hidable buttons" src="../../img/languagePatterns/hide_buttons.png" /></a></p>
 <p>Add an option to hide buttons (checkbox, editor hint, action, etc.).</p>
 </details>
 <details class="hint">
 <summary>Clickable elements appear clickable.</summary>
-<p>When elements are clickable, they should appear clickable: They should use an indicator or different style (e.g. underlines and blue or styled like a button).</p>
+<p>When elements are clickable, they should appear clickable: They should use an indicator or different style (e.g., underlines and blue or styled like a button).</p>
 </details>
 <details class="hint">
 <summary>You align collections when possible.</summary>
-<p>Alignment is an important aspect of design (<a href="https://venngage.com/design-dictionary/alignment-design-principle-definition/">introduction</a>). Use vertical grids instead of vertical collections to align cells nicely.
-It is also very important for readability.</p>
+<p>Alignment is an essential aspect of design (<a href="https://venngage.com/design-dictionary/alignment-design-principle-definition/">introduction</a>). Use vertical grids instead of vertical collections to align cells nicely.
+It is also crucial for readability.</p>
 </details>
 <details class="hint">
 <summary>You use color for emphasis and to convey information.</summary>
-<p>Not only bold font can be used to emphasize words but also color. Make sure that the used color is correctly associated by the user.</p>
+<p>In Addition, colors can emphasize words. Make sure that the user correctly associates the used color.</p>
 <p><strong>Bad example</strong></p>
 <p>Greyscale editor + grey is associated with disabled content/<abbr title="metadata">meta</abbr> information such as comments.
 <a class="glightbox" href="../../img/languagePatterns/grey_editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="grey editor" src="../../img/languagePatterns/grey_editor.png" /></a></p>
 <p><strong>Good example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/use_of_color.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="use of color" src="../../img/languagePatterns/use_of_color.png" /></a></p>
-<p>Color is used to distinguish different language features: BLUE for numbers, lila/green for CONSTANTS.</p>
+<p>Color distinguishes different language features: BLUE for numbers, lila/green for CONSTANTS.</p>
 </details>
 <details class="hint">
 <summary>You consistently use labels.</summary>
-<p>Labels should be used consistently in the design (e.g. always bold, colon after label), the same goes for key-value pairs.
-There is no best practice for the separation between label and text. Some ideas and common guidelines can be found <a href="https://ux.stackexchange.com/questions/3611/should-label-and-field-be-separated-with-colon">here</a>.</p>
+<p>Use labels consistently in the design (e.g., always bold, colon after label). The same goes for key-value pairs.
+There is no best practice for the separation between label and text. <a href="https://ux.stackexchange.com/questions/3611/should-label-and-field-be-separated-with-colon">Should label and field be separated with colon?</a> contains some ideas and common guidelines.</p>
 <p><a class="glightbox" href="../../img/languagePatterns/key_value_pair.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="key value pair" src="../../img/languagePatterns/key_value_pair.png" /></a></p>
 </details>
 <details class="hint">
 <summary>The context of <abbr title="User Interface">UI</abbr> elements is consistent.</summary>
-<p>Counterexample: There are 3 buttons next to each other that look similar: One opens external documentation, the other navigates to a root node and the third one reverts a change. This could be confusing and frustrating for the user.</p>
+<p>Counterexample: There are three buttons next to each other that look similar: One opens external documentation, the other navigates to a root node, and the third one reverts a change. This behavior could be confusing and frustrating for the user.</p>
 </details>
 <details class="hint">
 <summary>A default empty statement exists.</summary>
 <p>There should always be a default concept that acts as an empty line or
-empty text. It should be editable and support auto-completion. They should have an indicator that they are editable. The easiest way is to provide a placeholder value.</p>
+empty text. It should be editable and support auto-completion. These lines should have an indicator that they are editable. The easiest way is to provide a placeholder value.</p>
 <p><strong>Bad example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/missing_empty_statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="missing empty statement" src="../../img/languagePatterns/missing_empty_statement.png" width="500px" /></a></p>
 </details>
 <details class="hint">
 <summary>Different groups are distinguishable from each other.</summary>
-<p>Groups can be separated for example by whitespace, by drawing a border (box), or by drawing brackets around the content.</p>
+<p>Groups can be separated, for example, by whitespace, by drawing a border (box), or by drawing brackets around the content.</p>
 </details>
 <details class="hint">
 <summary>You emphasize non-standard operations/literals.</summary>
@@ -1417,92 +1418,91 @@ empty text. It should be editable and support auto-completion. They should have 
 </details>
 <details class="hint">
 <summary>Enough paddings surround elements.</summary>
-<p>Make sure there is enough space between the content and its border (padding) otherwise the editor looks too packed.
-More information from a design perspective can be found <a href="https://medium.com/wayfair-design/more-padding-please-b95e19422acc">here</a>.</p>
+<p>Ensure enough space is between the content and its border (padding). Otherwise, the editor looks too packed.
+<a href="https://medium.com/wayfair-design/more-padding-please-b95e19422acc">More Padding, Please! | Patrick J. Condon</a> contains more information from a design perspective.</p>
 </details>
 <details class="hint">
 <summary>You use existing stylesheets.</summary>
-<p>For Base Language there is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c3%28jetbrains.mps.baseLanguage.editor%29%2F1186415538255">BaseLanguageStyle</a>.
+<p>For Base Language, there is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c3%28jetbrains.mps.baseLanguage.editor%29%2F1186415538255">BaseLanguageStyle</a>.
 You can search globally for instances of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029e%28jetbrains.mps.lang.editor.structure%29%2F1186402211651">Stylesheet</a> to find more styles.</p>
 </details>
 <details class="hint">
 <summary>The font size conveys hierarchy.</summary>
-<p>More information can be found in this <a href="https://uxcel.com/blog/beginners-guide-to-typographic-hierarchy">beginner&rsquo;s guide to typographic hierarchy</a>.</p>
+<p>The <a href="https://uxcel.com/blog/beginners-guide-to-typographic-hierarchy">beginner's guide to typographic hierarchy</a> contains more information.</p>
 <p>Example hierarchy (source: <a href="https://type-ed.com/resources/rag-right/2017/11/13/font-weight-size">Font Size And Weight Matters</a>) : <a class="glightbox" href="https://images.squarespace-cdn.com/content/v1/577811363e00be9cc0da688a/1510632311898-TLJBKRTD7WC8J782TN3G/e553d9a7-19b7-47e2-8ce8-e8ef390d6e8b.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example hierarchy" src="https://images.squarespace-cdn.com/content/v1/577811363e00be9cc0da688a/1510632311898-TLJBKRTD7WC8J782TN3G/e553d9a7-19b7-47e2-8ce8-e8ef390d6e8b.gif" /></a></p>
 </details>
 <details class="hint">
-<summary>You use the full window width for your editor.</summary>
-<p>Often the space in editor components is not well used and a lot of space is left empty on the right side of the window. 
-This can be improved by using multiple groups next to each other or using the right-hand side of the screen for some sort of legend for graphics or <abbr title="metadata">meta</abbr>-information about the (root) node (e.g. code review).</p>
+<summary>You use the entire window width for your editor.</summary>
+<p>Often the space in editor components needs to be better used, and a lot of space is left empty on the right side of the window.
+You can improve this by using multiple groups next to each other or using the right-hand side of the screen for some legend for graphics or <abbr title="metadata">meta</abbr>-information about the (root) node (e.g., code review).</p>
 </details>
 <details class="hint">
 <summary>Headers follow general <abbr title="User Interface">UI</abbr> principles.</summary>
-<p>The following principles should be followed:</p>
+<p>Follow the following principles:</p>
 <ul>
 <li>the hierarchical relationship of ideas</li>
 <li>consistency</li>
 <li>readability</li>
 <li>specificity</li>
 </ul>
-<p>More information can be found in <a href="https://pressbooks.bccampus.ca/technicalwriting/chapter/headings">Technical writing essentials - Headings</a>.</p>
+<p><a href="https://pressbooks.bccampus.ca/technicalwriting/chapter/headings">Technical writing essentials - Headings</a> contains some more information.</p>
 </details>
 <details class="hint">
 <summary>Headers are distinguishable from content.</summary>
 <p><strong>Bad example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/header_content_keyword_bold.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="header_content keywordbold" src="../../img/languagePatterns/header_content_keyword_bold.png" /></a></p>
 <p>The header and the start of the child concepts use bold font and the same text.
-In this example the text &ldquo;Output&rdquo; is redundant. The header should be larger.</p>
-<p>A common layout is header-input-output: At the top is the header, then there are the
-inputs/declarations, followed by the output/body. Make sure to separate these
-three groups in some ways (such as horizontal lines or empty lines).</p>
+In this example, the text "Output" is redundant. The header should be larger.</p>
+<p>A common layout is header-input-output: At the top is the header, and the output/body follows the inputs/declarations.
+Make sure to separate these three groups in some ways (such as horizontal or empty lines).</p>
 <p><strong>Mixed example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/header_input_output.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="header-input-output" src="../../img/languagePatterns/header_input_output.png" /></a></p>
 </details>
 <details class="hint">
-<summary>Lines aren&rsquo;t too thick and not textual.</summary>
-<p>A good maximum width for borders and other lines is 3 pixels. This is just a rough guideline but with thicker lines the design becomes overwhelming.</p>
+<summary>The lines are just a little thick and not textual.</summary>
+<p>A good maximum width for borders and other lines is 3 pixels. This width is just a rough guideline, but thicker lines make the design overwhelming.</p>
 <p><strong>Bad example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/bad_lines.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bad lines" src="../../img/languagePatterns/bad_lines.png" /></a></p>
 </details>
 <details class="hint">
-<summary>You don&rsquo;t emphasize <abbr title="metadata">meta</abbr>/not important information.</summary>
+<summary>You don't emphasize <abbr title="metadata">meta</abbr>/not important information.</summary>
 <p><strong>Good example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/meta_information_grey1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="state machine" src="../../img/languagePatterns/meta_information_grey1.png" /></a></p>
-<p>A smaller font, light gray color, or maybe a different font seems to work well. Inherited values can also be shown this way: display them as placeholder values in a light gray color.
-Don&rsquo;t emphasize comments by making them bold or stand <abbr title="output">out</abbr> in any way.</p>
+<p>A smaller font, light gray color, or a different font works well. Inherited values can also be shown this way: display them as placeholder values in light gray.
+Don't emphasize comments by making them bold or stand <abbr title="output">out</abbr> in any way.</p>
 <p><strong>Bad example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/emphasized_comments.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="emphasized comments" src="../../img/languagePatterns/emphasized_comments.png" /></a></p>
 </details>
 <details class="hint">
-<summary>The reflective editor is never shown.</summary>
+<summary>Don't show the reflective editor.</summary>
 <p>The reflective editor provides a default editor for nodes. The editor is
 only read-only and should only be used for debugging purposes.</p>
 <p><strong>Bad example</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/reflective_editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="reflective editor" src="../../img/languagePatterns/reflective_editor.png" width="300px" /></a></p>
 </details>
 <details class="hint">
-<summary>You use The right form of projection for the task in the editor.</summary>
-<p>The right projections are used (text, tables, diagrams..) and different kinds of projections are provided when necessary (switchable by menu or editor hints).</p>
+<summary>You use the right form of projection for the task in the editor.</summary>
+<p>The right projections are used (text, tables, diagrams, or others), and different projections are provided when necessary (switchable by menu or editor hints).</p>
 <p><strong>Example: multiple projections</strong></p>
 <p><a class="glightbox" href="../../img/languagePatterns/multiple_projections.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="multiple projections" src="../../img/languagePatterns/multiple_projections.png" /></a></p>
 </details>
 <details class="hint">
-<summary>You didn&rsquo;t forget to enable anti-aliasing for custom Java Swing components.</summary>
-<p>When you create a custom component and have a paint-Method, call <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent.turnOnAliasingIfPossible%2528java.awt.Graphics2D%2529">EditorComponent.turnOnAliasingIfPossible</a>
-to enable anti-aliasing. More information can be found in the <a href="https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html">Java documentation</a>.</p>
+<summary>You didn't forget to enable anti-aliasing for custom Java Swing components.</summary>
+<p>When you create a custom component with a paint method, call <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent.turnOnAliasingIfPossible%2528java.awt.Graphics2D%2529">EditorComponent.turnOnAliasingIfPossible</a>
+to enable anti-aliasing. The <a href="https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html">Java documentation</a> contains more information.</p>
 </details>
 <details class="hint">
 <summary>All usages of symbols are clear.</summary>
 <p>When using symbols, make sure that the user understands what it means. 
-A Plus symbol might be easy to understand (add, increase), but a complex shape that is not usable used might be not. Common icons can be found for example in the <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free">fontawesome icon pack</a>.</p>
+A Plus symbol might be easy to understand (add, increase), but a complex shape that is not usable might not. <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free">fontawesome icon pack</a> contains, for example, common icons.</p>
 </details>
 <details class="hint">
 <summary>You abbreviate often-used words and symbols.</summary>
 <p>Abbreviate words that are often used in the editor or use symbols.
 Examples:</p>
 <ul>
-<li>The Letter &ldquo;m&rdquo; or a red star <em style="color: red">*</em> is often used to mark a field as mandatory.</li>
-<li>The plus sign ⊕ is used to indicate an &ldquo;add&rdquo; action.</li>
+<li>The Letter "m" or a red star <em style="color: red">*</em> is often used to mark a field as mandatory.</li>
+<li>The plus sign ⊕ is used to indicate an "add" action.</li>
 </ul>
 </details>
 
@@ -1511,7 +1511,7 @@ Examples:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1657,7 +1657,7 @@ Examples:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../user_experience/" class="md-footer__link md-footer__link--prev" aria-label="Previous: User experience" rel="prev">
+          <a href="../user_experience/" class="md-footer__link md-footer__link--prev" aria-label="Previous: User Experience" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1667,20 +1667,20 @@ Examples:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                User experience
+                User Experience
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../reference/being_a_good_developer/" class="md-footer__link md-footer__link--next" aria-label="Next: Being a good developer" rel="next">
+          <a href="../../reference/being_a_good_developer/" class="md-footer__link md-footer__link--next" aria-label="Next: Being a Good Developer" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Being a good developer
+                Being a Good Developer
               </div>
             </div>
             <div class="md-footer__button md-icon">

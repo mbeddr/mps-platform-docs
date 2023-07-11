@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -881,7 +881,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -896,7 +896,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1068,7 +1068,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1078,7 +1078,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_5">
             <span class="md-nav__icon md-icon"></span>
-            Advanced topics
+            Advanced Topics
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1092,7 +1092,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    What happens on MPS startup
+    What Happens on MPS Startup
   </span>
   
 
@@ -1136,7 +1136,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Dependencies and classpath
+    Dependencies and Classpath
   </span>
   
 
@@ -1238,7 +1238,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Example actions using locks
+    Example Actions Using Locks
   </span>
   
 
@@ -1258,7 +1258,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Named threads
+    Named Threads
   </span>
   
 
@@ -1418,7 +1418,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1659,14 +1659,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#awt-event-dispatch-thread-edt" class="md-nav__link">
-    AWT event dispatch thread (EDT)
+    AWT Event Dispatch Thread (EDT)
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#background-threads" class="md-nav__link">
-    Background threads
+    Background Threads
   </a>
   
 </li>
@@ -1681,21 +1681,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#reading-the-model" class="md-nav__link">
-    Reading the model
+    Reading the Model
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#writing-the-model-different-thread" class="md-nav__link">
-    Writing the model (different thread)
+    Writing the Model (Different Thread)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#writing-the-model-edt" class="md-nav__link">
-    Writing the model (EDT)
+    Writing the Model (EDT)
   </a>
   
 </li>
@@ -1709,14 +1709,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
           <li class="md-nav__item">
   <a href="#showing-a-notification-with-information-from-the-model" class="md-nav__link">
-    Showing a notification with information from the model
+    Showing a Notification With Information From the Model
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#elevating-model-access" class="md-nav__link">
-    Elevating model access
+    Elevating Model Access
   </a>
   
 </li>
@@ -1728,7 +1728,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#additional-references" class="md-nav__link">
-    Additional references
+    Additional References
   </a>
   
 </li>
@@ -1777,42 +1777,42 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h1 id="threading">Threading<a class="headerlink" href="#threading" title="Permanent link">&para;</a></h1>
 <p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to be performed holding an appropriate lock.
 IntelliJ IDEA also needs read and write locks in its platform. Multiple reads can be done at the same time. When writing should be done,
-all reads have to be finished. The IDEA platform&rsquo;s lock is acquired first and only then the <abbr title="Meta Programming System">MPS</abbr>&lsquo;s lock is acquired.</p>
+all reads have to be finished. The IDEA platform's lock is acquired first, and only then the <abbr title="Meta Programming System">MPS</abbr>'s lock is acquired.</p>
 <p>The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>
-and are <strong>only necessary</strong> if you are accessing the model or specific features of the IntelliJ platform from a different thread. All aspects in your language and declared actions have the necessary lock by default (command access). You most likely only need locking when accessing <abbr title="Meta Programming System">MPS</abbr> models from a Swing event handler such as in the <code>actionPerformed</code> method of a button. The locks are of type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html">ReentrantReadWriteLock</a> (read the JavaDoc for more <abbr title="information">info</abbr>).</p>
-<h2 id="awt-event-dispatch-thread-edt">AWT event dispatch thread (<abbr title="Event Dispatch Thread">EDT</abbr>)<a class="headerlink" href="#awt-event-dispatch-thread-edt" title="Permanent link">&para;</a></h2>
-<p>Drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Java Swing</a>. The <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">event dispatch thread or Swing thread</a> is used for handling events in Swing because it is not thread-safe, so most of the Swing code runs in this thread. It also handles events from the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/awt/">Abstract Window Toolkit</a> and has the thread name <em>AWT-EventQueue-0</em>.
-In the IntelliJ platform/<abbr title="Meta Programming System">MPS</abbr> it is also called the <em><abbr title="User Interface">UI</abbr> thread</em> or <em>editor thread</em>. Any writes to the IntelliJ <abbr title="Integrated Development Environment">IDE</abbr> data model (<a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html"><abbr title="Virtual File System">VFS</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/project-structure.html">project root model</a>) must also happen on the <em>write thread</em>, which can be the same as <abbr title="Event Dispatch Thread">EDT</abbr> in IntelliJ products. In <abbr title="Meta Programming System">MPS</abbr>, it is the same thread.</p>
+and are <strong>only necessary</strong> if you are accessing the model or specific features of the IntelliJ platform from a different thread. All aspects in your language and declared actions have the necessary lock by default (command access). You most likely only need locking when accessing <abbr title="Meta Programming System">MPS</abbr> models from a Swing event handler, such as in the <code>actionPerformed</code> method of a button. The locks are of type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html">ReentrantReadWriteLock</a> (read the JavaDoc for more <abbr title="information">info</abbr>).</p>
+<h2 id="awt-event-dispatch-thread-edt">AWT Event Dispatch Thread (<abbr title="Event Dispatch Thread">EDT</abbr>)<a class="headerlink" href="#awt-event-dispatch-thread-edt" title="Permanent link">&para;</a></h2>
+<p>The drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Java Swing</a>. The <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">event dispatch thread or Swing thread</a> is used for handling events in Swing because it is not thread-safe, so most of the Swing code runs in this thread. It also handles events from the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/awt/">Abstract Window Toolkit</a> and has the thread name <em>AWT-EventQueue-0</em>.
+In the IntelliJ platform/<abbr title="Meta Programming System">MPS</abbr>, it is also called the <em><abbr title="User Interface">UI</abbr> thread</em> or <em>editor thread</em>. Any writes to the IntelliJ <abbr title="Integrated Development Environment">IDE</abbr> data model (<a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html"><abbr title="Virtual File System">VFS</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/project-structure.html">project root model</a>) must also happen on the <em>write thread</em>, which can be the same as <abbr title="Event Dispatch Thread">EDT</abbr> in IntelliJ products. In <abbr title="Meta Programming System">MPS</abbr>, it is the same thread.</p>
 <p>Depending on the access type, you need different locks from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.access</ins>:</p>
 <ul>
 <li>synchronously read <abbr title="Meta Programming System">MPS</abbr> model: <code>read action with</code></li>
 <li>synchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>write action with</code></li>
 <li>synchronously write <abbr title="Meta Programming System">MPS</abbr> model with undo: <code>command with</code></li>
 </ul>
-<p>In older <abbr title="Meta Programming System">MPS</abbr> versions (&lt; 2021.1.5) it was always necessary to use <code>command with</code> when writing a model. While it is not necessary anymore it
-is still recommended to use it instead of the <code>write action with</code> statement.  As a tribute to legacy code, access to constant and <abbr title="metadata">meta</abbr> <abbr title="information">info</abbr> objects of a node is allowed without read access. It&rsquo;s not encouraged for new code though and might change in the future.</p>
+<p>In older <abbr title="Meta Programming System">MPS</abbr> versions (&lt; 2021.1.5), it was always necessary to use <code>command with</code> when writing a model. While it is not necessary anymore, it
+is still recommended to use it instead of the <code>write action with</code> statements.  As a tribute to legacy code, access to constant and <abbr title="metadata">meta</abbr> <abbr title="information">info</abbr> objects of a node is allowed without read access. It's not encouraged for new code and might change in the future.</p>
 <p>If you are not already in the <abbr title="Event Dispatch Thread">EDT</abbr>, you need one of the following methods:</p>
 <ul>
 <li>Asynchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>execute command in EDT with</code>.</li>
 <li>Asynchronously read <abbr title="Meta Programming System">MPS</abbr> model: <code>execute in EDT with</code>.</li>
 </ul>
 <p>The <em>in <abbr title="Event Dispatch Thread">EDT</abbr></em> commands allow to read/write the <abbr title="Meta Programming System">MPS</abbr> model and perform <abbr title="Event Dispatch Thread">EDT</abbr>-related <abbr title="User Interface">UI</abbr> activities and update models of the IntelliJ platform. To check if the current thread is the <abbr title="Event Dispatch Thread">EDT</abbr>, call <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertIsDispatchThread</span><span class="p">()</span><span class="w"></span></code> or <code class="highlight"><span class="n">ThreadUtils</span><span class="p">.</span><span class="na">isInEDT</span><span class="p">()</span><span class="w"></span></code></p>
-<p>To modify the <abbr title="User Interface">UI</abbr>, the code must also be run on the <abbr title="User Interface">UI</abbr> thread. Normally, you would call <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code>.
+<p>The code must also be run on the <abbr title="User Interface">UI</abbr> thread to modify the <abbr title="User Interface">UI</abbr>. Typically, you would call <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code>.
 When you are changing the <abbr title="Integrated Development Environment">IDE</abbr> model in the IntelliJ platform (see: <a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#what-is-a-write-safe-context">write-safe context</a>) or an <abbr title="Meta Programming System">MPS</abbr> model, you should use one of the following methods:</p>
 <ul>
 <li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code> (asynchronous) </li>
 <li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeAndWait</span><span class="w"></span></code> (synchronously)</li>
 </ul>
-<p>If you don&rsquo;t know exactly what you are doing when calling it synchronously, the <abbr title="Integrated Development Environment">IDE</abbr> will freeze.
+<p>If you don't precisely know what you are doing when calling it synchronously, the <abbr title="Integrated Development Environment">IDE</abbr> will freeze.
 The reason for those methods is that the so-called <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">modality state</a> should
-be taken into account i.e., the stack of modal dialogs under which the call is allowed to execute. Alternatively, there is
-also the class <code>ThreadUtils</code> which contains the method <code>runInUIThreadAndWait</code> which takes a <code>Runnable</code> instance as a parameter and uses the right method based on the calling context.</p>
-<h2 id="background-threads">Background threads<a class="headerlink" href="#background-threads" title="Permanent link">&para;</a></h2>
-<p>Every code that is executed on the <abbr title="Event Dispatch Thread">EDT</abbr> should finish quickly. Long-running code blocks the thread and the <abbr title="User Interface">UI</abbr> becomes unresponsive. Run long-running tasks in the background: <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>
-The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.progress%28MPS.IDEA%2F%29%2F%7ETask">Task</a> can be extended and run in a modal dialog or in the background. When many tasks should be executed, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.<abbr title="commercial/common/communication">com</abbr></a>. There&rsquo;s also a method for that: <code>ApplicationManager.getApplication().executeOnPooledThread</code>.</p>
+be taken into account ,i.e., the stack of modal dialogs under which the call is allowed to execute. Alternatively, there is
+also the class <code>ThreadUtils</code> which contains the method <code>runInUIThreadAndWait</code>, which takes a <code>Runnable</code> instance as a parameter and uses the correct method based on the calling context.</p>
+<h2 id="background-threads">Background Threads<a class="headerlink" href="#background-threads" title="Permanent link">&para;</a></h2>
+<p>Every code that is executed on the <abbr title="Event Dispatch Thread">EDT</abbr> should finish quickly. Long-running code blocks the thread, and the <abbr title="User Interface">UI</abbr> becomes unresponsive. Run long-running tasks in the background: <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>
+The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.progress%28MPS.IDEA%2F%29%2F%7ETask">Task</a> can be extended and run in a modal dialog or in the background. When many tasks should be executed, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.<abbr title="commercial/common/communication">com</abbr></a>. There's also a method for that: <code>ApplicationManager.getApplication().executeOnPooledThread</code>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>In the following examples, a node is accessed from a background thread or the <abbr title="Event Dispatch Thread">EDT</abbr>.</p>
-<h3 id="reading-the-model">Reading the model<a class="headerlink" href="#reading-the-model" title="Permanent link">&para;</a></h3>
+<h3 id="reading-the-model">Reading the Model<a class="headerlink" href="#reading-the-model" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> Different thread with lock</label><label for="__tabbed_1_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> Different thread without lock</label><label for="__tabbed_1_3"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> <abbr title="Event Dispatch Thread">EDT</abbr> with read lock</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1863,8 +1863,8 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 </div>
-<h3 id="writing-the-model-different-thread">Writing the model (different thread)<a class="headerlink" href="#writing-the-model-different-thread" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> command in <abbr title="Event Dispatch Thread">EDT</abbr> lock</label><label for="__tabbed_2_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> command in wrong thread</label><label for="__tabbed_2_3"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> no lock</label><label for="__tabbed_2_4"><img alt="❓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2753.svg" title=":question:" /> only write lock</label></div>
+<h3 id="writing-the-model-different-thread">Writing the Model (Different Thread)<a class="headerlink" href="#writing-the-model-different-thread" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> command in <abbr title="Event Dispatch Thread">EDT</abbr> lock</label><label for="__tabbed_2_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> command in the wrong thread</label><label for="__tabbed_2_3"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> no lock</label><label for="__tabbed_2_4"><img alt="❓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2753.svg" title=":question:" /> only write lock</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -1926,7 +1926,7 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 </div>
-<h3 id="writing-the-model-edt">Writing the model (<abbr title="Event Dispatch Thread">EDT</abbr>)<a class="headerlink" href="#writing-the-model-edt" title="Permanent link">&para;</a></h3>
+<h3 id="writing-the-model-edt">Writing the Model (<abbr title="Event Dispatch Thread">EDT</abbr>)<a class="headerlink" href="#writing-the-model-edt" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> command lock</label><label for="__tabbed_3_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> no lock</label><label for="__tabbed_3_3"><img alt="❓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2753.svg" title=":question:" /> only write lock</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1972,7 +1972,7 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 <h3 id="modifying-the-ui">Modifying the <abbr title="User Interface">UI</abbr><a class="headerlink" href="#modifying-the-ui" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using Application#invokeLater</label><label for="__tabbed_4_2"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using SwingUtilities#invokeLater</label><label for="__tabbed_4_3"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> called from thread with IntelliJ write access (e.g. normal <abbr title="Meta Programming System">MPS</abbr> code)</label><label for="__tabbed_4_4"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> called from within <abbr title="Meta Programming System">MPS</abbr> read action</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using Application#invokeLater</label><label for="__tabbed_4_2"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using SwingUtilities#invokeLater</label><label for="__tabbed_4_3"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> called from a thread with IntelliJ write access (e.g., standard <abbr title="Meta Programming System">MPS</abbr> code)</label><label for="__tabbed_4_4"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> called from within <abbr title="Meta Programming System">MPS</abbr> read action</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">invokeLater</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">&quot;Input&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
@@ -2008,7 +2008,7 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 </div>
-<h3 id="showing-a-notification-with-information-from-the-model">Showing a notification with information from the model<a class="headerlink" href="#showing-a-notification-with-information-from-the-model" title="Permanent link">&para;</a></h3>
+<h3 id="showing-a-notification-with-information-from-the-model">Showing a Notification With Information From the Model<a class="headerlink" href="#showing-a-notification-with-information-from-the-model" title="Permanent link">&para;</a></h3>
 <p>In this example, additional information is shown to the user through a <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">top-level notification</a> (balloon).</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using a read lock synchronously</label><label for="__tabbed_5_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> using a read lock asynchronously</label><label for="__tabbed_5_3"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> call synchronously on <abbr title="Event Dispatch Thread">EDT</abbr> with read lock</label></div>
 <div class="tabbed-content">
@@ -2082,8 +2082,8 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 </div>
-<h3 id="elevating-model-access">Elevating model access<a class="headerlink" href="#elevating-model-access" title="Permanent link">&para;</a></h3>
-<p>It depends on the current thread and active locks but most of the time, read locks can&rsquo;t be upgraded. A lock that is higher in the hierarchy, also
+<h3 id="elevating-model-access">Elevating Model Access<a class="headerlink" href="#elevating-model-access" title="Permanent link">&para;</a></h3>
+<p>It depends on the current thread and active locks, but most of the time, read locks can't be upgraded. A lock that is higher in the hierarchy also
 has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <em>command</em>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> elevating write to command access</label><label for="__tabbed_6_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> elevating read to write access</label><label for="__tabbed_6_3"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> elevating read to command access</label><label for="__tabbed_6_4"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> elevating read to command access (write available)</label></div>
 <div class="tabbed-content">
@@ -2171,7 +2171,7 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
 </div>
 </div>
 </div>
-<h2 id="additional-references">Additional references<a class="headerlink" href="#additional-references" title="Permanent link">&para;</a></h2>
+<h2 id="additional-references">Additional References<a class="headerlink" href="#additional-references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model">IDEA threading model | developerlife.<abbr title="commercial/common/communication">com</abbr></a></li>
 <li><a href="https://www.baeldung.com/java-common-concurrency-pitfalls">Common Concurrency Pitfalls in Java</a></li>
@@ -2182,7 +2182,7 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -2341,13 +2341,13 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
         
         
           
-          <a href="read_write_action_examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Example actions using locks" rel="next">
+          <a href="read_write_action_examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Example Actions Using Locks" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Example actions using locks
+                Example Actions Using Locks
               </div>
             </div>
             <div class="md-footer__button md-icon">

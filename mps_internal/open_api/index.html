@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -767,7 +767,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -876,7 +876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -891,7 +891,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -981,7 +981,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Utility classes
+    Utility Classes
   </span>
   
 
@@ -1001,7 +1001,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Navigating the MPS sources
+    Navigating the MPS Sources
   </span>
   
 
@@ -1021,7 +1021,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Writing an MPS plugin with Kotlin
+    Writing an MPS Plugin with Kotlin
   </span>
   
 
@@ -1157,7 +1157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1307,7 +1307,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1620,7 +1620,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Put the following code in an application plugin:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// set default project location </span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Set default project location </span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">string</span><span class="w"> </span><span class="n">defaultProjectDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;user.home&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;NewProjectDir&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span><span class="w"></span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">GeneralSettings</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setDefaultProjectDirectory</span><span class="p">(</span><span class="n">defaultProjectDir</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
@@ -1636,16 +1636,16 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">AnActionEvent</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ActionUtils</span><span class="p">.</span><span class="na">createEvent</span><span class="p">(</span><span class="n">ActionPlaces</span><span class="p">.</span><span class="na">EDITOR_TAB</span><span class="p">,</span><span class="w"> </span><span class="n">dataContext</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">ActionUtils</span><span class="p">.</span><span class="na">updateAndPerformAction</span><span class="p">(</span><span class="n">action</span><span class="o">&lt;</span><span class="n">openHtmlReport</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Since this is based on IDEA components, we need to get the <code>getNodeEditorComponent</code>, which is not part of the openapi. That&rsquo;s why we need to downcast it to the EditorComponent class.</p>
+<p>Since this code is based on IDEA components, we need to get the <code>getNodeEditorComponent</code>, which is not part of the Open <abbr title="Application Programming Interface">API</abbr>. That's why we need to downcast it to the EditorComponent class.</p>
 <p>Note: <code>action&lt;…&gt;</code> comes from the <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin</ins> language.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to shut down <abbr title="Meta Programming System">MPS</abbr> programmatically?</p>
-<p>In normal conditions, one can use <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">exit</span><span class="p">()</span><span class="w"></span></code>. If this doesn&rsquo;t work, an exception
- can be thrown on purpose. </p>
+<p>In normal conditions, one can use <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">exit</span><span class="p">()</span><span class="w"></span></code>. If this doesn't work, throw an exception
+on purpose. </p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you react to opening and closing of projects?</p>
+<p class="admonition-title">How can you react to the opening and closing of projects?</p>
 <p>Register a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProjectManagerListener">ProjectManagerListener</a> in a plugin via the class 
 <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EProjectManager">ProjectManager</a>.</p>
 </div>
@@ -1697,7 +1697,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/workbench/actions/model/DeleteModelHelper.java">DeleteModeHelper</a></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you add a language to the <em>Used Languages</em> settings of a model programmatically?</p>
+<p class="admonition-title">How can you programmatically add a language to the <em>Used Languages</em> settings of a model?</p>
 <ul>
 <li>Module level: <code class="highlight"><span class="p">((</span><span class="n">AbstractModule</span><span class="p">)</span><span class="w"> </span><span class="n">moduleA</span><span class="p">).</span><span class="na">addDependency</span><span class="p">(</span><span class="n">moduleB</span><span class="p">.</span><span class="na">getModuleReference</span><span class="p">(),</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"></span></code></li>
 <li>Model level: <code class="highlight"><span class="k">new</span><span class="w"> </span><span class="n">ModelImports</span><span class="p">(</span><span class="n">model</span><span class="p">).</span><span class="na">addUsedLanguage</span><span class="p">(</span><span class="n">language</span><span class="p">)</span><span class="w"></span></code></li>
@@ -1718,7 +1718,7 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
 <div class="admonition question">
 <p class="admonition-title">How do I save my project(s)?</p>
 <p>Use <code>SRepository.saveAll()</code>.</p>
-<p>For a single project, e.g. <code>ProjectHelper.getProjectRepository(project).saveAll();</code></p>
+<p>For a single project, e.g., <code>ProjectHelper.getProjectRepository(project).saveAll();</code></p>
 <p>For all opened projects, e.g.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
@@ -1739,7 +1739,7 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1898,13 +1898,13 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
         
         
           
-          <a href="../utility_classes/" class="md-footer__link md-footer__link--next" aria-label="Next: Utility classes" rel="next">
+          <a href="../utility_classes/" class="md-footer__link md-footer__link--next" aria-label="Next: Utility Classes" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Utility classes
+                Utility Classes
               </div>
             </div>
             <div class="md-footer__button md-icon">

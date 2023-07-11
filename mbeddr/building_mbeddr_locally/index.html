@@ -26,7 +26,7 @@
     
     
       
-        <title>Building Mbeddr locally - MPS Platform Docs</title>
+        <title>Building Mbeddr Locally - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Building Mbeddr locally
+              Building Mbeddr Locally
             
           </span>
         </div>
@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -876,7 +876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -972,7 +972,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           
   
   <span class="md-ellipsis">
-    Building Mbeddr locally
+    Building Mbeddr Locally
   </span>
   
 
@@ -983,7 +983,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Building Mbeddr locally
+    Building Mbeddr Locally
   </span>
   
 
@@ -1004,14 +1004,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#automatic-build" class="md-nav__link">
-    Automatic build
+    Automatic Build
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#manual-build" class="md-nav__link">
-    Manual build
+    Manual Build
   </a>
   
 </li>
@@ -1101,7 +1101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Mbeddr Doc documentation
+    Mbeddr Doc Documentation
   </span>
   
 
@@ -1141,7 +1141,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Development guide
+    Development Guide
   </span>
   
     
@@ -1168,7 +1168,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Miscellaneous topics
+    Miscellaneous Topics
   </span>
   
     
@@ -1224,7 +1224,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1463,14 +1463,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#automatic-build" class="md-nav__link">
-    Automatic build
+    Automatic Build
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#manual-build" class="md-nav__link">
-    Manual build
+    Manual Build
   </a>
   
 </li>
@@ -1511,21 +1511,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Building Mbeddr locally</h1>
+  <h1>Building Mbeddr Locally</h1>
 
-<p>When trying to build <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you have to overcome some stumbling blocks. This article isn&rsquo;t a full build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. You probably need to install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr></a>, especially the C-related tools, if you want to get everything built.</p>
-<h2 id="automatic-build">Automatic build<a class="headerlink" href="#automatic-build" title="Permanent link">&para;</a></h2>
+<p>When building <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you must overcome some stumbling blocks. This article isn't a complete build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. If you want to get everything built, install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr></a>, especially the C-related tools.</p>
+<h2 id="automatic-build">Automatic Build<a class="headerlink" href="#automatic-build" title="Permanent link">&para;</a></h2>
 <ol>
 <li><code>git clone git@github.com:mbeddr/mbeddr.core.git</code></li>
-<li>Switch to the branch that you need, if it isn&rsquo;t the master branch e.g. <abbr title="Meta Programming System">MPS</abbr> 2021.1.4: <code>git checkout maintenance/mps20211</code></li>
-<li>If not also set, open <abbr title="Meta Programming System">MPS</abbr>, go to preferences &rarr; <em>Appearance&amp;Behavior</em>&rarr;<em>Path Variables</em> and set <em>mbeddr.github.core.home</em> to the root directory of the mbeddr.core repository.</li>
-<li>Run <code>./gradlew build_mbeddr -PdisableMavenLocal=true</code> to fully build mbeddr.</li>
+<li>Switch to the branch that you need, if it isn't the master branch e.g., <abbr title="Meta Programming System">MPS</abbr> 2021.1.4: <code>git checkout maintenance/mps20211</code></li>
+<li>If not also set, open <abbr title="Meta Programming System">MPS</abbr>, go to preferences &rarr; <em>Appearance&amp;Behavior</em>&rarr;<em>Path Variables</em>, and set <em>mbeddr.github.core.home</em> to the root directory of the mbeddr.core repository.</li>
+<li>Run <code>./gradlew build_mbeddr -PdisableMavenLocal=true</code> to build mbeddr fully.</li>
 <li>Run <code>./gradlew -PdisableMavenLocal=true</code> instead to only build the platform.</li>
-<li>The tests and sandboxes are not built and have to be built manually.</li>
+<li>You have to build the tests and sandboxes manually.</li>
 </ol>
-<h2 id="manual-build">Manual build<a class="headerlink" href="#manual-build" title="Permanent link">&para;</a></h2>
+<h2 id="manual-build">Manual Build<a class="headerlink" href="#manual-build" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the full project and takes probably more than 10 minutes. You don&rsquo;t have to start this command from inside <abbr title="Meta Programming System">MPS</abbr> but when you execute it on the normal command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a plugin named <em>spawner</em> into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions-filter language, which needs to be installed to be able to use the language.</li>
+<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside <abbr title="Meta Programming System">MPS</abbr>, but when you execute it on the regular command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a <em>spawner</em> plugin into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.</li>
 <li>
 <p>You can now build all projects. Start with these projects in this order:</p>
 <ul>
@@ -1537,13 +1537,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </ul>
 </li>
 </ol>
-<p>If you get compilation errors, try a different order. Some projects like <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> and <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr>.aspect</em> don&rsquo;t have as many dependencies on other projects as other projects.</p>
-<p>If a lot of errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you probably don&rsquo;t have the spawner plugin installed.</p>
+<p>If you get compilation errors, try a different order. Some projects like <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> and <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr>.aspect</em> don't have as many dependencies on other projects as other projects.</p>
+<p>If a lot of errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you don't have the spawner plugin installed.</p>
 <div class="admonition warning">
-<p class="admonition-title">When anything goes wrong, and you want to start over, just clean the generated files: <code>git clean -xdf</code>. After you&rsquo;ve made a change, just (re)build the parts of the project that you&rsquo;ve changed and push the branch so that the build server can make a full build + execute the tests.</p>
+<p class="admonition-title">When anything goes wrong, and you want to start over, clean the generated files: <code>git clean -xdf</code>. After you've made a change, (re)build the parts of the project that you've changed and push the branch so that the build server can make a complete build + execute the tests.</p>
 </div>
 <div class="admonition hint">
-<p class="admonition-title">You don&rsquo;t need to open all dependent projects if you make a change in one project.</p>
+<p class="admonition-title">You don't need to open all dependent projects if you make a change in one project.</p>
 </div>
 
   <hr>
@@ -1551,7 +1551,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1710,13 +1710,13 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
         
           
-          <a href="../../platform_essentials/mpsutils/" class="md-footer__link md-footer__link--next" aria-label="Next: Mbeddr MPS utilities" rel="next">
+          <a href="../../platform_essentials/mpsutils/" class="md-footer__link md-footer__link--next" aria-label="Next: Mbeddr MPS Utilities" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Mbeddr MPS utilities
+                Mbeddr MPS Utilities
               </div>
             </div>
             <div class="md-footer__button md-icon">

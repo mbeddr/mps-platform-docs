@@ -26,7 +26,7 @@
     
     
       
-        <title>Behavior aspect - MPS Platform Docs</title>
+        <title>Behavior Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Behavior aspect
+              Behavior Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -829,7 +829,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#bugsmissing-features" class="md-nav__link">
-    Bugs/missing features
+    Bugs/Missing Features
   </a>
   
 </li>
@@ -1113,7 +1113,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1155,7 +1155,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1269,7 +1269,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1373,7 +1373,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1473,7 +1473,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1728,7 +1728,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#bugsmissing-features" class="md-nav__link">
-    Bugs/missing features
+    Bugs/Missing Features
   </a>
   
 </li>
@@ -1764,7 +1764,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="behavior-aspect">Behavior aspect<a class="headerlink" href="#behavior-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="behavior-aspect">Behavior Aspect<a class="headerlink" href="#behavior-aspect" title="Permanent link">&para;</a></h1>
 <p>The behavior aspect can be used for defining methods for the concepts of the language.</p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/behavior.html">official documentation</a></li>
@@ -1780,7 +1780,7 @@ More information can be found in <a href="https://www.jetbrains.com/help/mps/pro
 <p class="admonition-title">Where can you save temporary information about nodes?</p>
 <p>Consider saving temporary data about nodes in annotations and user objects (<a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529">node/.putUserObject</a>, <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529">node/.getUserObject</a>)
 instead of introducing properties. 
-You can store and access Java objects in <code>SNode::putUserObject()</code> as key-value pairs) where you normally could not access them in the <abbr title="Meta Programming System">MPS</abbr> context, e.g. storing them as node members and access them in an editor, a checking rule or anything else. This approach is difficult to trace and maintain and should only be used in exceptional cases.
+You can store and access Java objects in <code>SNode::putUserObject()</code> as key-value pairs) where you usually could not access them in the <abbr title="Meta Programming System">MPS</abbr> context, e.g. keeping them as node members and access them in an editor, a checking rule or anything else. This approach is hard to trace and maintain and should only be used in exceptional cases.
 For the generator, consult the section <em>Transferring User Data</em> of the <a href="https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference">generator documentation</a>.</p>
 </div>
 <details class="question">
@@ -1797,7 +1797,7 @@ For the generator, consult the section <em>Transferring User Data</em> of the <a
 </ul>
 </details>
 <div class="admonition question">
-<p class="admonition-title">How can you delete a child node from a node where the child’s concept no longer exists and the parent node&rsquo;s child link is no longer defined?</p>
+<p class="admonition-title">How can you delete a child node from a node where the child’s concept no longer exists and the parent node's child link is no longer defined?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">node</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">where</span><span class="p">(</span><span class="err">…</span><span class="p">).</span><span class="na">foreach</span><span class="w"> </span><span class="p">{</span><span class="n">it</span><span class="o">=&gt;</span><span class="w"> </span>
@@ -1809,8 +1809,7 @@ For the generator, consult the section <em>Transferring User Data</em> of the <a
 <summary>Why does the virtual method have <em>isVirtual=false</em>?</summary>
 <blockquote>
 <p>Given there is a virtual behavior method <code>getPresentation</code>.
-When I override <code>getPresentation</code> in a subconcept
-then I see it displays the overriding method to be virtual.</p>
+When I override <code>getPresentation</code> in a subconcept, it displays the overriding method to be virtual.</p>
 <p><a class="glightbox" href="../../img/virtual_getPresentation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="virtual getPresentation" src="../../img/virtual_getPresentation.png" /></a></p>
 <p>Yet, I see that <code>methodDeclNode.isVirtual</code> is <em>null</em>.</p>
 <p><a class="glightbox" href="../../img/methodDeclNode_isVirtual_null.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="methodDeclNode isVirtual is null" src="../../img/methodDeclNode_isVirtual_null.png" /></a></p>
@@ -1824,7 +1823,7 @@ then I see it displays the overriding method to be virtual.</p>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>The editor shows that a method is <em>virtual</em> when <code>isVirtual()</code> is true. As a result, overriding methods of virtual methods are not necessarily having <code>isVirtual=true</code>, but will still display <em>virtual</em>.</p>
-<p>The rationale behind this may be that if a method is overriding another one, both of them must be virtual. This is needed so that the runtime will find <abbr title="output">out</abbr> which of the two implementations to call. So we may read the <code>isVirtual</code> more precisely as „is explicitly virtual&rdquo;, and <code>isVirtual()</code> as &ldquo;is effectively virtual&rdquo;.</p>
+<p>The rationale behind this may be that if one method overrides another one, both must be virtual. This information is needed so that the runtime will find <abbr title="output">out</abbr> which of the two implementations to call. So we may read the <code>isVirtual</code> more precisely as "is explicitly virtual", and <code>isVirtual()</code> as "is effectively virtual".</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
@@ -1843,10 +1842,10 @@ then I see it displays the overriding method to be virtual.</p>
 </ul>
 <p>The node factory is <strong>not</strong> called when</p>
 <ul>
-<li>using quotations <code>&lt;Car()&gt;</code>.</li>
-<li>viewing the node in the editor.</li>
-<li>adding it as a root with <code>model.add root(&lt;Car()&gt;)</code>.</li>
-<li>adding it as a root with <code>model.add new root(Car)</code>.</li>
+<li>You use quotations to create the node e.g. <code>&lt;Car()&gt;</code>.</li>
+<li>Viewing the node in the editor.</li>
+<li>Adding it as a root with <code>model.add root(&lt;Car()&gt;)</code>.</li>
+<li>Adding it as a root with <code>model.add new root(Car)</code>.</li>
 </ul>
 <p><a class="glightbox" href="../../img/node_factory_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="node factory:car" src="../../img/node_factory_car.png" width="600px" /></a></p>
 <p><strong>Using a behavior constructor</strong></p>
@@ -1858,8 +1857,8 @@ then I see it displays the overriding method to be virtual.</p>
 <p>Using a quotation will <strong>not</strong> call this constructor.</p>
 <p><a class="glightbox" href="../../img/Car_behavior.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Behavior: car" src="../../img/Car_behavior.png" width="600px" /></a></p>
 <p><strong>Using a property getter</strong></p>
-<p>You could use an <code>initialized</code> variable and use a combination of property getters and setters.</p>
-<p>This would work only for properties though, not for children or references, and requires quotations to also set the <code>initialized</code> value if trying to override the default. Furthermore, your quotations will still be marked. </p>
+<p>You could use an <code>initialized</code> variable and a combination of property getters and setters.</p>
+<p>This solution would work only for properties, not children or references, and requires quotations to set the initialized value if trying to override the default. Furthermore, your quotations will still be marked. </p>
 <p><a class="glightbox" href="../../img/constraints_Car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Constraints: Car" src="../../img/constraints_Car.png" width="500px" /></a></p>
 <p><figure markdown>
 <a class="glightbox" href="../../img/car_usage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Usage: Car" src="../../img/car_usage.png" width="500px" /></a>
@@ -1868,7 +1867,7 @@ then I see it displays the overriding method to be virtual.</p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Can you access the parent in the constructor?</p>
-<p>No, it doesn&rsquo;t work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory</a> to access the parent instead.</p>
+<p>No, it doesn't work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory</a> to access the parent instead.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you query the context in a node constructor?</p>
@@ -1876,11 +1875,11 @@ then I see it displays the overriding method to be virtual.</p>
 <p>Does anyone know a way to find the contextExpression from the node constructor?</p>
 </blockquote>
 <p>Use node factories instead of constructors and make use of the <code>enclosingNode</code> parameter. 
-Constructors are invoked always when creating a node. Node factories are invoked only by the editor and by the <code>new initialized ...</code> expression.</p>
-<p>Note: Node factories are invoked in the inverse order of constructors. <abbr title="Meta Programming System">MPS</abbr> will first invoke the specific node factory and the more generic ones if they exist.</p>
+Constructors are invoked always when creating a node. Node factories are executed only by the editor and by the <code>new initialized ...</code> expression.</p>
+<p>Note: Node factories are invoked in the inverse order of constructors. <abbr title="Meta Programming System">MPS</abbr> will first execute the specific node factory and the more generic ones if they exist.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Is there a way to call the constructor of a super concept inside the constructor of a <abbr title="subtraction">sub</abbr>-concept?</p>
+<p class="admonition-title">Is there a way to call the constructor of a super-concept inside the constructor of a <abbr title="subtraction">sub</abbr>-concept?</p>
 <blockquote>
 <p>Something like:
 <code>java
@@ -1890,10 +1889,10 @@ superConcept()
 </blockquote>
 <p><code class="highlight"><span class="n">concept</span><span class="o">/</span><span class="n">MyConcept</span><span class="o">/</span><span class="p">.</span><span class="na">new</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="nf">instance</span><span class="p">()</span><span class="w"></span></code> provides this behavior.</p>
 </div>
-<h2 id="bugsmissing-features">Bugs/missing features<a class="headerlink" href="#bugsmissing-features" title="Permanent link">&para;</a></h2>
+<h2 id="bugsmissing-features">Bugs/Missing Features<a class="headerlink" href="#bugsmissing-features" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can&rsquo;t be used in this place. There are ways to circumvent this by using lower level code but it won&rsquo;t help. I think you also can&rsquo;t really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure</a>.</p>
+<p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you use a more specific return type while overriding a behavior method?</p>
@@ -1921,7 +1920,7 @@ superConcept()
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

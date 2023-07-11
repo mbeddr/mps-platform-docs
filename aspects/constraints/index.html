@@ -26,7 +26,7 @@
     
     
       
-        <title>Constraints aspect - MPS Platform Docs</title>
+        <title>Constraints Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Constraints aspect
+              Constraints Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1120,7 +1120,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1162,7 +1162,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1276,7 +1276,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1380,7 +1380,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1480,7 +1480,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1778,7 +1778,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="constraints-aspect">Constraints aspect<a class="headerlink" href="#constraints-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="constraints-aspect">Constraints Aspect<a class="headerlink" href="#constraints-aspect" title="Permanent link">&para;</a></h1>
 <p>The constraints aspect defines constraints for the concepts of the language.</p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/constraints.html">official documentation</a></li>
@@ -1786,12 +1786,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you hide inapplicable operands in dot expressions?</p>
-<p><a href="https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/">Dot expressions: hiding inapplicable operands</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/">Dot expressions: hiding inapplicable operands</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there any useful helper classes?</p>
 <ul>
-<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.constraints%28MPS.Core%2F%29%2F%7EModelConstraints">ModelConstraints</a>: This class can be used to calculate the constraint/scope of a specific concept/node programmatically.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.constraints%28MPS.Core%2F%29%2F%7EModelConstraints">ModelConstraints</a>: This class can calculate the constraint/scope of a specific concept/node programmatically.</li>
 </ul>
 </div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
@@ -1806,31 +1806,32 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </span><a href="http://mbeddr.com/platform.html">mbeddr platform</a>.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">The property value isn&rsquo;t valid.</p>
+<p class="admonition-title">The property value isn't valid.</p>
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/22-invalid-property-values/">Invalid property values</a></p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you emulate references?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <h2 id="scopes">Scopes<a class="headerlink" href="#scopes" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you filter scopes? Which scopes are available?</p>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664">FilteringScope</a> takes an existing scope and can therefore be used for filtering. Some other scope implementations are also listed in <a href="https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope">Using reference scope | <abbr title="Meta Programming System">MPS</abbr> documentation</a>.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664">FilteringScope</a> takes an existing scope and can do the filtering. <a href="https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope">Using reference scope | <abbr title="Meta Programming System">MPS</abbr> documentation</a>
+lists some other scope implementations.</p>
 </div>
 <details class="question">
-<summary>What&rsquo;s the best way to wrap a list of nodes into a <em>Scope</em>?</summary>
+<summary>What's the best way to wrap a list of nodes into a <em>Scope</em>?</summary>
 <blockquote>
-<p>I have a list of nodes and want to wrap them into a scope
+<p>I have a list of nodes and want to wrap them into a scope.
 How do you do that?</p>
 </blockquote>
-<p>You&rsquo;re probably looking for <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forResolvableElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>.</p>
+<p>You're probably looking for <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forResolvableElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>.</p>
 <p><strong>forResolvableElements</strong>
 creates list scopes and also implements getName(child) like forNamedElements, yet returning the resolveInfo if the node is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1196978630214">IResolveInfo</a>, the name if it is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> or else calls <code class="highlight"><span class="n">getPresentation</span><span class="p">()</span><span class="w"></span></code>.</p>
 <p><strong>forNamedElements</strong></p>
-<p>I&rsquo;m unsure about the use-case of <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forNamedElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>, but it behaves unexpected in some cases:</p>
-<p>Note that elements with a blank name are not part of the scope created by <code>ListScope.forNamedElements(sequence&lt;node&lt;&gt;&gt; elements)</code>. They&rsquo;<abbr title="linked list">ll</abbr> get silently omitted.</p>
+<p>I'm unsure about the use-case of <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forNamedElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>, but it behaves unexpected in some cases:</p>
+<p>Note that elements with a blank name are not part of the scope created by <code>ListScope.forNamedElements(sequence&lt;node&lt;&gt;&gt; elements)</code>. They'<abbr title="linked list">ll</abbr> get silently omitted.</p>
 <p>Note that elements that are not an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a>, will make <code>forNamedElements</code> throw an exception.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
@@ -1839,9 +1840,9 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
 <p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F8401916545537277021">CompositeScope</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What&rsquo;s the difference between <em>parent scope</em> and <em>super.getScope</em>?</p>
-<p><code>parent scope</code> asks your node or up in the hierarchy for the scope until it finds a scope provider.
-<code>super.getScope</code> will use the implementation from the super concept.</p>
+<p class="admonition-title">What's the difference between <em>parent scope</em> and <em>super.getScope</em>?</p>
+<p>A parent scope asks your node or up in the hierarchy for the scope until it finds a scope provider.
+<code>super.getScope</code> will use the implementation from the super-concept.</p>
 </div>
 
   <hr>
@@ -1849,7 +1850,7 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

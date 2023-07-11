@@ -26,7 +26,7 @@
     
     
       
-        <title>Language design - MPS Platform Docs</title>
+        <title>Language Design - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Language design
+              Language Design
             
           </span>
         </div>
@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -401,7 +401,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -876,7 +876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -976,7 +976,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1054,7 +1054,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           
   
   <span class="md-ellipsis">
-    Language design
+    Language Design
   </span>
   
 
@@ -1065,7 +1065,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Language design
+    Language Design
   </span>
   
 
@@ -1150,15 +1150,15 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#formal-methods" class="md-nav__link">
-    Formal methods
+    Formal Methods
   </a>
   
-    <nav class="md-nav" aria-label="Formal methods">
+    <nav class="md-nav" aria-label="Formal Methods">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#z3-theorem-prover" class="md-nav__link">
-    Z3 theorem prover
+    Z3 Theorem Prover
   </a>
   
 </li>
@@ -1187,7 +1187,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    User experience
+    User Experience
   </span>
   
 
@@ -1207,7 +1207,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    UI patterns
+    UI Patterns
   </span>
   
 
@@ -1469,15 +1469,15 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#formal-methods" class="md-nav__link">
-    Formal methods
+    Formal Methods
   </a>
   
-    <nav class="md-nav" aria-label="Formal methods">
+    <nav class="md-nav" aria-label="Formal Methods">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#z3-theorem-prover" class="md-nav__link">
-    Z3 theorem prover
+    Z3 Theorem Prover
   </a>
   
 </li>
@@ -1538,86 +1538,86 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="language-design">Language design<a class="headerlink" href="#language-design" title="Permanent link">&para;</a></h1>
+<h1 id="language-design">Language Design<a class="headerlink" href="#language-design" title="Permanent link">&para;</a></h1>
 <h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/articles/patterns/inline-definitions/">Inline Definitions</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/">Escape hatch</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/23-another-form-of-escape-hatch/">Another form of escape hatch</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/">Externalized names</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/">Empty lines</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://www.f1re.io/externalized-names">Externalized names (and other common attributes)</a>(<em>F1RE&rsquo;s blog</em>)</li>
-<li><a href="https://www.f1re.io/multi-generators">Multiple generators for same language</a>)(<em>F1RE&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/high-level-structure-of-dsls-three-patterns-7375c8baa2d3">High-Level Structure of DSLs: Three Patterns</a>)(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://specificlanguages.com/articles/patterns/inline-definitions/">Inline Definitions</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/26-language-design-pattern-escape-hatch/">Escape hatch</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/23-another-form-of-escape-hatch/">Another form of escape hatch</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/08-language-design-pattern-externalized-names/">Externalized names</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/07-language-design-pattern-empty-lines/">Empty lines</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://www.f1re.io/externalized-names">Externalized names (and other common attributes)</a>(<em>F1RE's blog</em>)</li>
+<li><a href="https://www.f1re.io/multi-generators">Multiple generators for same language</a>)(<em>F1RE's blog</em>)</li>
+<li><a href="https://languageengineering.io/high-level-structure-of-dsls-three-patterns-7375c8baa2d3">High-Level Structure of DSLs: Three Patterns</a>)(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/08-on-language-design/">On language design</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/my-dsl-development-process/">My <abbr title="Domain-Specific Language">DSL</abbr> development process</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/evolving-your-language-gracefully/">Evolving your language gracefully</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-01/21-making-distinctions/">Making distinctions</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-01/28-dsls-vs-business-rules/">DSLs vs business rules</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps-9e9c48d8e15b">The Philosophy behind Language Engineering with <abbr title="Meta Programming System">MPS</abbr></a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832">Thoughts on Declarativeness</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6">Why an Agile Process is not Enough</a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99">What makes a good Business <abbr title="Domain-Specific Language">DSL</abbr></a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600">What goes into Language Design … Beyond the Domain</a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513">Categorising the Complexities in Programming</a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7">Fusing Modeling and Programming into Language-Oriented Programming</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/">Context Boundaries in Language Engineering Projects</a>(<em>log verbose&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a">Why documents shouldn&rsquo;t be the basis of a domain analysis</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4">When is something a (domain-specific) language?</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://www.f1re.io/model-driven-engineering">What is Model Driven Engineering</a>(<em>F1RE&rsquo;s blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/19-ddd-vs-le/">Domain-driven design vs. language engineering</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/08-on-language-design/">On language design</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/my-dsl-development-process/">My <abbr title="Domain-Specific Language">DSL</abbr> development process</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/evolving-your-language-gracefully/">Evolving your language gracefully</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-01/21-making-distinctions/">Making distinctions</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-01/28-dsls-vs-business-rules/">DSLs vs. business rules</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://languageengineering.io/the-philosophy-behind-language-engineering-with-mps-9e9c48d8e15b">The Philosophy Behind Language Engineering with <abbr title="Meta Programming System">MPS</abbr></a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://languageengineering.io/thoughts-on-declarativeness-fc4cfd4f1832">Thoughts on Declarativeness</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://languageengineering.io/why-an-agile-process-is-not-enough-74b131ca67a6">Why an Agile Process is not Enough</a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://languageengineering.io/what-makes-a-good-business-dsl-82b8e15cff99">What makes a good Business <abbr title="Domain-Specific Language">DSL</abbr></a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://languageengineering.io/what-goes-into-language-design-beyond-the-domain-d91ee58e600">What Goes into Language Design … Beyond the Domain</a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://languageengineering.io/categorising-the-complexities-in-programming-6f4df8e2e513">Categorizing the Complexities in Programming</a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/fusing-modeling-and-programming-into-language-oriented-programming-9745bc9b47f7">Fusing Modeling and Programming into Language-Oriented Programming</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://blog.logv.ws/2021/01/08/context-boundaries-in-language-engineering-projects/">Context Boundaries in Language Engineering Projects</a>(<em>log verbose's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/why-documents-shouldnt-be-the-basis-of-a-domain-analysis-dc46047a346a">Why documents shouldn't be the basis of domain analysis</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4">When is something a (domain-specific) language?</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://www.f1re.io/model-driven-engineering">What is Model Driven Engineering</a>(<em>F1RE's blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/19-ddd-vs-le/">Domain-driven design vs. language engineering</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <h3 id="introducing-dsls">Introducing DSLs<a class="headerlink" href="#introducing-dsls" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://markusvoelter.medium.com/why-it-is-so-hard-to-change-established-processes-in-organizations-ea78b4dfd090">Why it is so hard to change established processes in organizations</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/introducing-a-tool-successfully-30bcf59dd99">Introducing a tool successfully</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-minimum-infrastructure-for-running-languages-and-models-da922aa3b4b4">The minimum infrastructure for running languages and models</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/why-i-emphasize-dsls-for-domain-experts-ddd38860570a">Why I emphasize DSLs for Domain Experts</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-split-brain-of-dsls-9f396761ef1b">The split brain of DSLs</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/why-it-is-so-hard-to-change-established-processes-in-organizations-ea78b4dfd090">Why it is so hard to change established processes in organizations</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/introducing-a-tool-successfully-30bcf59dd99">Introducing a tool successfully</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-minimum-infrastructure-for-running-languages-and-models-da922aa3b4b4">The minimum infrastructure for running languages and models</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/why-i-emphasize-dsls-for-domain-experts-ddd38860570a">Why I emphasize DSLs for Domain Experts</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-split-brain-of-dsls-9f396761ef1b">The split brain of DSLs</a>(<em>Markus Voelter's blog</em>)</li>
 <li><a href="https://markusvoelter.medium.com/how-to-run-a-technical-workshop-b14e2fd0bda4">How to run a technical workshop</a></li>
 </ul>
 <h3 id="perspectives-on-dsl">Perspectives on <abbr title="Domain-Specific Language">DSL</abbr><a class="headerlink" href="#perspectives-on-dsl" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-knowledge-management-7be0d6be3cdc">Knowledge Management</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-production-knowledge-eb314bf5864">Production Knowledge</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-software-architecture-fd20ee4bcc23">Software Architecture</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-software-quality-26515ce098a">Software Quality</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-knowledge-management-7be0d6be3cdc">Knowledge Management</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-production-knowledge-eb314bf5864">Production Knowledge</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsl-software-architecture-fd20ee4bcc23">Software Architecture</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/perspectives-on-dsls-software-quality-26515ce098a">Software Quality</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h3 id="comparisons">Comparisons<a class="headerlink" href="#comparisons" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9">DSLs vs. &ldquo;Learning Languages&rdquo;</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/">Low Code or Domain Specific Languages?</a>(<em>log verbose&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44">Tool Lock-in vs. Semantic Lock-in</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/dsls-vs-learning-languages-5d5019d519e9">DSLs vs. "Learning Languages"</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://blog.logv.ws/2021/10/29/low-code-or-domain-specific-languages/">Low Code or Domain-Specific Languages?</a>(<em>log verbose's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/tool-lock-in-vs-semantic-lock-in-4f87600c7d44">Tool Lock-in vs. Semantic Lock-in</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h3 id="fachlichkeit">Fachlichkeit<a class="headerlink" href="#fachlichkeit" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://languageengineering.io/an-argument-for-the-isolation-of-fachlichkeit-3a67a939d23b">An Argument for the Isolation of &ldquo;Fachlichkeit&rdquo;</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-hidden-complexities-in-fachlichkeit-23884a4d8d0a">The Hidden Complexities in Fachlichkeit</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-hidden-layer-between-the-fachlichkeit-and-the-ilities-7d850fde00bf">The hidden layer between the Fachlichkeit and the -ilities</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://languageengineering.io/an-argument-for-the-isolation-of-fachlichkeit-3a67a939d23b">An Argument for the Isolation of "Fachlichkeit"</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-hidden-complexities-in-fachlichkeit-23884a4d8d0a">The Hidden Complexities in Fachlichkeit</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-hidden-layer-between-the-fachlichkeit-and-the-ilities-7d850fde00bf">The hidden layer between the Fachlichkeit and the -ilities</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h2 id="programming">Programming<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86">Teaching the Basics of Programming to Domain Experts</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/thinking-vs-coding-9d11a77e7ac7">Thinking vs. Coding</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/teaching-the-basics-of-programming-to-domain-experts-fa15a3f51b86">Teaching the Basics of Programming to Domain Experts</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/thinking-vs-coding-9d11a77e7ac7">Thinking vs. Coding</a>(<em>Markus Voelter's blog</em>)</li>
 <li><a href="https://markusvoelter.github.io/ProgrammingBasics/">ProgrammingBasics - How to think like a programmer</a></li>
 </ul>
 <h2 id="safety">Safety<a class="headerlink" href="#safety" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://languageengineering.io/safety-and-security-from-a-language-engineering-perspective-24bb5fc92409">Safety and Security from a Language Engineering Perspective</a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/testing-languages-generators-and-runtimes-in-a-safety-critical-system-2e8e8d34b62a">Testing Languages, Generators and Runtimes in a Safety-Critical System</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://languageengineering.io/safety-and-security-from-a-language-engineering-perspective-24bb5fc92409">Safety and Security from a Language Engineering Perspective</a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/testing-languages-generators-and-runtimes-in-a-safety-critical-system-2e8e8d34b62a">Testing Languages, Generators and Runtimes in a Safety-Critical System</a>(<em>Markus Voelter's blog</em>)</li>
 <li><a href="http://voelter.de/data/pub/MPS-in-Safety-1.0.pdf">Using Language Workbenches and Domain-Specific Languages
-  for Safety-Critical Software Development</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+  for Safety-Critical Software Development</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
-<h2 id="formal-methods">Formal methods<a class="headerlink" href="#formal-methods" title="Permanent link">&para;</a></h2>
+<h2 id="formal-methods">Formal Methods<a class="headerlink" href="#formal-methods" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf">An Overview of Program Analysis using Formal Methods</a></li>
-<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48">Thoughts on Formal Verification and DSLs</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024">Thoughts on X-by-Construction</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="http://voelter.de/data/books/introToFormalMethodsAndDSLs-1.1.pdf">An Overview of Program Analysis Using Formal Methods</a></li>
+<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-formal-verification-and-dsls-3967577aea48">Thoughts on Formal Verification and DSLs</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/isola-2018-thoughts-on-x-by-construction-3f027e1ee024">Thoughts on X-by-Construction</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
-<h3 id="z3-theorem-prover">Z3 theorem prover<a class="headerlink" href="#z3-theorem-prover" title="Permanent link">&para;</a></h3>
+<h3 id="z3-theorem-prover">Z3 Theorem Prover<a class="headerlink" href="#z3-theorem-prover" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://theory.stanford.edu/~nikolaj/programmingz3.html">Programming Z3 (tutorial)</a></li>
 <li><a href="https://www.pm.inf.ethz.ch/education/courses/program-verification.html#:~:text=lec%C2%ADtures%20%26%20ex%C2%ADer%C2%ADcises">Program verification with Z3 (course slides)</a></li>
@@ -1631,7 +1631,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1773,7 +1773,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../clean_code/java/java_style_guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Java style guide" rel="prev">
+          <a href="../../clean_code/java/java_style_guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Java Style Guide" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1783,20 +1783,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                 Previous
               </span>
               <div class="md-ellipsis">
-                Java style guide
+                Java Style Guide
               </div>
             </div>
           </a>
         
         
           
-          <a href="../user_experience/" class="md-footer__link md-footer__link--next" aria-label="Next: User experience" rel="next">
+          <a href="../user_experience/" class="md-footer__link md-footer__link--next" aria-label="Next: User Experience" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                User experience
+                User Experience
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -881,7 +881,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -896,7 +896,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1066,7 +1066,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    IntelliJ integration
+    IntelliJ Integration
   </span>
   
 
@@ -1177,7 +1177,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1327,7 +1327,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1615,8 +1615,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Java Chromium Embedded Framework</h1>
 
 <p>Start with the page <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> - Java Chromium Embedded Framework</a> of the IntelliJ platform plugin SDK.</p>
-<p><abbr title="Java Chromium Embedded Framework">JCEF</abbr> should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although it was introduced in IntelliJ IDEA 2020.1 it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions
-because of classloading issues. The browser itself (<code>JBCefBrowser</code>) can be embedded in the <abbr title="Meta Programming System">MPS</abbr> editor with a Java Swing component cell.
+<p><abbr title="Java Chromium Embedded Framework">JCEF</abbr> should work with <abbr title="Meta Programming System">MPS</abbr> 2021.1.4 and higher. Although introduced in IntelliJ IDEA 2020.1, it might not work in older <abbr title="Meta Programming System">MPS</abbr> versions because of classloading issues. You can embed The browser (<code>JBCefBrowser</code>) in the <abbr title="Meta Programming System">MPS</abbr> editor with a Java Swing component cell.
 For simple use cases, it is enough to call <code>browser.loadHTML</code> to load some HTML code. The content can be created by Java or by
 calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a href="http://localhost:8000/mps-platform-docs/aspects/textgen">TextGen</a>.</p>
 <p>Existing Java documentation and examples on the web:</p>
@@ -1627,10 +1626,9 @@ calling the <abbr title="Meta Programming System">MPS</abbr> generator or <a hre
 <li><a href="https://bitbucket.org/chromiumembedded/cef/wiki/Home">CEF documentation (non Java version)</a></li>
 </ul>
 <p>The third link contains an answer on how to do bidirectional communication between the embedded browser and Java (<abbr title="Meta Programming System">MPS</abbr>): You have
-to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication is done through JS. You then have a <code>subscribe</code> method that you can use to
+to create a browser pipe between Java (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/cf85d39901af4d89ba8b7bd5099d3ec25b49af27/src/main/kotlin/com/icthh/xm/actions/WebDialog.kt#L138">implementation</a>) and JS (<a href="https://github.com/xm-online/xm-online-idea-plugin/blob/5d511177394067d87f68e50898f0d631adb5dbd8/src/main/webapp/src/index.html">implementation</a>). The communication uses JS. You then have a <code>subscribe</code> method that you can use to
 listen to events posted through a specific tag or create an event using the <code>post</code> method. These methods are available in Java and JS.</p>
-<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because they 
-are drawn by Java itself. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>&lsquo; reloading capabilities, it is important to correctly dispose of the browser when it isn&rsquo;t needed anymore. The following code registers a listener for the editor component
+<p><strong>Warning</strong>: <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ IDEA use Swing to create all the <abbr title="User Interface">UI</abbr> components. They are considered lightweight because Java itself draws them. <abbr title="Java Chromium Embedded Framework">JCEF</abbr> uses native code, and it is a heavyweight component. Especially with <abbr title="Meta Programming System">MPS</abbr>' reloading capabilities, t is important to dispose of the browser when it isn't needed. The following code registers a listener for the editor component
 dispose event and also closes the browser:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1667,7 +1665,7 @@ dispose event and also closes the browser:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1809,7 +1807,7 @@ dispose event and also closes the browser:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../intellij_integration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: IntelliJ integration" rel="prev">
+          <a href="../../intellij_integration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: IntelliJ Integration" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1819,20 +1817,20 @@ dispose event and also closes the browser:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                IntelliJ integration
+                IntelliJ Integration
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../mps_startup/" class="md-footer__link md-footer__link--next" aria-label="Next: What happens on MPS startup" rel="next">
+          <a href="../../mps_startup/" class="md-footer__link md-footer__link--next" aria-label="Next: What Happens on MPS Startup" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                What happens on MPS startup
+                What Happens on MPS Startup
               </div>
             </div>
             <div class="md-footer__button md-icon">

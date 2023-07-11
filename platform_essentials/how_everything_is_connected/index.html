@@ -26,7 +26,7 @@
     
     
       
-        <title>How everything is connected - MPS Platform Docs</title>
+        <title>How Everything Is Connected - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How everything is connected
+              How Everything Is Connected
             
           </span>
         </div>
@@ -318,7 +318,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -787,7 +787,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Platform essentials
+            Platform Essentials
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -810,7 +810,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    How everything is connected
+    How Everything Is Connected
   </span>
   
 
@@ -851,7 +851,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Common concepts and interfaces
+    Common Concepts and Interfaces
   </span>
   
 
@@ -871,7 +871,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Interpreter, coverage and tracing
+    Interpreter, Coverage, and Tracing
   </span>
   
 
@@ -891,7 +891,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Platform build scripts
+    Platform Build Scripts
   </span>
   
 
@@ -911,7 +911,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Build folder
+    Build Folder
   </span>
   
 
@@ -951,7 +951,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessing the project
+    Accessing the Project
   </span>
   
 
@@ -1057,7 +1057,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1157,7 +1157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1408,27 +1408,27 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>How everything is connected</h1>
+  <h1>How Everything Is Connected</h1>
 
 <p>This page describes the connections between <abbr title="Meta Programming System">MPS</abbr>, IntelliJ Community, <abbr title="JetBrains Runtime">JBR</abbr>, TeamCity, and all open-source repositories.</p>
-<p>JetBrains <abbr title="Meta Programming System">MPS</abbr> is based on <strong><a href="https://github.com/JetBrains/intellij-community">IntelliJ IDEA</a></strong>. It doesn&rsquo;t use all the plugins but rather extends it through the <a href="https://plugins.jetbrains.com/docs/intellij/welcome.html">IntelliJ platform SDK</a> to add support for tools that can be used to design domain-specific languages. The projectional editor of <abbr title="Meta Programming System">MPS</abbr> is a custom editor implementation instead of the standard text editor therefore many text-based features of IntelliJ won&rsquo;t work (such as syntax <a href="https://www.jetbrains.com/help/idea/language-injections-settings.html">language injections</a> or <a href="https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html">code templates</a>). Some features are unused or disabled such as the <a href="https://plugins.jetbrains.com/docs/intellij/psi.html">Program Structure Interface</a> which is normally used as the layer responsible for parsing files and creating the syntactic and semantic code model.</p>
+<p>JetBrains <abbr title="Meta Programming System">MPS</abbr> is based on <strong><a href="https://github.com/JetBrains/intellij-community">IntelliJ IDEA</a></strong>. It doesn't use all the plugins but extends it through the <a href="https://plugins.jetbrains.com/docs/intellij/welcome.html">IntelliJ platform SDK</a> to add support for tools that facilitate designing domain-specific languages. The projectional editor of <abbr title="Meta Programming System">MPS</abbr> is a custom editor implementation instead of the standard text editor. Therefore, many text-based features of IntelliJ won't work (such as syntax <a href="https://www.jetbrains.com/help/idea/language-injections-settings.html">language injections</a> or <a href="https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html">code templates</a>). Some features are unused or disabled such as the <a href="https://plugins.jetbrains.com/docs/intellij/psi.html">Program Structure Interface</a>, which the platform typically uses as the layer responsible for parsing files and creating the syntactic and semantic code model.</p>
 <p><abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA requires a Java Runtime. Both use the <a href="https://github.com/JetBrains/JetBrainsRuntime">JetBrains Runtime</a>, a fork of OpenJDK. It includes several enhancements in font rendering, ligatures, HiDPI support, windowing/focus subsystems, performance improvements, and bug fixes. The repository <strong><a href="https://github.com/mbeddr/build.publish.jdk">mbeddr/build.publish.jdk</a></strong> publishes the needed runtimes for the different <abbr title="Meta Programming System">MPS</abbr> versions on the <strong><a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis nexus server</a></strong>.</p>
 <p>A zipped version of all <abbr title="Meta Programming System">MPS</abbr> versions, as well as the most import components of <abbr title="Meta Programming System">MPS</abbr> (jar files) such as the editor <abbr title="Application Programming Interface">API</abbr> or the model checker, are also published through the repository <strong><a href="https://github.com/mbeddr/build.publish.mps">mbeddr/build.publish.mps</a></strong> to the <strong><a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis nexus server</a></strong>.</p>
-<p>Custom <a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#processoverview"><abbr title="Rich Client Platform">RCP</abbr> version of <abbr title="Meta Programming System">MPS</abbr></a> can be created which are customized versions of <abbr title="Meta Programming System">MPS</abbr>. The first big <abbr title="Rich Client Platform">RCP</abbr> was <a href="http://mbeddr.com/">mbeddr</a> with its repository located at <strong><a href="https://github.com/mbeddr/mbeddr.core">mbeddr/mbeddr.core</a></strong>. The old homepage is located at <strong><a href="https://github.com/mbeddr/mbeddr.github.io">mbeddr/mbeddr.github.io</a></strong>.
-Useful plugins were extracted into the subproject <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil</em> with its old documentation hosted at <a href="http://mbeddr.com/platform.html">mbeddr.<abbr title="commercial/common/communication">com</abbr>/platform.html</a>. Some plugins and languages were later moved to a new repository <strong><a href="https://github.com/JetBrains/MPS-extensions">JetBrains/<abbr title="Meta Programming System">MPS</abbr>-extensions</a></strong>, especially the editor-related languages. The repository is hosted by JetBrains. A list of all extensions in this repository can be found <a href="https://jetbrains.github.io/MPS-extensions/extensions/full_extensions_list/">here</a>. Many extensions were contributed by <a href="https://www.itemis.com/en/it-services/methods-and-tools/mps">itemis</a>, a few of them by <a href="https://dslfoundry.com/">DSLFoundry</a>. The documentation for both platforms is hosted on <a href="https://jetbrains.github.io/MPS-extensions/">GitHub</a> and on the <a href="../mpsutils/">current website</a> respectively. Mbeddr.core has a dependency on <abbr title="Meta Programming System">MPS</abbr>-Extensions.</p>
-<p>The mbeddr organization also hosts <a href="https://github.com/mbeddr/mbeddr.formal">mbeddr.formal: FASTEN (FormAl SpecificaTion ENvironment)</a> which is a set of DSLs to experiment with rigorous systems and safety engineering and <a href="https://github.com/mbeddr/mps-qa">mps-qa</a> which is a quality assurance tooling for <abbr title="Meta Programming System">MPS</abbr> (<a href="https://specificlanguages.com/posts/2022-04/12-mps-qa/">blog post</a>).</p>
-<p>A further platform that builds on the other two is <strong><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr>/iets3.opensource</a></strong> which mostly consists of <strong><a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a></strong>, an extensible and functional language that can be used in <abbr title="Meta Programming System">MPS</abbr> as the core language of DSls and can be generated into Java code.</p>
-<p>To build <abbr title="Meta Programming System">MPS</abbr> projects, the <a href="https://www.jetbrains.com/help/mps/build-language.html"><abbr title="Meta Programming System">MPS</abbr> build language</a> is used which generates Ant scripts that can be executed on the command line. The Ant scripts can be called directly. Other projects use <a href="https://maven.apache.org/">Maven</a> instead. The most popular build automation tool is <a href="https://gradle.org/">Gradle</a>. <strong><a href="https://github.com/mbeddr/mps-gradle-plugin">Mbeddr/mps-gradle-plugin</a></strong> is a Gradle plugin that helps build <abbr title="Meta Programming System">MPS</abbr>-based projects with Gradle. This plugin is used by all <abbr title="Meta Programming System">MPS</abbr> platforms as well as many other <abbr title="Meta Programming System">MPS</abbr> projects. It also contains a task <a href="https://github.com/mbeddr/mps-gradle-plugin#download-jetbrains-runtime">download-jbr</a> which can use the <abbr title="JetBrains Runtime">JBR</abbr> artifacts that were published by the build.publish.mps repository. Some plugins were extracted into the repository <strong><a href="https://github.com/mbeddr/mps-build-backends">mbeddr/mps-build-backends</a></strong> which allows executing the plugin through the command line instead of using them via Gradle.</p>
-<p>To publish the generated artifacts, the platforms use the <a href="https://docs.gradle.org/current/userguide/publishing_maven.html">Maven publish plugin</a>, a Gradle plugin that provides the ability to publish build artifacts to <a href="https://maven.apache.org/">Apache Maven repositories</a>. The artifacts are published to <a href="https://artifacts.itemis.cloud">artifacts.itemis.cloud</a> which is a so-called <a href="https://www.ibm.com/garage/method/practices/deliver/tool_nexus/">nexus repository</a> and the <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">Apache Maven registry</a> of the corresponding GitHub project (<a href="https://github.com/orgs/JetBrains/packages?repo_name=MPS-extensions">example</a>).</p>
-<p>To run the build and execute the tests, two different tools can be used: for smaller repositories <a href="https://github.com/features/actions">GitHub Actions</a> are used. They can be configured through the Actions tab in the corresponding repository (<a href="https://github.com/mbeddr/build.publish.mps/actions">example</a>) and are saved in the <em>.github/workflows</em> directory of the repository.</p>
-<p>Bigger repositories use the <a href="https://www.jetbrains.com/teamcity/">TeamCity</a> server located at <a href="https://build.mbeddr.com/">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. TeamCity is a <a href="https://en.wikipedia.org/wiki/Software_build">build management</a> and <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> server. When a new branch is pushed to any of the mentioned repositories, a build is triggered and the tests are executed. Some projects require a code review and a successful build before a branch can be merged. <a href="https://www.jetbrains.com/help/teamcity/configure-and-run-your-first-build.html">Build configurations</a> for the different projects are saved on the server. The actual build is executed by a <a href="https://www.jetbrains.com/help/teamcity/install-and-start-teamcity-agents.html">build agent</a>. The TeamCity server and the agents (which are sometimes not located on the same server) are run inside <a href="https://www.docker.com/resources/what-container/">Docker containers</a>. The source for the agent docker image is located at <strong><a href="https://github.com/mbeddr/mbeddr.build.docker">mbeddr/mbeddr.build.docker</a></strong>.</p>
+<p>You can custom <a href="https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html#processoverview">RCPs</a> which are customized versions of <abbr title="Meta Programming System">MPS</abbr>. The first big <abbr title="Rich Client Platform">RCP</abbr> was <a href="http://mbeddr.com/">mbeddr</a>. Its repository is <strong><a href="https://github.com/mbeddr/mbeddr.core">mbeddr/mbeddr.core</a></strong>. The old homepage is <strong><a href="https://github.com/mbeddr/mbeddr.github.io">mbeddr/mbeddr.github.io</a></strong>.
+The reusable plugins became part of the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil</em> subproject. <a href="http://mbeddr.com/platform.html">mbeddr.<abbr title="commercial/common/communication">com</abbr>/platform.html</a> is the old documentation. Some plugins and languages moved to a new repository <strong><a href="https://github.com/JetBrains/MPS-extensions">JetBrains/<abbr title="Meta Programming System">MPS</abbr>-extensions</a></strong>, especially the editor-related languages. JetBrains hosts this repository. <a href="https://jetbrains.github.io/MPS-extensions/extensions/full_extensions_list/">Full Extension List | <abbr title="Meta Programming System">MPS</abbr> Extensions</a> contains a list of all extensions in this repository. Many extensions were contributed by <a href="https://www.itemis.com/en/it-services/methods-and-tools/mps">itemis</a>, a few of them by <a href="https://dslfoundry.com/">DSLFoundry</a>. The documentation for both platforms is hosted on <a href="https://jetbrains.github.io/MPS-extensions/">GitHub</a> and the <a href="../mpsutils/">current website</a>, respectively. Mbeddr.core has a dependency on <abbr title="Meta Programming System">MPS</abbr>-Extensions.</p>
+<p>The mbeddr organization also hosts <a href="https://github.com/mbeddr/mbeddr.formal">mbeddr.formal: FASTEN (FormAl SpecificaTion ENvironment)</a>, which is a set of DSLs to experiment with rigorous systems and safety engineering, and <a href="https://github.com/mbeddr/mps-qa">mps-qa</a>, which is a quality assurance tooling for <abbr title="Meta Programming System">MPS</abbr> (<a href="https://specificlanguages.com/posts/2022-04/12-mps-qa/">blog post</a>).</p>
+<p>A different platform that builds on the other two is <strong><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr>/iets3.opensource</a></strong>, which mainly consists of <strong><a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a></strong>. This extensible and functional language can be used in <abbr title="Meta Programming System">MPS</abbr> as the core language of DSls and generate Java code.</p>
+<p>Use the <a href="https://www.jetbrains.com/help/mps/build-language.html"><abbr title="Meta Programming System">MPS</abbr> build language</a> to build <abbr title="Meta Programming System">MPS</abbr> projects.  The language generates Ant scripts you can execute directly on the command line. Other projects use <a href="https://maven.apache.org/">Maven</a> to call them. The most popular build automation tool is <a href="https://gradle.org/">Gradle</a>. <strong><a href="https://github.com/mbeddr/mps-gradle-plugin">Mbeddr/mps-gradle-plugin</a></strong> is a Gradle plugin that helps build <abbr title="Meta Programming System">MPS</abbr>-based projects with Gradle. All <abbr title="Meta Programming System">MPS</abbr> platforms and many other <abbr title="Meta Programming System">MPS</abbr> projects use this plugin. It also contains a task <a href="https://github.com/mbeddr/mps-gradle-plugin#download-jetbrains-runtime">download-jbr</a> that can use the <abbr title="JetBrains Runtime">JBR</abbr> artifacts published by the <a href="https://github.com/mbeddr/build.publish.mps">build.publish.mps</a> repository. Some plugins are now part of the repository <strong><a href="https://github.com/mbeddr/mps-build-backends">mbeddr/mps-build-backends</a></strong>, a dependency of the mps-gradle-plugin. It allows executing the plugin through the command line instead of using them via Gradle.</p>
+<p>The platforms use the <a href="https://docs.gradle.org/current/userguide/publishing_maven.html">Maven publish plugin</a> to publish the generated artifacts. This Gradle plugin allows to publish build artifacts to <a href="https://maven.apache.org/">Apache Maven repositories</a>. The scripts publish the artifacts to  <a href="https://artifacts.itemis.cloud">artifacts.itemis.cloud</a>, a <a href="https://www.ibm.com/garage/method/practices/deliver/tool_nexus/">Nexus repository</a>, and the <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">Apache Maven registry</a> of the corresponding GitHub project (<a href="https://github.com/orgs/JetBrains/packages?repo_name=MPS-extensions">example</a>).</p>
+<p>Two CIs are available to run the build and execute the tests: Use <a href="https://github.com/features/actions">GitHub Actions</a> for small or big repositories. They can be configured through the Actions tab in the corresponding repository (<a href="https://github.com/mbeddr/build.publish.mps/actions">example</a>) and saved in the <em>.github/workflows</em> directory.</p>
+<p>Big repositories use the <a href="https://www.jetbrains.com/teamcity/">TeamCity</a> server located at <a href="https://build.mbeddr.com/">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. TeamCity is a <a href="https://en.wikipedia.org/wiki/Software_build">build management</a> and <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> server. When you push a new branch to any of the mentioned repositories, TeamCity triggers a build and executes the tests. Some projects require a code review and a successful build before you can merge a branch. <a href="https://www.jetbrains.com/help/teamcity/configure-and-run-your-first-build.html">Build configurations</a> for the different projects are saved on the server. A <a href="https://www.jetbrains.com/help/teamcity/install-and-start-teamcity-agents.html">build agent</a> executes the actual build. The TeamCity server and the agents (sometimes not located on the same server) run inside <a href="https://www.docker.com/resources/what-container/">Docker containers</a>. The agent docker image's source is at <strong><a href="https://github.com/mbeddr/mbeddr.build.docker">mbeddr/mbeddr.build.docker</a></strong>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1570,7 +1570,7 @@ Useful plugins were extracted into the subproject <em><abbr title="commercial/co
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Platform essentials" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Platform Essentials" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1580,7 +1580,7 @@ Useful plugins were extracted into the subproject <em><abbr title="commercial/co
                 Previous
               </span>
               <div class="md-ellipsis">
-                Platform essentials
+                Platform Essentials
               </div>
             </div>
           </a>

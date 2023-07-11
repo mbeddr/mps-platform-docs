@@ -26,7 +26,7 @@
     
     
       
-        <title>Readability/maintainability - MPS Platform Docs</title>
+        <title>Readability/Maintainability - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Readability/maintainability
+              Readability/Maintainability
             
           </span>
         </div>
@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -774,7 +774,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -878,7 +878,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -983,7 +983,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -998,7 +998,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Clean code
+            Clean Code
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1021,7 +1021,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           
   
   <span class="md-ellipsis">
-    Readability/maintainability
+    Readability/Maintainability
   </span>
   
 
@@ -1032,7 +1032,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Readability/maintainability
+    Readability/Maintainability
   </span>
   
 
@@ -1066,8 +1066,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#stackexchange-software-engineering" class="md-nav__link">
-    Stackexchange: Software Engineering
+  <a href="#stack-exchange-software-engineering" class="md-nav__link">
+    Stack Exchange: Software Engineering
   </a>
   
 </li>
@@ -1393,8 +1393,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </li>
       
         <li class="md-nav__item">
-  <a href="#stackexchange-software-engineering" class="md-nav__link">
-    Stackexchange: Software Engineering
+  <a href="#stack-exchange-software-engineering" class="md-nav__link">
+    Stack Exchange: Software Engineering
   </a>
   
 </li>
@@ -1437,24 +1437,24 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Readability/maintainability</h1>
+  <h1>Readability/Maintainability</h1>
 
-<p>This page focuses on creating <abbr title="Meta Programming System">MPS</abbr> code that is easy to read but also deals with the topic of maintainability. Too often code is
+<p>This page focuses on creating <abbr title="Meta Programming System">MPS</abbr> code that is easy to read but also deals with the topic of maintainability. Too often, code is
 written by one person but has to be maintained by someone else. Understanding the mindset of other people can be difficult,
-especially if they don&rsquo;t follow any patterns and the code is (visually) hard to read.</p>
-<p>Part of maintaining code means also dealing with technical debt and reducing it, as well as cleaning up the codebase periodically.
-That also means that sometimes code must be deprecated and removed after some time. Or it must be rewritten when it uses deprecated code e.g.
+especially if they don't follow any patterns and the code is (visually) hard to read.</p>
+<p>Maintaining code means dealing with technical debt, reducing it, and cleaning up the codebase periodically.
+That also means that sometimes code must be deprecated and removed after some time. Or it must be rewritten when it uses deprecated code, e.g.,
 after upgrading to a new <abbr title="Meta Programming System">MPS</abbr> version. Neglecting those tasks makes maintaining the code more difficult in the future.</p>
 <h2 id="readability">Readability<a class="headerlink" href="#readability" title="Permanent link">&para;</a></h2>
-<p>Establishing a coding style is important for Base Language code but also other parts of your code such as the language aspects.
-When the code is consistent it is also easier for other people to understand because they can see patterns in the code.
-For writing names, read: <a href="https://yiming.dev/blog/2017/08/23/sandi-metzs-rules-for-oop/#orgda11695">Write short code with good names | Sandi Metz&rsquo;s Rules for OOP</a>. Read the <a href="java_style_guide"><abbr title="Meta Programming System">MPS</abbr> Java style guide</a> for more ideas.
+<p>Establishing a coding style is essential for Base Language code and other parts of your code, such as the language aspects.
+When the code is consistent, it is also easier for other people to understand because they can see patterns in the code.
+For writing names, read: <a href="https://yiming.dev/blog/2017/08/23/sandi-metzs-rules-for-oop/#orgda11695">Write short code with good names | Sandi Metz's Rules for OOP</a>. Read the <a href="java_style_guide"><abbr title="Meta Programming System">MPS</abbr> Java style guide</a> for more ideas.
 In addition to consistency, short code helps readability.</p>
-<p>Learning to write readable code takes time and must be practiced. Coding standards can help enforce certain patterns but sometimes
-code reviews are necessary so that other people can help improve your code.</p>
+<p>Learning to write readable code takes time and must be practiced. Coding standards can help enforce specific patterns, but sometimes
+code reviews are necessary so that others can help improve your code.</p>
 <ul>
-<li>Simplicity: You should strive to make your code as simple as possible. Unnecessary complexity will only make the code hard to understand and prone to errors. The code can be clever, as long as it focuses on readability and maintainability. If the code is kept short it is easier to go through, but if it’s too smart, it will take too much time to understand and edit it.</li>
-<li>Use the same naming scheme for concepts (e.g. start interfaces with the letter &ldquo;I&rdquo;), intentions, or actions. Always place code in behavior methods
+<li>Simplicity: You should strive to make your code as simple as possible. Unnecessary complexity will make the code hard to understand and prone to errors. The code can be clever if it focuses on readability and maintainability. If the code is kept short, it is easier to go through, but if it's too smart, it will take too much time to understand and edit.</li>
+<li>Use the same naming scheme for concepts (e.g., start interfaces with the letter "I"), intentions, or actions. Always place code in behavior methods
   or utility classes with similar naming patterns. Follow standard naming conventions such as camelCase for variables.</li>
 <li>Name temporary variables such as counter variables consistently. Read <a href="https://softwareengineering.stackexchange.com/a/127948">this StackOverflow answer</a>
   for some ideas on how to name variables.</li>
@@ -1475,14 +1475,14 @@ code reviews are necessary so that other people can help improve your code.</p>
 A property can be created by typing <code>property</code> at the same place where fields are declared.</p>
 </li>
 <li>
-<p>Extract long boolean expressions that are used as conditions into variables. For example:
+<p>Extract long, boolean expressions that you use as conditions into variables. For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">object</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="na">shape</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;rectangle&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">object</span><span class="p">.</span><span class="na">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="na">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;gray&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">object</span><span class="p">.</span><span class="na">buttons</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;power&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="na">buttons</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;volume&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="na">buttons</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">object</span><span class="p">.</span><span class="na">hasPowerCord</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// The object is a TV</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-  Long boolean expressions can be split up into variables:
+  Split up boolean expressions into variables:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1499,13 +1499,13 @@ A property can be created by typing <code>property</code> at the same place wher
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">// The object is a TV</span><span class="w"></span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  Conditions can be reduced by saving them in closures or functions. For example:
+  You can reduce conditions by saving them in closures or functions. For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span><span class="kt">int</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">boolean</span><span class="p">}</span><span class="w"> </span><span class="n">isEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="nf">isEven</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-  If statements can also improve readability when they are used as guard clauses, also known as assert or precondition. Compare the following snippets:
-  the first one doesn&rsquo;t use guard clauses.
+  If statements can also improve readability when you use them as guard clauses, also known as assert or precondition. Compare the following snippets:
+  The first one doesn't use guard clauses.
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -1542,25 +1542,25 @@ A property can be created by typing <code>property</code> at the same place wher
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>Use enhanced for loops instead of for loops with counters. For example:
+<p>Use enhanced <em>for</em> loops instead of <em>for</em> loops with counters. For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">for</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="n">variable</span><span class="p">:</span><span class="n">iterable</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">foreach</span><span class="p">(</span><span class="n">variable</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">iterable</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  The second statement doesn&rsquo;t even need a type for the variable. For lists, other ways exist: <code>list.forEach({it =&gt; })</code> for iterating the list and <code>list.select({it =&gt; &lt;no statements&gt; })</code> or <code>list.selectMany({it =&gt; &lt;no statements&gt; })</code> for transforming the list. For adding many elements to a list, <code>list.addAll(elements)</code> can be used.</p>
+  The second statement doesn't even need a type for the variable. For lists, other ways exist: <code>list.forEach({it =&gt; })</code> for iterating the list and <code>list.select({it =&gt; &lt;no statements&gt; })</code> or <code>list.selectMany({it =&gt; &lt;no statements&gt; })</code> for transforming the list. For adding many elements to a list, use <code>list.addAll(elements)</code>.</p>
 </li>
 <li>
-<p>Use empty lines between statements for readability(<a href="https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code">StackOverflow discussion</a>). When a line becomes too long, a few <a href="https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring"><abbr title="a projectional clone of Java 6 (with optional extensions for Java 7 and 8)">BaseLanguage</abbr> refactorings</a> can be used such as introducing variables or extracting code into a method.
-  You might also want to experiment with the default text width of the editor (preferences &rarr; <em>Editor</em> &rarr; <em><abbr title="Meta Programming System">MPS</abbr> Editor</em>) which is set to 120 by default.
-  This value is quite low and can be increased depending on your monitor size.</p>
+<p>Use empty lines between statements for readability(<a href="https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code">StackOverflow discussion</a>). When a line becomes too long, you can use a few <a href="https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring">Base Language refactorings</a>, such as introducing variables or extracting code into a method.
+  You might also want to experiment with the default text width of the editor (preferences &rarr; <em>Editor</em> &rarr; <em><abbr title="Meta Programming System">MPS</abbr> Editor</em>), which is set to 120 by default.
+  This value is relatively low and can be increased depending on your monitor size.</p>
 </li>
-<li>Use virtual packages to organize your code. How you organize the modules is up to you. Some suggestions:<ul>
-<li>by type of module: <abbr title="language">lang</abbr>, test, build&hellip;</li>
-<li>by a group of languages: tables, tooltips, widgets&hellip; or core, <abbr title="expression">expr</abbr>, trace&hellip;</li>
-<li>by language maturity: stable, staging, rest&hellip;</li>
-<li>by a numbering system + other criteria: _10_build, _50_active, _60_demo, _70_attic</li>
+<li>Use virtual packages to organize your code. How you arrange the modules is up to you. Some suggestions:<ul>
+<li>Arrange type of module: <abbr title="language">lang</abbr>, test, build, etc.</li>
+<li>Arrange by a group of languages: tables, tooltips, widgets&hellip; or core, <abbr title="expression">expr</abbr>, trace, etc.</li>
+<li>Arrange by language maturity: stable, staging, rest, etc.</li>
+<li>Arrange by a numbering system + other criteria: _10_build, _50_active, _60_demo, _70_attic, etc.</li>
 </ul>
 </li>
 <li>Avoid double negation as they are hard to understand. Also, use a positive tone to help with understanding statements more intuitively. Example:
@@ -1574,19 +1574,18 @@ A property can be created by typing <code>property</code> at the same place wher
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>x.setDisabled(true) // bad
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a>x.setEnabled(true) // good
 </code></pre></div></td></tr></table></div></li>
-<li>Avoid deep nesting. This can be, for example, a chain of calls (<code class="highlight"><span class="n">nodea</span><span class="p">.</span><span class="na">nodeb</span><span class="p">.</span><span class="na">nodec</span><span class="p">.</span><span class="na">property</span><span class="w"></span></code>). Consider providing a method to access deeper nested nodes or jump
-  to the nested node directly. For example:
+<li>Avoid deep nesting like a chain of calls (<code class="highlight"><span class="n">nodea</span><span class="p">.</span><span class="na">nodeb</span><span class="p">.</span><span class="na">nodec</span><span class="p">.</span><span class="na">property</span><span class="w"></span></code>). Consider providing a method to access deeper nested nodes or directly jump to the nested node. For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">classNode</span><span class="p">.</span><span class="na">getAllIfStatements</span><span class="p">()</span><span class="w"></span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">classifier</span><span class="p">.</span><span class="na">ancestor</span><span class="o">&lt;</span><span class="n">concept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">classNode</span><span class="p">.</span><span class="na">descendants</span><span class="o">&lt;</span><span class="n">concept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Classifier</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  This is also relevant for if conditions, loops, and nested methods calls. Keep them flat or use only a few levels of nesting.</li>
-<li>4 parameter rule: a method accepting a large number of parameters is hard to follow. A good maximal number of parameters is 4.
-  Methods can be refactored into smaller methods, <a href="https://www.jetbrains.com/help/mps/builders.html"><abbr title="Meta Programming System">MPS</abbr> builders</a> can also be used to avoid many parameters.</li>
-<li>Group your code. Base Language code: group the fields and methods of the class by their visibility and purpose. For example, group the private fields and methods together, and group the public fields and methods together. Also, group the fields and methods that are related to each other by their functionality or logic. Also, break down big tasks into smaller chunks. Long (behavior) methods can be split up into multiple methods. Helper methods
-  can be placed as static methods into separate classes. To call them more easily, <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">extension methods</a> can be used. For example:
+  The nesting is also relevant for if conditions, loops, and nested method calls. Keep them flat, or use only a few levels of nesting.</li>
+<li>Four-parameter rule: a method accepting many parameters is hard to follow. A good maximal number of parameters is four.
+Refactor methods into smaller methods. You can use <a href="https://www.jetbrains.com/help/mps/builders.html"><abbr title="Meta Programming System">MPS</abbr> builders</a> to avoid many parameters.</li>
+<li>Group your code: Group the fields and methods of Base Language classes by their visibility and purpose. For example, group the private fields and methods, and group the public fields and methods together. Also, group the fields and methods related to each other by their functionality or logic. Also, break down big tasks into smaller chunks. You can split up long (behavior) methods into multiple methods. You can place helper methods
+  as static methods into separate classes. Call them more easiliy using <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">Extension methods</a> For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1609,14 +1608,13 @@ A property can be created by typing <code>property</code> at the same place wher
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  Code can also be grouped into multiple root nodes, models, or even modules. If the generation spans across multiple models,
+  Group code into multiple root nodes, models, or modules. If the generation is across multiple models,
    <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a> applies.</li>
 <li><a href="https://ncrcoe.gitbooks.io/java-for-small-teams/content/style/20_prefer_readable_code_to_comments.html">Prefer Readable Code to Comments | ncrcoe.gitbooks.io</a></li>
 </ul>
 <h2 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Mark classes/concepts etc. as deprecated when they shouldn&rsquo;t be used and will be removed in the future. When a deprecation date is added
-  it can be used as a reminder to remove deprecated code in regular intervals or even enforce it through a <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linter</a>.</li>
+<li>Mark classes/concepts etc., as deprecated when you don't want others to use them, and you will remove them in the future. When you add a deprecation date, you can use it as a reminder to remove deprecated code in regular intervals or enforce it through a <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linter</a>.</li>
 </ul>
 <figure>
 <p><a class="glightbox" href="../../../img/deprecated.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deprecated node annotation" src="../../../img/deprecated.png" /></a>
@@ -1633,14 +1631,14 @@ A property can be created by typing <code>property</code> at the same place wher
 </figcaption>
 </figure>
 <ul>
-<li>Use the text <em>TODO</em>, <em>FIX</em> or <em>FIXME</em> in comments. The <em>TODO</em> tool can find those strings as well as the commit dialog when the option <em>Check TODO (all)</em> is activated.
-  Other texts that are not supported by the tool but are common are <a href="https://stackoverflow.com/a/7284583">NOTE, XXX, HACK, and BUG</a></li>
-<li>Don&rsquo;t repeat code. You can write the same code twice but consider creating a method when the code is duplicated again.
-  Repeated code breaks the reading flow and makes updating the code more difficult.</li>
-<li>Delete unnecessary code. There is no point in keeping code and commenting <abbr title="output">out</abbr> if it is not used. If you use version control and need to go back to
+<li>Use the text <em>TODO</em>, <em>FIX</em>, or <em>FIXME</em> in the comments. The <em>TODO</em> tool can find those strings and the commit dialog when the option <em>Check TODO (all)</em> is activated.
+  Other texts not supported by the tool but common are <a href="https://stackoverflow.com/a/7284583">NOTE, XXX, HACK, and BUG</a>.</li>
+<li>Don't repeat code. You can write the same code twice but consider creating a method when you duplicate the code again.
+  Repeated code breaks the reading flow and makes updating the code more complex.</li>
+<li>Delete unnecessary and unused code. If you use version control and need to return to
   the old code, you can still find it in the history.</li>
-<li>Comments can be used to document complex code. Don&rsquo;t use them if the method signature already contains all the necessary information.
-  Not every piece of information should be placed next to the code. Documentation, such as this website, or documentation created with
+<li>Use comments to document complex code. Don't use them if the method signature contains all the necessary information.
+  You don't have to place every piece of information next to the code. You can use documentation, such as this website, or documentation created with
   <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> (+ optional <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.aspect</em>) can be used not only for user documentation but also for technical guides for
   developers.</li>
 <li>Avoid using magic numbers which are direct usages of numbers in the code. Example:
@@ -1655,9 +1653,9 @@ A property can be created by typing <code>property</code> at the same place wher
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The result is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">);</span><span class="w"> </span><span class="c1">// What is the result </span><span class="w"></span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<h2 id="stackexchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stackexchange: Software Engineering</a><a class="headerlink" href="#stackexchange-software-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="stack-exchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stack Exchange: Software Engineering</a><a class="headerlink" href="#stack-exchange-software-engineering" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code">What&rsquo;s wrong with comments that explain complex code?</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code">What's wrong with comments that explain complex code?</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer">When is a BIG Rewrite the answer?</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/43948/how-can-i-convince-management-to-deal-with-technical-debt">How can I convince management to deal with technical debt?</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/382069/how-do-i-know-how-reusable-my-methods-should-be">How do I know how reusable my methods should be?</a></li>
@@ -1668,7 +1666,7 @@ A property can be created by typing <code>property</code> at the same place wher
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

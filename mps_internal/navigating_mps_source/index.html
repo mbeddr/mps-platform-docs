@@ -26,7 +26,7 @@
     
     
       
-        <title>Navigating the MPS sources - MPS Platform Docs</title>
+        <title>Navigating the MPS Sources - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Navigating the MPS sources
+              Navigating the MPS Sources
             
           </span>
         </div>
@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -881,7 +881,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -896,7 +896,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -978,7 +978,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Utility classes
+    Utility Classes
   </span>
   
 
@@ -1005,7 +1005,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
           
   
   <span class="md-ellipsis">
-    Navigating the MPS sources
+    Navigating the MPS Sources
   </span>
   
 
@@ -1016,7 +1016,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Navigating the MPS sources
+    Navigating the MPS Sources
   </span>
   
 
@@ -1158,7 +1158,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Writing an MPS plugin with Kotlin
+    Writing an MPS Plugin with Kotlin
   </span>
   
 
@@ -1294,7 +1294,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1444,7 +1444,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1821,13 +1821,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Navigating the MPS sources</h1>
+  <h1>Navigating the MPS Sources</h1>
 
-<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that can be checked <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
-More information can be found in the readme of the repository.</p>
+<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that you can check <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
+The readme of the repository contains more information.</p>
 <h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h2>
-<p>The <code>artifacts</code> directory contains the artifact-related settings. More <abbr title="information">info</abbr> can be found
-in <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a>. Artifacts in this project are the generated jar files
+<p>The <code>artifacts</code> directory contains the artifact-related settings. <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a> contains more information. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
 <p><a class="glightbox" href="../../img/mps_artifacts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png" /></a></p>
 <p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr>, and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
@@ -1835,24 +1834,23 @@ many other IntelliJ-specific project settings,</p>
 <h2 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">&para;</a></h2>
 <p>This folder also contains run configurations and scopes but also other settings:</p>
 <ul>
-<li><em>codeStyleSettings.xml</em>: style settings used for Base Language (e.g. default field and parameter prefix)</li>
+<li><em>codeStyleSettings.xml</em>: style settings used for Base Language (e.g., default field and parameter prefix)</li>
 <li><em>compiler.xml</em>: the version of the Java compiler (currently: 11)</li>
 <li><em>encodings.xml</em>: encoding of the files (should be: UTF-8)</li>
 <li><em>migration.xml</em>: list of executed <abbr title="Meta Programming System">MPS</abbr> migrations in the current project </li>
-<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g. settings of favorites manager)</li>
-<li><em>modules.xml</em>: a list of modules of this project that are loaded in <abbr title="Meta Programming System">MPS</abbr></li>
+<li><em><abbr title="miscellaneous">misc</abbr>.xml</em>: miscellaneous settings (e.g., settings of favorites manager)</li>
+<li><em>modules.xml</em>: a list of modules of this project <abbr title="Meta Programming System">MPS</abbr> loads on startup</li>
 <li><em>vcs.xml</em>: version control settings</li>
 <li><em>version.xml</em>: project version (not used anymore)</li>
-<li><em>settings of different components</em> (e.g. console history, messages view tool, project view)</li>
+<li><em>settings of different components</em> (e.g., console history, messages view tool, project view)</li>
 </ul>
 <h2 id="bin"><abbr title="binary">bin</abbr><a class="headerlink" href="#bin" title="Permanent link">&para;</a></h2>
-<p>This folder contains executable files that are needed for the different
-operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr>-specific files:</p>
+<p>This folder contains executable files for the different operating systems (Windows, Mac, Linux). All of them use the executable <em>fsnotifier</em> to react to file system changes. <abbr title="Open Source / Operating System">OS</abbr>-specific files:</p>
 <ul>
 <li>
 <p>Linux</p>
 <ul>
-<li><em>libdgbm</em>: GNU dbm (&lsquo;gdbm&rsquo;) is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
+<li><em>libdgbm</em>: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
 <li><em>restart.<abbr title="position y">py</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
 </ul>
 </li>
@@ -1868,12 +1866,12 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 <p>Windows</p>
 <ul>
 <li><em>breakgen(64).dll</em>: gracefully shut down a running process (not possible with Java).</li>
-<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: sudo-like tool for windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
+<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: a sudo-like tool for Windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
 <li><em>IdeaWin32/64.dll</em>: native file system functions</li>
 <li><em>launcher.<abbr title="executable/execution">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
 <li><em>restarter.<abbr title="executable/execution">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: old library for Windows process management. Superseded by <a href="https://github.com/jenkinsci/winp">WinP</a>.</li>
-<li><em>WinProcessListHelper.<abbr title="executable/execution">exe</abbr></em>: lists windows processes</li>
+<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: an old library for Windows process management. <a href="https://github.com/jenkinsci/winp">WinP</a> superseded it.</li>
+<li><em>WinProcessListHelper.<abbr title="executable/execution">exe</abbr></em>: lists Windows processes</li>
 <li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
 <li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
 <li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
@@ -1881,33 +1879,32 @@ operating systems (Windows, Mac, Linux). All of them use the executable <em>fsno
 </li>
 </ul>
 <h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
-<p>The used dependency manager is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
-<a href="https://ant.apache.org/">Apache Ant</a> is used as the build tool.
+<p>The dependency manager of the project is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
+ The build tool is <a href="https://ant.apache.org/">Apache Ant</a>.
 The <code>artifacts</code> folder contains the generated jar files. An artifact might look like this:</p>
 <ul>
 <li><em>languages</em>: contains <abbr title="Meta Programming System">MPS</abbr> languages</li>
 <li><em>modules</em>: contains Java classes</li>
 <li><em><abbr title="library">lib</abbr></em>: Jar dependencies</li>
 <li><em>META-INF</em>: contains the <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a></li>
-<li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin that this artifact belongs to.</li>
+<li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin this artifact belongs to.</li>
 </ul>
 <p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties</a>.</p>
 <p><code>home/.ant/lib</code> contains additional Java libraries that can be used with Ant.</p>
 <p>The <code>resources</code> folder contains image resources as well as the following files:</p>
 <ul>
 <li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>mps-dmg.sh</em>: create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for macOS</li>
+<li><em>mps-dmg.sh</em>: Create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for macOS</li>
 <li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> macOS application</li>
 </ul>
 <p>The <code>tests</code> folder contains Ant scripts for executing tests.
-The <code>tools</code> folder contains scripts for signing and creating DMGs and also
-a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
+The <code>tools</code> folder contains scripts for signing and creating DMGs and a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
 The other XML files are also Ant scripts for different tasks (getting dependencies, building <abbr title="Meta Programming System">MPS</abbr> languages, migration projects, etc.).
 The <code>run_build.sh</code> and <code>run_test.sh</code> can be used to run the build and tests
-on Linux/Mac respectively. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and is used to show automatic updates for <abbr title="Meta Programming System">MPS</abbr>.</p>
+on Linux/Mac. <code>update.xml</code> lists all <abbr title="Meta Programming System">MPS</abbr> versions and helps with the automatic <abbr title="Meta Programming System">MPS</abbr> update management.</p>
 <h2 id="core">core<a class="headerlink" href="#core" title="Permanent link">&para;</a></h2>
 <p>The <code>aspects</code> folder contains the languages for the language aspects.
-The <code>baselanguage</code> folder contains the Base Language implementation and all its extensions such as extension methods, closures, or the collection language.</p>
+The <code>baselanguage</code> folder contains the Base Language implementation and all its extensions, such as extension methods, closures, or the collection language.</p>
 <p>The folder <code>devkit</code> contains the four main devkits:</p>
 <ul>
 <li><ins>jetbrains.mps.devkit.bootstrap-languages</ins>: contains all the jetbrains.mps.<abbr title="language">lang</abbr> languages</li>
@@ -1917,15 +1914,15 @@ The <code>baselanguage</code> folder contains the Base Language implementation a
 </ul>
 <h3 id="kernel">kernel<a class="headerlink" href="#kernel" title="Permanent link">&para;</a></h3>
 <p>It contains core languages of <abbr title="Meta Programming System">MPS</abbr> such as loaders for Java stubs, classes for persistence, language checkers,
-make classes and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
+make classes, and runtime classes for smodel such as <code>SConceptOperations.java</code> and <code>SModelOperations.java</code>.  </p>
 <h3 id="languages">languages<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h3>
-<p>This folder contains all core languages such as smodel, quotation, access, quotations, pattern, and so forth.</p>
+<p>This folder contains all core languages such as smodel, quotation, access, quotations, and pattern.</p>
 <h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">&para;</a></h3>
-<p>Everything related to the make facet is situated in this folder.</p>
+<p>Everything related to the make facet is in this folder.</p>
 <h3 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">&para;</a></h3>
-<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g. stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g. <code>java.util.List</code>) and all <abbr title="Meta Programming System">MPS</abbr> related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g. <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
+<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, e.g., stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g., <code>java.util.List</code>), and all <abbr title="Meta Programming System">MPS</abbr>-related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g., <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
 <h3 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">&para;</a></h3>
-<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g. `MPSEnvironment) and other tool-related classes such as accessing Ant from Java.</p>
+<p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g., <code>MPSEnvironment</code>) and other tool-related classes, such as accessing Ant from Java.</p>
 <h2 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h2>
 <p>This folder contains languages and solutions for the following platform features:</p>
 <ul>
@@ -1943,9 +1940,9 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
 <li>integration for <abbr title="Meta Programming System">MPS</abbr> plugin into IntelliJ IDEA</li>
 </ul>
 <h2 id="samples">samples<a class="headerlink" href="#samples" title="Permanent link">&para;</a></h2>
-<p>This folder contains the samples that are shipped with <abbr title="Meta Programming System">MPS</abbr>. They are automatically unpacked into a folder in the home directory when first accessed through the start screen.</p>
+<p>This folder contains the samples that <abbr title="Meta Programming System">MPS</abbr> ships with. When first accessed through the start screen, <abbr title="Meta Programming System">MPS</abbr> unpacks them automatically into a folder in the home directory.</p>
 <h2 id="tests">tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
-<p>This folder contains classes for executing tests as well as all kinds of tests such as generator tests or tests for the constraint aspect.</p>
+<p>This folder contains classes for executing tests and all kinds of tests, such as generator tests or tests for the constraint aspect.</p>
 <h2 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">&para;</a></h2>
 <p>This folder contains subfolders for:</p>
 <ul>
@@ -1964,7 +1961,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -2106,7 +2103,7 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../utility_classes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utility classes" rel="prev">
+          <a href="../utility_classes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utility Classes" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2116,20 +2113,20 @@ make classes and runtime classes for smodel such as <code>SConceptOperations.jav
                 Previous
               </span>
               <div class="md-ellipsis">
-                Utility classes
+                Utility Classes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../writing_mps_plugin_with_kotlin/" class="md-footer__link md-footer__link--next" aria-label="Next: Writing an MPS plugin with Kotlin" rel="next">
+          <a href="../writing_mps_plugin_with_kotlin/" class="md-footer__link md-footer__link--next" aria-label="Next: Writing an MPS Plugin with Kotlin" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Writing an MPS plugin with Kotlin
+                Writing an MPS Plugin with Kotlin
               </div>
             </div>
             <div class="md-footer__button md-icon">

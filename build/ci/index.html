@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -903,8 +903,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blog-posts" class="md-nav__link">
+    Blog Posts
   </a>
   
 </li>
@@ -948,7 +962,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Creating a command line tool
+    Creating a Command Line Tool
   </span>
   
 
@@ -1008,7 +1022,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Advanced GitHub workflow
+    Advanced GitHub Workflow
   </span>
   
 
@@ -1061,7 +1075,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1161,7 +1175,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1401,8 +1415,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blog-posts" class="md-nav__link">
+    Blog Posts
   </a>
   
 </li>
@@ -1438,24 +1466,52 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="continuous-integration">Continuous integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h1>
+<h1 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h1>
+<p>Continuous integration (<abbr title="Continuous Integration">CI</abbr>) is a software development practice integrating code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests are run. Automated tools assert the new code’s correctness before integration. A <abbr title="Version Control System">VCS</abbr> is the crux of the <abbr title="Continuous Integration">CI</abbr> process. The version control system also has other checks like automated code quality tests, syntax style review tools, and more.</p>
+<p>The main benefits of continuous integration are:</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up <abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/">Maturity levels of <abbr title="Meta Programming System">MPS</abbr> deployment</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50">The Business-<abbr title="Domain-Specific Language">DSL</abbr> DevOps Process</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li>It reduces the risk of integration conflicts and bugs by detecting them early and often.</li>
+<li>It improves the quality and reliability of the software by ensuring that every change is tested and verified.</li>
+<li>It speeds up the delivery and deployment of the software by automating the build and test process.</li>
+<li>It enhances collaboration and communication among the developers and other stakeholders by providing a shared and consistent view of the code.</li>
+</ul>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<p>Some <abbr title="Meta Programming System">MPS</abbr> projects used the following <abbr title="Continuous Integration">CI</abbr> tools in the past:</p>
+<ul>
+<li><a href="https://www.jenkins.io/">Jenkins</a> is an open-source <abbr title="Continuous Integration">CI</abbr> server that supports various plugins and integrations.</li>
+<li><a href="https://www.atlassian.com/de/software/bamboo">Bamboo</a>: is a commercial <abbr title="Continuous Integration">CI</abbr> server that integrates with Jira, Bitbucket, and other Atlassian products.</li>
+</ul>
+<p>Some <abbr title="Meta Programming System">MPS</abbr> projects used the following popular <abbr title="Continuous Integration">CI</abbr> tools:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/teamcity/">TeamCity</a> is a commercial <abbr title="Continuous Integration">CI</abbr> server that supports various languages, platforms, and technologies. It offers real-time feedback, smart triggers, code quality analysis, and more. Itemis and JetBrains use it.</li>
+<li><a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab <abbr title="Continuous Integration">CI</abbr></a> is a cloud-based or self-hosted <abbr title="Continuous Integration">CI</abbr> service that integrates with GitLab, a web-based Git repository manager. It allows you to define your pipelines as code, run tests in parallel, deploy to any environment, and more.</li>
+<li><a href="https://github.com/features/actions">GitHub Actions</a> is a cloud-based <abbr title="Continuous Integration">CI</abbr> service that integrates with GitHub, a web-based Git repository hosting service. It allows you to create workflows that automate your software development lifecycle, such as building, testing, and deploying your code. You can also use pre-built actions from the GitHub Marketplace or create custom actions.</li>
+</ul>
+<h2 id="challenges">Challenges<a class="headerlink" href="#challenges" title="Permanent link">&para;</a></h2>
+<p><abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr> projects can provide some challenges:</p>
+<ul>
+<li><abbr title="Meta Programming System">MPS</abbr> projects are not text-based but use an abstract syntax tree (<abbr title="Abstract Syntax Tree">AST</abbr>) representation that <abbr title="Meta Programming System">MPS</abbr> stores in XML files. That means that you have to review all model-related changes in <abbr title="Meta Programming System">MPS</abbr>. When opening PRs, you can still do other checks: incorrect merges/rebasing can be detected manually by examining the commit history. The <abbr title="Continuous Integration">CI</abbr> tool will detect conflicting files, and failing tests or model check errors can be reported as typical JUnit test results. Compilation errors when building the <abbr title="Meta Programming System">MPS</abbr> modules will also fail the build. <a href="../advanced_github_workflow/">Advanced GitHub workflow</a> mentions other checks that can be automated or done manually.</li>
+<li><abbr title="Meta Programming System">MPS</abbr> projects may depend on external libraries or plugins that must be installed and configured on the <abbr title="Continuous Integration">CI</abbr> agents. Those dependencies may require additional steps or scripts to ensure compatibility and availability. A good approach is to use isolated environments where you install all the dependencies. A standard solution is doing <a href="https://docs.docker.com/build/ci/"><abbr title="Continuous Integration">CI</abbr> with Docker</a>. When using the <a href="https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check">model check</a> plugin from the mps-gradle-plugin, additional plugins might need to be loaded through <em>pluginsProperty</em> if your <abbr title="Meta Programming System">MPS</abbr> languages depend on one of the core <abbr title="Meta Programming System">MPS</abbr> plugins. This Gradle plugin starts <abbr title="Meta Programming System">MPS</abbr> only with a bare minimum number of plugins.</li>
+<li><abbr title="Meta Programming System">MPS</abbr> projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. These additional languages may require other tools or plugins to compile, test, and deploy the generated code. Example: Most <abbr title="Meta Programming System">MPS</abbr> platforms, including mbeddr, use this <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">DockerFile</a> for building.</li>
+</ul>
+<h2 id="blog-posts">Blog Posts<a class="headerlink" href="#blog-posts" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up <abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/">Maturity levels of <abbr title="Meta Programming System">MPS</abbr> deployment</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50">The Business-<abbr title="Domain-Specific Language">DSL</abbr> DevOps Process</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <details class="question">
 <summary>How to attach the debugger to a <abbr title="Continuous Integration">CI</abbr> build on GitHub actions?</summary>
-<p>Note: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual/action/active">act</abbr></a>.</p>
-<p>The plan is to first teach the build to open up a reachable <abbr title="Secure Shell">SSH</abbr> connection, and then tunnel a local port onto it so that we can connect IntelliJ to it.</p>
+<p><em>Note</em>: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual/action/active">act</abbr></a>.</p>
+<p>The plan is first to teach the build to open up a reachable <abbr title="Secure Shell">SSH</abbr> connection and then tunnel a local port onto it so that we can connect IntelliJ to it.</p>
 <ul>
 <li>Sign up with ngrok and get your <abbr title="authentication">auth</abbr> token</li>
 </ul>
-<p>Since build agents usually are not reachable from the web, we&rsquo;<abbr title="linked list">ll</abbr> need someone to bridge the build agents&rsquo; firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/</a> which requires free signup. I tried tmate as well, but that doesn&rsquo;t support port forwarding.</p>
+<p>Since build agents usually are not reachable from the web, we'<abbr title="linked list">ll</abbr> need someone to bridge the build agents' firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/</a> which requires free signup. I tried tmate as well, but that doesn't support port forwarding.</p>
 <ul>
 <li>Open ssh from your <code>.github/workflows/build.yml</code></li>
 </ul>
-<p>There are prepared GitHub actions that start sshd with ngrok. I used <a href="https://github.com/marketplace/actions/debug-via-ssh">debug-via-ssh</a>. All we need to give it is our <code>ngrok authtoken</code> from above, and our public ssh key of the key that we want to use to get into the machine.</p>
+<p>There are prepared GitHub actions that start sshd with ngrok. I used <a href="https://github.com/marketplace/actions/debug-via-ssh">debug-via-ssh</a>. All we need to give it is our <code>ngrok authtoken</code> from above and our public ssh key of the key we want to use to get into the machine.</p>
 <p>Given we already have <code>.github/workflows/build.yml</code>, I added a step right before the failing step:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1471,20 +1527,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>    SSH_PASS: ssh-rsa AAAJOAKJFLJWKLJLEKJLEFKJLFEKJLK…JAOIFJOFA bkruck@itemis.com
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a># …
 </code></pre></div></td></tr></table></div>
-<p>Since this is a private repository, I was fine with pasting my authtoken and public <abbr title="Secure Shell">SSH</abbr> key into it (I didn&rsquo;t have permission to add secrets to the <abbr title="repository">repo</abbr>). After the whole session, I reset my ngrok <abbr title="authentication">auth</abbr> token.</p>
-<p>Another note worth mentioning is, that we trust the author of the action and ngrok to not man-in-the-middle us.</p>
+<p>Since this is a private repository, I was fine with pasting my authtoken and public <abbr title="Secure Shell">SSH</abbr> key into it (I didn't have permission to add secrets to the <abbr title="repository">repo</abbr>). After the whole session, I reset my ngrok <abbr title="authentication">auth</abbr> token.</p>
+<p>Another note worth mentioning is that we trust the author of the action and ngrok to not man-in-the-middle us.</p>
 <ul>
-<li>Tell <abbr title="Meta Programming System">MPS</abbr> to wait for us</li>
+<li>Tell <abbr title="Meta Programming System">MPS</abbr> to wait for us.</li>
 </ul>
-<p>Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. In the <a href="https://dashboard.ngrok.com/endpoints/status">endpoints list</a>, our agent should be listed with a domain name and port. Taking the two, we can now ssh into it:</p>
+<p>Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. Our agent should be listed with a domain name and port in the <a href="https://dashboard.ngrok.com/endpoints/status">endpoints list</a>. Taking the two, we can now ssh into it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a># SSH through ngrok onto the build machine, already forwarding local 5020 to the remote machine
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>ssh -L 5020:localhost:5020 -p11720 runner@4.tcp.ngrok.io
 </code></pre></div></td></tr></table></div>
 <p>If you are asked for a password, fix the casing of <em>-p</em>.
-If still asked for a password, check which user is running the build. On GitHub, that user seems to be called <em>runner</em> right now. Even though he has sudo rights.</p>
-<p>We now want to teach <abbr title="Meta Programming System">MPS</abbr> to open the debug ports and wait for us to connect before running any tests. On CLI, this doesn&rsquo;t work with <em>.vmoptions</em> files, but instead, we&rsquo;re running the tests from an ant-file in this project.</p>
-<p>Since the <em>allScripts</em> generation was already performed, we only need to open the ant-file and add a <abbr title="Java Virtual Machine">JVM</abbr> argument. I like to open <code>build/myProject/build-tests.xml</code> with Vim and then execute the following search expression: <code>%s/&lt;\/jvmargs&gt;/  &lt;arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/&gt;\r      &lt;\/jvmargs&gt;/g</code>. In other terms: Look for <code>&lt;/jvmargs&gt;</code> and add <code>&lt;arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/&gt;</code> right in front of it. The <code>suspend=y</code> will tell Java to not start doing anything before we are connected, while the <code>address=5020</code> tells it to be welcoming us on port 5020.</p>
+If still asked for a password, check which user runs the build. On GitHub, that user is called <em>runner</em> right now. Even though he has sudo rights.</p>
+<p>We now want to teach <abbr title="Meta Programming System">MPS</abbr> to open the debug ports and wait for us to connect before running any tests. On CLI, this doesn't work with <em>.vmoptions</em> files. Instead, we're running the tests from an ant-file in this project.</p>
+<p>Since the <em>allScripts</em> generation was already performed, we only need to open the ant-file and add a <abbr title="Java Virtual Machine">JVM</abbr> argument. I like to open <code>build/myProject/build-tests.xml</code> with Vim and then execute the following search expression: <code>%s/&lt;\/jvmargs&gt;/  &lt;arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/&gt;\r      &lt;\/jvmargs&gt;/g</code>. In other terms: Look for <code>&lt;/jvmargs&gt;</code> and add <code>&lt;arg value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5020" \/&gt;</code> right in front of it. The <code>suspend=y</code> will tell Java not to start doing anything before we are connected, while the <code>address=5020</code> tells it to welcome us on port 5020.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1494,8 +1550,8 @@ If still asked for a password, check which user is running the build. On GitHub,
 <span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- build/myProject/build-tests.xml 2021-09-17 21:15:50.000000000 +0200
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>+++ build/myProject/build-tests.xml.before  2021-09-17 21:32:09.000000000 +0200
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- build/myProject/build-tests.xml    2021-09-17 21:15:50.000000000 +0200
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>+++ build/myProject/build-tests.xml.before 2021-09-17 21:32:09.000000000 +0200
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>@@ -342,7 +342,6 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>    &lt;jvmargs&gt;
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>        &lt;arg value=&quot;-ea&quot; /&gt;
@@ -1508,7 +1564,7 @@ If still asked for a password, check which user is running the build. On GitHub,
 <ul>
 <li>Run the tests from within <abbr title="Secure Shell">SSH</abbr></li>
 </ul>
-<p>Since I don&rsquo;t know how to move ngrok into the background while proceeding with the build, I just ran the next gitHub action by hand:</p>
+<p>Since I don't know how to move ngrok into the background while proceeding with the build, I just ran the next GitHub action by hand:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1519,52 +1575,28 @@ If still asked for a password, check which user is running the build. On GitHub,
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>…
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>Listening for transport dt_socket at the address: 5020
 </code></pre></div></td></tr></table></div>
-<p>We should now see the command line <abbr title="Meta Programming System">MPS</abbr> start-up and say that it is waiting for us on <em>5020</em>.</p>
+<p>We should now see the <abbr title="Meta Programming System">MPS</abbr> start-up command line and say it is waiting for us on <em>5020</em>.</p>
 <ul>
-<li>Connect with your local IntelliJ</li>
+<li>Connect with your local IntelliJ instance.</li>
 </ul>
-<p>Assuming, that you have the <abbr title="Meta Programming System">MPS</abbr> sources checked <abbr title="output">out</abbr>, opened it in IntelliJ, and added the sources of your project as a module, we should be ready to connect now:</p>
-<p>Just start a remote debugging session on port 5020. It will forward the requests over <abbr title="Secure Shell">SSH</abbr> to the agent machine. Once connected, you&rsquo;<abbr title="linked list">ll</abbr> be able to set breakpoints (for example, I set an Exception breakpoint for <code>StackOverflowError</code>), and then proceed the build to run into the breakpoint.</p>
+<p>Assuming that you have the <abbr title="Meta Programming System">MPS</abbr> sources checked <abbr title="output">out</abbr>, opened it in IntelliJ, and added the sources of your project as a module, we should be ready to connect now:</p>
+<p>Just start a remote debugging session on port 5020. It will forward the requests over <abbr title="Secure Shell">SSH</abbr> to the agent machine. Once connected, you can set breakpoints (for example, I set an Exception breakpoint for <code>StackOverflowError</code>) and then proceed the build to run into the breakpoint.</p>
 <ul>
 <li>Cleanup</li>
 </ul>
-<p>After you found your issue and everything is shiny, remember to remove the step from your GitHub workflow again and reset your ngrok <abbr title="authentication">auth</abbr> token.</p>
+<p>After you find your issue and everything is shiny, remember to remove the step from your GitHub workflow again and reset your ngrok <abbr title="authentication">auth</abbr> token.</p>
 </details>
 <div class="admonition warning">
 <p class="admonition-title">The build fails with exit code 137</p>
 <p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-07/14-exit-code-137">Exit code 137</a></p>
 </div>
-<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <image width="32" height="32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
-    />
-</svg>
-</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>, <span class="twemoji">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <image width="32" height="32"
-           xlink:href="data:image/png;base64,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"
-    />
-</svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>, <span class="twemoji">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <image width="32" height="32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
-    />
-</svg>
-</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a></p>
-<p>Docker is a Linux container technology that the platform projects use a lot. You can think of it as a lightweight virtual machine. Besides the container runtime, Docker also includes the tools required to build preconfigured images that are then executed in the container.
-These images are built from a Dockerfile.</p>
-<p>Essentially, everything in the infrastructure is provisioning using docker from the TeamCity frontend over the database to the build agent. For the building agent, this approach allows us to keep the building agents consistent with their installed software and their versions. The Dockerfile for our general-purpose agents can be found on GitHub. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.</p>
-<p>The complete docker configuration for our build server is hosted on GitLab. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we are using docker-compose as an orchestration tool. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

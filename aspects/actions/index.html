@@ -26,7 +26,7 @@
     
     
       
-        <title>Action aspect - MPS Platform Docs</title>
+        <title>Action Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Action aspect
+              Action Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1064,7 +1064,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1106,7 +1106,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1220,7 +1220,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1324,7 +1324,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1424,7 +1424,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1690,22 +1690,23 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="action-aspect">Action aspect<a class="headerlink" href="#action-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="action-aspect">Action Aspect<a class="headerlink" href="#action-aspect" title="Permanent link">&para;</a></h1>
 <p>The action aspect defines node factories and copy/paste related handlers.</p>
 <div class="admonition question">
 <p class="admonition-title">Are node factories used when calling new node<Concept>?</p>
-<p>No. More information can be found in <a href="https://www.jetbrains.com/help/mps/editor-actions.html#node_factories">Editor Actions | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p>No. <a href="https://www.jetbrains.com/help/mps/editor-actions.html#node_factories">Editor Actions | <abbr title="Meta Programming System">MPS</abbr></a> contains more information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you find all key mappings for the editor?</p>
-<p>Windows and Mac shortcuts for editor actions can be found in <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">MPSEditorActions.xml</a>.</p>
+<p><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">MPSEditorActions.xml</a>
+contains Windows and Mac shortcuts for editor actions.</p>
 </div>
 <details class="question">
 <summary>Why is a custom action map not executed on a <em>CellModel_Collection</em>?</summary>
 <blockquote>
-<p>In <abbr title="Meta Programming System">MPS</abbr> I have the possibility to reference an action map from an editor collection cell.</p>
+<p>I can reference an action map from an editor collection cell in <abbr title="Meta Programming System">MPS</abbr>.</p>
 <p><a class="glightbox" href="../../img/cellmodell_collection_inspector.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cellmodel collection: inspector" src="../../img/cellmodell_collection_inspector.png" width="300px" /></a></p>
-<p>However it seems like my defined actions are never executed when the editor is used. Why is this so and how to fix it?</p>
+<p>However, my defined actions are never executed when the editor is used. Why is this so, and how to fix it?</p>
 </blockquote>
 <p><strong>Reason for the Problem</strong></p>
 <p>In general, the applied actions should be invoked and executed.
@@ -1713,7 +1714,7 @@ However, depending on the content of the collection cells, <abbr title="Meta Pro
 <p><strong>Example</strong></p>
 <p>You have a read-only model access cell inside the collection cell:</p>
 <p><a class="glightbox" href="../../img/alias_and_ro_model_access.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alias and read-only modelaccess" src="../../img/alias_and_ro_model_access.png" width="600px" /></a></p>
-<p>In this case, the internal <abbr title="Meta Programming System">MPS</abbr> generator for <code>CellModel_ReadOnlyModelAccessor</code> will automatically generate and register some default actions like <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029f%28jetbrains.mps.lang.editor.generator.baseLanguage.template.main%40generator%29%2F1225901389718">delete/backspace  </a> which in the end will prohibit your custom action to be applied.</p>
+<p>In this case, the internal <abbr title="Meta Programming System">MPS</abbr> generator for <code>CellModel_ReadOnlyModelAccessor</code> will automatically generate and register some default actions like <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959029f%28jetbrains.mps.lang.editor.generator.baseLanguage.template.main%40generator%29%2F1225901389718">delete/backspace  </a>, which in the end, will prohibit your custom action from being applied.</p>
 <p><strong>Solution</strong></p>
 <p>You can use the cell explorer (<em>Language Debug</em> &rarr; <em>Show Cell in Explorer</em>) to see which actions are defined for a cell.
 Deactivate the automatically applied action with the help of custom editor cells(<a href="http://127.0.0.1:63320/node?ref=r%3Af4f3736e-6da2-4bf6-9b34-06696f46bc70%28de.slisson.mps.richtext.customcell.structure%29%2F2490242408670732052">CellModel_CustomFactory</a>). You can use <code>CellModel_CustomFactory</code> to wrap the cells in your collection which generate unwanted actions and deactivate them.</p>
@@ -1722,10 +1723,10 @@ Deactivate the automatically applied action with the help of custom editor cells
 </details>
 <div class="admonition question">
 <p class="admonition-title">Can you create a copy-paste handler/paste wrapper for arbitrary concepts?</p>
-<p>Yes, the handlers can be created for any concept, e.g. ClassConcept. The language containing the handler doesn&rsquo;t even have to be used in the model.</p>
+<p>Yes, the handlers can be created for any concept, e.g. ClassConcept. You don't have to use the language containing the handler in the model.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can I call the copy and paste handler programmatically?</p>
+<p class="admonition-title">How can I call the copy-and-paste handler programmatically?</p>
 <ul>
 <li>Copy: <code class="highlight"><span class="n">DataTransferManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">preProcessNode</span><span class="p">()</span><span class="w"></span></code></li>
 <li>Paste: <code class="highlight"><span class="n">DataTransferManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">postProcessNode</span><span class="p">()</span><span class="w"></span></code></li>
@@ -1733,10 +1734,10 @@ Deactivate the automatically applied action with the help of custom editor cells
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A84719e1a-99f6-4297-90ba-8ad2a947fa4a%28jetbrains.mps.ide.datatransfer%29%2F6299533519672638253">CopyPasteUtil</a> can help you with those two actions.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">I have an interface <code>IStatement</code>and two concepts <code>StatementA</code> and <code>StatementB</code> that implement the interface. I paste a node of concept <code>StatementA</code> into a node of concept<code>StatementB</code> into a role that accepts <code>IStatement</code>. Why is the paste wrapper not called?</p>
+<p class="admonition-title">I have an interface <code>IStatement</code>and two concepts <code>StatementA</code>, and <code>StatementB</code>, that implement the interface. I paste a node of concept <code>StatementA</code> into a node of concept <code>StatementB</code> into a role that accepts <code>IStatement</code>. Why is the paste wrapper not called?</p>
 <p>A paste wrapper only modifies the pasted node if it can change the source concept to the target concept
 and if the pasted node is not already an instance of the target concept. In the described case, the node of concept <code>StatementA</code> is already
-an instance of <code>IStatement</code>, that&rsquo;s why the paste wrapper is not called.</p>
+an instance of <code>IStatement</code>, and the paste wrapper is not called.</p>
 </div>
 
   <hr>
@@ -1744,7 +1745,7 @@ an instance of <code>IStatement</code>, that&rsquo;s why the paste wrapper is no
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

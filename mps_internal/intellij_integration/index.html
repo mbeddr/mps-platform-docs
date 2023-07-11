@@ -26,7 +26,7 @@
     
     
       
-        <title>IntelliJ integration - MPS Platform Docs</title>
+        <title>IntelliJ Integration - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IntelliJ integration
+              IntelliJ Integration
             
           </span>
         </div>
@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -878,7 +878,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -893,7 +893,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1070,7 +1070,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    IntelliJ integration
+    IntelliJ Integration
   </span>
   
 
@@ -1139,7 +1139,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1289,7 +1289,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1558,13 +1558,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>IntelliJ integration</h1>
+  <h1>IntelliJ Integration</h1>
 
-<p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components</a>. <code>application-components</code> are activated when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code>
-are activated when a project is opened.</p>
-<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. For a list of all extension points and listeners have a look at
-<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK</a>. New extension points are declared in a section <em>extensionPoints</em> where
-a qualified name and the interface to implement have to be provided. The interface has to contain an extension point name
+<p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components</a>. <code>application-components</code> active when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code> active when a project opens.</p>
+<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. Look at
+<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK</a> for a list of all extension points and listeners. Declare new extension points in a section <em>extensionPoints</em> where
+you must provide a qualified name and the interface to implement. The interface has to contain an extension point name
 declaration. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1578,7 +1577,7 @@ declaration. Example:</p>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="n">AnAction</span><span class="o">[]</span><span class="w"> </span><span class="nf">getIntentionActions</span><span class="p">(</span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">IntentionExecutable</span><span class="w"> </span><span class="n">intention</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>The extensions can be registered in an <em>extensions</em> block in the <em>plugin.xml</em>. The default extension namespace has to be
+<p>You can register the extensions in an <em>extensions</em> block in the <em>plugin.xml</em>. The default extension namespace has to be
 <code>com.intellij</code> (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/IdeaPlugin/mps-vcs/META-INF/plugin.xml#L37">example</a>). The extension can also have attributes (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/workbench/mps-platform/source/jetbrains/mps/LanguageLibrary.java#L26">example</a>).</p>
 <p>Link to different <abbr title="Meta Programming System">MPS</abbr> plugin.xml files:</p>
 <ul>
@@ -1613,17 +1612,17 @@ declaration. Example:</p>
 <li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml">PlatformActions</a></li>
 </ul>
 <p>All the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter</a> for error reporting.
-This allows reporting errors to YouTrack. Another notable extension is the declaration of the <abbr title="Meta Programming System">MPS</abbr> language library. For example:
+This class makes it possible to report errors to YouTrack. Another notable extension is the declaration of the <abbr title="Meta Programming System">MPS</abbr> language library. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;mps.LanguageLibrary</span> <span class="na">dir=</span><span class="s">&quot;/languages&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div></td></tr></table></div></p>
-<p>It tells <abbr title="Meta Programming System">MPS</abbr> where in the plugin folder the compiled <abbr title="Meta Programming System">MPS</abbr> languages can be found.</p>
+<p>It tells <abbr title="Meta Programming System">MPS</abbr> where to find the compiled <abbr title="Meta Programming System">MPS</abbr> languages in the plugin folder.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

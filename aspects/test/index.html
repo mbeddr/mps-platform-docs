@@ -26,7 +26,7 @@
     
     
       
-        <title>Test aspect - MPS Platform Docs</title>
+        <title>Test Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test aspect
+              Test Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1002,7 +1002,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#how-to-test" class="md-nav__link">
-    How to test
+    How to Test
   </a>
   
 </li>
@@ -1113,7 +1113,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1155,7 +1155,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1269,7 +1269,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1373,7 +1373,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1473,7 +1473,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1721,7 +1721,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#how-to-test" class="md-nav__link">
-    How to test
+    How to Test
   </a>
   
 </li>
@@ -1764,56 +1764,51 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="test-aspect">Test aspect<a class="headerlink" href="#test-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="test-aspect">Test Aspect<a class="headerlink" href="#test-aspect" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>Testing is an essential part of a language designer&rsquo;s work.</p>
+<p>Testing is an essential part of a language designer's work.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/testing-languages.html">official documentation</a></li>
-<li><a href="https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236">Testing in <abbr title="Meta Programming System">MPS</abbr>: What and Why</a>(<em>languageengineering.io&rsquo;s blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-language-testing-triangle-917214826e93">The Language Testing Triangle</a>(<em>Markus Voelter&rsquo;s blog</em>)</li>
+<li><a href="https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236">Testing in <abbr title="Meta Programming System">MPS</abbr>: What and Why</a>(<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-language-testing-triangle-917214826e93">The Language Testing Triangle</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Can you add an annotation to skip tests the way it normally works with JUnit?</p>
-<p>No, it isn&rsquo;t supported. You have to comment <abbr title="output">out</abbr> the test case. The only statement that supports this behavior is the 
-<em>assert</em> statement of KernelF (<a href="http://127.0.0.1:63320/node?ref=r%3Aba7faab6-2b80-43d5-8b95-0c440665312c%28org.iets3.core.expr.tests.structure%29%2F543569365052056266">AssertTestItem</a>).</p>
+<p class="admonition-title">Can you add an annotation to skip tests like it usually works with JUnit?</p>
+<p>It isn't supported. You must comment <abbr title="output">out</abbr> the test case or add the @Ignore attribute in the reflective editor. The only official statement supporting this functionality is the <em>assert</em> statement of KernelF (<a href="http://127.0.0.1:63320/node?ref=r%3Aba7faab6-2b80-43d5-8b95-0c440665312c%28org.iets3.core.expr.tests.structure%29%2F543569365052056266">AssertTestItem</a>).</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What&rsquo;s the <em>TestInfo</em> node used for?</p>
-<p><a href="https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/">How to create a TestInfo node for your tests</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p class="admonition-title">What's the <em>TestInfo</em> node used for?</p>
+<p><a href="https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/">How to create a TestInfo node for your tests</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">How do node tests work?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/">How do node tests work?</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/">How do node tests work?</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you invoke an action by ID?</p>
 <p>Yes, use the statement <em>invoke action by <abbr title="identification/identifier">id</abbr></em>.</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">When using the <em>type</em> statement in an editor test, how do you enter multiple words?</p>
-<p>Enter them as one long word without spaces in between, e.g. <em>publictransientclass</em>.</p>
-</div>
+<p>!!! question "How do you enter multiple words when using the <em>type</em> statement in an editor test?</p>
+<div class="codehilite"><pre><span></span><code>Enter them as one long word without spaces in between, e.g., *publictransientclass*.
+</code></pre></div>
+
 <div class="admonition warning">
 <p class="admonition-title">How to know if some <abbr title="Meta Programming System">MPS</abbr> code is inside a test?</p>
 <blockquote>
-<p>Given I <abbr title="abstract module">am</abbr> writing some code in <abbr title="Meta Programming System">MPS</abbr> that is supposed to run only if we&rsquo;re not running tests. How can I detect if I&rsquo;m running a test?</p>
+<p>I <abbr title="abstract module">am</abbr> writing some code in <abbr title="Meta Programming System">MPS</abbr> that is supposed to run if we're not running tests. How can I detect if I'm running a test?</p>
 </blockquote>
 <ol>
-<li>
-<p>Don&rsquo;t do it. Consider mocking something <abbr title="output">out</abbr> instead or ensuring that you are testing on a low-enough level.</p>
-</li>
-<li>
-<p>Here are two options, if you need to do this:</p>
-</li>
+<li>Consider mocking something <abbr title="output">out</abbr> instead or ensuring that you are testing on a low-enough level.</li>
+<li>Here are two options if you need to do this:</li>
 </ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// true if running tests from inside the MPS process or from command line</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// true if running tests from inside the MPS process or from the command line</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">RuntimeFlags</span><span class="p">.</span><span class="na">getTestMode</span><span class="p">().</span><span class="na">isInsideTestEnvironment</span><span class="p">()</span><span class="w"></span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// true if running tests from the command line only</span><span class="w"></span>
@@ -1823,32 +1818,32 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I access the current project inside a node test case?</p>
-<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F1225467090849">project</a> expression that should be used.</p>
+<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F1225467090849">project</a> expression that you should use.</p>
 </div>
 <details class="question">
 <summary>Why does the node ID change during a node test?</summary>
 <blockquote>
-<p>Given I have a node test case. My test case has a check node called <em>data</em> and my test case has a test <em>test1</em> which prints the node ID of <em>data</em>
-My test case has a a test <em>test2</em> which prints the node <abbr title="identification/identifier">id</abbr> of <em>data</em>.
-When I run the test <em>test1</em> and <em>test2</em> print different node IDs.</p>
+<p>Given I have a node test case. My test case has a check node called <em>data</em>, and my test case has a test <em>test1</em> which prints the node ID of <em>data</em>.
+My test case has a test <em>test2</em> which prints the node ID of <em>data</em>.
+When I run the test, <em>test1</em> and <em>test2</em> print different node IDs.</p>
 <p><strong>Why is that?</strong></p>
 <p><a class="glightbox" href="../../img/node_with_id_changes_test.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="node with id changes test" src="../../img/node_with_id_changes_test.png" width="800px" /></a></p>
 <p>Terms used:</p>
 <ul>
-<li><strong>check-node</strong> for these fixture nodes that you enter into the test case under <em>nodes</em></li>
+<li><strong>check node</strong> for these fixture nodes that you enter into the test case under <em>nodes</em></li>
 <li><strong>test case</strong> for the root node, the <em>chunk</em> that contains the tests</li>
 <li><strong>tests</strong> for the test methods of which we have <em>test1</em> and <em>test2</em></li>
 </ul>
 </blockquote>
 <ul>
-<li>Each test case runs on its copy of its model. </li>
+<li>Each test case runs on a copy of its model. </li>
 </ul>
-<p><abbr title="Meta Programming System">MPS</abbr> tries to keep tests reproducible and isolated even when being run in-process. For that, <abbr title="Meta Programming System">MPS</abbr> copies the whole model into a temporary model. Modifications of one test case will then be invisible to the next test case since it will work on a new temporary model. This prevents test cases from interacting.</p>
-<p>Running tests in a separate model ensures that they will never modify the original model (as long as you don&rsquo;t explicitly start acting on other models).</p>
+<p><abbr title="Meta Programming System">MPS</abbr> tries to keep tests reproducible and isolated even when being run in-process. For that, <abbr title="Meta Programming System">MPS</abbr> copies the whole model into a temporary model. Modifications of one test case will then be invisible to the next test case since it will work on a new temporary model. This solution prevents test cases from interacting.</p>
+<p>Running tests in a separate model ensures that they will never modify the original model (as long as you don't explicitly start acting on other models).</p>
 <ul>
 <li>Check nodes per test</li>
 </ul>
-<p>A test-case may have multiple tests though. <abbr title="Meta Programming System">MPS</abbr> also isolates single tests within the same test case. For that, the check-nodes are copied once for each test. Each test may then <abbr title="actual/action/active">act</abbr> on their own copy.</p>
+<p>A test case may have multiple tests, though. <abbr title="Meta Programming System">MPS</abbr> also isolates single tests within the same test case. For that, the check nodes are copied once for each test. Each test may then <abbr title="actual/action/active">act</abbr> on its copy.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// there is one data node in the model for each test</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">assert</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">nodes</span><span class="p">(</span><span class="n">Data</span><span class="p">).</span><span class="na">size</span><span class="w"></span>
@@ -1856,12 +1851,12 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <ul>
 <li>All tests of a test case share their referenced nodes</li>
 </ul>
-<p>To save memory though, these check nodes all lie in the same model for each test case. References to other nodes outside the test case will only need to be copied once and shared by all tests of that test case. As a result, the IDs of check nodes change, and the IDs of non-check-nodes are the same as in the original model.</p>
+<p>To save memory, these check nodes all lie in the same model for each test case. References to other nodes outside the test case will only need to be copied once and shared by all tests of that test case. As a result, the IDs of check nodes change, and non-check-node IDs are the same as in the original model.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// nodes in this model that are not check-nodes of this test case will only be there once</span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">assert</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">dataRef</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">nodes</span><span class="p">(</span><span class="n">Chunk</span><span class="p">).</span><span class="na">size</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Consequently, multiple tests of the same test case are not fully isolated. In the following example, both tests assert and do the same, yet <em>test3</em> passes while <em>test4</em> fails. The data element is now located in a separate chunk outside the test case and the check-node is a reference to it. As a result, <em>test4</em> is running red because <em>test3</em> already modified the referenced node.</p>
+<p>Consequently, multiple tests of the same test case are only partially isolated. In the following example, both tests assert and do the same, yet <em>test3</em> passes while <em>test4</em> fails. The data element is now located in a separate chunk outside the test case, and the check node references it. As a result, <em>test4</em> is running red because <em>test3</em> already modified the referenced node.</p>
 <p><a class="glightbox" href="../../img/tests_share_non_check_nodes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="tests share non check nodes" src="../../img/tests_share_non_check_nodes.png" width="600px" /></a></p>
 <ul>
 <li>
@@ -1871,40 +1866,41 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <p>I checked this behavior in-depth for node tests.</p>
 </li>
 <li>I think it is similar for editor tests.</li>
-<li>I <abbr title="abstract module">am</abbr> sure that this does not apply to baseLang-tests since they don&rsquo;t prepare a temporary model for you.</li>
+<li>I <abbr title="abstract module">am</abbr> sure that this does not apply to baseLang-tests since they don't prepare a temporary model for you.</li>
 </ul>
 <p><strong>Practical effects of this</strong></p>
 <p>These are some rules of thumb that result from that:</p>
 <ul>
 <li>The tests of a test case may interact, so you should inline all modified nodes into the test case to be <em>check nodes</em>.</li>
-<li>Whenever you modify many nodes in the model, consider writing a migration and migration test instead.</li>
+<li>When modifying many nodes in the model, consider writing a migration and migration test instead.</li>
 <li>Remember that the console and each test will output separate IDs for the conceptually same node. And they will change from run to run.</li>
-<li>Especially when stepping through tests, it is easy to be confused by that and draw false conclusions</li>
+<li>It is easy to be confused by that and draw false conclusions, especially when stepping through tests.</li>
 <li>Whenever your code queries for the nodes of a model, be ready to see duplicates for each test (as in the <em>dataRef</em> example). You may test this by asserting that something is included or excluded instead of asserting true equality of the expected and actual lists.</li>
 <li>Another source for duplicates is if the test model imports itself.</li>
-<li>If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java">jetbrains.mps.smodel.TestModelFactory</a> allows to do that, e.g. the <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java">ModelListenerTest</a> uses that TestModelFactory. It is unfortunately not available as stubs so you&rsquo;<abbr title="linked list">ll</abbr> need to copy it to your project</li>
+<li>If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java">jetbrains.mps.smodel.TestModelFactory</a> allows to do that, e.g., the <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java">ModelListenerTest</a> uses that TestModelFactory. It is unfortunately not available as stubs, so you'<abbr title="linked list">ll</abbr> need to copy it to your project.</li>
 </ul>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
-<h2 id="how-to-test">How to test<a class="headerlink" href="#how-to-test" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-test">How to Test<a class="headerlink" href="#how-to-test" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you implement custom tests?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/23-custom-tests/">Implementing custom tests</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/23-custom-tests/">Implementing custom tests</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <details class="question">
 <summary>How to set up a generator smoke test?</summary>
 <blockquote>
-<p>I would like to write a generator smoke test.  Therefore, I have some solutions with models (regular ones, not <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> models) which are built from the command line and the generators invoked are generating some .c files.</p>
-<p>In addition, I also have a <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> model in the same solution with some unit tests which checks if the output directories of these models contain any generated files. I don&rsquo;t invoke the generation of the models programmatically but rely on the ant task which is generating the solution.</p>
-<p>Unfortunately this setup always leads to broken tests. It seems like the unit tests are executed before the models (which are built during the <abbr title="Continuous Integration">CI</abbr> run) and though the test fails.</p>
+<p>I want to write a generator smoke test. Therefore, I have some solutions with models (regular ones, not <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> models) built from the command line, and the generators invoked are generating some .c files.</p>
+<p>In addition, I also have a <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/test" title="GitHub User: test">@test</a></em> model in the same solution with some unit tests, which checks if the output directories of these models contain any generated files. I don't invoke the generation of the models programmatically but rely on the Ant task which generates the solution.</p>
+<p>Unfortunately, this setup always leads to broken tests. The unit tests are executed before the models (which are built during the <abbr title="Continuous Integration">CI</abbr> run) and though the test fails.</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arimer" title="GitHub User: arimer">@arimer</a><sub></p>
-<p>When the tests work fine when run from within the <abbr title="Integrated Development Environment">IDE</abbr>, then the problem is most probably that when your tests are executed, they are running from the jars and not the sources. The generator output location points into the jar file that the tests are executed from and not to the real source location.</p>
+<p>When the tests work fine from within the <abbr title="Integrated Development Environment">IDE</abbr>, the problem is that when your tests are executed, they run from the JARs, not the sources. The generator output location points into the jar file that the tests are executed from and not to the real source location.</p>
 <p>You could change the packaging to include the <em>source_gen</em> folder for your specific test solution.</p>
-<p>This can be done the following way in the default layout of your build model:</p>
+<p>Make this change to the default layout of your build model:</p>
 <p><a class="glightbox" href="../../img/layout_module_myTestSolution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="layout: module myTestSolution" src="../../img/layout_module_myTestSolution.png" /></a></p>
 <p>In this case, you would need to detect if you are running from sources or from a <abbr title="Java Archive">JAR</abbr> in <abbr title="Continuous Integration">CI</abbr> and change the location where you look for the generated files.</p>
-<p>This can be done by calculating a solution relative path for the test solution containing the packed sources.</p>
+<p>In this case, you need to detect if you are running from sources or a <abbr title="Java Archive">JAR</abbr> in <abbr title="Continuous Integration">CI</abbr> and change the location where you look for the generated files.
+You can calculate a relative path for the test solution containing the packed sources.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1937,7 +1933,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <details class="question">
 <summary>How to write editor tests for context assistants?</summary>
 <blockquote>
-<p>I need to unit tests <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistants</a>, ideally with an EditorTestCase, but it is not supported <abbr title="output">out</abbr> of the box, any idea?</p>
+<p>I need to unit test <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistants</a>, ideally with an EditorTestCase, but it is not supported <abbr title="output">out</abbr> of the box.</p>
 </blockquote>
 <p>This snippet allows to automatically test the context assistant in the code section of the <code>EditorTestCase</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1955,7 +1951,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <span class="normal"><a href="#__codelineno-4-13">13</a></span>
 <span class="normal"><a href="#__codelineno-4-14">14</a></span>
 <span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Context assistants take some time to popup, otherwise getActiveAssistant returns null  </span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Context assistants take some time to pop up, otherwise getActiveAssistant returns null  </span><span class="w"></span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">ContextAssistantManager</span><span class="w"> </span><span class="n">contextAssistantManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getEditorContext</span><span class="p">().</span><span class="na">getContextAssistantManager</span><span class="p">();</span><span class="w"> </span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kd">final</span><span class="w"> </span><span class="n">ContextAssistantController</span><span class="w"> </span><span class="n">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">ContextAssistantController</span><span class="p">)</span><span class="w"> </span><span class="n">contextAssistantManager</span><span class="p">.</span><span class="na">getActiveAssistant</span><span class="p">());</span><span class="w"> </span>
@@ -1973,8 +1969,8 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Note:<br />
-- &ldquo;Item Name&rdquo; must be replaced with the name of the item as shown in the editor<br />
-- &ldquo;_this&rdquo; is a concept from internalBaseLanguage <abbr title="Domain-Specific Language">DSL</abbr>.</p>
+- "Item Name" must be replaced with the name of the item as shown in the editor<br />
+- "_this" is a concept from internalBaseLanguage <abbr title="Domain-Specific Language">DSL</abbr>.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/cmoine" title="GitHub User: cmoine">@cmoine</a><sub></p>
 </details>
 <details class="question">
@@ -1982,7 +1978,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <blockquote>
 <p>When I make the error text dynamic:</p>
 <p><a class="glightbox" href="../../img/dynamic_error_message.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="dynamic error message" src="../../img/dynamic_error_message.png" width="300px" /></a></p>
-<p>Then my error is named <code>UnnamedError</code> and I have a hard time selecting the right one:</p>
+<p>Then my error is named <code>UnnamedError</code>, and I have a hard time selecting the right one:</p>
 <p><a class="glightbox" href="../../img/dynamic_error_message_select.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="dynamic error message select" src="../../img/dynamic_error_message_select.png" /></a></p>
 <p>How do I name errors with dynamic messages?</p>
 </blockquote>
@@ -2000,7 +1996,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">What&rsquo;s the best way to test the contents of the code completion/substitution menu for a given cursor position using a <em>NodesTestCase</em> or an <em>EditorTestCase</em>?</p>
+<p class="admonition-title">What's the best way to test the contents of the code completion/substitution menu for a given cursor position using a <em>NodesTestCase</em> or an <em>EditorTestCase</em>?</p>
 <p>Example for an <code>EditorTestCase</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
@@ -2034,7 +2030,7 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you test that a language is used?</p>
+<p class="admonition-title">How do you test that you use a language?</p>
 <p>Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">UsedLanguagesUtils</span><span class="p">.</span><span class="na">assertLanguageUsed</span><span class="p">(</span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="o">/</span><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">editor</span><span class="p">.</span><span class="na">menus</span><span class="p">.</span><span class="na">extras</span><span class="p">.</span><span class="na">testLanguage</span><span class="o">/</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -2048,12 +2044,12 @@ When I run the test <em>test1</em> and <em>test2</em> print different node IDs.<
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you click on anything in a test?</p>
-<p>You can execute intentions and actions programmatically, for <abbr title="User Interface">UI</abbr> elements like buttons you can use the <em>press mouse(x,y)</em>
-and <em>release mouse</em> statements.</p>
+<p>You can execute intentions and actions programmatically. You can use the <em>press mouse(x,y)</em>
+and <em>release mouse</em> statements for <abbr title="User Interface">UI</abbr> elements like buttons.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you test that code completion works?</p>
-<p>You can use a scope test, to check if all items are visible in the menu. To check the number of actions in the menu call: </p>
+<p>You can use a scope test to check if all items are visible in the menu. To check the number of actions in the menu, call: </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">assert</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getNodeSubstituteChooser</span><span class="p">().</span><span class="na">isVisible</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">editor</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="na">getNodeSubstituteChooser</span><span class="p">().</span><span class="na">getNumberOfActions</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -2131,29 +2127,29 @@ and <em>release mouse</em> statements.</p>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Tests aren&rsquo;t running at all.</p>
+<p class="admonition-title">Tests aren't running at all.</p>
 <p>A <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F5097124989038916362">test <abbr title="information">info</abbr> node</a> has to
-be added to the model of the tests so that the tests can find the path of the project. The project path also has to be set
-in this node. Make sure that variables that are used in this path are set in <em>Preferences</em> &rarr; <em>Appearance &amp; Behavior</em> &rarr; <em>Path Variables</em>
+be added to the model of the tests so that the tests can find the project's path. The project path also has to be set
+in this node. Ensure you create variables in this path in <em>Preferences</em> &rarr; <em>Appearance &amp; Behavior</em> &rarr; <em>Path Variables</em>
 (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#testinfo">TestInfo | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Tests have a long warm-up time and run slowly.</p>
 <p>When running the tests from a run configuration, enable <code>Execute in the same process</code> in the configuration settings.
-Check also the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
+Check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/help/mps/testing-languages.html#runningthetests">Running the tests | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The tests only work in <abbr title="Meta Programming System">MPS</abbr> and not on the command line</p>
-<p><a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>?</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>?</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition failure">
-<p class="admonition-title">Why does the test execution fail with &ldquo;Test project &lsquo;$&hellip;&rsquo; is not opened. Aborted&rdquo;?</p>
-<p>This is happening because the variable in the <code>TestInfo</code> is not set. Go to <em>File</em> &rarr; <em>Settings</em> &rarr; <em>Path Variables</em> and create an entry for your variable, with a path to the project location on your hard drive.</p>
+<p class="admonition-title">Why does the test execution fail with "Test project '$&hellip;' is not opened. Aborted"?</p>
+<p>It happens because you didn't set the variable in the <code>TestInfo</code>. Go to <em>File</em> &rarr; <em>Settings</em> &rarr; <em>Path Variables</em> and create an entry for your variable with a path to the project location on your hard drive.</p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">java.<abbr title="language">lang</abbr>.IllegalStateException: The showAndGet() method is for modal dialogs only.</p>
-<p>One of the reasons why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is no way to avoid this exception than not showing the dialog.
-According to the IntelliJ documentation it can also happen when the dialog is not shown on the <abbr title="Event Dispatch Thread">EDT</abbr> thread or the dialog is not modal.</p>
+<p>One of the reasons why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is only one way to avoid this exception than not showing the dialog.
+According to the IntelliJ documentation, it can also happen when the dialog is not shown on the <abbr title="Event Dispatch Thread">EDT</abbr> thread or the dialog is not modal.</p>
 </div>
 
   <hr>
@@ -2161,7 +2157,7 @@ According to the IntelliJ documentation it can also happen when the dialog is no
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

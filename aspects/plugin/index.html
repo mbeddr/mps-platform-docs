@@ -26,7 +26,7 @@
     
     
       
-        <title>Plugin aspect - MPS Platform Docs</title>
+        <title>Plugin Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plugin aspect
+              Plugin Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -962,7 +962,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#languagesfeatures" class="md-nav__link">
-    Languages/features
+    Languages/Features
   </a>
   
 </li>
@@ -1120,7 +1120,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1162,7 +1162,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1276,7 +1276,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1380,7 +1380,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1480,7 +1480,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1728,7 +1728,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#languagesfeatures" class="md-nav__link">
-    Languages/features
+    Languages/Features
   </a>
   
 </li>
@@ -1778,7 +1778,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="plugin-aspect">Plugin aspect<a class="headerlink" href="#plugin-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="plugin-aspect">Plugin Aspect<a class="headerlink" href="#plugin-aspect" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>Plugins are a way to integrate your code with the <abbr title="Meta Programming System">MPS</abbr> <abbr title="Integrated Development Environment">IDE</abbr> functionality.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
@@ -1786,7 +1786,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Should you use this aspect?</p>
-<p>No. You should use <a href="https://www.jetbrains.com/help/mps/plugin.html">plugin solutions</a> instead.</p>
+<p>No, use <a href="https://www.jetbrains.com/help/mps/plugin.html">plugin solutions</a> instead.</p>
 </div>
 <details class="question">
 <summary>How do facets work?</summary>
@@ -1795,7 +1795,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li>Do not define dependencies on other facets.</li>
 <li>They are known to the <abbr title="Meta Programming System">MPS</abbr> make process and are available for users.</li>
-<li>You can define where your own facet should fit in and decide if you require some facet.</li>
+<li>You can define where your facet should fit in and decide if you require some facet.</li>
 </ul>
 <p>Usage:</p>
 <ul>
@@ -1814,8 +1814,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Move <code>code/com.my/solutions/com.my.solution.to.move</code> to <code>code/com.my.project/test/com.my.project.solution.to.move</code>.</li>
 <li>Close the <abbr title="Meta Programming System">MPS</abbr> project and reopen it (no need to restart <abbr title="Meta Programming System">MPS</abbr>).</li>
 <li>Add back the <em>.msd</em> files as follows:</li>
-<li>On the workspace root node, right-click and open <em>Project Paths</em> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>).</li>
-<li>Click on the red, old solution file and on <em>-</em>.</li>
+<li>Right-click on the workspace root node and open <em>Project Paths</em> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>).</li>
+<li>Click on the red, old solution file, and on <em>-</em>.</li>
 <li>Click on <em>+</em> and select the new location of this <em>.msd</em> file.</li>
 <li>Open your build script for <abbr title="Continuous Integration">CI</abbr> tests and update the solution path in the project structure.</li>
 </ol>
@@ -1825,40 +1825,40 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <summary>How do you guide the user through cleaning up after deleting a referenced node?</summary>
 <blockquote>
 <p>Given I have a concept <code>Ball</code> and I have a reference <code>BallRef</code>.
-When I have a <code>Ball</code> node and I have <code>BallRef</code>s to it all over my model.
-When I delete the ball then I have a lot of dangling references.
+When I have a <code>Ball</code> node, and I have <code>BallRef</code>s to it all over my model.
+When I delete the ball, then I have a lot of dangling references.
 How may I get guidance in cleaning up these dangling references?</p>
 </blockquote>
-<p>You can show a balloon that says for example:</p>
+<p>You can show a balloon that says, for example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Deleting the ball has left some dangling references
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>_Show_, _Ignore_
 </code></pre></div></td></tr></table></div>
-<p>When clicking <em>show</em>, it will open a usage search for the deleted node using <code class="highlight"><span class="n">ConsoleUtil</span><span class="p">.</span><span class="na">show</span><span class="w"></span></code>. This is implemented with a model listener in a quite generic fashion.</p>
+<p>When clicking <em>show</em>, it will open a usage search for the deleted node using <code class="highlight"><span class="n">ConsoleUtil</span><span class="p">.</span><span class="na">show</span><span class="w"></span></code>. This functionality is implemented with a model listener in a quite generic fashion.</p>
 <p>Here are a few insights:</p>
 <ul>
-<li>Make sure to not show the node in the <em>searched for</em> part of the window. <abbr title="Version Control System">VCS</abbr> will try to highlight it and run into an <abbr title="NullPointerException">NPE</abbr> (<abbr title="Meta Programming System">MPS</abbr> 2019.3)</li>
-<li>Consider cut and paste, or moving elements: these operations yield a removal event as well. Hide the balloon again, once the node gets added again.</li>
+<li>Ensure not to show the node in the <em>searched for</em> part of the window. <abbr title="Version Control System">VCS</abbr> will try to highlight it and run into an <abbr title="NullPointerException">NPE</abbr> (<abbr title="Meta Programming System">MPS</abbr> 2019.3)</li>
+<li>Consider cut and paste or moving elements: these operations also yield a removal event. Hide the balloon again once the node gets added again.</li>
 </ul>
 <p><a class="glightbox" href="../../img/DanglingReferenceHandler.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DanglingReferenceHandler" src="../../img/DanglingReferenceHandler.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <details class="question">
-<summary>How can you make sure that the <abbr title="Integrated Development Environment">IDE</abbr> loads a jar exactly once and then never again?</summary>
+<summary>How can you ensure that the <abbr title="Integrated Development Environment">IDE</abbr> loads a <abbr title="Java Archive">JAR</abbr> exactly once and never again?</summary>
 <blockquote>
-<p>I have a .jar that depends on a native library (.dll/.so/&hellip;). To use it in an <abbr title="Meta Programming System">MPS</abbr> plugin I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> tries to reload the jar in some cases (e.g. after a rebuild). This will fail because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
+<p>I have a <abbr title="Java Archive">JAR</abbr> file that depends on a native library (.dll/.so). To use it in an <abbr title="Meta Programming System">MPS</abbr> plugin, I have a stubs solution for it. Unfortunately, without further ado, <abbr title="Meta Programming System">MPS</abbr> sometimes tries to reload the jar (e.g., after a rebuild) and it will fail because the <abbr title="Java Virtual Machine">JVM</abbr> does not allow reloading of native libraries.</p>
 <p>How can I avoid this problem?</p>
 </blockquote>
-<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (re-)load .jars / stubs of a solution, you can check the facet &ldquo;IDEA Plugin&rdquo; in the &ldquo;Facets&rdquo; tab of the solution properties. This will show another tab where you have to set the Plugin ID `<abbr title="commercial/common/communication">com</abbr>.intellij.</p>
-<p>Now we just have to ensure that the .jars can be found at runtime (i.e. they must be on the classpath). The simplest approach would be to put them into the <em><abbr title="library">lib</abbr></em> directory of the application (e.g. <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
+<p>To prevent that <abbr title="Meta Programming System">MPS</abbr> will ever (re-)load .jars / stubs of a solution, you can check the facet "IDEA Plugin" in the "Facets" tab of the solution properties. This facet will show another tab where you must set the Plugin ID <code>com.intellij</code>.</p>
+<p>We must ensure that the JARs can be found at runtime (i.e., they must be on the classpath). The most straightforward approach would be to put them into the application's <em><abbr title="library">lib</abbr></em> directory (e.g., <abbr title="Meta Programming System">MPS</abbr> installation / your product <abbr title="Rich Client Platform">RCP</abbr>).</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></p>
 </details>
 <details class="question">
 <summary>How can you use an IntelliJ icon for an action?</summary>
 <blockquote>
-<p>I want to use one of the icons shipped with IntelliJ for my action (<code>jetbrains.mps.lang.plugin.structure.ActionDeclaration</code>). How can I reference the icon? (note: this question might be deprecated for newer <abbr title="Meta Programming System">MPS</abbr> versions)</p>
+<p>I want to use one of the icons shipped with IntelliJ for my action (<code>jetbrains.mps.lang.plugin.structure.ActionDeclaration</code>). How can I reference the icon? (note: this question might be deprecated for modern <abbr title="Meta Programming System">MPS</abbr> versions)</p>
 </blockquote>
-<p>You can use <code>IconLoader.getIcon(...)</code> in the reflective editor. Right-click the editor for the icon, use <code>show reflective editor</code> and enter the expression as shown in the screenshot:</p>
+<p>You can use <code>IconLoader#getIcon</code> in the reflective editor. Right-click the editor for the icon, use <code>show reflective editor</code>, and enter the expression as shown in the screenshot:</p>
 <p><a class="glightbox" href="../../img/IconLoader.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IconLoader" src="../../img/IconLoader.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/till-f" title="GitHub User: till-f">@till-f</a><sub></p>
 </details>
@@ -1867,15 +1867,15 @@ How may I get guidance in cleaning up these dangling references?</p>
 <blockquote>
 <p>I have a concept editor in which I use an EditorComponent <span class="arithmatex">\(A\)</span>. Using the projection menu entry, I would like to switch to another editor component <span class="arithmatex">\(B\)</span> upon activation.</p>
 </blockquote>
-<p>First <span class="arithmatex">\(B\)</span> must override <span class="arithmatex">\(A\)</span> and the <code>applicable concept</code> also must not differ.  Then for <span class="arithmatex">\(B\)</span> in <code>applicable in context</code> we must provide a <em>concept editor context hint</em>.</p>
+<p>First <span class="arithmatex">\(B\)</span> must override <span class="arithmatex">\(A\)</span>, and the <code>applicable concept</code> also must not differ. Then for <span class="arithmatex">\(B\)</span> in <code>applicable in context</code>, we must provide a <em>concept editor context hint</em>.</p>
 <p><a class="glightbox" href="../../img/context_hints_tree_layout.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="context hints tree layout" src="../../img/context_hints_tree_layout.png" /></a></p>
 <p>This hint must also be referenced from a <em>Projection Mode Switcher</em>.</p>
 <p><a class="glightbox" href="../../img/projection_mode_switcher.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="projection mode switcher" src="../../img/projection_mode_switcher.png" /></a></p>
 <p>Afterwards, you will find a new entry in the <em>Projection</em> menu.</p>
-<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em> which can be activated by an intention at the position where the include of <span class="arithmatex">\(A\)</span> happens. Also in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself, we cannot use Grammar Cells.</p>
+<p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em>, which can be activated by an intention at the position where the include of <span class="arithmatex">\(A\)</span> happens. Also, in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself, we cannot use Grammar Cells.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></p>
 </details>
-<h2 id="languagesfeatures">Languages/features<a class="headerlink" href="#languagesfeatures" title="Permanent link">&para;</a></h2>
+<h2 id="languagesfeatures">Languages/Features<a class="headerlink" href="#languagesfeatures" title="Permanent link">&para;</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">I want to merge models.</p>
 <p>Use the language <ins>de.itemis.mps.modelmerger</ins> from <span class="twemoji">
@@ -1884,7 +1884,7 @@ How may I get guidance in cleaning up these dangling references?</p>
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I want to verify the structure of a node.</p>
@@ -1894,7 +1894,7 @@ How may I get guidance in cleaning up these dangling references?</p>
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I want to store different states/versions of a node inside the model.</p>
@@ -1904,7 +1904,7 @@ How may I get guidance in cleaning up these dangling references?</p>
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
 </div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -1912,7 +1912,7 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>Create it through <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.adapter.structure%28MPS.Core%2F%29%2F%7EMetaAdapterFactory">MetaAdapterFactory</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you check if a model is a generator model or a test model?</p>
+<p class="admonition-title">How do you check if a model is a generator or a test model?</p>
 <p>Call the corresponding method in <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESModelStereotype">SModelStereotype</a>.</p>
 </div>
 <div class="admonition question">
@@ -1931,25 +1931,24 @@ How may I get guidance in cleaning up these dangling references?</p>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">A reference to a key in an action context parameter is <abbr title="output">out</abbr> of search scope.</p>
+<p class="admonition-title">A reference to a key in an action context parameter is <abbr title="output">out</abbr> of the search scope.</p>
 <p>You need to add a dependency to <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a>.
 This class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EPlatformDataKeys">PlatformDataKeys</a>
-and this class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7ECommonDataKeys">CommonDataKeys</a>.</p>
+, and this class extends <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7ECommonDataKeys">CommonDataKeys</a>.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">An action isn&rsquo;t visible.</p>
-<p>You have to add it to an <code>ActionGroup</code> that can be attached to different places such as the context menu or the build menu. 
-All of the action context parameters that are marked as required have to be available and the <code class="highlight"><span class="n">isApplicable</span><span class="w"></span></code> block must
+<p class="admonition-title">The action isn't visible.</p>
+<p>You have to add it to an <code>ActionGroup</code> that can be attached to different places, such as the context or build menu.
+All action context parameters marked as required must be available <code class="highlight"><span class="n">isApplicable</span><span class="w"></span></code> block must
 return true for an action to be visible. For debugging purposes, you can set <em>always visible</em> to true to check if your
-action is registered at all. </p>
-<p>You also need to have a standalone descriptor in your model for it to work. Additionally,
-the solution kind should be set to <em>Other</em> in the <em>Java</em> tab of the solution properties (<a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Plugin | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
+action is registered. </p>
+<p>You must have a standalone descriptor in your model. Set the solution kind to <em>Other</em> in the <em>Java</em> tab of the solution properties (<a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">Plugin | <abbr title="Meta Programming System">MPS</abbr></a>).</p>
 </div>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-">How to create new SContainmentLink for a non-existent role?</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-">How to create a new SContainmentLink for a non-existent role?</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1959,7 +1958,7 @@ the solution kind should be set to <em>Other</em> in the <em>Java</em> tab of th
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

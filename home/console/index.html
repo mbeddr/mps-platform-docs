@@ -318,7 +318,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -662,7 +662,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    External files and tools
+    External Files and Tools
   </span>
   
 
@@ -710,7 +710,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    OS-specific bugs
+    OS-Specific Bugs
   </span>
   
 
@@ -750,7 +750,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Trouble shooting guide
+    Trouble Shooting Guide
   </span>
   
 
@@ -794,7 +794,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Overcoming obstacles
+    Overcoming Obstacles
   </span>
   
 
@@ -820,7 +820,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Visual guide
+    Visual Guide
   </span>
   
 
@@ -1045,7 +1045,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1149,7 +1149,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1249,7 +1249,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1521,8 +1521,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <h1>Console</h1>
 
 <div class="admonition warning">
-<p class="admonition-title">I can&rsquo;t enter the print statement.</p>
-<p>It can&rsquo;t be used in nested structures (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656</a>). Use it at the top level instead. If you need to output multiple objects,
+<p class="admonition-title">I can't enter the print statement.</p>
+<p>Nested structures don't support it (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656</a>). Use it at the top level instead. If you need to output multiple objects,
 save them to a list first and output the list at the top level.</p>
 </div>
 <div class="admonition question">
@@ -1535,41 +1535,40 @@ save them to a list first and output the list at the top level.</p>
 <p><a class="glightbox" href="../../img/find_print_statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find print statements" src="../../img/find_print_statement.png" /></a>]</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">#nodes, #models, #usages etc. don&rsquo;t show any result.</p>
-<p>Make sure that your query is correct. You also have to set a scope for these statements in square brackets such as
-<code class="highlight"><span class="err">#</span><span class="n">nodes</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="w"></span></code> to find all the nodes in the global scope.</p>
+<p class="admonition-title">#nodes, #models, #usages, etc., don't show any result.</p>
+<p>Make sure that your query is correct. You must also set a scope for these statements in square brackets, such as
+<code class="highlight"><span class="err">#</span><span class="n">nodes</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="w"></span></code>, to find all the nodes in the global scope.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is the console a regular root node?</p>
 <p>Yes, it is an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot</a>
-and is located in a temporary model. It is possible to open it in a normal tab. Right-click in the console (for example at the top) and click 
-<em>Show Node in Explorer</em>. Click the <em>ConsoleRoot</em> and it will open in a new tab (keyboard shortcuts such as run line won&rsquo;t work here).</p>
+and belongs to a temporary model. It is possible to open it in a regular tab. Right-click in the console (for example, at the top) and click 
+<em>Show Node in Explorer</em>. Click the <em>ConsoleRoot</em> to open it in a new tab  (keyboard shortcuts such as run line won't work here).</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">After executing the current line, an error says that the console class wasn&rsquo;t found.</p>
-<p>This can happen when the compilation of the model of the console was not successful. It can happen if you import a custom generation
-plan into the console that disables some generators. It can also happen if you import a solution that doesn&rsquo;t have the Java facet enabled
-or has a different solution kind such as <em>other</em>.</p>
+<p class="admonition-title">After executing the current line, an error says that the compiler couldn't find the console class.</p>
+<p>This error can happen when the console's compilation of the model is unsuccessful. It can happen if you import a custom generation
+plan into the console that turns off some generators. It can also occur if you import a solution that doesn’t enable the Java facet or has a different solution (e.g., <em>other</em>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What does the expression #internalMode do?</p>
-<p>It tells you if the internal mode is activated. It can be achieved by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
-or by setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The exact functionality of this flag can be found by looking at the <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> source code</a>.
-One of the new action groups that it adds, is called <em>Internal</em>. There is also an Internal Actions Menu in IntelliJ <abbr title="Integrated Development Environment">IDE</abbr>&lsquo;s. Consolute the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
+<p>It tells you if the internal mode is activated. Activate it by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
+or setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> sources</a> contain references to this flag in various places.
+One of the new action groups that it adds is called <em>Internal</em>. There is also an Internal Actions Menu in the IntelliJ IDEA. Consult the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
 for more <abbr title="information">info</abbr>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you open the selected node in the console?</p>
 <blockquote>
-<p>Given I have a node selected in the editor. How can I select it to manipulate it in the <abbr title="Meta Programming System">MPS</abbr> console?</p>
+<p>Given I have a node selected in the editor. How can I reference it to manipulate it in the <abbr title="Meta Programming System">MPS</abbr> console?</p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
-<p>You can simply copy the node and paste it into the console:</p>
+<p>You can copy the node and paste it into the console:</p>
 <ol>
 <li>Copy a node in the editor (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-c">C</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>)</li>
 <li>Go to the console.</li>
 <li>Paste the content   (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</li>
-<li><abbr title="Meta Programming System">MPS</abbr> pastes a node reference that you can use to directly manipulate the node:</li>
+<li><abbr title="Meta Programming System">MPS</abbr> pastes a node reference that you can use to manipulate the node directly:</li>
 </ol>
 <p><a class="glightbox" href="../../img/console_node_reference.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="console_node_reference" src="../../img/console_node_reference.png" width="600px" /></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></p>
@@ -1580,7 +1579,7 @@ for more <abbr title="information">info</abbr>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1726,7 +1725,7 @@ for more <abbr title="information">info</abbr>.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../external_files_and_tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: External files and tools" rel="prev">
+          <a href="../external_files_and_tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: External Files and Tools" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1736,20 +1735,20 @@ for more <abbr title="information">info</abbr>.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                External files and tools
+                External Files and Tools
               </div>
             </div>
           </a>
         
         
           
-          <a href="../platform_specific_bugs/" class="md-footer__link md-footer__link--next" aria-label="Next: OS-specific bugs" rel="next">
+          <a href="../platform_specific_bugs/" class="md-footer__link md-footer__link--next" aria-label="Next: OS-Specific Bugs" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                OS-specific bugs
+                OS-Specific Bugs
               </div>
             </div>
             <div class="md-footer__button md-icon">

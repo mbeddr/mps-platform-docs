@@ -26,7 +26,7 @@
     
     
       
-        <title>Double dispatch - MPS Platform Docs</title>
+        <title>Double Dispatch - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Double dispatch
+              Double Dispatch
             
           </span>
         </div>
@@ -318,7 +318,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -748,7 +748,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Baselanguage and extensions
+    Base Language and Extensions
   </span>
   
 
@@ -775,7 +775,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Double dispatch
+    Double Dispatch
   </span>
   
 
@@ -812,7 +812,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS-extensions
+    MPS-Extensions
   </span>
   
 
@@ -897,7 +897,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1001,7 +1001,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1101,7 +1101,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1370,10 +1370,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Double dispatch</h1>
+  <h1>Double Dispatch</h1>
 
-<p>This article explains the language <ins>jetbrains.mps.baselanguage.doubleDispatch</ins>. The example comes from <a href="https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch">this article</a>:</p>
-<p>Most OOP programming languages support single dispatch, more commonly known as virtual methods. For example, consider the following code:</p>
+<p>This article explains the language <ins>jetbrains.mps.baselanguage.doubleDispatch</ins>. The used example comes from <a href="https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch">this article</a>:</p>
+<p>Most OOP programming languages support single dispatch, commonly known as virtual methods. For example, consider the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Single dispatch</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1405,8 +1405,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ol>
 <li>ApolloSpacecraft</li>
 </ol>
-<p>The actual method implementation which should be called, is chosen at runtime based solely on the actual type of ship. So, only the type of single object is used to select the method, hence the name single dispatch.</p>
-<p>Note: <em>Single dispatch</em> is one form of <em>dynamic dispatch</em>, for example, the method is chosen at runtime. If the method is chosen at compile time (true for all non-virtual methods), it’s called <em>static dispatch</em>.</p>
+<p>The actual method implementation, which the interpreter should call, is chosen at runtime based solely on the actual type of ship. The interpreter only uses the type of a <em>single</em> object to select the method, hence the name single dispatch.</p>
+<p>Note: <em>Single dispatch</em> is one form of <em>dynamic dispatch</em>. For example, the interpreter chooses the method at runtime. If the compiler decides the method at compile time (valid for all non-virtual methods), it's called <em>static dispatch</em>.</p>
 <p>Now add some asteroids:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Double dispatch</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1520,7 +1520,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Asteroid hit an ApolloSpacecraft</li>
 <li>ExplodingAsteroid hit a SpaceShip</li>
 </ol>
-<p>The desired result here would be <em>ExplodingAsteroid hit an ApolloSpacecraft</em>, but instead you get <em>ExplodingAsteroid hit a SpaceShip</em>.
+<p>The desired result here would be <em>ExplodingAsteroid hit an ApolloSpacecraft</em>, but instead, you get <em>ExplodingAsteroid hit a SpaceShip</em>.
 To support double dispatch, import the dispatch language and include dispatch modifiers in ExplodingAsteroid:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -1547,7 +1547,7 @@ To support double dispatch, import the dispatch language and include dispatch mo
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1693,7 +1693,7 @@ To support double dispatch, import the dispatch language and include dispatch mo
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../baselanguage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Baselanguage and extensions" rel="prev">
+          <a href="../baselanguage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Base Language and Extensions" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1703,7 +1703,7 @@ To support double dispatch, import the dispatch language and include dispatch mo
                 Previous
               </span>
               <div class="md-ellipsis">
-                Baselanguage and extensions
+                Base Language and Extensions
               </div>
             </div>
           </a>

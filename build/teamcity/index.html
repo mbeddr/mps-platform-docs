@@ -104,6 +104,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#docker" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -316,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +774,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -898,7 +903,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Creating a command line tool
+    Creating a Command Line Tool
   </span>
   
 
@@ -941,6 +946,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TeamCity
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -950,6 +966,30 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -966,7 +1006,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Advanced GitHub workflow
+    Advanced GitHub Workflow
   </span>
   
 
@@ -1019,7 +1059,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1119,7 +1159,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1352,6 +1392,21 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1376,22 +1431,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>TeamCity</h1>
 
-<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">Extensive official documentation</a> is available for TeamCity on the web. The TeamCity server can be reached at <a href="https://build.mbeddr.com">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. When a new commit is pushed to a branch in one of the Git repositories, the platforms are built on the server, tested, and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis Nexus repository</a>.
-This is configured through <a href="https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html"><abbr title="Version Control System">VCS</abbr> triggers</a>.</p>
-<p>The test results are collected from <a href="https://ant.apache.org/manual/Tasks/junitreport.html">Ant JUnit reports</a> and make the builds fail if not all tests pass. Tests can be <a href="https://www.jetbrains.com/help/teamcity/investigating-and-muting-build-failures.html">muted</a>. This might be necessary when tests return both passes and failures despite no changes (<a href="https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/">flake tests</a>). This can happen, for example, if the test is timing-dependent, an algorithm is not <a href="https://en.wikipedia.org/wiki/Deterministic_system">deterministic</a> or a timeout happens.</p>
+<p>All platforms use <a href="https://www.devopsschool.com/blog/what-is-teamcity-and-how-it-works-an-overview-and-its-use-cases/">TeamCity</a> for <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>. <a href="https://www.jetbrains.com/help/teamcity/getting-started-with-teamcity.html">Extensive official documentation</a> is available for TeamCity on the web. The TeamCity server is reachable at <a href="https://build.mbeddr.com">build.mbeddr.<abbr title="commercial/common/communication">com</abbr></a>. When you push a new commit to a branch in one of the Git repositories, the platforms are built on the server, tested, and published to the <a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps">itemis Nexus repository</a>.
+This automatic building is configured through <a href="https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html"><abbr title="Version Control System">VCS</abbr> triggers</a>.</p>
+<p>The test results are collected from <a href="https://ant.apache.org/manual/Tasks/junitreport.html">Ant JUnit reports</a> making the builds fail if not all tests pass. You can <a href="https://www.jetbrains.com/help/teamcity/investigating-and-muting-build-failures.html">mute tests</a>. Muting might be necessary when tests return passes and failures despite no changes (<a href="https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/">flake tests</a>). This situation can happen, for example, if the test is timing-dependent, an algorithm is not <a href="https://en.wikipedia.org/wiki/Deterministic_system">deterministic</a>, or a timeout occurs.</p>
 <p>All GitHub repositories are connected directly to TeamCity and show the build status at the bottom of pull requests and next to pushed commits with the help of the <a href="https://www.jetbrains.com/help/teamcity/commit-status-publisher.html">Commit Status Publisher</a>. The main repositories require the build to succeed before a pull request can be merged:</p>
 <p><a class="glightbox" href="../../platform_essentials/images/GitHub_build_status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub build status" src="../../platform_essentials/images/GitHub_build_status.png" /></a></p>
-<p>One or multiple <a href="https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html">build configurations</a> exist per platform. They are described here only superficially because they might change in the future. Each <abbr title="subtraction">sub</abbr>-item is a separate build configuration. Some configurations depend on other configurations (<a href="https://www.jetbrains.com/help/teamcity/snapshot-dependencies.html">snapshot dependencies</a>).</p>
+<p>One or multiple <a href="https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html">build configurations</a> exist per platform. This page describes them only superficially because they might change in the future. Each <abbr title="subtraction">sub</abbr>-item is a separate build configuration. Some configurations depend on other configurations (<a href="https://www.jetbrains.com/help/teamcity/snapshot-dependencies.html">snapshot dependencies</a>).</p>
 <ul>
 <li>
 <p><strong><abbr title="Meta Programming System">MPS</abbr>-Extensions</strong></p>
 <ul>
-<li>build the project: <code>gradle build</code><ul>
-<li>it is not triggered by changes in the documentation</li>
+<li>Build the project: <code>gradle build</code><ul>
+<li>Changes in the documentation do not trigger it.</li>
 </ul>
 </li>
-<li>build the documentation</li>
-<li>build and publish to Nexus/GitHub: <code>gradle build publish</code><ul>
+<li>Build the documentation</li>
+<li>Build and publish to Nexus/GitHub: <code>gradle build publish</code><ul>
 <li>only executed once a day</li>
 </ul>
 </li>
@@ -1400,14 +1455,14 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 <li>
 <p><strong>mbeddr platform</strong></p>
 <ul>
-<li>build and publish: <code>gradle publishMbeddrPlatformPublicationToMavenRepository publishMbeddrAllScriptsPublicationToMavenRepository</code><ul>
+<li>Build and publish: <code>gradle publishMbeddrPlatformPublicationToMavenRepository publishMbeddrAllScriptsPublicationToMavenRepository</code><ul>
 <li>depends on <abbr title="Meta Programming System">MPS</abbr>-Extensions</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><strong>mbeddr</strong><ul>
-<li>build and publish: <code>gradle build:com.mbeddr:languages:publish</code><ul>
+<li>Build and publish: <code>gradle build:com.mbeddr:languages:publish</code><ul>
 <li>depends on the mbeddr platform</li>
 </ul>
 </li>
@@ -1415,39 +1470,63 @@ This is configured through <a href="https://www.jetbrains.com/help/teamcity/conf
 </ul>
 </li>
 <li><strong>iets3</strong><ul>
-<li>build and publish: <code>gradle build publish</code><ul>
+<li>Build and publish: <code>gradle build publish</code><ul>
 <li>depends on the mbeddr platform</li>
-<li>builds are only triggered for specific naming conventions and some special branches: <em>master</em>, <em>feature/*</em>, <em>bugfix/*</em>, <em>refactor/*</em>, <em>maintenance/*</em></li>
+<li>Builds are only triggered for specific naming conventions and some special branches: <em>master</em>, <em>feature/*</em>, <em>bugfix/*</em>, <em>refactor/*</em>, <em>maintenance/*</em></li>
 </ul>
 </li>
-<li>publish to GitHub</li>
+<li>Publish to GitHub</li>
 </ul>
 </li>
 <li><strong>Publish <abbr title="Java Development Kit">JDK</abbr></strong> (<a href="https://github.com/mbeddr/build.publish.jdk">build.publish.jdk</a>)<ul>
-<li>publish to Nexus</li>
+<li>Publish to Nexus</li>
 </ul>
 </li>
 <li><strong>Update <abbr title="Meta Programming System">MPS</abbr></strong> (<a href="https://github.com/mbeddr/build.publish.mps">build.publish.mps</a>)<ul>
-<li>publish to Nexus and GitHub</li>
+<li>Publish to Nexus and GitHub</li>
 </ul>
 </li>
 <li><strong><abbr title="Meta Programming System">MPS</abbr> Gradle plugin</strong> (<a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>)<ul>
-<li>publish</li>
+<li>Publish to Nexus and GitHub</li>
 </ul>
 </li>
 </ul>
 <p>The following diagram shows a simplified version of the <a href="https://www.jetbrains.com/help/teamcity/build-chain.html">build chain</a> that shows the dependencies between the projects/configurations:</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp1kLEOwjAMRPd8hX-gUzcG1KUDAxJS2SqG0LglInGi2Ij276lS0gGJzT4_3Z3csOgkL-8UPy1FnbSHIfgYCEk6WRxCwkE0TQ6V6s-XrmpnQWIbiG-gGXAW1fs7GpMgOi1jSD4fyqL6U3vt6qxZFK4LnpVt3B00abcwMgiybAFFUmqNgirZ6SHVcbeHAxiMSAZpWCCMaj9UJrxpJXPof6oYbg1-uW-vnSptfrlmndc3fgDY3HhQ?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp1kLEOwjAMRPd8hX-gUzcG1KUDAxJS2SqG0LglInGi2Ij276lS0gGJzT4_3Z3csOgkL-8UPy1FnbSHIfgYCEk6WRxCwkE0TQ6V6s-XrmpnQWIbiG-gGXAW1fs7GpMgOi1jSD4fyqL6U3vt6qxZFK4LnpVt3B00abcwMgiybAFFUmqNgirZ6SHVcbeHAxiMSAZpWCCMaj9UJrxpJXPof6oYbg1-uW-vnSptfrlmndc3fgDY3HhQ?" /></a></p>
-<p>Although all these repositories use Gradle for build management, TeamCity has a lot of bundled plugins. Many are described in <a href="https://www.jetbrains.com/help/teamcity/configuring-build-steps.html">Configuring Build steps | TeamCity On-Premises</a>. The builds are executed by <a href="https://www.jetbrains.com/help/teamcity/build-agent.html">build agents</a>. The Docker image of the agents can be found in the <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">mbeddr.build.docker</a> repository.</p>
-<p>9 agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and the cloud). The agents are running Linux, except one agent which is running
-Windows 10 and one agent that is running Mac <abbr title="Open Source / Operating System">OS</abbr> X, version 10.15.7.</p>
+<p>Although all these repositories use Gradle for build management, TeamCity has a lot of bundled plugins. <a href="https://www.jetbrains.com/help/teamcity/configuring-build-steps.html">Configuring Build steps | TeamCity On-Premises</a> describes many of them. <a href="https://www.jetbrains.com/help/teamcity/build-agent.html">Build agents</a> execute the build. <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">mbeddr.build.docker</a> contains
+the agent's Docker image.</p>
+<p>About ten agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and the cloud). The agents are running Linux, except one agent, which is running Windows 10, and one is running Mac <abbr title="Open Source / Operating System">OS</abbr> X.</p>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>, <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,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"
+    />
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>, <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a></p>
+<p>Docker is a Linux container technology that the platform projects use a lot. You can think of it as a lightweight virtual machine. Besides the container runtime, Docker also includes the tools required to build preconfigured images that are then executed in the container.
+These images are built from a Dockerfile.</p>
+<p>Everything in the infrastructure is provisioning using Docker from the TeamCity front end over the database to the build agent. For the built agent, this approach allows us to keep the build agents consistent with their installed software and their versions. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.</p>
+<p>GitLab hosts our complete docker configuration. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we use <a href="https://docs.docker.com/compose/">docker-compose</a> as an orchestration tool. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1610,13 +1689,13 @@ Windows 10 and one agent that is running Mac <abbr title="Open Source / Operatin
         
         
           
-          <a href="../advanced_github_workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced GitHub workflow" rel="next">
+          <a href="../advanced_github_workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced GitHub Workflow" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Advanced GitHub workflow
+                Advanced GitHub Workflow
               </div>
             </div>
             <div class="md-footer__button md-icon">

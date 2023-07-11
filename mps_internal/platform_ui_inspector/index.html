@@ -26,7 +26,7 @@
     
     
       
-        <title>Platform UI inspector - MPS Platform Docs</title>
+        <title>Platform UI Inspector - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Platform UI inspector
+              Platform UI Inspector
             
           </span>
         </div>
@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -878,7 +878,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -893,7 +893,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -999,7 +999,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Editor development
+    Editor Development
   </span>
   
 
@@ -1046,7 +1046,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Platform UI inspector
+    Platform UI Inspector
   </span>
   
 
@@ -1139,7 +1139,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1289,7 +1289,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1544,12 +1544,12 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Platform UI inspector</h1>
+  <h1>Platform UI Inspector</h1>
 
 <p>The following example shows the internal structure of <abbr title="Meta Programming System">MPS</abbr> in regard to the <a href="https://docs.oracle.com/javase/tutorial/uiswing/">Swing</a> components.
-Most of the structure is predetermined by the IntelliJ platform. There is a <a href="https://plugins.jetbrains.com/docs/intellij/internal-ui-inspector.html"><abbr title="User Interface">UI</abbr> inspector
-</a> in IntelliJ products for debugging purposes
-that is disabled by default in <abbr title="Meta Programming System">MPS</abbr>. It can be enabled on the <abbr title="Meta Programming System">MPS</abbr> console through the following code:</p>
+Most of the structure is predetermined by the IntelliJ platform. IntelliJ has a <a href="https://plugins.jetbrains.com/docs/intellij/internal-ui-inspector.html"><abbr title="User Interface">UI</abbr> inspector
+</a> for debugging purposes.
+<abbr title="Meta Programming System">MPS</abbr> turns it off by default, but you can enable it on the <abbr title="Meta Programming System">MPS</abbr> console through the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">DataContext</span><span class="w"> </span><span class="n">dataContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DataManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getDataContext</span><span class="p">();</span><span class="w"> </span>
@@ -1557,9 +1557,9 @@ that is disabled by default in <abbr title="Meta Programming System">MPS</abbr>.
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">ActionUtils</span><span class="p">.</span><span class="na">updateAndPerformAction</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">UiInspectorAction</span><span class="p">(),</span><span class="w"> </span><span class="n">event</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><a class="glightbox" href="../images/ui_inspector_action.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ui inspector action" src="../images/ui_inspector_action.png" /></a></p>
-<p>The following tree shows how the <abbr title="Integrated Development Environment">IDE</abbr> is structured internally, starting from the main frame down to the light bulb menu.
-Some entries like menus or tabs can occur more than once. The structure might be slightly different in another <abbr title="Meta Programming System">MPS</abbr> version
-because a different version of the IntelliJ platform is used.</p>
+<p>The following tree shows how the <abbr title="Integrated Development Environment">IDE</abbr> is structured internally, from the main frame down to the light bulb menu.
+Some entries, like menus or tabs, can occur more than once. The structure might be slightly different in another <abbr title="Meta Programming System">MPS</abbr>
+version because of the different versions of the IntelliJ platform.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Structure</label><label for="__tabbed_1_2">Explanation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1569,31 +1569,31 @@ because a different version of the IntelliJ platform is used.</p>
 <ol>
 <li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html">JFrame</a></li>
 <li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html">JRootPane</a>. It also contains the toolbar and <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar</a>.</li>
-<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The glass pane is often used to intercept input events occurring over the top-level container, and can also be used to paint over multiple components.</li>
-<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The layered pane contains the menu bar and content pane, and enables Z-ordering of other components</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The glass pane is often used to intercept input events occurring over the top-level container and can also be used to paint over multiple components.</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The layered pane contains the menu bar and content pane and enables Z-ordering of other components</li>
 <li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/menu.html">JMenuBar</a></li>
 <li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/panel.html">JPanel</a></li>
 <li>an entry in the main menu</li>
 <li>the <a href="https://www.jetbrains.com/help/mps/navigation-bar.html">navigation bar</a></li>
-<li>the pane that contains the tool window stripes</li>
+<li>the pane containing the tool window stripes</li>
 <li>the <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar</a></li>
-<li>the stripes that contain the <a href="https://www.jetbrains.com/help/mps/tool-windows.html">tool window</a> buttons</li>
-<li>the button that opens a tool window</li>
-<li>the pane that contains the main content</li>
-<li>three components that are split by two dividers horizontally or vertically</li>
+<li>the stripes containing the <a href="https://www.jetbrains.com/help/mps/tool-windows.html">tool window</a> buttons</li>
+<li>a button opening a tool window</li>
+<li>the pane containing the main content</li>
+<li>Three components split by two dividers horizontally or vertically</li>
 <li>the window of the opened bottom tool</li>
 <li>the header and divider of 15</li>
 <li>the opened bottom tool window</li>
 <li>a tab in a tool window</li>
-<li>a panel that contains the editor</li>
+<li>a panel containing the editor</li>
 <li>the opened left tool window</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#194d9944">document tabs</a> that enable navigating between opened editors</li>
+<li>the <a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#194d9944">document tabs</a> enabling the navigation between opened editors</li>
 <li>the editor window</li>
-<li>This class hides the internal structure of a <abbr title="User Interface">UI</abbr> component which represents a set of opened editors</li>
+<li>A class hiding the internal structure of a <abbr title="User Interface">UI</abbr> component which represents a set of opened editors</li>
 <li><abbr title="Meta Programming System">MPS</abbr> version of an IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">document</a> editor</li>
-<li>the panel that contains the <abbr title="Meta Programming System">MPS</abbr> editor</li>
+<li>the panel containing the <abbr title="Meta Programming System">MPS</abbr> editor</li>
 <li>the <a href="https://www.jetbrains.com/help/mps/editor.html#editorcomponentsandeditorcomponentcells">editor component</a> itself</li>
-<li>a pane that supports zooming with the mouse wheel and scrolling</li>
+<li>a pane supporting zooming with the mouse wheel and scrolling</li>
 <li>the vertical scrollbar of the editor component</li>
 <li>the horizontal scrollbar of the editor component</li>
 <li>the left editor highlighter (<a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#c1b7ec2d">left gutter</a>)</li>
@@ -1610,7 +1610,7 @@ because a different version of the IntelliJ platform is used.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -361,7 +361,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -876,7 +876,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -981,7 +981,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -996,7 +996,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Clean code
+            Clean Code
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1012,7 +1012,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Readability/maintainability
+    Readability/Maintainability
   </span>
   
 
@@ -1326,14 +1326,14 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#null-safety" class="md-nav__link">
-    Null safety
+    Null Safety
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#exceptions-and-warnings" class="md-nav__link">
-    Exceptions and warnings
+    Exceptions and Warnings
   </a>
   
 </li>
@@ -1361,25 +1361,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                   
   
 
-  <nav class="md-tags" >
-    
-      
-      
-        <a href="../../tags/#baselanguage" class="md-tagmaterial/close">baselanguage</a>
-      
-    
-      
-      
-        <a href="../../tags/#best_practise" class="md-tagmaterial/close">best_practise</a>
-      
-    
-      
-      
-        <a href="../../tags/#ui" class="md-tagmaterial/close">ui</a>
-      
-    
-  </nav>
-
 
 
   
@@ -1388,25 +1369,25 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
   <h1>Index</h1>
 
-<p>This document lists some recommendations for code written it <abbr title="Meta Programming System">MPS</abbr>. For a general introduction to code smells, go to <a href="https://blog.codinghorror.com/code-smells/">Code Smells | Coding Horror</a> and <a href="https://web.archive.org/web/20171224114025id_/https://www.thc.org/root/phun/unmaintain.html">How To Write Unmaintainable Code</a>. Clean code has many benefits that are described in <a href="https://blogs.sap.com/2022/12/21/clean-code-writing-maintainable-readable-and-testable-code/">Clean Code: Writing maintainable, readable and testable code | https://blogs.sap.<abbr title="commercial/common/communication">com</abbr>/</a>.</p>
+<p>This document lists some recommendations for code written in <abbr title="Meta Programming System">MPS</abbr>. For a general introduction to code smells, go to <a href="https://blog.codinghorror.com/code-smells/">Code Smells | Coding Horror</a> and <a href="https://web.archive.org/web/20171224114025id_/https://www.thc.org/root/phun/unmaintain.html">How To Write Unmaintainable Code</a>. Clean code has many benefits. <a href="https://blogs.sap.com/2022/12/21/clean-code-writing-maintainable-readable-and-testable-code/">Clean Code: Writing maintainable, readable, and testable code | https://blogs.sap.<abbr title="commercial/common/communication">com</abbr>/</a> describes those benefits.</p>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/prefer-composition-over-inheritance/">Prefer composition over inheritance</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that should have a name. The name property will be returned when <code>node.getName()</code> is called e.g. the name is used in editor tabs, the logical view, as the default presentation for references and other places.</li>
-<li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept instead of using the Java instanceof operator e.g. <code class="highlight"><span class="n">node</span><span class="p">.</span><span class="na">isInstanceOf</span><span class="p">(</span><span class="n">IfStatement</span><span class="p">)</span><span class="w"></span></code>. Alternatively, use the <code>ifInstanceOf</code> statement to directly save the converted expression in a variable. For example:
+<li><a href="https://specificlanguages.com/posts/prefer-composition-over-inheritance/">Prefer composition over inheritance</a>(<em>Specific Languages' blog</em>)</li>
+<li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that should have a name. The name property will be returned when you call <code>node.getName()</code>. <abbr title="Meta Programming System">MPS</abbr> uses the name in editor tabs, the logical view, as the default presentation for references and other places.</li>
+<li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept instead of using the Java instanceof operator, e.g., <code class="highlight"><span class="n">node</span><span class="p">.</span><span class="na">isInstanceOf</span><span class="p">(</span><span class="n">IfStatement</span><span class="p">)</span><span class="w"></span></code>. Alternatively, use the <code>ifInstanceOf</code> statement to save the converted expression in a variable directly. For example:
  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w"> </span><span class="n">ifInstanceOf</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">IfStatement</span><span class="w"> </span><span class="n">ifStatement</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">       </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></li>
-<li>Use the built-in collection classes such as collections, set, list, and map (<a href="https://www.jetbrains.com/help/mps/collections-language.html">documentation</a>). Those classes are supported by languages that are null-safe.
+<li>Use the built-in collection classes such as collections, set, list, and map (<a href="https://www.jetbrains.com/help/mps/collections-language.html">documentation</a>). Null-safe languages implement those classes.
   For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">list</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listOfStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">linkedlist</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">copy</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">string</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;ab&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ba&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;aaaa&quot;</span><span class="p">});</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">listOfStrings</span><span class="p">.</span><span class="na">where</span><span class="p">({</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}).</span><span class="na">join</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  For lists of nodes there is the special list type <code>nlist</code> e.g. <code class="highlight"><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span></code>
+  For lists of nodes, there is the particular list type <code>nlist</code>, e.g., <code class="highlight"><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span></code>
   <a href="http://www.javapractices.com/topic/TopicAction.do?Id=65">Choose the right collection</a> for your task.</li>
 <li>Use the <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a> instead of directly calling <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EModelAccess">ModelAccess</a> methods.
   For example:
@@ -1418,67 +1399,66 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="n">classNode</span><span class="p">.</span><span class="na">member</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="o">&lt;</span><span class="n">argument</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></li>
-<li>Write <a href="https://www.jetbrains.com/help/mps/testing-languages.html">tests</a> for new features that you have developed and bugs that you have fixed. The generator
-  should always be tested, sometimes also the type system. You can even start with writing the tests first (<a href="https://www.browserstack.com/guide/what-is-test-driven-development">test-driven-development</a>).</li>
-<li>Don&rsquo;t try to use features in <abbr title="Meta Programming System">MPS</abbr> at places that don&rsquo;t officially support them. Not supported means that the use case is not mentioned in the official documentation and the feature can only be accessed through hacks and workarounds. Examples:<ul>
+<li>Write <a href="https://www.jetbrains.com/help/mps/testing-languages.html">tests</a> for new features that you have developed and bugs that you have fixed. Always test generators, sometimes also the type system. You can even start by writing the tests first (<a href="https://www.browserstack.com/guide/what-is-test-driven-development">test-driven-development</a>).</li>
+<li>Don't try to use features in <abbr title="Meta Programming System">MPS</abbr> at places that don't officially support them. Not supported means that the official documentation doesn't mention it, and you can access the feature only through hacks and workarounds. Examples:<ul>
 <li>invoking the generator in type system rules</li>
 <li><abbr title="User Interface">UI</abbr> code in the behavior aspect</li>
-<li>accessing the project instance in unsupported places e.g. the generator</li>
+<li>accessing the project instance in unsupported places, e.g., the generator</li>
 </ul>
 </li>
-<li><a href="https://specificlanguages.com/posts/2022-06/02-avoid-strict-node-casts/">Avoid strict node casts</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://sweetcode.io/use-java-streams-to-write-clean-java-code/">Use Java Streams to Write Clean Java Code</a>. Warning: while streams
+<li><a href="https://specificlanguages.com/posts/2022-06/02-avoid-strict-node-casts/">Avoid strict node casts</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://sweetcode.io/use-java-streams-to-write-clean-java-code/">Use Java Streams to Write Clean Java Code</a>. <em>Warning</em>: While streams
   can be helpful, consider using the <a href="https://www.jetbrains.com/help/mps/collections-language.html"><abbr title="Meta Programming System">MPS</abbr> collections language</a> for most cases. It
   is better understood by <abbr title="Meta Programming System">MPS</abbr> developers and easier to use. Switch to Java streams only when the collections language is
   not powerful enough.</li>
-<li>Use logging for troubleshooting purposes. Remove logging statements from production code or at least reduce the log level
+<li>Use logging for troubleshooting purposes. Remove logging statements from production code or reduce the log level
   to debug. Do not output log messages when they are not necessary.</li>
 </ul>
-<h2 id="null-safety">Null safety<a class="headerlink" href="#null-safety" title="Permanent link">&para;</a></h2>
+<h2 id="null-safety">Null Safety<a class="headerlink" href="#null-safety" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use the language <a href="https://www.jetbrains.com/help/mps/other-languages.html">checkedDots</a> for saver access of possible null values. You can check nodes for null: <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1171999116870">node.isNull</a></li>
-<li>Use the annotation<code>@NotNull</code>and<code>@Nullable</code>for baselanguage code. A specific type system rule in <abbr title="Meta Programming System">MPS</abbr> checks these annotations. The annotations are also enforced at runtime by the compiler.</li>
+<li>Use the annotations <code>@NotNull</code> and <code>@Nullable</code> for the Base Language code. A specific type system rule in <abbr title="Meta Programming System">MPS</abbr> checks these annotations. The annotations are also enforced at runtime by the compiler.</li>
 <li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1225271283259">:eq:</a>(<abbr title="NullPointerException">NPE</abbr> safe equals operation) and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F122527122 1393">:<abbr title="not equal/expression">ne</abbr>:</a>(<abbr title="NullPointerException">NPE</abbr> safe not equals operation) instead of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068580123152">==</a> and <code>equals</code>.</li>
-<li>You can still return optional values instead of null in<code>baselanguage</code>code if you want (<strong><a href="http://www.javapractices.com/topic/TopicAction.do?Id=279">Java explanation</a></strong>).</li>
+<li>You can still return optional values instead of null in Base Language code (<strong><a href="http://www.javapractices.com/topic/TopicAction.do?Id=279">Java explanation</a></strong>).</li>
 </ul>
-<p>Some languages such as the <a href="https://www.jetbrains.com/help/mps/smodel-language.html">smodel</a> and <a href="https://www.jetbrains.com/help/mps/collections-language.html">collections</a> languages are also null safe. The following code will correctly return false:
+<p>Some languages, such as the <a href="https://www.jetbrains.com/help/mps/smodel-language.html">smodel</a> and <a href="https://www.jetbrains.com/help/mps/collections-language.html">collections</a> languages, are also null-safe. The following code will correctly return false:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">node</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="na">member</span><span class="p">.</span><span class="na">first</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">IfStatement</span><span class="p">.</span><span class="na">forceOneLine</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
-<p><abbr title="Meta Programming System">MPS</abbr> also has a null analyzer for Java that is part of the data flow analysis (<a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c2%28jetbrains.mps.baseLanguage.dataFlow%29%2F6868777471677432036">nullable analyzer</a>, <a href="https://szabta89.github.io/projects/df.html#:~:text=Null-,analysis,-for%20Java%20(Nullable)">short explanation how it works</a>). It is checked by the type system, and you get a warning when, for example, a method call might throw a <code>NullPointerException</code>.</p>
-<h2 id="exceptions-and-warnings">Exceptions and warnings<a class="headerlink" href="#exceptions-and-warnings" title="Permanent link">&para;</a></h2>
+<p><abbr title="Meta Programming System">MPS</abbr> also has a null analyzer for Java that is part of the data flow analysis (<a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902c2%28jetbrains.mps.baseLanguage.dataFlow%29%2F6868777471677432036">nullable analyzer</a>, <a href="https://szabta89.github.io/projects/df.html#:~:text=Null-,analysis,-for%20Java%20(Nullable)">short explanation of how it works</a>). The type system checks it, and you get a warning when, for example, a method call might throw a <code>NullPointerException</code>.</p>
+<h2 id="exceptions-and-warnings">Exceptions and Warnings<a class="headerlink" href="#exceptions-and-warnings" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Use checked exceptions (e.g. IOException) for recoverable conditions and run-time exceptions (e.g. NullPointerException) for programming errors (<a href="http://www.javapractices.com/topic/TopicAction.do?Id=129">Checked versus unchecked exceptions</a>).</li>
-<li>Consider alternative ways of showing errors than throwing exceptions such as showing <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">notifications</a>. Examples for such notifications are balloons and dialogs.</li>
-<li>Attach exceptions to log statements. If it is a low-level log statement (e.g. log error) the stack trace will be printed in the log file.
-  For normal log statements (e.g. message log error), the stack trace can be opened through the right-click menu in the messages view. Example:
-  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>log error &quot;This is an error&quot;,myException
+<li>Use checked exceptions (e.g., IOException) for recoverable conditions and runtime exceptions (e.g., NullPointerException) for programming errors (<a href="http://www.javapractices.com/topic/TopicAction.do?Id=129">Checked versus unchecked exceptions</a>).</li>
+<li>Consider alternative ways of showing errors than throwing exceptions, such as showing <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">notifications</a>. Examples of such notifications are balloons and dialogs.</li>
+<li>Attach exceptions to log statements. The stack trace will print in the log file if it is a low-level log statement (e.g., log error).
+  For ordinary log statements (e.g., message log error), you can open the stack trace through the right-click menu in the messages view. Example:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>log error &quot;This is an error&quot;, myException
 </code></pre></div></td></tr></table></div></li>
-<li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html">Clean up</a> in the <em>finally-block</em> of a try statement. The <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> statement is also supported. An example for cleaning up could be a
-  temporary model that is only needed in a test. When the test fails the model, still needs to be disposed of. To tie an object to the lifecycle of a parent,
+<li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html">Clean up</a> in the <em>finally-block</em> of a try statement. The <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> statement is also supported. An example of cleaning up could be a
+  temporary model only needed in a test. When the test fails, the model still needs to be disposed of. To tie an object to the lifecycle of a parent,
   use the classes <a href="https://plugins.jetbrains.com/docs/intellij/disposers.html">Disposer and Disposable</a> from the IntelliJ platform.</li>
-<li><a href="https://blog.submain.com/treat-warnings-errors/">Treat Warnings As Errors</a> and also don&rsquo;t ignore warnings/errors. Warnings might become errors or even make the compilation fail in the future. For example, the <em>repository</em> parameter in the access language (e.g. read action with global repository {}), was optional in the past but later became mandatory because using the global repository is discouraged.
-  Ignoring too many messages can also hide real errors that you have to address. For example, a warning that a NullPointerException can happen might reveal that
-  not tested situations exist where an object is indeed null and will crash something. That can happen, for example, when code is executed on the command line
-  instead of inside <abbr title="Meta Programming System">MPS</abbr> where it can never fail.</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/">Warnings should not replace documentation</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://blog.submain.com/treat-warnings-errors/">Treat Warnings As Errors</a>, and also don't ignore warnings/errors. Warnings might become errors or even make the compilation fail in the future. For example, the <em>repository</em> parameter in the access language (e.g., read action with global repository {}) was optional in the past but later became mandatory because using the global repository is discouraged.
+  Ignoring too many messages can also hide real errors you must address. For example, a warning that a NullPointerException can happen might reveal that
+  not tested situations exist where an object is null and will crash something. That can happen, for example, when code is executed on the command line
+  instead of inside <abbr title="Meta Programming System">MPS</abbr>, where it can never fail.</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/07-warnings-should-not-replace-documentation/">Warnings should not replace documentation</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Be careful when using Unicode characters inside <abbr title="Meta Programming System">MPS</abbr>. It might break something (<a href="https://youtrack.jetbrains.com/issue/MPS-33687"><abbr title="Meta Programming System">MPS</abbr>-33687</a>, <a href="https://youtrack.jetbrains.com/issue/MPS-31835"><abbr title="Meta Programming System">MPS</abbr>-31835</a>).</li>
 <li>
-<p>Use Gradle for build scripts (<a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal example</a>). They are better supported (e.g. <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>) and can express the build logic more cleanly through Groovy or Kotlin than other solutions such as Maven or Ant (<a href="https://www.baeldung.com/ant-maven-gradle">article comparing all three solutions</a>). While the <abbr title="Meta Programming System">MPS</abbr> build language generates Ant scripts, you can abstract away this layer with Gradle + the <abbr title="Meta Programming System">MPS</abbr> Gradle Plugin nicely. For example:
+<p>Use Gradle for creating build scripts (<a href="https://gist.github.com/coolya/46706883a6563f0d63527baed8091d75">minimal example</a>). They are better supported (e.g., <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>). They can express the build logic more cleanly through Groovy or Kotlin than other solutions such as Maven or Ant (<a href="https://www.baeldung.com/ant-maven-gradle">article comparing all three solutions</a>). While the <abbr title="Meta Programming System">MPS</abbr> build language generates Ant scripts, you can abstract away this layer nicely with Gradle + the <abbr title="Meta Programming System">MPS</abbr> Gradle Plugin. For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="n">buildLanguages</span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">BuildLanguages</span><span class="o">,</span><span class="w"> </span><span class="nl">dependsOn:</span><span class="w"> </span><span class="n">prebuild</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="n">script</span><span class="w"> </span><span class="s2">&quot;$buildDir/scripts/build-languages.xml&quot;</span><span class="w"></span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="o">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  Most <abbr title="Meta Programming System">MPS</abbr> projects that used Maven in the past, were migrated to Gradle.</p>
+  Most <abbr title="Meta Programming System">MPS</abbr> projects that used Maven in the past were migrated to Gradle.</p>
 </li>
 <li>
-<p>Do not leave debug statements in production code. This includes <abbr title="Meta Programming System">MPS</abbr> log statements but also <em>System.<abbr title="output">out</abbr></em> statements.
+<p>Do not leave debug statements in production code, including <abbr title="Meta Programming System">MPS</abbr> log statements and <em>System.<abbr title="output">out</abbr></em> statements.
   Especially in tests, outputs can not only be annoying but can also fail the test with an <em>UncleanTestExecutionException</em>
   The only acceptable debug statements are those that have the log level set to <em>debug</em> or lower because they are not visible
   by default.</p>
@@ -1490,7 +1470,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1632,7 +1612,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../mbeddr/misc_topics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Miscellaneous topics" rel="prev">
+          <a href="../../mbeddr/misc_topics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Miscellaneous Topics" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1642,20 +1622,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                 Previous
               </span>
               <div class="md-ellipsis">
-                Miscellaneous topics
+                Miscellaneous Topics
               </div>
             </div>
           </a>
         
         
           
-          <a href="readability_maintainability/" class="md-footer__link md-footer__link--next" aria-label="Next: Readability/maintainability" rel="next">
+          <a href="readability_maintainability/" class="md-footer__link md-footer__link--next" aria-label="Next: Readability/Maintainability" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Readability/maintainability
+                Readability/Maintainability
               </div>
             </div>
             <div class="md-footer__button md-icon">

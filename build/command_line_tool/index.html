@@ -26,7 +26,7 @@
     
     
       
-        <title>Creating a command line tool - MPS Platform Docs</title>
+        <title>Creating a Command Line Tool - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a command line tool
+              Creating a Command Line Tool
             
           </span>
         </div>
@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -905,7 +905,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Creating a command line tool
+    Creating a Command Line Tool
   </span>
   
 
@@ -966,7 +966,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Advanced GitHub workflow
+    Advanced GitHub Workflow
   </span>
   
 
@@ -1019,7 +1019,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1119,7 +1119,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1388,7 +1388,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>Creating a command line tool</h1>
+  <h1>Creating a Command Line Tool</h1>
 
 <p>Basic code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1474,8 +1474,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Why all the reflection tricks and why not call the class directly instead? The answer is that when <abbr title="Meta Programming System">MPS</abbr> is initialized and a project is opened, it sets up classloaders, puts on the classpath any dependencies that module <code>Baz</code> might have so that you don&rsquo;t have to specify them ourselves.</p>
-<p>We still need to have on the classpath the initial set of JARs to run our class and start <abbr title="Meta Programming System">MPS</abbr>. Here is how you would run our tool from Gradle:</p>
+<p>Why are all the reflection tricks needed, and why not call the class directly instead? The answer is that when <abbr title="Meta Programming System">MPS</abbr> is initialized and a project opens, it sets up classloaders and puts any dependencies module <code>Baz</code> might have on the classpath so that you don't have to specify them ourselves.</p>
+<p>We still need to have the initial set of JARs on the classpath to run our class and start <abbr title="Meta Programming System">MPS</abbr>. Here is how you would run our tool from Gradle:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1503,7 +1503,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

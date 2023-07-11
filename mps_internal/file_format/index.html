@@ -26,7 +26,7 @@
     
     
       
-        <title>File format - MPS Platform Docs</title>
+        <title>File Format - MPS Platform Docs</title>
       
     
     
@@ -152,7 +152,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File format
+              File Format
             
           </span>
         </div>
@@ -316,7 +316,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -358,7 +358,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -398,7 +398,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -769,7 +769,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -878,7 +878,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -893,7 +893,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1063,7 +1063,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1138,7 +1138,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    File format
+    File Format
   </span>
   
 
@@ -1159,7 +1159,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Java design patterns in the MPS sources
+    Java Design Patterns in the MPS Sources
   </span>
   
 
@@ -1269,7 +1269,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1524,19 +1524,19 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-  <h1>File format</h1>
+  <h1>File Format</h1>
 
 <p>A few different persistence formats can be selected when creating a new model (<code>Model</code> &rarr; <code>storage format</code>):</p>
 <ul>
 <li><strong>Pre-installed XML-based format</strong>
-    Models are described in an XML format. Git changes are collected per model. It is the default format. There seems to be support for saving user objects (strings, node ids, etc. but not serializable objects) but this option just doesn&rsquo;t seem to be activated. User objects are therefore lost when existing <abbr title="Meta Programming System">MPS</abbr>.</li>
+    <abbr title="Meta Programming System">MPS</abbr> describes models in an XML format. Git changes are collected per model. It is the default format. There seems to be support for saving user objects (strings, node IDs, etc. but not serializable objects), but this option doesn't seem to be activated. User objects are therefore lost when existing <abbr title="Meta Programming System">MPS</abbr>.</li>
 <li><strong>Pre-installed XML-based File-Per-Root format</strong> (.mpsr) 
-  Models are described in an XML format. Git changes are collected per root node. Some file-per-root <a href="https://youtrack.jetbrains.com/issues/MPS?q=per%20root%20persistence%20%23Open%20">specific bugs</a> exist.</li>
+  Models are described in an XML format. Git changes are collected per root node. Some <a href="https://youtrack.jetbrains.com/issues/MPS?q=per%20root%20persistence%20%23Open%20">file-per-root-specific bugs</a> exist.</li>
 <li><strong>Pre-installed Binary-Format</strong> (.mpb)
-    Models are saved in a binary format. It can save user objects and should also be able to save serializable objects but this might not be working. The information is saved directly in the model file.</li>
+    Models are saved in a binary format. It can save user objects and should also be able to save serializable objects, but this might not be working. The information is saved directly in the model file.</li>
 </ul>
 <p>The persistence format was improved over the years (v4 - v8). Version 9 is the current format.</p>
-<p>If you want to support a custom format, read the <a href="https://www.jetbrains.com/help/mps/open-api-accessing-models-from-code.html#custompersistence">custom persistence</a> chapter in the documentation.</p>
+<p>Read the <a href="https://www.jetbrains.com/help/mps/open-api-accessing-models-from-code.html#custompersistence">custom persistence</a> chapter in the documentation to support a custom format.</p>
 <p>Here is a list of some other used file formats:</p>
 <ul>
 <li>languages (.mpl)</li>
@@ -1544,9 +1544,9 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>models (.mps)</li>
 <li>devkit (.devkit)</li>
 <li>model headers (.model)</li>
-<li>java files (.java)</li>
-<li><a href="https://docs.fileformat.com/programming/kt/">kotlin files</a> (.kt)</li>
-<li>kotlin modules (.kotlin)</li>
+<li>Java files (.java)</li>
+<li><a href="https://docs.fileformat.com/programming/kt/">Kotlin files</a> (.kt)</li>
+<li>Kotlin modules (.kotlin)</li>
 <li>compile Java files (.class)</li>
 <li>old <abbr title="Meta Programming System">MPS</abbr> projects (.mpr)</li>
 <li>old workspace format (.mws)</li>
@@ -1561,7 +1561,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
@@ -1707,7 +1707,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../threads/named_threads/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Named threads" rel="prev">
+          <a href="../threads/named_threads/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Named Threads" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1717,20 +1717,20 @@ If you are a returning visitor, make sure to check out the page about <a href="h
                 Previous
               </span>
               <div class="md-ellipsis">
-                Named threads
+                Named Threads
               </div>
             </div>
           </a>
         
         
           
-          <a href="../java_design_patterns_in_mps_sources/" class="md-footer__link md-footer__link--next" aria-label="Next: Java design patterns in the MPS sources" rel="next">
+          <a href="../java_design_patterns_in_mps_sources/" class="md-footer__link md-footer__link--next" aria-label="Next: Java Design Patterns in the MPS Sources" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Java design patterns in the MPS sources
+                Java Design Patterns in the MPS Sources
               </div>
             </div>
             <div class="md-footer__button md-icon">

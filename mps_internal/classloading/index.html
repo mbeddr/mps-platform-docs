@@ -321,7 +321,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -772,7 +772,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -881,7 +881,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
               
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -896,7 +896,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            MPS internals
+            MPS Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1068,7 +1068,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
             
   
   <span class="md-ellipsis">
-    Advanced topics
+    Advanced Topics
   </span>
   
 
@@ -1078,7 +1078,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_5">
             <span class="md-nav__icon md-icon"></span>
-            Advanced topics
+            Advanced Topics
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1092,7 +1092,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    What happens on MPS startup
+    What Happens on MPS Startup
   </span>
   
 
@@ -1136,7 +1136,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Dependencies and classpath
+    Dependencies and Classpath
   </span>
   
 
@@ -1212,22 +1212,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#how-to-use-java-classes-shipped-in-mps-plugins" class="md-nav__link">
-    How to use Java classes shipped in MPS plugins
+    How to Use Java Classes Shipped in Mps Plugins
   </a>
   
-    <nav class="md-nav" aria-label="How to use Java classes shipped in MPS plugins">
+    <nav class="md-nav" aria-label="How to Use Java Classes Shipped in Mps Plugins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#solution-old" class="md-nav__link">
-    Solution (old)
+    Solution (Old)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#solution-new" class="md-nav__link">
-    Solution (new)
+    Solution (New)
   </a>
   
 </li>
@@ -1239,7 +1239,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#classloading-issues" class="md-nav__link">
-    Classloading issues
+    Classloading Issues
   </a>
   
 </li>
@@ -1448,7 +1448,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1696,22 +1696,22 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#how-to-use-java-classes-shipped-in-mps-plugins" class="md-nav__link">
-    How to use Java classes shipped in MPS plugins
+    How to Use Java Classes Shipped in Mps Plugins
   </a>
   
-    <nav class="md-nav" aria-label="How to use Java classes shipped in MPS plugins">
+    <nav class="md-nav" aria-label="How to Use Java Classes Shipped in Mps Plugins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#solution-old" class="md-nav__link">
-    Solution (old)
+    Solution (Old)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#solution-new" class="md-nav__link">
-    Solution (new)
+    Solution (New)
   </a>
   
 </li>
@@ -1723,7 +1723,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         <li class="md-nav__item">
   <a href="#classloading-issues" class="md-nav__link">
-    Classloading issues
+    Classloading Issues
   </a>
   
 </li>
@@ -1778,17 +1778,17 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 
 <h1 id="classloading">Classloading<a class="headerlink" href="#classloading" title="Permanent link">&para;</a></h1>
 <h2 id="classloaders">Classloaders<a class="headerlink" href="#classloaders" title="Permanent link">&para;</a></h2>
-<p>Different classloaders exist: bootstrap-class-loader, IDEA plugin classloaders, and module class loaders.
+<p>Bootstrap class loaders, IDEA plugin class loaders, and module class loaders are the different available class loaders.
 Loading a class into an <abbr title="Meta Programming System">MPS</abbr> module involves the module class loader, the class of its dependencies, and the bootstrap class loader.
 If a class comes from a <abbr title="Java Archive">JAR</abbr> in the <abbr title="Meta Programming System">MPS</abbr>/<abbr title="library">lib</abbr> folder (a bootstrap-loaded class), you practically can’t load another version of it.
 They also have different life cycles.</p>
 <p>Module class loaders can reload classes after rebuilding and are resilient toward hot reloading.
-IDEA plugin class loaders are just for the installed plugins and don&rsquo;t know what to do if a class needs reloading during runtime in the past. New versions of the IntelliJ platform know how to reload classes, but now we’re within the <abbr title="Meta Programming System">MPS</abbr>&lsquo; implementation.</p>
-<p>The IDEA plugin classloaders load JARs from the <em>/plugins/&lt;plugin-name&gt;/<abbr title="library">lib</abbr></em> directory.
-Jars from the <em>/<abbr title="library">lib</abbr></em> directory of the <abbr title="Rich Client Platform">RCP</abbr> are loaded from the root class loader. For your <abbr title="Rich Client Platform">RCP</abbr>, you usually don&rsquo;t want to put anything there.
-Code inside an IDEA plugin classloader may not access classes from module class loaders but vice versa is fine
+IDEA plugin class loaders are just for the installed plugins, and they don't know what to do if a class needs reloading during runtime in the past. New versions of the IntelliJ platform know how to reload classes, but now we’re within the <abbr title="Meta Programming System">MPS</abbr> implementation.</p>
+<p>The IDEA plugin class loaders load JARs from the <em>/plugins/&lt;plugin-name&gt;/<abbr title="library">lib</abbr></em> directory.
+Jars from the <em>/<abbr title="library">lib</abbr></em> directory of the <abbr title="Rich Client Platform">RCP</abbr> are loaded from the root class loader. For your <abbr title="Rich Client Platform">RCP</abbr>, you usually don't want to put anything there.
+Code inside an IDEA plugin class loader may not access classes from module class loaders, but vice versa is fine.
 If you pass a module-loaded class to an IDEA plugin-loaded class and reload the module-loaded class, and then try to access the stale class, you might get a <em>ClassNotFoundException</em>.
-If you register a class in the plugin.xml, you should make sure it can be loaded from the IDEA plugin classloader. To do so, add its <abbr title="Java Archive">JAR</abbr> to the /<abbr title="library">lib</abbr> folder of your IntelliJ-plugin.</p>
+If you register a class in the plugin.xml, you should make sure it can be loaded from the IDEA plugin class loader. To do so, add its <abbr title="Java Archive">JAR</abbr> to the /<abbr title="library">lib</abbr> folder of your IntelliJ plugin.</p>
 <table>
 <thead>
 <tr>
@@ -1809,22 +1809,22 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 <td><abbr title="commercial/common/communication">com</abbr>.intellij.ide.plugins.<abbr title="classloader">cl</abbr>.PluginClassLoader</td>
 </tr>
 <tr>
-<td>any mps module with a java facet</td>
+<td>any <abbr title="Meta Programming System">MPS</abbr> module with a Java facet</td>
 <td>module class loader</td>
 <td>jetbrains.mps.classloading.ModuleClassLoader</td>
 </tr>
 </tbody>
 </table>
-<h2 id="how-to-use-java-classes-shipped-in-mps-plugins">How to use Java classes shipped in <abbr title="Meta Programming System">MPS</abbr> plugins<a class="headerlink" href="#how-to-use-java-classes-shipped-in-mps-plugins" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-use-java-classes-shipped-in-mps-plugins">How to Use Java Classes Shipped in Mps Plugins<a class="headerlink" href="#how-to-use-java-classes-shipped-in-mps-plugins" title="Permanent link">&para;</a></h2>
 <p>For this example, assume that you want to use classes from the <em>git4idea</em> plugin inside your code.</p>
-<h3 id="solution-old">Solution (old)<a class="headerlink" href="#solution-old" title="Permanent link">&para;</a></h3>
+<h3 id="solution-old">Solution (Old)<a class="headerlink" href="#solution-old" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Create a solution <em>MySolution</em>.</li>
-<li>Create a model ending with &ldquo;.plugin,&rdquo; for example <em>MySolution.plugin</em>.</li>
+<li>Create a model ending with ".plugin," for example <em>MySolution.plugin</em>.</li>
 <li>Add the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.plugin.standalone</ins> to both the <em>MySolution.plugin</em> model and the <em>MySolution</em> solution.</li>
 <li>Create a <em>StandalonePluginDescriptor</em> in the model <em>MySolution.plugin</em>.</li>
-<li>Add the <em>MySolution</em> to a build model named <em>MySolution.build</em>.</li>
-<li>Create an idea plugin with <abbr title="identification/identifier">id</abbr> <em>MySolution.IdeaPlugin</em>.</li>
+<li>Add <em>MySolution</em> to a build model named <em>MySolution.build</em>.</li>
+<li>Create an idea plugin with ID <em>MySolution.IdeaPlugin</em>.</li>
 <li>Add <em>MySolution.build</em> to the idea plugin <em>MySolution.IdeaPlugin</em> content.</li>
 <li>Add the dependency on <em>git4idea</em> to <em>MySolution.IdeaPlugin</em> dependencies.</li>
 <li>Execute the build script.</li>
@@ -1833,8 +1833,8 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 <li>Restart <abbr title="Meta Programming System">MPS</abbr>.</li>
 </ol>
 <p>Now the classes within <em>git4idea</em> are available within <em>MySolution</em>.</p>
-<p>Attention: <abbr title="Meta Programming System">MPS</abbr> <abbr title="Integrated Development Environment">IDE</abbr> won&rsquo;t build the code within solution <em>MySolution</em> anymore. Run the build script to activate any changes.</p>
-<h3 id="solution-new">Solution (new)<a class="headerlink" href="#solution-new" title="Permanent link">&para;</a></h3>
+<p>Attention: <abbr title="Meta Programming System">MPS</abbr> <abbr title="Integrated Development Environment">IDE</abbr> won't build the code within solution <em>MySolution</em> anymore. Run the build script to activate any changes.</p>
+<h3 id="solution-new">Solution (New)<a class="headerlink" href="#solution-new" title="Permanent link">&para;</a></h3>
 <p>You can find an example <a href="https://github.com/modelix/modelix/blob/master/mps/solutions/org.modelix.git4idea.withJavaFacet/org.modelix.git4idea.withJavaFacet.msd">here</a>.</p>
 <ol>
 <li>Create a solution <em>git4idea.withJavaFacet</em>.</li>
@@ -1895,8 +1895,8 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 </code></pre></div></td></tr></table></div></li>
 </ol>
 <p>The <abbr title="Java Archive">JAR</abbr> files are directly referenced from the <abbr title="Meta Programming System">MPS</abbr> plugins folder. The JARs are then loaded as part of the Git4Idea facet.</p>
-<h2 id="classloading-issues">Classloading issues<a class="headerlink" href="#classloading-issues" title="Permanent link">&para;</a></h2>
-<p>Sometimes you might get conflicts with existing libraries that <abbr title="Meta Programming System">MPS</abbr> already ships. For instance, while using the <code>SAXBuilder</code>. In these cases, you will get a class version exception or similar. As a workaround, you can set the classloader and the current thread while instantiating such classes:</p>
+<h2 id="classloading-issues">Classloading Issues<a class="headerlink" href="#classloading-issues" title="Permanent link">&para;</a></h2>
+<p>Sometimes you might get conflicts with existing libraries that <abbr title="Meta Programming System">MPS</abbr> already ships. For instance, while using the <code>SAXBuilder</code>. In these cases, you will get a class version exception or similar. As a workaround, you can set the class loader and the current thread while instantiating such classes:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1925,13 +1925,13 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
 <div class="admonition question">
 <p class="admonition-title">How can you load resources from modules?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-05/16-adding-resources-to-mps-modules/">Adding resources to <abbr title="Meta Programming System">MPS</abbr> modules</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/16-adding-resources-to-mps-modules/">Adding resources to <abbr title="Meta Programming System">MPS</abbr> modules</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
-<p>This prevents the exception but make sure to set the class loader back when you finish. Calling things written in <abbr title="Meta Programming System">MPS</abbr> like behavior methods when the class loader changes is also likely to not work and gives you all kinds of strange exceptions.</p>
+<p>This prevents the exception, but make sure to set the class loader back when you finish. Calling things written in <abbr title="Meta Programming System">MPS</abbr>, like behavior methods when the class loader changes, is also likely to not work and gives you all kinds of strange exceptions.</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/15-apache-poi-classloader-hell/">Making Apache POI work with <abbr title="Meta Programming System">MPS</abbr> 2020.3: solving class loader hell</a>(<em>Specific Languages&rsquo; blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/20-a-weird-class-cast-exception/">A weird ClassCastException</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/15-apache-poi-classloader-hell/">Making Apache POI work with <abbr title="Meta Programming System">MPS</abbr> 2020.3: solving class loader hell</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/20-a-weird-class-cast-exception/">A weird ClassCastException</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 
   <hr>
@@ -1939,7 +1939,7 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>

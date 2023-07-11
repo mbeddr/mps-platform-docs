@@ -26,7 +26,7 @@
     
     
       
-        <title>Structure aspect - MPS Platform Docs</title>
+        <title>Structure Aspect - MPS Platform Docs</title>
       
     
     
@@ -157,7 +157,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Structure aspect
+              Structure Aspect
             
           </span>
         </div>
@@ -323,7 +323,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Platform essentials
+  Platform Essentials
 
         </a>
       </li>
@@ -363,7 +363,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  MPS internals
+  MPS Internals
 
         </a>
       </li>
@@ -403,7 +403,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
     
   
-  Clean code
+  Clean Code
 
         </a>
       </li>
@@ -1120,7 +1120,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
         
   
   <span class="md-ellipsis">
-    Accessory models
+    Accessory Models
   </span>
   
 
@@ -1162,7 +1162,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Contributed aspects
+    Contributed Aspects
   </span>
   
 
@@ -1276,7 +1276,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Platform essentials
+    Platform Essentials
   </span>
   
 
@@ -1380,7 +1380,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    MPS internals
+    MPS Internals
   </span>
   
 
@@ -1480,7 +1480,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
   
   <span class="md-ellipsis">
-    Clean code
+    Clean Code
   </span>
   
 
@@ -1778,37 +1778,36 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
 
 
-<h1 id="structure-aspect">Structure aspect<a class="headerlink" href="#structure-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="structure-aspect">Structure Aspect<a class="headerlink" href="#structure-aspect" title="Permanent link">&para;</a></h1>
 <p>The structure aspect contains all the concept and interface declarations of a language.</p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/structure.html">official documentation</a></li>
 <li><a href="http://dsl-course.org/jetbrains-mps-structure-aspect/">old cheatsheet</a></li>
-<li><a href="https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> features: Link instances</a>(<em>Specific Languages&rsquo; blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> features: Link instances</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How can you create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically?</p>
-<p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Concept XY wasn&rsquo;t found in the language.</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p class="admonition-title">Concept XY wasn't found in the language.</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find examples of <abbr title="Meta Programming System">MPS</abbr> concepts?</p>
-<p><a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?</p>
-<p>The used algorithm is a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a>(<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn&rsquo;t implement the method itself, first the implemented interfaces are recursively considered in declaration order, then the extended concept.
-You can try it yourself, for example for the concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068390468198">ClassConcept</a>:
+<p>The used algorithm is a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a>(<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068390468198">ClassConcept</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">BehaviorRegistryImpl</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">BehaviorRegistryImpl</span><span class="p">)</span><span class="w"> </span><span class="n">ConceptRegistry</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBehaviorRegistry</span><span class="p">();</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">BHDescriptor</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">getBHDescriptor</span><span class="p">(</span><span class="n">concept</span><span class="o">/</span><span class="n">ClassConcept</span><span class="o">/</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">getMRO</span><span class="p">().</span><span class="na">calcLinearization</span><span class="p">(</span><span class="n">_SAbstractConcept</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">concept</span><span class="o">/</span><span class="n">ClassConcept</span><span class="o">/</span><span class="p">));</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-If you want to call a specific <code class="highlight"><span class="n">type</span><span class="p">()</span><span class="w"></span></code> implementation, you have to just cast the node to the corresponding concept and then call the method e.g. <code class="highlight"><span class="n">myNode</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">MyITypeable</span><span class="p">.</span><span class="na">type</span><span class="p">()</span><span class="w"></span></code></p>
+If you want to call a specific <code class="highlight"><span class="n">type</span><span class="p">()</span><span class="w"></span></code> implementation, you have just to cast the node to the corresponding concept and then call the method, e.g., <code class="highlight"><span class="n">myNode</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">MyITypeable</span><span class="p">.</span><span class="na">type</span><span class="p">()</span><span class="w"></span></code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you get the short node ID from the node ID and vice versa?</p>
@@ -1819,22 +1818,22 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I assign node IDs manually?</p>
-<p><a href="https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/">Assigning node IDs explicitly</a>(<em>Specific Languages&rsquo; blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/">Assigning node IDs explicitly</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can I find a node by its ID?</p>
 <p>You can write a script on the console to find it. For example:</p>
 <p><a class="glightbox" href="../../img/node_by_id_console.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find nodes on the console by ID" src="../../img/node_by_id_console.png" /></a></p>
-<p>There is also the action <em>Go to node by ID</em> that can be found in the <em>Navigate</em> main menu.</p>
+<p>The <em>Navigate</em> main menu also contains an action <em>Go to node by ID</em>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Can I cast concept objects to super concept objects?</p>
+<p class="admonition-title">Can I cast concept objects to super-concept objects?</p>
 <blockquote>
 <p>I have the following successful boolean check: <code>someConcept.isSubConceptOf(MySuperConcept)</code>
-But if I put this code below, it fails with an exception that the cast cannot be performed: <code>((concept&lt;MySuperConcept&gt;) someConcept)</code>
+But if I put this code below, it fails with an exception that it cannot perform the cast: <code>((concept&lt;MySuperConcept&gt;) someConcept)</code>
 The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 </blockquote>
-<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152">special cast</a> for that. For example:
+<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152">cast</a> for that. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">concept</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">AbstractMethodError</span><span class="o">/</span><span class="p">.</span><span class="na">concept</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">cls</span><span class="p">:</span><span class="n">BaseConcept</span><span class="p">.</span><span class="na">getLanguage</span><span class="p">().</span><span class="na">getQualifiedName</span><span class="p">();</span><span class="w"></span>
@@ -1842,12 +1841,12 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 </div>
 <h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors</a> but errors are still shown for the node.</p>
-<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. More information can be found in <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+<p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors</a>, but the node still contains errors.</p>
+<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a> has some more information.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What&rsquo;s <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass</a> used for?</p>
-<p>It allows to execute Base Language code. An example can be found in <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a>.</p>
+<p class="admonition-title">What's <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass</a> used for?</p>
+<p>It allows to execute Base Language code. <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a> contains an example.</p>
 </div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -1857,13 +1856,13 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can properties be overridden?</p>
-<p>No, more <abbr title="information">info</abbr> can be found in <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a>.</p>
+<p>No, <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a> contains more information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to get the name of a concept property?</p>
 <p>The easiest way to do this is via <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080">PropertyIdRefExpression</a>. Then you can directly reference the property in question like this:
 <code>property/MyConcept : myProperty/.getName()</code>
-Whith this implementation, every change in the property names are always calculated properly.</p>
+With this implementation, every property name change is calculated correctly.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -1891,10 +1890,9 @@ Whith this implementation, every change in the property names are always calcula
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Deleting references doesn&rsquo;t work when using the editor cell <abbr title="reference">ref</abbr>. presentation</p>
+<p class="admonition-title">Deleting references doesn't work when using the editor cell <abbr title="reference">ref</abbr>. presentation</p>
 <p>Example: <code>[&gt; thingref [&gt; ( % thing % -&gt; ref. presentation ) &lt;] &lt;]</code></p>
-<p>Ref presentation automatically uses the name of the interface <em>INamedConcept</em>. If you add <code>auto-deletable: true</code> to the cell and the cardinality is <code>[1]</code>, the name is deleted but the reference is not removed. When the cardinality is <code>[0..1]</code> the reference is deleted. This behavior is expected
-because in the first case, the reference is mandatory, in the second case it is optional.</p>
+<p>Ref presentation automatically uses the name of the interface <em>INamedConcept</em>. If you add <code>auto-deletable: true</code> to the cell and the cardinality is <code>[1]</code>, <abbr title="Meta Programming System">MPS</abbr> deletes the name but doesn't remove the reference. When the cardinality is [0..1], it deletes the reference. You expect this behavior because the reference is mandatory in the first case; in the second case, it is optional.</p>
 </div>
 
   <hr>
@@ -1902,7 +1900,7 @@ because in the first case, the reference is mandatory, in the second case it is 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
       
     
   </small>
