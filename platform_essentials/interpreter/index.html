@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1317,6 +1297,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1332,53 +1314,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1549,7 +1484,7 @@ Make sure to set the solution kind to <code>Other</code> in the module propertie
 <p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enable caching. When the interpreter reaccesses the same value, the cached value is returned instead of recalculating it. Unchecking <em>Tools</em> &rarr; <em>Enable Interpreter Cache</em> in the main menu can turn off the interpreter cache.</p>
 <p><a class="glightbox" href="../images/literals_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px" /></a></p>
 <p>The right side contains an expression or a block and must return a value. The <em>node</em> expression refers to the currently evaluated expression. A few expressions start with <em>#</em>. Their corresponding short descriptions explain them. Use the <em>#-&gt;</em> expression to call functions (search for usages globally).
-The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the <em><abbr title="environment">env</abbr></em> expression. Use this array to save values for other evaluators. The key must be a node. If you don't have a node, you can use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand, e.g., <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
+The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the <em><abbr title="environment">env</abbr></em> expression. Use this array to save values for other evaluators. The key must be a node. If you don't have a node, you can use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand, for example, <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
 <p><a class="glightbox" href="../images/startswith_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png" /></a></p>
 <p>When the current interpreter is not suitable for interpreting the current node, use the expression <em>tryOtherInterpreter</em> to use the next interpreter to interpret the current node:</p>
 <p><a class="glightbox" href="../images/tryOtherInterpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png" /></a></p>
@@ -1597,7 +1532,7 @@ The <em>$</em> expression returns the concept's type. Use it for type mappings a
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

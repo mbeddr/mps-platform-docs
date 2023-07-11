@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1462,6 +1442,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1477,53 +1459,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1958,7 +1893,7 @@ The size method takes a width and height, calculates the delta for the old dimen
 <li><code>relayout</code> is called if the size has changed.</li>
 <li><code>moveChildren</code> is called when the position has changed.</li>
 </ul>
-<p>When one of those two events has occurred but no layouter is present, <em>relayout</em> is called. The <em>getLayouter</em> method returns a suitable ILayouter based on the existing layout e.g., HorizontalLayout for CellLayout_Horizontal. If the cell or any of its superclasses overwrites the method <em>relayoutImpl</em>, <em>null</em> is returned.</p>
+<p>When one of those two events has occurred but no layouter is present, <em>relayout</em> is called. The <em>getLayouter</em> method returns a suitable ILayouter based on the existing layout, for example, HorizontalLayout for CellLayout_Horizontal. If the cell or any of its superclasses overwrites the method <em>relayoutImpl</em>, <em>null</em> is returned.</p>
 <p>The inner position and dimension methods are based on the box model's content box. The total gap is the content's position minus the margin's position. To switch between the outer and inner sizes, use the the methods <em>toInnerSize</em> and <em>toOuterSize</em>.  The ascent equals the children's ascent plus the total gap at the top. When the different sizes, like maximum, minimum, and preferred size, are calculated, the values are first looked up in the cache. If no value can be found, the sizes are guessed from the cached values: if the size was already smaller for a more strict constraint, that value is used. If there is still no value returned, the value is calculated.</p>
 <h3 id="layoutengine">LayoutEngine<a class="headerlink" href="#layoutengine" title="Permanent link">&para;</a></h3>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A45c19b6d-dd9a-4f15-973f-0267c5e76303%28de.itemis.mps.editor.celllayout.runtime%29%2F861697192441898630">LayoutEngine</a> is the main entry point for laying <abbr title="output">out</abbr> editor components, the root cell, single cells, or a subtree of a cell. 
@@ -1976,7 +1911,7 @@ The interceptor is installed in the <a href="http://127.0.0.1:63320/node?ref=r%3
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

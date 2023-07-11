@@ -453,26 +453,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1341,6 +1321,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1356,53 +1338,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1584,10 +1519,10 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 </span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>: The easiest way to get the correct platform for an <abbr title="Meta Programming System">MPS</abbr> version is by running ant in the root of your <abbr title="Meta Programming System">MPS</abbr> sources:</p>
 <p><code>ant -f build/getDependencies.xml download-platform</code></p>
 <p>It will place the platform in the folder <em>mps-platform</em> of the repository and is automatically imported into the IntelliJ project where you can read the sources and step into them when debugging.</p>
-<p>If you're looking at an <abbr title="Rich Client Platform">RCP</abbr>: <code>build.number</code> and <code>build.txt</code> provide this information and more, e.g., <code>idea.platform.build.number=MPS—203.7717.56</code>.</p>
-<p>The platform version is part of the build information e.g., <abbr title="Meta Programming System">MPS</abbr>—211.7442.1291</p>
-<p>To get the baseline version e.g., 211, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">getBaselineVersion</span><span class="p">()</span><span class="w"></span></code></p>
-<p>To get the full version e.g., 211.7442.1291, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">currentVersion</span><span class="p">().</span><span class="na">asString</span><span class="p">()</span><span class="w"></span></code></p>
+<p>If you're looking at an <abbr title="Rich Client Platform">RCP</abbr>: <code>build.number</code> and <code>build.txt</code> provide this information and more, for example, <code>idea.platform.build.number=MPS—203.7717.56</code>.</p>
+<p>The platform version is part of the build information, for example, <code>MPS—211.7442.1291</code>.</p>
+<p>To get the baseline version, for example, 211, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">getBaselineVersion</span><span class="p">()</span><span class="w"></span></code></p>
+<p>To get the full version, for example, 211.7442.1291, programmatically: <code class="highlight"><span class="n">ApplicationInfo</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBuild</span><span class="p">().</span><span class="na">currentVersion</span><span class="p">().</span><span class="na">asString</span><span class="p">()</span><span class="w"></span></code></p>
 </details>
 <details class="question">
 <summary>How can you show a custom-implemented project view instead of the <abbr title="Meta Programming System">MPS</abbr> logical view?</summary>
@@ -1737,7 +1672,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

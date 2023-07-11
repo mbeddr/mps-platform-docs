@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1317,6 +1297,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1332,53 +1314,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1591,7 +1526,7 @@ it to the merge queue when all other checks succeed.</p>
 <p>Add <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">issue templates</a> to a repository to make it easier for developers and users to submit issues. <a href="https://github.com/stevemao/github-issue-templates">stevemao/github-issue-templates</a> contains a few ready-to-use templates. If you use a help desk, some other tool like <a href="https://www.atlassian.com/software/jira">Jira</a>, <a href="https://www.jetbrains.com/youtrack/">YouTrack</a>, or a platform like <a href="https://about.gitlab.com/">GitLab</a>, you should <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues">turn off issues</a> instead.</p>
 <p>For developers, a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">pull request template</a> helps them create better pull requests. When you open a new <abbr title="Pull Request or Public Relations">PR</abbr>, GitHub uses the template.
 It can explain naming conventions that the developer has to follow or provide a checklist of things to pay attention to before
-opening a new <abbr title="Pull Request or Public Relations">PR</abbr>, e.g., adding the change to the changelog, updating the documentation, or checking that tests exist for a new feature.</p>
+opening a new <abbr title="Pull Request or Public Relations">PR</abbr>, for example, adding the change to the changelog, updating the documentation, or checking that tests exist for a new feature.</p>
 <h2 id="github-actions-and-workflows">GitHub Actions and Workflows<a class="headerlink" href="#github-actions-and-workflows" title="Permanent link">&para;</a></h2>
 <p>GitHub supports automating the workflow through <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
 <h3 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h3>
@@ -1615,7 +1550,7 @@ inform the users about new features, improvements, and bug fixes in a non-techni
 <li>Creating a release (e.g., manually triggered)<ul>
 <li>building the <abbr title="Rich Client Platform">RCP</abbr></li>
 <li>generating the release notes</li>
-<li>deploying the <abbr title="Rich Client Platform">RCP</abbr> to a repository, e.g., <a href="https://jfrog.com/artifactory/">JFrog Artifactory</a>, <a href="https://www.sonatype.com/products/sonatype-nexus-repository">Sonatype Nexus Repository</a>, or <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">GitHub Packages</a></li>
+<li>deploying the <abbr title="Rich Client Platform">RCP</abbr> to a repository, for example, <a href="https://jfrog.com/artifactory/">JFrog Artifactory</a>, <a href="https://www.sonatype.com/products/sonatype-nexus-repository">Sonatype Nexus Repository</a>, or <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">GitHub Packages</a></li>
 </ul>
 </li>
 <li>Collecting repository metrics</li>
@@ -1652,7 +1587,7 @@ You can generate custom metrics reports for <abbr title="Meta Programming System
 Use the ticket numbers in the branch name to connect code changes to ticket numbers. There are many different
 branch naming conventions (<a href="https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4">example</a>). One possible pattern is
 to start the branch with a category such as <em>feature</em>, <em>bugfix</em>, or <em>refactor</em>, then include the ticket number, and a branch description — for example, <code>feature/TASK-123_implement_awesome_feature</code>.</p>
-<p>For the commits, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and describe the change, e.g., <code>TASK-123: implement the feature</code>. GitHub should execute some of the described workflows automatically when the branch is ready and pushed. The <abbr title="Pull Request or Public Relations">PR</abbr> should be reviewed from a white box and black box perspective (see: <a href="../../platform_essentials/testing/">testing</a>), and when all checks succeed, you can add the <abbr title="Pull Request or Public Relations">PR</abbr> to the merge queue. When the <abbr title="Pull Request or Public Relations">PR</abbr> is at the top of the merge queue, GitHub will build and test it again, and execute all the checks will be executed once again. If everything succeeds, GitHub will finally merge the <abbr title="Pull Request or Public Relations">PR</abbr> into one of the stable branches, like the default branch.</p>
+<p>For the commits, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and describe the change, for example, <code>TASK-123: implement the feature</code>. GitHub should execute some of the described workflows automatically when the branch is ready and pushed. The <abbr title="Pull Request or Public Relations">PR</abbr> should be reviewed from a white box and black box perspective (see: <a href="../../platform_essentials/testing/">testing</a>), and when all checks succeed, you can add the <abbr title="Pull Request or Public Relations">PR</abbr> to the merge queue. When the <abbr title="Pull Request or Public Relations">PR</abbr> is at the top of the merge queue, GitHub will build and test it again, and execute all the checks will be executed once again. If everything succeeds, GitHub will finally merge the <abbr title="Pull Request or Public Relations">PR</abbr> into one of the stable branches, like the default branch.</p>
 <p>In the meantime, depending on the used <a href="https://www.easyagile.com/blog/agile-workflow/">agile workflow</a>, the state of the ticket might change from <em>Todo</em> to <em>In Progress</em> to <em>Code Review</em> and then to <em>Done</em> when you merge the <abbr title="Pull Request or Public Relations">PR</abbr>. Depending on the <a href="https://digital.ai/glossary/agile-release-planning">release cycle</a>, you might release a new version regularly (e.g., four weeks).</p>
 <h2 id="an-example-of-a-different-workflow">An Example of a Different Workflow<a class="headerlink" href="#an-example-of-a-different-workflow" title="Permanent link">&para;</a></h2>
 <p>While the described workflow has proven successful for big projects, you can use many other workflows. For example, the <abbr title="Meta Programming System">MPS</abbr> platforms don't use ticket numbers in commit messages. Tickets come from different (customer) projects. Linking existing tickets can also be difficult because the platforms are Open Source, and the tickets sometimes are not. The platforms are released whenever a change is pushed to the master or maintenance branches (<a href="https://www.wikiwand.com/en/Rolling_release">rolling release</a>) instead of using a fixed release cycle. The projects are also not built on GitHub but on a <a href="../teamcity/">TeamCity</a> server.</p>
@@ -1662,7 +1597,7 @@ to start the branch with a category such as <em>feature</em>, <em>bugfix</em>, o
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

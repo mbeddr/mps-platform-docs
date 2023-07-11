@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1172,6 +1152,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1187,53 +1169,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1374,7 +1309,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <ul>
 <li><a href="https://specificlanguages.com/posts/prefer-composition-over-inheritance/">Prefer composition over inheritance</a>(<em>Specific Languages' blog</em>)</li>
 <li>Implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in concepts that should have a name. The name property will be returned when you call <code>node.getName()</code>. <abbr title="Meta Programming System">MPS</abbr> uses the name in editor tabs, the logical view, as the default presentation for references and other places.</li>
-<li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept instead of using the Java instanceof operator, e.g., <code class="highlight"><span class="n">node</span><span class="p">.</span><span class="na">isInstanceOf</span><span class="p">(</span><span class="n">IfStatement</span><span class="p">)</span><span class="w"></span></code>. Alternatively, use the <code>ifInstanceOf</code> statement to save the converted expression in a variable directly. For example:
+<li>Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1139621453865">isInstanceOf</a> to check if a node is an instance of a concept instead of using the Java instanceof operator, for example, <code class="highlight"><span class="n">node</span><span class="p">.</span><span class="na">isInstanceOf</span><span class="p">(</span><span class="n">IfStatement</span><span class="p">)</span><span class="w"></span></code>. Alternatively, use the <code>ifInstanceOf</code> statement to save the converted expression in a variable directly. For example:
  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w"> </span><span class="n">ifInstanceOf</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">IfStatement</span><span class="w"> </span><span class="n">ifStatement</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1387,7 +1322,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">list</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listOfStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">linkedlist</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">copy</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">string</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;ab&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ba&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;aaaa&quot;</span><span class="p">});</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">listOfStrings</span><span class="p">.</span><span class="na">where</span><span class="p">({</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}).</span><span class="na">join</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-  For lists of nodes, there is the particular list type <code>nlist</code>, e.g., <code class="highlight"><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span></code>
+  For lists of nodes, there is the particular list type <code>nlist</code>, for example, <code class="highlight"><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nlist</span><span class="o">&lt;</span><span class="n">ClassConcept</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span></code>
   <a href="http://www.javapractices.com/topic/TopicAction.do?Id=65">Choose the right collection</a> for your task.</li>
 <li>Use the <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a> instead of directly calling <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.module%28MPS.OpenAPI%2F%29%2F%7EModelAccess">ModelAccess</a> methods.
   For example:
@@ -1403,7 +1338,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <li>Don't try to use features in <abbr title="Meta Programming System">MPS</abbr> at places that don't officially support them. Not supported means that the official documentation doesn't mention it, and you can access the feature only through hacks and workarounds. Examples:<ul>
 <li>invoking the generator in type system rules</li>
 <li><abbr title="User Interface">UI</abbr> code in the behavior aspect</li>
-<li>accessing the project instance in unsupported places, e.g., the generator</li>
+<li>accessing the project instance in unsupported places, for example, the generator</li>
 </ul>
 </li>
 <li><a href="https://specificlanguages.com/posts/2022-06/02-avoid-strict-node-casts/">Avoid strict node casts</a>(<em>Specific Languages' blog</em>)</li>
@@ -1470,7 +1405,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

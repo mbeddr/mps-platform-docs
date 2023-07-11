@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1549,6 +1529,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1564,53 +1546,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1893,7 +1828,7 @@ explains some tree structure terminology:</p>
 <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor%28MPS.Editor%2F%29%2F%7EEditorComponent">jetbrains.mps.openapi.editor.EditorComponent</a> is the interface that provides the <abbr title="Application Programming Interface">API</abbr> for interacting with the editor component.
 <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent">jetbrains.mps.nodeEditor.EditorComponent</a> contains the actual implementation. It has some subclasses where only <a href="http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F7398401354080376432">jetbrains.mps.editor.HeadlessEditorComponent</a>
 is interesting. Use this editor component in the headless mode. Create instances of this editor component
-to render the node tree as a projection-specific text, render the node tree as a picture, and call some editor-specific actions, e.g., substitute
+to render the node tree as a projection-specific text, render the node tree as a picture, and call some editor-specific actions, for example, substitute
 and other use cases (<a href="http://127.0.0.1:63320/node?ref=r%3A2af017c2-293f-4ebb-99f3-81e353b3d6e6%28jetbrains.mps.editor.runtime%29%2F8425027850913231105">source</a>).</p>
 <p>When you initialize an editor component, you can provide an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.configuration%28MPS.Editor%2F%29%2F%7EEditorConfiguration">editor configuration</a>. The property <em>notifies</em> informs the editor component to send <abbr title="output">out</abbr>
 <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a> notifications. The property is set to true for <abbr title="Meta Programming System">MPS</abbr> <abbr title="Integrated Development Environment">IDE</abbr> editors and the inspector and false for other scenarios. Some languages in <span class="twemoji">
@@ -2047,7 +1982,7 @@ A selection contains the following information and methods:</p>
 <ul>
 <li>The selection <abbr title="information">info</abbr> (<em>getSelectionInfo()</em>) is persisted and is used to restore the selection when the editor is reopened.</li>
 <li>Use <em>canExecuteAction</em> and <em>executeAction</em> to execute an action for the selected cells. The available actions are listed in the enum
-<a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType">CellActionType</a>. The different types are implemented as actions in plugin solutions, e.g., the action <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003">SelectLocalHome</a> calls <code class="highlight"><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">().</span><span class="na">executeAction</span><span class="p">(</span><span class="n">CellActionType</span><span class="p">.</span><span class="na">SELECT_LOCAL_HOME</span><span class="p">)</span><span class="w"></span></code>.</li>
+<a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor.cells%28MPS.Editor%2F%29%2F%7ECellActionType">CellActionType</a>. The different types are implemented as actions in plugin solutions, for example, the action <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049070003">SelectLocalHome</a> calls <code class="highlight"><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">().</span><span class="na">executeAction</span><span class="p">(</span><span class="n">CellActionType</span><span class="p">.</span><span class="na">SELECT_LOCAL_HOME</span><span class="p">)</span><span class="w"></span></code>.</li>
 </ul>
 <p>A few built-in selections exist:</p>
 <ul>
@@ -2193,7 +2128,7 @@ The highlighting of the currently selected line and red highlighting of the brea
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

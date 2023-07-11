@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1558,6 +1538,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1573,53 +1555,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1798,7 +1733,7 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 <div class="admonition question">
 <p class="admonition-title">How can you detect that migrations are running?</p>
 <blockquote>
-<p>I have code that needs to know if migrations are currently executed, e.g., model listeners that update the model when a change by the user appears.</p>
+<p>I have code that needs to know if migrations are currently executed, for example, model listeners that update the model when a change by the user appears.</p>
 <p>I would like to detect when migrations are executed to prevent this code from executing in the middle of a migration to prevent manipulating the model in an incomplete state during the migration.</p>
 </blockquote>
 <p><code class="highlight"><span class="n">PersistenceRegistry</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">isFastSearch</span><span class="p">()</span><span class="w"></span></code> returns <code>false</code> while migrations are running. You can check it in the model lister:</p>
@@ -1880,7 +1815,7 @@ A good example of a language with different language and module versions is <ins
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

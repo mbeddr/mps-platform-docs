@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1593,6 +1573,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1608,53 +1590,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1988,7 +1923,7 @@ more information.</p>
 <p>Via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g., in action declarations)</p>
 <ul>
 <li>They are not visible in the push Editor hints menu.</li>
-<li>If you need the same behavior, e.g., in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
+<li>If you need the same behavior, for example, in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
 </ul>
 </li>
 <li>Set explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a>.
@@ -2060,7 +1995,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <div class="admonition question">
 <p class="admonition-title">How can you hide a custom cell in the editor? (<em>show if</em> property)</p>
 <blockquote>
-<p>Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, e.g., "show if." How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
+<p>Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, for example, "show if." How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
 </blockquote>
 <p>The <abbr title="metadata">meta</abbr>-model allows specifying the <em>show if</em> property and other attributes on a custom cell, and the generator will generate the correct code for it. The editor for the inspector doesn't include it. You can use the reflective editor to specify the condition.</p>
 <p>Since these attributes are not visible and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
@@ -2242,7 +2177,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>

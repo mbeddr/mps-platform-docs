@@ -458,26 +458,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
     
     
       <li class="md-tabs__item">
-        <a href="../../language_reference/" class="md-tabs__link">
-          
-  
-    
-  
-  Language Reference (WIP)
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../about/editing_this_guide/" class="md-tabs__link">
           
   
@@ -1565,6 +1545,8 @@ If you are a returning visitor, make sure to check out the page about <a href="h
       
         
       
+        
+      
     
     
       
@@ -1580,53 +1562,6 @@ If you are a returning visitor, make sure to check out the page about <a href="h
   
   <span class="md-ellipsis">
     Reference
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
   </span>
   
 
@@ -1792,7 +1727,7 @@ If you are a returning visitor, make sure to check out the page about <a href="h
 <p>Yes, use the statement <em>invoke action by <abbr title="identification/identifier">id</abbr></em>.</p>
 </div>
 <p>!!! question "How do you enter multiple words when using the <em>type</em> statement in an editor test?</p>
-<div class="codehilite"><pre><span></span><code>Enter them as one long word without spaces in between, e.g., *publictransientclass*.
+<div class="codehilite"><pre><span></span><code>Enter them as one long word without spaces in between, for example, *publictransientclass*.
 </code></pre></div>
 
 <div class="admonition warning">
@@ -1877,7 +1812,7 @@ When I run the test, <em>test1</em> and <em>test2</em> print different node IDs.
 <li>It is easy to be confused by that and draw false conclusions, especially when stepping through tests.</li>
 <li>Whenever your code queries for the nodes of a model, be ready to see duplicates for each test (as in the <em>dataRef</em> example). You may test this by asserting that something is included or excluded instead of asserting true equality of the expected and actual lists.</li>
 <li>Another source for duplicates is if the test model imports itself.</li>
-<li>If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java">jetbrains.mps.smodel.TestModelFactory</a> allows to do that, e.g., the <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java">ModelListenerTest</a> uses that TestModelFactory. It is unfortunately not available as stubs, so you'<abbr title="linked list">ll</abbr> need to copy it to your project.</li>
+<li>If you need full power on the temporary model, consider writing a Base Language test and creating your repository and model by hand. <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/TestModelFactory.java">jetbrains.mps.smodel.TestModelFactory</a> allows to do that, for example, the <a href="https://github.com/JetBrains/MPS/blob/master/core/kernel/tests/jetbrains/mps/smodel/ModelListenerTest.java">ModelListenerTest</a> uses that TestModelFactory. It is unfortunately not available as stubs, so you'<abbr title="linked list">ll</abbr> need to copy it to your project.</li>
 </ul>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
@@ -2157,7 +2092,7 @@ According to the IntelliJ documentation, it can also happen when the dialog is n
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
       
     
   </small>
