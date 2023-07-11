@@ -101,7 +101,7 @@ Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3
 
 > ^^com.mbeddr.mpsutil.spreferences^^
 
-This extension allows the definition of preference pages by using MPS models. On the preference page, you get a regular MPS editor, as exemplified by the mbeddr platform templates preference page:
+This extension allows the definition of preference pages by using MPS models. On the preference page, you get a regular MPS editor, as exemplified by the {{ mbeddr_platform() }} templates preference page:
 
 ![example: spreferences](spreference_example.png)
 

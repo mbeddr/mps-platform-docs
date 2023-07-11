@@ -13,7 +13,7 @@ tags:
     
     Generated files should not be checked into Git (*classes_gen*, *source_gen*) unless the output of generators should be checked.
     
-    Example from [MPS Extensions](https://github.com/JetBrains/MPS-extensions):
+    Example from {{ mps_extensions() }}:
 
     - [.gitignore](https://github.com/JetBrains/MPS-extensions/blob/master/.gitignore)
     - [.gitattributes](https://github.com/JetBrains/MPS-extensions/blob/master/.gitattributes).

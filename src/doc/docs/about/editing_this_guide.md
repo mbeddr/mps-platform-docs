@@ -76,7 +76,7 @@ The identifier can start with one of the following special identifiers:
 
 The special identifiers get translated to the corresponding package names. Only the last part of the identifier has to
 be the correct name. The identifier can reference classes, interfaces, concepts, and interface declarations in Base Language,
-MPS-extensions, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
+{{ mps_extensions() }}, mbeddr, and iets3. The rest of the identifier only helps to find the correct node and doesn't have to be
 exact.
 
 Example: `@mps.ClassConcept` will find `jetbrains.mps.baseLanguage.structure.ClassConcept`. When the wrong node is

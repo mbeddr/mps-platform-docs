@@ -24,14 +24,14 @@ One or multiple [build configurations](https://www.jetbrains.com/help/teamcity/c
 
 - **mbeddr platform**
     - Build and publish: `gradle publishMbeddrPlatformPublicationToMavenRepository publishMbeddrAllScriptsPublicationToMavenRepository`
-        - depends on MPS-Extensions
+        - depends on {{ mps_extensions() }}
 - **mbeddr**
     - Build and publish: `gradle build:com.mbeddr:languages:publish`
-        - depends on the mbeddr platform
+        - depends on the {{ mbeddr_platform() }}
     - analyses test: `gradle test_mbeddr_analysis`
 - **iets3**
     - Build and publish: `gradle build publish`
-        - depends on the mbeddr platform
+        - depends on the {{ mbeddr_platform() }}
           - Builds are only triggered for specific naming conventions and some special branches: *master*, *feature/\**, *bugfix/\**, *refactor/\**, *maintenance/\**
     - Publish to GitHub
 - **Publish JDK** ([build.publish.jdk](https://github.com/mbeddr/build.publish.jdk))

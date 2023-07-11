@@ -46,7 +46,7 @@ This language adds support for a projection mode switcher and refactoring action
 
 ### Projection Mode Switcher
 
-The mbeddr platform has a group *Projection* which is a top-level menu in MPS:
+The {{ mbeddr_platform() }} has a group *Projection* which is a top-level menu in MPS:
 
 ![projection menu](projection_menu.png)
 

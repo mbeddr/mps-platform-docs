@@ -40,7 +40,7 @@ If you are still stuck with your problem, read [overcoming obstacles](overcoming
 
     There could also be some other reasons:
 
-    - A wrong version of the platform is used, for example, MPS-Extensions 2021.1 with MPS 2021.2. The major and minor versions have
+    - A wrong version of the platform is used, for example, {{ mps_extensions() }} 2021.1 with MPS 2021.2. The major and minor versions have
     to be the same. Bug fix versions (e.g., 2021.1.4) should be compatible with the major/minor version of the platform.
     In rare cases, there can be an incompatibility because a bugfix/feature was backported from a newer MPS version, and the change
     is a breaking change.

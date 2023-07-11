@@ -62,7 +62,7 @@ The rest of the build script uses [modelix/mpsbuild](https://github.com/modelix/
 
 ##[iets3.opensource/build.gradle](https://github.com/IETS3/iets3.opensource/blob/master/build.gradle)
 
-The build script looks like the script from MPS Extensions, so let's focus only on the differences.
+The build script looks like the script from {{ mps_extensions() }}, so let's focus only on the differences.
 
 [Line 68-112](https://github.com/IETS3/iets3.opensource/blob/7f47230011022dc54e12daf3405c738fba3e5654/build.gradle#L68): The project has a dependency on mbeddr which you can override with a local dependency by setting the project variable *forceLocalDependencies*.
 
@@ -76,4 +76,4 @@ The build script looks like the script from MPS Extensions, so let's focus only 
 
 ## Mbeddr Build Scripts
 
-The root directory contains the main [build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle). A *build* subfolder exists. The most crucial build files are [com.mbeddr/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle), which build mbeddr, and [com.mbeddr/platform/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle), which builds the mbeddr platform.
+The root directory contains the main [build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build.gradle). A *build* subfolder exists. The most crucial build files are [com.mbeddr/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/build.gradle), which build mbeddr, and [com.mbeddr/platform/build.gradle](https://github.com/mbeddr/mbeddr.core/blob/master/build/com.mbeddr/platform/build.gradle), which builds the {{ mbeddr_platform() }}.
