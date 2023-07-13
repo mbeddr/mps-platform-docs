@@ -1,5 +1,8 @@
 # Language extensions
 
+This page lists some languages that extend existing MPS' languages. None of them are essential for working with MPS but
+can rather be convenient for special use cases.
+
 ## Dataflow
 
 > ^^com.mbeddr.mpsutil.dataflow^^

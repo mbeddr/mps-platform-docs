@@ -76,6 +76,9 @@ tags:
 
 ## GitHub Publishing Checklist
 
+Here is a list of links to help you get started with publishing projects to GitHub, especially in the context of
+open source projects.
+
 - Ready to use templates
     - [Template #1](https://github.com/cfpb/open-source-project-template)
     - [Template #2](https://github.com/giantswarm/example-opensource-repo)

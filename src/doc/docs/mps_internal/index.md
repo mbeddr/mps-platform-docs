@@ -3,6 +3,10 @@ tags:
 - internals
 ---
 
+The MPS internal pages deal with topics related to developing with the MPS sources or close to them, and also how they are connected to the
+IntelliJ platform. The topics are considered advanced and are not essential for new MPS developers. If you are interested how certain
+parts of MPS work, they might still be of interest for you.
+
 !!! question "How do you get started using MPS' Open API?"
     
     [The simplest way to use MPS Open API](https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/){{ blog('sl') }}

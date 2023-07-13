@@ -6,13 +6,11 @@ tags:
 - aspect
 ---
 
-# Scripts Aspect
+# [Scripts Aspect](https://www.jetbrains.com/help/mps/scripts.html)
 
 > The scripts aspect lets you perform changes to your models in batches.
 >
 > — <cite>MPS documentation</cite>
-
-- [official documentation](https://www.jetbrains.com/help/mps/scripts.html)
 
 !!! question "Are enhancement scripts executed as part of the migration process?"
 

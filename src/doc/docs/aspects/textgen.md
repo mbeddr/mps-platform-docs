@@ -6,13 +6,11 @@ tags:
 - aspect
 ---
 
-# TextGen Aspect
+# [TextGen Aspect](https://www.jetbrains.com/help/mps/textgen.html)
 
 > The TextGen language aspect defines a model-to-text transformation.
 >
 > — <cite>MPS documentation</cite>
-
-- [official documentation](https://www.jetbrains.com/help/mps/textgen.html)
 
 !!! question "How do you get the TextGen for a node?"
     

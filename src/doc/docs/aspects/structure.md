@@ -4,15 +4,17 @@ tags:
 - aspect
 ---
 
-# Structure Aspect
+# [Structure Aspect](https://www.jetbrains.com/help/mps/structure.html)
 
 The structure aspect contains all the concept and interface declarations of a language.
 
-- [official documentation](https://www.jetbrains.com/help/mps/structure.html)
 - [old cheatsheet](http://dsl-course.org/jetbrains-mps-structure-aspect/)
 - [Finding examples of MPS features: Link instances](https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/){{ blog('sl') }}
 
-## Concepts
+## [Concepts](https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces)
+
+Concept declarations are the main root nodes that you add to this aspect. When you use nodes use concepts from your language, and the language has
+generator configurations, the generator of this language will be invoked by default to transform the languages.
 
 !!! question "How can you create an MPS concept declaration programmatically?"
 
@@ -65,7 +67,11 @@ The structure aspect contains all the concept and interface declarations of a la
     #print cls:BaseConcept.getLanguage().getQualifiedName();
     ```
 
-## Interfaces
+## [Interfaces](https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces)
+
+Interfaces work the same way as Java interfaces. They can be used to mark common classes, contain common methods and support the same aspects as
+concepts. A special interface is [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468)
+that defines the name of nodes when a concept implements it.
 
 !!! warning "The concept implements {{ mps_url("@mps.ISuppressErrors") }}, but the node still contains errors."
 
@@ -75,7 +81,19 @@ The structure aspect contains all the concept and interface declarations of a la
 
     It allows to execute Base Language code. [Shapes tutorial - Running the code](https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode) contains an example.
 
-## Properties
+## [Properties](https://www.jetbrains.com/help/mps/structure.html#properties)
+
+You can use properties to save data in the model using primitive types, enumerations or regular expressions. *string* is
+also considered a primitive type. Think twice before you use this type. Users can type anything as a value if you don't
+at a constraint to this property.
+
+String properties are also not referencable. For example, let's consider a property that defines
+a root node's kind. When you use a child instead that can be referenced, you can reuse kinds or even provide a predefined list
+of kinds with certain constraints. Even an enumeration can be a better choice in some cases unless you need the ability to enter any
+value.
+
+Changing this design decision later, means deprecating the string property and introducing a migration. If no standard
+migration is possible, users might even have to change their models manually.
 
 !!! question "How do you use a list of string properties?"
 
@@ -97,7 +115,13 @@ The structure aspect contains all the concept and interface declarations of a la
 
     {{ contribution_by('abstraktor') }}
 
-## References
+## [References](https://www.jetbrains.com/help/mps/structure.html#references)
+
+To refer to other nodes in the model, use references. They have a scope and can be automatically created (smart references)
+for nodes that have a name. References that are out of scopes still work, they are part of the model and are affected by
+generation. As the name it implies, they only reference nodes which means that the referenced node or property won't change when
+you edit the cell in the editor. There is also a distinction between optional and mandatory references, especially when trying to
+delete them.
 
 !!! question "How do you get the previous label of a reference?"
 

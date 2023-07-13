@@ -4,17 +4,18 @@ tags:
 - aspect
 ---
 
-# Test Aspect
+# [Test Aspect](https://www.jetbrains.com/help/mps/testing-languages.html)
 
 > Testing is an essential part of a language designer's work.
 >
 > — <cite>MPS documentation</cite>
 
-- [official documentation](https://www.jetbrains.com/help/mps/testing-languages.html)
 - [Testing in MPS: What and Why](https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236){{ blog('langio') }}
 - [The Language Testing Triangle](https://markusvoelter.medium.com/the-language-testing-triangle-917214826e93){{ blog('mv') }}
 
 ## General
+
+Fore more information about testing in general, read [MPS Internals | Testing](testing.md).
 
 !!! question "Can you add an annotation to skip tests like it usually works with JUnit?"
 
@@ -32,7 +33,7 @@ tags:
 
     Yes, use the statement *invoke action by id*.
 
-!!! question "How do you enter multiple words when using the *type* statement in an editor test?
+!!! question "How do you enter multiple words when using the *type* statement in an editor test?"
 
     Enter them as one long word without spaces in between, for example, *publictransientclass*.
 
@@ -122,6 +123,11 @@ tags:
      {{ contribution_by('abstraktor') }}
 
 ## How to Test
+
+This section deals with practical questions regarding testing. Testing should be a big part of the CI pipeline to ensure that
+changes don't introduce bugs and new feature work as intended. Not everything needs to be tested and manual testing can not
+fully be avoided. Still, every single test gives you confidence in your changes, so don't ignore this part of language development.
+Base Language and KernelF have support for test cases and assert statements.
 
 !!! question "How do you implement custom tests?"
 
@@ -346,6 +352,13 @@ tags:
     ```
 
 ## Troubleshooting
+
+Some of the issues with testing have to do with the way tests are executed. Tests can be executed in the same MPS instance
+or a new instance. In the latter case, a complete new environment is started. Some editor test in {{ mps_extensions() }}
+can only be executed in a new instance. This is probably also true for other type of tests.
+
+Additionally, the tests are executed in temporary models which results in changed node IDs and root nodes become normal nodes with parents in tests.
+Avoid adapting your code to work in the test models and avoid adding checks to see if you are in a test model.
 
 !!! warning "Tests aren't running at all."
 

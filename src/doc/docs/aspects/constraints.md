@@ -11,6 +11,9 @@ The constraints aspect defines constraints for the concepts of the language.
 
 ## General
 
+You can create new constraints using the concept `ConceptConstraints`. The "new" experimental constraint rules still might
+not support all the features of the old approach.
+
 !!! question "How do you hide inapplicable operands in dot expressions?"
 
     [Dot expressions: hiding inapplicable operands](https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/){{ blog('sl') }}
@@ -19,7 +22,12 @@ The constraints aspect defines constraints for the concepts of the language.
 
     - {{ mps_url("@mps.ModelConstraints") }}: This class can calculate the constraint/scope of a specific concept/node programmatically.
 
-## Properties
+## [Properties](https://www.jetbrains.com/help/mps/constraints.html#propertyconstraints)
+
+You can use property constraints to add setters, and getters and check if a new property value is valid. The getters are especially
+useful for setting properties based on other properties. Example: A wrapper concept that referencable a node can use the name of the
+reference as its name. For a reference *r*, you can implement [INamedConcept](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468) in your concept and set the property getter of
+*name* to `r.name`.
 
 !!! question "How can you set default values for properties?"
 
@@ -29,13 +37,17 @@ The constraints aspect defines constraints for the concepts of the language.
 
     Specific Languages Blog: [Invalid property values](https://specificlanguages.com/posts/2022-02/22-invalid-property-values/)
 
-## References
+## [References](https://www.jetbrains.com/help/mps/constraints.html#referentconstraints)
+
+You normally add a node reference constraint to set the scope. The inline scopes and inherited scopes both have advantages and
+disadvantages. You normally use the inline scopes where you can extract the scope into a utility class when you want to reuse it.
+The inherited scope is often used for references that inherit the referenced concept's scope. It makes finding the original scope declaration harder, though.
 
 !!! question "How can you emulate references?"
 
     [Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/){{ blog('sl') }}
 
-## Scopes
+## [Scopes](https://www.jetbrains.com/help/mps/scopes.html)
 
 !!! question "How do you filter scopes? Which scopes are available?"
 

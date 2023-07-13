@@ -6,13 +6,11 @@ tags:
 - aspect
 ---
 
-# Intentions Aspect
+# [Intentions Aspect](https://www.jetbrains.com/help/mps/mps-intentions.html)
 
 >  Intentions provide fast access to the most used operations with syntactical constructions of a language.
 >
 > — <cite>MPS documentation</cite>
-
-- [official documentation](https://www.jetbrains.com/help/mps/mps-intentions.html)
 
 !!! question "How can you go to the declaration of an intention when you open the intention menu?"
     

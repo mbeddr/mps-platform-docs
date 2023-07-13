@@ -6,9 +6,7 @@ tags:
 - aspect
 ---
 
-# FindUsages Aspect
-
-- [official documentation](https://www.jetbrains.com/help/mps/find-usages.html#specificstatements)
+# [FindUsages Aspect](https://www.jetbrains.com/help/mps/find-usages.html#specificstatements)
 
 Implement custom finders for discovering related nodes in this aspect.
 

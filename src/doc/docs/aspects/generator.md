@@ -5,16 +5,14 @@ tags:
 alias: generator_aspect
 ---
 
-# Generator Aspect
+# [Generator Aspect](https://www.jetbrains.com/help/mps/mps-generator.html)
 
 > The generator is a part of the language specification that defines the denotational semantics for the concepts in the language.
 >
 > — <cite>MPS documentation</cite>
 
-- [official documentation](https://www.jetbrains.com/help/mps/mps-generator.html)
 - [Getting started with generation in MPS: extracting a generator](https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/){{ blog('sl') }}
 
-## General
 
 !!! question "Are there any best practices for generators?"
 
@@ -146,6 +144,9 @@ alias: generator_aspect
 
 ## How to Generate XY
 
+The official documentation provides a lot of information about generator and the MPS samples contain good examples for generators. This
+sections answers some question that still often arise.
+
 !!! question "What can be generated?"
 
     Have a look at the [language repository](https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository). You
@@ -162,7 +163,7 @@ alias: generator_aspect
 
     This question is also answered in [the generator cookbook](https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode).
 
-!!! question "How can you generate latex files?"
+!!! question "How can you generate LaTeX files?"
 
     The mbeddr documentation language can do this. Have a look at the [documentation](http://mbeddr.com/files/documentationdocumentation.pdf).
 
@@ -249,6 +250,10 @@ alias: generator_aspect
 
 ## Open API
 
+This section is especially relevant when you want to invoke the generator programmatically. Sometimes text generation can be enough, and
+you don't need to invoke the generator. Make sure to first set the flag *Java* in the language properties of a language and
+the *Compile in MPS* flag in a solution if the compilation doesn't start.
+
 !!! question "How can you preview the generated text programmatically?"
 
     Use the MPS action [TextPreviewModel](http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769) or call the methods in [TextGeneratorEngine](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine) if you want to use the text generator, for example, `#!java TextGeneratorEngine.generateText(node)`
@@ -290,6 +295,8 @@ alias: generator_aspect
 
 ## Troubleshooting
 
+In addition to reading the following questions, read [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){{ blog('sl') }}.
+
 !!! warning "MPS can't resolve the import XY.[^3]"
 
     The solution that contains the class has to be added as a runtime solution (see [here](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000)).
@@ -306,10 +313,6 @@ alias: generator_aspect
 !!! failure "java.lang.NoSuchMethodError"
 
     - [NoSuchMethodError](https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/){{ blog('sl') }}
-
-!!! question "How do I debug generators?"
-    
-    [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){{ blog('sl') }}
 
 !!! warning "The generated code has no debug symbols."
 

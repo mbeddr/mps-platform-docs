@@ -1,5 +1,8 @@
 # Languages
 
+Besides C, this page describes languages that are implement as part of {{ mbeddr() }}. Some incomplete languages that can be
+implemented by textGen were removed as they didn't provide any advantages. Only JSON is still a full implemented language.
+
 ## JSON
 
 > ^^com.mbeddr.mpsutil.json^^

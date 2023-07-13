@@ -10,11 +10,12 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+This aspect is deprecated, use [plugin solutions](https://www.jetbrains.com/help/mps/plugin.html) instead. This page still
+describes the content of this aspect because its languages are also used in the solution. The name of the solutions
+ususally end in *.pluginSolution* or *.plugin*.
+
 ## General
 
-!!! question "Should you use this aspect?"
-
-    No, use [plugin solutions](https://www.jetbrains.com/help/mps/plugin.html) instead.
 
 ??? question "How do facets work?"
 
@@ -115,6 +116,8 @@ tags:
 
 ## Languages/Features
 
+Most additional plugins are contributed by languages in {{ mps_extensions() }}, and {{ mbeddr_platform() }}.
+
 !!! hint "I want to merge models."
 
     Use the language ^^de.itemis.mps.modelmerger^^ from {{ mps_extensions() }}.
@@ -128,6 +131,8 @@ tags:
     Use the language ^^de.itemis.mps.nodeversioning^^ from {{ mps_extensions() }}.
 
 ## Open API
+
+This section contains code-related questions and answers.
 
 !!! question "How do you create a new *SContainmentLink* for a non-existent role?[^1]."
 
@@ -154,6 +159,9 @@ tags:
     ```
 
 ## Troubleshooting
+
+Plugin troubleshooting topics often overlap with IntelliJ topics. The reason for this is that the languages that deal with
+plugins often compile down to IntelliJ platform features such as MPS actions that generate into [IntelliJ actions](https://plugins.jetbrains.com/docs/intellij/basic-action-system.html).
 
 !!! warning "A reference to a key in an action context parameter is out of the search scope."
 

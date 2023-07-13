@@ -1,10 +1,14 @@
-# [Debugging problems](https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems)
+# [Debugging Problems](https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems)
 
-Different kinds of problems can occur in MPS. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., [accessing a project instance](accessing_the_project.md) from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces,  run code on the MSP console, or use [remote debugging](https://specificlanguages.com/articles/debugging/).
+Different kinds of problems can occur in MPS. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., [accessing a project instance](accessing_the_project.md) from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces, run code on the MSP console, or use [remote debugging](https://specificlanguages.com/articles/debugging/).
 
 ## Deal With Errors
 
-Error messages can appear in different places:
+Error messages come in all forms and sizes and can appear in different places. While some error messages can be ignored
+because users can't face them easily, for example, class loading issues when reloading modules, most error messages shouldn't
+be ignored. As a developers, the most import part is navigating to the code which causes the error through the UI or a stack
+trace. In the worst cast scenario, you must find the text of the error message in the sources of the offending project, to
+figure out what's going on.
 
 ### Errors in the Editor
 

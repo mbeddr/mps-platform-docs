@@ -1,5 +1,8 @@
 # Actions
 
+This page describes additional actions that the {{ mbeddr_platform() }} provides. Not all of them are visible in menus
+and have shortcuts assigned.
+
 ## Build Assistant
 
 > ^^com.mbeddr.mpsutil.buildassistant^^

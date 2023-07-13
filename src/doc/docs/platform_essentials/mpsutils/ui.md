@@ -1,8 +1,9 @@
 # UI
 
-### Cells
+This page contains the description of languages that add new cells to the editor. For more editor-related extensions,
+visit [Editor Extensions | MPS Extensions](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/).
 
-#### AsyncCell
+### AsyncCell
 
 The async cell allows displaying a text-based loading indicator as long as the return string is null.
 
@@ -19,7 +20,7 @@ return new AsyncCellProvider(node, { =>
 
 ![async cell](async_cell.gif)
 
-#### FrameCell
+### FrameCell
 
 > ^^com.mbeddr.mpsutil.framecell^^
 

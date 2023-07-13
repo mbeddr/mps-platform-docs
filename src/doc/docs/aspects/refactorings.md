@@ -6,13 +6,11 @@ tags:
 - aspect
 ---
 
-# Refactorings Aspect
+# [Refactorings Aspect](https://www.jetbrains.com/help/mps/mps-refactoring.html)
 
 > You can write simple refactorings using the language ^^jetbrains.mps.lang.refactoring^^.
 >
 > — <cite>MPS documentation</cite>
-
-- [official documentation](https://www.jetbrains.com/help/mps/mps-refactoring.html)
 
 !!! question "Is this aspect widely used?"
 

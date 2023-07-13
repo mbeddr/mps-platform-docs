@@ -8,6 +8,8 @@ tags:
 alias: general
 ---
 
+This page answers some general questions about MPS and is most useful for :beginner: beginners.
+
 !!! question "Who is MPS for?"
 
     [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/){{ blog('sl') }}

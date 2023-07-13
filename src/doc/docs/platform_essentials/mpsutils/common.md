@@ -6,6 +6,8 @@ alias: mpsutils_common
 
 > ^^com.mbeddr.mpsutil.common^^
 
+The common class don't have any dependencies and deal with very generic functionality.
+
 ## Graph
 
 The graph model contains classes for working with [graphs](https://en.wikipedia.org/wiki/Graph_theory) and an implementation for the [AVL tree](https://en.wikipedia.org/wiki/AVL_tree) data structure, a [self-balancing binary search tree](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree).

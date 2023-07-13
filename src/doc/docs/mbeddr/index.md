@@ -5,6 +5,10 @@ tags:
 
 # General
 
+The old homepage at [mbeddr.com](http://mbeddr.com/) and the [mbeddr user guide](http://mbeddr.com/userguide/UserGuideExport.html)
+are still a good introduction to {{ mbeddr() }} itself. Most of the time, you will only be interested into the {{ mbeddr_platform() }},
+the reusable parts of mbeddr that don't deal with C code. The platform comes with a dependency on {{ mps_extensions() }}.
+
 !!! question "Why are there two context action tools?"
 
     The context actions tool from ^^com.mbeddr.mpsutil.contextactions^^ came first. Later, JetBrains developed a

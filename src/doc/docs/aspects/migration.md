@@ -17,6 +17,10 @@ tags:
 
 ## General
 
+Migrations are necessary as part of languages that change over time. Don't create migrations when you are still in the development
+phase and don't need to execute them. When using the *Refactoring* menu in a language, deselect *Write migration script*, and
+*Write refactoring log* to not create migrations.
+
 !!! question "How do I search for instances of a deprecated concept?"
 
     - [Migrations: Searching for instances](https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/){{ blog('sl') }}
@@ -102,6 +106,11 @@ tags:
     A good example of a language with different language and module versions is ^^jetbrains.mps.lang.feedback.problem.scopes^^ (language: 0, module: 1) because it only has a refactoring step but no other migrations.
 
 ## Troubleshooting
+
+Migrations are not only necessary from one language version to another but also for newer MPS versions. Issues can arise
+because MPS or the IntelliJ platform changes or an even more drastic change occurs like a new Java version. Still, migrating early is a
+good idea to not fall behind to many MPS versions. New MPS versions not only mean new features but also many bug fixes. While this topic
+is only marginally related to the migration aspect, it is mentioned here.
 
 - [The migration frustration](https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/){{ blog('sl') }}
 

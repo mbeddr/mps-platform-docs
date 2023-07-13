@@ -3,6 +3,15 @@ tags:
 - openapi
 ---
 
+This page not only considers the language repository, project modules, languages, and models, which can be accessed through
+Open API but also other parts of MPS that can be accessed programmatically.
+
+In general, there are interfaces such as the ones from
+*org.jetbrains.mps.openapi* that you can use to programmatically access classes. The implementing classes can be in the same
+or a different package. For example, [jetbrains.mps.openapi.editor.EditorComponent](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor%28MPS.Editor%2F%29%2F%7EEditorComponent) is
+the interface, [jetbrains.mps.nodeEditor.EditorComponent](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent) one of the implementing classes. Especially implementing IntelliJ classes
+often have the suffix *Impl*, for example, [DataManagerImpl](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide.impl%28MPS.IDEA%2F%29%2F%7EDataManagerImpl) is an implementation of [DataManager](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide%28MPS.IDEA%2F%29%2F%7EDataManager).
+
 !!! question "How do you get an icon for a concept?"
 
     ```java

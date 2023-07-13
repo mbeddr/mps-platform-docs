@@ -5,7 +5,13 @@ tags:
 alias: reference-actions
 ---
 
+This page lists which data keys are available when you declare [actions](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups).
+[MPSCommonDataKeys](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys) are always available, [MPSEditorDataKeys](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor%28MPS.Editor%2F%29%2F%7EMPSEditorDataKeys) is only
+available in node editors. [MPSDataKeys](http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.workbench%28MPS.Workbench%2F%29%2F%7EMPSDataKeys) are only available in certain places such as project panes.
+
 ## CommonDataKeys
+
+This class lists common data keys used as parameter for actions.
 
 | name                    | description                                                                                           | Available in MPS   |
 |-------------------------|-------------------------------------------------------------------------------------------------------|--------------------|
@@ -23,6 +29,8 @@ alias: reference-actions
 | VIRTUAL_FILE_ARRAY      | Returns several `VirtualFile` instances                                                               | :white_check_mark: |
 
 ## PlatformDataKeys
+
+This class extends *CommonDataKeys* and adds new keys that deal with the IntelliJ platform itself.
 
 | name                         | description                                                                                                                                                         | Available in MPS   |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|

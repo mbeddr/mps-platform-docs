@@ -1,5 +1,9 @@
 # Importer and exporter
 
+This page describes language that you can use to import and export data from other languages or models. If you need a
+tighter integration into MPS with the original files existing, use [custom persistence](https://www.jetbrains.com/help/mps/custom-persistence-cookbook.html).
+This approach is an advanced feature that is not used often.
+
 ## ECore
 
 > ^^com.mbeddr.mpsutil.ecore^^

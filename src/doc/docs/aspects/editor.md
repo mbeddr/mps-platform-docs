@@ -13,6 +13,8 @@ The editor aspect defines the projectional editor of a concept.
 
 ## General
 
+To learn more about internal editor topics, visit [MPS Internals: Editor Development](editor_development.md).
+
 !!! question "What happens when you press ++f5++ in the editor?"
 
     [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/){{ blog('sl') }}
@@ -52,7 +54,12 @@ The editor aspect defines the projectional editor of a concept.
     Have a look at [Visual Programming Languages - Snapshots | interfacevision.com](http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/). This page has a lot of examples of visual programming languages
     dating back to 1963 up to recent languages like Scratch. {{ mps_extensions() }}([documentation](https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/)) supports diagrams, and you can use them as the base building block of a new language.
 
-## Menus
+## [Menus](https://www.jetbrains.com/help/mps/transformation-menu-language.html)
+
+[Transformation Menu Language | MPS documentation](https://www.jetbrains.com/help/mps/transformation-menu-language.html) describes
+all the menus that can be influenced. If you use [Grammar Cells](https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/)
+from {{ mps_extensions() }}, transformation and substitution menus might not be needed at all. When you use the language, you
+only need to use empty substitutions menus for concepts that shouldn't be substituable at all.
 
 !!! hint "Explain the different menu-related terms."
 
@@ -110,6 +117,10 @@ The editor aspect defines the projectional editor of a concept.
 
 ## Languages
 
+Many languages were developed over the years that help with creating better editor. Most of the language contain custom
+editor cells that you can use the same way as standard cells such as constant or collections cells. You only
+need to import the corresponding language in the editor aspect.
+
 !!! hint "I need a specific graphical notation/feature for the editor."
 
     Have a look at the [complete extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/#editor) from {{ mps_extensions() }}.
@@ -128,6 +139,8 @@ The editor aspect defines the projectional editor of a concept.
     Use the language ^^com.mbeddr.mpsutil.editor.querylist^^ from {{ mps_extensions() }}.
 
 ## Editor Declaration
+
+This section contains some more advanced topics and questions when defining editors.
 
 !!! question "Is there a disadvantage to using the indent layout instead of the indent cell mode?"
 
@@ -232,9 +245,11 @@ The editor aspect defines the projectional editor of a concept.
 
     You can implement a cell similar to the cell [EditorCell_MathEnd](http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058) in {{ mps_extensions() }}.
 
-## Inspector
+## [Inspector](https://www.jetbrains.com/help/mps/mps-inspector.html)
 
-- [Move rarely needed information to the Inspector](https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/){{ blog('sl') }}
+As a language developer, you often use the inspector in the editor aspect to set styles, or change macros in the editor aspect.
+Some projects use the inspector nearly not all, but it can be good solution to not clutter the editor:
+[Move rarely needed information to the Inspector](https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/){{ blog('sl') }}
 
 !!! question "How can you open the inspector programmatically?"
     ```java
@@ -253,22 +268,10 @@ The editor aspect defines the projectional editor of a concept.
 
     Known bug (MPS-32350). Pressing ++f5++ helps.
 
-## Other UI Components
-
-!!! question "I am using `NodeHighlightManager.mark()` to highlight AST nodes. MPS then uses the provided color for the cell's background and a slightly darker shade for an additional border. Can we change this, i.e., only paint the background, but not the border?"
-
-    Yes, but you must create a class that extends DefaultEditorMessage and overwrites the [paintWithColor](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196) method. Line [203](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203) defined the color of the border. Instead of calling this method:
-    
-    ```java
-    public void mark(SNode node, Color color, String messageText, EditorMessageOwner owner) {
-    if (node == null) return;
-    mark(new DefaultEditorMessage(node, color, messageText, owner));
-    }
-    ```
-
-    You must initialize your message object and supply it to the mark method.
 
 ## Open API
+
+This section contains answers to code-related questions.
 
 !!! question "How can you open the editor for a node programmatically?"
 
@@ -363,5 +366,20 @@ The editor aspect defines the projectional editor of a concept.
 !!! question "Is there a utility class related to editor hints?"
 
     Yes, there is in {{ mbeddr() }}: {{ mps_url("@mbeddr.EditorHintHelper") }}.
+
+
+!!! question "I am using `NodeHighlightManager.mark()` to highlight AST nodes. MPS then uses the provided color for the cell's background and a slightly darker shade for an additional border. Can we change this, i.e., only paint the background, but not the border?"
+
+    Yes, but you must create a class that extends DefaultEditorMessage and overwrites the [paintWithColor](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196) method. Line [203](https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203) defined the color of the border. Instead of calling this method:
+    
+    ```java
+    public void mark(SNode node, Color color, String messageText, EditorMessageOwner owner) {
+    if (node == null) return;
+    mark(new DefaultEditorMessage(node, color, messageText, owner));
+    }
+    ```
+
+    You must initialize your message object and supply it to the mark method.
+
 
 [^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

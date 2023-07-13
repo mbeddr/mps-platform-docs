@@ -18,6 +18,10 @@ Here is some more information for exceptions that often occur in MPS:
 
 ### Module Validation
 
+Module validation refers to checkers that implement the interface *IChecker* and show their result in the logical view.
+An example for such a checker is [StructureChecker](https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java#L57). They are
+registered in the component plugin [MPSProjectValidation](https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/core/platform/MPSProjectValidation.java#L42)
+
 !!! failure "Can't find / couldn't load X (language, devkit...)."
 
     X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.

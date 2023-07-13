@@ -6,6 +6,27 @@ tags:
 - troubleshooting
 ---
 
+The MPS console, not to be confused with the terminal, provides the ability to execute (mainly Base Language code) on the command
+line. It supports special commands starting with a hash sign to achieve common tasks such find nodes (`#nodes`) or cleaning the
+generates files (`#clean`). It is meant to be used by developers, but might be useful for users it they get stuck.
+Additional to the provided commands, you can use it for the following common tasks:
+
+- Selecting a node in the editor and modifying it: In certain cases, the console can be the only way to make changes when even
+  the reflective editor fails.
+- Writing new code faster: The `#print` statements can, for example, provide detailed feedback when testing new code. New Ideas
+  can be quickly prototyped and executed by a single mouse click.
+- Exploring: You can check the output of single expressions or query nodes/models/modules to learn more about them. When dealing with
+  unknown nodes, it makes sense to output their concept (`myNode.concept`) or navigate to it by clicking on it. You can access node annotations
+  through myNode.@annotationRole. Make sure to import the annotation's dependency or it its role won't be visible
+  (e.g. import [SuppressErrorsAnnotation](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F4222318806802425298) to have `myNode.@suppress` available)
+- Debugging: Like exploring, the console is a great tool for figuring out why something doesn't work. Paste short code snippets 
+  directly into the console and observe the intermediate results if you don't want to use a debugger. One common source of errors
+  are model queries that return an empty list because of wrong conditions or structural assumptions (e.g. concept X is not a descendant of concept Y).
+  Play around with your query. Remove parts of the query, check the scope or output intermediate returned results.
+- Search for usages of concepts or nodes with a condition: `#instances` and `#nodes` can be combined with a scope and further
+  queries to constrain the amount of results. Ensure to not use too expensive queries (e.g. `#nodes<scope = global>`) or else 
+  you might wait for your results for a while.
+
 !!! warning "I can't enter the print statement."
 
     Nested structures don't support it (MPS-34656). Use it at the top level instead. If you need to output multiple objects,

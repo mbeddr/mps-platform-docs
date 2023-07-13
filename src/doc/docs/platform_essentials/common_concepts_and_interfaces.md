@@ -10,7 +10,11 @@ Identifiers starting with a capital "I" refer to interfaces.
 
 ## Mbeddr
 
+{{ mbeddr() }} only extends interfaces from *de.slisson.mps.richtext*.
+
 ### Base
+
+All common mbeddr interfaces are located in the namespace *com.mbeddr.core.base*.
 
 #### [Assessment](http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814)
 
@@ -69,7 +73,12 @@ Concepts that implement the interface [IMbeddrIDERoot](http://127.0.0.1:63320/no
 
 ## IETS3
 
+{{ iets3() }} builds on {{ mbeddr() }} interfaces in *de.slisson.mps.richtext*.
+
 ### General
+
+The general interfaces deal with integration of solvers and naming concepts. Interfaces for naming are also located in
+{{ mbeddr() }} and can be a valid alternative.
 
 #### ISolvable
 
@@ -147,7 +156,9 @@ Implement the interface [IToplevelExprContent](http://127.0.0.1:63320/node?ref=r
 
 When implementing custom operations for collections such as maps, lists, and sets, use one of the provided concepts as the base concept (for example [NoArgCollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339795488) and [OneArgCollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283340020764)). If no suitable concept is available, implement one of the interfaces, such as [ICollectionOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7554398283339790458) and [IMapOneArgOp](http://127.0.0.1:63320/node?ref=r%3A61b1de80-490d-4fee-8e95-b956503290e9%28org.iets3.core.expr.collections.structure%29%2F7757419675865128281). If this is still not possible, you can still implement [IDotTarget](http://127.0.0.1:63320/node?ref=r%3A66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3%28org.iets3.core.expr.base.structure%29%2F9002563722476995146) directly.
 
-## MPS-Extensions
+## MPS Extensions
+
+{{ mps_extensions() }} doesn't have many interfaces because it can be mostly customized by extending editor cells.
 
 ### Richtext
 

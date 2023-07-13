@@ -5,6 +5,9 @@ tags:
 
 # Tools
 
+This page explains some custom [tools](https://www.jetbrains.com/help/mps/plugin.html#tools) of the {{ mbeddr_platform() }}.
+Some of the tools are slightly experimental, so use them with care.
+
 ## Context Actions
 
 > ^^com.mbeddr.mpsutil.contextactions^^

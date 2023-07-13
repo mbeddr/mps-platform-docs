@@ -4,13 +4,12 @@ tags:
 - aspect
 ---
 
-# Type System Aspect
+# [Type System Aspect](https://www.jetbrains.com/help/mps/typesystem.html)
 
 > A type system is part of a language definition assigning types to the nodes in the models written using the language. The type system checks certain constraints on nodes and their types.
 >
 > — <cite>MPS documentation</cite>
 
-- [official documentation](https://www.jetbrains.com/help/mps/typesystem.html)
 - [old cheatsheet](http://dsl-course.org/jetbrains-mps-typesystem-aspect/)
 
 !!! warning "Type system rules aren't executing."

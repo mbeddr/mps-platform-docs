@@ -8,7 +8,8 @@ tags:
 
 # UI Patterns and Anti Patterns
 
-Go through your editors and check the following list.
+Go through your editors and check the following list, which contains common patterns in MPS. Not all of them are good patterns
+and should therefore be avoided.
 
 !!! hint "Texts are readable."
     The contrast ratio between the background and foreground text colors should be at least 4.5:1 ([article](https://www.majesticsignstudio.com/blog/best-color-combinations-for-readability/)).

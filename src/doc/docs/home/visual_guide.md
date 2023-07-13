@@ -6,6 +6,8 @@ tags:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
 
+This visual guide should help you get familiar with how elements of the UI are called and how to find information about them.
+It is useful for developers but also users.
 Hover over a green rectangle to show a short description. Reload the page if they don't appear. When you click the shape, you are redirected to the corresponding documentation when it's available.
 
 ![imagemap: what is](what_is.png){usemap='#image-map' .off-glb width="1788" height="1033" .ignore_max_width .map }

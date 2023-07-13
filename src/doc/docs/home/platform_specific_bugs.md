@@ -7,17 +7,22 @@ tags:
 - native
 ---
 
-## Native Crashes
+Bugs that only occur for certain operating systems or platforms are not common and are most of the time results
+of OS-specific limitations or missing tools. Still, you might encounter a few bugs, mentioned on this page.  The low amount
+of such bugs is as follows: Java (Base Language) is a platform-independent language. MPS and the IntelliJ platform also only
+contain a small amount of OS-specific code.
 
-Native crashes are crashes where MPS crashes internally (C/C++ code), and an error dialog is shown. First, search the following Youtrack projects:
 
-- [MPS](https://youtrack.jetbrains.com/issues/MPS): MPS-related crashes
-- [IntelliJ IDEA](https://youtrack.jetbrains.com/issues/IDEA): IntelliJ platform-related crashes
-- [JetBrains Runtime](https://youtrack.jetbrains.com/issues/JBR): mostly UI and JCEF-related issues
-
-For crashes on macOS, have a look at [Identifying the Cause of Common Crashes | developer.apple.com](https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes).
+You only encounter serious issues with native code which is dependent on the platform. The JDK or JBR that you use, and the Java version can also play a role. For the last two factors,
+ensure everybody uses the same versions to not have to deal with sometimes odd error messages.
 
 ## Windows
+
+Based on the market share, you can assume that users and especially end users are Windows users. While it make sense in
+some companies to only focus on Windows, and use Windows-specific code, please consider the possibility that
+there might be other users in the future. Many MPS developers also use macOS. In other words: Don't use Windows fonts in the editor and deal with file paths
+in a [generic way](https://www.baeldung.com/java-file-vs-file-path-separator). Various file systems also handle permissions and case sensitivity
+differently. If you have the change, test your languages on multiple platforms.
 
 !!! failure "Compilation from the command line might fail due to none ASCII chars."
 
@@ -72,4 +77,13 @@ You might run into issues with newer macOS versions. One of them is [notarizing 
 
     No solution at the moment (MPS-33689).
 
+## Native Crashes
+
+Native crashes are crashes where MPS crashes internally (C/C++ code), and an error dialog is shown. First, search the following Youtrack projects:
+
+- [MPS](https://youtrack.jetbrains.com/issues/MPS): MPS-related crashes
+- [IntelliJ IDEA](https://youtrack.jetbrains.com/issues/IDEA): IntelliJ platform-related crashes
+- [JetBrains Runtime](https://youtrack.jetbrains.com/issues/JBR): mostly UI and JCEF-related issues
+
+For crashes on macOS, have a look at [Identifying the Cause of Common Crashes | developer.apple.com](https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes).
     

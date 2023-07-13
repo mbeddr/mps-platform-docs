@@ -9,6 +9,9 @@ tags:
 
 # Language Design
 
+This page contains many links to articles about language design with MPS and some other topics. If links are missing,
+please raise an issue.
+
 ## Patterns
 
 - [Inline Definitions](https://specificlanguages.com/articles/patterns/inline-definitions/){{ blog('sl') }}

@@ -10,7 +10,19 @@ This is a non-exhaustive list of common problems with MPS and platform projects.
 For general MPS problems, read [Finding your way out](https://www.jetbrains.com/help/mps/finding-your-way-out.html) first.
 If you are still stuck with your problem, read [overcoming obstacles](overcoming_obstacles.md) next.
 
-## MPS and Platforms
+## MPS and MPS Platforms
+
+The following questions assume that you use Gradle to build your project. The README file of your project should have
+more information about common issues and how to build the project.
+
+When you build an MPS project, it can make a big difference between removing all generated files first and building the project (clean build), or skipping the first step (dirty build). When doing CI, you have to do a clean build or certain kind of errors can't be detected.
+
+For checking out a different branch, a dirty build or rebuilding the
+languages manually can be the faster option. When you didn't do any generator changes or other changes that require a rebuild,
+calling make on the changed languages can be even enough.
+
+Which type of build you choose is up to you and highly depends on the project. Experience with it in your team, and
+compare if the risky dirty build is worth the time you save.
 
 !!! warning "The IDE is sluggish and doesn't work the way it should."
 
@@ -99,6 +111,9 @@ If you are still stuck with your problem, read [overcoming obstacles](overcoming
     doesn't land in the right issue tracker.
 
 ## Gradle
+
+[Gradle | Build](gradle.md) gives some more details about working with this build tool. When working with Gradle, make sure
+that you know which versions you are using. Different Gradle versions support [different Java versions](https://docs.gradle.org/current/userguide/compatibility.html). Another topic that often leads to syntax issue, is [lazy configuration](https://docs.gradle.org/current/userguide/lazy_configuration.html) which delay calculations until it's actually required.
 
 !!! failure "Gradle build fails."
 

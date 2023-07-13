@@ -4,6 +4,9 @@ alias: mpsutils_plugin_rcp
 
 # Plugin and RCP
 
+The following languages create a bridge between MPS and the IntelliJ platform for cases where no language exist
+for using IntelliJ platform features or the MPS languages are missing features.
+
 ## Actions Filter
 
 > ^^com.mbeddr.mpsutil.actionsfilter^^

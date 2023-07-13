@@ -10,8 +10,6 @@ The behavior aspect can be used for defining methods for the concepts of the lan
 
 - [official documentation](https://www.jetbrains.com/help/mps/behavior.html)
 
-## General
-
 !!! question "Can you use asynchronous code in behavior methods such as calling external tools?"
 
     Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behavior code. 
@@ -73,6 +71,14 @@ The behavior aspect can be used for defining methods for the concepts of the lan
     {{ contribution_by('abstraktor') }}
 
 ## Initialization
+
+The constructor in the behavior aspect is a bit confusing to beginners because the node is not yet attached to its parent.
+In the case of root nodes, it might not even have a parent.
+
+Internally, there is also the idea of node owners that the JavaDoc of
+[SNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESNodeOwner) and its
+implementing classes describe. When you create a new node, the owner is an [FreeFloatNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner), This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an [AttachedNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner). After calling `myNode.detach` it has an [DetachedNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner).
+The node could go be added back to a model.
 
 ??? question "How do you initialize a node?"
 
@@ -149,6 +155,10 @@ The behavior aspect can be used for defining methods for the concepts of the lan
 
 
 ## Bugs/Missing Features
+
+Behavior methods can only partially be compared to ordinary Java methods. They don't support as many feature because the
+behavior aspect uses a custom generation plan that doesn't included all Base Language extentions and are internally differently
+implemented.
 
 !!! question "How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?[^1]"
 

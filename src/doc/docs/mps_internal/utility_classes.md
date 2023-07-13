@@ -9,6 +9,13 @@ tags:
 
 # Utility Classes
 
+Utility classes of other languages can contain reusable methods that can be interesting for your own languages. They often have
+the suffix *Util* or *Helper*. Classes ending with *Manager* also can have those methods. You can access them through static
+*getInstance* methods or, if they are core components, through *jetbrains.mps.project.Project#getComponent*. To find new methods,
+search for nodes named \[TOPIC]+ \[suffix] e.g. "UI" + "Util" becomes *UIUtil*. If you work closely with MPS languages,
+search their runtime models for useful methods. For example, *jetbrains.mps.ide.httpsupport.runtime.base* contains a utility class
+[HttpSupportUtil](http://127.0.0.1:63320/node?ref=r%3A11b7cdb2-cc58-456e-bb9a-ce45b78edd2f%28jetbrains.mps.ide.httpsupport.runtime.base%29%2F4403308017443708918) that helps with the HTTP Support plugins.
+
 | **Class**                                                                                                   | **Description**                                                                            |
 |-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | {{ mps_url("@mps.internal.make.runtime.util.DirUtil") }}                                                    | directory-related utilities                                                                |

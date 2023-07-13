@@ -1,4 +1,12 @@
+---
+alias: mpsutils_generator
+---
+
 # Generator
+
+Some of the language described on this page make working with the generator easier or fix shortcomings of the generator.
+Generators and generator plans are not made to be extensible, so fixing issues is difficult. Sometimes other workarounds
+can be found and will me mentioned in this documentation if they are known.
 
 ## Generator Facade
 

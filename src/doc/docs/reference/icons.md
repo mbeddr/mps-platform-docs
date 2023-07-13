@@ -6,7 +6,9 @@ tags:
 
 ## Actions
 
-You can use the icons in the documentation by inserting the corresponding code in a markdown file.
+These icons are used in MPS in various places. You can use the icons in the documentation by inserting the corresponding code in a markdown file.
+They are shipped with MPS and can be found [here](https://github.com/JetBrains/MPS/tree/master/workbench/mps-icons/source)
+in the MPS sources. If you need an Icon instance, for example, for a Swing component, retrieve it through [MPSIcons](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons).
 
 | Code                                    | Icon                                  | Icon_2x                                  | Icon_dark                                  | Icon_2x_dark                                  |
 |-----------------------------------------|---------------------------------------|------------------------------------------|--------------------------------------------|-----------------------------------------------|

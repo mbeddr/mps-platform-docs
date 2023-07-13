@@ -6,7 +6,14 @@ tags:
 - customization
 ---
 
-RCP stands for Rich Client Platform. [Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html) explains this topic.
+RCP stands for Rich Client Platform and means creating a custom MPS version with your selection of plugins and custom branding.
+[Building standalone IDEs for your languages | MPS](https://www.jetbrains.com/help/mps/building-standalone-ides-for-your-languages.html)
+explains this topic in detail.
+
+When building an RCP, you can consider three operating systems: Windows, Mac, and Linux.It is recommended to have a Windows RCP and, depending on the user base,
+also a Mac RCP. Ideally, you only have to create them once, and don't have any issues. In practise, some (native) libraries
+or tools might not be available on other systems. Additionally, for Macs, signing the application and supporting different
+architectures such as the M1 chip, means some extra work.
 
 !!! warning "A plugin is incompatible with the current RCP version."
     

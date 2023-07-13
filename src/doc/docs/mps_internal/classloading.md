@@ -7,6 +7,9 @@ tags:
 
 # Classloading
 
+Class loading is a process of dynamically loading Java classes into the Java Virtual Machine (JVM) at runtime. It is performed by an instance of the *java.lang.ClassLoader* class, which is responsible for finding, loading, and initializing the classes. Class loading is essential for the Java runtime system, as it allows the JVM to run Java programs without knowing about the underlying files or file systems. In MPS, you can reload
+most classes when they change automatically or through the action *Reload All Classes* to reload the classes of all modules.
+
 ## Classloaders
 
 Bootstrap class loaders, IDEA plugin class loaders, and module class loaders are the different available class loaders.

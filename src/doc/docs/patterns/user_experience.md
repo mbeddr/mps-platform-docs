@@ -46,6 +46,9 @@ alias: ux
 
 ## Basics
 
+This section contains links to fundamental knowledge unrelated to MPS that is needed to understand the topic
+user experience.
+
 - [7 Graphic Design Principles to Up-Level Your Graphics](https://mariahalthoff.com/blog/7-graphic-design-principles)
 - [7 Gestalt Principles of Design](https://ux360.design/gestalt-principles-design/)
 - [10 Graphic Design Rules You Should Never Break](https://www.business2community.com/web-design/10-graphic-design-rules-never-break-01935942)
@@ -56,6 +59,9 @@ alias: ux
 
 ## Text
 
+Currently, there are no guidelines on how to write text in MPS editors. The following links provide some information on this 
+topic from non-MPS perspectives.
+
 - [UX Writing: Handy Tips on Text Improving User Experience](https://blog.tubikstudio.com/user-experience-tips-ux-writing/)
 - [The Punctuation Guide](https://www.thepunctuationguide.com/index.html)
 - [Technical Writing Essentials – Document Design](https://pressbooks.bccampus.ca/technicalwriting/part/documentdesign/)
@@ -63,16 +69,23 @@ alias: ux
 
 ## UI
 
+The UI in MPS is influenced by the builtin editor cells and styles, custom cells and swing components. Since there are no guidelines 
+in MPS, it is important to see how other guidelines can be applied. In the end, you can have perfect guidelines, but
+you might also need to adhere to your companies' guidelines. Consistency is here a very important topics, especially when
+mixing different styles.
+
 - [Design Better Forms](https://medium.com/nextux/design-better-forms-96fadca0f49c)
 - [IntelliJ Platform UI Guidelines](https://jetbrains.github.io/ui/)
 - [When to use checkboxes](https://docs.microsoft.com/en-us/windows/win32/uxguide/ctrl-check-boxes#is-this-the-right-control)
 
 ## UX/Usability
 
+The following links give introductions to the topic:
+
 - [Ten Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
 - [UX Design: How to Make User Interface Readable](https://blog.tubikstudio.com/ux-design-readable-user-interface/)
 
-The following items are cited from different UX guidelines from the web:
+The following items are cited from different UX guidelines from the web, and might be applicable to your project:
 
 [Windows Design Techniques](https://docs.microsoft.com/en-us/windows/win32/uxguide/how-to-design-desktop-ux#design-techniques):
 

@@ -3,9 +3,21 @@ hide:
 - toc
 ---
 
+The term *plugin* can refer to different things: A plugin solution is a language aspect that you can use to integrate your code
+with the MPS IDE functionality. The preferred way is to create a custom plugin solution instead which provides the same functionality. When you export your languages,
+you can also create plugins that others can install. In this case, the term
+*plugin* refers to IntelliJ IDEA plugins. You can install other plugins such as the Java plugin or a Markdown plugin in IntelliJ IDEA
+the same way you install MPS plugins. They use the same mechanisms from the IntelliJ platform.
+This page answers only general questions about plugins. You can find more information about plugins in [Plugins](plugins.md)
+which deals with the plugin aspect.
+
 !!! question "Where can you use a created language?[^1]"
 
-    Use them in MPS or a custom IDE based on MPS (a so-called RCP).
+    Use them in MPS or a custom IDE based on MPS (a so-called RCP). You need to create a build script, so you can export your plugins
+    as real IntelliJ plugins that others can install. To ship all the plugins together with a custom branding, create an RCP.
+    It has the advance that it can be provided to the end users as a single download or preinstalled on his computer. He doesn't have to
+    install plugins himself through the market place or other storage locations and also doesn't have to deal with dependencies
+    between plugins.
 
 !!! question "Are MPS languages often used as plugins in IntelliJ IDEs instead of MPS itself? (an IntelliJ IDEA plugin, not custom RCP)"
 
