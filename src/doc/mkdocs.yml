@@ -74,6 +74,7 @@ extra:
 
 plugins:
   - search
+  - link-marker
   - macros:
       on_error_fail: true
   - gen-files:
