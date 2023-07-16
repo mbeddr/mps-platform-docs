@@ -1,6 +1,6 @@
 ---
 tags:
-- mps-extensions
+- mps_extensions
 ---
 
 **[GitHub](https://jetbrains.github.io/MPS-extensions/) contains the official documentation.**

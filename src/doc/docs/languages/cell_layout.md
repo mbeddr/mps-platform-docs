@@ -1,6 +1,6 @@
 ---
 tags:
-- mps-extensions
+- mps_extensions
 ---
 
 This page is an addition to [Cell Layout | MPS-extensions](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/). [[editor-dev#terminology|Editor development]] explains some terminology of this page, so please read it first. Additionally, when the variable or argument doesn't have a type in a diagram, it is assumed to be *int*. Methods without a return type have a type of *void*.

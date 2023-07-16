@@ -35,6 +35,8 @@ theme:
   favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github
+    tag:
+      beginner: material/new-box
 
 extra_css:
   - stylesheets/extra.css
@@ -50,6 +52,8 @@ extra_javascript:
 extra:
   mps_minimum: 2021.1.4
   mps_maximum: 2022.3
+  tags:
+    beginner: beginner
   analytics:
     provider: google
     property: G-3FEXS9GHRT

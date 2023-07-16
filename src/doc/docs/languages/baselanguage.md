@@ -1,7 +1,6 @@
 ---
 tags:
 - baselanguage
-- baselanguage-extension
 ---
 
 ## Base Language

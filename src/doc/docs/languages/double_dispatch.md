@@ -3,7 +3,6 @@ hide:
 - toc
 tags:
 - baselanguage
-- baselanguage-extension
 ---
 
 This article explains the language ^^jetbrains.mps.baselanguage.doubleDispatch^^. The used example comes from [this article](https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained#single-dispatch):
