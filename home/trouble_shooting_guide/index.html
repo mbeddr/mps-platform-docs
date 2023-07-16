@@ -767,8 +767,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mps-and-platforms" class="md-nav__link">
-    MPS and Platforms
+  <a href="#mps-and-mps-platforms" class="md-nav__link">
+    MPS and MPS Platforms
   </a>
   
 </li>
@@ -1487,8 +1487,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mps-and-platforms" class="md-nav__link">
-    MPS and Platforms
+  <a href="#mps-and-mps-platforms" class="md-nav__link">
+    MPS and MPS Platforms
   </a>
   
 </li>
@@ -1554,7 +1554,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p>This is a non-exhaustive list of common problems with <abbr title="Meta Programming System">MPS</abbr> and platform projects. It is assumed that Gradle is used for building the project.
 For general <abbr title="Meta Programming System">MPS</abbr> problems, read <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html">Finding your way <abbr title="output">out</abbr></a> first.
 If you are still stuck with your problem, read <a href="../overcoming_obstacles/overcoming_obstacles/">overcoming obstacles</a> next.</p>
-<h2 id="mps-and-platforms"><abbr title="Meta Programming System">MPS</abbr> and Platforms<a class="headerlink" href="#mps-and-platforms" title="Permanent link">&para;</a></h2>
+<h2 id="mps-and-mps-platforms"><abbr title="Meta Programming System">MPS</abbr> and <abbr title="Meta Programming System">MPS</abbr> Platforms<a class="headerlink" href="#mps-and-mps-platforms" title="Permanent link">&para;</a></h2>
+<p>The following questions assume that you use Gradle to build your project. The README file of your project should have
+more information about common issues and how to build the project.</p>
+<p>When you build an <abbr title="Meta Programming System">MPS</abbr> project, it can make a big difference between removing all generated files first and building the project (clean build), or skipping the first step (dirty build). When doing <abbr title="Continuous Integration">CI</abbr>, you have to do a clean build or certain kind of errors can't be detected.</p>
+<p>For checking <abbr title="output">out</abbr> a different branch, a dirty build or rebuilding the
+languages manually can be the faster option. When you didn't do any generator changes or other changes that require a rebuild,
+calling make on the changed languages can be even enough.</p>
+<p>Which type of build you choose is up to you and highly depends on the project. Experience with it in your team, and
+compare if the risky dirty build is worth the time you save.</p>
 <div class="admonition warning">
 <p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> is sluggish and doesn't work the way it should.</p>
 <p>Edit the file mps(64).vmoptions and give it sufficient heap space: <code>-Xmx8g</code></p>
@@ -1676,6 +1684,8 @@ when you can't identify the repository based on the package name in the error me
 doesn't land in the right issue tracker.</p>
 </div>
 <h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h2>
+<p><a href="../../build/gradle/">Gradle | Build</a> gives some more details about working with this build tool. When working with Gradle, make sure
+that you know which versions you are using. Different Gradle versions support <a href="https://docs.gradle.org/current/userguide/compatibility.html">different Java versions</a>. Another topic that often leads to syntax issue, is <a href="https://docs.gradle.org/current/userguide/lazy_configuration.html">lazy configuration</a> which delay calculations until it's actually required.</p>
 <div class="admonition failure">
 <p class="admonition-title">Gradle build fails.</p>
 <ol>
@@ -1773,7 +1783,7 @@ The tests can be executed locally with <code>./gradlew ant-build-tests -Dmps.hom
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

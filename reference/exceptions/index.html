@@ -1613,6 +1613,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </ul>
 <h2 id="mps"><abbr title="Meta Programming System">MPS</abbr><a class="headerlink" href="#mps" title="Permanent link">&para;</a></h2>
 <h3 id="module-validation">Module Validation<a class="headerlink" href="#module-validation" title="Permanent link">&para;</a></h3>
+<p>Module validation refers to checkers that implement the interface <em>IChecker</em> and show their result in the logical view.
+An example for such a checker is <a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java#L57">StructureChecker</a>. They are
+registered in the component plugin <a href="https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/core/platform/MPSProjectValidation.java#L42">MPSProjectValidation</a></p>
 <div class="admonition failure">
 <p class="admonition-title">Can't find / couldn't load X (language, devkit&hellip;).</p>
 <p>X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
@@ -1763,7 +1766,7 @@ The plugin containing the solution was not installed / the dependency was not fe
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

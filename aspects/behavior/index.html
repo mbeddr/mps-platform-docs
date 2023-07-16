@@ -794,13 +794,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#initialization" class="md-nav__link">
     Initialization
   </a>
@@ -1648,13 +1641,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#initialization" class="md-nav__link">
     Initialization
   </a>
@@ -1704,7 +1690,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <ul>
 <li><a href="https://www.jetbrains.com/help/mps/behavior.html">official documentation</a></li>
 </ul>
-<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Can you use asynchronous code in behavior methods such as calling external tools?</p>
 <p>Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behavior code. 
@@ -1762,6 +1747,12 @@ When I override <code>getPresentation</code> in a subconcept, it displays the ov
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
+<p>The constructor in the behavior aspect is a bit confusing to beginners because the node is not yet attached to its parent.
+In the case of root nodes, it might not even have a parent.</p>
+<p>Internally, there is also the idea of node owners that the JavaDoc of
+<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESNodeOwner">SNodeOwner</a> and its
+implementing classes describe. When you create a new node, the owner is an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner">FreeFloatNodeOwner</a>, This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner">AttachedNodeOwner</a>. After calling <code>myNode.detach</code> it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner">DetachedNodeOwner</a>.
+The node could go be added back to a model.</p>
 <details class="question">
 <summary>How do you initialize a node?</summary>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcE4sUqjmsknOz8kvsiooLSrISbVLSS1OLsosKMnMz7PRB8vYWSl4hPj6uCAkFKINY7lquRxS81KAhgEAWN8fAQ==?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcE4sUqjmsknOz8kvsiooLSrISbVLSS1OLsosKMnMz7PRB8vYWSl4hPj6uCAkFKINY7lquRxS81KAhgEAWN8fAQ==?" /></a></p>
@@ -1825,6 +1816,9 @@ superConcept()
 <p><code class="highlight"><span class="n">concept</span><span class="o">/</span><span class="n">MyConcept</span><span class="o">/</span><span class="p">.</span><span class="na">new</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="nf">instance</span><span class="p">()</span><span class="w"></span></code> provides this behavior.</p>
 </div>
 <h2 id="bugsmissing-features">Bugs/Missing Features<a class="headerlink" href="#bugsmissing-features" title="Permanent link">&para;</a></h2>
+<p>Behavior methods can only partially be compared to ordinary Java methods. They don't support as many feature because the
+behavior aspect uses a custom generation plan that doesn't included all Base Language extentions and are internally differently
+implemented.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure</a>.</p>
@@ -1855,7 +1849,7 @@ superConcept()
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

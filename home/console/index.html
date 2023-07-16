@@ -1455,6 +1455,27 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Console</h1>
 
+<p>The <abbr title="Meta Programming System">MPS</abbr> console, not to be confused with the terminal, provides the ability to execute (mainly Base Language code) on the command
+line. It supports special commands starting with a hash sign to achieve common tasks such find nodes (<code>#nodes</code>) or cleaning the
+generates files (<code>#clean</code>). It is meant to be used by developers, but might be useful for users it they get stuck.
+Additional to the provided commands, you can use it for the following common tasks:</p>
+<ul>
+<li>Selecting a node in the editor and modifying it: In certain cases, the console can be the only way to make changes when even
+  the reflective editor fails.</li>
+<li>Writing new code faster: The <code>#print</code> statements can, for example, provide detailed feedback when testing new code. New Ideas
+  can be quickly prototyped and executed by a single mouse click.</li>
+<li>Exploring: You can check the output of single expressions or query nodes/models/modules to learn more about them. When dealing with
+  unknown nodes, it makes sense to output their concept (<code>myNode.concept</code>) or navigate to it by clicking on it. You can access node annotations
+  through myNode.<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/annotationRole" title="GitHub User: annotationRole">@annotationRole</a>. Make sure to import the annotation's dependency or it its role won't be visible
+  (e.g. import <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F4222318806802425298">SuppressErrorsAnnotation</a> to have <code>myNode.@suppress</code> available)</li>
+<li>Debugging: Like exploring, the console is a great tool for figuring <abbr title="output">out</abbr> why something doesn't work. Paste short code snippets 
+  directly into the console and observe the intermediate results if you don't want to use a debugger. One common source of errors
+  are model queries that return an empty list because of wrong conditions or structural assumptions (e.g. concept X is not a descendant of concept Y).
+  Play around with your query. Remove parts of the query, check the scope or output intermediate returned results.</li>
+<li>Search for usages of concepts or nodes with a condition: <code>#instances</code> and <code>#nodes</code> can be combined with a scope and further
+  queries to constrain the amount of results. Ensure to not use too expensive queries (e.g. <code>#nodes&lt;scope = global&gt;</code>) or else 
+  you might wait for your results for a while.</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">I can't enter the print statement.</p>
 <p>Nested structures don't support it (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656</a>). Use it at the top level instead. If you need to output multiple objects,
@@ -1514,7 +1535,7 @@ for more <abbr title="information">info</abbr>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

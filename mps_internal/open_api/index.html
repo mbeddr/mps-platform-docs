@@ -1504,6 +1504,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Open API</h1>
 
+<p>This page not only considers the language repository, project modules, languages, and models, which can be accessed through
+Open <abbr title="Application Programming Interface">API</abbr> but also other parts of <abbr title="Meta Programming System">MPS</abbr> that can be accessed programmatically.</p>
+<p>In general, there are interfaces such as the ones from
+<em><abbr title="organization">org</abbr>.jetbrains.mps.openapi</em> that you can use to programmatically access classes. The implementing classes can be in the same
+or a different package. For example, <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.openapi.editor%28MPS.Editor%2F%29%2F%7EEditorComponent">jetbrains.mps.openapi.editor.EditorComponent</a> is
+the interface, <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EEditorComponent">jetbrains.mps.nodeEditor.EditorComponent</a> one of the implementing classes. Especially implementing IntelliJ classes
+often have the suffix <em>Impl</em>, for example, <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide.impl%28MPS.IDEA%2F%29%2F%7EDataManagerImpl">DataManagerImpl</a> is an implementation of <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide%28MPS.IDEA%2F%29%2F%7EDataManager">DataManager</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you get an icon for a concept?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">GlobalIconManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getIconFor</span><span class="p">(</span><span class="n">concept</span><span class="p">)</span><span class="w"></span>
@@ -1674,7 +1681,7 @@ For more context see: <a href="https://github.com/JetBrains/MPS/blob/master/work
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

@@ -1719,6 +1719,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li><a href="https://www.jetbrains.com/help/mps/constraints.html">official documentation</a></li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<p>You can create new constraints using the concept <code>ConceptConstraints</code>. The "new" experimental constraint rules still might
+not support all the features of the old approach.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you hide inapplicable operands in dot expressions?</p>
 <p><a href="https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/">Dot expressions: hiding inapplicable operands</a>(<em>Specific Languages' blog</em>)</p>
@@ -1729,7 +1731,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.constraints%28MPS.Core%2F%29%2F%7EModelConstraints">ModelConstraints</a>: This class can calculate the constraint/scope of a specific concept/node programmatically.</li>
 </ul>
 </div>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/constraints.html#propertyconstraints">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<p>You can use property constraints to add setters, and getters and check if a new property value is valid. The getters are especially
+useful for setting properties based on other properties. Example: A wrapper concept that referencable a node can use the name of the
+reference as its name. For a reference <em>r</em>, you can implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in your concept and set the property getter of
+<em>name</em> to <code>r.name</code>.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you set default values for properties?</p>
 <p>Use the language <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.propertydefault</ins> from <span class="twemoji">
@@ -1744,12 +1750,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p class="admonition-title">The property value isn't valid.</p>
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/22-invalid-property-values/">Invalid property values</a></p>
 </div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references"><a href="https://www.jetbrains.com/help/mps/constraints.html#referentconstraints">References</a><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>You normally add a node reference constraint to set the scope. The inline scopes and inherited scopes both have advantages and
+disadvantages. You normally use the inline scopes where you can extract the scope into a utility class when you want to reuse it.
+The inherited scope is often used for references that inherit the referenced concept's scope. It makes finding the original scope declaration harder, though.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you emulate references?</p>
 <p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references</a>(<em>Specific Languages' blog</em>)</p>
 </div>
-<h2 id="scopes">Scopes<a class="headerlink" href="#scopes" title="Permanent link">&para;</a></h2>
+<h2 id="scopes"><a href="https://www.jetbrains.com/help/mps/scopes.html">Scopes</a><a class="headerlink" href="#scopes" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you filter scopes? Which scopes are available?</p>
 <p><a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664">FilteringScope</a> takes an existing scope and can do the filtering. <a href="https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope">Using reference scope | <abbr title="Meta Programming System">MPS</abbr> documentation</a>
@@ -1785,7 +1794,7 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

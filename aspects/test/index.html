@@ -1699,17 +1699,17 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="test-aspect">Test Aspect<a class="headerlink" href="#test-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="test-aspect"><a href="https://www.jetbrains.com/help/mps/testing-languages.html">Test Aspect</a><a class="headerlink" href="#test-aspect" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>Testing is an essential part of a language designer's work.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/testing-languages.html">official documentation</a></li>
 <li><a href="https://languageengineering.io/testing-in-jetbrains-meta-programming-system-what-and-why-3efd4f52f236">Testing in <abbr title="Meta Programming System">MPS</abbr>: What and Why</a>(<em>languageengineering.io's blog</em>)</li>
 <li><a href="https://markusvoelter.medium.com/the-language-testing-triangle-917214826e93">The Language Testing Triangle</a>(<em>Markus Voelter's blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<p>Fore more information about testing in general, read <a href="../../platform_essentials/testing/"><abbr title="Meta Programming System">MPS</abbr> Internals | Testing</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">Can you add an annotation to skip tests like it usually works with JUnit?</p>
 <p>It isn't supported. You must comment <abbr title="output">out</abbr> the test case or add the @Ignore attribute in the reflective editor. The only official statement supporting this functionality is the <em>assert</em> statement of KernelF (<a href="http://127.0.0.1:63320/node?ref=r%3Aba7faab6-2b80-43d5-8b95-0c440665312c%28org.iets3.core.expr.tests.structure%29%2F543569365052056266">AssertTestItem</a>).</p>
@@ -1726,10 +1726,10 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p class="admonition-title">Can you invoke an action by ID?</p>
 <p>Yes, use the statement <em>invoke action by <abbr title="identification/identifier">id</abbr></em>.</p>
 </div>
-<p>!!! question "How do you enter multiple words when using the <em>type</em> statement in an editor test?</p>
-<div class="codehilite"><pre><span></span><code>Enter them as one long word without spaces in between, for example, *publictransientclass*.
-</code></pre></div>
-
+<div class="admonition question">
+<p class="admonition-title">How do you enter multiple words when using the <em>type</em> statement in an editor test?</p>
+<p>Enter them as one long word without spaces in between, for example, <em>publictransientclass</em>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">How to know if some <abbr title="Meta Programming System">MPS</abbr> code is inside a test?</p>
 <blockquote>
@@ -1817,6 +1817,10 @@ When I run the test, <em>test1</em> and <em>test2</em> print different node IDs.
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <h2 id="how-to-test">How to Test<a class="headerlink" href="#how-to-test" title="Permanent link">&para;</a></h2>
+<p>This section deals with practical questions regarding testing. Testing should be a big part of the <abbr title="Continuous Integration">CI</abbr> pipeline to ensure that
+changes don't introduce bugs and new feature work as intended. Not everything needs to be tested and manual testing can not
+fully be avoided. Still, every single test gives you confidence in your changes, so don't ignore this part of language development.
+Base Language and KernelF have support for test cases and assert statements.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you implement custom tests?</p>
 <p><a href="https://specificlanguages.com/posts/2022-03/23-custom-tests/">Implementing custom tests</a>(<em>Specific Languages' blog</em>)</p>
@@ -2061,6 +2065,17 @@ and <em>release mouse</em> statements for <abbr title="User Interface">UI</abbr>
 </code></pre></div></td></tr></table></div>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p>Some of the issues with testing have to do with the way tests are executed. Tests can be executed in the same <abbr title="Meta Programming System">MPS</abbr> instance
+or a new instance. In the latter case, a complete new environment is started. Some editor test in <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,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"
+    />
+</svg>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>
+can only be executed in a new instance. This is probably also true for other type of tests.</p>
+<p>Additionally, the tests are executed in temporary models which results in changed node IDs and root nodes become normal nodes with parents in tests.
+Avoid adapting your code to work in the test models and avoid adding checks to see if you are in a test model.</p>
 <div class="admonition warning">
 <p class="admonition-title">Tests aren't running at all.</p>
 <p>A <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F5097124989038916362">test <abbr title="information">info</abbr> node</a> has to
@@ -2092,7 +2107,7 @@ According to the IntelliJ documentation, it can also happen when the dialog is n
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

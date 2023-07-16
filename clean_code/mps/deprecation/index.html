@@ -104,6 +104,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#srepository" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1012,6 +1017,17 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deprecation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1021,6 +1037,37 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srepository" class="md-nav__link">
+    SRepository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-deprecation" class="md-nav__link">
+    Other deprecation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1253,6 +1300,28 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srepository" class="md-nav__link">
+    SRepository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-deprecation" class="md-nav__link">
+    Other deprecation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1291,11 +1360,21 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Deprecation</h1>
 
+<p>You can find deprecated code through <em>Main menu</em> &rarr; <em>Migration</em> &rarr; <em>Deprecated Code</em>. Many found instances in the <abbr title="Meta Programming System">MPS</abbr>
+codebase are deprecated for many years. They could get unsupported or removed in any new <abbr title="Meta Programming System">MPS</abbr> version, so make sure to
+find a replacement for such code early.</p>
+<h2 id="srepository"><abbr title="Semantic Repository">SRepository</abbr><a class="headerlink" href="#srepository" title="Permanent link">&para;</a></h2>
+<p>SRepositories store modules and needs to be referenced directly when you don't want to use the deprecated concepts.
+The automatically used global repository that was used in earlier <abbr title="Meta Programming System">MPS</abbr> versions is deprecated and might be unsupported in the future.</p>
 <ul>
-<li>Don't use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>).</li>
+<li>Don't use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>). </li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532">node/myNode</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413">node-<abbr title="pointer">ptr</abbr></a>(myNode).resolve(repository) instead.</li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698">model/myModel</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879">model-<abbr title="pointer">ptr</abbr></a>(myModel).resolve(repository) instead.</li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969021681">module/myModule</a> or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969069898">language-module</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1678062499342629858">module-reference/myModule</a> instead.</li>
+</ul>
+<h2 id="other-deprecation">Other deprecation<a class="headerlink" href="#other-deprecation" title="Permanent link">&para;</a></h2>
+<p>This section lists some other common deprecated code.</p>
+<ul>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1226359078165">linkNode/concept:link/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474301421077">link:concept:link/</a> instead.</li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1172424058054">conceptNode/concept/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474300074836">concept/concept/</a> instead.</li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1140133623887">node.delete</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1228341669568">node.detach</a> instead.</li>
@@ -1305,7 +1384,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li>Use the explicit presentation of a node when used in a string. For example: <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">getPresentation</span><span class="p">()</span><span class="w"></span></code> instead of <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="w"></span></code>.</li>
 <li>Don't use counter variables in LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> in the code instead.</li>
 <li>Don't use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more <abbr title="information">info</abbr> in the attached comment on the interface.</li>
-<li>Avoid getting the repository from the opened project or using the global repository. The code might break in the future.</li>
 </ul>
 
   <hr>
@@ -1313,7 +1391,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

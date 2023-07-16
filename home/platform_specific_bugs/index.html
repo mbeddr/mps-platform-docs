@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#native-crashes" class="md-skip">
+        <a href="#windows" class="md-skip">
           Skip to content
         </a>
       
@@ -723,13 +723,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#native-crashes" class="md-nav__link">
-    Native Crashes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows
   </a>
@@ -746,6 +739,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-crashes" class="md-nav__link">
+    Native Crashes
   </a>
   
 </li>
@@ -1481,13 +1481,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#native-crashes" class="md-nav__link">
-    Native Crashes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows
   </a>
@@ -1504,6 +1497,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-crashes" class="md-nav__link">
+    Native Crashes
   </a>
   
 </li>
@@ -1561,15 +1561,18 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>OS-Specific Bugs</h1>
 
-<h2 id="native-crashes">Native Crashes<a class="headerlink" href="#native-crashes" title="Permanent link">&para;</a></h2>
-<p>Native crashes are crashes where <abbr title="Meta Programming System">MPS</abbr> crashes internally (C/C++ code), and an error dialog is shown. First, search the following Youtrack projects:</p>
-<ul>
-<li><a href="https://youtrack.jetbrains.com/issues/MPS"><abbr title="Meta Programming System">MPS</abbr></a>: <abbr title="Meta Programming System">MPS</abbr>-related crashes</li>
-<li><a href="https://youtrack.jetbrains.com/issues/IDEA">IntelliJ IDEA</a>: IntelliJ platform-related crashes</li>
-<li><a href="https://youtrack.jetbrains.com/issues/JBR">JetBrains Runtime</a>: mostly <abbr title="User Interface">UI</abbr> and <abbr title="Java Chromium Embedded Framework">JCEF</abbr>-related issues</li>
-</ul>
-<p>For crashes on macOS, have a look at <a href="https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes">Identifying the Cause of Common Crashes | developer.apple.<abbr title="commercial/common/communication">com</abbr></a>.</p>
+<p>Bugs that only occur for certain operating systems or platforms are not common and are most of the time results
+of <abbr title="Open Source / Operating System">OS</abbr>-specific limitations or missing tools. Still, you might encounter a few bugs, mentioned on this page.  The low amount
+of such bugs is as follows: Java (Base Language) is a platform-independent language. <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ platform also only
+contain a small amount of <abbr title="Open Source / Operating System">OS</abbr>-specific code.</p>
+<p>You only encounter serious issues with native code which is dependent on the platform. The <abbr title="Java Development Kit">JDK</abbr> or <abbr title="JetBrains Runtime">JBR</abbr> that you use, and the Java version can also play a role. For the last two factors,
+ensure everybody uses the same versions to not have to deal with sometimes odd error messages.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<p>Based on the market share, you can assume that users and especially end users are Windows users. While it make sense in
+some companies to only focus on Windows, and use Windows-specific code, please consider the possibility that
+there might be other users in the future. Many <abbr title="Meta Programming System">MPS</abbr> developers also use macOS. In other words: Don't use Windows fonts in the editor and deal with file paths
+in a <a href="https://www.baeldung.com/java-file-vs-file-path-separator">generic way</a>. Various file systems also handle permissions and case sensitivity
+differently. If you have the change, test your languages on multiple platforms.</p>
 <div class="admonition failure">
 <p class="admonition-title">Compilation from the command line might fail due to none ASCII chars.</p>
 <p>The error message looks something like this:</p>
@@ -1619,13 +1622,21 @@ The Link target should look like this: <code>C:\Windows\System32\WindowsPowerShe
 <p class="admonition-title">The completion menu appears on the wrong screen in a multi-monitor setup (Linux+i3).</p>
 <p>No solution at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-33689"><abbr title="Meta Programming System">MPS</abbr>-33689</a>).</p>
 </div>
+<h2 id="native-crashes">Native Crashes<a class="headerlink" href="#native-crashes" title="Permanent link">&para;</a></h2>
+<p>Native crashes are crashes where <abbr title="Meta Programming System">MPS</abbr> crashes internally (C/C++ code), and an error dialog is shown. First, search the following Youtrack projects:</p>
+<ul>
+<li><a href="https://youtrack.jetbrains.com/issues/MPS"><abbr title="Meta Programming System">MPS</abbr></a>: <abbr title="Meta Programming System">MPS</abbr>-related crashes</li>
+<li><a href="https://youtrack.jetbrains.com/issues/IDEA">IntelliJ IDEA</a>: IntelliJ platform-related crashes</li>
+<li><a href="https://youtrack.jetbrains.com/issues/JBR">JetBrains Runtime</a>: mostly <abbr title="User Interface">UI</abbr> and <abbr title="Java Chromium Embedded Framework">JCEF</abbr>-related issues</li>
+</ul>
+<p>For crashes on macOS, have a look at <a href="https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes">Identifying the Cause of Common Crashes | developer.apple.<abbr title="commercial/common/communication">com</abbr></a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

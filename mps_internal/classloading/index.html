@@ -1712,6 +1712,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 
 <h1 id="classloading">Classloading<a class="headerlink" href="#classloading" title="Permanent link">&para;</a></h1>
+<p>Class loading is a process of dynamically loading Java classes into the Java Virtual Machine (<abbr title="Java Virtual Machine">JVM</abbr>) at runtime. It is performed by an instance of the <em>java.<abbr title="language">lang</abbr>.ClassLoader</em> class, which is responsible for finding, loading, and initializing the classes. Class loading is essential for the Java runtime system, as it allows the <abbr title="Java Virtual Machine">JVM</abbr> to run Java programs without knowing about the underlying files or file systems. In <abbr title="Meta Programming System">MPS</abbr>, you can reload
+most classes when they change automatically or through the action <em>Reload All Classes</em> to reload the classes of all modules.</p>
 <h2 id="classloaders">Classloaders<a class="headerlink" href="#classloaders" title="Permanent link">&para;</a></h2>
 <p>Bootstrap class loaders, IDEA plugin class loaders, and module class loaders are the different available class loaders.
 Loading a class into an <abbr title="Meta Programming System">MPS</abbr> module involves the module class loader, the class of its dependencies, and the bootstrap class loader.
@@ -1874,7 +1876,7 @@ If you register a class in the plugin.xml, you should make sure it can be loaded
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

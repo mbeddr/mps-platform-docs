@@ -104,6 +104,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#best-practices" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1110,6 +1115,17 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tips for Open Source Maintainers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1119,6 +1135,65 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-general" class="md-nav__link">
+    Tools (general)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-github" class="md-nav__link">
+    Tools (GitHub)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    Licenses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1465,6 +1540,56 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-general" class="md-nav__link">
+    Tools (general)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-github" class="md-nav__link">
+    Tools (GitHub)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    Licenses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1498,36 +1623,38 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Tips for Open Source Maintainers</h1>
 
-<p>Best practices:</p>
+<p>The following sections contain links to articles that help with maintaining an open source project, starting from selecting
+the right platform to reviewing code and other best practices.</p>
+<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://opensource.guide/best-practices/">Best practices for maintainers | opensource.guide</a></li>
 <li><a href="https://www.semasoftware.com/blog/how-can-you-be-an-effective-open-source-maintainer">Seven Ways to Be an Effective Open Source Maintainer</a></li>
 </ul>
-<p>Code reviews:</p>
+<h2 id="code-reviews">Code reviews<a class="headerlink" href="#code-reviews" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://google.github.io/eng-practices/review/reviewer/">The Code Reviewer's Guide | google.github.io</a></li>
 <li><a href="https://google.github.io/eng-practices/review/developer/">The Change Author's Guide | google.github.io</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/333853/how-to-find-positive-things-in-a-code-review">How to find positive things in a code review?</a></li>
 </ul>
-<p>Tools (general):</p>
+<h2 id="tools-general">Tools (general)<a class="headerlink" href="#tools-general" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>: Gradle plugin to build &amp; test languages and to support various tasks related to custom <abbr title="Rich Client Platform">RCP</abbr> packaging.</li>
 <li><a href="https://squidfunk.github.io/mkdocs-material">Material for MkDocs</a>: static documentation generator which uses Markdown</li>
 <li><a href="https://shields.io/">Badges for your repository</a></li>
 </ul>
-<p>Tools (GitHub):</p>
+<h2 id="tools-github">Tools (GitHub)<a class="headerlink" href="#tools-github" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/features/actions">GitHub Actions</a>/<a href="https://github.com/sdras/awesome-actions">Awesome Actions</a></li>
 <li><a href="https://pages.github.com">GitHub Pages</a></li>
 <li><a href="https://emailaddress.github.io/">Find (almost) any GitHub user's email address!</a>: find <abbr title="output">out</abbr> more information about a contributor</li>
 <li><a href="https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-maven">Publishing Java packages with Maven</a></li>
 </ul>
-<p>Licenses</p>
+<h2 id="licenses">Licenses<a class="headerlink" href="#licenses" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://choosealicense.com/">Choose an open-source license</a></li>
 <li><a href="https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94">How open source licenses work</a></li>
 </ul>
-<p>Reference:</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://disbug.io/en/blog/github-vs-gitlab-vs-bitbucket">Github vs Gitlab vs Bitbucket</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/3233/why-do-programmers-write-closed-source-applications-and-then-make-them-free">Why do programmers write closed-source applications and then make them free?</a></li>
@@ -1538,7 +1665,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

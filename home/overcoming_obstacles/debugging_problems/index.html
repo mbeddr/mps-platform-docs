@@ -1704,10 +1704,14 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="debugging-problems"><a href="https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems">Debugging problems</a><a class="headerlink" href="#debugging-problems" title="Permanent link">&para;</a></h1>
-<p>Different kinds of problems can occur in <abbr title="Meta Programming System">MPS</abbr>. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., <a href="../../../platform_essentials/accessing_the_project/">accessing a project instance</a> from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces,  run code on the MSP console, or use <a href="https://specificlanguages.com/articles/debugging/">remote debugging</a>.</p>
+<h1 id="debugging-problems"><a href="https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems">Debugging Problems</a><a class="headerlink" href="#debugging-problems" title="Permanent link">&para;</a></h1>
+<p>Different kinds of problems can occur in <abbr title="Meta Programming System">MPS</abbr>. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., <a href="../../../platform_essentials/accessing_the_project/">accessing a project instance</a> from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces, run code on the MSP console, or use <a href="https://specificlanguages.com/articles/debugging/">remote debugging</a>.</p>
 <h2 id="deal-with-errors">Deal With Errors<a class="headerlink" href="#deal-with-errors" title="Permanent link">&para;</a></h2>
-<p>Error messages can appear in different places:</p>
+<p>Error messages come in all forms and sizes and can appear in different places. While some error messages can be ignored
+because users can't face them easily, for example, class loading issues when reloading modules, most error messages shouldn't
+be ignored. As a developers, the most import part is navigating to the code which causes the error through the <abbr title="User Interface">UI</abbr> or a stack
+trace. In the worst cast scenario, you must find the text of the error message in the sources of the offending project, to
+figure <abbr title="output">out</abbr> what's going on.</p>
 <h3 id="errors-in-the-editor">Errors in the Editor<a class="headerlink" href="#errors-in-the-editor" title="Permanent link">&para;</a></h3>
 <p>Those errors (red squiggly lines) are caused by <a href="https://www.jetbrains.com/help/mps/typesystem.html#checkingrules">checking rules</a> or type system rules.
 Right-click the offending cell in the editor &rarr; <em>Language Debug</em> &rarr; <em>Go to Rule Which Caused Error</em> to navigate to the statement that causes the error.
@@ -1745,7 +1749,7 @@ language aspects.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

@@ -1441,9 +1441,20 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Plugins</h1>
 
+<p>The term <em>plugin</em> can refer to different things: A plugin solution is a language aspect that you can use to integrate your code
+with the <abbr title="Meta Programming System">MPS</abbr> <abbr title="Integrated Development Environment">IDE</abbr> functionality. The preferred way is to create a custom plugin solution instead which provides the same functionality. When you export your languages,
+you can also create plugins that others can install. In this case, the term
+<em>plugin</em> refers to IntelliJ IDEA plugins. You can install other plugins such as the Java plugin or a Markdown plugin in IntelliJ IDEA
+the same way you install <abbr title="Meta Programming System">MPS</abbr> plugins. They use the same mechanisms from the IntelliJ platform.
+This page answers only general questions about plugins. You can find more information about plugins in <a href="./">Plugins</a>
+which deals with the plugin aspect.</p>
 <div class="admonition question">
 <p class="admonition-title">Where can you use a created language?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup></p>
-<p>Use them in <abbr title="Meta Programming System">MPS</abbr> or a custom <abbr title="Integrated Development Environment">IDE</abbr> based on <abbr title="Meta Programming System">MPS</abbr> (a so-called <abbr title="Rich Client Platform">RCP</abbr>).</p>
+<p>Use them in <abbr title="Meta Programming System">MPS</abbr> or a custom <abbr title="Integrated Development Environment">IDE</abbr> based on <abbr title="Meta Programming System">MPS</abbr> (a so-called <abbr title="Rich Client Platform">RCP</abbr>). You need to create a build script, so you can export your plugins
+as real IntelliJ plugins that others can install. To ship all the plugins together with a custom branding, create an <abbr title="Rich Client Platform">RCP</abbr>.
+It has the advance that it can be provided to the end users as a single download or preinstalled on his computer. He doesn't have to
+install plugins himself through the market place or other storage locations and also doesn't have to deal with dependencies
+between plugins.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are <abbr title="Meta Programming System">MPS</abbr> languages often used as plugins in IntelliJ IDEs instead of <abbr title="Meta Programming System">MPS</abbr> itself? (an IntelliJ IDEA plugin, not custom <abbr title="Rich Client Platform">RCP</abbr>)</p>
@@ -1565,7 +1576,7 @@ Ensure that you don’t have IntelliJ opened simultaneously, as it has the same 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

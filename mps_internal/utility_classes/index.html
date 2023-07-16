@@ -1528,6 +1528,12 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 
 <h1 id="utility-classes">Utility Classes<a class="headerlink" href="#utility-classes" title="Permanent link">&para;</a></h1>
+<p>Utility classes of other languages can contain reusable methods that can be interesting for your own languages. They often have
+the suffix <em>Util</em> or <em>Helper</em>. Classes ending with <em>Manager</em> also can have those methods. You can access them through static
+<em>getInstance</em> methods or, if they are core components, through <em>jetbrains.mps.project.Project#getComponent</em>. To find new methods,
+search for nodes named [TOPIC]+ [suffix] e.g. "<abbr title="User Interface">UI</abbr>" + "Util" becomes <em>UIUtil</em>. If you work closely with <abbr title="Meta Programming System">MPS</abbr> languages,
+search their runtime models for useful methods. For example, <em>jetbrains.mps.ide.httpsupport.runtime.base</em> contains a utility class
+<a href="http://127.0.0.1:63320/node?ref=r%3A11b7cdb2-cc58-456e-bb9a-ce45b78edd2f%28jetbrains.mps.ide.httpsupport.runtime.base%29%2F4403308017443708918">HttpSupportUtil</a> that helps with the <abbr title="Hypertext Transfer Protocol">HTTP</abbr> Support plugins.</p>
 <table>
 <thead>
 <tr>
@@ -1648,7 +1654,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

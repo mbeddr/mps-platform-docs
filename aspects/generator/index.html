@@ -1054,13 +1054,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-to-generate-xy" class="md-nav__link">
     How to Generate XY
   </a>
@@ -1662,13 +1655,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-to-generate-xy" class="md-nav__link">
     How to Generate XY
   </a>
@@ -1727,16 +1713,14 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="generator-aspect">Generator Aspect<a class="headerlink" href="#generator-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="generator-aspect"><a href="https://www.jetbrains.com/help/mps/mps-generator.html">Generator Aspect</a><a class="headerlink" href="#generator-aspect" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>The generator is a part of the language specification that defines the denotational semantics for the concepts in the language.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/mps-generator.html">official documentation</a></li>
 <li><a href="https://specificlanguages.com/posts/2022-04/04-getting-started-with-generation-in-mps-extracting-a-generator/">Getting started with generation in <abbr title="Meta Programming System">MPS</abbr>: extracting a generator</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
-<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Are there any best practices for generators?</p>
 <ul>
@@ -1889,6 +1873,8 @@ be deleted. Two tickets with some more information: <a href="https://youtrack.je
 <p>No, but you can try to use the post-processing function of a <code>$MAP_SRC$</code> macro.</p>
 </div>
 <h2 id="how-to-generate-xy">How to Generate XY<a class="headerlink" href="#how-to-generate-xy" title="Permanent link">&para;</a></h2>
+<p>The official documentation provides a lot of information about generator and the <abbr title="Meta Programming System">MPS</abbr> samples contain good examples for generators. This
+sections answers some question that still often arise.</p>
 <div class="admonition question">
 <p class="admonition-title">What can be generated?</p>
 <p>Have a look at the <a href="https://confluence.jetbrains.com/display/MPS/MPS+Languages+Repository">language repository</a>. You
@@ -1913,7 +1899,7 @@ for Excel can be found <a href="https://www.codejava.net/coding/how-to-write-exc
 <p>This question is also answered in <a href="https://www.jetbrains.com/help/mps/generator-cookbook.html#howtogeneratemultiplefilesperrootnode">the generator cookbook</a>.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you generate latex files?</p>
+<p class="admonition-title">How can you generate LaTeX files?</p>
 <p>The mbeddr documentation language can do this. Have a look at the <a href="http://mbeddr.com/files/documentationdocumentation.pdf">documentation</a>.</p>
 </div>
 <div class="admonition question">
@@ -2006,6 +1992,9 @@ What can I do?</p>
 the current step when using this statement.</p>
 </div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
+<p>This section is especially relevant when you want to invoke the generator programmatically. Sometimes text generation can be enough, and
+you don't need to invoke the generator. Make sure to first set the flag <em>Java</em> in the language properties of a language and
+the <em>Compile in <abbr title="Meta Programming System">MPS</abbr></em> flag in a solution if the compilation doesn't start.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you preview the generated text programmatically?</p>
 <p>Use the <abbr title="Meta Programming System">MPS</abbr> action <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515769">TextPreviewModel</a> or call the methods in <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.text%28MPS.Core%2F%29%2F%7ETextGeneratorEngine">TextGeneratorEngine</a> if you want to use the text generator, for example, <code class="highlight"><span class="n">TextGeneratorEngine</span><span class="p">.</span><span class="na">generateText</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"></span></code></p>
@@ -2050,6 +2039,7 @@ What is the source of this information, and how reliable is it?</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p>In addition to reading the following questions, read <a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators</a>(<em>Specific Languages' blog</em>).</p>
 <div class="admonition warning">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> can't resolve the import XY.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <p>The solution that contains the class has to be added as a runtime solution (see <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000">here</a>).</p>
@@ -2067,10 +2057,6 @@ What is the source of this information, and how reliable is it?</p>
 <ul>
 <li><a href="https://specificlanguages.com/posts/2022-05/13-nosuchmethoderror/">NoSuchMethodError</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
-</div>
-<div class="admonition question">
-<p class="admonition-title">How do I debug generators?</p>
-<p><a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators</a>(<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The generated code has no debug symbols.</p>
@@ -2144,7 +2130,7 @@ For internal exceptions of <abbr title="Meta Programming System">MPS</abbr> or t
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

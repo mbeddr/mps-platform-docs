@@ -1697,6 +1697,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li><a href="https://specificlanguages.com/posts/2022-05/02-checking-for-pending-">Checking for pending migrations</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<p>Migrations are necessary as part of languages that change over time. Don't create migrations when you are still in the development
+phase and don't need to execute them. When using the <em>Refactoring</em> menu in a language, deselect <em>Write migration script</em>, and
+<em>Write refactoring log</em> to not create migrations.</p>
 <div class="admonition question">
 <p class="admonition-title">How do I search for instances of a deprecated concept?</p>
 <ul>
@@ -1794,6 +1797,10 @@ Reasons why the language version of a language updates:</p>
 A good example of a language with different language and module versions is <ins>jetbrains.mps.<abbr title="language">lang</abbr>.feedback.problem.scopes</ins> (language: 0, module: 1) because it only has a refactoring step but no other migrations.</p>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p>Migrations are not only necessary from one language version to another but also for newer <abbr title="Meta Programming System">MPS</abbr> versions. Issues can arise
+because <abbr title="Meta Programming System">MPS</abbr> or the IntelliJ platform changes or an even more drastic change occurs like a new Java version. Still, migrating early is a
+good idea to not fall behind to many <abbr title="Meta Programming System">MPS</abbr> versions. New <abbr title="Meta Programming System">MPS</abbr> versions not only mean new features but also many bug fixes. While this topic
+is only marginally related to the migration aspect, it is mentioned here.</p>
 <ul>
 <li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
@@ -1815,7 +1822,7 @@ A good example of a language with different language and module versions is <ins
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>

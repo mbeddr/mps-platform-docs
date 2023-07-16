@@ -1713,14 +1713,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="structure-aspect">Structure Aspect<a class="headerlink" href="#structure-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="structure-aspect"><a href="https://www.jetbrains.com/help/mps/structure.html">Structure Aspect</a><a class="headerlink" href="#structure-aspect" title="Permanent link">&para;</a></h1>
 <p>The structure aspect contains all the concept and interface declarations of a language.</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/structure.html">official documentation</a></li>
 <li><a href="http://dsl-course.org/jetbrains-mps-structure-aspect/">old cheatsheet</a></li>
 <li><a href="https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> features: Link instances</a>(<em>Specific Languages' blog</em>)</li>
 </ul>
-<h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
+<h2 id="concepts"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Concepts</a><a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
+<p>Concept declarations are the main root nodes that you add to this aspect. When you use nodes use concepts from your language, and the language has
+generator configurations, the generator of this language will be invoked by default to transform the languages.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically?</p>
 <p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically</a>(<em>Specific Languages' blog</em>)</p>
@@ -1774,7 +1775,10 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">cls</span><span class="p">:</span><span class="n">BaseConcept</span><span class="p">.</span><span class="na">getLanguage</span><span class="p">().</span><span class="na">getQualifiedName</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
+<h2 id="interfaces"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Interfaces</a><a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
+<p>Interfaces work the same way as Java interfaces. They can be used to mark common classes, contain common methods and support the same aspects as
+concepts. A special interface is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a>
+that defines the name of nodes when a concept implements it.</p>
 <div class="admonition warning">
 <p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors</a>, but the node still contains errors.</p>
 <p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a> has some more information.</p>
@@ -1783,7 +1787,16 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 <p class="admonition-title">What's <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass</a> used for?</p>
 <p>It allows to execute Base Language code. <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a> contains an example.</p>
 </div>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/structure.html#properties">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<p>You can use properties to save data in the model using primitive types, enumerations or regular expressions. <em>string</em> is
+also considered a primitive type. Think twice before you use this type. Users can type anything as a value if you don't
+at a constraint to this property.</p>
+<p>String properties are also not referencable. For example, let's consider a property that defines
+a root node's kind. When you use a child instead that can be referenced, you can reuse kinds or even provide a predefined list
+of kinds with certain constraints. Even an enumeration can be a better choice in some cases unless you need the ability to enter any
+value.</p>
+<p>Changing this design decision later, means deprecating the string property and introducing a migration. If no standard
+migration is possible, users might even have to change their models manually.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you use a list of string properties?</p>
 <p>Wrap your property into a new concept and use a child collection:</p>
@@ -1800,7 +1813,12 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 With this implementation, every property name change is calculated correctly.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references"><a href="https://www.jetbrains.com/help/mps/structure.html#references">References</a><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>To refer to other nodes in the model, use references. They have a scope and can be automatically created (smart references)
+for nodes that have a name. References that are <abbr title="output">out</abbr> of scopes still work, they are part of the model and are affected by
+generation. As the name it implies, they only reference nodes which means that the referenced node or property won't change when
+you edit the cell in the editor. There is also a distinction between optional and mandatory references, especially when trying to
+delete them.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you get the previous label of a reference?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1835,7 +1853,7 @@ With this implementation, every property name change is calculated correctly.</p
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
       
     
   </small>
