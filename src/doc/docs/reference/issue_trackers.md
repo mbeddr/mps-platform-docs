@@ -8,7 +8,7 @@ tags:
 
 Before reporting bugs, you should read: [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
 This page should then help you find existing issues for MPS and the MPS platforms and help you decide which issue tracker an
-issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor-related languages
+issue belongs to. Most of the time, the package name tells you the correct project. Nearly all editor-related languages 
 (diagrams, tables, tree notations, etc.) are located in {{ mps_extensions() }}. The following list gives a rough overview:
 
 - {{ mps() }}
@@ -40,7 +40,7 @@ issue belongs to. Most of the time, the package name tells you the correct proje
     - ^^org.w3c.*^^
     - ^^org.xml.sax.*^^
 
-## MPS(YouTrack)
+## MPS (YouTrack)
 
 This is the public issue tracker of [JetBrains MPS](https://github.com/JetBrains/MPS) itself. Consult the [documentation](https://www.jetbrains.com/help/mps/getting-started.html#report-bug) for instructions on how to report an issue. YouTrack follows the [CommonMark specification](http://spec.commonmark.org/0.30/) with extensions that support key features like auto links and tables: [YouTrack Markdown Reference](https://issues.hibernatingrhinos.com/markup)
 

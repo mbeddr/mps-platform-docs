@@ -30,7 +30,7 @@ generator configurations, the generator of this language will be invoked by defa
 
 !!! question "When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?"
 
-    The used algorithm is a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization)([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept {{ mps_url("@mps.ClassConcept") }}:
+    The used algorithm is a variant of [C3 linearization](https://www.wikiwand.com/en/C3_linearization) ([source](https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30)). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept {{ mps_url("@mps.ClassConcept") }}:
     ```java
     BehaviorRegistryImpl r = (BehaviorRegistryImpl) ConceptRegistry.getInstance().getBehaviorRegistry();
     BHDescriptor d = r.getBHDescriptor(concept/ClassConcept/);

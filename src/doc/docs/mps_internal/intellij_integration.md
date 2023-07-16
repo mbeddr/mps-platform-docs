@@ -41,13 +41,13 @@ Link to different MPS plugin.xml files:
 - [Java Debugger for MPS](https://github.com/JetBrains/MPS/blob/master/plugins/debugger-java/META-INF/plugin.xml)
 - [JetPad](https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml)
 - [Idea Integration for MPS](https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/META-INF/plugin.xml)
-- [MPS Java Integration](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml)(+[Java platform](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml))
-- [MPS console](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml)(+[actions](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml))
+- [MPS Java Integration](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml) (+[Java platform](https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml))
+- [MPS console](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml) (+[actions](https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml))
 - [Languages DevKit](https://github.com/JetBrains/MPS/blob/master/plugins/mps-devkit/META-INF/plugin.xml)
 - [Memory Tool](https://github.com/JetBrains/MPS/blob/master/plugins/mps-memtool/META-INF/plugin.xml)
 - [Model Checker](https://github.com/JetBrains/MPS/blob/master/plugins/mps-modelchecker/META-INF/plugin.xml)
 - [MPS Version Control Support](https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-vcs/META-INF/plugin.xml)
-- [IDEA Core](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/META-INF/IdeaPlugin.xml)(+[other files](https://github.com/JetBrains/MPS/tree/master/workbench/mps-workbench/source/META-INF))
+- [IDEA Core](https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/META-INF/IdeaPlugin.xml) (+[other files](https://github.com/JetBrains/MPS/tree/master/workbench/mps-workbench/source/META-INF))
 
 Included in other plugins:
 

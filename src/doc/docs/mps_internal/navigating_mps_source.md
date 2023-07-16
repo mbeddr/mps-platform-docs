@@ -41,7 +41,7 @@ This folder contains executable files for the different operating systems (Windo
 
 - Mac
     - *libmacscreenmenu64.dylib*: native access to the [Apple menu bar](https://support.apple.com/guide/mac-help/menu-bar-mchlp1446/mac).
-    - *libnst64.dlib*: native access to the Apple MacBook Pro [Touch Bar](https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac). The library is called NST(NextStep Touch Bar).
+    - *libnst64.dlib*: native access to the Apple MacBook Pro [Touch Bar](https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac). The library is called NST (NextStep Touch Bar).
     - *printenv*: prints the environment variables
   
 - Windows
@@ -53,8 +53,8 @@ This folder contains executable files for the different operating systems (Windo
     - *runnerw.exe*: an old library for Windows process management. [WinP](https://github.com/jenkinsci/winp) superseded it.
     - *WinProcessListHelper.exe*: lists Windows processes
     - *WinShellIntegrationBridge.dll*: integration with the Windows shell
-    - *wslhash*: hash calculation(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
-    - *wslproxy*: proxy(?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
+    - *wslhash*: hash calculation (?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
+    - *wslproxy*: proxy (?) for the [Windows Subsystem for Linux](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 
 ## build
 
@@ -111,7 +111,7 @@ Everything related to the make facet is in this folder.
 
 ### stub
 
-This folder contains all stub models provided by MPS, for example, stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g., `java.util.List`), and all MPS-related Java classes are located in solutions that start with the naming pattern `MPS.*`(e.g., MPS.Core).
+This folder contains all stub models provided by MPS, for example, stubs for annotations (like [JetBrains annotations](https://github.com/JetBrains/java-annotations)), Java core classes (JDK, e.g., `java.util.List`), and all MPS-related Java classes are located in solutions that start with the naming pattern `MPS.*` (e.g., MPS.Core).
 
 ### tool
 

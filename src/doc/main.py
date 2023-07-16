@@ -99,4 +99,4 @@ def define_env(env):
             text = "DSLFoundry"
         elif text == "fire":
             text = "F1RE"
-        return "(*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)"
+        return " (*" + text + ("'s" if text[-1] != 's' else "'") + " blog*)"

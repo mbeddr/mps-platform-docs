@@ -80,7 +80,7 @@ You must add *LanguageA* (containing *ConceptA*) to *ModuleB's* and contained *M
 
 For discussion, we establish a continued scenario:
 
-(The Relations listed here are not complete to reduce clutter. The [complete example](https://github.com/enikao/mps-dependencies) is available.)
+The Relations listed here are not complete to reduce clutter. The [complete example](https://github.com/enikao/mps-dependencies) is available.
 
 ```kroki-plantuml
 @from_file:mps_internal/deps_and_classpath/diagrams/diagram1.puml

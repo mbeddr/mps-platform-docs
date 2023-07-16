@@ -73,7 +73,7 @@ You must add new cells and rows in the editor (they can be read-only). They incl
 
 !!! question "Grammar cells need a dummy component. Is this necessary?"
 
-    Yes, it is. Otherwise, the generator doesn't get used([source](https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300)).
+    Yes, it is. Otherwise, the generator doesn't get used ([source](https://jetbrains-mps.slack.com/archives/C3YUV3YK0/p1628146601046300)).
 
 !!! question "What combinations of cells aren't supported?"
 

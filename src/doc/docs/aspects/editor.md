@@ -184,7 +184,7 @@ This section contains some more advanced topics and questions when defining edit
     >  ![example c:node editor](example_c_node_editor.png)
 
     Usually, you would set the *attracts focus* property of the cell, where the cursor should be positioned, to `attractsFocus` or `FirstEditableCell`.
-    But, since (**C.2** and **C.3**) are error cells, the default behavior is to set the cursor in front of the first error cell, which is **(C.2)**.
+    But, since **C.2** and **C.3** are error cells, the default behavior is to set the cursor in front of the first error cell, which is **(C.2)**.
     
     Therefore, change the first part of your editor to a query list cell **(A)**, which references the "member" in the cell properties **(B)**, and set the read-only property on the query list.
 

@@ -7,7 +7,7 @@ tags:
 # IntelliJ SDK
 
 The best place to learn more about the IntelliJ platform is the [IntelliJ Platform SDK documentation](https://plugins.jetbrains.com/docs/intellij/welcome.html).
-Two additional resources are also helpful if you want to understand how IntelliJ plugins are written ([Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)) and how the IDEA threading model works([Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)).
+Two additional resources are also helpful if you want to understand how IntelliJ plugins are written ([Introduction to creating IntelliJ IDEA plugins](https://developerlife.com/2020/11/21/idea-plugin-example-intro/)) and how the IDEA threading model works ([Advanced guide to creating IntelliJ IDEA plugins](https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/)).
 
 Some parts of MPS are different from the IntelliJ platform, so those chapters are irrelevant: [PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) + all text editor-specific code and [custom languages support](https://plugins.jetbrains.com/docs/intellij/custom-language-support.html).
 

@@ -220,7 +220,7 @@ java options <project default>
 
 ### Building a Release
 
-To prepare a mbeddr release, you can modify the version number set for the mbeddr plugins by overwriting the *major\.version*, *minor.version*, and *build*(see screenshot below).
+To prepare a mbeddr release, you can modify the version number set for the mbeddr plugins by overwriting the *major\.version*, *minor.version*, and *build* (see screenshot below).
 However, you don't change these values inside the MPS build scripts. Instead, either you change them in the global gradle script (*mbeddr.core/build.gradle*), or you overwrite them via the command line while spawning a new release build:
 
 ``` -PmajorVersion=1 -PbuildVersion=0 -PminorVersion=0000 build_mbeddr publishMbeddrAllInOnePublicationToMavenRepository```

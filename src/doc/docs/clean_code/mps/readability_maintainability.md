@@ -97,7 +97,7 @@ new Thread({ => System.out.println("Thread"); }).start()
   ```
   The second statement doesn't even need a type for the variable. For lists, other ways exist: `list.forEach({it => })` for iterating the list and `list.select({it => <no statements> })` or `list.selectMany({it => <no statements> })` for transforming the list. For adding many elements to a list, use `list.addAll(elements)`.
 
-- Use empty lines between statements for readability([StackOverflow discussion](https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code)). When a line becomes too long, you can use a few [Base Language refactorings](https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring), such as introducing variables or extracting code into a method.
+- Use empty lines between statements for readability ([StackOverflow discussion](https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code)). When a line becomes too long, you can use a few [Base Language refactorings](https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring), such as introducing variables or extracting code into a method.
   You might also want to experiment with the default text width of the editor (preferences --> *Editor* --> *MPS Editor*), which is set to 120 by default.
   This value is relatively low and can be increased depending on your monitor size.
 - Use virtual packages to organize your code. How you arrange the modules is up to you. Some suggestions:

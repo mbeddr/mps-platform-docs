@@ -68,4 +68,4 @@ where you can't execute your generated files, so you have to add them to version
 ## MacOS
 
 - *.DS_Store*: short for Desktop Service Store; it stores custom attributes of its containing folder, such as folder view options, icon positions, and other visual information ([reference](https://en.wikipedia.org/wiki/.DS_Store)).
-- [macOS.gitignore](https://github.com/github/gitignore/blob/main/Global/macOS.gitignore)(optional)
+- [macOS.gitignore](https://github.com/github/gitignore/blob/main/Global/macOS.gitignore) (optional)

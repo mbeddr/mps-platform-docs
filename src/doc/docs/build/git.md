@@ -71,7 +71,7 @@ tags:
 - [git-tips](https://github.com/git-tips/tips)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (troubleshooting)
 - [On undoing, fixing, or removing commits in Git](https://sethrobertson.github.io/GitFixUm/fixup.html)
-- [git-extras](https://github.com/tj/git-extras)(extra git commands)
+- [git-extras](https://github.com/tj/git-extras) (extra git commands)
 - [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
 
 ## GitHub Publishing Checklist

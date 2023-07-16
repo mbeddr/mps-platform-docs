@@ -10,7 +10,7 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
-- [MPS, Feature Branches and Language Migrations: DOs and DON’Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d)(languageengineering.io)
+- [MPS, Feature Branches and Language Migrations: DOs and DON’Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d){{ blog('langio') }}
 - [Preparing migrations with Git rebase](https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/){{ blog('sl') }}
 - [Checking for pending migrations](https://specificlanguages.com/posts/2022-05/02-checking-for-pending-){{ blog('sl') }}
 

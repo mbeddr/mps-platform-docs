@@ -15,7 +15,7 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
     - AWT-EventQueue: = EDT
     - [AWT-Windows](https://stackoverflow.com/a/21597955/16577108)
     - [AWT-Shutdown](http://srcrr.com/java/oracle/openjdk/6/reference/sun/awt/AWTAutoShutdown.html)
-- Image Fetch/Image Animator([sun.awt.image.ImageFetch](https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32))
+- Image Fetch/Image Animator ([sun.awt.image.ImageFetch](https://github.com/openjdk/jdk/blob/6765f902505fbdd02f25b599f942437cd805cad1/src/java.desktop/share/classes/sun/awt/image/ImageFetcher.java#L32))
 - [Get All running JVM Threads | baeldung.com](https://www.baeldung.com/java-get-all-threads)
     - [Finalizer](https://www.baeldung.com/java-finalize)
     - Reference handler: a high-priority thread to enqueue pending references ([References](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Reference.html)).
@@ -23,9 +23,9 @@ These lists contain named threads from Java, the IntelliJ platform, and MPS.
 - Java2D
     - [Java2D Disposer](https://stackoverflow.com/a/7959447/16577108jav)
     - Java2D Queue flusher
-- TimerQueue([java.swing.TimerQueue](https://resources.mpi-inf.mpg.de/d5/teaching/ss05/is05/javadoc/javax/swing/TimerQueue.html))
-- Timer([java.util.Timer](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Timer.html))
-- Common-Cleaner([java.lang.ref.Cleaner](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Cleaner.html))
+- TimerQueue ([java.swing.TimerQueue](https://resources.mpi-inf.mpg.de/d5/teaching/ss05/is05/javadoc/javax/swing/TimerQueue.html))
+- Timer ([java.util.Timer](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Timer.html))
+- Common-Cleaner ([java.lang.ref.Cleaner](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ref/Cleaner.html))
 - [Attach Listener](https://stackoverflow.com/a/8251753/16577108)
 - GC Thread: [garbage collector](https://www.baeldung.com/jvm-garbage-collectors) thread
 - CMS Thread and CMD Main Thread: Thread of the [concurrent mark sweep collector](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/cms.html).

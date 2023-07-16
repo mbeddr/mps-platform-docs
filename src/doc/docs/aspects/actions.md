@@ -44,7 +44,7 @@ The action aspect defines node factories and copy/paste related handlers.
     **Solution**
 
     You can use the cell explorer (*Language Debug* --> *Show Cell in Explorer*) to see which actions are defined for a cell.
-    Deactivate the automatically applied action with the help of custom editor cells([CellModel_CustomFactory](http://127.0.0.1:63320/node?ref=r%3Af4f3736e-6da2-4bf6-9b34-06696f46bc70%28de.slisson.mps.richtext.customcell.structure%29%2F2490242408670732052)). You can use `CellModel_CustomFactory` to wrap the cells in your collection which generate unwanted actions and deactivate them.
+    Deactivate the automatically applied action with the help of custom editor cells ([CellModel_CustomFactory](http://127.0.0.1:63320/node?ref=r%3Af4f3736e-6da2-4bf6-9b34-06696f46bc70%28de.slisson.mps.richtext.customcell.structure%29%2F2490242408670732052)). You can use `CellModel_CustomFactory` to wrap the cells in your collection which generate unwanted actions and deactivate them.
     
     ![custom factory cell delete actions](custom_factory_cell_delete_actions.png){width="600px"}
 

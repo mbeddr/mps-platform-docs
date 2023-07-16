@@ -23,7 +23,7 @@ Multi-Party boolean decision table:
 
 ## Functional Programming
 
-- [Some Concepts in Functional Languages](https://languageengineering.io/some-concepts-in-functional-languages-550c683a0ffa)(languageengineering.io)
+- [Some Concepts in Functional Languages](https://languageengineering.io/some-concepts-in-functional-languages-550c683a0ffa) (languageengineering.io)
 - [Introduction to the functional programming jargon (general)](https://github.com/hemanth/functional-programming-jargon)
 - [Awesome functional programming (general)](https://github.com/lucasviola/awesome-functional-programming)
 - [Funclerative Programming](https://markusvoelter.medium.com/funclerative-programming-968cc53ee580)(Markus Voelter)
