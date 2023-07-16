@@ -11,7 +11,7 @@ the same way you install MPS plugins. They use the same mechanisms from the Inte
 This page answers only general questions about plugins. You can find more information about plugins in [Plugins](plugins.md)
 which deals with the plugin aspect.
 
-!!! question "Where can you use a created language?[^1]"
+!!! question "Where can you use a created language?"
 
     Use them in MPS or a custom IDE based on MPS (a so-called RCP). You need to create a build script, so you can export your plugins
     as real IntelliJ plugins that others can install. To ship all the plugins together with a custom branding, create an RCP.
@@ -52,7 +52,7 @@ which deals with the plugin aspect.
     - [Web-based projectional editing is moving forward](https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/){{ blog('sl') }}
     - [MPSServer and WebEditKit](https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/){{ blog('sl') }}
 
-!!! question "How do you translate every part of MPS?[^2]"
+!!! question "How do you translate every part of MPS?"
 
     You can install a [language pack](https://plugins.jetbrains.com/search?tags=Language%20Pack) for IntelliJ-based projects. A complete translation of MPS is not feasible because some parts are hard coded. 
     There are also known bugs with extended characters (MPS-31835) and [Unicode](https://youtrack.jetbrains.com/issues/MPS?q=unicode)
@@ -98,6 +98,3 @@ which deals with the plugin aspect.
 !!! failure "jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found."
     
     Make sure to avoid setting the solution kind to none.
- [^2]:[Any way to translate all of MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-)
-
-[^1]:[MPS forum - Plugin](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin)

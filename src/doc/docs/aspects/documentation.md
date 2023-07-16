@@ -21,7 +21,7 @@ Documented Concept* while defining a new section as part of a chapter, the *Docu
 
     Yes, code is only sometimes self-documenting. You have the following possibilities for writing documentation: 
 
-    - JavaDoc[^1] 
+    - JavaDoc ([Use javadoc liberally](http://www.javapractices.com/topic/TopicAction.do?Id=60))
     - the intention [Document](http://127.0.0.1:63320/node?ref=r%3Ae5a8b5c7-85b5-4d59-9e4e-850a142e2560%28jetbrains.mps.lang.structure.intentions%29%2F7862711839424636005)
     - ^^com.mbeddr.documentation^^
     - ^^com.mbeddr.doc^^
@@ -37,5 +37,3 @@ Documented Concept* while defining a new section as part of a chapter, the *Docu
 !!! question "Is there a way to resolve references to embedded images (screenshots) across different documents?"
 
     Add the document containing the reference to the *depends on* section of the current document.
-
-[^1]:[Use javadoc liberally](http://www.javapractices.com/topic/TopicAction.do?Id=60)

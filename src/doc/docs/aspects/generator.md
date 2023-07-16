@@ -18,7 +18,7 @@ alias: generator_aspect
 
     - [coolya: Maintainable MPS Generators](https://coolya.github.io/maintainable-generators/)
 
-!!! question "Can you invoke the generator from an external tool?[^2]"
+!!! question "Can you invoke the generator from an external tool?"
 
     Yes, it can be run from Ant.
 
@@ -155,7 +155,7 @@ sections answers some question that still often arise.
     pre/post-processing script in the generator by using an existing Java library such as [Apache POI](https://poi.apache.org/). A tutorial 
     for Excel can be found [here](https://www.codejava.net/coding/how-to-write-excel-files-in-java-using-apache-poi).
 
-!!! hint "I want to create multiple outputs for a language.[^1]"
+!!! hint "I want to create multiple outputs for a language."
 
     - You can use a non-root concept in your root mapping rule. For example, use the concept of the children in the root mapping rule. It will create multiple roots as long as the generated files have different names.
     - Use a preprocessing script to create new root nodes (maybe a new concept if necessary) for the children and create a root mapping rule for the newly introduced concept.
@@ -297,7 +297,7 @@ the *Compile in MPS* flag in a solution if the compilation doesn't start.
 
 In addition to reading the following questions, read [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){{ blog('sl') }}.
 
-!!! warning "MPS can't resolve the import XY.[^3]"
+!!! warning "MPS can't resolve the import XY."
 
     The solution that contains the class has to be added as a runtime solution (see [here](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260/comments/360000621000)).
 
@@ -380,7 +380,3 @@ In addition to reading the following questions, read [Debugging generators](http
 ## Blog Posts
 
 - [Introduction MPS Generators](https://www.f1re.io/mps-generators){{ blog('F1RE') }}
-
-[^1]:[MPS forum - I want to export multiple languages from MPS](https://mps-support.jetbrains.com/hc/en-us/community/posts/4406708701458-i-want-export-multi-language-from-mps)
-[^2]:[MPS forum - Is it possible to export a DSL compiler created with MPS and use it independently](https://mps-support.jetbrains.com/hc/en-us/community/posts/360008125300-Is-it-possible-to-export-a-DSL-compiler-created-with-MPS-and-use-it-independently-e-g-invoke-it-from-another-java-program-)
-[^3]:[MPS forum - Generator error: uncaught exception ?no classifier?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360004217260-Generator-error-uncaught-exception-no-classifier-)

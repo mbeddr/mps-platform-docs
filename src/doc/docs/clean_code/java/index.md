@@ -13,12 +13,12 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 
 - Be aware of common [Java gotchas](https://stackoverflow.com/questions/169815/java-common-gotchas).
 - Avoid acronyms and abbreviations that may not be clear to others.
-- Name methods and variables after what they mean. Before giving a name, consider the responsibility of that piece of code.[^1]
+- Name methods and variables after what they mean. Before giving a name, consider the responsibility of that piece of code ([Naming 101: A Programmer's Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)).
 - Return empty collections instead of returning null elements ([reference](http://www.javapractices.com/topic/TopicAction.do?Id=59)). It saves the efforts needed for testing on null elements.
 - Efficiency: Use [StringBuilder](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html) or [StringBuffer](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuffer.html) for String concatenation
-- Refactor your code [regularly](https://refactoring.guru/refactoring), especially when your classes or methods become too big.[^2]^, ^[^3].
+- Refactor your code [regularly](https://refactoring.guru/refactoring), especially when your classes or methods become too big ([Rule of 30 – When is a Method, Class, or Subsystem Too Big?](https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or) and [Avoid basic style errors](http://www.javapractices.com/topic/TopicAction.do?Id=227))
 - Remember to test the parameters of public methods for illegal values. These methods shouldn't crash because of a NullPointer.
-- Order class members by scope from private to public[^4]^, ^[^5] (the reverse order is also acceptable)
+- Order class members by scope from private to public ([Ordering Class Members by Scopes](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering) and [Separate public and private members](http://www.javapractices.com/topic/TopicAction.do?Id=136))
 - Minimize the accessibility of class members. It enforces [information hiding or encapsulation](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#PrivateMembers).
 - Avoid hardcoded values.
 - Use lazy initialization if performance is [critical](http://www.javapractices.com/topic/TopicAction.do?Id=34), or use [caching](https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/) if necessary.
@@ -43,9 +43,3 @@ visit [baeldung.com](https://www.baeldung.com/category/java).
 - [Why is Global State so Evil?](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil)
 - [How would you know if you've written readable and easily maintainable code?](https://softwareengineering.stackexchange.com/questions/141005/how-would-you-know-if-youve-written-readable-and-easily-maintainable-code)
 - [How do you know you're writing good code?](https://softwareengineering.stackexchange.com/questions/61655/how-do-you-know-youre-writing-good-code)
-
-[^1]:[Naming 101: A Programmer's Guide on How to Name Things](https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things)
-[^2]:[Rule of 30 – When is a Method, Class, or Subsystem Too Big?](https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or)
-[^3]:[Avoid basic style errors](http://www.javapractices.com/topic/TopicAction.do?Id=227)
-[^4]:[Ordering Class Members by Scopes](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering)
-[^5]:[Separate public and private members](http://www.javapractices.com/topic/TopicAction.do?Id=136)

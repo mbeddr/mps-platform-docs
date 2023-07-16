@@ -379,6 +379,3 @@ This section contains answers to code-related questions.
     ```
 
     You must initialize your message object and supply it to the mark method.
-
-
-[^1]:[MPS forum - hierarchical tree structure and editing](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing)

@@ -116,5 +116,3 @@ is only marginally related to the migration aspect, it is mentioned here.
 !!! failure "When creating root nodes as part of language migration via *java model\.add root(someRoot)*, it throws the exception *UnsupportedOperationException*."
 
     Make sure that the affected model is not non-editable.
-
-[^1]:[MPS forum - Migration scripts: the best practice](https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810-Migration-scripts-best-practic)

@@ -30,7 +30,7 @@ parts of MPS work, they might still be of interest for you.
     declares all IntelliJ IDEA icons.
     The class [MPSIcons](http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons) declares all MPS icons.
 
-!!! question "How can you have settings that get saved globally?[^1]"
+!!! question "How can you have settings that get saved globally?"
 
     You can use preferences only at the project level. Use the workaround described in [this answer](https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects)
     or save your values in the global IntelliJ IDEA [Registry](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry).
@@ -254,5 +254,3 @@ parts of MPS work, they might still be of interest for you.
         - [Java system properties](https://docs.oracle.com/en/java/javase/18/docs/api/system-properties.html)
         - [System Properties for Java 2D](https://docs.oracle.com/javase/7/docs/technotes/guides/2d/flags.html) contains properties starting with `sun.java2d`.
         - [Networking System properties](https://docs.oracle.com/en/java/javase/16/core/networking-properties.html) contains properties starting with `java.net`.
-
-[^1]: https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects

@@ -60,7 +60,7 @@ code, you can get this functionality for free through the Base Language implemen
     - MPS has no dedicated support for databases or frameworks such as Spring Boot (unlike IntelliJ IDEA).
     - [MPS is not a (relational) database](https://specificlanguages.com/posts/2022-01/12-mps-is-not-a-relational-database/){{ blog('sl') }}
 
-!!! question "How can you create a standalone utility (not a complete IDE) for language generation with MPS?[^2]"
+!!! question "How can you create a standalone utility (not a complete IDE) for language generation with MPS?"
 
     This feature is not available at the moment, but you can interact with MPS models from Java when you set up the necessary dependencies:
 
@@ -115,6 +115,3 @@ code, you can get this functionality for free through the Base Language implemen
 !!! question "What is the future of MPS, especially regarding the cloud?"
 
     - [What is the future of MPS?](https://specificlanguages.com/posts/2022-06/22-what-is-the-future-of-mps/){{ blog('sl') }}
-
- [^1]:[MPS forum - How to migrate existing data into MPS?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010855700-How-to-migrate-existing-data-into-MPS-)
-[^2]:[MPS forum - Standalone language generator](https://mps-support.jetbrains.com/hc/en-us/community/posts/360006153579-Standalone-language-generator)

@@ -159,7 +159,7 @@ Behavior methods can only partially be compared to ordinary Java methods. They d
 behavior aspect uses a custom generation plan that doesn't included all Base Language extentions and are internally differently
 implemented.
 
-!!! question "How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?[^1]"
+!!! question "How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?"
 
     This is not possible (MPS-22502). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of [Java type erasure](https://www.baeldung.com/java-type-erasure).
 
@@ -174,7 +174,3 @@ implemented.
 !!! question "Can you enter a *throws* clause in behavior methods?"
 
     No, it is not possible (MPS-22306).
-
-
-
-[^1]: [MPS forum - Generics for return type of behavior method](https://mps-support.jetbrains.com/hc/en-us/community/posts/360010808559-Generics-for-return-type-of-behavior-method)

@@ -134,7 +134,7 @@ Most additional plugins are contributed by languages in {{ mps_extensions() }}, 
 
 This section contains code-related questions and answers.
 
-!!! question "How do you create a new *SContainmentLink* for a non-existent role?[^1]."
+!!! question "How do you create a new *SContainmentLink* for a non-existent role?"
 
     Create it through {{ mps_url("@mps.MetaAdapterFactory") }}.
 
@@ -177,5 +177,3 @@ plugins often compile down to IntelliJ platform features such as MPS actions tha
     action is registered. 
 
     You must have a standalone descriptor in your model. Set the solution kind to *Other* in the *Java* tab of the solution properties ([Plugin | MPS](https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups)).
-
-[^1]:[How to create a new SContainmentLink for a non-existent role?](https://mps-support.jetbrains.com/hc/en-us/community/posts/360009473300-How-to-create-new-SContainmentLink-for-non-existent-role-)
