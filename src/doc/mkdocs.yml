@@ -121,6 +121,7 @@ plugins:
           target_url: https://github.com/IETS3/iets3.opensource/issues/<num>
 
 markdown_extensions:
+  - mdx_breakless_lists
   - mdx_spanner
   - abbr
   - smarty:
