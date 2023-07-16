@@ -220,7 +220,7 @@ nav:
       - languages/index.md
       - Base Language and Extensions: languages/baselanguage.md
       - Double Dispatch: languages/double_dispatch.md
-      - MPS-Extensions: 
+      - MPS Extensions: 
           - General: languages/mps_extensions.md
           - Cell Layout: languages/cell_layout.md
       - KernelF: languages/kernelf.md
