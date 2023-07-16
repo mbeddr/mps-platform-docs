@@ -19,7 +19,7 @@ ususally end in *.pluginSolution* or *.plugin*.
 
 ??? question "How do facets work?"
 
-    ![facets](facets.png)
+    ![facets](images/plugin/facets.png)
 
     Red rectangles: marker facets
     
@@ -70,7 +70,7 @@ ususally end in *.pluginSolution* or *.plugin*.
     * Ensure not to show the node in the *searched for* part of the window. VCS will try to highlight it and run into an NPE (MPS 2019.3)
     * Consider cut and paste or moving elements: these operations also yield a removal event. Hide the balloon again once the node gets added again.
 
-    ![DanglingReferenceHandler](DanglingReferenceHandler.png)
+    ![DanglingReferenceHandler](images/plugin/dangling_reference_handler.png)
 
     {{ contribution_by('abstraktor') }}
 
@@ -92,7 +92,7 @@ ususally end in *.pluginSolution* or *.plugin*.
 
     You can use `IconLoader#getIcon` in the reflective editor. Right-click the editor for the icon, use `show reflective editor`, and enter the expression as shown in the screenshot:
 
-    ![IconLoader](IconLoader.png)
+    ![IconLoader](images/plugin/icon_loader.png)
 
     {{ contribution_by('till-f') }}
 
@@ -102,7 +102,7 @@ ususally end in *.pluginSolution* or *.plugin*.
 
     First $B$ must override $A$, and the `applicable concept` also must not differ. Then for $B$ in `applicable in context`, we must provide a *concept editor context hint*.
 
-    ![context hints tree layout](context_hints_tree_layout.png)
+    ![context hints tree layout](images/plugin/context_hints_tree_layout.png)
 
     This hint must also be referenced from a *Projection Mode Switcher*.
 

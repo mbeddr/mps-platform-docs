@@ -91,16 +91,16 @@ only need to use empty substitutions menus for concepts that shouldn't be substi
 
     > As you can see in the screenshot, the concepts of both opening braces are indistinguishable.
 
-    > ![autocompletion myUnion](autocompletion_myUnion.png)
+    > ![autocompletion myUnion](images/editor/autocompletion_myunion.png)
 
     > I can change the description by modifying the short description in the concept structure.
 
     > 1. What's the best format to improve these descriptions?
     > 2. Is this the correct/best way to change the autocomplete concept description?
 
-    > ![concept BracketInitializer](bracketInitializer_concept.png)
+    > ![concept BracketInitializer](images/editor/bracketInitializer_concept.png)
 
-    > ![autocompletion int16](autocompletion_int16.png)
+    > ![autocompletion int16](images/editor/autocompletion_int16.png)
 
     {{ question_by('AlexeiQ') }}
 
@@ -108,9 +108,9 @@ only need to use empty substitutions menus for concepts that shouldn't be substi
 
     The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get complete control over the code completion menu and to be able to generate the text dynamically based on the context.
     
-    ![DataItem SubstituteMenu](DataItem_substituteMenu.png){width="800px"}
+    ![DataItem SubstituteMenu](images/editor/data_item_substitute_menu.png){width="800px"}
     
-    ![data autocompletion](data_autocompletion.png){width="800px"}
+    ![data autocompletion](images/editor/data_autocompletion.png){width="800px"}
 
     {{ answer_by('wsafonov') }}
 
@@ -166,7 +166,7 @@ This section contains some more advanced topics and questions when defining edit
 
 ??? question "How do you set the cursor to the first editable cell?"
 
-    > ![editable cell and error_cell](editable_cell_error_cell.png)
+    > ![editable cell and error_cell](images/editor/editable_cell_error_cell.png)
 
     > - **(A)** What it looks like after creation
     > - **(B)** Initial situation with cursor at **(1)**: pressing ++enter++ leads to **(C)**
@@ -181,14 +181,14 @@ This section contains some more advanced topics and questions when defining edit
 
     > Editor of the new node in **(C)**:
 
-    >  ![example c:node editor](example_c_node_editor.png)
+    >  ![example c:node editor](images/editor/example_c_node_editor.png)
 
     Usually, you would set the *attracts focus* property of the cell, where the cursor should be positioned, to `attractsFocus` or `FirstEditableCell`.
     But, since **C.2** and **C.3** are error cells, the default behavior is to set the cursor in front of the first error cell, which is **(C.2)**.
     
     Therefore, change the first part of your editor to a query list cell **(A)**, which references the "member" in the cell properties **(B)**, and set the read-only property on the query list.
 
-    ![new editor for CompoundInitializerMember](CompoundInitializerMember_editor_new.png)
+    ![new editor for CompoundInitializerMember](images/editor/compound_initializer_member_editor_new.png)
 
     {{ contribution_by('AlexeiQ') }}
 

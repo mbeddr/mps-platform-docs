@@ -53,7 +53,7 @@ cause issues with MPS. Especially VisualVM tends to freeze MPS. A better profile
     - take and browse heap dumps (e.g., find memory leaks)
     - analyze core dumps (e.g., crashed Java processes)
 
-    ![VisualVM](visualvm.png)
+    ![VisualVM](images/visualvm.png)
 
 - [Memory Analyzer (MAT)](https://www.eclipse.org/mat/)
     - find memory-related issues such as memory leaks

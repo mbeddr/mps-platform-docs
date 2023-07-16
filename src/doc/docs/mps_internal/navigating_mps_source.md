@@ -12,7 +12,7 @@ The readme of the repository contains more information.
 The `artifacts` directory contains the artifact-related settings. [Artifacts | IntelliJ IDEA](https://www.jetbrains.com/help/idea/working-with-artifacts.html) contains more information. Artifacts in this project are the generated jar files
 such as `mps-core.jar` and `vcs-core.jar`:
 
-![mps artifacts dialog](mps_artifacts.png)
+![mps artifacts dialog](images/mps_artifacts.png)
 
 The directory also contains settings for code styles, copyright info, and enabled inspections. The paths to the used libraries (*.jar) are also specified in the `libraries` subfolder. The run configurations, search scopes as well as
 many other IntelliJ-specific project settings,

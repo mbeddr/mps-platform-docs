@@ -46,7 +46,7 @@ tags:
 
     The new language's generator must depend on the Base Language generator with the scope set to `Extends`.
     
-    ![extend baselanguage generator](generator_extend_baselanguage.png){width="600px"}
+    ![extend baselanguage generator](images/typesystem/generator_extend_baselanguage.png){width="600px"}
 
     {{ contribution_by('kbirken') }}
 

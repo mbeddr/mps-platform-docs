@@ -10,7 +10,7 @@ The test results are collected from [Ant JUnit reports](https://ant.apache.org/m
 
 All GitHub repositories are connected directly to TeamCity and show the build status at the bottom of pull requests and next to pushed commits with the help of the [Commit Status Publisher](https://www.jetbrains.com/help/teamcity/commit-status-publisher.html). The main repositories require the build to succeed before a pull request can be merged:
 
-![GitHub build status](GitHub_build_status.png)
+![GitHub build status](images/github_build_status.png)
 
 
 One or multiple [build configurations](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html) exist per platform. This page describes them only superficially because they might change in the future. Each sub-item is a separate build configuration. Some configurations depend on other configurations ([snapshot dependencies](https://www.jetbrains.com/help/teamcity/snapshot-dependencies.html)).

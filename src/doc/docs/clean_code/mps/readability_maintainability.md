@@ -146,12 +146,12 @@ Refactor methods into smaller methods. You can use [MPS builders](https://www.je
 - Mark classes/concepts etc., as deprecated when you don't want others to use them, and you will remove them in the future. When you add a deprecation date, you can use it as a reminder to remove deprecated code in regular intervals or enforce it through a [linter](https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md).
 
 <figure markdown>
-  ![deprecated node annotation](deprecated.png)
+  ![deprecated node annotation](images/deprecated_node_annotation.png)
   <figcaption markdown>[DeprecatedNodeAnnotation](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590292%28jetbrains.mps.lang.structure.structure%29%2F1224240836180)</figcaption>
 </figure>
 
 <figure markdown>
-  ![deprecated block doc tag](deprecated2.png)
+  ![deprecated block doc tag](images/deprecated_block_doc_tag.png)
   <figcaption markdown>[DeprecatedBlockDocTag](http://127.0.0.1:63320/node?ref=r%3A4095af4f-a097-4799-aaa9-03df087ddfa6%28jetbrains.mps.baseLanguage.javadoc.structure%29%2F8465538089690331492) and [Java Deprecated annotation](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EDeprecated)</figcaption>
 </figure>
 

@@ -48,7 +48,7 @@ This page answers some general questions about MPS and is most useful for :begin
 
 !!! warning "What can you do if a problem isn't on this list?"
 
-    Try {{ image_popup("https://www.jetbrains.com/help/mps/invalidate-caches.html", "invalidating the cache", "../../img/invalidate_cache.gif", "invalidate cache") }} and restarting MPS (same menu).
+    Try {{ image_popup("https://www.jetbrains.com/help/mps/invalidate-caches.html", "invalidating the cache", "../gifs/invalidate_cache.gif", "invalidate cache") }} and restarting MPS (same menu).
     Search the [forum](https://mps-support.jetbrains.com/hc/en-us/community/topics) and [issue tracker](https://youtrack.jetbrains.com/issues/MPS). 
     Ask a question on [Slack](http://slack-mps.jetbrains.com).
 
@@ -58,13 +58,13 @@ This page answers some general questions about MPS and is most useful for :begin
 
 !!! question "Which standard IDE settings should you change?"
     
-    When using many languages or plugins, the {{ image_popup("https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options", "maximum heap size", "../../img/maximum_heap_size.gif", "maximum heap size") }} should be changed to a higher value, such as 8 GB.
+    When using many languages or plugins, the {{ image_popup("https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options", "maximum heap size", "../gifs/maximum_heap_size.gif", "maximum heap size") }} should be changed to a higher value, such as 8 GB.
     Another reason for high memory usage can be many (poorly) implemented checking rules. 
 
 !!! warning "I am running low on memory, or the IDE is running slow. What can you do without restarting MPS?" 
 
-    When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models' indicator", "../../img/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
-    To free memory, use the memory indicator. As a last resort, enable the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power-saving mode", "../../img/power_saving_mode.gif", "power-saving mode") }}. It turns off background tasks like the model checker (not recommended).
+    When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models' indicator", "../gifs/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
+    To free memory, use the memory indicator. As a last resort, enable the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power-saving mode", "../gifs/power_saving_mode.gif", "power-saving mode") }}. It turns off background tasks like the model checker (not recommended).
 
 !!! question "What are modules, models, nodes, and concepts?"
 
@@ -106,8 +106,8 @@ This page answers some general questions about MPS and is most useful for :begin
 
 !!! question "Where are the log messages?"
 
-    `log info` logs to the MPS log file {{ image_popup("https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files", "idea.log", "../../img/show_log.gif", "show log") }}, 
-    and `message info` logs to the {{ image_popup("https://www.jetbrains.com/help/mps/messages-tool-window.html", "messages tool window", "../../img/messages_view.png", "messages tool window") }}.
+    `log info` logs to the MPS log file {{ image_popup("https://intellij-support.jetbrains.com/hc/en-us/articles/207241085-Locating-IDE-log-files", "idea.log", "../gifs/show_log.gif", "show log") }}, 
+    and `message info` logs to the {{ image_popup("https://www.jetbrains.com/help/mps/messages-tool-window.html", "messages tool window", "../images/messages_view.png", "messages tool window") }}.
 
 !!! question "Which log level should you use?"
 

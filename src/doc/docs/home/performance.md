@@ -86,7 +86,7 @@ You can analyze MPS's startup with a standard Java profiler like [YourKit](https
 it is also possible to use the [IntelliJ Report Analyzer](https://ij-perf.jetbrains.com/#/report). Click on the button
 *Get from running instance* to fetch the data from the opened MPS instance. Ensure that the *productCode* in the left text area says *MPS* because other IntelliJ IDEs, such as IntelliJ IDEA, use the same port.
 
-![IntelliJ report analyzer](intellij_report_analyzer.png){width="600px"}
+![IntelliJ report analyzer](images/intellij_report_analyzer.png){width="600px"}
 
 ## Java
 

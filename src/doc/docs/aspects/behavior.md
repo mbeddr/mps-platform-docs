@@ -26,7 +26,7 @@ The behavior aspect can be used for defining methods for the concepts of the lan
 
     > Example:
 
-    > ![required link is not initialized](required_link_is_not_initialized.png){width="600px"}
+    > ![required link is not initialized](images/behavior/required_link_is_not_initialized.png){width="600px"}
 
     Solutions:
 
@@ -47,11 +47,11 @@ The behavior aspect can be used for defining methods for the concepts of the lan
     > Given there is a virtual behavior method `getPresentation`.
     > When I override `getPresentation` in a subconcept, it displays the overriding method to be virtual.
     
-    > ![virtual getPresentation](virtual_getPresentation.png)
+    > ![virtual getPresentation](images/behavior/virtual_get_presentation.png)
     
     > Yet, I see that `methodDeclNode.isVirtual` is *null*.
     
-    > ![methodDeclNode isVirtual is null](methodDeclNode_isVirtual_null.png)
+    > ![methodDeclNode isVirtual is null](images/behavior/method_Decl_node_is_virtual_null.png)
     
     > Why is that?
 
@@ -102,7 +102,7 @@ The node could go be added back to a model.
     - Adding it as a root with `model.add root(<Car()>)`.
     - Adding it as a root with `model.add new root(Car)`.
 
-    ![node factory:car](node_factory_car.png){width="600px"}
+    ![node factory:car](images/behavior/node_factory_car.png){width="600px"}
 
     **Using a behavior constructor**
 
@@ -113,7 +113,7 @@ The node could go be added back to a model.
 
     Using a quotation will **not** call this constructor.
 
-    ![Behavior: car](Car_behavior.png){width="600px"}
+    ![Behavior: car](images/behavior/car_behavior.png){width="600px"}
 
     **Using a property getter**
 
@@ -121,7 +121,7 @@ The node could go be added back to a model.
 
     This solution would work only for properties, not children or references, and requires quotations to set the initialized value if trying to override the default. Furthermore, your quotations will still be marked. 
 
-    ![Constraints: Car](constraints_Car.png){width="500px"}
+    ![Constraints: Car](images/behavior/car_constraints.png){width="500px"}
 
     <figure markdown>
     ![Usage: Car](car_usage.png){width="500px"}

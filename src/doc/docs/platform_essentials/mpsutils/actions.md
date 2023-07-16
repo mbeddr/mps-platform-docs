@@ -51,14 +51,14 @@ This language adds support for a projection mode switcher and refactoring action
 
 The {{ mbeddr_platform() }} has a group *Projection* which is a top-level menu in MPS:
 
-![projection menu](projection_menu.png)
+![projection menu](images/projection_menu.png)
 
 A projection mode switcher can be declared containing push hint options where you reference the hints from an existing ConceptEditor context hints container. Add the action in the *Add to Menu/Button Group* section.
 
 It adds a toggle to this menu/button group that toggles the referenced editor hint in the editors. When you only
 want to enable it for a specific concept, add a concept to *only in editor with instance of*.
 
-![example: projection mode switcher](projection_mode_switcher_example.png)
+![example: projection mode switcher](images/projection_mode_switcher_example.png)
 
 ### Refactoring Action
 

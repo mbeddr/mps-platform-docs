@@ -40,7 +40,7 @@ Additional to the provided commands, you can use it for the following common tas
 
     [Code snippet:](https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc)
 
-    ![find print statements](find_print_statement.png)]
+    ![find print statements](images/find_print_statement.png)]
 
 !!! warning "#nodes, #models, #usages, etc., don't show any result."
     Make sure that your query is correct. You must also set a scope for these statements in square brackets, such as
@@ -77,6 +77,6 @@ Additional to the provided commands, you can use it for the following common tas
     3. Paste the content   (++cmd+v++ or ++ctrl+v++)
     4. MPS pastes a node reference that you can use to manipulate the node directly:
 
-    ![console_node_reference](console_node_reference.png){width="600px"}
+    ![console_node_reference](images/console_node_reference.png){width="600px"}
 
     {{ answer_by('coolya') }}

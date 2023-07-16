@@ -56,7 +56,7 @@ You must add new cells and rows in the editor (they can be read-only). They incl
 
     Change these properties to true. 
 
-    ![Set Properties to true](table_lines_properties.png)
+    ![Set Properties to true](images/table_lines_properties.png)
 
 !!! question "How can I improve my tables?"
 
@@ -112,7 +112,7 @@ You can have editor cells with actions and all other regular cell features.
     The `navigatable-node` style attribute won't allow you to point directly to the node from the query list's query.   
     Instead, you can use the *hyperlink-node* style attribute (also from mpsutil) to make the navigation work    and the `hyperlink-style` attribute to make it look like a regular reference:
     
-    ![hyperlink node](hyperlink_node.png)  
+    ![hyperlink node](images/hyperlink_node.png)  
 
     A common workaround to get similar behavior with *navigatable-node* is to point it to a child or parent of the desired node instead of that node itself.
 

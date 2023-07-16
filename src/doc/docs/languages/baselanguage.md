@@ -152,7 +152,7 @@ var x=0c710
 - Statically embed images into the editor.
 
 <figure markdown>
-  ![image cell](image_cell.png)
+  ![image cell](images/image_cell.png)
   <figcaption>example: image cell</figcaption>
 </figure>
 
@@ -254,7 +254,7 @@ locale=en_US
 
 This language adds support for checkboxes. Text-based checkboxes (text checkbox UI) and image checkboxes (platform checkbox UI) are available. You can style the text-based checkbox like any other constant text. The checkbox cell has an *ui* parameter which allows switching between both styles. A boolean property backs the state. The label specifies the visible text. The checkbox can be toggled by clicking and pressing space.
 
-![forms: checkbox](forms_checkbox.png)
+![forms: checkbox](images/forms_checkbox.png)
 
 ### Image Generation for Nodes
 

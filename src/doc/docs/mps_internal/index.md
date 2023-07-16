@@ -162,7 +162,7 @@ parts of MPS work, they might still be of interest for you.
 
     > When accessing model properties in rendering code, you must encapsulate the model accessing code in a read action:
     
-    > ![read action missing repository](read_action_missing_repository.png)
+    > ![read action missing repository](images/read_action_missing_repository.png)
     
     > It always has an error "Error: shall specify a repository to lock". How can I get rid of it?
     > What is a 'repository' and is there any documentation that explains the concept and how to use it correctly?

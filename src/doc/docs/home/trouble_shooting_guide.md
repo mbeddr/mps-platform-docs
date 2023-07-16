@@ -67,11 +67,11 @@ compare if the risky dirty build is worth the time you save.
 
     1. Check: Was the intention disabled by the user by accident?
 
-    ![example:disable an intention](disable_intention_example.png)
+    ![example:disable an intention](images/disable_intention_example.png)
 
     In this case, the intention can be enabled through preferences --> MPS intentions and manually searching for the disabled intention:
 
-    ![preferences menu:MPS intentions](mps_intentions_preferences.png)
+    ![preferences menu:MPS intentions](images/mps_intentions_preferences.png)
 
     2. Check: Is the concept/intention visible in the model? (open a context menu where Base Language code is allowed and search for classes/concepts from the same language)
         - :octicons-x-circle-16: --> Use *Edit* --> *Add Language Import* to import the language containing the concept / the intention.

@@ -48,7 +48,7 @@ The left editor highlighter contains the buttons for folding editor cells and ot
 1. Add a new checker to the highlighter ([example](http://127.0.0.1:63320/node?ref=r%3A59f5b892-a6eb-4a9b-9c81-ecffc10026ee%28jetbrains.mps.ide.highlighters.behavior%29%2F1401464578585771758)). The checker can only contribute an icon and a tooltip to the main column.
 2. Add a new column ([example](http://127.0.0.1:63320/node?ref=r%3Af509a650-cbd9-47e7-b2a0-79f49c562c0b%28jetbrains.mps.vcs.annotate%29%2F5393486658546720417)). It's more difficult to implement, but you can fully customize the column.
 
-![left highlighter](left_highlighter.png)
+![left highlighter](images/left_highlighter.png)
 
 ### UpdateSession
 

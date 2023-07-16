@@ -225,5 +225,5 @@ However, you don't change these values inside the MPS build scripts. Instead, ei
 
 ``` -PmajorVersion=1 -PbuildVersion=0 -PminorVersion=0000 build_mbeddr publishMbeddrAllInOnePublicationToMavenRepository```
 
-![version numbers in MPS build scripts](mbeddr_version_numbers.png)
+![version numbers in MPS build scripts](images/mbeddr_version_numbers.png)
 

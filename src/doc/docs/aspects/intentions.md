@@ -25,9 +25,9 @@ tags:
     Use ^^com.mbeddr.mpsutil.intentions^^ from {{ mps_extensions() }}. 
     Alternatively, you can split the description into multiple literals. The first literal will then be used to group intentions.
 
-    ![intention description](intention_description.png){width="600px"}
+    ![intention description](images/intentions/intention_description.png){width="600px"}
 
-    ![intention description grouping](intention_description_result.png){width="300px"}
+    ![intention description grouping](images/intentions/intention_description_result.png){width="300px"}
 
 !!! hint "I need to get all available intentions for a node."
 

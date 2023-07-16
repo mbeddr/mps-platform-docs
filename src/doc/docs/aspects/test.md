@@ -66,7 +66,7 @@ Fore more information about testing in general, read [MPS Internals | Testing](t
 
     >**Why is that?**
 
-    >![node with id changes test](node_with_id_changes_test.png){width="800px"}
+    >![node with id changes test](images/test/node_with_id_changes_test.png){width="800px"}
 
     >Terms used:
 
@@ -149,7 +149,7 @@ Base Language and KernelF have support for test cases and assert statements.
     
     Make this change to the default layout of your build model:
     
-    ![layout: module myTestSolution](layout_module_myTestSolution.png)
+    ![layout: module myTestSolution](images/test/layout_module_my_test_solution.png)
     
     In this case, you would need to detect if you are running from sources or from a JAR in CI and change the location where you look for the generated files.
     
@@ -211,11 +211,11 @@ Base Language and KernelF have support for test cases and assert statements.
 
     > When I make the error text dynamic:
 
-    > ![dynamic error message](dynamic_error_message.png){width="300px"}
+    > ![dynamic error message](images/test/dynamic_error_message.png){width="300px"}
 
     > Then my error is named `UnnamedError`, and I have a hard time selecting the right one:
 
-    > ![dynamic error message select](dynamic_error_message_select.png)
+    > ![dynamic error message select](images/test/dynamic_error_message_select.png)
 
     > How do I name errors with dynamic messages?
 
@@ -224,9 +224,9 @@ Base Language and KernelF have support for test cases and assert statements.
     3. Run the intention *Add Message Annotation*.
     4. Type a nice name.
 
-    > ![dynamic error message fix](dynamic_error_message_fix.png){width="300px"}
+    > ![dynamic error message fix](images/test/dynamic_error_message_fix.png){width="300px"}
 
-    > ![dynamic error message fix select](dynamic_error_message_fix_selection.png)
+    > ![dynamic error message fix select](images/test/dynamic_error_message_fix_selection.png)
 
     Note that this does not work for errors that result from _constraints_.
 

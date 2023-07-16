@@ -10,7 +10,7 @@ This visual guide should help you get familiar with how elements of the UI are c
 It is useful for developers but also users.
 Hover over a green rectangle to show a short description. Reload the page if they don't appear. When you click the shape, you are redirected to the corresponding documentation when it's available.
 
-![imagemap: what is](what_is.png){usemap='#image-map' .off-glb width="1788" height="1033" .ignore_max_width .map }
+![imagemap: what is](images/what_is.png){usemap='#image-map' .off-glb width="1788" height="1033" .ignore_max_width .map }
 
 <map name="image-map">
     <area target="_blank" alt="Presentation Assistant (IntelliJ plugin)" title="Presentation Assistant (IntelliJ plugin)" href="https://plugins.jetbrains.com/plugin/7345-presentation-assistant" coords="621,960,1163,998" shape="rect">

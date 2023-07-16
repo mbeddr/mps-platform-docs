@@ -17,7 +17,7 @@ be set, including an activation condition to make this profile the active profil
 actions profile declaration. Actions in the section `specify toolbar` appear in the main toolbar. This toolbar
 can be found at the top left of the window.
 
-![example: actions filter](actionsfilter_example.png)
+![example: actions filter](images/actionsfilter_example.png)
 
 !!! note "To use the language, you must install the language and the corresponding IntelliJ plugin. `./gradlew install` can install this plugin. Without the plugin, the language won't load at all."
 
@@ -25,7 +25,7 @@ can be found at the top left of the window.
 
 The user can customize the predefined actions profiles in *preferences* --> *Appearance & Behavior* --> *Actions*. New profiles can be created by clicking the *+* button and deleted by clicking the *-* button.
 
-![actions filter preferences](actionsfilter_preferences.png)
+![actions filter preferences](images/actionsfilter_preferences.png)
 
 ## Preference Form
 
@@ -36,7 +36,7 @@ mechanism for adding preference pages ([documentation](https://plugins.jetbrains
 
 Example:
 
-![example: preference form](preferenceform_example.png)
+![example: preference form](images/preferenceform_example.png)
 
 It supports the following options:
 
@@ -70,7 +70,7 @@ MPS calls the *after read* method after the state is loaded (e.g. when the prefe
 
 This language allows creating wizards with multiple steps:
 
-![example: single step of a custom wizard](wizard_step_example.png)
+![example: single step of a custom wizard](images/wizard_step_example.png)
 
 Create a new node of instance [Process](http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068). The wizard can have input parameters and produces one output. After defining
 the wizard, you can invoke it from an action. Example:
@@ -106,8 +106,8 @@ Create an instance of [NewModelDialogConfig](http://127.0.0.1:63320/node?ref=r%3
 
 This extension allows the definition of preference pages by using MPS models. On the preference page, you get a regular MPS editor, as exemplified by the {{ mbeddr_platform() }} templates preference page:
 
-![example: spreferences](spreference_example.png)
+![example: spreferences](images/spreference_example.png)
 
 Such pages are defined using an instance of [PreferencePageDescription](http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938) (check out the root "Platform Templates" as an example). This instance must reside in a plugin solution. The data, i.e., the respective MPS model, is stored as part of the respective project or in MPS globally (this is configurable). It is possible to access the model that contains the preferences via code:
 
-![spreferences: query](spreferences_query.png)
+![spreferences: query](images/spreferences_query.png)

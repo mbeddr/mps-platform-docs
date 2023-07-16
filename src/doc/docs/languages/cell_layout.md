@@ -184,7 +184,7 @@ methods: the preferred size is the size of the box model's margin box. The maxim
 Paint requests are added to a queue which is then processed in order of thickness and brightness (light gray is the default color and has the 
 lowest priority). In the following example, the painter was enabled for all editor cells:
 
-![celllayout: border painter in action](celllayout_borderpainter.png)
+![celllayout: border painter in action](images/celllayout_borderpainter.png)
 
 ### LayoutableAdapter
 

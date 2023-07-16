@@ -21,7 +21,7 @@ This Base Language extension simplifies the usage of variables and [Java String#
 
 The following example shows referencing a simple variable, embedding an expression inside a string, and the equivalent of calling `#!java String.format()`:
 
-![example: richstring](richstring_example.png)
+![example: richstring](images/richstring_example.png)
 
 ## SModule
 

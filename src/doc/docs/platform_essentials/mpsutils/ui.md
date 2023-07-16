@@ -18,7 +18,7 @@ return new AsyncCellProvider(node, { =>
 });
 ```
 
-![async cell](async_cell.gif)
+![async cell](gifs/async_cell.gif)
 
 ### FrameCell
 
@@ -32,7 +32,7 @@ The [frame](http://127.0.0.1:63320/node?ref=b33d119e-196d-4497-977c-5c167b21fe33
 
 An example can be seen in the documentation language:
 
-![example: framecell](framecell_example.png)
+![example: framecell](images/framecell_example.png)
 
 In most cases, you can use the language ^^de.itemis.mps.editor.celllayout^^ from {{ mps_extensions() }} to customize the border and margins around a cell.  The [MPS Extensions documentation](https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/) contains more information.
 
@@ -43,7 +43,7 @@ In most cases, you can use the language ^^de.itemis.mps.editor.celllayout^^ from
 Margin cells are editor cells shown beyond the right editor margin, a bit like comments in Word.
 The ReviewNote cell implements exactly Word's comment facility as an example of the margin cell. Here is a screenshot:
 
-![example: margin cell](margincell_example.png)
+![example: margin cell](images/margincell_example.png)
 
 Just include the respective language ^^com.mbeddr.mpsutil.review^^  to use the review notes. Intentions are available to attach review notes to editor cells.
 
@@ -63,7 +63,7 @@ Specify the placeholder in the inspector by creating a query function for the *p
 
 > ^^com.mbeddr.mpsutil.conceptdiagram^^
 
-![example:conceptdiagram](conceptdiagram_example.png)
+![example:conceptdiagram](images/conceptdiagram_example.png)
 
 Create a new root node of the type [ConceptDiagram](http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138). The editor should now contain an empty editor. You can drag nodes
 from the *Diagram Palette* to the diagram. If nodes from other languages are needed, add the language to the *languages*
@@ -77,7 +77,7 @@ This language contains a concept [DependenciesDiagram](http://127.0.0.1:63320/no
 
 Drag a model or module reference from the diagram palette to the diagram. Dependencies to other models/modules are automatically added. The line between the two boxes visualizes the dependencies, and its label has a name after the scope of the dependency (e.g., the label is *uses* if you have imported the language).
 
-![example: dependency diagram](dependencydiagram_example.png)
+![example: dependency diagram](images/dependencydiagram_example.png)
 
 ## Date Picker
 
@@ -85,7 +85,7 @@ Drag a model or module reference from the diagram palette to the diagram. Depend
 
 A classic widget to select a date from a pop-up calendar.
 
-![example: datepicker](datepicker_example.png)
+![example: datepicker](images/datepicker_example.png)
 
 !!! warning "There's a [known issue](https://github.com/mbeddr/mbeddr.core/issues/2203) on macOS. The date picker doesn't work when the theme is set to macOS light."
 
@@ -144,7 +144,7 @@ ChartManager.getInstance(editorContext).setChart(node.createChart())
 
 createChart` returns an instance of [JFreeChart](http://127.0.0.1:63320/node?ref=7fe13e34-8620-4d5d-92c7-df091b0ed628%2Fjava%3Aorg.jfree.chart%28com.mbeddr.mpsutil.jfreechart.runtime%2F%29%2F%7EJFreeChart).
 
-![example: jfreechart](jfreechart_example.png)
+![example: jfreechart](images/jfreechart_example.png)
 
 ## Target chooser
 
@@ -152,7 +152,7 @@ createChart` returns an instance of [JFreeChart](http://127.0.0.1:63320/node?ref
 
 The target chooser language provides a modal dialog for choosing nodes based on a predefined scope:
 
-![example: target chooser](targetchooser_example.png)
+![example: target chooser](images/targetchooser_example.png)
 
 Example code:
 

@@ -176,12 +176,12 @@ The following items are cited from different UX guidelines from the web, and mig
 Use the predefined colors in MPS or define your colors using the class [JBColor](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7EJBColor) with the constructor `JBColor(light theme color, dark theme color)`. By using this class, verifying if the user is [using the Darcula theme](https://stackoverflow.com/c/itemis-mps/questions/426) shouldn't be necessary. The MPS colors already support the light and dark theme because they inherit from `JBColor`. As seen in the screenshot below, the colors can be different when using the dark theme (e.g., the white and black colors). Don't use hard-coded hex colors or the class [Color](http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt%28JDK%2F%29%2F%7EColor).
 
 <figure markdown>
-  ![light theme](light_theme_colors.png)
+  ![light theme](images/light_theme_colors.png)
   <figcaption>Light theme</figcaption>
 </figure>
 
 <figure markdown>
-  ![dark theme](dark_theme_colors.png)
+  ![dark theme](images/dark_theme_colors.png)
   <figcaption>Dark theme</figcaption>
 </figure>
 
@@ -189,7 +189,7 @@ Ensure the foreground color is readable for the chosen background (see preceding
 
 Example for colors with a good contrast ratio (foreground: black; you can find the ratio after the hex code):
 
-![good color ratio](colors_good_contrast_ratio.png)
+![good color ratio](images/colors_good_contrast_ratio.png)
 
 If this change isn't feasible, you can switch to the default theme (useful for RCPs):
 

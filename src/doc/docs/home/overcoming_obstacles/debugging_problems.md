@@ -20,7 +20,7 @@ When calculating a type fails, the [type system trace](https://www.jetbrains.com
 
 You can find fatal errors by clicking on the error icon in the bottom right corner of the window.
 
-![IDE fatal errors](ide_fatal_errors.png)
+![IDE fatal errors](images/ide_fatal_errors.png)
 
 This dialog contains exceptions your language, MPS platforms, or MPS itself might cause. In the provided example, the source of the error is deceptive: the plugin that contains the exception is MPS core, but looking at the package name, we see that the exception comes from [Shadow Models](https://jetbrains.github.io/MPS-extensions/extensions/other/shadow-models/).
 If you need help determining where an error comes from, look at the page [issue trackers](issue_trackers.md). Only report the error to the JetBrains MPS Tracker if MPS causes the exception. To analyze the exception, open the error dialog and copy the message. Then click in the main menu on *Analyze* --> *Analyze Stack Trace* and press *ok*.
@@ -32,7 +32,7 @@ Log statements, MPS platforms, MPS, and the IntelliJ platform can write error me
 
 ### The Editor Can’t Be Rendered
 
-![error creating editor cell](error_creating_editor_cell.png)
+![error creating editor cell](images/error_creating_editor_cell.png)
 
 When the editor can't create an editor cell, the stack trace can be analyzed by clicking on *Stacktrace*. Editor-related exceptions can have more severe consequences than other exceptions like fatal errors: in the worst-case scenario, you can't open the editor, or MPS freezes completely. When this happens, locate the MPS module that causes the freeze in your local file explorer, delete the *_gen* folders so that MPS can't load the module, and restart. Now the module is not active anymore, and you can start debugging. The same approach works for application and project plugins that crash the MPS instance. If your language does not cause the exception, please report the issue to the language's developer.
 

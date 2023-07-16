@@ -11,7 +11,7 @@ The language ^^com.mbeddr.doc^^ in {{ mbeddr() }} contributes to this aspect. An
 can be found [here](http://mbeddr.com/files/documentationdocumentation.pdf). It allows defining a documentation node that you export to XHTML, Latex, and MarkDown. You can implement new targets quickly. When you invoke the intention *Add Reference to
 Documented Concept* while defining a new section as part of a chapter, the *Documentation* tool at the bottom of the screen shows the documentation for this concept.
 
-![mbeddr documentation tool](mbeddr_documentation_tool.png)
+![mbeddr documentation tool](images/documentation/mbeddr_documentation_tool.png)
 
 !!! question "How do you export the documentation?"
 

@@ -51,7 +51,7 @@ generator configurations, the generator of this language will be invoked by defa
 
     You can write a script on the console to find it. For example:
 
-    ![find nodes on the console by ID](node_by_id_console.png)
+    ![find nodes on the console by ID](images/structure/node_by_id_console.png)
 
     The *Navigate* main menu also contains an action *Go to node by ID*.
 

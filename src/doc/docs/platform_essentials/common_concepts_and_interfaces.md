@@ -22,7 +22,7 @@ To extend assessments, extend the class [AssessmentQuery](AssessmentQuery) to cr
 
 Example:
 
-![example for an assessment query: interpreter coverage](example_interpreter_coverage.png)
+![example for an assessment query: interpreter coverage](images/example_interpreter_coverage.png)
 
 
 #### Chunk
@@ -31,7 +31,7 @@ A node of the class [Chunk](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-40
 
 Example:
 
-![example: simple library with an import](example_library.png)
+![example: simple library with an import](images/example_library.png)
 
 #### ICommentable
 
@@ -47,7 +47,7 @@ Implement [ITreeViewRoot](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049
 
 Example: IETS3 call tree of functions
 
-![iets3 call tree of functions](iets3_calltree.png)
+![iets3 call tree of functions](images/iets3_calltree.png)
 
 #### IContainerOfUniqueNames
 
@@ -90,7 +90,7 @@ Implement [ICanRunCheckManually](http://127.0.0.1:63320/node?ref=r%3A657c9fde-2f
 
 Example:
 
-![KernelF: run check manually](run_check_manually.gif)
+![KernelF: run check manually](gifs/run_check_manually.gif)
 
 
 #### IOptionallyNamed

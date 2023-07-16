@@ -45,7 +45,7 @@ Import the language and create a new [ExtensionClass](http://127.0.0.1:63320/nod
 
 As a starting point, create a dependency to the model ^^com.mbeddr.mpsutil.extensionclass.annotation.apache.commons.lang3^^, which provides extension methods with valuable parameter names for Apache Commons StringUtils, ObjectUtils, and StringEscapeUtils.
 
-![example: extension class](extensionclass_example.png)
+![example: extension class](images/extensionclass_example.png)
 
 ## Language Plugin Extensions
 
@@ -63,7 +63,7 @@ This language is an extension of the *parameterized* transformation language par
 iterating over the parameter object (*parameterizable parameterized* menu part) or creating a dynamic submenu based on
 the parameter object (*parameterized submenu*).
 
-![example:ccmenu](ccmenu_example.png)
+![example:ccmenu](images/ccmenu_example.png)
 
 For completion styling and item priorities, use [completion styling](https://blog.jetbrains.com/mps/2019/04/jetbrains-mps\-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored) instead.
 
@@ -109,9 +109,9 @@ MPS references all nodes by their id, not their name. Still, humans see only the
 
 Example concept:
 
-![example: unique names in concept declaration](uniquenames_concept_plain.png)
+![example: unique names in concept declaration](images/uniquenames_concept_plain.png)
 
 Example Base Language:
 
-![example: unique names in Base Language](uniquenames_class_unique.png)
+![example: unique names in Base Language](images/uniquenames_class_unique.png)
 

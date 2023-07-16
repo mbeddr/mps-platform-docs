@@ -16,17 +16,17 @@ and should therefore be avoided.
     [Contrast checkers](https://webaim.org/resources/contrastchecker) can also help you.
     Here are some colors with high contrast:
 
-    ![colors with good contrast ratio](colors.png)
+    ![colors with good contrast ratio](images/colors.png)
 
     When using a grayscale color, ensure the text color doesn't exceed 48% brightness ([source](https://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/)). Ensure to provide different colors for different color schemes (e.g., Darcula theme vs light theme).
 
     **Bad example #1**
 
-    ![bad readability](bad_readability_1.png)
+    ![bad readability](images/bad_readability_1.png)
 
     **Bad example #2**
 
-    ![bad readability](bad_readability_2.png)
+    ![bad readability](images/bad_readability_2.png)
 
 !!! hint "Bold and underline aren't used together."
 
@@ -48,7 +48,7 @@ and should therefore be avoided.
 !!! hint "You use buttons correctly."
 
     (Swing) Buttons use appropriate symbols/text to make clear what they do. You can also use buttons as up and down keys. You can hide them to not to disrupt the text editing:
-    ![hidable buttons](hide_buttons.png)
+    ![hidable buttons](images/hide_buttons.png)
     
     Add an option to hide buttons (checkbox, editor hint, action, etc.).
 
@@ -68,12 +68,12 @@ and should therefore be avoided.
     **Bad example**
 
     Greyscale editor + grey is associated with disabled content/meta information such as comments.
-    ![grey editor](grey_editor.png)
+    ![grey editor](images/grey_editor.png)
 
 
     **Good example**
     
-    ![use of color](use_of_color.png)
+    ![use of color](images/use_of_color.png)
     
     Color distinguishes different language features: BLUE for numbers, lila/green for CONSTANTS.
 
@@ -82,7 +82,7 @@ and should therefore be avoided.
     Use labels consistently in the design (e.g., always bold, colon after label). The same goes for key-value pairs.
     There is no best practice for the separation between label and text. [Should label and field be separated with colon?](https://ux.stackexchange.com/questions/3611/should-label-and-field-be-separated-with-colon) contains some ideas and common guidelines.
     
-    ![key value pair](key_value_pair.png)
+    ![key value pair](images/key_value_pair.png)
 
 !!! hint "The context of UI elements is consistent."
     
@@ -95,7 +95,7 @@ and should therefore be avoided.
     
     **Bad example**
     
-    ![missing empty statement](missing_empty_statement.png){width="500px"}
+    ![missing empty statement](images/missing_empty_statement.png){width="500px"}
 
 !!! hint "Different groups are distinguishable from each other."
 
@@ -105,7 +105,7 @@ and should therefore be avoided.
     
     Emphasize special operations or literals to make it clear that they are not. Other good examples in Base Language are extension methods.
 
-    ![emphasize special operations](emphasize_special_operations.png)
+    ![emphasize special operations](images/emphasize_special_operations.png)
 
 !!! hint "Enough paddings surround elements."
     
@@ -143,7 +143,7 @@ and should therefore be avoided.
 
     **Bad example**
 
-    ![header_content keywordbold](header_content_keyword_bold.png)
+    ![header_content keywordbold](images/header_content_keyword_bold.png)
 
     The header and the start of the child concepts use bold font and the same text.
     In this example, the text "Output" is redundant. The header should be larger.
@@ -153,7 +153,7 @@ and should therefore be avoided.
 
     **Mixed example**
 
-    ![header-input-output](header_input_output.png)
+    ![header-input-output](images/header_input_output.png)
 
 !!! hint "The lines are just a little thick and not textual."
 
@@ -161,20 +161,20 @@ and should therefore be avoided.
 
     **Bad example**
 
-    ![bad lines](bad_lines.png)
+    ![bad lines](images/bad_lines.png)
 
 !!! hint "You don't emphasize meta/not important information."
 
     **Good example**
 
-    ![state machine](meta_information_grey1.png)
+    ![state machine](images/meta_information_grey1.png)
 
     A smaller font, light gray color, or a different font works well. Inherited values can also be shown this way: display them as placeholder values in light gray.
     Don't emphasize comments by making them bold or stand out in any way.
 
     **Bad example**
 
-    ![emphasized comments](emphasized_comments.png)
+    ![emphasized comments](images/emphasized_comments.png)
 
 !!! hint "Don't show the reflective editor."
 
@@ -183,7 +183,7 @@ and should therefore be avoided.
 
     **Bad example**
 
-    ![reflective editor](reflective_editor.png){width="300px"}
+    ![reflective editor](images/reflective_editor.png){width="300px"}
 
 !!! hint "You use the right form of projection for the task in the editor."
 
@@ -191,7 +191,7 @@ and should therefore be avoided.
 
     **Example: multiple projections**
 
-    ![multiple projections](multiple_projections.png)
+    ![multiple projections](images/multiple_projections.png)
 
 !!! hint "You didn't forget to enable anti-aliasing for custom Java Swing components."
 

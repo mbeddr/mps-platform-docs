@@ -64,19 +64,19 @@ alias: generator_aspect
 
     - Create the extension point in the plugin aspect of a language $L_A$.
 
-    ![extension point ModelMergeExt](extension_point_ModelMergeExt.png){width="600px"}
+    ![extension point ModelMergeExt](images/generator/model_merge_ext_extension_point.png){width="600px"}
 
     - In the generator *main*, you need to create two root mapping rules for $Q$ (which is ModelMerge in our case).
 
-    ![ModelMergeExt generator](ModelMergeExt_generator.png){width="600px"}
+    ![ModelMergeExt generator](images/generator/model_merge_ext_generator.png){width="600px"}
 
     - map_ModelMerge maps $Q$ to a class that extends $E$ (here `ConceptMergeSpec`).
     - map_ModelMerge_extension will generate an extension for $Q$. It is an extension RootMapping which can be selected from the intention. 
 
-    ![ModelMergeExt root template](ModelMergeExt_root_template.png)
+    ![ModelMergeExt root template](images/generator/model_merge_ext_root_template.png)
     
     The code for the Reference-Macro in the figure above should look like this.
-    ![ModelMergeExt_reference_macro.png](ModelMergeExt_reference_macro.png)
+    ![ModelMergeExt_reference_macro.png](images/generator/model_merge_ext_reference_macro.png)
 
     Make sure you have ^^jetbrains.mps.lang.extension^^ included as language in the plugin.
 
@@ -215,7 +215,7 @@ sections answers some question that still often arise.
     > That property holds more than 64000 characters, and the Java compiler gives me a *constant string too long* error.
     > What can I do?
 
-    > ![long string property macro](long_string_property_macro.png){width="600px"}
+    > ![long string property macro](images/generator/long_string_property_macro.png){width="600px"}
 
     **Option 1**: Extract into a separate file
 
@@ -231,7 +231,7 @@ sections answers some question that still often arise.
     * In the property macro inside the loop, we pull that property out of the node again (the inspector is not visible in the screenshot).
     * It is a coincidence that we create nodes of the same concept and use the same property for the loop content than for the outside context node. You may light-quote anything of type string here.
 
-    ![long string improved macro](long_string_improved_macro.png)
+    ![long string improved macro](images/generator/long_string_improved_macro.png)
 
     {{ contribution_by('abstraktor') }}
 
@@ -343,7 +343,7 @@ In addition to reading the following questions, read [Debugging generators](http
     
     Try turning off *Apply transformations in place* in your MPS settings under *Build, Execution, Deployment* --> *Generator* --> *General*, as this is unset in the command line (note that this setting doesn't appear in the search):
     
-    ![generator settings](generator_settings.png){width="600px"}
+    ![generator settings](images/generator/generator_settings.png){width="600px"}
     
     Also, turning off the build in parallel threads may help.
     
