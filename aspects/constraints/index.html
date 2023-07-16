@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1701,8 +1712,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1713,28 +1727,25 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="constraints-aspect">Constraints Aspect<a class="headerlink" href="#constraints-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="constraints-aspect"><a href="https://www.jetbrains.com/help/mps/constraints.html">Constraints Aspect</a><a class="headerlink" href="#constraints-aspect" title="Permanent link">&para; ⧉</a></h1>
 <p>The constraints aspect defines constraints for the concepts of the language.</p>
-<ul>
-<li><a href="https://www.jetbrains.com/help/mps/constraints.html">official documentation</a></li>
-</ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <p>You can create new constraints using the concept <code>ConceptConstraints</code>. The "new" experimental constraint rules still might
 not support all the features of the old approach.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you hide inapplicable operands in dot expressions?</p>
-<p><a href="https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/">Dot expressions: hiding inapplicable operands</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/dot-expressions-hiding-inapplicable-operands/">Dot expressions: hiding inapplicable operands ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there any useful helper classes?</p>
 <ul>
-<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.constraints%28MPS.Core%2F%29%2F%7EModelConstraints">ModelConstraints</a>: This class can calculate the constraint/scope of a specific concept/node programmatically.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.constraints%28MPS.Core%2F%29%2F%7EModelConstraints">ModelConstraints ⧉</a>: This class can calculate the constraint/scope of a specific concept/node programmatically.</li>
 </ul>
 </div>
-<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/constraints.html#propertyconstraints">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/constraints.html#propertyconstraints">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para; ⧉</a></h2>
 <p>You can use property constraints to add setters, and getters and check if a new property value is valid. The getters are especially
 useful for setting properties based on other properties. Example: A wrapper concept that referencable a node can use the name of the
-reference as its name. For a reference <em>r</em>, you can implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> in your concept and set the property getter of
+reference as its name. For a reference <em>r</em>, you can implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept ⧉</a> in your concept and set the property getter of
 <em>name</em> to <code>r.name</code>.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you set default values for properties?</p>
@@ -1744,24 +1755,24 @@ reference as its name. For a reference <em>r</em>, you can implement <a href="ht
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
     />
 </svg>
-</span><a href="http://mbeddr.com/platform.html">mbeddr platform</a>.</p>
+</span><a href="http://mbeddr.com/platform.html">mbeddr platform ⧉</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The property value isn't valid.</p>
-<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/22-invalid-property-values/">Invalid property values</a></p>
+<p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/22-invalid-property-values/">Invalid property values ⧉</a></p>
 </div>
-<h2 id="references"><a href="https://www.jetbrains.com/help/mps/constraints.html#referentconstraints">References</a><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references"><a href="https://www.jetbrains.com/help/mps/constraints.html#referentconstraints">References</a><a class="headerlink" href="#references" title="Permanent link">&para; ⧉</a></h2>
 <p>You normally add a node reference constraint to set the scope. The inline scopes and inherited scopes both have advantages and
 disadvantages. You normally use the inline scopes where you can extract the scope into a utility class when you want to reuse it.
 The inherited scope is often used for references that inherit the referenced concept's scope. It makes finding the original scope declaration harder, though.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you emulate references?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
-<h2 id="scopes"><a href="https://www.jetbrains.com/help/mps/scopes.html">Scopes</a><a class="headerlink" href="#scopes" title="Permanent link">&para;</a></h2>
+<h2 id="scopes"><a href="https://www.jetbrains.com/help/mps/scopes.html">Scopes</a><a class="headerlink" href="#scopes" title="Permanent link">&para; ⧉</a></h2>
 <div class="admonition question">
 <p class="admonition-title">How do you filter scopes? Which scopes are available?</p>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664">FilteringScope</a> takes an existing scope and can do the filtering. <a href="https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope">Using reference scope | <abbr title="Meta Programming System">MPS</abbr> documentation</a>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F3961775458390497664">FilteringScope</a> takes an existing scope and can do the filtering. <a href="https://www.jetbrains.com/help/mps/scopes.html#usingreferencescope">Using reference scope | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a>
 lists some other scope implementations.</p>
 </div>
 <details class="question">
@@ -1772,16 +1783,16 @@ How do you do that?</p>
 </blockquote>
 <p>You're probably looking for <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forResolvableElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>.</p>
 <p><strong>forResolvableElements</strong>
-creates list scopes and also implements getName(child) like forNamedElements, yet returning the resolveInfo if the node is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1196978630214">IResolveInfo</a>, the name if it is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a> or else calls <code class="highlight"><span class="n">getPresentation</span><span class="p">()</span><span class="w"></span></code>.</p>
+creates list scopes and also implements getName(child) like forNamedElements, yet returning the resolveInfo if the node is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1196978630214">IResolveInfo</a>, the name if it is an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept ⧉</a> or else calls <code class="highlight"><span class="n">getPresentation</span><span class="p">()</span><span class="w"></span></code>.</p>
 <p><strong>forNamedElements</strong></p>
 <p>I'm unsure about the use-case of <code class="highlight"><span class="n">ListScope</span><span class="p">.</span><span class="na">forNamedElements</span><span class="p">(</span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&lt;&gt;&gt;</span><span class="w"> </span><span class="n">elements</span><span class="p">)</span><span class="w"></span></code>, but it behaves unexpected in some cases:</p>
 <p>Note that elements with a blank name are not part of the scope created by <code>ListScope.forNamedElements(sequence&lt;node&lt;&gt;&gt; elements)</code>. They'<abbr title="linked list">ll</abbr> get silently omitted.</p>
-<p>Note that elements that are not an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a>, will make <code>forNamedElements</code> throw an exception.</p>
+<p>Note that elements that are not an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept ⧉</a>, will make <code>forNamedElements</code> throw an exception.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">How can you combine scopes?</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F8401916545537277021">CompositeScope</a>.</p>
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3A314576fc-3aee-4386-a0a5-a38348ac317d%28jetbrains.mps.scope%29%2F8401916545537277021">CompositeScope ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What's the difference between <em>parent scope</em> and <em>super.getScope</em>?</p>
@@ -1794,7 +1805,7 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1992,7 +2003,7 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

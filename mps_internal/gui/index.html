@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1531,18 +1542,27 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
-      
-        <a href="../../tags/#internals" class="md-tagmaterial/close">internals</a>
-      
-    
+        
+        
       
       
-        <a href="../../tags/#ui" class="md-tagmaterial/close">ui</a>
+        <a href="../../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#intellij" class="md-tagmaterial/close">intellij</a>
+      
+        <a href="../../tags/#ui" class="md-tag md-tag-icon">ui</a>
+      
+    
+      
+        
+        
+      
+      
+        <a href="../../tags/#intellij" class="md-tag md-tag-icon">intellij</a>
       
     
   </nav>
@@ -1556,27 +1576,27 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <h1>IntelliJ UI</h1>
 
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-05/18-fixing-ugly-trees">Fixing ugly trees</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/24-centering-dialogs/">Centering dialogs</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/18-fixing-ugly-trees">Fixing ugly trees ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/24-centering-dialogs/">Centering dialogs ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="swing-components">Swing Components<a class="headerlink" href="#swing-components" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use components from the IntelliJ platform. The
-  IntelliJ Platform Plugin SDK mentions <a href="https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html">some more components</a>. Use the <a href="https://jetbrains.github.io/ui/">IntelliJ platform <abbr title="User Interface">UI</abbr> guidelines</a> to create consistent and usable user interfaces.</li>
+  IntelliJ Platform Plugin SDK mentions <a href="https://plugins.jetbrains.com/docs/intellij/misc-swing-components.html">some more components</a>. Use the <a href="https://jetbrains.github.io/ui/">IntelliJ platform <abbr title="User Interface">UI</abbr> guidelines ⧉</a> to create consistent and usable user interfaces.</li>
 <li>Capitalization: Most short textual items (menus, buttons, labels, for example) should have headline capitalization. Capitalize all words except for common words with up to three letters (<em>a</em>, <em>an</em>, <em>the</em>, <em>and</em>, <em>or</em>, <em>so</em>, <em>yet</em>, etc.) that don't appear as the first or last word. If the text isn't short, you should use capitalization in ordinary prose (sentence capitalization) instead.</li>
-<li>Read the <a href="https://docs.oracle.com/javase/tutorial/uiswing/index.html">Swing tutorials</a> to get a better understanding of the components.</li>
+<li>Read the <a href="https://docs.oracle.com/javase/tutorial/uiswing/index.html">Swing tutorials ⧉</a> to get a better understanding of the components.</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">Where can you find an overview of the user interface?</p>
-<p>The IntelliJ IDEA <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html">documentation</a> explains the user interface
+<p>The IntelliJ IDEA <a href="https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html">documentation ⧉</a> explains the user interface
 from a user perspective.
- The <a href="https://plugins.jetbrains.com/docs/intellij/user-interface-components.html">IntelliJ Platform Plugin SDK</a> contains a more
+ The <a href="https://plugins.jetbrains.com/docs/intellij/user-interface-components.html">IntelliJ Platform Plugin SDK ⧉</a> contains a more
 technical explanation.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What exactly is an <abbr title="Meta Programming System">MPS</abbr> action? How do they work?</p>
-<p>The <a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups"><abbr title="Meta Programming System">MPS</abbr> actions</a> compile down to <a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">IntelliJ platform actions</a>, so you see actions from <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ platform (e.g., Close Floating Navigation Bar). Most icon buttons, like the buttons in the upper right corner of the window, or the image buttons in the <abbr title="Meta Programming System">MPS</abbr> tools, are also IntelliJ buttons.</p>
-<p>Actions that you can turn on or off are of type <a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html#useful-action-base-classes">ToggleAction</a>. They are used, for example, in KernelF in the run menu. A deprecated concept  <em>addJavaAction</em>  lets you add IntelliJ actions when referencing actions in an <abbr title="Meta Programming System">MPS</abbr> plugin.</p>
+<p>The <a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups"><abbr title="Meta Programming System">MPS</abbr> actions</a> compile down to <a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">IntelliJ platform actions ⧉</a>, so you see actions from <abbr title="Meta Programming System">MPS</abbr> and the IntelliJ platform (e.g., Close Floating Navigation Bar). Most icon buttons, like the buttons in the upper right corner of the window, or the image buttons in the <abbr title="Meta Programming System">MPS</abbr> tools, are also IntelliJ buttons.</p>
+<p>Actions that you can turn on or off are of type <a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html#useful-action-base-classes">ToggleAction ⧉</a>. They are used, for example, in KernelF in the run menu. A deprecated concept  <em>addJavaAction</em>  lets you add IntelliJ actions when referencing actions in an <abbr title="Meta Programming System">MPS</abbr> plugin.</p>
 <p>To remove actions, use the <a href="../../platform_essentials/mpsutils/plugin_and_rcp/#actions-filter">actions filter</a> language. You can modify the shortcuts of actions locally in <em>Preferences-&gt;Keymap</em>.</p>
 </div>
 <div class="admonition question">
@@ -1584,19 +1604,19 @@ technical explanation.</p>
 <p>There are a few different things that you could try:</p>
 <ol>
 <li>Guess. If the caption contains, for example, the text "Clone", search for a root node that has the name Clone in it. Alternatively, you can try searching through the console: <code>#instances&lt;scope = global&gt;(ActionDeclaration).where({~it =&gt; it.caption.contains("Clone"); })</code></li>
-<li>Search the <abbr title="Meta Programming System">MPS</abbr> GitHub repository: <a href="https://github.com/JetBrains/MPS/search?q=clone+solution">https://github.com/JetBrains/MPS/search?q=clone+solution</a> for commits or code mentioning your keywords. In this case, the action must be called "CloneModule" based on the first results.</li>
-<li>If you find a similar action in the same context menu, check the other actions/groups in the same module. You might have found the group<a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F1223018726868">SolutionRefactoring</a> through the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F3734045384532066586">RenameModule</a> action, which contains your action.</li>
+<li>Search the <abbr title="Meta Programming System">MPS</abbr> GitHub repository: <a href="https://github.com/JetBrains/MPS/search?q=clone+solution">https://github.com/JetBrains/MPS/search?q=clone+solution ⧉</a> for commits or code mentioning your keywords. In this case, the action must be called "CloneModule" based on the first results.</li>
+<li>If you find a similar action in the same context menu, check the other actions/groups in the same module. You might have found the group<a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F1223018726868">SolutionRefactoring</a> through the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895904a4%28jetbrains.mps.ide.actions%29%2F3734045384532066586">RenameModule ⧉</a> action, which contains your action.</li>
 </ol>
-<p>If the caption is not dynamic, number 1 usually works. Suppose the action is located in the <em><abbr title="Meta Programming System">MPS</abbr>.IDEA</em> module, you will find it in the <a href="https://github.com/JetBrains/intellij-community">IntelliJ community sources</a>.</p>
+<p>If the caption is not dynamic, number 1 usually works. Suppose the action is located in the <em><abbr title="Meta Programming System">MPS</abbr>.IDEA</em> module, you will find it in the <a href="https://github.com/JetBrains/intellij-community">IntelliJ community sources ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you show modal dialogs for inputting text?</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.ui%28MPS.IDEA%2F%29%2F%7EMessages"><abbr title="commercial/common/communication">com</abbr>.intellij.openapi.<abbr title="user interface">ui</abbr>.Messages</a>.</p>
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.ui%28MPS.IDEA%2F%29%2F%7EMessages"><abbr title="commercial/common/communication">com</abbr>.intellij.openapi.<abbr title="user interface">ui</abbr>.Messages ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add messages to the right side of the window?</p>
-<p>In IntelliJ IDEA, it is called an <a href="https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html">error stripe</a>.
-In <abbr title="Meta Programming System">MPS</abbr> it is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter">MessagesGutter</a>:
+<p>In IntelliJ IDEA, it is called an <a href="https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html">error stripe ⧉</a>.
+In <abbr title="Meta Programming System">MPS</abbr> it is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter">MessagesGutter ⧉</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">jetbrains</span><span class="p">.</span><span class="na">mps</span><span class="p">.</span><span class="na">nodeEditor</span><span class="p">.</span><span class="na">EditorComponent</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">EditorComponent</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">());</span><span class="w"> </span>
@@ -1606,42 +1626,42 @@ In <abbr title="Meta Programming System">MPS</abbr> it is called <a href="http:/
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you add things to the left of the editor? (examples: breakpoints, go subclasses)</p>
-<p>The component is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.leftHighlighter%28MPS.Editor%2F%29%2F%7ELeftEditorHighlighter">LeftEditorHighlighter</a>.
- Implement a checker to show messages in this component (for example <a href="http://127.0.0.1:63320/node?ref=r%3Afa4569a3-1bd4-4159-97bc-db03b3aeff88%28jetbrains.mps.java.platform.highlighters%29%2F8432634623182578830">OverrideMethodsChecker</a>).</p>
+<p>The component is called <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.leftHighlighter%28MPS.Editor%2F%29%2F%7ELeftEditorHighlighter">LeftEditorHighlighter ⧉</a>.
+ Implement a checker to show messages in this component (for example <a href="http://127.0.0.1:63320/node?ref=r%3Afa4569a3-1bd4-4159-97bc-db03b3aeff88%28jetbrains.mps.java.platform.highlighters%29%2F8432634623182578830">OverrideMethodsChecker ⧉</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add an icon to the status bar?</p>
-<p>Look at the implementation of the <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsWidget.java#L26">transient models widget</a> and
-its initialization in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsNotification.java#L34">TransientModelsNotification</a>.</p>
+<p>Look at the implementation of the <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsWidget.java#L26">transient models widget ⧉</a> and
+its initialization in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a26e8339c8bb5aaa90ce29508c0f908/plugins/mps-make/source_gen/jetbrains/mps/ide/make/actions/TransientModelsNotification.java#L34">TransientModelsNotification ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What parts of the IntelliJ Platform SDK can't be used in <abbr title="Meta Programming System">MPS</abbr> because they are not supported?</p>
-<p>Everything related to text files: <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">Documents</a>,
-<a href="https://plugins.jetbrains.com/docs/intellij/psi-files.html"><abbr title="Program Structure Interface">PSI</abbr> files</a>, <a href="https://plugins.jetbrains.com/docs/intellij/templates.html">Templates</a>, QuickDoc,
-<a href="https://plugins.jetbrains.com/plugin/8554-ide-features-trainer"><abbr title="Integrated Development Environment">IDE</abbr> Features Trainer</a>, CodeSmellDetector, and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">Custom Language Support</a>.</p>
+<p>Everything related to text files: <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">Documents ⧉</a>,
+<a href="https://plugins.jetbrains.com/docs/intellij/psi-files.html"><abbr title="Program Structure Interface">PSI</abbr> files</a>, <a href="https://plugins.jetbrains.com/docs/intellij/templates.html">Templates ⧉</a>, QuickDoc,
+<a href="https://plugins.jetbrains.com/plugin/8554-ide-features-trainer"><abbr title="Integrated Development Environment">IDE</abbr> Features Trainer</a>, CodeSmellDetector, and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">Custom Language Support ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you have clickable icons in the left editor margin?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/">Clickable icons in the left editor margin</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/18-clickable-icons-in-left-editor-margin/">Clickable icons in the left editor margin ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there alternatives to message boxes?</p>
-<p><a href="https://specificlanguages.com/posts/notification-balloons-instead-of-message-boxes/">Use notification balloons instead of message boxes</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/notification-balloons-instead-of-message-boxes/">Use notification balloons instead of message boxes ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What IDEA <abbr title="User Interface">UI</abbr> elements are available?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/09-idea-ui-components/">Polished <abbr title="User Interface">UI</abbr> for free: IDEA <abbr title="User Interface">UI</abbr> components</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/09-idea-ui-components/">Polished <abbr title="User Interface">UI</abbr> for free: IDEA <abbr title="User Interface">UI</abbr> components ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you create menu items with checkboxes or combo boxes and make the actions findable?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/">Extended actions: Checkboxes</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/17-extended-actions-combo-boxes/">Extended actions: Combo boxes</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/18-extended-actions-making-actions-findable/">Extended actions: Making actions findable</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/16-extended-actions-checkboxes/">Extended actions: Checkboxes ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/17-extended-actions-combo-boxes/">Extended actions: Combo boxes ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/18-extended-actions-making-actions-findable/">Extended actions: Making actions findable ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you retrieve all opened windows in <a href="https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen">split-screen mode</a>?</p>
+<p class="admonition-title">How can you retrieve all opened windows in <a href="https://www.jetbrains.com/help/idea/using-code-editor.html#split_screen">split-screen mode ⧉</a>?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">FileEditorManagerEx</span><span class="p">.</span><span class="na">getInstanceEx</span><span class="p">(</span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="err">#</span><span class="n">project</span><span class="p">)).</span><span class="na">getSplitters</span><span class="p">().</span><span class="na">getWindows</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1853,7 +1873,7 @@ its initialization in <a href="https://github.com/JetBrains/MPS/blob/d08cbd361a2
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

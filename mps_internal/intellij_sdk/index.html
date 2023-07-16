@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1531,13 +1542,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#internals" class="md-tagmaterial/close">internals</a>
+      
+        <a href="../../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#intellij" class="md-tagmaterial/close">intellij</a>
+      
+        <a href="../../tags/#intellij" class="md-tag md-tag-icon">intellij</a>
       
     
   </nav>
@@ -1549,40 +1566,40 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 
 <h1 id="intellij-sdk">IntelliJ SDK<a class="headerlink" href="#intellij-sdk" title="Permanent link">&para;</a></h1>
-<p>The best place to learn more about the IntelliJ platform is the <a href="https://plugins.jetbrains.com/docs/intellij/welcome.html">IntelliJ Platform SDK documentation</a>.
-Two additional resources are also helpful if you want to understand how IntelliJ plugins are written (<a href="https://developerlife.com/2020/11/21/idea-plugin-example-intro/">Introduction to creating IntelliJ IDEA plugins</a>) and how the IDEA threading model works(<a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/">Advanced guide to creating IntelliJ IDEA plugins</a>).</p>
-<p>Some parts of <abbr title="Meta Programming System">MPS</abbr> are different from the IntelliJ platform, so those chapters are irrelevant: <a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a> + all text editor-specific code and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">custom languages support</a>.</p>
+<p>The best place to learn more about the IntelliJ platform is the <a href="https://plugins.jetbrains.com/docs/intellij/welcome.html">IntelliJ Platform SDK documentation ⧉</a>.
+Two additional resources are also helpful if you want to understand how IntelliJ plugins are written (<a href="https://developerlife.com/2020/11/21/idea-plugin-example-intro/">Introduction to creating IntelliJ IDEA plugins</a>) and how the IDEA threading model works (<a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/">Advanced guide to creating IntelliJ IDEA plugins ⧉</a>).</p>
+<p>Some parts of <abbr title="Meta Programming System">MPS</abbr> are different from the IntelliJ platform, so those chapters are irrelevant: <a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a> + all text editor-specific code and <a href="https://plugins.jetbrains.com/docs/intellij/custom-language-support.html">custom languages support ⧉</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">Where can you find a list of all IntelliJ registry entries?</p>
-<p>You find them in <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/util/resources/misc/registry.properties">registry.properties</a>.</p>
+<p>You find them in <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/util/resources/misc/registry.properties">registry.properties ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I access the recent projects list more easily?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/22-better-recent-projects/">A better "Recent Projects" menu</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/22-better-recent-projects/">A better "Recent Projects" menu ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I create a class/component that <abbr title="Meta Programming System">MPS</abbr> loads on demand?</p>
-<p>Create a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">lightweight service</a> using the
-<a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.components%28MPS.IDEA%2F%29%2F7879151873219801267">@Service</a> annotation. An example service <em>MyService</em> could then be accessed through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">getService</span><span class="p">(</span><span class="n">MyService</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"></span></code></p>
+<p>Create a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">lightweight service ⧉</a> using the
+<a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.components%28MPS.IDEA%2F%29%2F7879151873219801267">@Service ⧉</a> annotation. An example service <em>MyService</em> could then be accessed through <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">getService</span><span class="p">(</span><span class="n">MyService</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"></span></code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add a custom action to a toolbar?</p>
-<p>It is assumed that this is a toolbar group that is populated with custom actions. There is an <code>addJavaAction</code> that can be used in the ActionGroupDeclaration (example from <a href="http://127.0.0.1:63320/node?ref=r%3Ae3e5593b-dfcd-4a2e-b10f-f1ed4a43f093%28org.iets3.core.expr.plugin.plugin%29%2F4189697348346388716"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr></a>), which lets you add objects of type AnAction like the ToggleAction in the example. You can circumvent the <abbr title="Meta Programming System">MPS</abbr> action declarations this way.</p>
-<p>It is enough to extend AnAction and implement <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem.ex%28MPS.IDEA%2F%29%2F%7ECustomComponentAction">CustomComponentAction</a> for custom swing components. Before implementing this, search the IntelliJ/<abbr title="Meta Programming System">MPS</abbr> code base for such classes. There are, for example, <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-api/src/com/intellij/openapi/vcs/ui/TextFieldAction.java">TextFieldAction</a> and <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/util/ui/JButtonAction.kt">JButtonAction</a>. Search for [Button|Text|..]Action in <abbr title="Meta Programming System">MPS</abbr> to find such instances and look for existing components in the <abbr title="User Interface">UI</abbr> that look like the ones you need.</p>
-<p><a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Actions | IntelliJ Platform Plugin SDK</a> contains
+<p>It is assumed that this is a toolbar group that is populated with custom actions. There is an <code>addJavaAction</code> that can be used in the ActionGroupDeclaration (example from <a href="http://127.0.0.1:63320/node?ref=r%3Ae3e5593b-dfcd-4a2e-b10f-f1ed4a43f093%28org.iets3.core.expr.plugin.plugin%29%2F4189697348346388716"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a>), which lets you add objects of type AnAction like the ToggleAction in the example. You can circumvent the <abbr title="Meta Programming System">MPS</abbr> action declarations this way.</p>
+<p>It is enough to extend AnAction and implement <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem.ex%28MPS.IDEA%2F%29%2F%7ECustomComponentAction">CustomComponentAction</a> for custom swing components. Before implementing this, search the IntelliJ/<abbr title="Meta Programming System">MPS</abbr> code base for such classes. There are, for example, <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-api/src/com/intellij/openapi/vcs/ui/TextFieldAction.java">TextFieldAction</a> and <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/util/ui/JButtonAction.kt">JButtonAction ⧉</a>. Search for [Button|Text|..]Action in <abbr title="Meta Programming System">MPS</abbr> to find such instances and look for existing components in the <abbr title="User Interface">UI</abbr> that look like the ones you need.</p>
+<p><a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Actions | IntelliJ Platform Plugin SDK ⧉</a> contains
  the general documentation for IntelliJ actions.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How to make messages in the <a href="https://www.jetbrains.com/help/mps/logging.html">messages view</a> clickable?</p>
+<p class="admonition-title">How to make messages in the <a href="https://www.jetbrains.com/help/mps/logging.html">messages view ⧉</a> clickable?</p>
 <p>Technically, the messages view is an <abbr title="Meta Programming System">MPS</abbr> tool unrelated to the IntelliJ platform. The message statement has a throwable parameter that you can used to attach exceptions. In the generator, there is <code>genContext.show error &lt;messageText&gt; -&gt; &lt;node&gt;</code> which takes a message and a node. In <abbr title="Meta Programming System">MPS</abbr> 2022.3, there is also support for a <code>hintObject</code> in the message statement so you can jump directly to a node, model, or module.</p>
 </div>
 <h2 id="message-bus-and-listeners-message-interface">Message Bus and Listeners (Message Interface)<a class="headerlink" href="#message-bus-and-listeners-message-interface" title="Permanent link">&para;</a></h2>
 <p>Reference:</p>
 <ul>
-<li><a href="https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html">IntelliJ Messaging Infrastructure</a></li>
-<li><a href="https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html">Declarative registration of Plugin Listeners</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html">IntelliJ Messaging Infrastructure ⧉</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html">Declarative registration of Plugin Listeners ⧉</a></li>
 </ul>
 <p>You can use a message bus to listen for IntelliJ or custom events and send <abbr title="output">out</abbr> events. You connect and subscribe to different topics through listeners.
 You don't have to store and remove each listener you added; you can disconnect from the bus. Find topics on the
@@ -1629,7 +1646,7 @@ You don't have to store and remove each listener you added; you can disconnect f
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1827,7 +1844,7 @@ You don't have to store and remove each listener you added; you can disconnect f
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

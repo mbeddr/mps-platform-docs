@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1466,12 +1477,12 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li><strong>Pre-installed XML-based format</strong>
     <abbr title="Meta Programming System">MPS</abbr> describes models in an XML format. Git changes are collected per model. It is the default format. There seems to be support for saving user objects (strings, node IDs, etc. but not serializable objects), but this option doesn't seem to be activated. User objects are therefore lost when existing <abbr title="Meta Programming System">MPS</abbr>.</li>
 <li><strong>Pre-installed XML-based File-Per-Root format</strong> (.mpsr) 
-  Models are described in an XML format. Git changes are collected per root node. Some <a href="https://youtrack.jetbrains.com/issues/MPS?q=per%20root%20persistence%20%23Open%20">file-per-root-specific bugs</a> exist.</li>
+  Models are described in an XML format. Git changes are collected per root node. Some <a href="https://youtrack.jetbrains.com/issues/MPS?q=per%20root%20persistence%20%23Open%20">file-per-root-specific bugs ⧉</a> exist.</li>
 <li><strong>Pre-installed Binary-Format</strong> (.mpb)
     Models are saved in a binary format. It can save user objects and should also be able to save serializable objects, but this might not be working. The information is saved directly in the model file.</li>
 </ul>
 <p>The persistence format was improved over the years (v4 - v8). Version 9 is the current format.</p>
-<p>Read the <a href="https://www.jetbrains.com/help/mps/open-api-accessing-models-from-code.html#custompersistence">custom persistence</a> chapter in the documentation to support a custom format.</p>
+<p>Read the <a href="https://www.jetbrains.com/help/mps/open-api-accessing-models-from-code.html#custompersistence">custom persistence ⧉</a> chapter in the documentation to support a custom format.</p>
 <p>Here is a list of some other used file formats:</p>
 <ul>
 <li>languages (.mpl)</li>
@@ -1480,15 +1491,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li>devkit (.devkit)</li>
 <li>model headers (.model)</li>
 <li>Java files (.java)</li>
-<li><a href="https://docs.fileformat.com/programming/kt/">Kotlin files</a> (.kt)</li>
+<li><a href="https://docs.fileformat.com/programming/kt/">Kotlin files ⧉</a> (.kt)</li>
 <li>Kotlin modules (.kotlin)</li>
 <li>compile Java files (.class)</li>
 <li>old <abbr title="Meta Programming System">MPS</abbr> projects (.mpr)</li>
 <li>old workspace format (.mws)</li>
 <li>standalone generators (.mpst)</li>
 <li>Java archives (.jar)</li>
-<li><a href="https://www.jetbrains.com/help/idea/creating-and-managing-modules.html">IntelliJ modules</a> (.iml)</li>
-<li><a href="https://www.jetbrains.com/help/mps/debugger.html#debuggingbaselanguageanditsextensions-integrationwiththejavadebugger">generation <abbr title="information">info</abbr> files</a> (trace.<abbr title="information">info</abbr>)</li>
+<li><a href="https://www.jetbrains.com/help/idea/creating-and-managing-modules.html">IntelliJ modules ⧉</a> (.iml)</li>
+<li><a href="https://www.jetbrains.com/help/mps/debugger.html#debuggingbaselanguageanditsextensions-integrationwiththejavadebugger">generation <abbr title="information">info</abbr> files ⧉</a> (trace.<abbr title="information">info</abbr>)</li>
 </ul>
 
   <hr>
@@ -1698,7 +1709,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1750,7 +1761,7 @@ actions inside an <abbr title="Meta Programming System">MPS</abbr> plugin soluti
 be set, including an activation condition to make this profile the active profile when opening the project or <abbr title="Rich Client Platform">RCP</abbr>. All actions are deactivated in a tree view and can be selected to disable them. To allow actions instead of filtering them use the intention <code>Use allow actions</code> in the
 actions profile declaration. Actions in the section <code>specify toolbar</code> appear in the main toolbar. This toolbar
 can be found at the top left of the window.</p>
-<p><a class="glightbox" href="../../images/actionsfilter_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: actions filter" src="../../images/actionsfilter_example.png" /></a></p>
+<p><a class="glightbox" href="../images/actionsfilter_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: actions filter" src="../images/actionsfilter_example.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">To use the language, you must install the language and the corresponding IntelliJ plugin. <code>./gradlew install</code> can install this plugin. Without the plugin, the language won't load at all.</p>
 </div>
@@ -1758,20 +1769,20 @@ can be found at the top left of the window.</p>
 <p class="admonition-title">When making changes to the language, deactivate the plugin in the preferences so that the model is not read-only. Execute <code>./gradlew install</code> to install the plugin after changing and restart <abbr title="Meta Programming System">MPS</abbr> to test it.</p>
 </div>
 <p>The user can customize the predefined actions profiles in <em>preferences</em> &rarr; <em>Appearance &amp; Behavior</em> &rarr; <em>Actions</em>. New profiles can be created by clicking the <em>+</em> button and deleted by clicking the <em>-</em> button.</p>
-<p><a class="glightbox" href="../../images/actionsfilter_preferences.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="actions filter preferences" src="../../images/actionsfilter_preferences.png" /></a></p>
+<p><a class="glightbox" href="../images/actionsfilter_preferences.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="actions filter preferences" src="../images/actionsfilter_preferences.png" /></a></p>
 <h2 id="preference-form">Preference Form<a class="headerlink" href="#preference-form" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.preferenceform</ins></p>
 </blockquote>
 <p>This language allows adding new preference pages to <em>Preferences</em>&rarr;<em>Other Settings</em>. The language uses the IntelliJ platform
-mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation</a>).</p>
+mechanism for adding preference pages (<a href="https://plugins.jetbrains.com/docs/intellij/settings-guide.html">documentation ⧉</a>).</p>
 <p>Example:</p>
-<p><a class="glightbox" href="../../images/preferenceform_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: preference form" src="../../images/preferenceform_example.png" /></a></p>
+<p><a class="glightbox" href="../images/preferenceform_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: preference form" src="../images/preferenceform_example.png" /></a></p>
 <p>It supports the following options:</p>
 <ul>
 <li><strong>Scope</strong>: Save the preferences on the application or project level</li>
 <li><strong>Help Topic</strong>: The help topic is an internal identifier that can link a page in the <abbr title="Meta Programming System">MPS</abbr> documentation.
-  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined as the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names, search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository</a>.</li>
+  Example: <code>preferences.intentionPowerPack</code> links to <a href="https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack">https://www.jetbrains.com/mps/webhelp/?preferences.intentionPowerPack</a> which redirects to <a href="https://www.jetbrains.com/help/mps/intentions-settings.html">https://www.jetbrains.com/help/mps/intentions-settings.html</a>. The base URL in <abbr title="Meta Programming System">MPS</abbr> is defined as the <a href="https://github.com/JetBrains/MPS/search?q=webhelp-url">XML configuration</a> of a few plugins. To get the other internal names, search for <code>getHelpTopic</code> in the <a href="https://github.com/JetBrains/MPS/search?q=getHelpTopic"><abbr title="Meta Programming System">MPS</abbr> repository</a> and the <a href="https://github.com/JetBrains/intellij-community/search?q=getHelpTopic">IntelliJ Community repository ⧉</a>.</li>
 </ul>
 <p>The preference form supports a few different input elements:</p>
 <ul>
@@ -1796,8 +1807,8 @@ that reference the values of the preference form. Access the input fields throug
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.process</ins></p>
 </blockquote>
 <p>This language allows creating wizards with multiple steps:</p>
-<p><a class="glightbox" href="../../images/wizard_step_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: single step of a custom wizard" src="../../images/wizard_step_example.png" /></a></p>
-<p>Create a new node of instance <a href="http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068">Process</a>. The wizard can have input parameters and produces one output. After defining
+<p><a class="glightbox" href="../images/wizard_step_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: single step of a custom wizard" src="../images/wizard_step_example.png" /></a></p>
+<p>Create a new node of instance <a href="http://127.0.0.1:63320/node?ref=r%3A2ffefd76-4fe0-43c2-9fbd-203c67a47b34%28com.mbeddr.mpsutil.process.structure%29%2F4724180912012603068">Process ⧉</a>. The wizard can have input parameters and produces one output. After defining
 the wizard, you can invoke it from an action. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -1808,13 +1819,13 @@ the wizard, you can invoke it from an action. Example:</p>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>wiz.finish;
 </code></pre></div></td></tr></table></div>
 <p>The <em>show</em> method shows the modal dialog and checks if it was closed with the exit code <em>OK</em>. The <em>finish</em> method
-executed the <em>onFinish</em> callback of every step. For more information, look at the <a href="http://127.0.0.1:63320/node?ref=r%3A9aef0d3c-87c9-4ce3-ad67-def9817c1ab4%28com.mbeddr.mpsutil.process.sandbox.plugin%29%2F4724180912013515813">example</a>.</p>
+executed the <em>onFinish</em> callback of every step. For more information, look at the <a href="http://127.0.0.1:63320/node?ref=r%3A9aef0d3c-87c9-4ce3-ad67-def9817c1ab4%28com.mbeddr.mpsutil.process.sandbox.plugin%29%2F4724180912013515813">example ⧉</a>.</p>
 <h2 id="new-model-rcp">New Model (<abbr title="Rich Client Platform">RCP</abbr>)<a class="headerlink" href="#new-model-rcp" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.rcp</ins></p>
 </blockquote>
-<p>This language allows creating a new action for creating models like the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model</a> of mbeddr.
-Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig</a>. The following settings are supported:</p>
+<p>This language allows creating a new action for creating models like the action <a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F1268036453389576693">New model ⧉</a> of mbeddr.
+Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f-4c3c-80d9-d614915b49c9%28com.mbeddr.mpsutil.rcp.structure%29%2F8503127430094868034">NewModelDialogConfig ⧉</a>. The following settings are supported:</p>
 <ul>
 <li><strong>name</strong>: the name of the new action</li>
 <li><strong>caption</strong>: the text that's shown for the action</li>
@@ -1833,17 +1844,17 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
     />
 </svg>
-</span><a href="http://mbeddr.com/platform.html">mbeddr platform</a> templates preference page:</p>
-<p><a class="glightbox" href="../../images/spreference_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: spreferences" src="../../images/spreference_example.png" /></a></p>
-<p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription</a> (check <abbr title="output">out</abbr> the root "Platform Templates" as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
-<p><a class="glightbox" href="../../images/spreferences_query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="spreferences: query" src="../../images/spreferences_query.png" /></a></p>
+</span><a href="http://mbeddr.com/platform.html">mbeddr platform ⧉</a> templates preference page:</p>
+<p><a class="glightbox" href="../images/spreference_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: spreferences" src="../images/spreference_example.png" /></a></p>
+<p>Such pages are defined using an instance of <a href="http://127.0.0.1:63320/node?ref=c3bfea76-7bba-4f0e-b5a2-ff4e7a8d7cf1%2Fr%3A8d0fa52a-32d1-4359-892e-669a9b66600c%28com.mbeddr.mpsutil.spreferences%2Fcom.mbeddr.mpsutil.spreferences.structure%29%2F6547806146467473938">PreferencePageDescription ⧉</a> (check <abbr title="output">out</abbr> the root "Platform Templates" as an example). This instance must reside in a plugin solution. The data, i.e., the respective <abbr title="Meta Programming System">MPS</abbr> model, is stored as part of the respective project or in <abbr title="Meta Programming System">MPS</abbr> globally (this is configurable). It is possible to access the model that contains the preferences via code:</p>
+<p><a class="glightbox" href="../images/spreferences_query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="spreferences: query" src="../images/spreferences_query.png" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2041,7 +2052,7 @@ Create an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A3f408a86-cd9f
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

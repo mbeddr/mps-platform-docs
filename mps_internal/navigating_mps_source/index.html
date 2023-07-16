@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1739,13 +1750,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#internals" class="md-tagmaterial/close">internals</a>
+      
+        <a href="../../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#sources" class="md-tagmaterial/close">sources</a>
+      
+        <a href="../../tags/#sources" class="md-tag md-tag-icon">sources</a>
       
     
   </nav>
@@ -1758,12 +1775,12 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Navigating the MPS Sources</h1>
 
-<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that you can check <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS</a>.
+<p>This page describes the folder structure of the <abbr title="Meta Programming System">MPS</abbr> sources that you can check <abbr title="output">out</abbr> with Git from <a href="https://github.com/JetBrains/MPS">https://github.com/JetBrains/MPS ⧉</a>.
 The readme of the repository contains more information.</p>
 <h2 id="idea">.idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h2>
-<p>The <code>artifacts</code> directory contains the artifact-related settings. <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA</a> contains more information. Artifacts in this project are the generated jar files
+<p>The <code>artifacts</code> directory contains the artifact-related settings. <a href="https://www.jetbrains.com/help/idea/working-with-artifacts.html">Artifacts | IntelliJ IDEA ⧉</a> contains more information. Artifacts in this project are the generated jar files
 such as <code>mps-core.jar</code> and <code>vcs-core.jar</code>:</p>
-<p><a class="glightbox" href="../../img/mps_artifacts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mps artifacts dialog" src="../../img/mps_artifacts.png" /></a></p>
+<p><a class="glightbox" href="../images/mps_artifacts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mps artifacts dialog" src="../images/mps_artifacts.png" /></a></p>
 <p>The directory also contains settings for code styles, copyright <abbr title="information">info</abbr>, and enabled inspections. The paths to the used libraries (*.jar) are also specified in the <code>libraries</code> subfolder. The run configurations, search scopes as well as
 many other IntelliJ-specific project settings,</p>
 <h2 id="mps">.mps<a class="headerlink" href="#mps" title="Permanent link">&para;</a></h2>
@@ -1785,15 +1802,15 @@ many other IntelliJ-specific project settings,</p>
 <li>
 <p>Linux</p>
 <ul>
-<li><em>libdgbm</em>: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source</a></li>
+<li><em>libdgbm</em>: GNU dbm ('gdbm') is a library of database functions that use extendible hashing and works similarly to the standard UNIX <em>dbm</em> function <a href="https://packages.debian.org/de/sid/libgdbm-dev">source ⧉</a></li>
 <li><em>restart.<abbr title="position y">py</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
 </ul>
 </li>
 <li>
 <p>Mac</p>
 <ul>
-<li><em>libmacscreenmenu64.dylib</em>: native access to the <a href="https://support.apple.com/guide/mac-help/menu-bar-mchlp1446/mac">Apple menu bar</a>.</li>
-<li><em>libnst64.dlib</em>: native access to the Apple MacBook Pro <a href="https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac">Touch Bar</a>. The library is called NST(NextStep Touch Bar).</li>
+<li><em>libmacscreenmenu64.dylib</em>: native access to the <a href="https://support.apple.com/guide/mac-help/menu-bar-mchlp1446/mac">Apple menu bar ⧉</a>.</li>
+<li><em>libnst64.dlib</em>: native access to the Apple MacBook Pro <a href="https://support.apple.com/guide/mac-help/use-the-touch-bar-mchlbfd5b039/mac">Touch Bar ⧉</a>. The library is called NST (NextStep Touch Bar).</li>
 <li><em>printenv</em>: prints the environment variables</li>
 </ul>
 </li>
@@ -1801,36 +1818,36 @@ many other IntelliJ-specific project settings,</p>
 <p>Windows</p>
 <ul>
 <li><em>breakgen(64).dll</em>: gracefully shut down a running process (not possible with Java).</li>
-<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: a sudo-like tool for Windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source</a>)</li>
+<li><em>elevator.<abbr title="executable/execution">exe</abbr></em>: a sudo-like tool for Windows to deal with UAC (<a href="https://stackoverflow.com/questions/53023013/elevator-exe-in-android-studio-update">source ⧉</a>)</li>
 <li><em>IdeaWin32/64.dll</em>: native file system functions</li>
 <li><em>launcher.<abbr title="executable/execution">exe</abbr></em>: launches <abbr title="Meta Programming System">MPS</abbr></li>
 <li><em>restarter.<abbr title="executable/execution">exe</abbr></em>: restarts <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: an old library for Windows process management. <a href="https://github.com/jenkinsci/winp">WinP</a> superseded it.</li>
+<li><em>runnerw.<abbr title="executable/execution">exe</abbr></em>: an old library for Windows process management. <a href="https://github.com/jenkinsci/winp">WinP ⧉</a> superseded it.</li>
 <li><em>WinProcessListHelper.<abbr title="executable/execution">exe</abbr></em>: lists Windows processes</li>
 <li><em>WinShellIntegrationBridge.dll</em>: integration with the Windows shell</li>
-<li><em>wslhash</em>: hash calculation(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
-<li><em>wslproxy</em>: proxy(?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux</a></li>
+<li><em>wslhash</em>: hash calculation (?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux ⧉</a></li>
+<li><em>wslproxy</em>: proxy (?) for the <a href="https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html">Windows Subsystem for Linux ⧉</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
-<p>The dependency manager of the project is <a href="https://ant.apache.org/ivy/">Apache Ivy</a>. The corresponding folder is <code>build/ivy</code>.
- The build tool is <a href="https://ant.apache.org/">Apache Ant</a>.
+<p>The dependency manager of the project is <a href="https://ant.apache.org/ivy/">Apache Ivy ⧉</a>. The corresponding folder is <code>build/ivy</code>.
+ The build tool is <a href="https://ant.apache.org/">Apache Ant ⧉</a>.
 The <code>artifacts</code> folder contains the generated jar files. An artifact might look like this:</p>
 <ul>
 <li><em>languages</em>: contains <abbr title="Meta Programming System">MPS</abbr> languages</li>
 <li><em>modules</em>: contains Java classes</li>
 <li><em><abbr title="library">lib</abbr></em>: Jar dependencies</li>
-<li><em>META-INF</em>: contains the <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a></li>
+<li><em>META-INF</em>: contains the <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file ⧉</a></li>
 <li><em>build.properties</em>: contains the <abbr title="Meta Programming System">MPS</abbr> version and IntelliJ plugin this artifact belongs to.</li>
 </ul>
-<p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties</a>.</p>
+<p>The <code>dependencies</code> folder contains the <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties">Gradle configuration properties ⧉</a>.</p>
 <p><code>home/.ant/lib</code> contains additional Java libraries that can be used with Ant.</p>
 <p>The <code>resources</code> folder contains image resources as well as the following files:</p>
 <ul>
 <li><em>mps</em>: executable file to start <abbr title="Meta Programming System">MPS</abbr></li>
-<li><em>mps-dmg.sh</em>: Create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image</a> for macOS</li>
-<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs</a> the <abbr title="Meta Programming System">MPS</abbr> macOS application</li>
+<li><em>mps-dmg.sh</em>: Create an <a href="https://www.howtogeek.com/362166/what-is-a-dmg-file-and-how-do-i-use-one/">Apple Disk image ⧉</a> for macOS</li>
+<li><em>mps-sign.sh</em>: <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html">signs ⧉</a> the <abbr title="Meta Programming System">MPS</abbr> macOS application</li>
 </ul>
 <p>The <code>tests</code> folder contains Ant scripts for executing tests.
 The <code>tools</code> folder contains scripts for signing and creating DMGs and a version of the Java Runtime Environment and NSIS (Nullsoft Scriptable Install System) for creating an installer for Windows.
@@ -1855,7 +1872,7 @@ make classes, and runtime classes for smodel such as <code>SConceptOperations.ja
 <h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">&para;</a></h3>
 <p>Everything related to the make facet is in this folder.</p>
 <h3 id="stub">stub<a class="headerlink" href="#stub" title="Permanent link">&para;</a></h3>
-<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, for example, stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g., <code>java.util.List</code>), and all <abbr title="Meta Programming System">MPS</abbr>-related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code>(e.g., <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
+<p>This folder contains all stub models provided by <abbr title="Meta Programming System">MPS</abbr>, for example, stubs for annotations (like <a href="https://github.com/JetBrains/java-annotations">JetBrains annotations ⧉</a>), Java core classes (<abbr title="Java Development Kit">JDK</abbr>, e.g., <code>java.util.List</code>), and all <abbr title="Meta Programming System">MPS</abbr>-related Java classes are located in solutions that start with the naming pattern <code>MPS.*</code> (e.g., <abbr title="Meta Programming System">MPS</abbr>.Core).</p>
 <h3 id="tool">tool<a class="headerlink" href="#tool" title="Permanent link">&para;</a></h3>
 <p>This folder contains classes for accessing <abbr title="Meta Programming System">MPS</abbr> from Java (e.g., <code>MPSEnvironment</code>) and other tool-related classes, such as accessing Ant from Java.</p>
 <h2 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h2>
@@ -1881,8 +1898,8 @@ make classes, and runtime classes for smodel such as <code>SConceptOperations.ja
 <h2 id="workbench">workbench<a class="headerlink" href="#workbench" title="Permanent link">&para;</a></h2>
 <p>This folder contains subfolders for:</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger</a></li>
-<li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions</a></li>
+<li><a href="https://www.jetbrains.com/help/mps/using-mps-debugger.html"><abbr title="Meta Programming System">MPS</abbr> debugger ⧉</a></li>
+<li><a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">Context actions ⧉</a></li>
 <li>editor related actions</li>
 <li>run configurations + execution of Base Language and other languages</li>
 <li>refactorings</li>
@@ -1896,7 +1913,7 @@ make classes, and runtime classes for smodel such as <code>SConceptOperations.ja
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2094,7 +2111,7 @@ make classes, and runtime classes for smodel such as <code>SConceptOperations.ja
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

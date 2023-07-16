@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1355,13 +1366,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../../tags/#baselanguage" class="md-tagmaterial/close">baselanguage</a>
+      
+        <a href="../../../tags/#baselanguage" class="md-tag md-tag-icon">baselanguage</a>
       
     
       
+        
+        
       
-        <a href="../../../tags/#best_practise" class="md-tagmaterial/close">best_practise</a>
+      
+        <a href="../../../tags/#best_practise" class="md-tag md-tag-icon">best_practise</a>
       
     
   </nav>
@@ -1383,7 +1400,7 @@ after upgrading to a new <abbr title="Meta Programming System">MPS</abbr> versio
 <h2 id="readability">Readability<a class="headerlink" href="#readability" title="Permanent link">&para;</a></h2>
 <p>Establishing a coding style is essential for Base Language code and other parts of your code, such as the language aspects.
 When the code is consistent, it is also easier for other people to understand because they can see patterns in the code.
-For writing names, read: <a href="https://yiming.dev/blog/2017/08/23/sandi-metzs-rules-for-oop/#orgda11695">Write short code with good names | Sandi Metz's Rules for OOP</a>. Read the <a href="java_style_guide"><abbr title="Meta Programming System">MPS</abbr> Java style guide</a> for more ideas.
+For writing names, read: <a href="https://yiming.dev/blog/2017/08/23/sandi-metzs-rules-for-oop/#orgda11695">Write short code with good names | Sandi Metz's Rules for OOP</a>. Read the <a href="java_style_guide"><abbr title="Meta Programming System">MPS</abbr> Java style guide ⧉</a> for more ideas.
 In addition to consistency, short code helps readability.</p>
 <p>Learning to write readable code takes time and must be practiced. Coding standards can help enforce specific patterns, but sometimes
 code reviews are necessary so that others can help improve your code.</p>
@@ -1391,7 +1408,7 @@ code reviews are necessary so that others can help improve your code.</p>
 <li>Simplicity: You should strive to make your code as simple as possible. Unnecessary complexity will make the code hard to understand and prone to errors. The code can be clever if it focuses on readability and maintainability. If the code is kept short, it is easier to go through, but if it's too smart, it will take too much time to understand and edit.</li>
 <li>Use the same naming scheme for concepts (e.g., start interfaces with the letter "I"), intentions, or actions. Always place code in behavior methods
   or utility classes with similar naming patterns. Follow standard naming conventions such as camelCase for variables.</li>
-<li>Name temporary variables such as counter variables consistently. Read <a href="https://softwareengineering.stackexchange.com/a/127948">this StackOverflow answer</a>
+<li>Name temporary variables such as counter variables consistently. Read <a href="https://softwareengineering.stackexchange.com/a/127948">this StackOverflow answer ⧉</a>
   for some ideas on how to name variables.</li>
 <li>
 <p>Create methods if the code becomes too long and avoid boilerplate code. For example: Use setters and getters for classes:
@@ -1472,7 +1489,7 @@ A property can be created by typing <code>property</code> at the same place wher
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>Functional interfaces <a href="https://www.baeldung.com/java-8-lambda-expressions-tips">accept lambdas</a> as parameters. For example, a thread that accepts a Runnable object can also be called like this:
+<p>Functional interfaces <a href="https://www.baeldung.com/java-8-lambda-expressions-tips">accept lambdas ⧉</a> as parameters. For example, a thread that accepts a Runnable object can also be called like this:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="p">({</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Thread&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}).</span><span class="na">start</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </li>
@@ -1487,7 +1504,7 @@ A property can be created by typing <code>property</code> at the same place wher
   The second statement doesn't even need a type for the variable. For lists, other ways exist: <code>list.forEach({it =&gt; })</code> for iterating the list and <code>list.select({it =&gt; &lt;no statements&gt; })</code> or <code>list.selectMany({it =&gt; &lt;no statements&gt; })</code> for transforming the list. For adding many elements to a list, use <code>list.addAll(elements)</code>.</p>
 </li>
 <li>
-<p>Use empty lines between statements for readability(<a href="https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code">StackOverflow discussion</a>). When a line becomes too long, you can use a few <a href="https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring">Base Language refactorings</a>, such as introducing variables or extracting code into a method.
+<p>Use empty lines between statements for readability (<a href="https://softwareengineering.stackexchange.com/questions/17305/how-do-you-use-blank-lines-in-your-code">StackOverflow discussion</a>). When a line becomes too long, you can use a few <a href="https://www.jetbrains.com/help/mps/default-keymap-reference.html#baselanguagerefactoring">Base Language refactorings ⧉</a>, such as introducing variables or extracting code into a method.
   You might also want to experiment with the default text width of the editor (preferences &rarr; <em>Editor</em> &rarr; <em><abbr title="Meta Programming System">MPS</abbr> Editor</em>), which is set to 120 by default.
   This value is relatively low and can be increased depending on your monitor size.</p>
 </li>
@@ -1518,9 +1535,10 @@ A property can be created by typing <code>property</code> at the same place wher
 </code></pre></div></td></tr></table></div>
   The nesting is also relevant for if conditions, loops, and nested method calls. Keep them flat, or use only a few levels of nesting.</li>
 <li>Four-parameter rule: a method accepting many parameters is hard to follow. A good maximal number of parameters is four.
-Refactor methods into smaller methods. You can use <a href="https://www.jetbrains.com/help/mps/builders.html"><abbr title="Meta Programming System">MPS</abbr> builders</a> to avoid many parameters.</li>
-<li>Group your code: Group the fields and methods of Base Language classes by their visibility and purpose. For example, group the private fields and methods, and group the public fields and methods together. Also, group the fields and methods related to each other by their functionality or logic. Also, break down big tasks into smaller chunks. You can split up long (behavior) methods into multiple methods. You can place helper methods
-  as static methods into separate classes. Call them more easiliy using <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">Extension methods</a> For example:
+Refactor methods into smaller methods. You can use <a href="https://www.jetbrains.com/help/mps/builders.html"><abbr title="Meta Programming System">MPS</abbr> builders ⧉</a> to avoid many parameters.</li>
+<li>
+<p>Group your code: Group the fields and methods of Base Language classes by their visibility and purpose. For example, group the private fields and methods, and group the public fields and methods together. Also, group the fields and methods related to each other by their functionality or logic. Also, break down big tasks into smaller chunks. You can split up long (behavior) methods into multiple methods. You can place helper methods
+  as static methods into separate classes. Call them more easiliy using <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">Extension methods ⧉</a> For example:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1544,30 +1562,33 @@ Refactor methods into smaller methods. You can use <a href="https://www.jetbrain
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
   Group code into multiple root nodes, models, or modules. If the generation is across multiple models,
-   <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a> applies.</li>
-<li><a href="https://ncrcoe.gitbooks.io/java-for-small-teams/content/style/20_prefer_readable_code_to_comments.html">Prefer Readable Code to Comments | ncrcoe.gitbooks.io</a></li>
+   <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation ⧉</a> applies.</p>
+</li>
+<li>
+<p><a href="https://ncrcoe.gitbooks.io/java-for-small-teams/content/style/20_prefer_readable_code_to_comments.html">Prefer Readable Code to Comments | ncrcoe.gitbooks.io ⧉</a></p>
+</li>
 </ul>
 <h2 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Mark classes/concepts etc., as deprecated when you don't want others to use them, and you will remove them in the future. When you add a deprecation date, you can use it as a reminder to remove deprecated code in regular intervals or enforce it through a <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linter</a>.</li>
+<li>Mark classes/concepts etc., as deprecated when you don't want others to use them, and you will remove them in the future. When you add a deprecation date, you can use it as a reminder to remove deprecated code in regular intervals or enforce it through a <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linter ⧉</a>.</li>
 </ul>
 <figure>
-<p><a class="glightbox" href="../../../img/deprecated.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deprecated node annotation" src="../../../img/deprecated.png" /></a>
+<p><a class="glightbox" href="../images/deprecated_node_annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deprecated node annotation" src="../images/deprecated_node_annotation.png" /></a>
   </p>
 <figcaption>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590292%28jetbrains.mps.lang.structure.structure%29%2F1224240836180">DeprecatedNodeAnnotation</a></p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590292%28jetbrains.mps.lang.structure.structure%29%2F1224240836180">DeprecatedNodeAnnotation ⧉</a></p>
 </figcaption>
 </figure>
 <figure>
-<p><a class="glightbox" href="../../../img/deprecated2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deprecated block doc tag" src="../../../img/deprecated2.png" /></a>
+<p><a class="glightbox" href="../images/deprecated_block_doc_tag.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deprecated block doc tag" src="../images/deprecated_block_doc_tag.png" /></a>
   </p>
 <figcaption>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3A4095af4f-a097-4799-aaa9-03df087ddfa6%28jetbrains.mps.baseLanguage.javadoc.structure%29%2F8465538089690331492">DeprecatedBlockDocTag</a> and <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EDeprecated">Java Deprecated annotation</a></p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3A4095af4f-a097-4799-aaa9-03df087ddfa6%28jetbrains.mps.baseLanguage.javadoc.structure%29%2F8465538089690331492">DeprecatedBlockDocTag</a> and <a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EDeprecated">Java Deprecated annotation ⧉</a></p>
 </figcaption>
 </figure>
 <ul>
 <li>Use the text <em>TODO</em>, <em>FIX</em>, or <em>FIXME</em> in the comments. The <em>TODO</em> tool can find those strings and the commit dialog when the option <em>Check TODO (all)</em> is activated.
-  Other texts not supported by the tool but common are <a href="https://stackoverflow.com/a/7284583">NOTE, XXX, HACK, and BUG</a>.</li>
+  Other texts not supported by the tool but common are <a href="https://stackoverflow.com/a/7284583">NOTE, XXX, HACK, and BUG ⧉</a>.</li>
 <li>Don't repeat code. You can write the same code twice but consider creating a method when you duplicate the code again.
   Repeated code breaks the reading flow and makes updating the code more complex.</li>
 <li>Delete unnecessary and unused code. If you use version control and need to return to
@@ -1588,12 +1609,12 @@ Refactor methods into smaller methods. You can use <a href="https://www.jetbrain
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The result is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">);</span><span class="w"> </span><span class="c1">// What is the result </span><span class="w"></span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<h2 id="stack-exchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stack Exchange: Software Engineering</a><a class="headerlink" href="#stack-exchange-software-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="stack-exchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stack Exchange: Software Engineering</a><a class="headerlink" href="#stack-exchange-software-engineering" title="Permanent link">&para; ⧉</a></h2>
 <ul>
-<li><a href="https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code">What's wrong with comments that explain complex code?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer">When is a BIG Rewrite the answer?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/43948/how-can-i-convince-management-to-deal-with-technical-debt">How can I convince management to deal with technical debt?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/382069/how-do-i-know-how-reusable-my-methods-should-be">How do I know how reusable my methods should be?</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/254978/whats-wrong-with-comments-that-explain-complex-code">What's wrong with comments that explain complex code? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer">When is a BIG Rewrite the answer? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/43948/how-can-i-convince-management-to-deal-with-technical-debt">How can I convince management to deal with technical debt? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/382069/how-do-i-know-how-reusable-my-methods-should-be">How do I know how reusable my methods should be? ⧉</a></li>
 </ul>
 
   <hr>
@@ -1601,7 +1622,7 @@ Refactor methods into smaller methods. You can use <a href="https://www.jetbrain
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1803,7 +1824,7 @@ Refactor methods into smaller methods. You can use <a href="https://www.jetbrain
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1352,13 +1363,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#java" class="md-tagmaterial/close">java</a>
+      
+        <a href="../../tags/#java" class="md-tag md-tag-icon">java</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#best_practise" class="md-tagmaterial/close">best_practise</a>
+      
+        <a href="../../tags/#best_practise" class="md-tag md-tag-icon">best_practise</a>
       
     
   </nav>
@@ -1371,20 +1388,20 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 <h1 id="java-base-language">Java (Base language)<a class="headerlink" href="#java-base-language" title="Permanent link">&para;</a></h1>
 <p>To learn more about advanced Java topics such as the Java virtual machine, collections language, and many more topics,
-visit <a href="https://www.baeldung.com/category/java">baeldung.<abbr title="commercial/common/communication">com</abbr></a>.</p>
-<p><a href="https://refactoring.guru/refactoring/smells">Refactoring.guru</a> has information about general code smells.</p>
+visit <a href="https://www.baeldung.com/category/java">baeldung.<abbr title="commercial/common/communication">com</abbr> ⧉</a>.</p>
+<p><a href="https://refactoring.guru/refactoring/smells">Refactoring.guru ⧉</a> has information about general code smells.</p>
 <ul>
-<li>Be aware of common <a href="https://stackoverflow.com/questions/169815/java-common-gotchas">Java gotchas</a>.</li>
+<li>Be aware of common <a href="https://stackoverflow.com/questions/169815/java-common-gotchas">Java gotchas ⧉</a>.</li>
 <li>Avoid acronyms and abbreviations that may not be clear to others.</li>
-<li>Name methods and variables after what they mean. Before giving a name, consider the responsibility of that piece of code.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li>Return empty collections instead of returning null elements (<a href="http://www.javapractices.com/topic/TopicAction.do?Id=59">reference</a>). It saves the efforts needed for testing on null elements.</li>
-<li>Efficiency: Use <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html">StringBuilder</a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuffer.html">StringBuffer</a> for String concatenation</li>
-<li>Refactor your code <a href="https://refactoring.guru/refactoring">regularly</a>, especially when your classes or methods become too big.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>^, ^<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</li>
+<li>Name methods and variables after what they mean. Before giving a name, consider the responsibility of that piece of code (<a href="https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things">Naming 101: A Programmer's Guide on How to Name Things ⧉</a>).</li>
+<li>Return empty collections instead of returning null elements (<a href="http://www.javapractices.com/topic/TopicAction.do?Id=59">reference ⧉</a>). It saves the efforts needed for testing on null elements.</li>
+<li>Efficiency: Use <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html">StringBuilder</a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuffer.html">StringBuffer ⧉</a> for String concatenation</li>
+<li>Refactor your code <a href="https://refactoring.guru/refactoring">regularly</a>, especially when your classes or methods become too big (<a href="https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or">Rule of 30 – When is a Method, Class, or Subsystem Too Big?</a> and <a href="http://www.javapractices.com/topic/TopicAction.do?Id=227">Avoid basic style errors ⧉</a>)</li>
 <li>Remember to test the parameters of public methods for illegal values. These methods shouldn't crash because of a NullPointer.</li>
-<li>Order class members by scope from private to public<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>^, ^<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> (the reverse order is also acceptable)</li>
-<li>Minimize the accessibility of class members. It enforces <a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#PrivateMembers">information hiding or encapsulation</a>.</li>
+<li>Order class members by scope from private to public (<a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering">Ordering Class Members by Scopes</a> and <a href="http://www.javapractices.com/topic/TopicAction.do?Id=136">Separate public and private members ⧉</a>)</li>
+<li>Minimize the accessibility of class members. It enforces <a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#PrivateMembers">information hiding or encapsulation ⧉</a>.</li>
 <li>Avoid hardcoded values.</li>
-<li>Use lazy initialization if performance is <a href="http://www.javapractices.com/topic/TopicAction.do?Id=34">critical</a>, or use <a href="https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/">caching</a> if necessary.</li>
+<li>Use lazy initialization if performance is <a href="http://www.javapractices.com/topic/TopicAction.do?Id=34">critical</a>, or use <a href="https://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/">caching ⧉</a> if necessary.</li>
 </ul>
 <h2 id="utility-and-helper-classes">Utility and Helper Classes<a class="headerlink" href="#utility-and-helper-classes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1394,48 +1411,28 @@ visit <a href="https://www.baeldung.com/category/java">baeldung.<abbr title="com
 </ul>
 <h2 id="more-tips">More Tips<a class="headerlink" href="#more-tips" title="Permanent link">&para;</a></h2>
 <ul>
-<li>If you use functional interfaces, use the <a href="http://www.javapractices.com/topic/TopicAction.do?Id=277">standard Java ones</a>. If you want to understand the functional style, consult the page: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=274">Understand the functional style</a>.</li>
-<li>If you want to use newer Java features, look at <a href="http://www.javapractices.com/topic/TopicAction.do?Id=225">Modernize old code</a>.</li>
-<li>Have a look at common sources of <a href="https://web.archive.org/web/20210425130253/http://www.javapractices.com/topic/TopicAction.do?Id=287">complexity</a>.</li>
+<li>If you use functional interfaces, use the <a href="http://www.javapractices.com/topic/TopicAction.do?Id=277">standard Java ones</a>. If you want to understand the functional style, consult the page: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=274">Understand the functional style ⧉</a>.</li>
+<li>If you want to use newer Java features, look at <a href="http://www.javapractices.com/topic/TopicAction.do?Id=225">Modernize old code ⧉</a>.</li>
+<li>Have a look at common sources of <a href="https://web.archive.org/web/20210425130253/http://www.javapractices.com/topic/TopicAction.do?Id=287">complexity ⧉</a>.</li>
 </ul>
-<h2 id="stack-exchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stack Exchange: Software Engineering</a><a class="headerlink" href="#stack-exchange-software-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="stack-exchange-software-engineering"><a href="https://softwareengineering.stackexchange.com/questions">Stack Exchange: Software Engineering</a><a class="headerlink" href="#stack-exchange-software-engineering" title="Permanent link">&para; ⧉</a></h2>
 <ul>
-<li><a href="https://softwareengineering.stackexchange.com/questions/188721/when-do-you-use-float-and-when-do-you-use-double">When do you use float, and when do you use double</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references">What's wrong with circular references?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/12777/are-null-references-really-a-bad-thing">Are null references really a bad thing?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late">Exceptions: Why throw early? Why catch late?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/124835/how-do-quick-dirty-programmers-know-they-got-it-right">How do quick &amp; dirty programmers know they got it right?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil">Why is Global State so Evil?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/141005/how-would-you-know-if-youve-written-readable-and-easily-maintainable-code">How would you know if you've written readable and easily maintainable code?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/61655/how-do-you-know-youre-writing-good-code">How do you know you're writing good code?</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/188721/when-do-you-use-float-and-when-do-you-use-double">When do you use float, and when do you use double ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references">What's wrong with circular references? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/12777/are-null-references-really-a-bad-thing">Are null references really a bad thing? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late">Exceptions: Why throw early? Why catch late? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/124835/how-do-quick-dirty-programmers-know-they-got-it-right">How do quick &amp; dirty programmers know they got it right? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil">Why is Global State so Evil? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/141005/how-would-you-know-if-youve-written-readable-and-easily-maintainable-code">How would you know if you've written readable and easily maintainable code? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/61655/how-do-you-know-youre-writing-good-code">How do you know you're writing good code? ⧉</a></li>
 </ul>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://www.elpassion.com/blog/naming-101-programmers-guide-on-how-to-name-things">Naming 101: A Programmer's Guide on How to Name Things</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://dzone.com/articles/rule-30-%E2%80%93-when-method-class-or">Rule of 30 – When is a Method, Class, or Subsystem Too Big?</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:3">
-<p><a href="http://www.javapractices.com/topic/TopicAction.do?Id=227">Avoid basic style errors</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know#MemberOrdering">Ordering Class Members by Scopes</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:5">
-<p><a href="http://www.javapractices.com/topic/TopicAction.do?Id=136">Separate public and private members</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1633,7 +1630,7 @@ visit <a href="https://www.baeldung.com/category/java">baeldung.<abbr title="com
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

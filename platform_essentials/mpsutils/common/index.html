@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1730,16 +1741,16 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </blockquote>
 <p>The common class don't have any dependencies and deal with very generic functionality.</p>
 <h2 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h2>
-<p>The graph model contains classes for working with <a href="https://en.wikipedia.org/wiki/Graph_theory">graphs</a> and an implementation for the <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree</a> data structure, a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">self-balancing binary search tree</a>.
-You can use the <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F176714188933282830">Graph</a> class together with <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F5943598111404841931">GraphUtil</a>, which provides the following methods:</p>
+<p>The graph model contains classes for working with <a href="https://en.wikipedia.org/wiki/Graph_theory">graphs</a> and an implementation for the <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree</a> data structure, a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">self-balancing binary search tree ⧉</a>.
+You can use the <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F176714188933282830">Graph</a> class together with <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-80f1-d0de1aff1076%28com.mbeddr.mpsutil.common.graph%29%2F5943598111404841931">GraphUtil ⧉</a>, which provides the following methods:</p>
 <ul>
 <li><em>computeSCC(Graph)</em>: computes the strongly connected components of the given graph</li>
 <li><em>isConnected(Graph, T initial)</em>: determines whether the given directed graph corresponds to a connected graph</li>
-<li><em>computeSCCSingle(T sought, graph)</em>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component</a> that the node to find is in</li>
-<li><em>computeTopologicalSorting(Graph, boolean silent)</em>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting</a> of the nodes of the given graph.</li>
+<li><em>computeSCCSingle(T sought, graph)</em>: returns the set of nodes in the <a href="https://en.wikipedia.org/wiki/Strongly_connected_component">strongly connected component ⧉</a> that the node to find is in</li>
+<li><em>computeTopologicalSorting(Graph, boolean silent)</em>: returns the <a href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorting ⧉</a> of the nodes of the given graph.</li>
 </ul>
 <h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
-<p>The class <a href="http://127.0.0.1:63320/node?ref=r%3A72bc3a97-6a66-47f6-8cf2-f88ab2ada651%28com.mbeddr.mpsutil.common.model%29%2F6573709714620204463">ConceptInstanceFinder</a> contains a few methods for finding instances (= nodes) of a concept:</p>
+<p>The class <a href="http://127.0.0.1:63320/node?ref=r%3A72bc3a97-6a66-47f6-8cf2-f88ab2ada651%28com.mbeddr.mpsutil.common.model%29%2F6573709714620204463">ConceptInstanceFinder ⧉</a> contains a few methods for finding instances (= nodes) of a concept:</p>
 <ul>
 <li>
 <p><strong>findAllVisibleInstances(context, conceptToFind)</strong>: find instances of a concept in the used languages of the model. The context node's model is the starting point.</p>
@@ -1749,13 +1760,13 @@ You can use the <a href="http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-
 </li>
 </ul>
 <h2 id="util">Util<a class="headerlink" href="#util" title="Permanent link">&para;</a></h2>
-<p>The class <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F4815130854730761782">ApplicationHelper</a> contains a method for running a Runnable object inside a progress window that optionally can be canceled. The class <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F4319749102858900393">ModelComparator</a> can compare two models programmatically and report the mismatches between them. <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F7967869439934824295">SNodeIdentityWrapper</a> is used to preserve node identity across model boundaries and is helpful in generator scenarios where you copy nodes between the different phases.</p>
+<p>The class <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F4815130854730761782">ApplicationHelper</a> contains a method for running a Runnable object inside a progress window that optionally can be canceled. The class <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F4319749102858900393">ModelComparator</a> can compare two models programmatically and report the mismatches between them. <a href="http://127.0.0.1:63320/node?ref=c7a315e6-1d93-4186-85bc-2dfafd1ccc21%2Fr%3Afb1c47d7-a72e-4e01-92dc-1e9f2ba4a118%28com.mbeddr.mpsutil.common%2Fcom.mbeddr.mpsutil.common.util%29%2F7967869439934824295">SNodeIdentityWrapper ⧉</a> is used to preserve node identity across model boundaries and is helpful in generator scenarios where you copy nodes between the different phases.</p>
 <h2 id="comparator">Comparator<a class="headerlink" href="#comparator" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.comparator</ins></p>
 </blockquote>
-<p>You can compare two nodes programmatically with the class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369">MPSNodeComparator</a>. Overloaded methods
-for ignoring properties, ignored references, and some more settings exist. The returned object of class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595">MPSNodeComparison</a> contains the list of differences and can also pre pretty printed by calling the method <code>getDescription()</code>.</p>
+<p>You can compare two nodes programmatically with the class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F3873779224823864369">MPSNodeComparator ⧉</a>. Overloaded methods
+for ignoring properties, ignored references, and some more settings exist. The returned object of class <a href="http://127.0.0.1:63320/node?ref=r%3Aec874b45-e888-42e6-995a-a298cefdff55%28com.mbeddr.mpsutil.comparator.code%29%2F4775189917183996595">MPSNodeComparison ⧉</a> contains the list of differences and can also pre pretty printed by calling the method <code>getDescription()</code>.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1960,7 +1971,7 @@ for ignoring properties, ignored references, and some more settings exist. The r
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

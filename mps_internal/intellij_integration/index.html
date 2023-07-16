@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1476,13 +1487,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#internals" class="md-tagmaterial/close">internals</a>
+      
+        <a href="../../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#intellij" class="md-tagmaterial/close">intellij</a>
+      
+        <a href="../../tags/#intellij" class="md-tag md-tag-icon">intellij</a>
       
     
   </nav>
@@ -1495,9 +1512,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>IntelliJ Integration</h1>
 
-<p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components</a>. <code>application-components</code> active when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code> active when a project opens.</p>
-<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points</a>. Look at
-<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK</a> for a list of all extension points and listeners. Declare new extension points in a section <em>extensionPoints</em> where
+<p>The different plugins of <abbr title="Meta Programming System">MPS</abbr> are declared using a <a href="https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html">plugin configuration file</a>. The functionality is split into <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">plugin components ⧉</a>. <code>application-components</code> active when <abbr title="Meta Programming System">MPS</abbr> starts, <code>project-components</code> active when a project opens.</p>
+<p><abbr title="Meta Programming System">MPS</abbr> uses existing <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html">IntelliJ extension points ⧉</a>. Look at
+<a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">Extension Point and Listener List | IntelliJ Platform Plugin SDK ⧉</a> for a list of all extension points and listeners. Declare new extension points in a section <em>extensionPoints</em> where
 you must provide a qualified name and the interface to implement. The interface has to contain an extension point name
 declaration. Example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1513,40 +1530,40 @@ declaration. Example:</p>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>You can register the extensions in an <em>extensions</em> block in the <em>plugin.xml</em>. The default extension namespace has to be
-<code>com.intellij</code> (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/IdeaPlugin/mps-vcs/META-INF/plugin.xml#L37">example</a>). The extension can also have attributes (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/workbench/mps-platform/source/jetbrains/mps/LanguageLibrary.java#L26">example</a>).</p>
+<code>com.intellij</code> (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/IdeaPlugin/mps-vcs/META-INF/plugin.xml#L37">example</a>). The extension can also have attributes (<a href="https://github.com/JetBrains/MPS/blob/683a16f879f97bbfcb77b22b41890e5306c93c31/workbench/mps-platform/source/jetbrains/mps/LanguageLibrary.java#L26">example ⧉</a>).</p>
 <p>Link to different <abbr title="Meta Programming System">MPS</abbr> plugin.xml files:</p>
 <ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/execution-api/META-INF/plugin.xml">Execution Api and Utility Languages</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/execution-configurations/META-INF/plugin.xml">Execution configurations</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-ant-make/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Ant Integration: Make</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-build/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Build Language</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-context-actions/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Context Actions Tool</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-diagram-editor/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Diagram Editor</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-make/META-INF/plugin.xml">Make</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-tooltips/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Tooltips</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/IDEAPlugin/META-INF/plugin.xml">JetBrains <abbr title="Meta Programming System">MPS</abbr> Integration</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/META-INF/plugin.xml">Migration Support</a> (+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/migration-platform/pluginBase.xml">plugin base</a>)</li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-api/META-INF/plugin.xml">Debugger <abbr title="Application Programming Interface">API</abbr> for <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-java/META-INF/plugin.xml">Java Debugger for <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml">JetPad</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/META-INF/plugin.xml">Idea Integration for <abbr title="Meta Programming System">MPS</abbr></a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Java Integration</a>(+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml">Java platform</a>)</li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> console</a>(+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml">actions</a>)</li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-devkit/META-INF/plugin.xml">Languages DevKit</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-memtool/META-INF/plugin.xml">Memory Tool</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-modelchecker/META-INF/plugin.xml">Model Checker</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-vcs/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Version Control Support</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/META-INF/IdeaPlugin.xml">IDEA Core</a>(+<a href="https://github.com/JetBrains/MPS/tree/master/workbench/mps-workbench/source/META-INF">other files</a>)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/execution-api/META-INF/plugin.xml">Execution Api and Utility Languages ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/execution-configurations/META-INF/plugin.xml">Execution configurations ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-ant-make/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Ant Integration: Make ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-build/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Build Language ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-context-actions/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Context Actions Tool ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-diagram-editor/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Diagram Editor ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-make/META-INF/plugin.xml">Make ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-tooltips/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Tooltips ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/IDEAPlugin/META-INF/plugin.xml">JetBrains <abbr title="Meta Programming System">MPS</abbr> Integration ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/META-INF/plugin.xml">Migration Support</a> (+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-migration/migration-platform/pluginBase.xml">plugin base ⧉</a>)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-api/META-INF/plugin.xml">Debugger <abbr title="Application Programming Interface">API</abbr> for <abbr title="Meta Programming System">MPS</abbr> ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/debugger-java/META-INF/plugin.xml">Java Debugger for <abbr title="Meta Programming System">MPS</abbr> ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/jetpad/META-INF/plugin.xml">JetPad ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-idea-integration/META-INF/plugin.xml">Idea Integration for <abbr title="Meta Programming System">MPS</abbr> ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Java Integration</a> (+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatform.xml">Java platform ⧉</a>)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> console</a> (+<a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-console/META-INF/ConsoleActions.xml">actions ⧉</a>)</li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-devkit/META-INF/plugin.xml">Languages DevKit ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-memtool/META-INF/plugin.xml">Memory Tool ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-modelchecker/META-INF/plugin.xml">Model Checker ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-vcs/META-INF/plugin.xml"><abbr title="Meta Programming System">MPS</abbr> Version Control Support ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/META-INF/IdeaPlugin.xml">IDEA Core</a> (+<a href="https://github.com/JetBrains/MPS/tree/master/workbench/mps-workbench/source/META-INF">other files ⧉</a>)</li>
 </ul>
 <p>Included in other plugins:</p>
 <ul>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">editor actions</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source/META-INF/MPSEditor.xml">editor</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml">Java platform actions</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/META-INF/MPSCore.xml">MPSCore</a></li>
-<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml">PlatformActions</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source_gen/jetbrains/mps/ide/editor/actions/MPSEditorActions.xml">editor actions ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-editor/source/META-INF/MPSEditor.xml">editor ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/plugins/mps-java/META-INF/JavaPlatformActions.xml">Java platform actions ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/META-INF/MPSCore.xml">MPSCore ⧉</a></li>
+<li><a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-ui/source_gen/jetbrains/mps/ide/platform/actions/PlatformActions.xml">PlatformActions ⧉</a></li>
 </ul>
-<p>All the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter</a> for error reporting.
+<p>All the plugins use the <a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/blame/CharismaReporter.java">charisma reporter ⧉</a> for error reporting.
 This class makes it possible to report errors to YouTrack. Another notable extension is the declaration of the <abbr title="Meta Programming System">MPS</abbr> language library. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;mps.LanguageLibrary</span> <span class="na">dir=</span><span class="s">&quot;/languages&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div></td></tr></table></div></p>
@@ -1557,7 +1574,7 @@ This class makes it possible to report errors to YouTrack. Another notable exten
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1759,7 +1776,7 @@ This class makes it possible to report errors to YouTrack. Another notable exten
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1341,13 +1352,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../../tags/#baselanguage" class="md-tagmaterial/close">baselanguage</a>
+      
+        <a href="../../../tags/#baselanguage" class="md-tag md-tag-icon">baselanguage</a>
       
     
       
+        
+        
       
-        <a href="../../../tags/#best_practise" class="md-tagmaterial/close">best_practise</a>
+      
+        <a href="../../../tags/#best_practise" class="md-tag md-tag-icon">best_practise</a>
       
     
   </nav>
@@ -1367,23 +1384,23 @@ find a replacement for such code early.</p>
 <p>SRepositories store modules and needs to be referenced directly when you don't want to use the deprecated concepts.
 The automatically used global repository that was used in earlier <abbr title="Meta Programming System">MPS</abbr> versions is deprecated and might be unsupported in the future.</p>
 <ul>
-<li>Don't use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>). </li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532">node/myNode</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413">node-<abbr title="pointer">ptr</abbr></a>(myNode).resolve(repository) instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698">model/myModel</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879">model-<abbr title="pointer">ptr</abbr></a>(myModel).resolve(repository) instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969021681">module/myModule</a> or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969069898">language-module</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1678062499342629858">module-reference/myModule</a> instead.</li>
+<li>Don't use commands from the access language without a repository (see: <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language ⧉</a>). </li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1219352745532">node/myNode</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7400021826774799413">node-<abbr title="pointer">ptr</abbr> ⧉</a>(myNode).resolve(repository) instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F559557797393017698">model/myModel</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1863527487546129879">model-<abbr title="pointer">ptr</abbr> ⧉</a>(myModel).resolve(repository) instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969021681">module/myModule</a> or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F4040588429969069898">language-module</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1678062499342629858">module-reference/myModule ⧉</a> instead.</li>
 </ul>
 <h2 id="other-deprecation">Other deprecation<a class="headerlink" href="#other-deprecation" title="Permanent link">&para;</a></h2>
 <p>This section lists some other common deprecated code.</p>
 <ul>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1226359078165">linkNode/concept:link/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474301421077">link:concept:link/</a> instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1172424058054">conceptNode/concept/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474300074836">concept/concept/</a> instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1140133623887">node.delete</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1228341669568">node.detach</a> instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1960721196051541146">node.containingRole</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7504436213544206332">node.getContainmentLink</a> instead.</li>
-<li>Don't use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819">IDon'tSubstituteByDefault</a>. Create an empty default substitute menu for the concept instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208">print</a>, <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="w"></span></code> or <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="w"></span></code> for logging. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">log</a> for low-level logging or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325">message</a> for high-level logging instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1226359078165">linkNode/concept:link/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474301421077">link:concept:link/ ⧉</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1172424058054">conceptNode/concept/</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474300074836">concept/concept/ ⧉</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1140133623887">node.delete</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1228341669568">node.detach ⧉</a> instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1960721196051541146">node.containingRole</a>. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F7504436213544206332">node.getContainmentLink ⧉</a> instead.</li>
+<li>Don't use the interface <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1835621062190663819">IDon'tSubstituteByDefault ⧉</a>. Create an empty default substitute menu for the concept instead.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F1168401810208">print</a>, <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="w"></span></code> or <code class="highlight"><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="w"></span></code> for logging. Use <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F2034914114981261497">log</a> for low-level logging or <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c8959057f%28jetbrains.mps.baseLanguage.logging.structure%29%2F6332851714983831325">message ⧉</a> for high-level logging instead.</li>
 <li>Use the explicit presentation of a node when used in a string. For example: <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">getPresentation</span><span class="p">()</span><span class="w"></span></code> instead of <code class="highlight"><span class="s">&quot;my node: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">node</span><span class="w"></span></code>.</li>
 <li>Don't use counter variables in LoopMacro. Use <code class="highlight"><span class="n">LOOP</span><span class="w"> </span><span class="n">index</span><span class="w"></span></code> in the code instead.</li>
-<li>Don't use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext</a>. You can find more <abbr title="information">info</abbr> in the attached comment on the interface.</li>
+<li>Don't use <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EIOperationContext">IOperationContext ⧉</a>. You can find more <abbr title="information">info</abbr> in the attached comment on the interface.</li>
 </ul>
 
   <hr>
@@ -1593,7 +1610,7 @@ The automatically used global repository that was used in earlier <abbr title="M
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

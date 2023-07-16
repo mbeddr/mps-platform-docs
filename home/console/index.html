@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1436,13 +1447,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#interactive" class="md-tagmaterial/close">interactive</a>
+      
+        <a href="../../tags/#interactive" class="md-tag md-tag-icon">interactive</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#troubleshooting" class="md-tagmaterial/close">troubleshooting</a>
+      
+        <a href="../../tags/#troubleshooting" class="md-tag md-tag-icon">troubleshooting</a>
       
     
   </nav>
@@ -1467,7 +1484,7 @@ Additional to the provided commands, you can use it for the following common tas
 <li>Exploring: You can check the output of single expressions or query nodes/models/modules to learn more about them. When dealing with
   unknown nodes, it makes sense to output their concept (<code>myNode.concept</code>) or navigate to it by clicking on it. You can access node annotations
   through myNode.<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/annotationRole" title="GitHub User: annotationRole">@annotationRole</a>. Make sure to import the annotation's dependency or it its role won't be visible
-  (e.g. import <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F4222318806802425298">SuppressErrorsAnnotation</a> to have <code>myNode.@suppress</code> available)</li>
+  (e.g. import <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F4222318806802425298">SuppressErrorsAnnotation ⧉</a> to have <code>myNode.@suppress</code> available)</li>
 <li>Debugging: Like exploring, the console is a great tool for figuring <abbr title="output">out</abbr> why something doesn't work. Paste short code snippets 
   directly into the console and observe the intermediate results if you don't want to use a debugger. One common source of errors
   are model queries that return an empty list because of wrong conditions or structural assumptions (e.g. concept X is not a descendant of concept Y).
@@ -1478,17 +1495,17 @@ Additional to the provided commands, you can use it for the following common tas
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">I can't enter the print statement.</p>
-<p>Nested structures don't support it (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656</a>). Use it at the top level instead. If you need to output multiple objects,
+<p>Nested structures don't support it (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656 ⧉</a>). Use it at the top level instead. If you need to output multiple objects,
 save them to a list first and output the list at the top level.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you enter more than one statement into the console?</p>
-<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace</a> (this starts a new statement list in Base Language) and enter your statements.</p>
+<p>Enter an opening <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F5464054275389846505">curly brace ⧉</a> (this starts a new statement list in Base Language) and enter your statements.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find all System.<abbr title="output">out</abbr>.println statements?</p>
-<p><a href="https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc">Code snippet:</a></p>
-<p><a class="glightbox" href="../../img/find_print_statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find print statements" src="../../img/find_print_statement.png" /></a>]</p>
+<p><a href="https://gist.skadi.cloud/gist/13dECMxlPy0WVy1E6wBEUc">Code snippet: ⧉</a></p>
+<p><a class="glightbox" href="../images/find_print_statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find print statements" src="../images/find_print_statement.png" /></a>]</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">#nodes, #models, #usages, etc., don't show any result.</p>
@@ -1497,7 +1514,7 @@ save them to a list first and output the list at the top level.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is the console a regular root node?</p>
-<p>Yes, it is an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot</a>
+<p>Yes, it is an instance of <a href="http://127.0.0.1:63320/node?ref=r%3A359b1d2b-77c4-46df-9bf2-b25cbea32254%28jetbrains.mps.console.base.structure%29%2F1583916890557930028">ConsoleRoot ⧉</a>
 and belongs to a temporary model. It is possible to open it in a regular tab. Right-click in the console (for example, at the top) and click 
 <em>Show Node in Explorer</em>. Click the <em>ConsoleRoot</em> to open it in a new tab  (keyboard shortcuts such as run line won't work here).</p>
 </div>
@@ -1508,9 +1525,9 @@ plan into the console that turns off some generators. It can also occur if you i
 </div>
 <div class="admonition question">
 <p class="admonition-title">What does the expression #internalMode do?</p>
-<p>It tells you if the internal mode is activated. Activate it by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true)</a>
-or setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> sources</a> contain references to this flag in various places.
-One of the new action groups that it adds is called <em>Internal</em>. There is also an Internal Actions Menu in the IntelliJ IDEA. Consult the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation</a>
+<p>It tells you if the internal mode is activated. Activate it by calling <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps%28MPS.Core%2F%29%2F%7ERuntimeFlags">RuntimeFlags.setInternalMode(true) ⧉</a>
+or setting a system variable. Start <abbr title="Meta Programming System">MPS</abbr> with argument <code class="highlight"><span class="na">-Dmps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> or add <code class="highlight"><span class="na">mps.internal</span><span class="o">=</span><span class="s">true</span><span class="w"></span></code> to the <em>mps.vmoptions</em> file: use <em>Main menu</em> -&gt; <em>Help</em> -&gt; <em>Edit Custom <abbr title="Virtual Machine">VM</abbr> Options</em>. The <a href="https://github.com/JetBrains/MPS/search?q=isInternalMode&amp;type=code"><abbr title="Meta Programming System">MPS</abbr> sources ⧉</a> contain references to this flag in various places.
+One of the new action groups that it adds is called <em>Internal</em>. There is also an Internal Actions Menu in the IntelliJ IDEA. Consult the <a href="https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html">documentation ⧉</a>
 for more <abbr title="information">info</abbr>.</p>
 </div>
 <div class="admonition question">
@@ -1526,7 +1543,7 @@ for more <abbr title="information">info</abbr>.</p>
 <li>Paste the content   (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</li>
 <li><abbr title="Meta Programming System">MPS</abbr> pastes a node reference that you can use to manipulate the node directly:</li>
 </ol>
-<p><a class="glightbox" href="../../img/console_node_reference.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="console_node_reference" src="../../img/console_node_reference.png" width="600px" /></a></p>
+<p><a class="glightbox" href="../images/console_node_reference.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="console_node_reference" src="../images/console_node_reference.png" width="600px" /></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></p>
 </div>
 
@@ -1535,7 +1552,7 @@ for more <abbr title="information">info</abbr>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1737,7 +1754,7 @@ for more <abbr title="information">info</abbr>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

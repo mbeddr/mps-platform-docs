@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1740,43 +1751,43 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Syntax Problems</h1>
 
-<h2 id="syntax-problems-in-the-editor"><a href="https://pythonprinciples.com/blog/getting-unstuck/#syntax-problems">Syntax Problems in the Editor</a><a class="headerlink" href="#syntax-problems-in-the-editor" title="Permanent link">&para;</a></h2>
+<h2 id="syntax-problems-in-the-editor"><a href="https://pythonprinciples.com/blog/getting-unstuck/#syntax-problems">Syntax Problems in the Editor</a><a class="headerlink" href="#syntax-problems-in-the-editor" title="Permanent link">&para; ⧉</a></h2>
 <p>Caused by the projectional editing approach, syntax problems don’t exist in <abbr title="Meta Programming System">MPS</abbr>. Sometimes it takes work to enter text, though. A general technique that often works is to search for instances of a concept in the current project or globally to figure <abbr title="output">out</abbr> how it works if there is no documentation.
 Open a concept &rarr; right-click &rarr; <em>Find Usage Settings</em> &rarr; Check <em>Concept Instances</em> and select the scope to find instances of
 the concept. The following list contains some common reasons why you might be stuck entering text:</p>
-<h3 id="a-constraint-prevents-you-from-entering-code">A <a href="https://www.jetbrains.com/help/mps/constraints.html">Constraint</a> Prevents You From Entering Code<a class="headerlink" href="#a-constraint-prevents-you-from-entering-code" title="Permanent link">&para;</a></h3>
+<h3 id="a-constraint-prevents-you-from-entering-code">A <a href="https://www.jetbrains.com/help/mps/constraints.html">Constraint</a> Prevents You From Entering Code<a class="headerlink" href="#a-constraint-prevents-you-from-entering-code" title="Permanent link">&para; ⧉</a></h3>
 <p>If you know the concept's name, you can navigate to the constraints aspect to find the reasons. It is generally better to allow users to enter text and tell them afterward that their action was incorrect or invalid at the inserted location than to restrict them from entering text. From a usability perspective, there is nothing more frustrating than not being able to enter information and not knowing why you can't enter some text. Another solution would be to show read-only text in the code completion menu, in the side transformation popup, or some other place but make the entries inactive. Those entries should contain descriptions explaining why they can't be selected.</p>
 <h3 id="you-cant-enter-a-reference-because-of-its-scope">You Can’t Enter a Reference Because of Its Scope<a class="headerlink" href="#you-cant-enter-a-reference-because-of-its-scope" title="Permanent link">&para;</a></h3>
-<p>Please read the documentation about <a href="https://www.jetbrains.com/help/mps/scopes.html">scopes</a> first.
+<p>Please read the documentation about <a href="https://www.jetbrains.com/help/mps/scopes.html">scopes ⧉</a> first.
 A common mistake is not adding an import to the model containing the node you want to reference. Depending on how the scope works, you might also need to add an <em>extends scope</em> in the module's dependencies tab (e.g., required for conditional editors), or the scoping is tied to some import mechanism (e.g., import declarations in KernelF libraries).
 References will still work if they can't find their target but will show an <abbr title="output">out</abbr>-of-scope error. Don't ignore the error. Example: In a node test, you might reference a type system statement in the <em>has error</em> check while you want to use the <em>has type system error</em> check.</p>
-<p>Partially related to scopes: Sometimes, checking why a particular item appears in the code completion menu can help determine why another one doesn't appear. Open the code completion menu and press the mentioned shortcut at the bottom of the list to open the <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">menu trace tool</a>.</p>
+<p>Partially related to scopes: Sometimes, checking why a particular item appears in the code completion menu can help determine why another one doesn't appear. Open the code completion menu and press the mentioned shortcut at the bottom of the list to open the <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">menu trace tool ⧉</a>.</p>
 <h3 id="style-sheet-itemsactions-prevent-entering-text">Style Sheet Items/Actions Prevent Entering Text<a class="headerlink" href="#style-sheet-itemsactions-prevent-entering-text" title="Permanent link">&para;</a></h3>
 <p>For side transformations to work, cells must not have the <em>punctuation-left</em> or <em>punctuation-right</em> item set to false on the side where the side transformation should be available; otherwise, you can't enter text because the cursor is not allowed at that position. To figure <abbr title="output">out</abbr> the available input options and actions, right-click in the editor &rarr; <em>Go To</em> &rarr; <em>Editor Declaration</em> to open the corresponding editor of the concept. For more detailed information, right-click in the editor -&gt; <em>Language Debug</em> &rarr; <em>Show Cell in Explorer</em>. The cell explorer shows the entire tree of editor cells that describe the currently opened editor.</p>
-<p><a class="glightbox" href="../../../img/home/cell_explorer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cell explorer" src="../../../img/home/cell_explorer.png" /></a></p>
-<p>On the right side, you can see the basic properties of the editor cell, such as the referenced node or the position and dimension of the cell. The following section, <em>Actions</em>, shows the available editor actions you can invoke. For example, the action <em>SELECT_LOCAL_END</em> is implemented as the editor action <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049069924">SelectLocalEnd</a> and has a <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049111143">keyboard shortcut</a> attached. <code class="highlight"><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">().</span><span class="na">executeAction</span><span class="p">(</span><span class="n">CellActionType</span><span class="p">.</span><span class="na">SELECT_LOCAL_END</span><span class="p">)</span><span class="w"></span></code> forwards it to the current selection in the editor, where you can handle it in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a>. For most actions, default implementations exist. You can locate them in the <abbr title="Meta Programming System">MPS</abbr> sources, e.g., <a href="https://github.com/JetBrains/MPS/blob/0814c19dff593eea167b669cf642dbdcc2679ca9/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cells/EditorCell_Label.java#L957C11-L957C11">LocalHome</a>.
+<p><a class="glightbox" href="../images/cell_explorer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cell explorer" src="../images/cell_explorer.png" /></a></p>
+<p>On the right side, you can see the basic properties of the editor cell, such as the referenced node or the position and dimension of the cell. The following section, <em>Actions</em>, shows the available editor actions you can invoke. For example, the action <em>SELECT_LOCAL_END</em> is implemented as the editor action <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049069924">SelectLocalEnd</a> and has a <a href="http://127.0.0.1:63320/node?ref=r%3A9832fb5f-2578-4b58-8014-a5de79da988e%28jetbrains.mps.ide.editor.actions%29%2F7791284463049111143">keyboard shortcut</a> attached. <code class="highlight"><span class="n">editorComponent</span><span class="p">.</span><span class="na">getSelectionManager</span><span class="p">().</span><span class="na">getSelection</span><span class="p">().</span><span class="na">executeAction</span><span class="p">(</span><span class="n">CellActionType</span><span class="p">.</span><span class="na">SELECT_LOCAL_END</span><span class="p">)</span><span class="w"></span></code> forwards it to the current selection in the editor, where you can handle it in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a>. For most actions, default implementations exist. You can locate them in the <abbr title="Meta Programming System">MPS</abbr> sources, e.g., <a href="https://github.com/JetBrains/MPS/blob/0814c19dff593eea167b669cf642dbdcc2679ca9/editor/editor-runtime/source/jetbrains/mps/nodeEditor/cells/EditorCell_Label.java#L957C11-L957C11">LocalHome ⧉</a>.
 The last section deals with style items such as the text color or the focus policy. Some crucial properties concerning debugging are
 <em>punctuation-left</em>, <em>punctuation-right</em>, <em>editable</em>, and <em>read-only</em> because they affect the ability to enter text.</p>
 <h3 id="the-editing-is-supposed-to-be-done-differently">The Editing Is Supposed to Be Done Differently<a class="headerlink" href="#the-editing-is-supposed-to-be-done-differently" title="Permanent link">&para;</a></h3>
 <p>Many ways exist to change <abbr title="Meta Programming System">MPS</abbr> models. You can enter text directly in the editor or use</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html#sidetransformations">side transformations</a> to make changes</li>
-<li><a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistant</a> buttons</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions tool</a></li>
-<li><a href="https://www.jetbrains.com/help/mps/mps-intentions.html">intentions</a></li>
+<li><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html#sidetransformations">side transformations ⧉</a> to make changes</li>
+<li><a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistant ⧉</a> buttons</li>
+<li>the <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions tool ⧉</a></li>
+<li><a href="https://www.jetbrains.com/help/mps/mps-intentions.html">intentions ⧉</a></li>
 <li>entries in the main menu to invoke actions</li>
 <li>the context menu of the editor to invoke actions</li>
 <li>buttons in the editor</li>
 </ul>
 <p>Make sure to read the documentation or look at the implementation of the concepts of the used language to figure <abbr title="output">out</abbr> how it works. As a last resort,
 you can always use the <abbr title="Meta Programming System">MPS</abbr> console to modify a model. Click a cell in the editor, use the copy shortcut, and paste it into the console. The node should be an instance of
-PastedNodeReference and can manipulate it. For entering more complex nodes, use the <a href="https://www.jetbrains.com/help/mps/quotations.html">quotation</a> language. Make sure to enter a curly brace in the console to start a Base Language statement block so that you can enter multiple statements.</p>
+PastedNodeReference and can manipulate it. For entering more complex nodes, use the <a href="https://www.jetbrains.com/help/mps/quotations.html">quotation ⧉</a> language. Make sure to enter a curly brace in the console to start a Base Language statement block so that you can enter multiple statements.</p>
 <h2 id="syntax-errors-on-compilation">Syntax Errors on Compilation<a class="headerlink" href="#syntax-errors-on-compilation" title="Permanent link">&para;</a></h2>
 <p>Before the generation fails, run the model checker to check if the model is in a valid state. Errors can still happen for various reasons:</p>
 <h3 id="the-generator-of-the-language-has-a-bug-that-must-be-fixed">The Generator of the Language Has a Bug That Must Be Fixed<a class="headerlink" href="#the-generator-of-the-language-has-a-bug-that-must-be-fixed" title="Permanent link">&para;</a></h3>
 <p>A common error source is incorrectly handled cross-references to other models. Wrong assumptions about which parts of the model are optional and mandatory can lead to incorrectly generated code. Depending on the target of the generator, the target language can also help catch errors through the type system. Even if the code is outside a template fragment, the code in the generator shouldn't display any errors. For example, when a method needs an argument of type string, don't call it with a different argument type in the template, even if the generator replaces the parameter with a reference macro. Casting nodes to a different concept should also be done carefully. An <em>as</em>-cast will return null if it can't cast the node to the referenced concept.</p>
 <h3 id="the-base-language-code-is-not-valid-java-code">The Base Language Code Is Not Valid Java Code<a class="headerlink" href="#the-base-language-code-is-not-valid-java-code" title="Permanent link">&para;</a></h3>
-<p>Despite the similarities between Java and Base Language, they are not fully compatible. Read the page <a href="https://www.jetbrains.com/help/mps/mps-java-compatibility.html"><abbr title="Meta Programming System">MPS</abbr> Java compatibility</a> in the <abbr title="Meta Programming System">MPS</abbr> documentation. Build scripts can also have a section called <em>java options</em> which lets you select the used compiler. Some compilers better handle cyclic dependencies in the generated Java code than others. That also means the compilation will fail with some of them when accidentally switching the compiler.</p>
+<p>Despite the similarities between Java and Base Language, they are not fully compatible. Read the page <a href="https://www.jetbrains.com/help/mps/mps-java-compatibility.html"><abbr title="Meta Programming System">MPS</abbr> Java compatibility ⧉</a> in the <abbr title="Meta Programming System">MPS</abbr> documentation. Build scripts can also have a section called <em>java options</em> which lets you select the used compiler. Some compilers better handle cyclic dependencies in the generated Java code than others. That also means the compilation will fail with some of them when accidentally switching the compiler.</p>
 <p>In rare cases, the generation fails because a generated variable clashes with a variable in the current context, e.g., variables named <em>node</em> or <em>_context</em> are good examples (<a href="../../../aspects/generator/#:~:text=which%20variable%20names%20aren%E2%80%99t%20available%20because%20they%20are%20used%20in%20the%20generator%3F">more <abbr title="information">info</abbr></a>).</p>
 
   <hr>
@@ -1784,7 +1795,7 @@ PastedNodeReference and can manipulate it. For entering more complex nodes, use 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1982,7 +1993,7 @@ PastedNodeReference and can manipulate it. For entering more complex nodes, use 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

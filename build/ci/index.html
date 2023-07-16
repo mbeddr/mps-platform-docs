@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1389,8 +1400,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#infrastructure" class="md-tagmaterial/close">infrastructure</a>
+      
+        <a href="../../tags/#infrastructure" class="md-tag md-tag-icon">infrastructure</a>
       
     
   </nav>
@@ -1413,40 +1427,40 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
 <p>Some <abbr title="Meta Programming System">MPS</abbr> projects used the following <abbr title="Continuous Integration">CI</abbr> tools in the past:</p>
 <ul>
-<li><a href="https://www.jenkins.io/">Jenkins</a> is an open-source <abbr title="Continuous Integration">CI</abbr> server that supports various plugins and integrations.</li>
-<li><a href="https://www.atlassian.com/de/software/bamboo">Bamboo</a>: is a commercial <abbr title="Continuous Integration">CI</abbr> server that integrates with Jira, Bitbucket, and other Atlassian products.</li>
+<li><a href="https://www.jenkins.io/">Jenkins ⧉</a> is an open-source <abbr title="Continuous Integration">CI</abbr> server that supports various plugins and integrations.</li>
+<li><a href="https://www.atlassian.com/de/software/bamboo">Bamboo ⧉</a>: is a commercial <abbr title="Continuous Integration">CI</abbr> server that integrates with Jira, Bitbucket, and other Atlassian products.</li>
 </ul>
 <p>Some <abbr title="Meta Programming System">MPS</abbr> projects used the following popular <abbr title="Continuous Integration">CI</abbr> tools:</p>
 <ul>
-<li><a href="https://www.jetbrains.com/teamcity/">TeamCity</a> is a commercial <abbr title="Continuous Integration">CI</abbr> server that supports various languages, platforms, and technologies. It offers real-time feedback, smart triggers, code quality analysis, and more. Itemis and JetBrains use it.</li>
-<li><a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab <abbr title="Continuous Integration">CI</abbr></a> is a cloud-based or self-hosted <abbr title="Continuous Integration">CI</abbr> service that integrates with GitLab, a web-based Git repository manager. It allows you to define your pipelines as code, run tests in parallel, deploy to any environment, and more.</li>
-<li><a href="https://github.com/features/actions">GitHub Actions</a> is a cloud-based <abbr title="Continuous Integration">CI</abbr> service that integrates with GitHub, a web-based Git repository hosting service. It allows you to create workflows that automate your software development lifecycle, such as building, testing, and deploying your code. You can also use pre-built actions from the GitHub Marketplace or create custom actions.</li>
+<li><a href="https://www.jetbrains.com/teamcity/">TeamCity ⧉</a> is a commercial <abbr title="Continuous Integration">CI</abbr> server that supports various languages, platforms, and technologies. It offers real-time feedback, smart triggers, code quality analysis, and more. Itemis and JetBrains use it.</li>
+<li><a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab <abbr title="Continuous Integration">CI</abbr> ⧉</a> is a cloud-based or self-hosted <abbr title="Continuous Integration">CI</abbr> service that integrates with GitLab, a web-based Git repository manager. It allows you to define your pipelines as code, run tests in parallel, deploy to any environment, and more.</li>
+<li><a href="https://github.com/features/actions">GitHub Actions ⧉</a> is a cloud-based <abbr title="Continuous Integration">CI</abbr> service that integrates with GitHub, a web-based Git repository hosting service. It allows you to create workflows that automate your software development lifecycle, such as building, testing, and deploying your code. You can also use pre-built actions from the GitHub Marketplace or create custom actions.</li>
 </ul>
 <h2 id="challenges">Challenges<a class="headerlink" href="#challenges" title="Permanent link">&para;</a></h2>
 <p><abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr> projects can provide some challenges:</p>
 <ul>
 <li><abbr title="Meta Programming System">MPS</abbr> projects are not text-based but use an abstract syntax tree (<abbr title="Abstract Syntax Tree">AST</abbr>) representation that <abbr title="Meta Programming System">MPS</abbr> stores in XML files. That means that you have to review all model-related changes in <abbr title="Meta Programming System">MPS</abbr>. When opening PRs, you can still do other checks: incorrect merges/rebasing can be detected manually by examining the commit history. The <abbr title="Continuous Integration">CI</abbr> tool will detect conflicting files, and failing tests or model check errors can be reported as typical JUnit test results. Compilation errors when building the <abbr title="Meta Programming System">MPS</abbr> modules will also fail the build. <a href="../advanced_github_workflow/">Advanced GitHub workflow</a> mentions other checks that can be automated or done manually.</li>
-<li><abbr title="Meta Programming System">MPS</abbr> projects may depend on external libraries or plugins that must be installed and configured on the <abbr title="Continuous Integration">CI</abbr> agents. Those dependencies may require additional steps or scripts to ensure compatibility and availability. A good approach is to use isolated environments where you install all the dependencies. A standard solution is doing <a href="https://docs.docker.com/build/ci/"><abbr title="Continuous Integration">CI</abbr> with Docker</a>. When using the <a href="https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check">model check</a> plugin from the mps-gradle-plugin, additional plugins might need to be loaded through <em>pluginsProperty</em> if your <abbr title="Meta Programming System">MPS</abbr> languages depend on one of the core <abbr title="Meta Programming System">MPS</abbr> plugins. This Gradle plugin starts <abbr title="Meta Programming System">MPS</abbr> only with a bare minimum number of plugins.</li>
-<li><abbr title="Meta Programming System">MPS</abbr> projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. These additional languages may require other tools or plugins to compile, test, and deploy the generated code. Example: Most <abbr title="Meta Programming System">MPS</abbr> platforms, including mbeddr, use this <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">DockerFile</a> for building.</li>
+<li><abbr title="Meta Programming System">MPS</abbr> projects may depend on external libraries or plugins that must be installed and configured on the <abbr title="Continuous Integration">CI</abbr> agents. Those dependencies may require additional steps or scripts to ensure compatibility and availability. A good approach is to use isolated environments where you install all the dependencies. A standard solution is doing <a href="https://docs.docker.com/build/ci/"><abbr title="Continuous Integration">CI</abbr> with Docker</a>. When using the <a href="https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#model-check">model check ⧉</a> plugin from the mps-gradle-plugin, additional plugins might need to be loaded through <em>pluginsProperty</em> if your <abbr title="Meta Programming System">MPS</abbr> languages depend on one of the core <abbr title="Meta Programming System">MPS</abbr> plugins. This Gradle plugin starts <abbr title="Meta Programming System">MPS</abbr> only with a bare minimum number of plugins.</li>
+<li><abbr title="Meta Programming System">MPS</abbr> projects may generate code in different languages or formats, such as Java, C, XML, HTML, and more. These additional languages may require other tools or plugins to compile, test, and deploy the generated code. Example: Most <abbr title="Meta Programming System">MPS</abbr> platforms, including mbeddr, use this <a href="https://github.com/mbeddr/mbeddr.build.docker/blob/master/Dockerfile">DockerFile ⧉</a> for building.</li>
 </ul>
 <h2 id="blog-posts">Blog Posts<a class="headerlink" href="#blog-posts" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up <abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/">Maturity levels of <abbr title="Meta Programming System">MPS</abbr> deployment</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50">The Business-<abbr title="Domain-Specific Language">DSL</abbr> DevOps Process</a>(<em>Markus Voelter's blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/25-simplest-ci-scenario-with-mps-self-contained-projects/">Setting up <abbr title="Continuous Integration">CI</abbr> with <abbr title="Meta Programming System">MPS</abbr>: self-contained projects ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/14-maturity-levels-of-mps-deployment/">Maturity levels of <abbr title="Meta Programming System">MPS</abbr> deployment ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://markusvoelter.medium.com/the-business-dsl-devops-process-fb5531bf1f50">The Business-<abbr title="Domain-Specific Language">DSL</abbr> DevOps Process ⧉</a> (<em>Markus Voelter's blog</em>)</li>
 </ul>
 <details class="question">
 <summary>How to attach the debugger to a <abbr title="Continuous Integration">CI</abbr> build on GitHub actions?</summary>
-<p><em>Note</em>: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual/action/active">act</abbr></a>.</p>
+<p><em>Note</em>: GitHub actions can be run locally with <a href="https://github.com/nektos/act"><abbr title="actual/action/active">act</abbr> ⧉</a>.</p>
 <p>The plan is first to teach the build to open up a reachable <abbr title="Secure Shell">SSH</abbr> connection and then tunnel a local port onto it so that we can connect IntelliJ to it.</p>
 <ul>
 <li>Sign up with ngrok and get your <abbr title="authentication">auth</abbr> token</li>
 </ul>
-<p>Since build agents usually are not reachable from the web, we'<abbr title="linked list">ll</abbr> need someone to bridge the build agents' firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/</a> which requires free signup. I tried tmate as well, but that doesn't support port forwarding.</p>
+<p>Since build agents usually are not reachable from the web, we'<abbr title="linked list">ll</abbr> need someone to bridge the build agents' firewalls. A common solution for that seems to be <a href="https://ngrok.com/">https://ngrok.com/ ⧉</a> which requires free signup. I tried tmate as well, but that doesn't support port forwarding.</p>
 <ul>
 <li>Open ssh from your <code>.github/workflows/build.yml</code></li>
 </ul>
-<p>There are prepared GitHub actions that start sshd with ngrok. I used <a href="https://github.com/marketplace/actions/debug-via-ssh">debug-via-ssh</a>. All we need to give it is our <code>ngrok authtoken</code> from above and our public ssh key of the key we want to use to get into the machine.</p>
+<p>There are prepared GitHub actions that start sshd with ngrok. I used <a href="https://github.com/marketplace/actions/debug-via-ssh">debug-via-ssh ⧉</a>. All we need to give it is our <code>ngrok authtoken</code> from above and our public ssh key of the key we want to use to get into the machine.</p>
 <p>Given we already have <code>.github/workflows/build.yml</code>, I added a step right before the failing step:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1454,20 +1468,22 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a># …
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>- name: Start SSH session
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>uses: luchihoratiu/debug-via-ssh@main
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>with:
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    NGROK_AUTH_TOKEN: 2343953890afgaegaewgiöoio2332äää
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    SSH_PASS: ssh-rsa AAAJOAKJFLJWKLJLEKJLEFKJLFEKJLK…JAOIFJOFA bkruck@itemis.com
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a># …
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a># …
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>- name: Start SSH session
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>uses: luchihoratiu/debug-via-ssh@main
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>with:
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    NGROK_AUTH_TOKEN: 2343953890afgaegaewgiöoio2332äää
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    SSH_PASS: ssh-rsa AAAJOAKJFLJWKLJLEKJLEFKJLFEKJLK…JAOIFJOFA bkruck@itemis.com
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a># …
 </code></pre></div></td></tr></table></div>
 <p>Since this is a private repository, I was fine with pasting my authtoken and public <abbr title="Secure Shell">SSH</abbr> key into it (I didn't have permission to add secrets to the <abbr title="repository">repo</abbr>). After the whole session, I reset my ngrok <abbr title="authentication">auth</abbr> token.</p>
 <p>Another note worth mentioning is that we trust the author of the action and ngrok to not man-in-the-middle us.</p>
 <ul>
 <li>Tell <abbr title="Meta Programming System">MPS</abbr> to wait for us.</li>
 </ul>
-<p>Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. Our agent should be listed with a domain name and port in the <a href="https://dashboard.ngrok.com/endpoints/status">endpoints list</a>. Taking the two, we can now ssh into it:</p>
+<p>Now we can run the GitHub build and see that ngrok is stopping the build at the desired location, being ready for us to connect. Our agent should be listed with a domain name and port in the <a href="https://dashboard.ngrok.com/endpoints/status">endpoints list ⧉</a>. Taking the two, we can now ssh into it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a># SSH through ngrok onto the build machine, already forwarding local 5020 to the remote machine
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>ssh -L 5020:localhost:5020 -p11720 runner@4.tcp.ngrok.io
@@ -1485,16 +1501,18 @@ If still asked for a password, check which user runs the build. On GitHub, that 
 <span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- build/myProject/build-tests.xml    2021-09-17 21:15:50.000000000 +0200
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- build/myProject/build-tests.xml    2021-09-17 21:15:50.000000000 +0200
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>+++ build/myProject/build-tests.xml.before 2021-09-17 21:32:09.000000000 +0200
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>@@ -342,7 +342,6 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>    &lt;jvmargs&gt;
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>        &lt;arg value=&quot;-ea&quot; /&gt;
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>        &lt;arg value=&quot;-Xmx3072m&quot; /&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>-        &lt;arg value=&quot;-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5020&quot; /&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    &lt;/jvmargs&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    &lt;macro name=&quot;mps_home&quot; path=&quot;${mps_home}&quot; /&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    &lt;macro name=&quot;myProject.home&quot; path=&quot;${myProject.home}&quot; /&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>-        &lt;arg value=&quot;-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5020&quot; /&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    &lt;/jvmargs&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    &lt;macro name=&quot;mps_home&quot; path=&quot;${mps_home}&quot; /&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    &lt;macro name=&quot;myProject.home&quot; path=&quot;${myProject.home}&quot; /&gt;
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Run the tests from within <abbr title="Secure Shell">SSH</abbr></li>
@@ -1523,7 +1541,7 @@ If still asked for a password, check which user runs the build. On GitHub, that 
 </details>
 <div class="admonition warning">
 <p class="admonition-title">The build fails with exit code 137</p>
-<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-07/14-exit-code-137">Exit code 137</a></p>
+<p>Specific Languages blog: <a href="https://specificlanguages.com/posts/2022-07/14-exit-code-137">Exit code 137 ⧉</a></p>
 </div>
 
   <hr>
@@ -1729,7 +1747,7 @@ If still asked for a password, check which user runs the build. On GitHub, that 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

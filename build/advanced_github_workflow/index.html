@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1496,10 +1507,10 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Advanced GitHub Workflow</h1>
 
-<p>The following workflow suits small projects and projects with hundreds of developers. This guide assumes that you host the project on GitHub and that the <abbr title="Continuous Integration">CI</abbr> pipeline also runs on GitHub. Additionally, one or more teams work on the project and have some form of <a href="https://www.wikiwand.com/en/Agile_software_development">agile software development</a> implemented.
-New feature/bug fixes are developed based on a <a href="https://www.vollcom-digital.com/blog/digital-transformation/how-to-write-an-agile-ticket/">ticket</a> system.</p>
+<p>The following workflow suits small projects and projects with hundreds of developers. This guide assumes that you host the project on GitHub and that the <abbr title="Continuous Integration">CI</abbr> pipeline also runs on GitHub. Additionally, one or more teams work on the project and have some form of <a href="https://www.wikiwand.com/en/Agile_software_development">agile software development ⧉</a> implemented.
+New feature/bug fixes are developed based on a <a href="https://www.vollcom-digital.com/blog/digital-transformation/how-to-write-an-agile-ticket/">ticket ⧉</a> system.</p>
 <h2 id="codeowners-file">CODEOWNERS File<a class="headerlink" href="#codeowners-file" title="Permanent link">&para;</a></h2>
-<p>GitHub supports <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS</a> files which you have to place in the <em>.github</em> subfolder. An <abbr title="Meta Programming System">MPS</abbr> language can generate it.  For solutions, add a root node to describe the owners. For example:</p>
+<p>GitHub supports <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS ⧉</a> files which you have to place in the <em>.github</em> subfolder. An <abbr title="Meta Programming System">MPS</abbr> language can generate it.  For solutions, add a root node to describe the owners. For example:</p>
 <blockquote>
 <p><strong>Solution Code Owners</strong></p>
 <p>The following maintainers should be added to pull requests changing this solution</p>
@@ -1513,52 +1524,53 @@ New feature/bug fixes are developed based on a <a href="https://www.vollcom-digi
 <p>The following maintainers should be added to pull requests changing this language.</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ownerslist {
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>- team1
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- team2
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>}
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- team1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- team2
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
 </code></pre></div>
 <p>Specify that the corresponding team must review pull requests before merging them in the branch protection rules on GitHub.</p>
 <h2 id="merge-queue">Merge Queue<a class="headerlink" href="#merge-queue" title="Permanent link">&para;</a></h2>
-<p>When you merge all branches into a main branch, and there are many pull requests simultaneously, enabling the <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue">merge queue</a> feature on GitHub. Pull requests with reviews and no failing checks can be added to the merge queue. PRs show the position in the merge queue and the expected merge time.</p>
+<p>When you merge all branches into a main branch, and there are many pull requests simultaneously, enabling the <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue">merge queue ⧉</a> feature on GitHub. Pull requests with reviews and no failing checks can be added to the merge queue. PRs show the position in the merge queue and the expected merge time.</p>
 <p>When the previous PRs in the merge queue conflict with the current <abbr title="Pull Request or Public Relations">PR</abbr>, GitHub removes the current <abbr title="Pull Request or Public Relations">PR</abbr> from the merge queue. You can do this manually when accidentally adding a <abbr title="Pull Request or Public Relations">PR</abbr> to the merge queue. There is also the option <em>Merge when ready</em> at the bottom of the <abbr title="Pull Request or Public Relations">PR</abbr> to automatically add
 it to the merge queue when all other checks succeed.</p>
 <h2 id="issue-and-pull-request-templates">Issue and Pull Request Templates<a class="headerlink" href="#issue-and-pull-request-templates" title="Permanent link">&para;</a></h2>
-<p>Add <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">issue templates</a> to a repository to make it easier for developers and users to submit issues. <a href="https://github.com/stevemao/github-issue-templates">stevemao/github-issue-templates</a> contains a few ready-to-use templates. If you use a help desk, some other tool like <a href="https://www.atlassian.com/software/jira">Jira</a>, <a href="https://www.jetbrains.com/youtrack/">YouTrack</a>, or a platform like <a href="https://about.gitlab.com/">GitLab</a>, you should <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues">turn off issues</a> instead.</p>
-<p>For developers, a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">pull request template</a> helps them create better pull requests. When you open a new <abbr title="Pull Request or Public Relations">PR</abbr>, GitHub uses the template.
+<p>Add <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">issue templates</a> to a repository to make it easier for developers and users to submit issues. <a href="https://github.com/stevemao/github-issue-templates">stevemao/github-issue-templates</a> contains a few ready-to-use templates. If you use a help desk, some other tool like <a href="https://www.atlassian.com/software/jira">Jira</a>, <a href="https://www.jetbrains.com/youtrack/">YouTrack</a>, or a platform like <a href="https://about.gitlab.com/">GitLab</a>, you should <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues">turn off issues ⧉</a> instead.</p>
+<p>For developers, a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">pull request template ⧉</a> helps them create better pull requests. When you open a new <abbr title="Pull Request or Public Relations">PR</abbr>, GitHub uses the template.
 It can explain naming conventions that the developer has to follow or provide a checklist of things to pay attention to before
 opening a new <abbr title="Pull Request or Public Relations">PR</abbr>, for example, adding the change to the changelog, updating the documentation, or checking that tests exist for a new feature.</p>
 <h2 id="github-actions-and-workflows">GitHub Actions and Workflows<a class="headerlink" href="#github-actions-and-workflows" title="Permanent link">&para;</a></h2>
-<p>GitHub supports automating the workflow through <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<p>GitHub supports automating the workflow through <a href="https://github.com/features/actions">GitHub Actions ⧉</a>.</p>
 <h3 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h3>
-<p>GitHub supports <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes">automatically generating release notes</a>; many <a href="https://github.com/marketplace?type=actions&amp;query=Release+notes+">actions</a> on the GitHub marketplace support this feature. While a common approach is to extract the information from the commit messages, it might be better to manually write a release notes file or extract the information from the <abbr title="Pull Request or Public Relations">PR</abbr> description if it has a pre-defined format.</p>
-<p>It's important to differentiate between a changelog and release notes (<a href="https://amoeboids.com/blog/changelog-vs-release-notes-the-key-differences/">amoeboids.<abbr title="commercial/common/communication">com</abbr></a>): the changelog communicates technical changes, and the release notes 
+<p>GitHub supports <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes">automatically generating release notes</a>; many <a href="https://github.com/marketplace?type=actions&amp;query=Release+notes+">actions ⧉</a> on the GitHub marketplace support this feature. While a common approach is to extract the information from the commit messages, it might be better to manually write a release notes file or extract the information from the <abbr title="Pull Request or Public Relations">PR</abbr> description if it has a pre-defined format.</p>
+<p>It's important to differentiate between a changelog and release notes (<a href="https://amoeboids.com/blog/changelog-vs-release-notes-the-key-differences/">amoeboids.<abbr title="commercial/common/communication">com</abbr> ⧉</a>): the changelog communicates technical changes, and the release notes 
 inform the users about new features, improvements, and bug fixes in a non-technical way.</p>
 <h3 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h3>
-<p><a href="https://docs.github.com/en/actions/using-workflows/about-workflows">Workflows</a> are located in the <em>.github/workflows</em> directory. You can trigger them by events and schedule them automatically or manually. For many workflows, at least the <a href="https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables">default environment variables</a> <em>GITHUB_ACTOR</em> and <em>GITHUB_TOKEN</em> are necessary. Use <a href="https://github.com/nektos/act">nektos/<abbr title="actual/action/active">act</abbr></a> to run GitHub Actions locally. Depending on the project, the following workflows might be helpful:</p>
+<p><a href="https://docs.github.com/en/actions/using-workflows/about-workflows">Workflows</a> are located in the <em>.github/workflows</em> directory. You can trigger them by events and schedule them automatically or manually. For many workflows, at least the <a href="https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables">default environment variables</a> <em>GITHUB_ACTOR</em> and <em>GITHUB_TOKEN</em> are necessary. Use <a href="https://github.com/nektos/act">nektos/<abbr title="actual/action/active">act</abbr> ⧉</a> to run GitHub Actions locally. Depending on the project, the following workflows might be helpful:</p>
 <ul>
-<li>Building the project using the <a href="https://github.com/gradle/gradle-build-action">gradle-build-action</a> in combination with the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a></li>
-<li>Checking that issues or PRs are not <a href="https://github.com/actions/stale">stale</a> (e.g., as a cronjob)</li>
+<li>Building the project using the <a href="https://github.com/gradle/gradle-build-action">gradle-build-action</a> in combination with the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin ⧉</a></li>
+<li>Checking that issues or PRs are not <a href="https://github.com/actions/stale">stale ⧉</a> (e.g., as a cronjob)</li>
 <li>Checking that <abbr title="Pull Request or Public Relations">PR</abbr> conventions are followed when a <abbr title="Pull Request or Public Relations">PR</abbr> changes or the <abbr title="Pull Request or Public Relations">PR</abbr> is added to the merge queue. Some possible checks:<ul>
 <li>valid <abbr title="Pull Request or Public Relations">PR</abbr> title</li>
 <li>valid <abbr title="Pull Request or Public Relations">PR</abbr> description</li>
 <li>valid branch name</li>
 </ul>
 </li>
-<li>Publishing the <abbr title="Meta Programming System">MPS</abbr> languages and <abbr title="Rich Client Platform">RCP</abbr> as snapshots when a snapshot <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">Git tag</a> exists</li>
+<li>Publishing the <abbr title="Meta Programming System">MPS</abbr> languages and <abbr title="Rich Client Platform">RCP</abbr> as snapshots when a snapshot <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">Git tag ⧉</a> exists</li>
 <li>Building and testing the languages when you create a <abbr title="Pull Request or Public Relations">PR</abbr> or the <abbr title="Pull Request or Public Relations">PR</abbr> is added to the merge queue.</li>
 <li>Building the <abbr title="Rich Client Platform">RCP</abbr> when a change is pushed to main</li>
 <li>Creating a release (e.g., manually triggered)<ul>
 <li>building the <abbr title="Rich Client Platform">RCP</abbr></li>
 <li>generating the release notes</li>
-<li>deploying the <abbr title="Rich Client Platform">RCP</abbr> to a repository, for example, <a href="https://jfrog.com/artifactory/">JFrog Artifactory</a>, <a href="https://www.sonatype.com/products/sonatype-nexus-repository">Sonatype Nexus Repository</a>, or <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">GitHub Packages</a></li>
+<li>deploying the <abbr title="Rich Client Platform">RCP</abbr> to a repository, for example, <a href="https://jfrog.com/artifactory/">JFrog Artifactory</a>, <a href="https://www.sonatype.com/products/sonatype-nexus-repository">Sonatype Nexus Repository</a>, or <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry">GitHub Packages ⧉</a></li>
 </ul>
 </li>
 <li>Collecting repository metrics</li>
-<li>scanning the code for vulnerabilities and errors <a href="https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors">automatically on GitHub</a> or using a proprietary solution like <a href="https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html">Black Duck Software Composition Analysis</a> (e.g., as a cronjob)</li>
-<li>uploading coverage reports (e.g., <a href="https://www.jacoco.org/jacoco/trunk/index.html#:~:text=JaCoCo%20is%20a%20free%20Java,26%20based%20on%20commit%20e0d9d0442e9d6caa98362db034ad76db819a8cc9">JaCoCo</a>) and test results generated by <abbr title="Meta Programming System">MPS</abbr> (<a href="https://junit.org/junit5/">JUnit</a>) to a server (e.g., as a cronjob)</li>
+<li>scanning the code for vulnerabilities and errors <a href="https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors">automatically on GitHub</a> or using a proprietary solution like <a href="https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html">Black Duck Software Composition Analysis ⧉</a> (e.g., as a cronjob)</li>
+<li>uploading coverage reports (e.g., <a href="https://www.jacoco.org/jacoco/trunk/index.html#:~:text=JaCoCo%20is%20a%20free%20Java,26%20based%20on%20commit%20e0d9d0442e9d6caa98362db034ad76db819a8cc9">JaCoCo</a>) and test results generated by <abbr title="Meta Programming System">MPS</abbr> (<a href="https://junit.org/junit5/">JUnit ⧉</a>) to a server (e.g., as a cronjob)</li>
 </ul>
 <h4 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h4>
-<p>Use a GitHub action like <a href="https://github.com/floric/repo-monitor-action">floric/<abbr title="repository">repo</abbr>-monitor-action</a> to get an overview of project statistics.
+<p>Use a GitHub action like <a href="https://github.com/floric/repo-monitor-action">floric/<abbr title="repository">repo</abbr>-monitor-action ⧉</a> to get an overview of project statistics.
 You can generate custom metrics reports for <abbr title="Meta Programming System">MPS</abbr> projects, including the last releases using GitHub Pages. In the following snippets, languages and solutions are in the <em>code</em> folder:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">number of languages</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">$(</span>find code/languages/*/languages/* -maxdepth <span class="m">0</span> -type d <span class="p">|</span> wc -l<span class="k">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1577,20 +1589,20 @@ You can generate custom metrics reports for <abbr title="Meta Programming System
 <li>code coverage</li>
 <li>duration of workflow</li>
 <li>build duration</li>
-<li><a href="https://github.com/mbeddr/mps-gradle-plugin#model-check">model check</a> duration</li>
+<li><a href="https://github.com/mbeddr/mps-gradle-plugin#model-check">model check ⧉</a> duration</li>
 <li>number of added files in the latest commit</li>
 <li>number of modified files in the latest commit</li>
 <li>number of removed files in the latest commit</li>
 </ul>
 <h2 id="from-the-ticket-to-the-merged-pr">From the Ticket to the Merged <abbr title="Pull Request or Public Relations">PR</abbr><a class="headerlink" href="#from-the-ticket-to-the-merged-pr" title="Permanent link">&para;</a></h2>
-<p>The developer creates a new branch from the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch">default branch</a> usually called <em>main</em> or <em>master</em>. It is the stable branch that contains all the latest changes.
+<p>The developer creates a new branch from the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch">default branch ⧉</a> usually called <em>main</em> or <em>master</em>. It is the stable branch that contains all the latest changes.
 Use the ticket numbers in the branch name to connect code changes to ticket numbers. There are many different
-branch naming conventions (<a href="https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4">example</a>). One possible pattern is
+branch naming conventions (<a href="https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4">example ⧉</a>). One possible pattern is
 to start the branch with a category such as <em>feature</em>, <em>bugfix</em>, or <em>refactor</em>, then include the ticket number, and a branch description — for example, <code>feature/TASK-123_implement_awesome_feature</code>.</p>
 <p>For the commits, sometimes also naming conventions are used. A simple approach is to start the commit message with the ticket number and describe the change, for example, <code>TASK-123: implement the feature</code>. GitHub should execute some of the described workflows automatically when the branch is ready and pushed. The <abbr title="Pull Request or Public Relations">PR</abbr> should be reviewed from a white box and black box perspective (see: <a href="../../platform_essentials/testing/">testing</a>), and when all checks succeed, you can add the <abbr title="Pull Request or Public Relations">PR</abbr> to the merge queue. When the <abbr title="Pull Request or Public Relations">PR</abbr> is at the top of the merge queue, GitHub will build and test it again, and execute all the checks will be executed once again. If everything succeeds, GitHub will finally merge the <abbr title="Pull Request or Public Relations">PR</abbr> into one of the stable branches, like the default branch.</p>
-<p>In the meantime, depending on the used <a href="https://www.easyagile.com/blog/agile-workflow/">agile workflow</a>, the state of the ticket might change from <em>Todo</em> to <em>In Progress</em> to <em>Code Review</em> and then to <em>Done</em> when you merge the <abbr title="Pull Request or Public Relations">PR</abbr>. Depending on the <a href="https://digital.ai/glossary/agile-release-planning">release cycle</a>, you might release a new version regularly (e.g., four weeks).</p>
+<p>In the meantime, depending on the used <a href="https://www.easyagile.com/blog/agile-workflow/">agile workflow</a>, the state of the ticket might change from <em>Todo</em> to <em>In Progress</em> to <em>Code Review</em> and then to <em>Done</em> when you merge the <abbr title="Pull Request or Public Relations">PR</abbr>. Depending on the <a href="https://digital.ai/glossary/agile-release-planning">release cycle ⧉</a>, you might release a new version regularly (e.g., four weeks).</p>
 <h2 id="an-example-of-a-different-workflow">An Example of a Different Workflow<a class="headerlink" href="#an-example-of-a-different-workflow" title="Permanent link">&para;</a></h2>
-<p>While the described workflow has proven successful for big projects, you can use many other workflows. For example, the <abbr title="Meta Programming System">MPS</abbr> platforms don't use ticket numbers in commit messages. Tickets come from different (customer) projects. Linking existing tickets can also be difficult because the platforms are Open Source, and the tickets sometimes are not. The platforms are released whenever a change is pushed to the master or maintenance branches (<a href="https://www.wikiwand.com/en/Rolling_release">rolling release</a>) instead of using a fixed release cycle. The projects are also not built on GitHub but on a <a href="../teamcity/">TeamCity</a> server.</p>
+<p>While the described workflow has proven successful for big projects, you can use many other workflows. For example, the <abbr title="Meta Programming System">MPS</abbr> platforms don't use ticket numbers in commit messages. Tickets come from different (customer) projects. Linking existing tickets can also be difficult because the platforms are Open Source, and the tickets sometimes are not. The platforms are released whenever a change is pushed to the master or maintenance branches (<a href="https://www.wikiwand.com/en/Rolling_release">rolling release</a>) instead of using a fixed release cycle. The projects are also not built on GitHub but on a <a href="../teamcity/">TeamCity ⧉</a> server.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1795,7 +1807,7 @@ to start the branch with a category such as <em>feature</em>, <em>bugfix</em>, o
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

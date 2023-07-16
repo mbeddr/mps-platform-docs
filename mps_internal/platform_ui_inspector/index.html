@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1481,7 +1492,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Platform UI Inspector</h1>
 
-<p>The following example shows the internal structure of <abbr title="Meta Programming System">MPS</abbr> in regard to the <a href="https://docs.oracle.com/javase/tutorial/uiswing/">Swing</a> components.
+<p>The following example shows the internal structure of <abbr title="Meta Programming System">MPS</abbr> in regard to the <a href="https://docs.oracle.com/javase/tutorial/uiswing/">Swing ⧉</a> components.
 Most of the structure is predetermined by the IntelliJ platform. IntelliJ has a <a href="https://plugins.jetbrains.com/docs/intellij/internal-ui-inspector.html"><abbr title="User Interface">UI</abbr> inspector
 </a> for debugging purposes.
 <abbr title="Meta Programming System">MPS</abbr> turns it off by default, but you can enable it on the <abbr title="Meta Programming System">MPS</abbr> console through the following code:</p>
@@ -1502,17 +1513,17 @@ version because of the different versions of the IntelliJ platform.</p>
 </div>
 <div class="tabbed-block">
 <ol>
-<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html">JFrame</a></li>
-<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html">JRootPane</a>. It also contains the toolbar and <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar</a>.</li>
-<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The glass pane is often used to intercept input events occurring over the top-level container and can also be used to paint over multiple components.</li>
-<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes</a>: The layered pane contains the menu bar and content pane and enables Z-ordering of other components</li>
-<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/menu.html">JMenuBar</a></li>
-<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/panel.html">JPanel</a></li>
+<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html">JFrame ⧉</a></li>
+<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html">JRootPane</a>. It also contains the toolbar and <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar ⧉</a>.</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes ⧉</a>: The glass pane is often used to intercept input events occurring over the top-level container and can also be used to paint over multiple components.</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html#rootpane">RootPane</a>/<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/rootpane.html">How to Use Root Panes ⧉</a>: The layered pane contains the menu bar and content pane and enables Z-ordering of other components</li>
+<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/menu.html">JMenuBar ⧉</a></li>
+<li>IntelliJ-specific implementation of <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/panel.html">JPanel ⧉</a></li>
 <li>an entry in the main menu</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/navigation-bar.html">navigation bar</a></li>
+<li>the <a href="https://www.jetbrains.com/help/mps/navigation-bar.html">navigation bar ⧉</a></li>
 <li>the pane containing the tool window stripes</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar</a></li>
-<li>the stripes containing the <a href="https://www.jetbrains.com/help/mps/tool-windows.html">tool window</a> buttons</li>
+<li>the <a href="https://www.jetbrains.com/help/mps/status-bar.html">status bar ⧉</a></li>
+<li>the stripes containing the <a href="https://www.jetbrains.com/help/mps/tool-windows.html">tool window ⧉</a> buttons</li>
 <li>a button opening a tool window</li>
 <li>the pane containing the main content</li>
 <li>Three components split by two dividers horizontally or vertically</li>
@@ -1522,19 +1533,19 @@ version because of the different versions of the IntelliJ platform.</p>
 <li>a tab in a tool window</li>
 <li>a panel containing the editor</li>
 <li>the opened left tool window</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#194d9944">document tabs</a> enabling the navigation between opened editors</li>
+<li>the <a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#194d9944">document tabs ⧉</a> enabling the navigation between opened editors</li>
 <li>the editor window</li>
 <li>A class hiding the internal structure of a <abbr title="User Interface">UI</abbr> component which represents a set of opened editors</li>
-<li><abbr title="Meta Programming System">MPS</abbr> version of an IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">document</a> editor</li>
+<li><abbr title="Meta Programming System">MPS</abbr> version of an IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/documents.html">document ⧉</a> editor</li>
 <li>the panel containing the <abbr title="Meta Programming System">MPS</abbr> editor</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/editor.html#editorcomponentsandeditorcomponentcells">editor component</a> itself</li>
+<li>the <a href="https://www.jetbrains.com/help/mps/editor.html#editorcomponentsandeditorcomponentcells">editor component ⧉</a> itself</li>
 <li>a pane supporting zooming with the mouse wheel and scrolling</li>
 <li>the vertical scrollbar of the editor component</li>
 <li>the horizontal scrollbar of the editor component</li>
-<li>the left editor highlighter (<a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#c1b7ec2d">left gutter</a>)</li>
+<li>the left editor highlighter (<a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#c1b7ec2d">left gutter ⧉</a>)</li>
 <li>an editor component for editing nodes</li>
-<li>the <a href="https://www.jetbrains.com/help/mps/mps-intentions.html">intentions</a> menu</li>
-<li><a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#marker_bar">validation sidebar/marker bar</a></li>
+<li>the <a href="https://www.jetbrains.com/help/mps/mps-intentions.html">intentions ⧉</a> menu</li>
+<li><a href="https://www.jetbrains.com/help/mps/editor-guided-tour.html#marker_bar">validation sidebar/marker bar ⧉</a></li>
 </ol>
 </div>
 </div>
@@ -1747,7 +1758,7 @@ version because of the different versions of the IntelliJ platform.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

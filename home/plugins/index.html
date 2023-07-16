@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1449,7 +1460,7 @@ the same way you install <abbr title="Meta Programming System">MPS</abbr> plugin
 This page answers only general questions about plugins. You can find more information about plugins in <a href="./">Plugins</a>
 which deals with the plugin aspect.</p>
 <div class="admonition question">
-<p class="admonition-title">Where can you use a created language?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup></p>
+<p class="admonition-title">Where can you use a created language?</p>
 <p>Use them in <abbr title="Meta Programming System">MPS</abbr> or a custom <abbr title="Integrated Development Environment">IDE</abbr> based on <abbr title="Meta Programming System">MPS</abbr> (a so-called <abbr title="Rich Client Platform">RCP</abbr>). You need to create a build script, so you can export your plugins
 as real IntelliJ plugins that others can install. To ship all the plugins together with a custom branding, create an <abbr title="Rich Client Platform">RCP</abbr>.
 It has the advance that it can be provided to the end users as a single download or preinstalled on his computer. He doesn't have to
@@ -1462,48 +1473,48 @@ between plugins.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find plugins on the JetBrains marketplace usable in <abbr title="Meta Programming System">MPS</abbr>?</p>
-<p>Searching for the word <a href="https://plugins.jetbrains.com/search?products=mps&amp;search=MPS"><abbr title="Meta Programming System">MPS</abbr></a> in all categories should do the trick.</p>
+<p>Searching for the word <a href="https://plugins.jetbrains.com/search?products=mps&amp;search=MPS"><abbr title="Meta Programming System">MPS</abbr> ⧉</a> in all categories should do the trick.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Why do many IntelliJ plugins don't work with <abbr title="Meta Programming System">MPS</abbr>?</p>
 <p>Many of these plugins operate on the lines in text files. <abbr title="Meta Programming System">MPS</abbr> uses a projectional editor, which is incompatible with regular text editors. It doesn't use
-a document model or <a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a> because <abbr title="Meta Programming System">MPS</abbr> models are not text-based.
+a document model or <a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr> ⧉</a> because <abbr title="Meta Programming System">MPS</abbr> models are not text-based.
 Plugins that don’t officially support <abbr title="Meta Programming System">MPS</abbr> can interfere with certain features of <abbr title="Meta Programming System">MPS</abbr> (e.g., find usages might not work while using a plugin).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there any general-purpose plugins for <abbr title="Meta Programming System">MPS</abbr> from the community?</p>
-<p>Have a look at the <a href="https://mps.rocks/#awesome-MPS">plugin section</a> of <a href="https://mps.rocks">mps.rocks</a>.</p>
+<p>Have a look at the <a href="https://mps.rocks/#awesome-MPS">plugin section</a> of <a href="https://mps.rocks">mps.rocks ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Which kinds of plugins are there?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/">Two kinds of <abbr title="Meta Programming System">MPS</abbr> plugins</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/09-mps-plugins-vs-idea-plugins/"><abbr title="Meta Programming System">MPS</abbr> plugins vs. IDEA plugins</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/">Two kinds of <abbr title="Meta Programming System">MPS</abbr> plugins ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/09-mps-plugins-vs-idea-plugins/"><abbr title="Meta Programming System">MPS</abbr> plugins vs. IDEA plugins ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I turn off notifications for fatal errors?</p>
-<p>Add <code class="highlight"><span class="na">idea.fatal.error.notification</span><span class="o">=</span><span class="s">disabled</span><span class="w"></span></code> to <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties">idea.properties</a>.</p>
+<p>Add <code class="highlight"><span class="na">idea.fatal.error.notification</span><span class="o">=</span><span class="s">disabled</span><span class="w"></span></code> to <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#configure-platform-properties">idea.properties ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there existing projects regarding <abbr title="Meta Programming System">MPS</abbr> on the web?</p>
-<p>Look at <a href="https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options">deployment options for <abbr title="Meta Programming System">MPS</abbr></a>, <a href="https://mps.rocks/#other-projects">this list</a>, and <a href="https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628">WebMPS</a> by JetBrains.</p>
+<p>Look at <a href="https://www.itemis.com/en/it-services/methods-and-tools/dsls-mps-deployment-options">deployment options for <abbr title="Meta Programming System">MPS</abbr></a>, <a href="https://mps.rocks/#other-projects">this list</a>, and <a href="https://blog.jetbrains.com/mps/2021/02/webmps-faq/?_ga=2.195764009.441906427.1635067376-1212584208.1633605628">WebMPS ⧉</a> by JetBrains.</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/">Web-based projectional editing is moving forward</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/">MPSServer and WebEditKit</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-02/15-mps-and-the-web/">Web-based projectional editing is moving forward ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-02/16-mpsserver-and-webeditkit/">MPSServer and WebEditKit ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you translate every part of <abbr title="Meta Programming System">MPS</abbr>?<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup></p>
-<p>You can install a <a href="https://plugins.jetbrains.com/search?tags=Language%20Pack">language pack</a> for IntelliJ-based projects. A complete translation of <abbr title="Meta Programming System">MPS</abbr> is not feasible because some parts are hard coded. 
-There are also known bugs with extended characters (<a href="https://youtrack.jetbrains.com/issue/MPS-31835"><abbr title="Meta Programming System">MPS</abbr>-31835</a>) and <a href="https://youtrack.jetbrains.com/issues/MPS?q=unicode">Unicode</a>
+<p class="admonition-title">How do you translate every part of <abbr title="Meta Programming System">MPS</abbr>?</p>
+<p>You can install a <a href="https://plugins.jetbrains.com/search?tags=Language%20Pack">language pack ⧉</a> for IntelliJ-based projects. A complete translation of <abbr title="Meta Programming System">MPS</abbr> is not feasible because some parts are hard coded. 
+There are also known bugs with extended characters (<a href="https://youtrack.jetbrains.com/issue/MPS-31835"><abbr title="Meta Programming System">MPS</abbr>-31835</a>) and <a href="https://youtrack.jetbrains.com/issues/MPS?q=unicode">Unicode ⧉</a>
 if you want to use special characters.
-The article <a href="https://www.plugin-dev.com/intellij/general/plugin-localization/">Localizing an IntelliJ Plugin</a> contains further information.</p>
+The article <a href="https://www.plugin-dev.com/intellij/general/plugin-localization/">Localizing an IntelliJ Plugin ⧉</a> contains further information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you get information about an <abbr title="Meta Programming System">MPS</abbr> installation via an <abbr title="Hypertext Transfer Protocol">HTTP</abbr> request?</p>
-<p>Getting information is possible through the <a href="https://www.develar.org/idea-rest-api/">IntelliJ Platform <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr></a>:
-Send a GET request (or enter it into the browser address bar): <a href="http://localhost:63342/api/about?more=true">http://localhost:63342/api/about?more=true</a>.
+<p>Getting information is possible through the <a href="https://www.develar.org/idea-rest-api/">IntelliJ Platform <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr> ⧉</a>:
+Send a GET request (or enter it into the browser address bar): <a href="http://localhost:63342/api/about?more=true">http://localhost:63342/api/about?more=true ⧉</a>.
 Ensure that you don’t have IntelliJ opened simultaneously, as it has the same <abbr title="Application Programming Interface">API</abbr>. Example output:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1552,23 +1563,12 @@ Ensure that you don’t have IntelliJ opened simultaneously, as it has the same 
 <div class="admonition question">
 <p class="admonition-title">How do I access the current project from anywhere?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-04/27-how-to-get-the-current-project-from-anywhere/">How to get the current project from anywhere</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/27-how-to-get-the-current-project-from-anywhere/">How to get the current project from anywhere ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">jetbrains.mps.module.ModuleClassLoaderIsNullException: ClassLoader of module XY could not be found.</p>
 <p>Make sure to avoid setting the solution kind to none.</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:2">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/4407050689042-Any-way-to-translate-the-whole-MPS-">Any way to translate all of <abbr title="Meta Programming System">MPS</abbr>?</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360010679519-Plugin"><abbr title="Meta Programming System">MPS</abbr> forum - Plugin</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
 </div>
 
   <hr>
@@ -1576,7 +1576,7 @@ Ensure that you don’t have IntelliJ opened simultaneously, as it has the same 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1778,7 +1778,7 @@ Ensure that you don’t have IntelliJ opened simultaneously, as it has the same 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1673,8 +1684,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1685,29 +1699,26 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="behavior-aspect">Behavior Aspect<a class="headerlink" href="#behavior-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="behavior-aspect"><a href="https://www.jetbrains.com/help/mps/behavior.html">Behavior Aspect</a><a class="headerlink" href="#behavior-aspect" title="Permanent link">&para; ⧉</a></h1>
 <p>The behavior aspect can be used for defining methods for the concepts of the language.</p>
-<ul>
-<li><a href="https://www.jetbrains.com/help/mps/behavior.html">official documentation</a></li>
-</ul>
 <div class="admonition question">
 <p class="admonition-title">Can you use asynchronous code in behavior methods such as calling external tools?</p>
 <p>Be careful when doing so. Make sure to not mix concurrent locking aspects such as write and read actions with behavior code. 
 It should always be assumed that you have the correct lock in these methods. Move the code concerning the concurrent access for example into a background task.
-More information can be found in <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>.</p>
+More information can be found in <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr> ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you save temporary information about nodes?</p>
-<p>Consider saving temporary data about nodes in annotations and user objects (<a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529">node/.putUserObject</a>, <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529">node/.getUserObject</a>)
+<p>Consider saving temporary data about nodes in annotations and user objects (<a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.putUserObject%2528java.lang.Object%2Cjava.lang.Object%2529">node/.putUserObject</a>, <a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.model%28MPS.OpenAPI%2F%29%2F%7ESNode.getUserObject%2528java.lang.Object%2529">node/.getUserObject ⧉</a>)
 instead of introducing properties. 
 You can store and access Java objects in <code>SNode::putUserObject()</code> as key-value pairs) where you usually could not access them in the <abbr title="Meta Programming System">MPS</abbr> context, e.g. keeping them as node members and access them in an editor, a checking rule or anything else. This approach is hard to trace and maintain and should only be used in exceptional cases.
-For the generator, consult the section <em>Transferring User Data</em> of the <a href="https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference">generator documentation</a>.</p>
+For the generator, consult the section <em>Transferring User Data</em> of the <a href="https://www.jetbrains.com/help/mps/generator-language.html#generatorlanguagereference">generator documentation ⧉</a>.</p>
 </div>
 <details class="question">
 <summary>How to mark a constructor-created child optional? (created by a light quotation)</summary>
 <blockquote>
 <p>Example:</p>
-<p><a class="glightbox" href="../../img/required_link_is_not_initialized.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="required link is not initialized" src="../../img/required_link_is_not_initialized.png" width="600px" /></a></p>
+<p><a class="glightbox" href="../images/behavior/required_link_is_not_initialized.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="required link is not initialized" src="../images/behavior/required_link_is_not_initialized.png" width="600px" /></a></p>
 </blockquote>
 <p>Solutions:</p>
 <ul>
@@ -1730,9 +1741,9 @@ For the generator, consult the section <em>Transferring User Data</em> of the <a
 <blockquote>
 <p>Given there is a virtual behavior method <code>getPresentation</code>.
 When I override <code>getPresentation</code> in a subconcept, it displays the overriding method to be virtual.</p>
-<p><a class="glightbox" href="../../img/virtual_getPresentation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="virtual getPresentation" src="../../img/virtual_getPresentation.png" /></a></p>
+<p><a class="glightbox" href="../images/behavior/virtual_get_presentation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="virtual getPresentation" src="../images/behavior/virtual_get_presentation.png" /></a></p>
 <p>Yet, I see that <code>methodDeclNode.isVirtual</code> is <em>null</em>.</p>
-<p><a class="glightbox" href="../../img/methodDeclNode_isVirtual_null.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="methodDeclNode isVirtual is null" src="../../img/methodDeclNode_isVirtual_null.png" /></a></p>
+<p><a class="glightbox" href="../images/behavior/method_Decl_node_is_virtual_null.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="methodDeclNode isVirtual is null" src="../images/behavior/method_Decl_node_is_virtual_null.png" /></a></p>
 <p>Why is that?</p>
 </blockquote>
 <p>Note that <code>isVirtual</code> and <code>isVirtual()</code> on a method have different semantics.</p>
@@ -1750,8 +1761,8 @@ When I override <code>getPresentation</code> in a subconcept, it displays the ov
 <p>The constructor in the behavior aspect is a bit confusing to beginners because the node is not yet attached to its parent.
 In the case of root nodes, it might not even have a parent.</p>
 <p>Internally, there is also the idea of node owners that the JavaDoc of
-<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESNodeOwner">SNodeOwner</a> and its
-implementing classes describe. When you create a new node, the owner is an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner">FreeFloatNodeOwner</a>, This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner">AttachedNodeOwner</a>. After calling <code>myNode.detach</code> it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner">DetachedNodeOwner</a>.
+<a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7ESNodeOwner">SNodeOwner ⧉</a> and its
+implementing classes describe. When you create a new node, the owner is an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner">FreeFloatNodeOwner</a>, This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner">AttachedNodeOwner</a>. After calling <code>myNode.detach</code> it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner">DetachedNodeOwner ⧉</a>.
 The node could go be added back to a model.</p>
 <details class="question">
 <summary>How do you initialize a node?</summary>
@@ -1773,7 +1784,7 @@ The node could go be added back to a model.</p>
 <li>Adding it as a root with <code>model.add root(&lt;Car()&gt;)</code>.</li>
 <li>Adding it as a root with <code>model.add new root(Car)</code>.</li>
 </ul>
-<p><a class="glightbox" href="../../img/node_factory_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="node factory:car" src="../../img/node_factory_car.png" width="600px" /></a></p>
+<p><a class="glightbox" href="../images/behavior/node_factory_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="node factory:car" src="../images/behavior/node_factory_car.png" width="600px" /></a></p>
 <p><strong>Using a behavior constructor</strong></p>
 <p>Using a behavior constructor will only partially achieve this. Note that it will only be called when</p>
 <ul>
@@ -1781,19 +1792,19 @@ The node could go be added back to a model.</p>
 <li>creating a node with <code>new node&lt;Car&gt;()</code>.</li>
 </ul>
 <p>Using a quotation will <strong>not</strong> call this constructor.</p>
-<p><a class="glightbox" href="../../img/Car_behavior.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Behavior: car" src="../../img/Car_behavior.png" width="600px" /></a></p>
+<p><a class="glightbox" href="../images/behavior/car_behavior.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Behavior: car" src="../images/behavior/car_behavior.png" width="600px" /></a></p>
 <p><strong>Using a property getter</strong></p>
 <p>You could use an <code>initialized</code> variable and a combination of property getters and setters.</p>
 <p>This solution would work only for properties, not children or references, and requires quotations to set the initialized value if trying to override the default. Furthermore, your quotations will still be marked. </p>
-<p><a class="glightbox" href="../../img/constraints_Car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Constraints: Car" src="../../img/constraints_Car.png" width="500px" /></a></p>
+<p><a class="glightbox" href="../images/behavior/car_constraints.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Constraints: Car" src="../images/behavior/car_constraints.png" width="500px" /></a></p>
 <p><figure markdown>
-<a class="glightbox" href="../../img/car_usage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Usage: Car" src="../../img/car_usage.png" width="500px" /></a>
+<a class="glightbox" href="../images/behavior/car_usage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Usage: Car" src="../images/behavior/car_usage.png" width="500px" /></a>
   <figcaption>Usage</figcaption>
 </figure></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Can you access the parent in the constructor?</p>
-<p>No, it doesn't work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory</a> to access the parent instead.</p>
+<p>No, it doesn't work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory ⧉</a> to access the parent instead.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you query the context in a node constructor?</p>
@@ -1820,28 +1831,20 @@ superConcept()
 behavior aspect uses a custom generation plan that doesn't included all Base Language extentions and are internally differently
 implemented.</p>
 <div class="admonition question">
-<p class="admonition-title">How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure</a>.</p>
+<p class="admonition-title">How can you use generic return types where the returned expressions is cast to concept<T> which is a parameter of the function?</p>
+<p>This is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22502"><abbr title="Meta Programming System">MPS</abbr>-22502</a>). The as cast expects a reference to a concept, the type variable can't be used in this place. There are ways to circumvent this by using lower level code but it won't help. I think you also can't really use the information from the type variable because this information is not available at runtime because of <a href="https://www.baeldung.com/java-type-erasure">Java type erasure ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you use a more specific return type while overriding a behavior method?</p>
-<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-27720"><abbr title="Meta Programming System">MPS</abbr>-27720</a>).</p>
+<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-27720"><abbr title="Meta Programming System">MPS</abbr>-27720 ⧉</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you use variable arguments (varArgs) in behavior methods?</p>
-<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-31056"><abbr title="Meta Programming System">MPS</abbr>-31056</a>).</p>
+<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-31056"><abbr title="Meta Programming System">MPS</abbr>-31056 ⧉</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you enter a <em>throws</em> clause in behavior methods?</p>
-<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22306"><abbr title="Meta Programming System">MPS</abbr>-22306</a>).</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360010808559-Generics-for-return-type-of-behavior-method"><abbr title="Meta Programming System">MPS</abbr> forum - Generics for return type of behavior method</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+<p>No, it is not possible (<a href="https://youtrack.jetbrains.com/issue/MPS-22306"><abbr title="Meta Programming System">MPS</abbr>-22306 ⧉</a>).</p>
 </div>
 
   <hr>
@@ -1849,7 +1852,7 @@ implemented.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2047,7 +2050,7 @@ implemented.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

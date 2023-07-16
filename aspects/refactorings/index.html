@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1613,8 +1624,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1625,7 +1639,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="refactorings-aspect"><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">Refactorings Aspect</a><a class="headerlink" href="#refactorings-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="refactorings-aspect"><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">Refactorings Aspect</a><a class="headerlink" href="#refactorings-aspect" title="Permanent link">&para; ⧉</a></h1>
 <blockquote>
 <p>You can write simple refactorings using the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.refactoring</ins>.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
@@ -1636,21 +1650,21 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you link to an example that demonstrates this aspect?</p>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3Ad9efd362-28b8-4f70-9bcd-fb582528d11c%28jetbrains.mps.lang.core.refactorings%29%2F1347577327951770664">Rename</a> implements the refactoring.
-<a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943353">RenameNode</a> implements the action.
-The action is part of the group <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943351">CoreNodeRefactorings</a> which belongs to the
-<a href="http://127.0.0.1:63320/node?ref=r%3Ade82dfab-9448-49ba-813e-2b0579f7fb15%28jetbrains.mps.ide.platform.actions%29%2F6714826334259354054">NodeRefactoring</a> group. Base Language has its group called <a href="http://127.0.0.1:63320/node?ref=r%3Adfc27cab-2d08-4c79-ac99-e95209e18392%28jetbrains.mps.baseLanguage.pluginSolution.plugin%29%2F225095413451945663">RefactoringAdditions</a>.</p>
+<p><a href="http://127.0.0.1:63320/node?ref=r%3Ad9efd362-28b8-4f70-9bcd-fb582528d11c%28jetbrains.mps.lang.core.refactorings%29%2F1347577327951770664">Rename ⧉</a> implements the refactoring.
+<a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943353">RenameNode ⧉</a> implements the action.
+The action is part of the group <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943351">CoreNodeRefactorings ⧉</a> which belongs to the
+<a href="http://127.0.0.1:63320/node?ref=r%3Ade82dfab-9448-49ba-813e-2b0579f7fb15%28jetbrains.mps.ide.platform.actions%29%2F6714826334259354054">NodeRefactoring</a> group. Base Language has its group called <a href="http://127.0.0.1:63320/node?ref=r%3Adfc27cab-2d08-4c79-ac99-e95209e18392%28jetbrains.mps.baseLanguage.pluginSolution.plugin%29%2F225095413451945663">RefactoringAdditions ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you change the concept of a node while keeping all properties, references, and children?</p>
-<p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept</a> with your node and new concept as parameters. 
-In this class, there are other handy methods, such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink)</a>.</p>
-<p><a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node</a>(<em>Specific Languages' blog</em>)</p>
+<p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept ⧉</a> with your node and new concept as parameters. 
+In this class, there are other handy methods, such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink) ⧉</a>.</p>
+<p><a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What should I put in the applicable block of the refactoring and its action?</p>
 <p>For the action, you can use <code>is applicable refactoring&lt;YourRefactoring&gt;()</code>. By default, refactorings are not disabled for read-only
-editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8451255343455518243">update block</a> of the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F830211401282058525">MoveNodes</a> action for more information.</p>
+editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8451255343455518243">update block</a> of the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F830211401282058525">MoveNodes ⧉</a> action for more information.</p>
 </div>
 
   <hr>
@@ -1860,7 +1874,7 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

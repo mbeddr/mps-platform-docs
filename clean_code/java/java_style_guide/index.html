@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1330,13 +1341,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../../tags/#java" class="md-tagmaterial/close">java</a>
+      
+        <a href="../../../tags/#java" class="md-tag md-tag-icon">java</a>
       
     
       
+        
+        
       
-        <a href="../../../tags/#best_practise" class="md-tagmaterial/close">best_practise</a>
+      
+        <a href="../../../tags/#best_practise" class="md-tag md-tag-icon">best_practise</a>
       
     
   </nav>
@@ -1349,24 +1366,24 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Java Style Guide</h1>
 
-<p>These are some points taken from the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> that make sense in <abbr title="Meta Programming System">MPS</abbr>.</p>
+<p>These are some points taken from the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide ⧉</a> that make sense in <abbr title="Meta Programming System">MPS</abbr>.</p>
 <ul>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented</a>: Write a comment on why a fall-through is necessary inside a switch statement.</li>
-<li>The <a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">default case is present</a>: Always write a default case for switch statements.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers</a>: Identifiers use only ASCII letters and digits and, in a few cases noted below, underscores. Don't use prefixes or suffixes with particular meanings. For example, these names don't adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em>, and <em>kName</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names</a> are all lowercase, with consecutive words concatenated together (no underscores). For example, <em><abbr title="commercial/common/communication">com</abbr>.example.deepspace</em>, not <em><abbr title="commercial/common/communication">com</abbr>.example.deepSpace</em> or <em><abbr title="commercial/common/communication">com</abbr>.example.deep_space</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases, for example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>) but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they're testing and end with Test, e.g., <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases, for example, <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, e.g., <em>pop_emptyStack</em>. No correct way exists for naming test methods.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names</a>: Use all uppercase letters, with each word separated from the next by a single underscore</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names</a>: Non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases, for example, <em>computedValues</em> or <em>index</em>.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names</a> should be <em>lowerCamelCase</em>. Avoid one-character parameter names in public methods.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names</a> should be in lowerCamelCase. Even when final and immutable, local variables are not considered constants, and you should not style them as constants.</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names</a>: Each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>), or a name in the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Camel case: defined</a>: tutorial on how to write camelcase</li>
-<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don't ignore caught exceptions</a>
-  (see also: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=16">Avoid empty catch blocks</a>)</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Fall-through: commented ⧉</a>: Write a comment on why a fall-through is necessary inside a switch statement.</li>
+<li>The <a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">default case is present ⧉</a>: Always write a default case for switch statements.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Rules common to all identifiers ⧉</a>: Identifiers use only ASCII letters and digits and, in a few cases noted below, underscores. Don't use prefixes or suffixes with particular meanings. For example, these names don't adhere to the style: <em>name_</em>, <em>mName</em>, <em>s_name</em>, and <em>kName</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Package names ⧉</a> are all lowercase, with consecutive words concatenated together (no underscores). For example, <em><abbr title="commercial/common/communication">com</abbr>.example.deepspace</em>, not <em><abbr title="commercial/common/communication">com</abbr>.example.deepSpace</em> or <em><abbr title="commercial/common/communication">com</abbr>.example.deep_space</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Class names ⧉</a>: should be in UpperCamelCase. Class names are typically nouns or noun phrases, for example, <em>Character</em> or <em>ImmutableList</em>. Interface names may also be nouns or noun phrases (for example, <em>List</em>) but may sometimes be adjectives or adjective phrases instead (for example, <em>Readable</em>). Test classes should start with the name of the class they're testing and end with Test, e.g., <em>HashTest</em> or <em>HashIntegrationTest</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Method names ⧉</a>: should be in lowerCamelCase. Method names are typically verbs or verb phrases, for example, <code>sendMessage or stop</code>. Underscores may appear in JUnit test method names to separate logical components of the name, with each component written in lowerCamelCase. One typical pattern is <methodUnderTest>_<state>, e.g., <em>pop_emptyStack</em>. No correct way exists for naming test methods.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Constant names ⧉</a>: Use all uppercase letters, with each word separated from the next by a single underscore</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Non-constant field names ⧉</a>: Non-constant field names (static or otherwise) should be <em>lowerCamelCase</em>. These names are typically nouns or noun phrases, for example, <em>computedValues</em> or <em>index</em>.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Parameter names ⧉</a> should be <em>lowerCamelCase</em>. Avoid one-character parameter names in public methods.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Local variable names ⧉</a> should be in lowerCamelCase. Even when final and immutable, local variables are not considered constants, and you should not style them as constants.</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Type variable names ⧉</a>: Each type variable should adhere to one of two styles: a single capital letter, optionally followed by a single numeral (such as <em>E</em>, <em>T</em>, <em>X</em>, <em>T2</em>), or a name in the form used for classes, followed by the capital letter <em>T</em> (examples: <em>RequestT</em>, <em>FooBarT</em>).</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Camel case: defined ⧉</a>: tutorial on how to write camelcase</li>
+<li><a href="https://google.github.io/styleguide/javaguide.html#s4.8.4-switch">Don't ignore caught exceptions ⧉</a>
+  (see also: <a href="http://www.javapractices.com/topic/TopicAction.do?Id=16">Avoid empty catch blocks ⧉</a>)</li>
 </ul>
-<p><a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr></a> contains additional java practices.</p>
+<p><a href="http://www.javapractices.com/home/HomeAction.do">javapractices.<abbr title="commercial/common/communication">com</abbr> ⧉</a> contains additional java practices.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1575,7 +1592,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

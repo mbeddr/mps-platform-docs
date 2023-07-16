@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1451,13 +1462,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#mbeddr" class="md-tagmaterial/close">mbeddr</a>
+      
+        <a href="../../tags/#mbeddr" class="md-tag md-tag-icon">mbeddr</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#iets3" class="md-tagmaterial/close">iets3</a>
+      
+        <a href="../../tags/#iets3" class="md-tag md-tag-icon">iets3</a>
       
     
   </nav>
@@ -1472,22 +1489,22 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 <p>The interpreter lets you interpret code on the fly. You can use it instead of the standard approach by writing an <abbr title="Meta Programming System">MPS</abbr> generator and executing the code this way (e.g., executing Base Language code). The result of invoking the interpreter is a Java object.</p>
 <p><a class="glightbox" href="../gifs/interpreter_testcase.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="interpreter: KernelF test case" src="../gifs/interpreter_testcase.gif" width="600px" /></a></p>
-<p>In the GIF, you can see the interpreter executing a test case that contains assertions written with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn't involved in the execution at all.</p>
+<p>In the GIF, you can see the interpreter executing a test case that contains assertions written with <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf">KernelF ⧉</a>. The <abbr title="Meta Programming System">MPS</abbr> generator isn't involved in the execution at all.</p>
 <h2 id="creating-an-interpreter">Creating an Interpreter<a class="headerlink" href="#creating-an-interpreter" title="Permanent link">&para;</a></h2>
 <p>To create a new interpreter, create a solution containing the interpreter and import the language <code>com.mbeddr.mpsutil.interpreter</code>.
 Make sure to set the solution kind to <code>Other</code> in the module properties.</p>
 <p><a class="glightbox" href="../images/interpreter_solution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="interpreter: Solution Kind configuration" src="../images/interpreter_solution.png" /></a></p>
-<p>Now create a new model inside your solution, create the new interpreter, and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use different categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter</a> exists in mpsutils (mbeddr) that uses the  category <code>java</code>. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
-<p>In the related interpreter section, you can define that the current interpreter should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example</a> from KernelF: interpreter of the collections operations should run first because it reduces them to more straightforward statements. The lambda and base interpreter should run afterward.</p>
-<p>The type mappings section can declare mappings from types that implement the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface to either a Java type or another custom type that implements the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface.</p>
-<p><a class="glightbox" href="../images/exprSimpleInterpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KernelF: expression simple interpreter" src="../images/exprSimpleInterpreter.png" /></a></p>
+<p>Now create a new model inside your solution, create the new interpreter, and give it a name. The category should be <code>arithmetic</code> so that other interpreters of this category can also use this interpreter, but you can also use different categories. A <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">demo Java interpreter ⧉</a> exists in mpsutils (mbeddr) that uses the  category <code>java</code>. You don't have to set the evaluated languages: they are automatically calculated based on the declared evaluators.</p>
+<p>In the related interpreter section, you can define that the current interpreter should run before or after another interpreter. <a href="http://127.0.0.1:63320/node?ref=r%3A2864d21d-eb2b-488f-a943-a765959cab0a%28org.iets3.core.expr.collections.interpreter.plugin%29%2F8448265401168630270">An example ⧉</a> from KernelF: interpreter of the collections operations should run first because it reduces them to more straightforward statements. The lambda and base interpreter should run afterward.</p>
+<p>The type mappings section can declare mappings from types that implement the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType</a> interface to either a Java type or another custom type that implements the <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1234971358450">IType ⧉</a> interface.</p>
+<p><a class="glightbox" href="../images/expr_simple_interpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KernelF: expression simple interpreter" src="../images/expr_simple_interpreter.png" /></a></p>
 <p>An evaluator consists of a left and right side: the left side is a concept that should be interpreted. In the inspector, you can set <em>cacheValues</em> to true to enable caching. When the interpreter reaccesses the same value, the cached value is returned instead of recalculating it. Unchecking <em>Tools</em> &rarr; <em>Enable Interpreter Cache</em> in the main menu can turn off the interpreter cache.</p>
 <p><a class="glightbox" href="../images/literals_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of literals concept" src="../images/literals_evaluator.png" width="600px" /></a></p>
 <p>The right side contains an expression or a block and must return a value. The <em>node</em> expression refers to the currently evaluated expression. A few expressions start with <em>#</em>. Their corresponding short descriptions explain them. Use the <em>#-&gt;</em> expression to call functions (search for usages globally).
 The right side can return a Java object (including null) or call another interpreter with one of the #-expressions. Another interesting expression is the <em><abbr title="environment">env</abbr></em> expression. Use this array to save values for other evaluators. The key must be a node. If you don't have a node, you can use a helper class with static dummy nodes as keys. An example could be a dot expression where the operation needs to access the operand, for example, <code>"hello".startswith("he")</code>. <code>startswith()</code> is the operation, <code>"hello"</code> is the operand:</p>
 <p><a class="glightbox" href="../images/startswith_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of startswith concept" src="../images/startswith_evaluator.png" /></a></p>
 <p>When the current interpreter is not suitable for interpreting the current node, use the expression <em>tryOtherInterpreter</em> to use the next interpreter to interpret the current node:</p>
-<p><a class="glightbox" href="../images/tryOtherInterpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="try other interpreter expression" src="../images/tryOtherInterpreter.png" /></a></p>
+<p><a class="glightbox" href="../images/try_other_interpreter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="try other interpreter expression" src="../images/try_other_interpreter.png" /></a></p>
 <p>Use the <em>castUp</em> expression to cast a Java (Base Language) expression to a type.
 For example, if the expression is of type Number (<em>numberInput</em>) and the target type is float,
 <code>numberInput.floatValue()</code> would be called.
@@ -1495,7 +1512,7 @@ The <em>$</em> expression returns the concept's type. Use it for type mappings a
 <p><a class="glightbox" href="../images/mod_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of modulus" src="../images/mod_evaluator.png" width="600px" /></a></p>
 <p>Use the <em>context</em> expression to access the interpreter configurations, the cache, and the root interpreter, and contains some other useful. You can, for example, use it to access the environment from a Java class by executing a method with the context as a parameter. Then you can access the environment by calling <code>context.getEnvironment()</code>. The environment can be nested by calling <code>push</code> and <code>pop</code>. The interpreter uses the topmost environment in the stack. Use the is-evaluable expression (#?) to check if an evaluator for a specific node is available.</p>
 <h2 id="code-coverage">Code Coverage<a class="headerlink" href="#code-coverage" title="Permanent link">&para;</a></h2>
-<p>There's also support for code coverage inside the editor. Code coverage checks which part of the code the interpreter has visited. For more information, consult the <a href="https://en.wikipedia.org/wiki/Code_coverage">Wikipedia page</a>. You can find <abbr title="output">out</abbr>, for example, which parts of the code aren't covered by tests:</p>
+<p>There's also support for code coverage inside the editor. Code coverage checks which part of the code the interpreter has visited. For more information, consult the <a href="https://en.wikipedia.org/wiki/Code_coverage">Wikipedia page ⧉</a>. You can find <abbr title="output">out</abbr>, for example, which parts of the code aren't covered by tests:</p>
 <p><a class="glightbox" href="../images/example_coverage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: code coverage" src="../images/example_coverage.png" /></a></p>
 <p>There's support for coverage of single nodes but also branches. An example of a concept that uses branches in the data flow is the if and else blocks of an if statement. To register branches, use the <em>register branches</em> statement. To visit a branch, use the <em>branch</em> statement. When visiting a node, the node, the node's concept, and the evaluator are automatically marked as covered. For the children of the node, there's the <em>list coverage</em> statement which visits a list of nodes, and the simple <em>cover</em> statement. The former is, for example, used for the elements of a map literal. The coverage information can be accessed and set through the <em>coverage</em> variable.</p>
 <p><a class="glightbox" href="../images/if_evaluator.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluator of if expression" src="../images/if_evaluator.png" /></a></p>
@@ -1523,8 +1540,8 @@ The <em>$</em> expression returns the concept's type. Use it for type mappings a
 <p>It's also recommended not to call the interpreter from the generator when searching for interpreters. <abbr title="Meta Programming System">MPS</abbr> might deadlock because it starts indexing. You might get away with it by calling the interpreter inside the runnable of <code>DumbService.getInstance(project).suspendIndexingAndRun()</code>. You can't return the value from the runnable, but you can assign it in a method of an object outside the runnable.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
-<li>KernelF: <a href="http://127.0.0.1:63320/node?ref=r%3A31fd8edf-66c5-44d7-84a8-5940badb4d17%28org.iets3.core.expr.base.interpreter.plugin%29%2F553080662195419964">ExprBaseInterpreter</a></li>
-<li>Mbeddr: <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">JavaInterpreterBase</a></li>
+<li>KernelF: <a href="http://127.0.0.1:63320/node?ref=r%3A31fd8edf-66c5-44d7-84a8-5940badb4d17%28org.iets3.core.expr.base.interpreter.plugin%29%2F553080662195419964">ExprBaseInterpreter ⧉</a></li>
+<li>Mbeddr: <a href="http://127.0.0.1:63320/node?ref=r%3A6de0fec9-28ce-4092-a00d-c37c6ae81d03%28com.mbeddr.mpsutil.javainterpreter.plugin%29%2F902624672040616048">JavaInterpreterBase ⧉</a></li>
 </ul>
 
   <hr>
@@ -1532,7 +1549,7 @@ The <em>$</em> expression returns the concept's type. Use it for type mappings a
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1730,7 +1747,7 @@ The <em>$</em> expression returns the concept's type. Use it for type mappings a
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1429,13 +1440,19 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#infrastructure" class="md-tagmaterial/close">infrastructure</a>
+      
+        <a href="../../tags/#infrastructure" class="md-tag md-tag-icon">infrastructure</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#mbeddr" class="md-tagmaterial/close">mbeddr</a>
+      
+        <a href="../../tags/#mbeddr" class="md-tag md-tag-icon">mbeddr</a>
       
     
   </nav>
@@ -1448,7 +1465,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Building Mbeddr Locally</h1>
 
-<p>When building <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you must overcome some stumbling blocks. This article isn't a complete build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. If you want to get everything built, install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr></a>, especially the C-related tools.</p>
+<p>When building <a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a> locally, you must overcome some stumbling blocks. This article isn't a complete build instruction but rather a rough guideline. It should make mbeddr build so far that you can make changes to the non-C parts of the project. If you want to get everything built, install all tools from the page <a href="http://mbeddr.com/download.html#RequiredToolsAndVersions">Required Tools and Versions | mbeddr.<abbr title="commercial/common/communication">com</abbr> ⧉</a>, especially the C-related tools.</p>
 <h2 id="automatic-build">Automatic Build<a class="headerlink" href="#automatic-build" title="Permanent link">&para;</a></h2>
 <ol>
 <li><code>git clone git@github.com:mbeddr/mbeddr.core.git</code></li>
@@ -1460,7 +1477,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </ol>
 <h2 id="manual-build">Manual Build<a class="headerlink" href="#manual-build" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside <abbr title="Meta Programming System">MPS</abbr>, but when you execute it on the regular command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a <em>spawner</em> plugin into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling</a> and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.</li>
+<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside <abbr title="Meta Programming System">MPS</abbr>, but when you execute it on the regular command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a <em>spawner</em> plugin into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling ⧉</a> and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.</li>
 <li>
 <p>You can now build all projects. Start with these projects in this order:</p>
 <ul>
@@ -1684,7 +1701,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

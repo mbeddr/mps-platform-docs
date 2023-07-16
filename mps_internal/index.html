@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1394,8 +1405,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../tags/#internals" class="md-tagmaterial/close">internals</a>
+      
+        <a href="../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
   </nav>
@@ -1413,7 +1427,7 @@ IntelliJ platform. The topics are considered advanced and are not essential for 
 parts of <abbr title="Meta Programming System">MPS</abbr> work, they might still be of interest for you.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you get started using <abbr title="Meta Programming System">MPS</abbr>' Open <abbr title="Application Programming Interface">API</abbr>?</p>
-<p><a href="https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/">The simplest way to use <abbr title="Meta Programming System">MPS</abbr> Open <abbr title="Application Programming Interface">API</abbr></a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/simplest-way-to-use-mps-open-api/">The simplest way to use <abbr title="Meta Programming System">MPS</abbr> Open <abbr title="Application Programming Interface">API</abbr> ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you get <abbr title="Meta Programming System">MPS</abbr> core components from code?</p>
@@ -1427,30 +1441,30 @@ parts of <abbr title="Meta Programming System">MPS</abbr> work, they might still
 </div>
 <div class="admonition info">
 <p class="admonition-title">I want to change something inside a <em>SModule</em>, such as adding a dependency, but I need help finding the right method.</p>
-<p>Try casting it to <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EAbstractModule">AbstractModule</a> first.</p>
+<p>Try casting it to <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EAbstractModule">AbstractModule ⧉</a> first.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Where can you find built-in icons?</p>
-<p>The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons">AllIcons</a>
+<p>The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.icons%28MPS.IDEA%2F%29%2F%7EAllIcons">AllIcons ⧉</a>
 declares all IntelliJ IDEA icons.
-The class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons">MPSIcons</a> declares all <abbr title="Meta Programming System">MPS</abbr> icons.</p>
+The class <a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.icons%28MPS.Platform%2F%29%2F%7EMPSIcons">MPSIcons ⧉</a> declares all <abbr title="Meta Programming System">MPS</abbr> icons.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How can you have settings that get saved globally?<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>You can use preferences only at the project level. Use the workaround described in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer</a>
-or save your values in the global IntelliJ IDEA <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry">Registry</a>.
-<a href="https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry">This Stack Overflow post</a>
+<p class="admonition-title">How can you have settings that get saved globally?</p>
+<p>You can use preferences only at the project level. Use the workaround described in <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">this answer ⧉</a>
+or save your values in the global IntelliJ IDEA <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.util.registry%28MPS.IDEA%2F%29%2F%7ERegistry">Registry ⧉</a>.
+<a href="https://stackoverflow.com/questions/28415695/how-do-you-set-a-value-in-the-intellij-registry">This Stack Overflow post ⧉</a>
 contains more information about the Registry.
 It can also be shown programmatically by calling <code>new RegistryUi().show()</code>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you call make or rebuild?</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237">MakeActionImpl</a>. You can find examples in the same model.</p>
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=r%3Acfccec82-df72-4483-9807-88776b4673ab%28jetbrains.mps.ide.make.actions%29%2F8610665572788515237">MakeActionImpl ⧉</a>. You can find examples in the same model.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add widgets to the status bar? (for example, memory indicator, save transient models)</p>
-<p>Have a look at <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120">this answer</a>. 
-Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)">project plugin</a>.</p>
+<p>Have a look at <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001511080/comments/360000230120">this answer ⧉</a>. 
+Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/plugin.html#custompluginparts(projectplugin,applicationplugin)">project plugin ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you display a message in the status bar? (left bottom corner)</p>
@@ -1459,7 +1473,7 @@ Make sure to call this code from a <a href="https://www.jetbrains.com/help/mps/p
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I register an IntelliJ extension?</p>
-<p>Find the interface you want to add an extension on <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">this page</a>.
+<p>Find the interface you want to add an extension on <a href="https://plugins.jetbrains.com/docs/intellij/extension-point-list.html">this page ⧉</a>.
 The corresponding interface has a static field <code>EP_NAME</code>. If the interface is implemented in Kotlin, it might have a static field <code>Companion</code> with a <code>getEP_NAME()</code> method. Extend this interface (EX) and register it through the extension point.
 Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></p>
 </div>
@@ -1469,30 +1483,30 @@ Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you add model imports and used languages programmatically?</p>
-<p><a href="https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/">Adding model imports and used languages programmatically</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/adding-model-imports-and-used-languages-programmatically/">Adding model imports and used languages programmatically ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you run some <abbr title="Meta Programming System">MPS</abbr> code from the command line/<abbr title="Continuous Integration">CI</abbr>?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/">Running <abbr title="Meta Programming System">MPS</abbr> code from the command line</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/">Running code in <abbr title="Meta Programming System">MPS</abbr> on <abbr title="Continuous Integration">CI</abbr></a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2021-02/09-running-mps-code-from-command-line/">Running <abbr title="Meta Programming System">MPS</abbr> code from the command line ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-02/28-running-code-in-mps-on-ci/">Running code in <abbr title="Meta Programming System">MPS</abbr> on <abbr title="Continuous Integration">CI</abbr> ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you run generated code from within <abbr title="Meta Programming System">MPS</abbr>?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/29-run-generated-code-from-within-mps/">Run generated code from within <abbr title="Meta Programming System">MPS</abbr></a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/29-run-generated-code-from-within-mps/">Run generated code from within <abbr title="Meta Programming System">MPS</abbr> ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you render a node as a text?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/">Rendering a node as text</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/04-rendering-node-as-text/">Rendering a node as text ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you associate more information with a node?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/">Associating additional information with a node</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/07-associating-information-with-a-node/">Associating additional information with a node ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How does shrinking of absolute paths work?</p>
-<p><a href="https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/">Shrinking of absolute paths</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-02/24-shrinking-of-absolute-paths/">Shrinking of absolute paths ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you retrieve nodes of other models and modules?</p>
@@ -1502,10 +1516,10 @@ Example: <code>Interface.EP_NAME.getPoint().registerExtension(new Ex())</code></
 <p class="admonition-title">How can you make an internal <abbr title="Meta Programming System">MPS</abbr> editor read-only?</p>
 <blockquote>
 <p>I want to contribute to a generator in <code>j.mps.lang.editor</code>.
-When I download the <a href="https://github.com/JetBrains/MPS"><abbr title="Meta Programming System">MPS</abbr> source</a>, open the project in <abbr title="Meta Programming System">MPS</abbr> under <code>code</code>,
+When I download the <a href="https://github.com/JetBrains/MPS"><abbr title="Meta Programming System">MPS</abbr> source ⧉</a>, open the project in <abbr title="Meta Programming System">MPS</abbr> under <code>code</code>,
 and open <code>j.m.l.editor/SubstituteMenuPart_ReferenceScope_declare</code>, I see the model being read-only. What can I do?</p>
 </blockquote>
-<p>Open <abbr title="Meta Programming System">MPS</abbr> in IDEA (Community Edition is enough), compile and run it from there, then you can edit <abbr title="Meta Programming System">MPS</abbr> sources. There are instructions in <a href="https://github.com/JetBrains/MPS">README</a>.</p>
+<p>Open <abbr title="Meta Programming System">MPS</abbr> in IDEA (Community Edition is enough), compile and run it from there, then you can edit <abbr title="Meta Programming System">MPS</abbr> sources. There are instructions in <a href="https://github.com/JetBrains/MPS">README ⧉</a>.</p>
 </div>
 <details class="question">
 <summary>How can you do a full-text search in the <abbr title="Integrated Development Environment">IDE</abbr>?</summary>
@@ -1576,7 +1590,7 @@ This line will print the corresponding node to the console. Clicking it will ope
 <summary>How to eliminate the error: Shall specify a repository to lock?</summary>
 <blockquote>
 <p>When accessing model properties in rendering code, you must encapsulate the model accessing code in a read action:</p>
-<p><a class="glightbox" href="../img/read_action_missing_repository.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="read action missing repository" src="../img/read_action_missing_repository.png" /></a></p>
+<p><a class="glightbox" href="images/read_action_missing_repository.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="read action missing repository" src="images/read_action_missing_repository.png" /></a></p>
 <p>It always has an error "Error: shall specify a repository to lock". How can I get rid of it?
 What is a 'repository' and is there any documentation that explains the concept and how to use it correctly?</p>
 </blockquote>
@@ -1618,7 +1632,7 @@ How can I build such a thing?</p>
 </details>
 <details class="question">
 <summary>Where does <abbr title="Meta Programming System">MPS</abbr> store preferences?</summary>
-<p>For a starting point, read <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html">Directories used by the <abbr title="Integrated Development Environment">IDE</abbr></a>.
+<p>For a starting point, read <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html">Directories used by the <abbr title="Integrated Development Environment">IDE</abbr> ⧉</a>.
 <em>CONFIG_DIR</em> refers to the configuration directory. <em>WORKSPACE_FILE</em> refers to <em>$PROJECT/.mps/workspace.xml</em>:</p>
 <ul>
 <li>refactoring settings: <em>CONFIG_DIR/options/refactoringSettings.xml</em></li>
@@ -1654,28 +1668,20 @@ How can I build such a thing?</p>
 <div class="admonition question">
 <p class="admonition-title">Where can you find information about environment/<abbr title="Java Virtual Machine">JVM</abbr> variables that are set in <abbr title="Meta Programming System">MPS</abbr>?</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/idea/tuning-the-ide.html">Advanced configuration | jetbrains.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties">Configuring <abbr title="Java Virtual Machine">JVM</abbr> options and platform properties</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/tuning-the-ide.html">Advanced configuration | jetbrains.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties">Configuring <abbr title="Java Virtual Machine">JVM</abbr> options and platform properties ⧉</a></li>
 <li><abbr title="Java Virtual Machine">JVM</abbr><ul>
-<li><a href="https://github.com/FoxxMD/intellij-jvm-options-explained">IntelliJ <abbr title="Java Virtual Machine">JVM</abbr> Options Explained</a></li>
-<li><a href="https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html">Java HotSpot <abbr title="Virtual Machine">VM</abbr> Options</a></li>
+<li><a href="https://github.com/FoxxMD/intellij-jvm-options-explained">IntelliJ <abbr title="Java Virtual Machine">JVM</abbr> Options Explained ⧉</a></li>
+<li><a href="https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html">Java HotSpot <abbr title="Virtual Machine">VM</abbr> Options ⧉</a></li>
 </ul>
 </li>
 <li>system properties<ul>
-<li><a href="https://docs.oracle.com/en/java/javase/18/docs/api/system-properties.html">Java system properties</a></li>
-<li><a href="https://docs.oracle.com/javase/7/docs/technotes/guides/2d/flags.html">System Properties for Java 2D</a> contains properties starting with <code>sun.java2d</code>.</li>
-<li><a href="https://docs.oracle.com/en/java/javase/16/core/networking-properties.html">Networking System properties</a> contains properties starting with <code>java.net</code>.</li>
+<li><a href="https://docs.oracle.com/en/java/javase/18/docs/api/system-properties.html">Java system properties ⧉</a></li>
+<li><a href="https://docs.oracle.com/javase/7/docs/technotes/guides/2d/flags.html">System Properties for Java 2D ⧉</a> contains properties starting with <code>sun.java2d</code>.</li>
+<li><a href="https://docs.oracle.com/en/java/javase/16/core/networking-properties.html">Networking System properties ⧉</a> contains properties starting with <code>java.net</code>.</li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects">https://mps-support.jetbrains.com/hc/en-us/community/posts/115000568670-Create-and-access-a-single-Preference-Component-which-is-common-for-all-projects</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
 </div>
 
   <hr>
@@ -1683,7 +1689,7 @@ How can I build such a thing?</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1881,7 +1887,7 @@ How can I build such a thing?</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.f11ae8b1.min.js"></script>

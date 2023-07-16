@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1673,8 +1684,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1685,16 +1699,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="migration-aspect">Migration Aspect<a class="headerlink" href="#migration-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="migration-aspect"><a href="https://www.jetbrains.com/help/mps/migrations.html">Migration Aspect</a><a class="headerlink" href="#migration-aspect" title="Permanent link">&para; ⧉</a></h1>
 <blockquote>
 <p>To nicely support language evolution, migrations automatically upgrade client code to use the latest version of a language or multiple languages.</p>
 <p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
 </blockquote>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/migrations.html">official documentation</a></li>
-<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d"><abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON’Ts</a>(languageengineering.io)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/">Preparing migrations with Git rebase</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-05/02-checking-for-pending-">Checking for pending migrations</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d"><abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON’Ts ⧉</a> (<em>languageengineering.io's blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/">Preparing migrations with Git rebase ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-05/02-checking-for-pending-">Checking for pending migrations ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <p>Migrations are necessary as part of languages that change over time. Don't create migrations when you are still in the development
@@ -1703,13 +1716,13 @@ phase and don't need to execute them. When using the <em>Refactoring</em> menu i
 <div class="admonition question">
 <p class="admonition-title">How do I search for instances of a deprecated concept?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/">Migrations: Searching for instances</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-06/01-migrations-searching-for-instances/">Migrations: Searching for instances ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do I remove migrations?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/21-removing-migrations/">Removing migrations</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/21-removing-migrations/">Removing migrations ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -1724,13 +1737,13 @@ works. Some concepts cannot be migrated automatically, such as the substitute an
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I want to replace node <em>A</em> with another node <em>B</em> where <em>A</em> and <em>B</em> share the same super-concept.</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime</a>. This class can be used to set/unset properties or replace nodes with other ones.
+<p>Use the class <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime ⧉</a>. This class can be used to set/unset properties or replace nodes with other ones.
 Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentConfigRef/)</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Are there any best practices for feature branches and language migrations?</p>
 <ul>
-<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d">languageengineering.io: <abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON'Ts</a></li>
+<li><a href="https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d">languageengineering.io: <abbr title="Meta Programming System">MPS</abbr>, Feature Branches and Language Migrations: DOs and DON'Ts ⧉</a></li>
 </ul>
 </div>
 <div class="admonition question">
@@ -1756,7 +1769,7 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find all references to a specified root node and change these references so they point to another root node?</p>
-<p>Search through the methods in <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime</a>.</p>
+<p>Search through the methods in <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime ⧉</a>.</p>
 <p>Example with finders:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -1802,19 +1815,11 @@ because <abbr title="Meta Programming System">MPS</abbr> or the IntelliJ platfor
 good idea to not fall behind to many <abbr title="Meta Programming System">MPS</abbr> versions. New <abbr title="Meta Programming System">MPS</abbr> versions not only mean new features but also many bug fixes. While this topic
 is only marginally related to the migration aspect, it is mentioned here.</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/31-the-migration-frustration/">The migration frustration ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 <div class="admonition failure">
 <p class="admonition-title">When creating root nodes as part of language migration via <em>java model.add root(someRoot)</em>, it throws the exception <em>UnsupportedOperationException</em>.</p>
 <p>Make sure that the affected model is not non-editable.</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/4403121681810-Migration-scripts-best-practic"><abbr title="Meta Programming System">MPS</abbr> forum - Migration scripts: the best practice</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
 </div>
 
   <hr>
@@ -1822,7 +1827,7 @@ is only marginally related to the migration aspect, it is mentioned here.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2020,7 +2025,7 @@ is only marginally related to the migration aspect, it is mentioned here.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

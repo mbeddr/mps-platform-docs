@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1687,18 +1698,27 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
-      
-        <a href="../../tags/#internals" class="md-tagmaterial/close">internals</a>
-      
-    
+        
+        
       
       
-        <a href="../../tags/#intellij" class="md-tagmaterial/close">intellij</a>
+        <a href="../../tags/#internals" class="md-tag md-tag-icon">internals</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#ui" class="md-tagmaterial/close">ui</a>
+      
+        <a href="../../tags/#intellij" class="md-tag md-tag-icon">intellij</a>
+      
+    
+      
+        
+        
+      
+      
+        <a href="../../tags/#ui" class="md-tag md-tag-icon">ui</a>
       
     
   </nav>
@@ -1713,11 +1733,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p>Regardless of the calling thread, writing and reading <abbr title="Meta Programming System">MPS</abbr> models always need to be performed holding an appropriate lock.
 IntelliJ IDEA also needs read and write locks in its platform. Multiple reads can be done at the same time. When writing should be done,
 all reads have to be finished. The IDEA platform's lock is acquired first, and only then the <abbr title="Meta Programming System">MPS</abbr>'s lock is acquired.</p>
-<p>The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr></a>
-and are <strong>only necessary</strong> if you are accessing the model or specific features of the IntelliJ platform from a different thread. All aspects in your language and declared actions have the necessary lock by default (command access). You most likely only need locking when accessing <abbr title="Meta Programming System">MPS</abbr> models from a Swing event handler, such as in the <code>actionPerformed</code> method of a button. The locks are of type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html">ReentrantReadWriteLock</a> (read the JavaDoc for more <abbr title="information">info</abbr>).</p>
+<p>The <abbr title="Meta Programming System">MPS</abbr> locks are described in <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">Managing concurrent access | <abbr title="Meta Programming System">MPS</abbr> ⧉</a>
+and are <strong>only necessary</strong> if you are accessing the model or specific features of the IntelliJ platform from a different thread. All aspects in your language and declared actions have the necessary lock by default (command access). You most likely only need locking when accessing <abbr title="Meta Programming System">MPS</abbr> models from a Swing event handler, such as in the <code>actionPerformed</code> method of a button. The locks are of type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html">ReentrantReadWriteLock ⧉</a> (read the JavaDoc for more <abbr title="information">info</abbr>).</p>
 <h2 id="awt-event-dispatch-thread-edt">AWT Event Dispatch Thread (<abbr title="Event Dispatch Thread">EDT</abbr>)<a class="headerlink" href="#awt-event-dispatch-thread-edt" title="Permanent link">&para;</a></h2>
-<p>The drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Java Swing</a>. The <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">event dispatch thread or Swing thread</a> is used for handling events in Swing because it is not thread-safe, so most of the Swing code runs in this thread. It also handles events from the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/awt/">Abstract Window Toolkit</a> and has the thread name <em>AWT-EventQueue-0</em>.
-In the IntelliJ platform/<abbr title="Meta Programming System">MPS</abbr>, it is also called the <em><abbr title="User Interface">UI</abbr> thread</em> or <em>editor thread</em>. Any writes to the IntelliJ <abbr title="Integrated Development Environment">IDE</abbr> data model (<a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html"><abbr title="Virtual File System">VFS</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/project-structure.html">project root model</a>) must also happen on the <em>write thread</em>, which can be the same as <abbr title="Event Dispatch Thread">EDT</abbr> in IntelliJ products. In <abbr title="Meta Programming System">MPS</abbr>, it is the same thread.</p>
+<p>The drawing of components in <abbr title="Meta Programming System">MPS</abbr>/IntelliJ IDEA is done through <a href="https://www.tutorialspoint.com/swing/swing_quick_guide.htm">Java Swing</a>. The <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">event dispatch thread or Swing thread</a> is used for handling events in Swing because it is not thread-safe, so most of the Swing code runs in this thread. It also handles events from the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/awt/">Abstract Window Toolkit ⧉</a> and has the thread name <em>AWT-EventQueue-0</em>.
+In the IntelliJ platform/<abbr title="Meta Programming System">MPS</abbr>, it is also called the <em><abbr title="User Interface">UI</abbr> thread</em> or <em>editor thread</em>. Any writes to the IntelliJ <abbr title="Integrated Development Environment">IDE</abbr> data model (<a href="https://plugins.jetbrains.com/docs/intellij/psi.html"><abbr title="Program Structure Interface">PSI</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html"><abbr title="Virtual File System">VFS</abbr></a>, <a href="https://plugins.jetbrains.com/docs/intellij/project-structure.html">project root model ⧉</a>) must also happen on the <em>write thread</em>, which can be the same as <abbr title="Event Dispatch Thread">EDT</abbr> in IntelliJ products. In <abbr title="Meta Programming System">MPS</abbr>, it is the same thread.</p>
 <p>Depending on the access type, you need different locks from the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.access</ins>:</p>
 <ul>
 <li>synchronously read <abbr title="Meta Programming System">MPS</abbr> model: <code>read action with</code></li>
@@ -1733,18 +1753,18 @@ is still recommended to use it instead of the <code>write action with</code> sta
 </ul>
 <p>The <em>in <abbr title="Event Dispatch Thread">EDT</abbr></em> commands allow to read/write the <abbr title="Meta Programming System">MPS</abbr> model and perform <abbr title="Event Dispatch Thread">EDT</abbr>-related <abbr title="User Interface">UI</abbr> activities and update models of the IntelliJ platform. To check if the current thread is the <abbr title="Event Dispatch Thread">EDT</abbr>, call <code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">().</span><span class="na">assertIsDispatchThread</span><span class="p">()</span><span class="w"></span></code> or <code class="highlight"><span class="n">ThreadUtils</span><span class="p">.</span><span class="na">isInEDT</span><span class="p">()</span><span class="w"></span></code></p>
 <p>The code must also be run on the <abbr title="User Interface">UI</abbr> thread to modify the <abbr title="User Interface">UI</abbr>. Typically, you would call <code class="highlight"><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code>.
-When you are changing the <abbr title="Integrated Development Environment">IDE</abbr> model in the IntelliJ platform (see: <a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#what-is-a-write-safe-context">write-safe context</a>) or an <abbr title="Meta Programming System">MPS</abbr> model, you should use one of the following methods:</p>
+When you are changing the <abbr title="Integrated Development Environment">IDE</abbr> model in the IntelliJ platform (see: <a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#what-is-a-write-safe-context">write-safe context ⧉</a>) or an <abbr title="Meta Programming System">MPS</abbr> model, you should use one of the following methods:</p>
 <ul>
 <li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeLater</span><span class="w"></span></code> (asynchronous) </li>
 <li><code class="highlight"><span class="n">ApplicationManager</span><span class="p">.</span><span class="na">getApplication</span><span class="p">.</span><span class="na">invokeAndWait</span><span class="w"></span></code> (synchronously)</li>
 </ul>
 <p>If you don't precisely know what you are doing when calling it synchronously, the <abbr title="Integrated Development Environment">IDE</abbr> will freeze.
-The reason for those methods is that the so-called <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">modality state</a> should
+The reason for those methods is that the so-called <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">modality state ⧉</a> should
 be taken into account ,i.e., the stack of modal dialogs under which the call is allowed to execute. Alternatively, there is
 also the class <code>ThreadUtils</code> which contains the method <code>runInUIThreadAndWait</code>, which takes a <code>Runnable</code> instance as a parameter and uses the correct method based on the calling context.</p>
 <h2 id="background-threads">Background Threads<a class="headerlink" href="#background-threads" title="Permanent link">&para;</a></h2>
-<p>Every code that is executed on the <abbr title="Event Dispatch Thread">EDT</abbr> should finish quickly. Long-running code blocks the thread, and the <abbr title="User Interface">UI</abbr> becomes unresponsive. Run long-running tasks in the background: <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr></a>
-The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.progress%28MPS.IDEA%2F%29%2F%7ETask">Task</a> can be extended and run in a modal dialog or in the background. When many tasks should be executed, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.<abbr title="commercial/common/communication">com</abbr></a>. There's also a method for that: <code>ApplicationManager.getApplication().executeOnPooledThread</code>.</p>
+<p>Every code that is executed on the <abbr title="Event Dispatch Thread">EDT</abbr> should finish quickly. Long-running code blocks the thread, and the <abbr title="User Interface">UI</abbr> becomes unresponsive. Run long-running tasks in the background: <a href="https://www.jetbrains.com/help/mps/progress-indicators.html">Progress indicators | <abbr title="Meta Programming System">MPS</abbr> ⧉</a>
+The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.progress%28MPS.IDEA%2F%29%2F%7ETask">Task</a> can be extended and run in a modal dialog or in the background. When many tasks should be executed, pooled threads can be used: <a href="https://www.baeldung.com/thread-pool-java-and-guava">Introduction to Thread Pools in Java | baeldung.<abbr title="commercial/common/communication">com</abbr> ⧉</a>. There's also a method for that: <code>ApplicationManager.getApplication().executeOnPooledThread</code>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>In the following examples, a node is accessed from a background thread or the <abbr title="Event Dispatch Thread">EDT</abbr>.</p>
 <h3 id="reading-the-model">Reading the Model<a class="headerlink" href="#reading-the-model" title="Permanent link">&para;</a></h3>
@@ -1944,7 +1964,7 @@ The class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf04
 </div>
 </div>
 <h3 id="showing-a-notification-with-information-from-the-model">Showing a Notification With Information From the Model<a class="headerlink" href="#showing-a-notification-with-information-from-the-model" title="Permanent link">&para;</a></h3>
-<p>In this example, additional information is shown to the user through a <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">top-level notification</a> (balloon).</p>
+<p>In this example, additional information is shown to the user through a <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons">top-level notification ⧉</a> (balloon).</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> using a read lock synchronously</label><label for="__tabbed_5_2"><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> using a read lock asynchronously</label><label for="__tabbed_5_3"><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> call synchronously on <abbr title="Event Dispatch Thread">EDT</abbr> with read lock</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2108,8 +2128,8 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
 </div>
 <h2 id="additional-references">Additional References<a class="headerlink" href="#additional-references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model">IDEA threading model | developerlife.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://www.baeldung.com/java-common-concurrency-pitfalls">Common Concurrency Pitfalls in Java</a></li>
+<li><a href="https://developerlife.com/2021/03/13/ij-idea-plugin-advanced/#idea-threading-model">IDEA threading model | developerlife.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://www.baeldung.com/java-common-concurrency-pitfalls">Common Concurrency Pitfalls in Java ⧉</a></li>
 </ul>
 
   <hr>
@@ -2315,7 +2335,7 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

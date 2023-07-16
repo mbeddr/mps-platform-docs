@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1729,8 +1740,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1741,21 +1755,20 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="editor-aspect">Editor Aspect<a class="headerlink" href="#editor-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="editor-aspect"><a href="https://www.jetbrains.com/help/mps/editor.html">Editor Aspect</a><a class="headerlink" href="#editor-aspect" title="Permanent link">&para; ⧉</a></h1>
 <p>The editor aspect defines the projectional editor of a concept.</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/mps/editor.html">official documentation</a></li>
-<li><a href="http://dsl-course.org/jetbrains-mps-editor-aspect/">old cheatsheet</a></li>
+<li><a href="http://dsl-course.org/jetbrains-mps-editor-aspect/">old cheatsheet ⧉</a></li>
 </ul>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <p>To learn more about internal editor topics, visit <a href="../../mps_internal/editor_development/"><abbr title="Meta Programming System">MPS</abbr> Internals: Editor Development</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">What happens when you press <span class="keys"><kbd class="key-f5">F5</kbd></span> in the editor?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/09-f5-in-editor/">F5 in editor ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you delete non-existing children, references, or properties from a node?</p>
-<p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script</a> that can remove properties.</p>
+<p>Switch to the <a href="https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor">reflective editor</a> and remove the offending parts. There is also an <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633">enhancement script ⧉</a> that can remove properties.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a way to prevent users from adding and removing elements in a list in the <abbr title="Meta Programming System">MPS</abbr> editor? The elements in the list should still be editable, but adding/removing shouldn't be allowed.</p>
@@ -1767,7 +1780,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </div>
 <div class="admonition warning">
 <p class="admonition-title">I've set a color of type java.awt.Color in a style property query, but the color is different when using the Darcula theme.</p>
-<p>The return type of those functions indicates that the return type is <code>java.awt.Color</code>, but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid these mappings is to use custom factories. <a href="../../patterns/user_experience/#dark-theme">here</a>
+<p>The return type of those functions indicates that the return type is <code>java.awt.Color</code>, but the generator maps these colors to <a href="https://github.com/JetBrains/MPS/blob/a7983f504496b4425057efd51d22ee099d76c311/workbench/mps-editor/source/jetbrains/mps/ide/editor/StyleRegistryIdeaImpl.java#L202">theme-dependent colors</a>. The only avoid to avoid these mappings is to use custom factories. <a href="../../patterns/user_experience/#dark-theme">here ⧉</a>
 contains more information about theme-dependent colors.</p>
 </div>
 <div class="admonition question">
@@ -1779,29 +1792,29 @@ contains more information about theme-dependent colors.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">I have actions for mouse clicks in my language, and they also trigger for right mouse clicks. Can we prevent that generally or by manually/programmatically detecting which mouse button fired the event?</p>
-<p>No, the selection manager executes the click action for the selected cell. You will only get this information with the original MouseEvent that the editor does not forward to the editor cell. You can't restore the event. It would be possible to register a new mouse listener for the editor component through an <a href="http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions">editor extension</a> that not only creates the click action for the selected cell but also saves the mouse button somewhere. The <a href="https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472">EditorComponent</a> contains the original implementation.</p>
+<p>No, the selection manager executes the click action for the selected cell. You will only get this information with the original MouseEvent that the editor does not forward to the editor cell. You can't restore the event. It would be possible to register a new mouse listener for the editor component through an <a href="http://mbeddr.com/mps-platform-docs/mps_internal/editor_development/#editor-extensions">editor extension</a> that not only creates the click action for the selected cell but also saves the mouse button somewhere. The <a href="https://github.com/JetBrains/MPS/blob/7a96724d699774672a6bd4a6a402b6e643294f2d/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L472">EditorComponent ⧉</a> contains the original implementation.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">I want to create a <abbr title="Domain-Specific Language">DSL</abbr> using diagrams or a visual programming language. Are there any inspirations?</p>
-<p>Have a look at <a href="http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/">Visual Programming Languages - Snapshots | interfacevision.<abbr title="commercial/common/communication">com</abbr></a>. This page has a lot of examples of visual programming languages
+<p>Have a look at <a href="http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/">Visual Programming Languages - Snapshots | interfacevision.<abbr title="commercial/common/communication">com</abbr> ⧉</a>. This page has a lot of examples of visual programming languages
 dating back to 1963 up to recent languages like Scratch. <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>(<a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">documentation</a>) supports diagrams, and you can use them as the base building block of a new language.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>(<a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">documentation ⧉</a>) supports diagrams, and you can use them as the base building block of a new language.</p>
 </div>
-<h2 id="menus"><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html">Menus</a><a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html">Transformation Menu Language | <abbr title="Meta Programming System">MPS</abbr> documentation</a> describes
-all the menus that can be influenced. If you use <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/">Grammar Cells</a>
+<h2 id="menus"><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html">Menus</a><a class="headerlink" href="#menus" title="Permanent link">&para; ⧉</a></h2>
+<p><a href="https://www.jetbrains.com/help/mps/transformation-menu-language.html">Transformation Menu Language | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a> describes
+all the menus that can be influenced. If you use <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/">Grammar Cells ⧉</a>
 from <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>, transformation and substitution menus might not be needed at all. When you use the language, you
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>, transformation and substitution menus might not be needed at all. When you use the language, you
 only need to use empty substitutions menus for concepts that shouldn't be substituable at all.</p>
 <div class="admonition hint">
 <p class="admonition-title">Explain the different menu-related terms.</p>
@@ -1831,31 +1844,31 @@ only need to use empty substitutions menus for concepts that shouldn't be substi
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find <abbr title="output">out</abbr> where a substitute menu entry is coming from?</p>
-<p>Use the <em>Menu Trace Tool</em> window. <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr></a> contains
+<p>Use the <em>Menu Trace Tool</em> window. <a href="https://www.jetbrains.com/help/mps/menu-trace-tool-window.html">Menu Trace Tool Window | <abbr title="Meta Programming System">MPS</abbr> ⧉</a> contains
 more information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you add smart references using the transformation menus?</p>
-<p><a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus</a>(<em>F1RE's blog</em>)</p>
+<p><a href="https://www.f1re.io/transformation-menu-for-smart-references">Adding smart references using transformation menus ⧉</a> (<em>F1RE's blog</em>)</p>
 </div>
 <details class="question">
 <summary>What's the best way to improve the autocomplete description of concepts?</summary>
 <blockquote>
 <p>As you can see in the screenshot, the concepts of both opening braces are indistinguishable.</p>
-<p><a class="glightbox" href="../../img/autocompletion_myUnion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion myUnion" src="../../img/autocompletion_myUnion.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/autocompletion_myunion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion myUnion" src="../images/editor/autocompletion_myunion.png" /></a></p>
 <p>I can change the description by modifying the short description in the concept structure.</p>
 <ol>
 <li>What's the best format to improve these descriptions?</li>
 <li>Is this the correct/best way to change the autocomplete concept description?</li>
 </ol>
-<p><a class="glightbox" href="../../img/bracketInitializer_concept.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="concept BracketInitializer" src="../../img/bracketInitializer_concept.png" /></a></p>
-<p><a class="glightbox" href="../../img/autocompletion_int16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion int16" src="../../img/autocompletion_int16.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/bracketInitializer_concept.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="concept BracketInitializer" src="../images/editor/bracketInitializer_concept.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/autocompletion_int16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="autocompletion int16" src="../images/editor/autocompletion_int16.png" /></a></p>
 </blockquote>
 <p><sub>asked by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 <p>Generally, it's up to the users and specific context to decide what makes sense to put into the description text. It should provide additional semantic information to those unfamiliar with the language to help them pick up the right concept from the code completion menu.</p>
 <p>The short description in the concept is the original, simple way to provide a static description in the code completion menu. You can also add your substitute action in the substitute menu of the concept (editor aspect) to get complete control over the code completion menu and to be able to generate the text dynamically based on the context.</p>
-<p><a class="glightbox" href="../../img/DataItem_substituteMenu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DataItem SubstituteMenu" src="../../img/DataItem_substituteMenu.png" width="800px" /></a></p>
-<p><a class="glightbox" href="../../img/data_autocompletion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="data autocompletion" src="../../img/data_autocompletion.png" width="800px" /></a></p>
+<p><a class="glightbox" href="../images/editor/data_item_substitute_menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DataItem SubstituteMenu" src="../images/editor/data_item_substitute_menu.png" width="800px" /></a></p>
+<p><a class="glightbox" href="../images/editor/data_autocompletion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="data autocompletion" src="../images/editor/data_autocompletion.png" width="800px" /></a></p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/wsafonov" title="GitHub User: wsafonov">@wsafonov</a><sub></p>
 </details>
 <h2 id="languages">Languages<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h2>
@@ -1864,13 +1877,13 @@ editor cells that you can use the same way as standard cells such as constant or
 need to import the corresponding language in the editor aspect.</p>
 <div class="admonition hint">
 <p class="admonition-title">I need a specific graphical notation/feature for the editor.</p>
-<p>Have a look at the <a href="https://jetbrains.github.io/MPS-extensions/extensions/all/#editor">complete extension list</a> from <span class="twemoji">
+<p>Have a look at the <a href="https://jetbrains.github.io/MPS-extensions/extensions/all/#editor">complete extension list ⧉</a> from <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">I need hyperlinks.</p>
@@ -1880,13 +1893,13 @@ need to import the corresponding language in the editor aspect.</p>
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
     />
 </svg>
-</span><a href="http://mbeddr.com/platform.html">mbeddr platform</a>.</p>
+</span><a href="http://mbeddr.com/platform.html">mbeddr platform ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you create clickable links?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/clickable-url-links/">Creating clickable URL links in the editor ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/basic-editors/more-clickable-url-links/">More clickable URL links ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -1897,17 +1910,17 @@ need to import the corresponding language in the editor aspect.</p>
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>.</p>
 </div>
 <h2 id="editor-declaration">Editor Declaration<a class="headerlink" href="#editor-declaration" title="Permanent link">&para;</a></h2>
 <p>This section contains some more advanced topics and questions when defining editors.</p>
 <div class="admonition question">
 <p class="admonition-title">Is there a disadvantage to using the indent layout instead of the indent cell mode?</p>
-<p>No. There used to be performance issues with bigger models that were fixed in <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1</a>.</p>
+<p>No. There used to be performance issues with bigger models that were fixed in <a href="https://blog.jetbrains.com/mps/2021/05/[MPS-2021](https://youtrack.jetbrains.com/issue/MPS-2021)-1-has-been-released/"><abbr title="Meta Programming System">MPS</abbr> 2021.1 ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you use an empty text for empty cells?</p>
-<p><a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/">Use empty text for empty cells ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">How can you set editor hints?</p>
@@ -1921,20 +1934,20 @@ need to import the corresponding language in the editor aspect.</p>
 <p>Via right-click: Push editor hints and select a specific one.</p>
 </li>
 <li>
-<p>Via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a> (e.g., in action declarations)</p>
+<p>Via an <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction ⧉</a> (e.g., in action declarations)</p>
 <ul>
 <li>They are not visible in the push Editor hints menu.</li>
-<li>If you need the same behavior, for example, in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState</a>)</li>
+<li>If you need the same behavior, for example, in intentions, you can use code from there (via <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent">ConceptEditorHintSettingsComponent.HintsState ⧉</a>)</li>
 </ul>
 </li>
-<li>Set explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction</a>.
-  The usage of <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState">ConceptEditorHintSettingsComponent.HintsState</a> is not so obvious.</li>
+<li>Set explicit hints for nodes and hints via <a href="http://127.0.0.1:63320/node?ref=8f16104e-22e6-406d-8251-ef9688474557%2Fr%3Aab202a93-2128-4d4d-ab72-2fb787f2aec3%28com.mbeddr.mpsutil.refactoring.rt%2Fcom.mbeddr.mpsutil.refactoring.rt.util%29%2F4189697348346196613">EditorHintToggleAction ⧉</a>.
+  The usage of <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState">ConceptEditorHintSettingsComponent.HintsState ⧉</a> is not so obvious.</li>
 </ul>
 </div>
 <details class="question">
 <summary>How do you set the cursor to the first editable cell?</summary>
 <blockquote>
-<p><a class="glightbox" href="../../img/editable_cell_error_cell.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="editable cell and error_cell" src="../../img/editable_cell_error_cell.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/editable_cell_error_cell.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="editable cell and error_cell" src="../images/editor/editable_cell_error_cell.png" /></a></p>
 <ul>
 <li><strong>(A)</strong> What it looks like after creation</li>
 <li><strong>(B)</strong> Initial situation with cursor at <strong>(1)</strong>: pressing <span class="keys"><kbd class="key-enter">Enter</kbd></span> leads to <strong>(C)</strong></li>
@@ -1945,17 +1958,17 @@ need to import the corresponding language in the editor aspect.</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNp9j8sKwjAQRff9inxBxG0ppSAuXPgF4qJNrxiYPJhJwAf-uyG1uBFnMTCXw-HOIGnklB01VztDwcV0Vw5uAkujytRlaBRRu-BiyD4dvE12JPsAHyupnpXSujOBArcTZfTmamlm-G5Tw17rCn2QmDkSetwir0Cr9uWCiA3-tD3_UDIuKEYD-Std6n-1S8lV-WoG-Ll8_AaYXVPb?" /></a></p>
 <blockquote>
 <p>Editor of the new node in <strong>(C)</strong>:</p>
-<p><a class="glightbox" href="../../img/example_c_node_editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example c:node editor" src="../../img/example_c_node_editor.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/example_c_node_editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example c:node editor" src="../images/editor/example_c_node_editor.png" /></a></p>
 </blockquote>
 <p>Usually, you would set the <em>attracts focus</em> property of the cell, where the cursor should be positioned, to <code>attractsFocus</code> or <code>FirstEditableCell</code>.
-But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the default behavior is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
+But, since <strong>C.2</strong> and <strong>C.3</strong> are error cells, the default behavior is to set the cursor in front of the first error cell, which is <strong>(C.2)</strong>.</p>
 <p>Therefore, change the first part of your editor to a query list cell <strong>(A)</strong>, which references the "member" in the cell properties <strong>(B)</strong>, and set the read-only property on the query list.</p>
-<p><a class="glightbox" href="../../img/CompoundInitializerMember_editor_new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new editor for CompoundInitializerMember" src="../../img/CompoundInitializerMember_editor_new.png" /></a></p>
+<p><a class="glightbox" href="../images/editor/compound_initializer_member_editor_new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new editor for CompoundInitializerMember" src="../images/editor/compound_initializer_member_editor_new.png" /></a></p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/AlexeiQ" title="GitHub User: AlexeiQ">@AlexeiQ</a><sub></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Can the selected value of one Java Swing component be accessed from inside another Java Swing component?</p>
-<p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component? | <abbr title="Meta Programming System">MPS</abbr> forum</a></p>
+<p>Yes: <a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360007728759/comments/360001510479">Is it possible to access the selected value of one Java Swing component from inside another Java Swing component? | <abbr title="Meta Programming System">MPS</abbr> forum ⧉</a></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you access an icon stored in a concept?</p>
@@ -1996,7 +2009,7 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 <div class="admonition question">
 <p class="admonition-title">How can you hide a custom cell in the editor? (<em>show if</em> property)</p>
 <blockquote>
-<p>Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, for example, "show if." How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195</a>)</p>
+<p>Custom cells expect only a cell provider in the inspector but don't offer the possibility to specify other attributes to set, for example, "show if." How can I hide a custom cell under a specific condition? (<a href="https://youtrack.jetbrains.com/issue/MPS-33195"><abbr title="Meta Programming System">MPS</abbr>-33195 ⧉</a>)</p>
 </blockquote>
 <p>The <abbr title="metadata">meta</abbr>-model allows specifying the <em>show if</em> property and other attributes on a custom cell, and the generator will generate the correct code for it. The editor for the inspector doesn't include it. You can use the reflective editor to specify the condition.</p>
 <p>Since these attributes are not visible and you need this knowledge to find them, the alternative for better visibility is to surround the custom cell with a collection and set the <em>show if</em> property on the collection.</p>
@@ -2004,41 +2017,41 @@ But, since (<strong>C.2</strong> and <strong>C.3</strong>) are error cells, the 
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you split child collections?</p>
-<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in the editor</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/advanced-editors/splitting-child-collection-in-editor/">Advanced editors: splitting child collection in the editor ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I show an editor cell only if the edited node/<abbr title="subtraction">sub</abbr>-nodes are currently the active selected nodes?</p>
-<p>You can implement a cell similar to the cell <a href="http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058">EditorCell_MathEnd</a> in <span class="twemoji">
+<p>You can implement a cell similar to the cell <a href="http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058">EditorCell_MathEnd ⧉</a> in <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAKVUlEQVR4nMxZC1RU1fr/9jlzZgYGBhiGl5AzSvQ3DahQlKRES0WCv+98dE0tWRT5yKxWXlu95FZeb1e7Zt3bSgXTUjMEH4hC0hXzgbgE00BeOjCMDAwwT2aYmTPnrnPmwQyiDAxk31qb2fuw97d/v/399uPsg4EHxkIIf3vs+I235q1qVyzONP+YlHoskMMVeuJzoIYG2/BhH//Ir+OnfxcXGJIAiLJ6wgCqVIrKuWeOPtdq0CuGFmrfNmACBMLw1x9+cv07Y+M/4uK4Nw3aSoACe75B1/77nOLjM6Rduubhgd1jAyIw1lc49ssnZux5PCA4vge0bfSdyohlgsYudUPqqRNTm3TaxuGD7yYBBIDWjB7/xsYxk//GxjEvZAfLyIbqAU+XCRMgnGTKEq26Lu1UwZQmnU72wAiM8vYX74hO3p0QGD7VARJRgHrJhkk0eMLcUwYKGnWa+rTCwmmN2uGJxD1XIQwQnimasO7sUyt+SwiImAoMHgTWXwCKySMAC4CZpIzXNC3lDvD2SogCka93ZEHKzLNRfvyo4SCA9/VwtJe/eP/j8/OWRcRkEBjGdg2Ua76LNGlXlB2f8+FvFzaF83hhMQJBnD0C9ijx2Sz/+ZGiBT83y0626Q1tw0aAhrYqPC4jO3ruEbF3wCP3A05bp8nQtvBi7vRShfQcHZSCpsZjABQ5OTR0GobZo2CVmDeB+84Z/dDCoibZSYWhe8hIOFBFcPjhX45J3f10gGiGs9bvlZcbtdJ5lw7PqNa2V/V2+sLo0Yt3JCbs4bAwrvN8AGSBVr3+ztyCX6be6FDdHDICC4IeW7T14eSv+ARb0B9wOv2ua6tYXJ6b1mzQSO/lOD5YOGnfc0m5wd6cMDt4e/vO7m75vBNnZ11t67zqMYFnAyKnHxy3pBAhekLfHzidL+2UFC2rODJfYzZq+nMu9uWJDs1MKngkgD/WQQCsc0NlMioXHD83s0zeUeYJAWzDQ4nvIYR6ViOnlcaRt3KFfPnN71+4cjjVHfC03dboJNOPnp5ceqflZ2useya2H4flnzc78XRCWGC8JwSQfPImAwvDODb0LhPPOQKXNPJzz1/eM4UC4NEKGUgnBIaxsibFbh0j8I12+AQKwn24EOLDUc7J/3XGFbny8qAI1E96q82f8HI6Qd5NQoMIUCIO/Hjnytd/r87fb6LIc4PprLelR4+CfyRFg8poUi0+dmnmeVnHpYH6wI4pqn66+zGybVYAamCDGrHBjBCkhse/9lHsXw4OBfgeo+WE+/00J/70tJHCqQNtjWVJSjZJ9J21LuCtamWA6xABZoQBiRBDwp/rF26vOWvWLCgqKoKrV69Cfn4+fPPNN1BTUwOlpaXg5+fXf++ODQ+AR+D8g/8/viB5VNCsARFQmLrap1fsmrRLdnm72tyttACACTBQYwQYMJwBTQJykLA4NSYIAvh8Pvj6+oLZbIa1a9eCRCKB9PR0UKlUbgFAtvlAE+GwEHdf2pO5KZHByW4ToP+0m/Ud79QXrn+sbHvEhvrCjAp9R6XRNuKkS7KSoG3JkiWQmZkJTU1NoNPpQCaTQURExEAGDw5WS/eelSqKezY6ADYLcbNTY3OnjxLOdMeHy1HCRJGmSo3syj5Z2b8vdDYUETibCPMOiqJwFmFCGJgxDORGNZxqusiM8O3btyEnJwcqKytBKpVCbW0tIymEELS3t4NIJGIipNVqITw8HIxGI0RFRUFXVxeYTCboJi2lh2tkL4X5cEJjQ/hxdiIsHIg5jwQvrO/sul7Vrqu+H4F+j9N+hHdA8ojxy1NFiZmBPGHUDVUTvH1+G+zYsQOEQiEkJiZCdXU1E4Ho6GjIysqCvXv3glgshuLiYgbsmTNnYOLEidDa2srIraSkBLZt20a7/xIA1tCZteNHrf/o6aitOEYPqlVSJEWZXzt546UDv7f84FYE+rJui8lwQyW5mCc5t7NWLS0zU5bga+01kSkpKRAcHAwYhgFFUcBms0GhUEBSUhLU19eDQCBgCNEjTZMZN24cZGdnM0Q4HA7k5eXR7uld+CSduSRTXqxSaCqSI4PSCBZi088wDLCUKOFsiVJfd71Nd70vfG7fSlBAWcpabxTsu3l8E102GAzA4/Eccvjiiy8gNDSUIXTixAlYunQp6PV6ZnKvXLmSIRcXFwdKpRJIkuyzj6N1rUdTDl2e0trVLbPLCceA9dXzY3IWjg1e2FebwdxKTLCN3FCYQ0LOJvLjig7Ni81/NMg71koEgKQs5jdP16TvqWjJdq7r0b3QcJlEZZA8u7888bxUWcI8QNZIbE+O2hUTwotxrvunJCDwYgW8P0304fiR3gnMKRYcGx4W5sMOda7LenAw7zY2joj0SWEZ704Z+YE/mxACPVUs9Oyz/v+nqtbvihs6i53b/GkILHxCuOCDZPEnYj43CkgEFGmboQigy0xq3i2qX5NdIc/p3W7QBHAcZ1acvoxeZSwWi1t+nn3Uf9rmNPFnMWE+E5gRpxNFAaIQc5gsa1L/mpFfs7yuQ1/fV/tBz4Ht27czO2tfad26dW75WDopaNnRNY/9HDvSZwLzSuWUTJSlO+uX2+/OyK585l7gwZNlNCQkBAICAvqsIJfLobOzs19HGVPD4J+LIsE+8oxsLAD1cn3Vy9/ffPGKVNvvO/OgJUSDpJPHhrncg8G+Mvm3G3Ib3tB2kzp3mg+GQAsAfO5uZS4bcRY9E7TE35sVyLwkWXretxMifR0E5Gpj89r9da8ev9ZxfCBgBv19oF/HCGBRknDR5uXizyIEHLFjgtqlwiTr1WR+ueLQ6zl1r3bozP3rrpcNyzKaGMtP3JIh3hIX6fsUA9gCTjcdPUlvJHXv7Lu1dldJy+7B9jWkBP5P5BW1ZbVoS3K8YC4zuqQT4F5av9qgLVu5s2bZzWZ9jSd9DgmBYAERuPGViPdWzQ7JZGMYmxl1ehG33Ssh2wUBLVj6jL/taPOnmw80fmw0U2ZP+/aIAN8H912/fMT6dS+OeJPHwf0cOsfulgtN4laLoS59W+3yczfU5z0F7hEBFg74qsWhL7+/+qGPhXwi1DExnQFjrlHIOSX/z1tf39qg0bu3PA4bgbkpgrSPN4z8dIzYaxzlpHOHTJwTAlCoTa2rP69blVfacWwogQ+YwMQ4n7gt74s+nxzHn+KQiu2wZZdMbxIll5WFKzfXrmhpNw3BjucBgU8+GJn19uoRm8DiurIgirJ9anIl06UntR/ubNz4rwN3dtJVhgs8uLORpSUHJB/5fsxJBobFeROyb0rIpVx+TXNxxV9rl9VIDHXDCdxu/Z5G588OfIHJ2EYYIddTI8KsXyotiCK37pZmTVl+/ek/Cjy4IyEfHsZzFJz07pAMAmhu7Za88lbdS2cuqM4ON+De1m8ESi9oeq7SkX3Urb8URsHe3NZvn5hVEfMgwLtlXC7ilP835qK5I4FiUnsCZVYkUIraCYr5qYLZDxpfvzdzZjOQPxxuO+DFxYhAAUuoVJGdxwo7jix+pWbRpSva8j8G5r3tfwEAAP//97SuDUC0StUAAAAASUVORK5CYII="
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>.</p>
 </div>
-<h2 id="inspector"><a href="https://www.jetbrains.com/help/mps/mps-inspector.html">Inspector</a><a class="headerlink" href="#inspector" title="Permanent link">&para;</a></h2>
+<h2 id="inspector"><a href="https://www.jetbrains.com/help/mps/mps-inspector.html">Inspector</a><a class="headerlink" href="#inspector" title="Permanent link">&para; ⧉</a></h2>
 <p>As a language developer, you often use the inspector in the editor aspect to set styles, or change macros in the editor aspect.
 Some projects use the inspector nearly not all, but it can be good solution to not clutter the editor:
-<a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector</a>(<em>Specific Languages' blog</em>)</p>
+<a href="https://specificlanguages.com/posts/2022-02/10-move-rarely-needed-information-to-inspector/">Move rarely needed information to the Inspector ⧉</a> (<em>Specific Languages' blog</em>)</p>
 <div class="admonition question">
 <p class="admonition-title">How can you open the inspector programmatically?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">editorContext</span><span class="p">.</span><span class="na">openInspector</span><span class="p">()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners</a>(<em>Specific Languages' blog</em>)</li>
-<li><a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/01-opening-inspector-automatically/">Opening Inspector automatically ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/02-opening-inspector-automatically-selection-listeners/">Opening Inspector automatically: Selection listeners ⧉</a> (<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-03/03-opening-inspector-automatically-editor-extensions/">Opening Inspector automatically: Editor extensions ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you focus on a node in the inspector?</p>
 <ul>
-<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-04/01-focusing-on-a-node-in-the-inspector/">Focusing on a node in the inspector ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Highlighting constraint errors in the inspector doesn't work.</p>
-<p>Known bug (<a href="https://youtrack.jetbrains.com/issue/MPS-32350"><abbr title="Meta Programming System">MPS</abbr>-32350</a>). Pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> helps.</p>
+<p>Known bug (<a href="https://youtrack.jetbrains.com/issue/MPS-32350"><abbr title="Meta Programming System">MPS</abbr>-32350 ⧉</a>). Pressing <span class="keys"><kbd class="key-f5">F5</kbd></span> helps.</p>
 </div>
 <h2 id="open-api">Open <abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#open-api" title="Permanent link">&para;</a></h2>
 <p>This section contains answers to code-related questions.</p>
@@ -2055,7 +2068,7 @@ Some projects use the inspector nearly not all, but it can be good solution to n
            xlink:href="data:image/png;base64,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"
     />
 </svg>
-</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions</a>.</p>
+</span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you get the font of an editor?</p>
@@ -2065,7 +2078,7 @@ Some projects use the inspector nearly not all, but it can be good solution to n
 <div class="admonition question">
 <p class="admonition-title">How can you subscribe to editor changes?</p>
 <ul>
-<li><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360009846039/comments/360002369420">Add a tool that subscribes to editor changes | <abbr title="Meta Programming System">MPS</abbr> forum</a>.</li>
+<li><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/360009846039/comments/360002369420">Add a tool that subscribes to editor changes | <abbr title="Meta Programming System">MPS</abbr> forum ⧉</a>.</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -2116,7 +2129,7 @@ Some projects use the inspector nearly not all, but it can be good solution to n
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find all open editors?</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/10-finding-all-open-editors/">Finding all open editors ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you programmatically collapse editor cells?</p>
@@ -2135,11 +2148,11 @@ Some projects use the inspector nearly not all, but it can be good solution to n
 <p>When closing an editor tab, <abbr title="Meta Programming System">MPS</abbr> removes the highlighting from all nodes in the editor. I.e., when an editor is opened again for the same root node, all highlighting is gone.</p>
 <p>In my code, I want to react to this editor-close event. Can a callback or hook be implemented, which the editor calls when an editor tab is closed?</p>
 </blockquote>
-<p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example</a>).</p>
+<p>You can register an <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.highlighter%28MPS.Editor%2F%29%2F%7EEditorComponentCreateListener">EditorComponentCreateListener</a>, that also receives an editorComponentDisposed event (<a href="https://github.com/JetBrains/MPS/blob/master/workbench/mps-workbench/source/jetbrains/mps/ide/bookmark/BookmarksUIComponent.java#L71-L84">example ⧉</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I customize the behavior when pressing the Tab key in the editor?</p>
-<p>To override this behavior, you can specify the action <code>NEXT</code> in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a> (<a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809"><abbr title="Meta Programming System">MPS</abbr> source reference</a>). The default action is declared <a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57">here</a> with its default implementation in <a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401">NodeEditorActions</a>(it jumps to the next editable leaf of the editor cell tree).</p>
+<p>To override this behavior, you can specify the action <code>NEXT</code> in an <a href="https://www.jetbrains.com/help/mps/editor.html#actionmaps">action map</a> (<a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809"><abbr title="Meta Programming System">MPS</abbr> source reference</a>). The default action is declared <a href="https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57">here</a> with its default implementation in <a href="https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401">NodeEditorActions ⧉</a>(it jumps to the next editable leaf of the editor cell tree).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is there a utility class related to editor hints?</p>
@@ -2149,11 +2162,11 @@ Some projects use the inspector nearly not all, but it can be good solution to n
            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX/////587vrXP3xpyUtc57nL3W3u//9+/3zqXvlErnexjvnEpKe60ISoxCe6Wtxtb39/fnhCHnexBCc6UASowhWpTvnFL/59ZznL0xa5wQUoxrlLUYUpQpY5xjjLWMrcbG1ufe5+/n5+/n7/f37+f31r33tYTvpWP3xpTvlELvjDHvhCnvpVrW1t7n59733sb3vYzvrWvv9/dzlL3O3udSe60hY5w5c6VShK0YWpSEpcbvjDn3zq3v7++9zt6lvdacNa5zAAAAAXRSTlMAQObYZgAAAAFiS0dEFJLfyTUAAAAHdElNRQfmBxUPMCA2WniEAAABcUlEQVQ4y71T21bCMBBcoFgIpG1CGiS2AopAWhRBVBTR//8rkyYNhQMPvrineeiZyezsJQD/HLV6A7zm1QXUb7UR6kAX4yCMzl0mCFHahh5mGMcnMsVljVNuCOpUZPr6skapUygivrYyvIQRVR4OBIwHjmBg9akU7BwBWbyagmHmCNRJdJxJLE5SmFMoaIYQoqJgGago08Ki6sEaKFLciCQdBLfNoReOxkdVaAnE4W58P+nXHlrT+qxdP65CN5PDXGZ5nuvWITQzhDnPzL+KBXRITjJiXFmCNwwfn5at5xWXZLrmeUaIbbwldHVb0uDFCzdrH7jFtfOSwExdSZykQ+AE0bIsp2BgHd1IokPfLOHVwW/xuyaUkysVtomBP3RzI+km6zxsheksU0NQBDdZl+Iz0eMzQx740k0W7b7szu29tFyCFHZ2OchsWdna9fcWHynIxv5078fNmFkFslrCuYh+eiyAhWxMLr+90Qb8Pz7XX/+zLxPKmEVVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTIxVDE1OjQ4OjMyKzAwOjAwKJhStgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yMVQxNTo0ODozMiswMDowMFnF6goAAAAASUVORK5CYII="
     />
 </svg>
-</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>: <a href="http://127.0.0.1:63320/node?ref=r%3A1784e088-20fd-4fdb-96b8-bc57f0056d94%28com.mbeddr.core.base.editor%29%2F7773837976085536185">EditorHintHelper</a>.</p>
+</span><a href="https://github.com/mbeddr/mbeddr.core">mbeddr</a>: <a href="http://127.0.0.1:63320/node?ref=r%3A1784e088-20fd-4fdb-96b8-bc57f0056d94%28com.mbeddr.core.base.editor%29%2F7773837976085536185">EditorHintHelper ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">I <abbr title="abstract module">am</abbr> using <code>NodeHighlightManager.mark()</code> to highlight <abbr title="Abstract Syntax Tree">AST</abbr> nodes. <abbr title="Meta Programming System">MPS</abbr> then uses the provided color for the cell's background and a slightly darker shade for an additional border. Can we change this, i.e., only paint the background, but not the border?</p>
-<p>Yes, but you must create a class that extends DefaultEditorMessage and overwrites the <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196">paintWithColor</a> method. Line <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203">203</a> defined the color of the border. Instead of calling this method:</p>
+<p>Yes, but you must create a class that extends DefaultEditorMessage and overwrites the <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L196">paintWithColor</a> method. Line <a href="https://github.com/JetBrains/MPS/blob/24918829bd8cb18afec7bfdfb5958d197608be1a/editor/editor-runtime/source/jetbrains/mps/nodeEditor/DefaultEditorMessage.java#L203">203 ⧉</a> defined the color of the border. Instead of calling this method:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
@@ -2164,21 +2177,13 @@ Some projects use the inspector nearly not all, but it can be good solution to n
 </code></pre></div></td></tr></table></div>
 <p>You must initialize your message object and supply it to the mark method.</p>
 </div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://mps-support.jetbrains.com/hc/en-us/community/posts/4403918630290-hierarchical-tree-structure-and-editing"><abbr title="Meta Programming System">MPS</abbr> forum - hierarchical tree structure and editing</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2376,7 +2381,7 @@ Some projects use the inspector nearly not all, but it can be good solution to n
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

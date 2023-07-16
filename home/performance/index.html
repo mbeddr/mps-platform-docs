@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1643,25 +1654,25 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <div class="admonition warning">
 <p class="admonition-title">This page is about advanced topics. Please skip it if you are a beginner.</p>
 </div>
-<p>This page explains typical <abbr title="Meta Programming System">MPS</abbr> memory consumption and performance bottlenecks and how to solve those problems. If you want to know about slow software in general (e.g., hardware-related slowness), read <a href="https://www.inkandswitch.com/slow-software/">Slow Software | Ink &amp; Switch</a>.</p>
+<p>This page explains typical <abbr title="Meta Programming System">MPS</abbr> memory consumption and performance bottlenecks and how to solve those problems. If you want to know about slow software in general (e.g., hardware-related slowness), read <a href="https://www.inkandswitch.com/slow-software/">Slow Software | Ink &amp; Switch ⧉</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">How are expensive model traversals handled in <abbr title="Meta Programming System">MPS</abbr>?</p>
 <p>There is no <abbr title="Application Programming Interface">API</abbr> for indexing model traversal results (e.g., getParent(), getAncestors()) the way frameworks like Xtext implement it.</p>
-<p>The implementation of <em>Find usages</em> of concepts is efficient, though. The internal class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager">FastNodeFinderManager</a> can efficiently return the list of instances of a concept for a model. <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache">ConceptDescendantsCache</a> also caches the descendants of a concept.</p>
-<p>The startup indexing collects <a href="https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java">information</a> about <abbr title="Meta Programming System">MPS</abbr> models, such as instances of concepts, imports, and property values (used for the <a href="https://www.jetbrains.com/help/mps/find-text-in-project.html">Find Text in Node Properties</a> action). The <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">virtual files</a> representing root nodes in the filesystem are probably also indexed.</p>
-<p>The initial indexing also integrates Base Language into the IntelliJ search functionality (<a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83">implementation in <abbr title="Meta Programming System">MPS</abbr></a>). As an IntelliJ plugin, <abbr title="Meta Programming System">MPS</abbr> should allow the standard search for <a href="https://www.jetbrains.com/help/idea/find-highlight-usages.html">usages</a> and <a href="https://www.jetbrains.com/help/idea/structural-search-and-replace.html">structural search</a> to work with Base Language classes and interfaces.</p>
+<p>The implementation of <em>Find usages</em> of concepts is efficient, though. The internal class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFastNodeFinderManager">FastNodeFinderManager</a> can efficiently return the list of instances of a concept for a model. <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EConceptDescendantsCache">ConceptDescendantsCache ⧉</a> also caches the descendants of a concept.</p>
+<p>The startup indexing collects <a href="https://github.com/JetBrains/MPS/blob/master/core/persistence/source/jetbrains/mps/persistence/IndexAwareModelFactory.java">information</a> about <abbr title="Meta Programming System">MPS</abbr> models, such as instances of concepts, imports, and property values (used for the <a href="https://www.jetbrains.com/help/mps/find-text-in-project.html">Find Text in Node Properties</a> action). The <a href="https://plugins.jetbrains.com/docs/intellij/virtual-file-system.html">virtual files ⧉</a> representing root nodes in the filesystem are probably also indexed.</p>
+<p>The initial indexing also integrates Base Language into the IntelliJ search functionality (<a href="https://github.com/JetBrains/MPS/blob/master/IdeaPlugin/mps-java/META-INF/plugin.xml#L83">implementation in <abbr title="Meta Programming System">MPS</abbr></a>). As an IntelliJ plugin, <abbr title="Meta Programming System">MPS</abbr> should allow the standard search for <a href="https://www.jetbrains.com/help/idea/find-highlight-usages.html">usages</a> and <a href="https://www.jetbrains.com/help/idea/structural-search-and-replace.html">structural search ⧉</a> to work with Base Language classes and interfaces.</p>
 </div>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
+<li>Read the page <a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html">Advanced Configuration ⧉</a> in the official documentation. You are especially interested in setting <code>-Xmx</code> and <code>-Xms</code>.</li>
 <li>Do not invalidate the cache when restarting the project if it isn't necessary. The reindexing can take a while for large projects.</li>
-<li><a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache">Speeding up model checks with Scope Cache</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
-<li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java</a>)</li>
+<li><a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache">Speeding up model checks with Scope Cache ⧉</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
+<li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java ⧉</a>)</li>
 <li>Don't recalculate expensive calculations but rather save the results in variables.</li>
-<li>Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a>)</li>
+<li>Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet ⧉</a>)</li>
 <li>Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over, for example, <code>model.roots(ClassConcept)</code> instead of
  <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create immense scopes. The same is true for searching in the console: avoid snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code> can also be expensive.</li>
-<li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope</a>. Try to also use the following snippets for filtering models that often shouldn't be searched because they are not indexed:<ul>
+<li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope ⧉</a>. Try to also use the following snippets for filtering models that often shouldn't be searched because they are not indexed:<ul>
 <li><code>#modules.where({~it =&gt; it.isPackaged() })</code>to filter <abbr title="output">out</abbr> modules that are installed</li>
 <li><code>#models.where({~it =&gt; TemporaryModels.isTemporary(it) })</code> to filter temporary models</li>
 </ul>
@@ -1678,7 +1689,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </li>
 </ul>
 <h3 id="model-pruning">Model Pruning<a class="headerlink" href="#model-pruning" title="Permanent link">&para;</a></h3>
-<p>Often, the generator doesn't have to process all nodes. You might have different build configurations where you are interested in only a subset of nodes or don't use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation</a>. You copy nodes from other models to the current model instead. Sometimes additional information is attached to nodes. <abbr title="Meta Programming System">MPS</abbr> doesn't have to generate such attributes or nodes. Having too many nodes to be processed can impact memory and slow the generator.</p>
+<p>Often, the generator doesn't have to process all nodes. You might have different build configurations where you are interested in only a subset of nodes or don't use <a href="https://www.jetbrains.com/help/mps/generation-plan.html#cross-modelgeneration">cross-model generation ⧉</a>. You copy nodes from other models to the current model instead. Sometimes additional information is attached to nodes. <abbr title="Meta Programming System">MPS</abbr> doesn't have to generate such attributes or nodes. Having too many nodes to be processed can impact memory and slow the generator.</p>
 <p>You can achieve Model pruning using an allowlist or blocklist approach: specify which nodes should or shouldn’t be processed. Both approaches are combinable. The following simplified approach is one possible solution to achieve this:</p>
 <ol>
 <li>Collect all original root nodes: <code class="highlight"><span class="n">model</span><span class="p">.</span><span class="na">roots</span><span class="p">(</span><span class="o">&lt;</span><span class="n">all</span><span class="o">&gt;</span><span class="p">).</span><span class="na">select</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">genContext</span><span class="p">.</span><span class="na">get</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nf">for</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"></span></code></li>
@@ -1698,32 +1709,32 @@ The Type system caches calculations by default, which can also impact performanc
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
 <h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram</a> language saves layout information in node attributes. That means that automatically laying <abbr title="output">out</abbr> the diagram causes a lot of changes in the <abbr title="difference">diff</abbr> view for this root node.. An option in the editor's diagram definition can influence auto layouting.</li>
-<li>Tables and diagrams turn off incremental rendering. That means the editor will not be updated incrementally, causing a full update on each typed character. It might also affect the type system calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579</a>)</li>
+<li>The <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/diagrams/">diagram ⧉</a> language saves layout information in node attributes. That means that automatically laying <abbr title="output">out</abbr> the diagram causes a lot of changes in the <abbr title="difference">diff</abbr> view for this root node.. An option in the editor's diagram definition can influence auto layouting.</li>
+<li>Tables and diagrams turn off incremental rendering. That means the editor will not be updated incrementally, causing a full update on each typed character. It might also affect the type system calculations (<a href="https://github.com/JetBrains/MPS-extensions/issues/579">MPS_EXTENSIONS-579 ⧉</a>)</li>
 <li>When you use horizontal or vertical lines or any styles from  <ins>de.itemis.mps.editor.celllayout.styles language</ins> (such as <em>_grow-x</em> or <em>_grid-layout-flatten</em>), a top-down layout algorithm activates for the editor. This algorithm is slower than the usual <abbr title="Meta Programming System">MPS</abbr> re-layout, slowing down the incremental editor update.</li>
 </ul>
 <h2 id="kernelf">KernelF<a class="headerlink" href="#kernelf" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <a href="http://localhost:8000/mps-platform-docs/platform_essentials/interpreter/#code-coverage">code coverage collection</a> is global. That means you either
+<li>The <a href="http://localhost:8000/mps-platform-docs/platform_essentials/interpreter/#code-coverage">code coverage collection ⧉</a> is global. That means you either
 have to empty it after some time with <code>DefaultCoverageAnalyzer.reset()</code> or start the interpreter without coverage. The class
-<a href="http://127.0.0.1:63320/node?ref=r%3A83e946de-2a7f-4a4c-b3c9-4f671aa7f2db%28org.iets3.core.expr.base.behavior%29%2F4065005624681052837">IETS3ExprEvalHelper</a> has methods for evaluating nodes with and without coverage.</li>
-<li>The <a href="http://mbeddr.com/interpreter/Interpreter.html">interpreter</a> framework can be slow when you invoke the interpreter often.
-  There may be <a href="https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/">faster alternatives</a> that are currently not
+<a href="http://127.0.0.1:63320/node?ref=r%3A83e946de-2a7f-4a4c-b3c9-4f671aa7f2db%28org.iets3.core.expr.base.behavior%29%2F4065005624681052837">IETS3ExprEvalHelper ⧉</a> has methods for evaluating nodes with and without coverage.</li>
+<li>The <a href="http://mbeddr.com/interpreter/Interpreter.html">interpreter ⧉</a> framework can be slow when you invoke the interpreter often.
+  There may be <a href="https://www.nikostotz.de/blog/high-performance-interpreters-for-jetbrains-mps/">faster alternatives ⧉</a> that are currently not
  implemented.</li>
 </ul>
 <h2 id="startup">Startup<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h2>
-<p>You can analyze <abbr title="Meta Programming System">MPS</abbr>'s startup with a standard Java profiler like <a href="https://www.yourkit.com/">YourKit</a>. For IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">components</a>, <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">services</a>, and <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">extensions</a>,
-it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">IntelliJ Report Analyzer</a>. Click on the button
+<p>You can analyze <abbr title="Meta Programming System">MPS</abbr>'s startup with a standard Java profiler like <a href="https://www.yourkit.com/">YourKit</a>. For IntelliJ <a href="https://plugins.jetbrains.com/docs/intellij/plugin-components.html">components</a>, <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">services</a>, and <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">extensions ⧉</a>,
+it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">IntelliJ Report Analyzer ⧉</a>. Click on the button
 <em>Get from running instance</em> to fetch the data from the opened <abbr title="Meta Programming System">MPS</abbr> instance. Ensure that the <em>productCode</em> in the left text area says <em><abbr title="Meta Programming System">MPS</abbr></em> because other IntelliJ IDEs, such as IntelliJ IDEA, use the same port.</p>
-<p><a class="glightbox" href="../../img/home/intellij_report_analyzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IntelliJ report analyzer" src="../../img/home/intellij_report_analyzer.png" width="600px" /></a></p>
+<p><a class="glightbox" href="../images/intellij_report_analyzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IntelliJ report analyzer" src="../images/intellij_report_analyzer.png" width="600px" /></a></p>
 <h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <p>If you are interested in internal performance-related topics about Java and its compiler, you might find the following articles helpful:</p>
 <ul>
-<li><a href="https://www.ibm.com/docs/en/sdk-java-technology/8?topic=compiler-how-jit-optimizes-code">How the JIT compiler optimizes code | ibm.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://www.oracle.com/java/technologies/whitepaper.html">The Java HotSpot Performance Engine Architecture | oracle.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://en.wikipedia.org/wiki/Optimizing_compiler">Optimizing compiler | wikipedia.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://developers.redhat.com/articles/2021/06/23/how-jit-compiler-boosts-java-performance-openjdk">How the JIT compiler boosts Java performance in OpenJDK | developers.redhat.<abbr title="commercial/common/communication">com</abbr></a></li>
-<li><a href="https://www.baeldung.com/java-microbenchmark-harness">Microbenchmarking with Java | baeldung.<abbr title="commercial/common/communication">com</abbr></a></li>
+<li><a href="https://www.ibm.com/docs/en/sdk-java-technology/8?topic=compiler-how-jit-optimizes-code">How the JIT compiler optimizes code | ibm.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://www.oracle.com/java/technologies/whitepaper.html">The Java HotSpot Performance Engine Architecture | oracle.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Optimizing_compiler">Optimizing compiler | wikipedia.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://developers.redhat.com/articles/2021/06/23/how-jit-compiler-boosts-java-performance-openjdk">How the JIT compiler boosts Java performance in OpenJDK | developers.redhat.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
+<li><a href="https://www.baeldung.com/java-microbenchmark-harness">Microbenchmarking with Java | baeldung.<abbr title="commercial/common/communication">com</abbr> ⧉</a></li>
 </ul>
 
   <hr>
@@ -1731,7 +1742,7 @@ it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1929,7 +1940,7 @@ it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

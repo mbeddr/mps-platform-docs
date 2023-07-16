@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1658,23 +1669,23 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
   <h1>Testing</h1>
 
-<p>This page explains some <abbr title="Meta Programming System">MPS</abbr> testing ideas according to general <a href="https://en.wikipedia.org/wiki/Software_testing">software testing concepts</a>.
-For a specific <abbr title="Meta Programming System">MPS</abbr> testing introduction, visit <a href="https://www.jetbrains.com/help/mps/testing-languages.html">Testing language | <abbr title="Meta Programming System">MPS</abbr> documentation</a>.</p>
+<p>This page explains some <abbr title="Meta Programming System">MPS</abbr> testing ideas according to general <a href="https://en.wikipedia.org/wiki/Software_testing">software testing concepts ⧉</a>.
+For a specific <abbr title="Meta Programming System">MPS</abbr> testing introduction, visit <a href="https://www.jetbrains.com/help/mps/testing-languages.html">Testing language | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a>.</p>
 <h2 id="testing-techniques">Testing Techniques<a class="headerlink" href="#testing-techniques" title="Permanent link">&para;</a></h2>
-<p>The following techniques are considered typical <a href="https://en.wikipedia.org/wiki/Black-box_testing">black-box</a> design techniques, which means you examine the functionality of an application without peering into its internal structures or workings.</p>
+<p>The following techniques are considered typical <a href="https://en.wikipedia.org/wiki/Black-box_testing">black-box ⧉</a> design techniques, which means you examine the functionality of an application without peering into its internal structures or workings.</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Equivalence_partitioning">Equivalence partitioning</a>: An equivalence class or equivalence partition is a set of test cases that tests the same thing or reveals the same bug. Often nearly unlimited combinations of input data exist. The idea is to reduce the necessary test cases  by dividing the input data into partitions of equivalent data from which you can derive test cases. Design test cases to cover each partition at least once. KernelF has <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf#page=39">support for equivalence partitions</a> in test cases.<ul>
+<li><a href="https://en.wikipedia.org/wiki/Equivalence_partitioning">Equivalence partitioning</a>: An equivalence class or equivalence partition is a set of test cases that tests the same thing or reveals the same bug. Often nearly unlimited combinations of input data exist. The idea is to reduce the necessary test cases  by dividing the input data into partitions of equivalent data from which you can derive test cases. Design test cases to cover each partition at least once. KernelF has <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf#page=39">support for equivalence partitions ⧉</a> in test cases.<ul>
 <li>Example: a number with exactly six digits is allowed. Partitions: &gt;6 (invalid), &lt;= 5 (invalid), = 5 </li>
 </ul>
 </li>
-<li><a href="https://en.wikipedia.org/wiki/Boundary-value_analysis">Boundary-value analysis</a>: In this analysis, you test the boundary values of valid and invalid partitions. Values at the edge of partitions are more likely to be overlooked and force errors. This technique also detects off-by-one errors or boundary condition errors. The example for the previous technique also shows a case of boundary-value analysis.</li>
-<li><a href="https://en.wikipedia.org/wiki/Decision_table">Decision tables</a> are used to test different input combinations/conditions in a tabular form. KernelF supports them <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf#page=38">directly</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Boundary-value_analysis">Boundary-value analysis ⧉</a>: In this analysis, you test the boundary values of valid and invalid partitions. Values at the edge of partitions are more likely to be overlooked and force errors. This technique also detects off-by-one errors or boundary condition errors. The example for the previous technique also shows a case of boundary-value analysis.</li>
+<li><a href="https://en.wikipedia.org/wiki/Decision_table">Decision tables</a> are used to test different input combinations/conditions in a tabular form. KernelF supports them <a href="https://voelter.de/data/books/kernelf-designEvoUse.pdf#page=38">directly ⧉</a>.</li>
 </ul>
 <h2 id="what-is-a-bug-and-what-should-be-tested">What Is a Bug and What Should Be Tested<a class="headerlink" href="#what-is-a-bug-and-what-should-be-tested" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>A software bug is an error, flaw, or fault in computer software's design, development, or operation that causes it to produce an incorrect or unexpected result or to behave in unintended ways. <a href="https://en.wikipedia.org/wiki/Software_bug">software bug | Wikipedia</a></p>
+<p>A software bug is an error, flaw, or fault in computer software's design, development, or operation that causes it to produce an incorrect or unexpected result or to behave in unintended ways. <a href="https://en.wikipedia.org/wiki/Software_bug">software bug | Wikipedia ⧉</a></p>
 </blockquote>
-<p>An approach to finding bugs is to check if one of the following five rules is true, which the book <a href="https://books.google.at/books/about/Software_Testing.html?id=MTEiAQAAIAAJ&amp;redir_esc=y">Ron Patton - Software Testing</a> from 2006 first defined:</p>
+<p>An approach to finding bugs is to check if one of the following five rules is true, which the book <a href="https://books.google.at/books/about/Software_Testing.html?id=MTEiAQAAIAAJ&amp;redir_esc=y">Ron Patton - Software Testing ⧉</a> from 2006 first defined:</p>
 <ol>
 <li>The software doesn't do something that the product specification says it should do.</li>
 <li>The software does something that the product specification says it shouldn't do.</li>
@@ -1685,8 +1696,8 @@ For a specific <abbr title="Meta Programming System">MPS</abbr> testing introduc
    eyes &ndash; will be viewed by the end user as just plain not right.</li>
 </ol>
 <h3 id="automatic-testing">Automatic testing<a class="headerlink" href="#automatic-testing" title="Permanent link">&para;</a></h3>
-<p>Have a look at the <a href="https://www.jetbrains.com/help/mps/testing-languages.html#quicknavigationtable">quick navigation table | <abbr title="Meta Programming System">MPS</abbr> documentation</a> first. In addition, test type system errors in node test cases with <em>has error</em> annotations.</p>
-<p>While the generator can be tested with generator tests, as explained in the documentation, they are often not fine-grained enough to test what you want to test. Moreover, exclude specific nodes or properties or show the result in a <abbr title="difference">diff</abbr> tool. An alternative approach is to invoke the generator yourself through <a href="http://127.0.0.1:63320/node?ref=r%3A00bd75cf-1225-4ef5-9a7e-390aed8718dd%28com.mbeddr.mpsutil.generatorfacade.runtime%29%2F5915735921188923345"><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.generatorfacade.GeneratorFacade#runGenerator</a> and compare the expected and actual output yourself with <code>com.mbeddr.mpsutil.compare.structure.AssertNodeEquals</code>.</p>
+<p>Have a look at the <a href="https://www.jetbrains.com/help/mps/testing-languages.html#quicknavigationtable">quick navigation table | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a> first. In addition, test type system errors in node test cases with <em>has error</em> annotations.</p>
+<p>While the generator can be tested with generator tests, as explained in the documentation, they are often not fine-grained enough to test what you want to test. Moreover, exclude specific nodes or properties or show the result in a <abbr title="difference">diff</abbr> tool. An alternative approach is to invoke the generator yourself through <a href="http://127.0.0.1:63320/node?ref=r%3A00bd75cf-1225-4ef5-9a7e-390aed8718dd%28com.mbeddr.mpsutil.generatorfacade.runtime%29%2F5915735921188923345"><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.generatorfacade.GeneratorFacade#runGenerator ⧉</a> and compare the expected and actual output yourself with <code>com.mbeddr.mpsutil.compare.structure.AssertNodeEquals</code>.</p>
 <h3 id="manually-testing">Manually Testing<a class="headerlink" href="#manually-testing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Is there documentation for a new feature/change?</li>
@@ -1700,21 +1711,21 @@ For a specific <abbr title="Meta Programming System">MPS</abbr> testing introduc
 </ul>
 <h2 id="testing-approaches">Testing Approaches<a class="headerlink" href="#testing-approaches" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>Functional review</em> (<a href="https://en.wikipedia.org/wiki/Black-box_testing">black-box testing</a>): The tester doesn't look at the code but instead checks the functionality of an application and if it meets the specification.</li>
-<li><em>Code review</em> (<a href="https://en.wikipedia.org/wiki/White-box%20testing">white-box testing</a>): A different developer (e.g., from the same team) checks the code for
-  logical errors, code standard violations, and other issues. If, for example, you use GitHub for hosting the project and <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request">reviews are required</a> before you can merge a branch, a reviewer can comment on a <abbr title="Pull Request or Public Relations">PR</abbr>, approve it or request changes.</li>
+<li><em>Functional review</em> (<a href="https://en.wikipedia.org/wiki/Black-box_testing">black-box testing ⧉</a>): The tester doesn't look at the code but instead checks the functionality of an application and if it meets the specification.</li>
+<li><em>Code review</em> (<a href="https://en.wikipedia.org/wiki/White-box%20testing">white-box testing ⧉</a>): A different developer (e.g., from the same team) checks the code for
+  logical errors, code standard violations, and other issues. If, for example, you use GitHub for hosting the project and <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request">reviews are required ⧉</a> before you can merge a branch, a reviewer can comment on a <abbr title="Pull Request or Public Relations">PR</abbr>, approve it or request changes.</li>
 </ul>
-<h3 id="continuous-testing"><a href="https://en.wikipedia.org/wiki/Continuous_testing">Continuous Testing</a><a class="headerlink" href="#continuous-testing" title="Permanent link">&para;</a></h3>
-<p><abbr title="Meta Programming System">MPS</abbr> <a href="https://www.jetbrains.com/help/mps/testing-languages.html">tests</a> such as unit, nodes, and editor tests can be executed on the command line and as part of the <abbr title="Continuous Integration">CI</abbr> pipeline. To execute tests with the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>, use the <a href="https://github.com/mbeddr/mps-gradle-plugin#runantscript">TestLanguages</a> task (<a href="https://github.com/JetBrains/MPS-extensions/blob/7a7619ece4068098ffb8f09b44791713063587e7/build.gradle#L255">example</a>). To run the model checker, use the <a href="https://github.com/mbeddr/mps-gradle-plugin#model-check">Model Check</a> task. It can be configured to make the
-build fail when there is a model check error and show the failures as normal JUnit test fails. The model checking can be combined with the <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linters</a> from the <a href="https://github.com/mbeddr/mps-qa">mps-qa</a> project to improve the code quality further.</p>
-<h3 id="usability-testing"><a href="https://en.wikipedia.org/wiki/Usability_testing">Usability Testing</a><a class="headerlink" href="#usability-testing" title="Permanent link">&para;</a></h3>
-<p>Start by looking through the <a href="../../patterns/ui_patterns/"><abbr title="User Interface">UI</abbr> patterns</a> list. To get started with testing with users, read <a href="https://www.nngroup.com/articles/usability-testing-101/">Usability Testing 101</a>.</p>
-<h4 id="expert-review"><a href="https://en.wikipedia.org/wiki/Usability_testing?oldformat=true#Expert_review">Expert Review</a><a class="headerlink" href="#expert-review" title="Permanent link">&para;</a></h4>
-<p>An expert review is another general method of usability testing. Check <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen's usability heuristics</a>:</p>
+<h3 id="continuous-testing"><a href="https://en.wikipedia.org/wiki/Continuous_testing">Continuous Testing</a><a class="headerlink" href="#continuous-testing" title="Permanent link">&para; ⧉</a></h3>
+<p><abbr title="Meta Programming System">MPS</abbr> <a href="https://www.jetbrains.com/help/mps/testing-languages.html">tests</a> such as unit, nodes, and editor tests can be executed on the command line and as part of the <abbr title="Continuous Integration">CI</abbr> pipeline. To execute tests with the <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin</a>, use the <a href="https://github.com/mbeddr/mps-gradle-plugin#runantscript">TestLanguages</a> task (<a href="https://github.com/JetBrains/MPS-extensions/blob/7a7619ece4068098ffb8f09b44791713063587e7/build.gradle#L255">example</a>). To run the model checker, use the <a href="https://github.com/mbeddr/mps-gradle-plugin#model-check">Model Check ⧉</a> task. It can be configured to make the
+build fail when there is a model check error and show the failures as normal JUnit test fails. The model checking can be combined with the <a href="https://github.com/mbeddr/mps-qa/blob/master/code/languages/org.mpsqa.lint/README.md">linters</a> from the <a href="https://github.com/mbeddr/mps-qa">mps-qa ⧉</a> project to improve the code quality further.</p>
+<h3 id="usability-testing"><a href="https://en.wikipedia.org/wiki/Usability_testing">Usability Testing</a><a class="headerlink" href="#usability-testing" title="Permanent link">&para; ⧉</a></h3>
+<p>Start by looking through the <a href="../../patterns/ui_patterns/"><abbr title="User Interface">UI</abbr> patterns</a> list. To get started with testing with users, read <a href="https://www.nngroup.com/articles/usability-testing-101/">Usability Testing 101 ⧉</a>.</p>
+<h4 id="expert-review"><a href="https://en.wikipedia.org/wiki/Usability_testing?oldformat=true#Expert_review">Expert Review</a><a class="headerlink" href="#expert-review" title="Permanent link">&para; ⧉</a></h4>
+<p>An expert review is another general method of usability testing. Check <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen's usability heuristics ⧉</a>:</p>
 <ul>
 <li><em>Visibility of system status</em>: The design should always keep users informed about what is happening through appropriate feedback within a reasonable amount of time.<ul>
 <li>Does the editor show feedback by showing model-checking messages, error cells, and other types of feedback?</li>
-<li>Are <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html">notifications</a> from the IntelliJ platform (e.g., dialogs, banners) used sed to convey information? What about the message view?</li>
+<li>Are <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html">notifications ⧉</a> from the IntelliJ platform (e.g., dialogs, banners) used sed to convey information? What about the message view?</li>
 </ul>
 </li>
 <li><em>Match between the system and the real world</em>: The design should speak the users' language. Use words, phrases, and concepts familiar to the user rather than internal jargon. Follow real-world conventions, making information appear in a natural and logical order.<ul>
@@ -1722,8 +1733,8 @@ build fail when there is a model check error and show the failures as normal JUn
 </ul>
 </li>
 <li><em>User control and freedom</em>: Users often perform actions by mistake. They require a clearly labeled "emergency exit" that allows them to quit the undesired action without following a lengthy procedure.<ul>
-<li>While <abbr title="Meta Programming System">MPS</abbr> supports <a href="https://www.jetbrains.com/help/mps/undoing-and-redoing-changes.html">undoing and redoing changes</a> <abbr title="output">out</abbr> of the box
-  and confirmation dialogs are used for asking for confirmation before taking action, the <a href="https://m2.material.io/design/communication/confirmation-acknowledgement.html">Google Material Design Guidelines</a> describe another option. Acknowledge successful actions through a <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#got-it-notification">got it notification</a> or revert the action through a custom action that is attached to a <a href="https://jetbrains.design/intellij/controls/balloon/#actions">balloon</a>.</li>
+<li>While <abbr title="Meta Programming System">MPS</abbr> supports <a href="https://www.jetbrains.com/help/mps/undoing-and-redoing-changes.html">undoing and redoing changes ⧉</a> <abbr title="output">out</abbr> of the box
+  and confirmation dialogs are used for asking for confirmation before taking action, the <a href="https://m2.material.io/design/communication/confirmation-acknowledgement.html">Google Material Design Guidelines</a> describe another option. Acknowledge successful actions through a <a href="https://plugins.jetbrains.com/docs/intellij/notifications.html#got-it-notification">got it notification</a> or revert the action through a custom action that is attached to a <a href="https://jetbrains.design/intellij/controls/balloon/#actions">balloon ⧉</a>.</li>
 <li>Are mistakes by the user caught by the model checker and displayed in the editor? </li>
 </ul>
 </li>
@@ -1736,17 +1747,17 @@ build fail when there is a model check error and show the failures as normal JUn
 </ul>
 </li>
 <li><em>Error prevention</em>: Good error messages are essential, but the best designs carefully prevent problems from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.<ul>
-<li>Are <a href="https://www.jetbrains.com/help/mps/constraints.html">constraints</a> used to restrict certain node relationships to avoid users making errors in the first place?</li>
+<li>Are <a href="https://www.jetbrains.com/help/mps/constraints.html">constraints ⧉</a> used to restrict certain node relationships to avoid users making errors in the first place?</li>
 </ul>
 </li>
 <li><em>Recognition rather than recall</em>: Minimize the user's memory load by making elements, actions, and options visible. The user should not have to remember information from one part of the interface to another. Information required to use the design (e.g., field labels or menu items) should be visible or easily retrievable when needed.<ul>
-<li>Does the user know where he can find specific actions? (<a href="https://www.jetbrains.com/help/mps/mps-inspector.html">inspector</a>, <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions tool</a>, <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistant</a>, right-click context menu, main menu)</li>
+<li>Does the user know where he can find specific actions? (<a href="https://www.jetbrains.com/help/mps/mps-inspector.html">inspector</a>, <a href="https://www.jetbrains.com/help/mps/context-actions-tool.html">context actions tool</a>, <a href="https://www.jetbrains.com/help/mps/context-assistant.html">context assistant ⧉</a>, right-click context menu, main menu)</li>
 </ul>
 </li>
 <li><em>Flexibility and efficiency of use</em>: Shortcuts — hidden from novice users — may speed up the interaction for the expert user so that the design can cater to inexperienced and experienced users. Allow users to tailor frequent actions.<ul>
 <li>Do custom actions have default shortcuts assigned?</li>
 <li>Can the editor be navigated only by the keyboard?</li>
-<li>Can certain features be customized through <a href="https://www.jetbrains.com/help/mps/plugin.html#preferencescomponents">preference components</a> &hellip;<ul>
+<li>Can certain features be customized through <a href="https://www.jetbrains.com/help/mps/plugin.html#preferencescomponents">preference components ⧉</a> &hellip;<ul>
 <li>at the project level?</li>
 <li>at the application level?</li>
 </ul>
@@ -1755,15 +1766,15 @@ build fail when there is a model check error and show the failures as normal JUn
 </li>
 <li><em>Aesthetic and minimalist design</em>: Interfaces should not contain irrelevant or rarely needed information. Every extra unit of information in an interface competes with the relevant information units and diminishes their relative visibility.<ul>
 <li>Are editor cells collapsed by default that clutter the editor?</li>
-<li>Are optional parts hidden in the editor? (e.g., by using <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/#grammaroptional">optional cells</a> from the grammar cells language)</li>
+<li>Are optional parts hidden in the editor? (e.g., by using <a href="https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/#grammaroptional">optional cells ⧉</a> from the grammar cells language)</li>
 <li>Is the grouping of content made recognizable without impacting the layout and design? (only spacing, borders, background color, and not everything together)</li>
 <li>Are colors, font weight, underlining text, and other forms of emphasizing content done in moderation?</li>
 </ul>
 </li>
 <li><em>Help users recognize, diagnose, and recover from errors</em>: Express error messages in plain language (no error codes), precisely indicate the problem, and constructively suggest a solution.<ul>
-<li>Read <a href="https://jetbrains.github.io/ui/text/writing_short/">Writing Short and Clear | IntelliJ Platform <abbr title="User Interface">UI</abbr> Guidelines</a> and <a href="https://jetbrains.github.io/ui/text/punctuation/">Punctuation</a></li>
+<li>Read <a href="https://jetbrains.github.io/ui/text/writing_short/">Writing Short and Clear | IntelliJ Platform <abbr title="User Interface">UI</abbr> Guidelines</a> and <a href="https://jetbrains.github.io/ui/text/punctuation/">Punctuation ⧉</a></li>
 <li>Use the model checker to show error messages in the editor.</li>
-<li>Use <a href="https://www.jetbrains.com/help/mps/cookbook-type-system.html#checkingandquick-fixes">quick fixes</a> or <a href="https://www.jetbrains.com/help/mps/mps-intentions.html#regularintentions">error intentions</a> to provide solutions for the error.</li>
+<li>Use <a href="https://www.jetbrains.com/help/mps/cookbook-type-system.html#checkingandquick-fixes">quick fixes</a> or <a href="https://www.jetbrains.com/help/mps/mps-intentions.html#regularintentions">error intentions ⧉</a> to provide solutions for the error.</li>
 </ul>
 </li>
 <li><em>Help and documentation</em>: It’s best if the system doesn’t need additional explanation. However, it may be necessary to provide documentation to help users understand how to complete their tasks.<ul>
@@ -1771,25 +1782,25 @@ build fail when there is a model check error and show the failures as normal JUn
 </ul>
 </li>
 </ul>
-<h3 id="performance-testing"><a href="https://en.wikipedia.org/wiki/Software_performance_testing">Performance testing</a><a class="headerlink" href="#performance-testing" title="Permanent link">&para;</a></h3>
-<h4 id="load-testing"><a href="https://en.wikipedia.org/wiki/Software_load_testing">Load Testing</a><a class="headerlink" href="#load-testing" title="Permanent link">&para;</a></h4>
+<h3 id="performance-testing"><a href="https://en.wikipedia.org/wiki/Software_performance_testing">Performance testing</a><a class="headerlink" href="#performance-testing" title="Permanent link">&para; ⧉</a></h3>
+<h4 id="load-testing"><a href="https://en.wikipedia.org/wiki/Software_load_testing">Load Testing</a><a class="headerlink" href="#load-testing" title="Permanent link">&para; ⧉</a></h4>
 <ul>
 <li>Do bigger models still generate fast enough? Are there any timeouts while generating?</li>
 <li>Do bigger root nodes still render fast enough in the editor?</li>
 <li>When you are using an importer to create nodes: is it fast enough for big input files? Where is the limit? Is a progress bar necessary?</li>
 <li>Does the application load fast enough on startup for many and big models/modules?</li>
 </ul>
-<h4 id="stress-testing"><a href="https://en.wikipedia.org/wiki/Stress_testing_(software)">Stress Testing</a><a class="headerlink" href="#stress-testing" title="Permanent link">&para;</a></h4>
+<h4 id="stress-testing"><a href="https://en.wikipedia.org/wiki/Stress_testing_(software)">Stress Testing</a><a class="headerlink" href="#stress-testing" title="Permanent link">&para; ⧉</a></h4>
 <ul>
 <li>Does the application still work when there is no internet connection? </li>
 <li>What is the maximal size of a model that generates in a timely fashion? Is <a href="../../home/performance/#model-pruning">model pruning</a> needed?</li>
 <li>What happens when you enter the power save mode? Do things like the automatic type system checks and background threads work again when you leave the mode?</li>
 </ul>
-<h4 id="soak-testing"><a href="https://en.wikipedia.org/wiki/Soak_testing">Soak Testing</a><a class="headerlink" href="#soak-testing" title="Permanent link">&para;</a></h4>
+<h4 id="soak-testing"><a href="https://en.wikipedia.org/wiki/Soak_testing">Soak Testing</a><a class="headerlink" href="#soak-testing" title="Permanent link">&para; ⧉</a></h4>
 <ul>
 <li>Does the memory consumption rise after longer use? (memory indicator in the lower right corner) Could there be a memory leak?</li>
 <li>Are all models loaded into memory after some time? (memory indicator). Models are lazily loaded, which means that they are only loaded when they are needed. When all models are loaded, this indicates that the models are probably accessed by accident, for example, through a global find usage search.</li>
-<li>Do suspicious messages appear in the <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory">log file</a>, such as warnings about memory leaks or broken models?</li>
+<li>Do suspicious messages appear in the <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory">log file ⧉</a>, such as warnings about memory leaks or broken models?</li>
 <li>Is memory released after some time, or are not needed objects never garbage collected? Read about Java <abbr title="Java Virtual Machine">JVM</abbr> options on <a href="../../mps_internal/#:~:text=where%20can%20you%20find%20information%20about%20environment%2Fjvm%20variables%20that%20are%20set%20in%20mps%3F">this page</a> if it doesn't happen.</li>
 </ul>
 <h4 id="spike-testing">Spike Testing<a class="headerlink" href="#spike-testing" title="Permanent link">&para;</a></h4>
@@ -1808,56 +1819,56 @@ build fail when there is a model check error and show the failures as normal JUn
 <h2 id="final-words">Final Words<a class="headerlink" href="#final-words" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Given enough eyeballs, all bugs are shallow.</p>
-<p>Eric S. Raymond (<a href="https://www.wikiwand.com/en/Linus%27s_law">Linus's law</a>)</p>
+<p>Eric S. Raymond (<a href="https://www.wikiwand.com/en/Linus%27s_law">Linus's law ⧉</a>)</p>
 </blockquote>
 <p>While it is possible to find many bugs with one or a handful of developers and users, it helps to have a large enough beta-tester and co-developer base
 to get bugs reported and fixed quickly. Sometimes it is good enough when somebody finds a workaround.</p>
 <p>Other times, like in the <abbr title="Meta Programming System">MPS</abbr> platforms, people would never identify some bugs, were there few users and developers using them daily. There are always new unexplored use cases when a new project uses an <abbr title="Meta Programming System">MPS</abbr> platform, and more edge cases are detected when more users test features. While this quote originally referred to open-source projects, this also applies to closed-source projects.</p>
-<h2 id="stack-exchange-software-quality-assurance-testing"><a href="https://sqa.stackexchange.com/">Stack Exchange: Software Quality Assurance &amp; Testing</a><a class="headerlink" href="#stack-exchange-software-quality-assurance-testing" title="Permanent link">&para;</a></h2>
+<h2 id="stack-exchange-software-quality-assurance-testing"><a href="https://sqa.stackexchange.com/">Stack Exchange: Software Quality Assurance &amp; Testing</a><a class="headerlink" href="#stack-exchange-software-quality-assurance-testing" title="Permanent link">&para; ⧉</a></h2>
 <p>These questions on the site Stack Exchange are relevant for <abbr title="Meta Programming System">MPS</abbr> projects where dedicated testers, developers,
 or another team member does the testing.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Tests and testing</label><label for="__tabbed_1_2">Bugs</label><label for="__tabbed_1_3">For developers</label><label for="__tabbed_1_4">For testers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li><a href="https://sqa.stackexchange.com/questions/30734/whats-the-difference-between-a-good-test-and-a-bad-test">What's the difference between a good test and a bad test?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/39246/testing-using-real-data-of-the-customer">Testing using real data from the customer</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/27238/how-do-you-know-if-you-are-writing-high-quality-tests">How do you know if you are writing high-quality tests?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/31934/what-would-be-the-strategy-when-too-many-bugs-are-found-in-the-final-round-of-te">What would be the strategy when too many bugs are found in the final round of testing?</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/30734/whats-the-difference-between-a-good-test-and-a-bad-test">What's the difference between a good test and a bad test? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/39246/testing-using-real-data-of-the-customer">Testing using real data from the customer ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/27238/how-do-you-know-if-you-are-writing-high-quality-tests">How do you know if you are writing high-quality tests? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/31934/what-would-be-the-strategy-when-too-many-bugs-are-found-in-the-final-round-of-te">What would be the strategy when too many bugs are found in the final round of testing? ⧉</a></li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li><a href="https://sqa.stackexchange.com/questions/47630/what-is-your-approach-to-low-priority-bugs">What is your approach to low-priority bugs?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/1920/best-guidelines-for-bug-reporting">Best guidelines for bug reporting?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/7531/what-is-common-practice-for-labels-of-the-bug-severity">What is common practice for labels of the bug severity?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/3226/how-to-isolate-a-bug">How to isolate a bug?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/893/who-is-ultimately-responsible-for-issues-that-are-found-after-software-is-releas">Who is ultimately responsible for issues that are found after the software is released?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/27622/how-should-a-software-tester-deal-with-missed-defects-bugs-in-production">How should a Software Tester deal with missed Defects/bugs in Production?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/5194/should-tester-fix-bugs">Should testers fix bugs?</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/47630/what-is-your-approach-to-low-priority-bugs">What is your approach to low-priority bugs? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/1920/best-guidelines-for-bug-reporting">Best guidelines for bug reporting? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/7531/what-is-common-practice-for-labels-of-the-bug-severity">What is common practice for labels of the bug severity? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/3226/how-to-isolate-a-bug">How to isolate a bug? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/893/who-is-ultimately-responsible-for-issues-that-are-found-after-software-is-releas">Who is ultimately responsible for issues that are found after the software is released? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/27622/how-should-a-software-tester-deal-with-missed-defects-bugs-in-production">How should a Software Tester deal with missed Defects/bugs in Production? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/5194/should-tester-fix-bugs">Should testers fix bugs? ⧉</a></li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li><a href="https://sqa.stackexchange.com/questions/28926/actual-data-for-why-developers-shouldnt-be-the-only-ones-testing-their-code">Actual data for why developers shouldn't be the only ones testing their code?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/423/what-kind-of-testing-should-a-developer-do-before-passing-a-build-to-the-qa-team">What kind of testing should a developer do before passing a build to the QA team?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/17613/how-can-developers-be-assured-that-their-software-is-fault-free">How can developers be assured that their software is fault free?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/28204/how-to-deal-with-flaky-tests-that-have-intermittent-failures">How to deal with flaky tests that have intermittent failures?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/299796/is-it-normal-to-spend-as-much-if-not-more-time-writing-tests-than-actual-code">Is it normal to spend as much, if not more, time writing tests than actual code?</a></li>
-<li><a href="https://softwareengineering.stackexchange.com/questions/139321/how-do-i-review-my-own-code">How do I review my own code?</a>  </li>
+<li><a href="https://sqa.stackexchange.com/questions/28926/actual-data-for-why-developers-shouldnt-be-the-only-ones-testing-their-code">Actual data for why developers shouldn't be the only ones testing their code? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/423/what-kind-of-testing-should-a-developer-do-before-passing-a-build-to-the-qa-team">What kind of testing should a developer do before passing a build to the QA team? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/17613/how-can-developers-be-assured-that-their-software-is-fault-free">How can developers be assured that their software is fault free? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/28204/how-to-deal-with-flaky-tests-that-have-intermittent-failures">How to deal with flaky tests that have intermittent failures? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/299796/is-it-normal-to-spend-as-much-if-not-more-time-writing-tests-than-actual-code">Is it normal to spend as much, if not more, time writing tests than actual code? ⧉</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/139321/how-do-i-review-my-own-code">How do I review my own code? ⧉</a>  </li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li><a href="https://sqa.stackexchange.com/questions/40146/why-is-a-dedicated-qa-team-member-necessary">Why is a dedicated QA team member necessary?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/25034/should-a-tester-feel-bad-about-finding-too-many-defects-bugs-in-the-product">Should a tester feel bad about finding too many defects/bugs in the product?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/28135/what-should-be-reported-when-a-bug-only-happens-50-of-the-time">What should be reported when a bug only happens 50% of the time?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/16640/should-testers-first-discuss-a-bug-with-the-developers-before-writing-a-bug-repo">Should Testers first discuss a bug with the developers before writing a bug report?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/16715/should-qa-report-bugs-on-features-before-they-are-fully-implemented">Should QA report bugs on features before they are fully implemented?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/1610/how-does-a-tester-decide-how-much-debugging-investigation-to-do-before-handing-a">How does a tester decide how much debugging/investigation to do before handing an issue over to development?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/8156/how-can-a-software-tester-use-out-of-the-box-thinking-approach-to-find-more-bu">How can a Software Tester use an "Out of the Box" thinking approach to find more bugs?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/33922/can-knowing-too-much-about-the-tested-code-be-a-disadvantage">Can knowing too much about the tested code be a disadvantage?</a></li>
-<li><a href="https://sqa.stackexchange.com/questions/27962/should-qa-or-tester-mention-the-root-cause-for-a-bug">Should QA or tester mention the root cause for a bug?</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/40146/why-is-a-dedicated-qa-team-member-necessary">Why is a dedicated QA team member necessary? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/25034/should-a-tester-feel-bad-about-finding-too-many-defects-bugs-in-the-product">Should a tester feel bad about finding too many defects/bugs in the product? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/28135/what-should-be-reported-when-a-bug-only-happens-50-of-the-time">What should be reported when a bug only happens 50% of the time? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/16640/should-testers-first-discuss-a-bug-with-the-developers-before-writing-a-bug-repo">Should Testers first discuss a bug with the developers before writing a bug report? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/16715/should-qa-report-bugs-on-features-before-they-are-fully-implemented">Should QA report bugs on features before they are fully implemented? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/1610/how-does-a-tester-decide-how-much-debugging-investigation-to-do-before-handing-a">How does a tester decide how much debugging/investigation to do before handing an issue over to development? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/8156/how-can-a-software-tester-use-out-of-the-box-thinking-approach-to-find-more-bu">How can a Software Tester use an "Out of the Box" thinking approach to find more bugs? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/33922/can-knowing-too-much-about-the-tested-code-be-a-disadvantage">Can knowing too much about the tested code be a disadvantage? ⧉</a></li>
+<li><a href="https://sqa.stackexchange.com/questions/27962/should-qa-or-tester-mention-the-root-cause-for-a-bug">Should QA or tester mention the root cause for a bug? ⧉</a></li>
 </ul>
 </div>
 </div>
@@ -2066,7 +2077,7 @@ or another team member does the testing.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

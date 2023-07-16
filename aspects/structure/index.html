@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1701,8 +1712,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
+        
+        
       
-        <a href="../../tags/#aspect" class="md-tagmaterial/close">aspect</a>
+      
+        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
       
     
   </nav>
@@ -1713,30 +1727,30 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="structure-aspect"><a href="https://www.jetbrains.com/help/mps/structure.html">Structure Aspect</a><a class="headerlink" href="#structure-aspect" title="Permanent link">&para;</a></h1>
+<h1 id="structure-aspect"><a href="https://www.jetbrains.com/help/mps/structure.html">Structure Aspect</a><a class="headerlink" href="#structure-aspect" title="Permanent link">&para; ⧉</a></h1>
 <p>The structure aspect contains all the concept and interface declarations of a language.</p>
 <ul>
-<li><a href="http://dsl-course.org/jetbrains-mps-structure-aspect/">old cheatsheet</a></li>
-<li><a href="https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> features: Link instances</a>(<em>Specific Languages' blog</em>)</li>
+<li><a href="http://dsl-course.org/jetbrains-mps-structure-aspect/">old cheatsheet ⧉</a></li>
+<li><a href="https://specificlanguages.com/posts/2022-05/06-finding-examples-link-instances/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> features: Link instances ⧉</a> (<em>Specific Languages' blog</em>)</li>
 </ul>
-<h2 id="concepts"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Concepts</a><a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
+<h2 id="concepts"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Concepts</a><a class="headerlink" href="#concepts" title="Permanent link">&para; ⧉</a></h2>
 <p>Concept declarations are the main root nodes that you add to this aspect. When you use nodes use concepts from your language, and the language has
 generator configurations, the generator of this language will be invoked by default to transform the languages.</p>
 <div class="admonition question">
 <p class="admonition-title">How can you create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically?</p>
-<p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Concept XY wasn't found in the language.</p>
-<p><a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How do you find examples of <abbr title="Meta Programming System">MPS</abbr> concepts?</p>
-<p><a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">When a concept extends another concept/implements some interfaces, which method is called when they are defined in more than one concepts/interfaces?</p>
-<p>The used algorithm is a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a>(<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068390468198">ClassConcept</a>:
+<p>The used algorithm is a variant of <a href="https://www.wikiwand.com/en/C3_linearization">C3 linearization</a> (<a href="https://github.com/JetBrains/MPS/blob/bbbfb6d8596638d27fc298a784bae09dc78e4d1e/core/aspects/behavior/behavior-api/source/jetbrains/mps/core/aspects/behaviour/AbstractC3StarAncestorResolutionOrder.java#L30">source</a>). When the concept doesn't implement the method itself.  First, the implemented interfaces are recursively considered in declaration order, then the extended concept. You can try it yourself, for example, for the concept <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c895902ca%28jetbrains.mps.baseLanguage.structure%29%2F1068390468198">ClassConcept ⧉</a>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">BehaviorRegistryImpl</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">BehaviorRegistryImpl</span><span class="p">)</span><span class="w"> </span><span class="n">ConceptRegistry</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getBehaviorRegistry</span><span class="p">();</span><span class="w"></span>
@@ -1754,12 +1768,12 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can I assign node IDs manually?</p>
-<p><a href="https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/">Assigning node IDs explicitly</a>(<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/">Assigning node IDs explicitly ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can I find a node by its ID?</p>
 <p>You can write a script on the console to find it. For example:</p>
-<p><a class="glightbox" href="../../img/node_by_id_console.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find nodes on the console by ID" src="../../img/node_by_id_console.png" /></a></p>
+<p><a class="glightbox" href="../images/structure/node_by_id_console.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="find nodes on the console by ID" src="../images/structure/node_by_id_console.png" /></a></p>
 <p>The <em>Navigate</em> main menu also contains an action <em>Go to node by ID</em>.</p>
 </div>
 <div class="admonition question">
@@ -1769,25 +1783,25 @@ If you want to call a specific <code class="highlight"><span class="n">type</spa
 But if I put this code below, it fails with an exception that it cannot perform the cast: <code>((concept&lt;MySuperConcept&gt;) someConcept)</code>
 The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 </blockquote>
-<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152">cast</a> for that. For example:
+<p>There is a <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F1761385620274348152">cast ⧉</a> for that. For example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">concept</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="o">/</span><span class="n">AbstractMethodError</span><span class="o">/</span><span class="p">.</span><span class="na">concept</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">cls</span><span class="p">:</span><span class="n">BaseConcept</span><span class="p">.</span><span class="na">getLanguage</span><span class="p">().</span><span class="na">getQualifiedName</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<h2 id="interfaces"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Interfaces</a><a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
+<h2 id="interfaces"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Interfaces</a><a class="headerlink" href="#interfaces" title="Permanent link">&para; ⧉</a></h2>
 <p>Interfaces work the same way as Java interfaces. They can be used to mark common classes, contain common methods and support the same aspects as
-concepts. A special interface is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept</a>
+concepts. A special interface is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept ⧉</a>
 that defines the name of nodes when a concept implements it.</p>
 <div class="admonition warning">
-<p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors</a>, but the node still contains errors.</p>
-<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr></a> has some more information.</p>
+<p class="admonition-title">The concept implements <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F3393165121846091587">ISuppressErrors ⧉</a>, but the node still contains errors.</p>
+<p>You have to implement <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F2216760464199502422">IDontApplyTypesystemRules</a> and <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F5831887615299457091">ISkipConstraintsChecking</a>. <a href="https://www.jetbrains.com/help/mps/suppressing-errors.html">Suppressing Errors | <abbr title="Meta Programming System">MPS</abbr> ⧉</a> has some more information.</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">What's <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass</a> used for?</p>
-<p>It allows to execute Base Language code. <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code</a> contains an example.</p>
+<p class="admonition-title">What's <a href="http://127.0.0.1:63320/node?ref=r%3Afa713d69-08ea-4732-b1f2-cb07f9e103ef%28jetbrains.mps.execution.util.structure%29%2F4666195181811081429">IMainClass ⧉</a> used for?</p>
+<p>It allows to execute Base Language code. <a href="https://www.jetbrains.com/help/mps/shapes-an-introductory-mps-tutorial.html#runningthecode">Shapes tutorial - Running the code ⧉</a> contains an example.</p>
 </div>
-<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/structure.html#properties">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h2 id="properties"><a href="https://www.jetbrains.com/help/mps/structure.html#properties">Properties</a><a class="headerlink" href="#properties" title="Permanent link">&para; ⧉</a></h2>
 <p>You can use properties to save data in the model using primitive types, enumerations or regular expressions. <em>string</em> is
 also considered a primitive type. Think twice before you use this type. Users can type anything as a value if you don't
 at a constraint to this property.</p>
@@ -1804,16 +1818,16 @@ migration is possible, users might even have to change their models manually.</p
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can properties be overridden?</p>
-<p>No, <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143</a> contains more information.</p>
+<p>No, <a href="https://youtrack.jetbrains.com/issue/MPS-17143"><abbr title="Meta Programming System">MPS</abbr>-17143 ⧉</a> contains more information.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How to get the name of a concept property?</p>
-<p>The easiest way to do this is via <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080">PropertyIdRefExpression</a>. Then you can directly reference the property in question like this:
+<p>The easiest way to do this is via <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590301%28jetbrains.mps.lang.smodel.structure%29%2F2644386474302386080">PropertyIdRefExpression ⧉</a>. Then you can directly reference the property in question like this:
 <code>property/MyConcept : myProperty/.getName()</code>
 With this implementation, every property name change is calculated correctly.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </div>
-<h2 id="references"><a href="https://www.jetbrains.com/help/mps/structure.html#references">References</a><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references"><a href="https://www.jetbrains.com/help/mps/structure.html#references">References</a><a class="headerlink" href="#references" title="Permanent link">&para; ⧉</a></h2>
 <p>To refer to other nodes in the model, use references. They have a scope and can be automatically created (smart references)
 for nodes that have a name. References that are <abbr title="output">out</abbr> of scopes still work, they are part of the model and are affected by
 generation. As the name it implies, they only reference nodes which means that the referenced node or property won't change when
@@ -1853,7 +1867,7 @@ delete them.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2051,7 +2065,7 @@ delete them.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

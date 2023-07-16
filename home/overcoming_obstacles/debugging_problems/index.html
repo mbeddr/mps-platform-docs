@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1704,8 +1715,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="debugging-problems"><a href="https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems">Debugging Problems</a><a class="headerlink" href="#debugging-problems" title="Permanent link">&para;</a></h1>
-<p>Different kinds of problems can occur in <abbr title="Meta Programming System">MPS</abbr>. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., <a href="../../../platform_essentials/accessing_the_project/">accessing a project instance</a> from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces, run code on the MSP console, or use <a href="https://specificlanguages.com/articles/debugging/">remote debugging</a>.</p>
+<h1 id="debugging-problems"><a href="https://pythonprinciples.com/blog/getting-unstuck/#debugging-problems">Debugging Problems</a><a class="headerlink" href="#debugging-problems" title="Permanent link">&para; ⧉</a></h1>
+<p>Different kinds of problems can occur in <abbr title="Meta Programming System">MPS</abbr>. Some of them are bugs that you have to fix. Other issues might be unfixable or caused by an unusual approach to tackling a problem (e.g., <a href="../../../platform_essentials/accessing_the_project/">accessing a project instance</a> from unsupported places). For debugging purposes, you can add log statements to the code, execute tests, analyze stack traces, run code on the MSP console, or use <a href="https://specificlanguages.com/articles/debugging/">remote debugging ⧉</a>.</p>
 <h2 id="deal-with-errors">Deal With Errors<a class="headerlink" href="#deal-with-errors" title="Permanent link">&para;</a></h2>
 <p>Error messages come in all forms and sizes and can appear in different places. While some error messages can be ignored
 because users can't face them easily, for example, class loading issues when reloading modules, most error messages shouldn't
@@ -1713,19 +1724,19 @@ be ignored. As a developers, the most import part is navigating to the code whic
 trace. In the worst cast scenario, you must find the text of the error message in the sources of the offending project, to
 figure <abbr title="output">out</abbr> what's going on.</p>
 <h3 id="errors-in-the-editor">Errors in the Editor<a class="headerlink" href="#errors-in-the-editor" title="Permanent link">&para;</a></h3>
-<p>Those errors (red squiggly lines) are caused by <a href="https://www.jetbrains.com/help/mps/typesystem.html#checkingrules">checking rules</a> or type system rules.
+<p>Those errors (red squiggly lines) are caused by <a href="https://www.jetbrains.com/help/mps/typesystem.html#checkingrules">checking rules ⧉</a> or type system rules.
 Right-click the offending cell in the editor &rarr; <em>Language Debug</em> &rarr; <em>Go to Rule Which Caused Error</em> to navigate to the statement that causes the error.
-When calculating a type fails, the <a href="https://www.jetbrains.com/help/mps/typesystem.html#type-system,trace">type system trace</a> can be helpful. The same debug menu also contains a <em>Show Type</em> entry showing the computed type. Most of the time, using this action and understanding the type system check is more straightforward than using the tracing tool.</p>
+When calculating a type fails, the <a href="https://www.jetbrains.com/help/mps/typesystem.html#type-system,trace">type system trace ⧉</a> can be helpful. The same debug menu also contains a <em>Show Type</em> entry showing the computed type. Most of the time, using this action and understanding the type system check is more straightforward than using the tracing tool.</p>
 <h3 id="ide-fatal-errors"><abbr title="Integrated Development Environment">IDE</abbr> Fatal Errors<a class="headerlink" href="#ide-fatal-errors" title="Permanent link">&para;</a></h3>
 <p>You can find fatal errors by clicking on the error icon in the bottom right corner of the window.</p>
-<p><a class="glightbox" href="../../../img/home/ide_fatal_errors.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IDE fatal errors" src="../../../img/home/ide_fatal_errors.png" /></a></p>
-<p>This dialog contains exceptions your language, <abbr title="Meta Programming System">MPS</abbr> platforms, or <abbr title="Meta Programming System">MPS</abbr> itself might cause. In the provided example, the source of the error is deceptive: the plugin that contains the exception is <abbr title="Meta Programming System">MPS</abbr> core, but looking at the package name, we see that the exception comes from <a href="https://jetbrains.github.io/MPS-extensions/extensions/other/shadow-models/">Shadow Models</a>.
+<p><a class="glightbox" href="../images/ide_fatal_errors.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IDE fatal errors" src="../images/ide_fatal_errors.png" /></a></p>
+<p>This dialog contains exceptions your language, <abbr title="Meta Programming System">MPS</abbr> platforms, or <abbr title="Meta Programming System">MPS</abbr> itself might cause. In the provided example, the source of the error is deceptive: the plugin that contains the exception is <abbr title="Meta Programming System">MPS</abbr> core, but looking at the package name, we see that the exception comes from <a href="https://jetbrains.github.io/MPS-extensions/extensions/other/shadow-models/">Shadow Models ⧉</a>.
 If you need help determining where an error comes from, look at the page <a href="../../../reference/issue_trackers/">issue trackers</a>. Only report the error to the JetBrains <abbr title="Meta Programming System">MPS</abbr> Tracker if <abbr title="Meta Programming System">MPS</abbr> causes the exception. To analyze the exception, open the error dialog and copy the message. Then click in the main menu on <em>Analyze</em> &rarr; <em>Analyze Stack Trace</em> and press <em>ok</em>.
 The run window will display the stack trace. It also provides links to the corresponding sources for lines where it is available.</p>
-<h3 id="errors-in-the-log-file">Errors in the <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory">Log File</a><a class="headerlink" href="#errors-in-the-log-file" title="Permanent link">&para;</a></h3>
+<h3 id="errors-in-the-log-file">Errors in the <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory">Log File</a><a class="headerlink" href="#errors-in-the-log-file" title="Permanent link">&para; ⧉</a></h3>
 <p>Log statements, <abbr title="Meta Programming System">MPS</abbr> platforms, <abbr title="Meta Programming System">MPS</abbr>, and the IntelliJ platform can write error messages to this file. You can fix many exceptions quickly if they don't come from your languages, but sometimes they can still contain valuable hints. Example: When the startup's automatic module maker fails, only the error tooltip shows only the number of errors and warnings. The error log contains the exact stack trace. This file also saves messages about unloadable models.</p>
 <h3 id="the-editor-cant-be-rendered">The Editor Can’t Be Rendered<a class="headerlink" href="#the-editor-cant-be-rendered" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../img/home/error_creating_editor_cell.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="error creating editor cell" src="../../../img/home/error_creating_editor_cell.png" /></a></p>
+<p><a class="glightbox" href="../images/error_creating_editor_cell.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="error creating editor cell" src="../images/error_creating_editor_cell.png" /></a></p>
 <p>When the editor can't create an editor cell, the stack trace can be analyzed by clicking on <em>Stacktrace</em>. Editor-related exceptions can have more severe consequences than other exceptions like fatal errors: in the worst-case scenario, you can't open the editor, or <abbr title="Meta Programming System">MPS</abbr> freezes completely. When this happens, locate the <abbr title="Meta Programming System">MPS</abbr> module that causes the freeze in your local file explorer, delete the <em>_gen</em> folders so that <abbr title="Meta Programming System">MPS</abbr> can't load the module, and restart. Now the module is not active anymore, and you can start debugging. The same approach works for application and project plugins that crash the <abbr title="Meta Programming System">MPS</abbr> instance. If your language does not cause the exception, please report the issue to the language's developer.</p>
 <h2 id="dealing-with-wrong-outputs">Dealing With Wrong Outputs<a class="headerlink" href="#dealing-with-wrong-outputs" title="Permanent link">&para;</a></h2>
 <p>Wrong outputs can occur in many places:</p>
@@ -1735,9 +1746,9 @@ The run window will display the stack trace. It also provides links to the corre
 <li>A checking rule shows null instead of the expected message.</li>
 <li>A generator generates the wrong output.</li>
 </ul>
-<p>The list goes on. Most of those cases can be checked automatically with the <a href="https://www.jetbrains.com/help/mps/testing-languages.html">testing languages</a>. The <a href="https://www.jetbrains.com/help/mps/testing-languages.html#quicknavigationtable">quick navigation table</a> provides information on how to test certain
+<p>The list goes on. Most of those cases can be checked automatically with the <a href="https://www.jetbrains.com/help/mps/testing-languages.html">testing languages</a>. The <a href="https://www.jetbrains.com/help/mps/testing-languages.html#quicknavigationtable">quick navigation table ⧉</a> provides information on how to test certain
 language aspects.</p>
-<p>There are generator tests for generators, but they are often not fine-grained enough because you usually want to partly compare models and ignore specific children, properties, or references. An alternative approach is to <a href="http://127.0.0.1:8000/mps-platform-docs/platform_essentials/mpsutils/generator/">invoke the generator yourself</a> and compare the structure of the input and output model with your asserts. If the command line doesn't run the tests, it is possible to show differences between nodes graphically through:
+<p>There are generator tests for generators, but they are often not fine-grained enough because you usually want to partly compare models and ignore specific children, properties, or references. An alternative approach is to <a href="http://127.0.0.1:8000/mps-platform-docs/platform_essentials/mpsutils/generator/">invoke the generator yourself ⧉</a> and compare the structure of the input and output model with your asserts. If the command line doesn't run the tests, it is possible to show differences between nodes graphically through:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w"> </span><span class="n">StructDifferenceDialog</span><span class="p">.</span><span class="na">showNodeDifference</span><span class="p">(</span><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">),</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">        </span><span class="n">oldNode</span><span class="p">,</span><span class="w"> </span><span class="n">newNode</span><span class="p">,</span><span class="w"> </span><span class="n">oldTitle</span><span class="p">,</span><span class="w"> </span><span class="n">newTitle</span><span class="p">)</span><span class="w"></span>
@@ -1749,7 +1760,7 @@ language aspects.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -1947,7 +1958,7 @@ language aspects.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

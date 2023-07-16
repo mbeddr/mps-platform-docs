@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1527,28 +1538,43 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <nav class="md-tags" >
     
       
-      
-        <a href="../../tags/#windows" class="md-tagmaterial/close">windows</a>
-      
-    
+        
+        
       
       
-        <a href="../../tags/#mac" class="md-tagmaterial/close">mac</a>
+        <a href="../../tags/#windows" class="md-tag md-tag-icon">windows</a>
       
     
       
-      
-        <a href="../../tags/#linux" class="md-tagmaterial/close">linux</a>
-      
-    
+        
+        
       
       
-        <a href="../../tags/#bugs" class="md-tagmaterial/close">bugs</a>
+        <a href="../../tags/#mac" class="md-tag md-tag-icon">mac</a>
       
     
       
+        
+        
       
-        <a href="../../tags/#native" class="md-tagmaterial/close">native</a>
+      
+        <a href="../../tags/#linux" class="md-tag md-tag-icon">linux</a>
+      
+    
+      
+        
+        
+      
+      
+        <a href="../../tags/#bugs" class="md-tag md-tag-icon">bugs</a>
+      
+    
+      
+        
+        
+      
+      
+        <a href="../../tags/#native" class="md-tag md-tag-icon">native</a>
       
     
   </nav>
@@ -1571,21 +1597,21 @@ ensure everybody uses the same versions to not have to deal with sometimes odd e
 <p>Based on the market share, you can assume that users and especially end users are Windows users. While it make sense in
 some companies to only focus on Windows, and use Windows-specific code, please consider the possibility that
 there might be other users in the future. Many <abbr title="Meta Programming System">MPS</abbr> developers also use macOS. In other words: Don't use Windows fonts in the editor and deal with file paths
-in a <a href="https://www.baeldung.com/java-file-vs-file-path-separator">generic way</a>. Various file systems also handle permissions and case sensitivity
+in a <a href="https://www.baeldung.com/java-file-vs-file-path-separator">generic way ⧉</a>. Various file systems also handle permissions and case sensitivity
 differently. If you have the change, test your languages on multiple platforms.</p>
 <div class="admonition failure">
 <p class="admonition-title">Compilation from the command line might fail due to none ASCII chars.</p>
 <p>The error message looks something like this:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>[generate] NewLanguage\behavior\rtzj__BehaviorDescriptor.java : Invalid character constant (line: 27) 
 </code></pre></div></td></tr></table></div>
-If this happens, set the environment variable <em>JAVA_TOOL_OPTIONS</em> to <code class="highlight"><span class="na">-Dfile.encoding</span><span class="o">=</span><span class="s">UTF8</span><span class="w"></span></code> (<a href="https://youtrack.jetbrains.com/issue/MPS-23526"><abbr title="Meta Programming System">MPS</abbr>-23526</a>).</p>
+If this happens, set the environment variable <em>JAVA_TOOL_OPTIONS</em> to <code class="highlight"><span class="na">-Dfile.encoding</span><span class="o">=</span><span class="s">UTF8</span><span class="w"></span></code> (<a href="https://youtrack.jetbrains.com/issue/MPS-23526"><abbr title="Meta Programming System">MPS</abbr>-23526 ⧉</a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Tests are failing with a message that a filename or extension is too long (Windows).</p>
 <p>The error message looks like this: <code>Caused by: java.io.IOException: CreateProcess error=206, The filename or extension is too long</code>.
 It can also look like this: <code>Process fork failed.</code>
 There is a path that is too long for Windows in the build script. 
-Choose the option <em>compressArgs</em> in the <em>test modules</em> node to fix the issue (<a href="https://youtrack.jetbrains.com/issue/MPS-24137"><abbr title="Meta Programming System">MPS</abbr>-24137</a>).</p>
+Choose the option <em>compressArgs</em> in the <em>test modules</em> node to fix the issue (<a href="https://youtrack.jetbrains.com/issue/MPS-24137"><abbr title="Meta Programming System">MPS</abbr>-24137 ⧉</a>).</p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">Cannot run <abbr title="Meta Programming System">MPS</abbr>.bat on Windows 10/11.</p>
@@ -1594,42 +1620,42 @@ The Link target should look like this: <code>C:\Windows\System32\WindowsPowerShe
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/HeikoBecker" title="GitHub User: HeikoBecker">@HeikoBecker</a><sub></p>
 </div>
 <h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h2>
-<p>You might run into issues with newer macOS versions. One of them is <a href="https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution">notarizing macOS software before distribution</a> which is not supported by the <a href="https://github.com/mbeddr/mps-gradle-plugin/issues/99">mps-gradle-plugin</a>. There were also changes introduced with the M1 chips (new architecture: arm64). <abbr title="Meta Programming System">MPS</abbr> already provides additional downloads for the latest Macs (.dmg Apple Silicon). The commit can be found <a href="https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2">here</a>. If you want to provide your own <abbr title="Rich Client Platform">RCP</abbr>, you might want to look at this commit. A separate version of <abbr title="JetBrains Runtime">JBR</abbr> called jbr-osx-aarch64 might also be needed.</p>
+<p>You might run into issues with newer macOS versions. One of them is <a href="https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution">notarizing macOS software before distribution</a> which is not supported by the <a href="https://github.com/mbeddr/mps-gradle-plugin/issues/99">mps-gradle-plugin</a>. There were also changes introduced with the M1 chips (new architecture: arm64). <abbr title="Meta Programming System">MPS</abbr> already provides additional downloads for the latest Macs (.dmg Apple Silicon). The commit can be found <a href="https://github.com/JetBrains/MPS/commit/f2760552e00d2e58dc0d8f23747c68efdf86b3a2">here ⧉</a>. If you want to provide your own <abbr title="Rich Client Platform">RCP</abbr>, you might want to look at this commit. A separate version of <abbr title="JetBrains Runtime">JBR</abbr> called jbr-osx-aarch64 might also be needed.</p>
 <div class="admonition question">
 <p class="admonition-title">How do I get my defined environment variables?</p>
 <p>Execute <code>printenv</code> on a shell.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Using <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.datepicker</ins> doesn't work when the Look and Feel is set to macOS Light.</p>
-<p>Use the default light theme. There is no other workaround at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-3388"><abbr title="Meta Programming System">MPS</abbr>-3388</a>, <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">MBEDDR-2203</a>).</p>
+<p>Use the default light theme. There is no other workaround at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-3388"><abbr title="Meta Programming System">MPS</abbr>-3388</a>, <a href="https://github.com/mbeddr/mbeddr.core/issues/2203">MBEDDR-2203 ⧉</a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Can't find TBItem with uid 'XY'.</p>
-<p>This is an issue with MacBook Pros with touch bars. No workaround at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-31728"><abbr title="Meta Programming System">MPS</abbr>-31728</a>).</p>
+<p>This is an issue with MacBook Pros with touch bars. No workaround at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-31728"><abbr title="Meta Programming System">MPS</abbr>-31728 ⧉</a>).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">What other active bugs are there?</p>
 <ul>
-<li>Standalone application: impossible to define application icon (<a href="https://youtrack.jetbrains.com/issue/MPS-32971"><abbr title="Meta Programming System">MPS</abbr>-32971</a>)</li>
+<li>Standalone application: impossible to define application icon (<a href="https://youtrack.jetbrains.com/issue/MPS-32971"><abbr title="Meta Programming System">MPS</abbr>-32971 ⧉</a>)</li>
 </ul>
 </div>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
 <div class="admonition failure">
 <p class="admonition-title">Autocompleting doesn't work with <abbr title="Meta Programming System">MPS</abbr> + i3 (Linux window manager).</p>
-<p>No solution at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-30499"><abbr title="Meta Programming System">MPS</abbr>-30499</a>).</p>
+<p>No solution at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-30499"><abbr title="Meta Programming System">MPS</abbr>-30499 ⧉</a>).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The completion menu appears on the wrong screen in a multi-monitor setup (Linux+i3).</p>
-<p>No solution at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-33689"><abbr title="Meta Programming System">MPS</abbr>-33689</a>).</p>
+<p>No solution at the moment (<a href="https://youtrack.jetbrains.com/issue/MPS-33689"><abbr title="Meta Programming System">MPS</abbr>-33689 ⧉</a>).</p>
 </div>
 <h2 id="native-crashes">Native Crashes<a class="headerlink" href="#native-crashes" title="Permanent link">&para;</a></h2>
 <p>Native crashes are crashes where <abbr title="Meta Programming System">MPS</abbr> crashes internally (C/C++ code), and an error dialog is shown. First, search the following Youtrack projects:</p>
 <ul>
-<li><a href="https://youtrack.jetbrains.com/issues/MPS"><abbr title="Meta Programming System">MPS</abbr></a>: <abbr title="Meta Programming System">MPS</abbr>-related crashes</li>
-<li><a href="https://youtrack.jetbrains.com/issues/IDEA">IntelliJ IDEA</a>: IntelliJ platform-related crashes</li>
-<li><a href="https://youtrack.jetbrains.com/issues/JBR">JetBrains Runtime</a>: mostly <abbr title="User Interface">UI</abbr> and <abbr title="Java Chromium Embedded Framework">JCEF</abbr>-related issues</li>
+<li><a href="https://youtrack.jetbrains.com/issues/MPS"><abbr title="Meta Programming System">MPS</abbr> ⧉</a>: <abbr title="Meta Programming System">MPS</abbr>-related crashes</li>
+<li><a href="https://youtrack.jetbrains.com/issues/IDEA">IntelliJ IDEA ⧉</a>: IntelliJ platform-related crashes</li>
+<li><a href="https://youtrack.jetbrains.com/issues/JBR">JetBrains Runtime ⧉</a>: mostly <abbr title="User Interface">UI</abbr> and <abbr title="Java Chromium Embedded Framework">JCEF</abbr>-related issues</li>
 </ul>
-<p>For crashes on macOS, have a look at <a href="https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes">Identifying the Cause of Common Crashes | developer.apple.<abbr title="commercial/common/communication">com</abbr></a>.</p>
+<p>For crashes on macOS, have a look at <a href="https://developer.apple.com/documentation/xcode/identifying-the-cause-of-common-crashes">Identifying the Cause of Common Crashes | developer.apple.<abbr title="commercial/common/communication">com</abbr> ⧉</a>.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1834,7 +1860,7 @@ The Link target should look like this: <code>C:\Windows\System32\WindowsPowerShe
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>

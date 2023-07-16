@@ -37,6 +37,17 @@
       
       
 
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag--beginner{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
     
     
       
@@ -1816,7 +1827,7 @@ can rather be convenient for special use cases.</p>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.dataflow</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr>-DF is a dataflow extension for <abbr title="Meta Programming System">MPS</abbr>. <abbr title="Meta Programming System">MPS</abbr> partly includes the code of this project. Please visit the following page for more information:</p>
-<p><a href="https://szabta89.github.io/projects/df.html">An Extensible Framework for Variable-precision Dataflow Analyses in <abbr title="Meta Programming System">MPS</abbr> | Tamás Szabó</a></p>
+<p><a href="https://szabta89.github.io/projects/df.html">An Extensible Framework for Variable-precision Dataflow Analyses in <abbr title="Meta Programming System">MPS</abbr> | Tamás Szabó ⧉</a></p>
 <h2 id="default-values-for-properties">Default Values for Properties<a class="headerlink" href="#default-values-for-properties" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.propertydefault</ins></p>
@@ -1855,10 +1866,10 @@ The default value can be set by invoking the code completion on an existing prop
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.extensionclass</ins></p>
 </blockquote>
-<p><abbr title="Meta Programming System">MPS</abbr> already provides a language for <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">defining extension methods</a>, for example, methods to be called on an object without being part of the Object's class. This language extends this mechanism to provide all static methods of a class as extension methods. You can invoke them on the type of the method's first parameter.</p>
-<p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass</a> root node. Reference the Java class containing the static methods. Add method annotations to overwrite parameter names so that they're more elaborate than "p0" or "p2".</p>
+<p><abbr title="Meta Programming System">MPS</abbr> already provides a language for <a href="https://www.jetbrains.com/help/mps/type-extension-methods.html">defining extension methods ⧉</a>, for example, methods to be called on an object without being part of the Object's class. This language extends this mechanism to provide all static methods of a class as extension methods. You can invoke them on the type of the method's first parameter.</p>
+<p>Import the language and create a new <a href="http://127.0.0.1:63320/node?ref=r%3Aea8e2f7a-cc5b-4bf7-a282-46a98c41b7b5%28com.mbeddr.mpsutil.extensionclass.structure%29%2F5712676642252469509">ExtensionClass ⧉</a> root node. Reference the Java class containing the static methods. Add method annotations to overwrite parameter names so that they're more elaborate than "p0" or "p2".</p>
 <p>As a starting point, create a dependency to the model <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.extensionclass.annotation.apache.commons.lang3</ins>, which provides extension methods with valuable parameter names for Apache Commons StringUtils, ObjectUtils, and StringEscapeUtils.</p>
-<p><a class="glightbox" href="../../images/extensionclass_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: extension class" src="../../images/extensionclass_example.png" /></a></p>
+<p><a class="glightbox" href="../images/extensionclass_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: extension class" src="../images/extensionclass_example.png" /></a></p>
 <h2 id="language-plugin-extensions">Language Plugin Extensions<a class="headerlink" href="#language-plugin-extensions" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.<abbr title="language">lang</abbr>.plugin.extensions</ins></p>
@@ -1872,20 +1883,20 @@ The default value can be set by invoking the code completion on an existing prop
 <p>This language is an extension of the <em>parameterized</em> transformation language part. When used as a menu part of it, it allows
 iterating over the parameter object (<em>parameterizable parameterized</em> menu part) or creating a dynamic submenu based on
 the parameter object (<em>parameterized submenu</em>).</p>
-<p><a class="glightbox" href="../../images/ccmenu_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example:ccmenu" src="../../images/ccmenu_example.png" /></a></p>
-<p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling</a> instead.</p>
+<p><a class="glightbox" href="../images/ccmenu_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example:ccmenu" src="../images/ccmenu_example.png" /></a></p>
+<p>For completion styling and item priorities, use <a href="https://blog.jetbrains.com/mps/2019/04/jetbrains-mps-2019-1-custom-style-for-completion-menu-static-methods-in-baselanguage-custom-ui-themes-and-more/#Custom_style_and_priority_of_completion_items_Client_Sponsored">completion styling ⧉</a> instead.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.resources</ins></p>
 </blockquote>
-<p>This language extends <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. The class <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable</a> supports specifying the font style (plain, bold, italic), font family, and offsets for the text.</p>
+<p>This language extends <ins>jetbrains.mps.<abbr title="language">lang</abbr>.resources</ins> by providing more customizations. <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F8062515945409215260">CircleCustomizable</a> adds support for drawing the circle with a different thickness. The class <a href="http://127.0.0.1:63320/node?ref=r%3A3a350e23-1ecf-4b26-b501-4772d34dff84%28com.mbeddr.mpsutil.resources.structure%29%2F4984484659274609509">TextCustomizable ⧉</a> supports specifying the font style (plain, bold, italic), font family, and offsets for the text.</p>
 <h2 id="suppress-warning">Suppress Warning<a class="headerlink" href="#suppress-warning" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.suppresswarning</ins></p>
 </blockquote>
 <p>This language allows attaching an annotation to nodes to deactivate all or specific type system warnings by invoking the intention <code>Toggle Suppress Warnings</code>. You can suppress different kinds of warnings:</p>
 <ul>
-<li><a href="http://127.0.0.1:63320/node?ref=r%3Ad5deda81-7a35-4c2b-bda1-1fdc1db99e3b%28com.mbeddr.mpsutil.suppresswarning.structure%29%2F9116320848000879251">all</a>: Suppress all warnings.</li>
+<li><a href="http://127.0.0.1:63320/node?ref=r%3Ad5deda81-7a35-4c2b-bda1-1fdc1db99e3b%28com.mbeddr.mpsutil.suppresswarning.structure%29%2F9116320848000879251">all ⧉</a>: Suppress all warnings.</li>
 </ul>
 <p>In <ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.core.modules</ins>, two more data flow-related kinds exist:</p>
 <ul>
@@ -1899,28 +1910,28 @@ the parameter object (<em>parameterized submenu</em>).</p>
 <div class="admonition warning">
 <p class="admonition-title">This language doesn't work anymore.</p>
 </div>
-<p>This language modifies the different type system concepts, such as comparison rules or non-type system rules to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem</a> into a type-system aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens the <code>Type System Performance Data</code> tool. It shows the collected information.</p>
+<p>This language modifies the different type system concepts, such as comparison rules or non-type system rules to collect information about the runtime execution time. To use it, place an instance of <a href="http://127.0.0.1:63320/node?ref=2e589a6f-51c3-423f-8ea2-0d769a5cc288%2Fr%3Ac1f6b4a3-d5ba-4a16-9105-fec55e3ea263%28com.mbeddr.mpsutil.typsystem.trace%2Fcom.mbeddr.mpsutil.typsystem.trace.structure%29%2F5632795803933258786">TraceTypesystem ⧉</a> into a type-system aspect to include the generator of this language and set the <em>enabled</em> flag to true. The model contains a new action <code>Benchmark Typesystem</code> that opens the <code>Type System Performance Data</code> tool. It shows the collected information.</p>
 <h2 id="xml-fix">XML Fix<a class="headerlink" href="#xml-fix" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.xml.fix</ins></p>
 </blockquote>
-<p>This language contains fixes for the <a href="https://www.jetbrains.com/help/mps/xml-language.html">XML language</a>. It <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.3/org/apache/commons/lang3/StringEscapeUtils.html#escapeXml10(java.lang.String)">escapes XMl values</a> for XML 1.0/1.1.</p>
+<p>This language contains fixes for the <a href="https://www.jetbrains.com/help/mps/xml-language.html">XML language</a>. It <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-3.3/org/apache/commons/lang3/StringEscapeUtils.html#escapeXml10(java.lang.String)">escapes XMl values ⧉</a> for XML 1.0/1.1.</p>
 <h2 id="unique-names">Unique Names<a class="headerlink" href="#unique-names" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.uniquenames</ins></p>
 </blockquote>
 <p><abbr title="Meta Programming System">MPS</abbr> references all nodes by their <abbr title="identification/identifier">id</abbr>, not their name. Still, humans see only the name, which might be ambiguous. Activate the unique names hint in the <abbr title="Meta Programming System">MPS</abbr> Preferences &rarr; Editor Hints. It shows as much of the full qualified name as required, rendering it unique.</p>
 <p>Example concept:</p>
-<p><a class="glightbox" href="../../images/uniquenames_concept_plain.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: unique names in concept declaration" src="../../images/uniquenames_concept_plain.png" /></a></p>
+<p><a class="glightbox" href="../images/uniquenames_concept_plain.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: unique names in concept declaration" src="../images/uniquenames_concept_plain.png" /></a></p>
 <p>Example Base Language:</p>
-<p><a class="glightbox" href="../../images/uniquenames_class_unique.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: unique names in Base Language" src="../../images/uniquenames_class_unique.png" /></a></p>
+<p><a class="glightbox" href="../images/uniquenames_class_unique.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example: unique names in Base Language" src="../images/uniquenames_class_unique.png" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
     
   </small>
@@ -2118,7 +2129,7 @@ the parameter object (<em>parameterized submenu</em>).</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>
