@@ -3,11 +3,9 @@ title: Constraints Aspect
 tags:
 - aspect
 ---
-# Constraints Aspect
+# [Constraints Aspect](https://www.jetbrains.com/help/mps/constraints.html)
 
 The constraints aspect defines constraints for the concepts of the language.
-
-- [official documentation](https://www.jetbrains.com/help/mps/constraints.html)
 
 ## General
 

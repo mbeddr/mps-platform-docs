@@ -4,13 +4,12 @@ tags:
 - aspect
 ---
 
-# Migration Aspect
+# [Migration Aspect](https://www.jetbrains.com/help/mps/migrations.html)
 
 > To nicely support language evolution, migrations automatically upgrade client code to use the latest version of a language or multiple languages.
 >
 > — <cite>MPS documentation</cite>
 
-- [official documentation](https://www.jetbrains.com/help/mps/migrations.html)
 - [MPS, Feature Branches and Language Migrations: DOs and DON’Ts](https://languageengineering.io/mps-feature-branches-language-migrations-dos-and-donts-bbce593eee4d)(languageengineering.io)
 - [Preparing migrations with Git rebase](https://specificlanguages.com/posts/2022-05/27-preparing-migrations-with-git-rebase/){{ blog('sl') }}
 - [Checking for pending migrations](https://specificlanguages.com/posts/2022-05/02-checking-for-pending-){{ blog('sl') }}

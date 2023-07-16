@@ -4,11 +4,10 @@ tags:
 - aspect
 ---
 
-# Behavior Aspect
+# [Behavior Aspect](https://www.jetbrains.com/help/mps/behavior.html)
 
 The behavior aspect can be used for defining methods for the concepts of the language.
 
-- [official documentation](https://www.jetbrains.com/help/mps/behavior.html)
 
 !!! question "Can you use asynchronous code in behavior methods such as calling external tools?"
 

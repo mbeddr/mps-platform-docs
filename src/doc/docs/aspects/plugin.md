@@ -4,7 +4,7 @@ tags:
 - aspect
 ---
 
-# Plugin Aspect
+# [Plugin Aspect](https://www.jetbrains.com/help/mps/plugin.html)
 
 > Plugins are a way to integrate your code with the MPS IDE functionality.
 >
