@@ -45,7 +45,9 @@ generator configurations, the generator of this language will be invoked by defa
 
 !!! question "How can I assign node IDs manually?"
 
-    [Assigning node IDs explicitly](https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/){{ blog('sl') }}
+    Read [Assigning node IDs explicitly](https://specificlanguages.com/posts/2022-05/11-assigning-node-ids-explicitly/){{ blog('sl') }}.
+    
+    The same principal applies to model IDs. The regular model IDs that MPS generate are instances of RegularSModelId and are based on [UUIDs](https://www.baeldung.com/java-uuid) (using an optional suffix). They are globally unique. There is also an integer-based solution (IntegerSModelId) where the IDs are not globally unique. They are used, for example, for various descriptor models.
 
 !!! question "Can I find a node by its ID?"
 

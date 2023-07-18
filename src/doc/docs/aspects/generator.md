@@ -20,16 +20,13 @@ alias: generator_aspect
 
 !!! question "Can you invoke the generator from an external tool?"
 
-    Yes, it can be run from Ant.
+    Yes, it can be run from Ant. Build your build solution in MPS and execute the targets *clean*, *generate* and *assemble* 
+    to build the languages. To run the tests, also execute *check*. The [mps-gradle.plugin](https://github.com/mbeddr/mps-gradle-plugin) is capable of [running those targets](https://github.com/mbeddr/mps-gradle-plugin#runantscript) in Gradle.
 
 !!! question "How can you copy the output to another location?"
 
     Use the [@CopyOutcome](http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F12232831069847415239) annotation.
-
-!!! question "How do I obtain a temporary model?"
-
-    Use the class [TemporaryModels](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.tempmodel%28MPS.Core%2F%29%2F%7ETemporaryModels).
-
+    
 ??? question "Which variable names aren't available because they are used in the generator?"
 
     ^^Underlined^^ variables are specific variables that are available.
@@ -292,6 +289,16 @@ the *Compile in MPS* flag in a solution if the compilation doesn't start.
         }
     );
     ```
+
+!!! question "How can you introduce utility methods for a generator, for example, a pre-processing script?"
+
+    - Create a new model in the generator aspect.
+    - Make sure to remove the \@generator annotation (leave it blank).
+    - Add Base Language as a dependency.
+    - Create a class in the new model which provides the desired utility methods.
+    - In the generator add a dependency to the new model.
+
+    {{ contribution_by('sergej-koscejev') }}
 
 ## Troubleshooting
 

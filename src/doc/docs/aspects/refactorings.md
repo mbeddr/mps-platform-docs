@@ -12,6 +12,9 @@ tags:
 >
 > — <cite>MPS documentation</cite>
 
+The following questions are related to the old refactoring declarations. Use refactoring participants instead. They
+are explained in the documentation.
+
 !!! question "Is this aspect widely used?"
 
     No, there are just a few use cases, even in MPS languages.

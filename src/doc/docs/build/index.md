@@ -57,6 +57,8 @@ tags:
     - Specific Languages Blog: [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/)
     - Have a dedicated clean task ([gradle example](https://github.com/JetBrains/MPS-extensions/blob/ade5d7798c2a233ce850ad539336362ed8ec437e/build.gradle#L272)) when using a build script.
 
+    The idea of having such a task is not only to make it easier to clean the generated files but also keep downloaded dependencies. If you have, for example, MPS as dependency in your project, *git clean -xdf* will remove all dependencies including MPS.
+
 !!! warning "The [files from](http://127.0.0.1:63320/node?ref=r%3Ae9081cad-d8c3-45f2-b4ad-1dabd5ff82af%28jetbrains.mps.build.structure%29%2F2750015747481074431) operation from the MPS build model changes the access permissions of the copied-over files."
 
     You can use [Buildlayout_Filemode](https://app.slack.com/client/T3XHGU6G0/C3YUV3YK0/thread/C3YUV3YK0-1657543516.836299#:~:text=BuildLayout_Filemode) as a workaround or unzip the files using Gradle.

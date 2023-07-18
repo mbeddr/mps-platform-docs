@@ -66,6 +66,10 @@ phase and don't need to execute them. When using the *Refactoring* menu in a lan
     ```
     {{ contribution_by('abstraktor') }}
 
+!!! question "Assuming a migration for language *A* replaces objects of concept *C_old* with objects of concept *C_new*. Further, a concept *C_B* of language *B* references an object of type Cold. Therefore, you added a new reference of type *C_new* and marked the old one as deprecated. But how does this migration find the *C_new object* for the C_old reference?"
+
+    Read [Defining language migrations | MPS documentation](https://www.jetbrains.com/help/mps/migrations.html#defininglanguagemigrations) and look for *produces annotation data*. This mechanism also ensures the correct order of dependent migrations.
+
 !!! question "How can you find all references to a specified root node and change these references so they point to another root node?"
 
     Search through the methods in [RefactoringRuntime](http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346).
