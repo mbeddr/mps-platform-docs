@@ -225,7 +225,6 @@ nav:
       - MPS Extensions: 
           - General: languages/mps_extensions.md
           - Cell Layout: languages/cell_layout.md
-      - KernelF: languages/kernelf.md
   - Platform Essentials:
       - platform_essentials/index.md
       - How Everything Is Connected: platform_essentials/how_everything_is_connected.md
@@ -275,6 +274,107 @@ nav:
       - Reference:
         - File Format: mps_internal/file_format.md
         - Java Design Patterns in the MPS Sources: mps_internal/java_design_patterns_in_mps_sources.md
+  - KernelF:
+      - KernelF Introduction: languages/kernelf/kernelf.md
+      - Basics:
+          - KernelF Tour: languages/kernelf/tour/kernelf_tour_introduction.md
+          - 1. Types:
+              - Definition: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_1_Definition/Types_1_Definition.md
+              - Primitive:
+                  - Boolean: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_1_Boolean/Types_1_Boolean.md
+                  - Number: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_2_Number/Types_2_Number.md
+                  - String: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_3_String/Types_3_String.md
+                  - Enumeration: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_4_Enumeration/Types_4_Enumeration.md
+              - Default Values: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_2_DefaultValues/Types_2_DefaultValues.md
+              - Composite:
+                  - Option:
+                      - General: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Option_1_General/Types_Option_1_General.md
+                      - Expressions: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Option_2_Expressions/Types_Option_2_Expressions.md
+                  - Records:
+                      - Declaration: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Record_1_Declaration/Types_Record_1_Declaration.md
+                      - Projection: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Record_2_Projection/Types_Record_2_Projection.md
+                      - Grouping: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Record_3_Grouping/Types_Record_3_Grouping.md
+                      - Reference: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Record_4_Reference/Types_Record_4_Reference.md
+                  - Tuples: languages/kernelf/tour/solutions/KernelFTour/screenshots/Types_Tuples/Types_Tuples.md
+          - 2. Expressions:
+              - Control Flow: languages/kernelf/tour/solutions/KernelFTour/screenshots/Expressions_1_ControlFlow/Expressions_1_ControlFlow.md
+              - Math and Real Numbers: languages/kernelf/tour/solutions/KernelFTour/screenshots/Expressions_2_Math/Expressions_2_Math.md
+              - Operations: languages/kernelf/tour/solutions/KernelFTour/screenshots/Expressions_3_Operations/Expressions_3_Operations.md
+              - Other Expressions: languages/kernelf/tour/solutions/KernelFTour/screenshots/Expressions_4_Other_Expressions/Expressions_4_Other_Expressions.md
+          - 3. Functions:
+              - General: languages/kernelf/tour/solutions/KernelFTour/screenshots/Functions_1_General/Functions_1_General.md
+              - Variables: languages/kernelf/tour/solutions/KernelFTour/screenshots/Functions_2_Variables/Functions_2_Variables.md
+              - Lambda: languages/kernelf/tour/solutions/KernelFTour/screenshots/Functions_3_Lambda/Functions_3_Lambda.md
+              - Operator Groups: languages/kernelf/tour/solutions/KernelFTour/screenshots/Functions_4_OperatorGroups/Functions_4_OperatorGroups.md
+          - 4. Tests:
+              - Asserts: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tests_1_Asserts/Tests_1_Asserts.md
+              - Constrained Fail: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tests_2_ConstrainedFail/Tests_2_ConstrainedFail.md
+              - String Validation: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tests_3_StringValidation/Tests_3_StringValidation.md
+          - 5. Collections:
+              - Creation: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_1_Creation/Collections_1_Creation.md
+              - Access: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_2_Access/Collections_2_Access.md
+              - Checks: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_3_Checks/Collections_3_Checks.md
+              - Properties: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_4_Properties/Collections_4_Properties.md
+              - Map: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_5_Map/Collections_5_Map.md
+              - Set: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_6_Set/Collections_6_Set.md
+              - Changing the Structure: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_7_Changing_The_Structure/Collections_7_Changing_The_Structure.md
+              - Filtering and Grouping: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_8_Filtering_And_Grouping/Collections_8_Filtering_And_Grouping.md
+              - Querying: languages/kernelf/tour/solutions/KernelFTour/screenshots/Collections_9_Querying/Collections_9_Querying.md
+          - 6. Null Handling: languages/kernelf/tour/solutions/KernelFTour/screenshots/NixSupport/NixSupport.md
+          - 7. Contracts: languages/kernelf/tour/solutions/KernelFTour/screenshots/Contracts/Contracts.md
+          - 8. Error Handling: languages/kernelf/tour/solutions/KernelFTour/screenshots/Error/Error.md
+          - 9. Units:
+              - Basics: languages/kernelf/tour/solutions/KernelFTour/screenshots/Units_1_Basics/Units_1_Basics.md
+              - Derived Units: languages/kernelf/tour/solutions/KernelFTour/screenshots/Units_2_DerivedAndScaled/Units_2_DerivedAndScaled.md
+              - Converting Units: languages/kernelf/tour/solutions/KernelFTour/screenshots/Units_3_Converting/Units_3_Converting.md
+      - Advanced:
+          - 1. Tables: 
+            - DataTable: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tables_1_DataTable/Tables_1_DataTable.md
+            - Multi-Decision Table: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tables_2_MultiDecisionTable/Tables_2_MultiDecisionTable.md
+            - Otherwise Literal: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tables_3_Otherwise_Literal/Tables_3_Otherwise_Literal.md
+            - Decision Table Ranges: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tables_4_DecisionTable_ranges/Tables_4_DecisionTable_ranges.md
+            - Lookup Table: languages/kernelf/tour/solutions/KernelFTour/screenshots/Tables_5_LookupTable/Tables_5_LookupTable.md
+          - 2. Type Tags: languages/kernelf/tour/solutions/KernelFTour/screenshots/Typetags/Typetags.md
+          - 3. Messages: languages/kernelf/tour/solutions/KernelFTour/screenshots/Messages/Messages.md
+          - 4. Algebraic: 
+            - Basic: languages/kernelf/tour/solutions/KernelFTour/screenshots/Algebraic_1_Basic/Algebraic_1_Basic.md
+            - Quoting: languages/kernelf/tour/solutions/KernelFTour/screenshots/Algebraic_2_Quoting/Algebraic_2_Quoting.md
+            - Calculate Salary (example): languages/kernelf/tour/solutions/KernelFTour/screenshots/Algebraic_3_Example_Calculate_Salary/Algebraic_3_Example_Calculate_Salary.md
+            - Trafo (example): languages/kernelf/tour/solutions/KernelFTour/screenshots/Algebraic_4_Example_Trafo/Algebraic_4_Example_Trafo.md
+            - Interpreter (example): languages/kernelf/tour/solutions/KernelFTour/screenshots/Algebraic_5_Example_Interpreter/Algebraic_5_Example_Interpreter.md
+          - 5. Mutable:
+            - Transaction:
+              - Basics: languages/kernelf/tour/solutions/KernelFTour/screenshots/Transaction_1_Basics/Transaction_1_Basics.md
+              - Advanced: languages/kernelf/tour/solutions/KernelFTour/screenshots/Transaction_2_Advanced/Transaction_2_Advanced.md
+            - Box:
+              - Basics: languages/kernelf/tour/solutions/KernelFTour/screenshots/Boxes_1_Basics/Boxes_1_Basics.md
+              - Update With Check: languages/kernelf/tour/solutions/KernelFTour/screenshots/Boxes_2_Update_With_Check/Boxes_2_Update_With_Check.md
+              - Time: languages/kernelf/tour/solutions/KernelFTour/screenshots/Boxes_3_Time/Boxes_3_Time.md
+            - State Machine:
+              - Basics: languages/kernelf/tour/solutions/KernelFTour/screenshots/Statemachines_1_Basic/Statemachines_1_Basic.md
+              - Automatic Transition: languages/kernelf/tour/solutions/KernelFTour/screenshots/Statemachines_2_Automatic_Transition/Statemachines_2_Automatic_Transition.md
+              - Interceptor: languages/kernelf/tour/solutions/KernelFTour/screenshots/Statemachines_3_Interceptor/Statemachines_3_Interceptor.md
+              - Hierarchical: languages/kernelf/tour/solutions/KernelFTour/screenshots/Statemachines_4_Hierarchical/Statemachines_4_Hierarchical.md
+            - Decision:
+              - Simple: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_1_Simple/Decision_1_Simple.md
+              - Without: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_2_WithTimeout/Decision_2_WithTimeout.md
+              - With Yes/No: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_3_WithYesNo/Decision_3_WithYesNo.md
+              - Sales Process: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_4_Salesprocess/Decision_4_Salesprocess.md
+              - Sales Process Multi Party: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_5_SalesProcessMultiParty/Decision_5_SalesProcessMultiParty.md
+              - With Dynamic Group: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_6_WithDynamicGroup/Decision_6_WithDynamicGroup.md
+              - Dynamic Group and Interceptor: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_7_DynamicGroupAndInterceptor/Decision_7_DynamicGroupAndInterceptor.md
+              - Game Play: languages/kernelf/tour/solutions/KernelFTour/screenshots/Decision_8_Gameplay/Decision_8_Gameplay.md  
+          - 6. Date and Time:
+              - Date: languages/kernelf/tour/solutions/KernelFTour/screenshots/Date/Date.md
+              - Time: languages/kernelf/tour/solutions/KernelFTour/screenshots/Time/Time.md
+          - 7. Temporal:
+              - Basics: languages/kernelf/tour/solutions/KernelFTour/screenshots/Temporal_1_Basics/Temporal_1_Basics.md
+              - Booleans: languages/kernelf/tour/solutions/KernelFTour/screenshots/Temporal_2_Booleans/Temporal_2_Booleans.md
+              - Advanced: languages/kernelf/tour/solutions/KernelFTour/screenshots/Temporal_3_Advanced/Temporal_3_Advanced.md
+          - 8. Blocks:
+              - Defining Blocks: languages/kernelf/tour/solutions/KernelFTour/screenshots/Block_1_Defining_Blocks/Block_1_Defining_Blocks.md
+              - Usage and Composite Blocks: languages/kernelf/tour/solutions/KernelFTour/screenshots/Block_2_Usage_And_Composite_Blocks/Block_2_Usage_And_Composite_Blocks.md
+          - 9. Decision Tree: languages/kernelf/tour/solutions/KernelFTour/screenshots/DecisionTree/DecisionTree.md
   - Mbeddr:
       - mbeddr/index.md
       - Building Mbeddr Locally: mbeddr/building_mbeddr_locally.md

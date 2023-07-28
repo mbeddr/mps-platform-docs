@@ -1,0 +1,22 @@
+classes_gen
+source_gen
+source_gen.caches
+test_gen.caches
+workspace.xml
+artifacts
+tmp
+.gradle/
+build/generated/
+build/mps/
+/build/
+test_gen/
+site
+.DS_Store
+.gradletasknamecache
+.idea/encodings.xml
+
+# MPS temporary directories
+/system/
+/config/
+scripts/.mps-caches
+.idea/modules

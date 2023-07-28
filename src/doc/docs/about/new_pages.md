@@ -8,6 +8,7 @@ This page lists all new pages since August 2022.
 ## July 2023
 
 - [Home: Overcoming Obstacles](overcoming_obstacles.md)
+- [KernelF: Tour](kernelf_tour_introduction.md)
 
 ## June 2023
 
