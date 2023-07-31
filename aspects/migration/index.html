@@ -389,6 +389,26 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
+        <a href="../../languages/kernelf/kernelf/" class="md-tabs__link">
+          
+  
+    
+  
+  KernelF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../mbeddr/" class="md-tabs__link">
           
   
@@ -1180,8 +1200,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
     
     
       
@@ -1358,6 +1376,49 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   <span class="md-ellipsis">
     MPS Internals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../languages/kernelf/kernelf/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    KernelF
   </span>
   
 
@@ -1768,6 +1829,10 @@ Example: <code>RefactoringRuntime.replaceWithNewConcept(old, concept/ComponentCo
 <sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </div>
 <div class="admonition question">
+<p class="admonition-title">Assuming a migration for language <em>A</em> replaces objects of concept <em>C_old</em> with objects of concept <em>C_new</em>. Further, a concept <em>C_B</em> of language <em>B</em> references an object of type Cold. Therefore, you added a new reference of type <em>C_new</em> and marked the old one as deprecated. But how does this migration find the <em>C_new object</em> for the C_old reference?</p>
+<p>Read <a href="https://www.jetbrains.com/help/mps/migrations.html#defininglanguagemigrations">Defining language migrations | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a> and look for <em>produces annotation data</em>. This mechanism also ensures the correct order of dependent migrations.</p>
+</div>
+<div class="admonition question">
 <p class="admonition-title">How can you find all references to a specified root node and change these references so they point to another root node?</p>
 <p>Search through the methods in <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765036703346">RefactoringRuntime ⧉</a>.</p>
 <p>Example with finders:</p>
@@ -1827,7 +1892,7 @@ is only marginally related to the migration aspect, it is mentioned here.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
       
     
   </small>

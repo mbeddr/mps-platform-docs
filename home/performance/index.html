@@ -389,6 +389,26 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
+        <a href="../../languages/kernelf/kernelf/" class="md-tabs__link">
+          
+  
+    
+  
+  KernelF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../mbeddr/" class="md-tabs__link">
           
   
@@ -1076,8 +1096,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
     
     
       
@@ -1254,6 +1272,49 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   <span class="md-ellipsis">
     MPS Internals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../languages/kernelf/kernelf/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    KernelF
   </span>
   
 
@@ -1669,7 +1730,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li><a href="https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache">Speeding up model checks with Scope Cache ⧉</a> (&lt; <abbr title="Meta Programming System">MPS</abbr> 2021.2)</li>
 <li>Often accessed data should be cached (<a href="https://medium.com/analytics-vidhya/how-to-implement-cache-in-java-d9aa5e9577f2">How to implement caching in Java ⧉</a>)</li>
 <li>Don't recalculate expensive calculations but rather save the results in variables.</li>
-<li>Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet ⧉</a>)</li>
+<li>Different data structures have other time and space complexities. For example, selecting a different list implementation can have significant improvements on performance (<a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet ⧉</a>). Do not always use lists. Check
+ if another data structure might be better suitable such as hash maps.</li>
+<li>The collections language has a significant overhead in comparison to plain Java. If you need better performance, use the Java <code>foreach</code> statement and not <code>collection.forEach</code> and consider avoid the language in general for performance-critical code. You can improve especially list iteration that way.</li>
 <li>Make sure to iterate nodes or editor cell trees efficiently. Narrow down the nodes that you want to iterate over, for example, <code>model.roots(ClassConcept)</code> instead of
  <code>model.nodes(&lt;all&gt;)</code>. <code>nodesIncludingImported()</code> can also create immense scopes. The same is true for searching in the console: avoid snippets such as <code>#nodes&lt;scope = global&gt;</code> should be avoided. For deep structures, <code>node.descendants</code> can also be expensive.</li>
 <li>When using scopes, avoid using a <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.project%28MPS.Core%2F%29%2F%7EGlobalScope">GlobalScope ⧉</a>. Try to also use the following snippets for filtering models that often shouldn't be searched because they are not indexed:<ul>
@@ -1742,7 +1805,7 @@ it is also possible to use the <a href="https://ij-perf.jetbrains.com/#/report">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 20, 2023</span>
       
     
   </small>

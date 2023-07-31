@@ -389,6 +389,26 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
+        <a href="../../languages/kernelf/kernelf/" class="md-tabs__link">
+          
+  
+    
+  
+  KernelF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../mbeddr/" class="md-tabs__link">
           
   
@@ -1194,8 +1214,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
     
     
       
@@ -1372,6 +1390,49 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   <span class="md-ellipsis">
     MPS Internals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../languages/kernelf/kernelf/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    KernelF
   </span>
   
 
@@ -1743,15 +1804,12 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you invoke the generator from an external tool?</p>
-<p>Yes, it can be run from Ant.</p>
+<p>Yes, it can be run from Ant. Build your build solution in <abbr title="Meta Programming System">MPS</abbr> and execute the targets <em>clean</em>, <em>generate</em> and <em>assemble</em> 
+to build the languages. To run the tests, also execute <em>check</em>. The <a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle.plugin</a> is capable of <a href="https://github.com/mbeddr/mps-gradle-plugin#runantscript">running those targets ⧉</a> in Gradle.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you copy the output to another location?</p>
 <p>Use the <a href="http://127.0.0.1:63320/node?ref=r%3A4d7d5410-8d5a-45f2-a2f2-a6b7b42a377e%28jetbrains.mps.lang.makeup.structure%29%2F12232831069847415239">@CopyOutcome ⧉</a> annotation.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">How do I obtain a temporary model?</p>
-<p>Use the class <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.tempmodel%28MPS.Core%2F%29%2F%7ETemporaryModels">TemporaryModels ⧉</a>.</p>
 </div>
 <details class="question">
 <summary>Which variable names aren't available because they are used in the generator?</summary>
@@ -2052,6 +2110,17 @@ What is the source of this information, and how reliable is it?</p>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can you introduce utility methods for a generator, for example, a pre-processing script?</p>
+<ul>
+<li>Create a new model in the generator aspect.</li>
+<li>Make sure to remove the @generator annotation (leave it blank).</li>
+<li>Add Base Language as a dependency.</li>
+<li>Create a class in the new model which provides the desired utility methods.</li>
+<li>In the generator add a dependency to the new model.</li>
+</ul>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/sergej-koscejev" title="GitHub User: sergej-koscejev">@sergej-koscejev</a><sub></p>
+</div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>In addition to reading the following questions, read <a href="https://specificlanguages.com/posts/debugging-generators/">Debugging generators ⧉</a> (<em>Specific Languages' blog</em>).</p>
 <div class="admonition warning">
@@ -2130,7 +2199,7 @@ For internal exceptions of <abbr title="Meta Programming System">MPS</abbr> or t
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
       
     
   </small>

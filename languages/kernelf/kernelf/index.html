@@ -12,28 +12,28 @@
         <meta name="author" content="MPS Platform Docs team">
       
       
-        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/languages/kernelf/">
+        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/languages/kernelf/kernelf/">
       
       
-        <link rel="prev" href="../cell_layout/">
+        <link rel="prev" href="../../../mps_internal/java_design_patterns_in_mps_sources/">
       
       
-        <link rel="next" href="../../platform_essentials/">
+        <link rel="next" href="../../../mbeddr/">
       
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.2.0-b0">
     
     
       
-        <title>KernelF - MPS Platform Docs</title>
+        <title>KernelF Introduction - MPS Platform Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0c456da8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0c456da8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -62,9 +62,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,7 +83,7 @@
     
 <meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
 
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -94,7 +94,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -132,7 +132,7 @@
               </button>
             
             
-If you are a returning visitor, make sure to check out the page about <a href="../../about/new_pages">new pages</a>
+If you are a returning visitor, make sure to check out the page about <a href="../../../about/new_pages">new pages</a>
 
           </div>
           
@@ -149,9 +149,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+    <a href="../../.." title="MPS Platform Docs" class="md-header__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -168,7 +168,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KernelF
+              KernelF Introduction
             
           </span>
         </div>
@@ -267,7 +267,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -287,7 +287,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../aspects/structure/" class="md-tabs__link">
+        <a href="../../../aspects/structure/" class="md-tabs__link">
           
   
     
@@ -303,13 +303,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -329,7 +327,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../platform_essentials/" class="md-tabs__link">
+        <a href="../../../platform_essentials/" class="md-tabs__link">
           
   
     
@@ -349,7 +347,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../build/" class="md-tabs__link">
+        <a href="../../../build/" class="md-tabs__link">
           
   
     
@@ -369,7 +367,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../mps_internal/" class="md-tabs__link">
+        <a href="../../../mps_internal/" class="md-tabs__link">
           
   
     
@@ -385,11 +383,33 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  KernelF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
   
     
     
       <li class="md-tabs__item">
-        <a href="../../mbeddr/" class="md-tabs__link">
+        <a href="../../../mbeddr/" class="md-tabs__link">
           
   
     
@@ -409,7 +429,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../clean_code/mps/" class="md-tabs__link">
+        <a href="../../../clean_code/mps/" class="md-tabs__link">
           
   
     
@@ -429,7 +449,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../patterns/language_design/" class="md-tabs__link">
+        <a href="../../../patterns/language_design/" class="md-tabs__link">
           
   
     
@@ -449,7 +469,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
+        <a href="../../../reference/being_a_good_developer/" class="md-tabs__link">
           
   
     
@@ -469,7 +489,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     
     
       <li class="md-tabs__item">
-        <a href="../../about/editing_this_guide/" class="md-tabs__link">
+        <a href="../../../about/editing_this_guide/" class="md-tabs__link">
           
   
     
@@ -510,9 +530,9 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
+    <a href="../../.." title="MPS Platform Docs" class="md-nav__button md-logo" aria-label="MPS Platform Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     MPS Platform Docs
@@ -576,7 +596,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -653,7 +673,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../aspects/structure/" class="md-nav__link">
+    <a href="../../../aspects/structure/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -676,8 +696,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
   
   
-    
-  
   
     
     
@@ -687,98 +705,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
       
         
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Languages
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_3">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Languages
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../baselanguage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Base Language and Extensions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../double_dispatch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Double Dispatch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
       
         
       
@@ -794,11 +720,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../mps_extensions/" class="md-nav__link">
+    <a href="../../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    MPS Extensions
+    Languages
   </span>
   
 
@@ -812,7 +738,211 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     </li>
   
 
-              
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../platform_essentials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Platform Essentials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../build/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../mps_internal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MPS Internals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    KernelF
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            KernelF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -831,7 +961,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
           
   
   <span class="md-ellipsis">
-    KernelF
+    KernelF Introduction
   </span>
   
 
@@ -842,7 +972,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   <span class="md-ellipsis">
-    KernelF
+    KernelF Introduction
   </span>
   
 
@@ -905,6 +1035,125 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
               
             
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../tour/kernelf_tour_introduction.md" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../tour/solutions/KernelFTour/screenshots/Tables_1_DataTable/Tables_1_DataTable.md" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -936,10 +1185,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
-        
-      
     
     
       
@@ -950,164 +1195,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../platform_essentials/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Platform Essentials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../build/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Build
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../mps_internal/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    MPS Internals
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../mbeddr/" class="md-nav__link">
+    <a href="../../../mbeddr/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1154,7 +1242,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../clean_code/mps/" class="md-nav__link">
+    <a href="../../../clean_code/mps/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1197,7 +1285,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../patterns/language_design/" class="md-nav__link">
+    <a href="../../../patterns/language_design/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1262,7 +1350,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../reference/being_a_good_developer/" class="md-nav__link">
+    <a href="../../../reference/being_a_good_developer/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1307,7 +1395,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../about/editing_this_guide/" class="md-nav__link">
+    <a href="../../../about/editing_this_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1408,7 +1496,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
       
       
-        <a href="../../tags/#iets3" class="md-tag md-tag-icon">iets3</a>
+        <a href="../../../tags/#iets3" class="md-tag md-tag-icon">iets3</a>
       
     
   </nav>
@@ -1419,7 +1507,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-  <h1>KernelF</h1>
+  <h1>KernelF Introduction</h1>
 
 <p>Please start with the <a href="https://github.com/IETS3/iets3.opensource">readme file</a> of the <a href="https://github.com/IETS3/iets3.opensource">iets3.opensource ⧉</a>
 repository. The primary documentation is the book <a href="http://voelter.de/data/books/kernelf-designEvoUse.pdf">DESIGN, EVOLUTION, AND USE of KernelF</a> by Markus Voelter. There's also a <a href="http://voelter.de/data/pub/kernelf-reference.pdf">short reference ⧉</a> with only 27 pages.</p>
@@ -1446,19 +1534,19 @@ repository. The primary documentation is the book <a href="http://voelter.de/dat
 </ul>
 <h2 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
 <p>The execution trace is helpful if you want to follow the execution path of an interpreter. Right-click an interpreted node and click <em>Show Trace</em>. The trace explorer now opens in the lower left corner. When you click one of the lines in the trace explorer, the node in the editor gets replaced by the trace. You can manipulate the trace through the <em>trace expression</em>.</p>
-<p><a class="glightbox" href="../gifs/trace_tool.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="trace tool" src="../gifs/trace_tool.gif" /></a></p>
+<p><a class="glightbox" href="../../gifs/trace_tool.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="trace tool" src="../../gifs/trace_tool.gif" /></a></p>
 <h2 id="nix">Nix<a class="headerlink" href="#nix" title="Permanent link">&para;</a></h2>
 <p>KernelF doesn't allow returning null values (intermediate null values that the same or other evaluators catch are fine).
 Instead, it supports so-called nix handlers (there's a <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483934994140">nixHandler extension point</a>). The default handler for KernelF is <a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483935015244">DefaultNixHandler ⧉</a>.
 A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62d-4841-a421-11bb7269799d%28org.iets3.core.expr.base.shared.runtime%29%2F3889855429449824409">INixValue</a>) represents an empty (nothing) value. There is, for example, a <a href="http://127.0.0.1:63320/node?ref=r%3Aac28053f-2041-47f6-806b-ecfaca05a64a%28org.iets3.core.expr.base.runtime.runtime%29%2F3889855429449859911">DefaultNix</a> class; for dates, there's <a href="http://127.0.0.1:63320/node?ref=r%3Aa9ac3767-b241-4aa4-a973-d04bb5ce184c%28org.iets3.core.expr.datetime.runtime%29%2F5551088970758352208">EmptyDateRangeValue ⧉</a>. Use the handler's method <em>process</em> to handle values that might be nix. To use this feature call <code>new NixSupport(Object value node&lt;&gt; node {NixSupport =&gt; Object} calculator).run()</code> where the calculator returns the value:</p>
-<p><a class="glightbox" href="../images/nix_support_examples.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="examples: nix support" src="../images/nix_support_examples.png" /></a></p>
+<p><a class="glightbox" href="../../images/nix_support_examples.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="examples: nix support" src="../../images/nix_support_examples.png" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2023</span>
       
     
   </small>
@@ -1600,7 +1688,7 @@ A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../cell_layout/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cell Layout" rel="prev">
+          <a href="../../../mps_internal/java_design_patterns_in_mps_sources/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Java Design Patterns in the MPS Sources" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1610,20 +1698,20 @@ A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62
                 Previous
               </span>
               <div class="md-ellipsis">
-                Cell Layout
+                Java Design Patterns in the MPS Sources
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../platform_essentials/" class="md-footer__link md-footer__link--next" aria-label="Next: Platform Essentials" rel="next">
+          <a href="../../../mbeddr/" class="md-footer__link md-footer__link--next" aria-label="Next: General" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Platform Essentials
+                General
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1656,17 +1744,17 @@ A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.footer", "header.autohide", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.780af0f4.min.js", "tags": {"beginner": "beginner"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f11ae8b1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f11ae8b1.min.js"></script>
       
         
-          <script src="../../javascripts/code_scrolling.js"></script>
+          <script src="../../../javascripts/code_scrolling.js"></script>
         
       
         
-          <script src="../../javascripts/mathjax.js"></script>
+          <script src="../../../javascripts/mathjax.js"></script>
         
       
         
@@ -1674,7 +1762,7 @@ A nix value (interface <a href="http://127.0.0.1:63320/node?ref=r%3A5db517a0-f62
         
       
         
-          <script src="../../javascripts/tablesort.js"></script>
+          <script src="../../../javascripts/tablesort.js"></script>
         
       
         
