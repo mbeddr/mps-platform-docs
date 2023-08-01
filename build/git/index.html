@@ -972,6 +972,75 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#git-problems" class="md-nav__link">
+    Git problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Git problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invisible-git-change" class="md-nav__link">
+    Invisible Git Change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-conflicts" class="md-nav__link">
+    Merge Conflicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-change-in-node-but-the-node-is-deleted-on-the-server" class="md-nav__link">
+    Local Change in Node but the Node is Deleted on the Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout-would-overwrite-local-changes" class="md-nav__link">
+    Checkout would overwrite local changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-out-a-remote-branch-while-having-local-commits" class="md-nav__link">
+    Checking Out a Remote Branch While Having Local Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-branch-name-already-exists" class="md-nav__link">
+    Local Branch Name Already Exists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-merge-or-rebase" class="md-nav__link">
+    Failed Merge or Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-a-patch-but-the-base-is-missing" class="md-nav__link">
+    Applying a Patch, but the Base is Missing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#general" class="md-nav__link">
     General
   </a>
@@ -1415,6 +1484,75 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#git-problems" class="md-nav__link">
+    Git problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Git problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invisible-git-change" class="md-nav__link">
+    Invisible Git Change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-conflicts" class="md-nav__link">
+    Merge Conflicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-change-in-node-but-the-node-is-deleted-on-the-server" class="md-nav__link">
+    Local Change in Node but the Node is Deleted on the Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout-would-overwrite-local-changes" class="md-nav__link">
+    Checkout would overwrite local changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-out-a-remote-branch-while-having-local-commits" class="md-nav__link">
+    Checking Out a Remote Branch While Having Local Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-branch-name-already-exists" class="md-nav__link">
+    Local Branch Name Already Exists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-merge-or-rebase" class="md-nav__link">
+    Failed Merge or Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-a-patch-but-the-base-is-missing" class="md-nav__link">
+    Applying a Patch, but the Base is Missing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#general" class="md-nav__link">
     General
   </a>
@@ -1463,6 +1601,53 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
 
 <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<p>Git is a free and open-source  distributed version control system that allows developers to manage their code and collaborate on projects.
+While <abbr title="Meta Programming System">MPS</abbr> supports the version control systems Git and Subversion, Git is the de-facto standard for <abbr title="Meta Programming System">MPS</abbr> projects.
+Read <a href="https://www.jetbrains.com/help/mps/version-control-integration.html">Version control | <abbr title="Meta Programming System">MPS</abbr> documentation ⧉</a> first to get a better understanding.</p>
+<h2 id="git-problems">Git problems<a class="headerlink" href="#git-problems" title="Permanent link">&para;</a></h2>
+<p>The following short sections describe common issues that you encounter with the Git integration in <abbr title="Meta Programming System">MPS</abbr>. Except for the visual difference viewer, you are not forced to use the <abbr title="User Interface">UI</abbr> to work with Git in <abbr title="Meta Programming System">MPS</abbr>. If you are comfortable using the command line, you can switch to the <em>Terminal</em> tool and use
+ordinary Git commands.</p>
+<h3 id="invisible-git-change">Invisible Git Change<a class="headerlink" href="#invisible-git-change" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/invisible_git_change.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="invisible Git change" src="../images/invisible_git_change.png" /></a></p>
+<p>Some changes in models can't be visualized by the <abbr title="Meta Programming System">MPS</abbr> <abbr title="difference">diff</abbr> viewer. Switch to the <em>Unified viewer</em> or <em>Side-by-side viewer</em>
+in the <abbr title="difference">diff</abbr> window to see the changes. Examples of invisible changes are version changes in language dependencies, <a href="https://www.jetbrains.com/help/mps/resolve-conflicts.html#290a8ea0">changes in the
+node ID</a>, and <a href="https://www.jetbrains.com/help/mps/resolve-conflicts.html#7f7418c7">resolve <abbr title="information">info</abbr> changes ⧉</a>.
+<a href="https://www.jetbrains.com/help/mps/resolve-conflicts.html#290a8ea0">node ID</a>, and <a href="https://www.jetbrains.com/help/mps/resolve-conflicts.html#7f7418c7">resolve <abbr title="information">info</abbr> changes ⧉</a>.</p>
+<p><a class="glightbox" href="../images/invisible_git_change_unified_viewer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="invisible Git change: unified viewer" src="../images/invisible_git_change_unified_viewer.png" /></a></p>
+<h3 id="merge-conflicts">Merge Conflicts<a class="headerlink" href="#merge-conflicts" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/merge_conflicts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="merge conflicts" src="../images/merge_conflicts.png" /></a></p>
+<p>Use the button <em>&gt;&gt;&lt;&lt;</em> at the top next to <em>Accept Yours</em> to accept all non-conflicting changes for the root nodes, and do the same for the changes in the root nodes below. Then use the <em>&gt;&gt;</em> or <em>&lt;&lt;</em> button to accept the change from the left or right side. You can reject changes with the <em>x</em> button. 
+In other dialogs, there is a magic wand symbol to automatically apply non-conflicting changes.
+Alternatively, you can use the <em>All</em> option to accept the changes.
+You only have to resolve merge conflicts, all other changes can be resolved automatically. </p>
+<p><a class="glightbox" href="../images/unresolved_changes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="unresolved changes" src="../images/unresolved_changes.png" /></a></p>
+<p>You can also edit the node in the center, but can't make changes like resolving references and
+importing dependencies.</p>
+<h3 id="local-change-in-node-but-the-node-is-deleted-on-the-server">Local Change in Node but the Node is Deleted on the Server<a class="headerlink" href="#local-change-in-node-but-the-node-is-deleted-on-the-server" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/git_deleted_node_on_server.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deleted node on server" src="../images/git_deleted_node_on_server.png" /></a></p>
+<p>You can reject the deletion on the server by clicking <em>Select Left</em> or accept the deletion by clicking
+<em>Accept Right</em>. <strong>Don't</strong> click the arrow in the right window to accept the change from the server. You will end up
+with an empty file that can't be loaded.</p>
+<h3 id="checkout-would-overwrite-local-changes">Checkout would overwrite local changes<a class="headerlink" href="#checkout-would-overwrite-local-changes" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/git_checkout_problem.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Git checkout problem" src="../images/git_checkout_problem.png" width="500px" /></a></p>
+<p>When you hover with the mouse over the buttons, <abbr title="Meta Programming System">MPS</abbr> explains what they do. <em>Force Checkout</em> switch to the new branch and discards any local changes; <em>Smart Checkout</em> <a href="https://www.jetbrains.com/help/mps/shelving-and-unshelving-changes.html">shelves the changes ⧉</a>, switches to the branch, and then unshelves the changes.
+<em>Don't checkout</em> does nothing and closes the dialog.</p>
+<h3 id="checking-out-a-remote-branch-while-having-local-commits">Checking Out a Remote Branch While Having Local Commits<a class="headerlink" href="#checking-out-a-remote-branch-while-having-local-commits" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/checkout_remote_branch_with_local_commits.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Checkout remote branch with local commits" src="../images/checkout_remote_branch_with_local_commits.png" width="500px" /></a></p>
+<p>The first two options are self-explanatory. <em>Rebase onto Remote</em> checks <abbr title="output">out</abbr> the remote branch and appends the
+local commits to the end.</p>
+<h3 id="local-branch-name-already-exists">Local Branch Name Already Exists<a class="headerlink" href="#local-branch-name-already-exists" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/branch_name_already_exists.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="branch name already exists" src="../images/branch_name_already_exists.png" width="500px" /></a></p>
+<p>If you don't need the old branch, use the overwrite option or find the branch in the lower right corner and click <em>Rename&hellip;</em>
+or <em>Delete</em>.</p>
+<h3 id="failed-merge-or-rebase">Failed Merge or Rebase<a class="headerlink" href="#failed-merge-or-rebase" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/failed_merged_or_rebase.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="failed merge or rebase" src="../images/failed_merged_or_rebase.png" /></a></p>
+<p>You can click <em>Resolve</em> in the Merge Conflicts change list or go to <em>Main menu</em> -&gt; <em>Git</em> -&gt; <em>Abort Merge/Rebase</em> to undo
+the action.</p>
+<h3 id="applying-a-patch-but-the-base-is-missing">Applying a Patch, but the Base is Missing<a class="headerlink" href="#applying-a-patch-but-the-base-is-missing" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/apply_patch_missing_base.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Applying patch with missing base" src="../images/apply_patch_missing_base.png" width="500px" /></a></p>
+<p>After <a href="https://www.jetbrains.com/help/mps/using-patches.html">creating a patch ⧉</a>, you can't apply the patch because you've selected the wrong base path in the <em>Patch File Settings</em>.
+The base path must be the path of the project displayed in the logical view.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you compare Git branches?</p>
 <p>Have a look at <a href="/mps-platform-docs/files/compare_git_branches.pdf">this guide</a>.</p>
@@ -1528,6 +1713,10 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p>If an external process changes a file that was opened and unsaved in IntelliJ IDEA, it results in two conflicting versions.</p>
 </blockquote>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can I undo a merge or pull?</p>
+<p>You can use 'git reset &ndash;hard ORIG_HEAD' to go back. To keep the local changes, use  <code>git reset --merge</code>.</p>
+</div>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/arslanbilal/git-cheat-sheet">Git cheat sheet ⧉</a></li>
@@ -1564,7 +1753,7 @@ open source projects.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2023</span>
       
     
   </small>
