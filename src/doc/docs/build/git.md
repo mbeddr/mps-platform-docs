@@ -5,6 +5,84 @@ tags:
 
 # Git
 
+Git is a free and open-source  distributed version control system that allows developers to manage their code and collaborate on projects.
+While MPS supports the version control systems Git and Subversion, Git is the de-facto standard for MPS projects.
+Read [Version control | MPS documentation](https://www.jetbrains.com/help/mps/version-control-integration.html) first to get a better understanding.
+
+## Git problems
+
+The following short sections describe common issues that you encounter with the Git integration in MPS. Except for the visual difference viewer, you are not forced to use the UI to work with Git in MPS. If you are comfortable using the command line, you can switch to the *Terminal* tool and use
+ordinary Git commands.
+
+### Invisible Git Change
+
+![invisible Git change](images/invisible_git_change.png)
+
+Some changes in models can't be visualized by the MPS diff viewer. Switch to the *Unified viewer* or *Side-by-side viewer*
+in the diff window to see the changes. Examples of invisible changes are version changes in language dependencies, [changes in the
+node ID](https://www.jetbrains.com/help/mps/resolve-conflicts.html#290a8ea0), and [resolve info changes](https://www.jetbrains.com/help/mps/resolve-conflicts.html#7f7418c7).
+[node ID](https://www.jetbrains.com/help/mps/resolve-conflicts.html#290a8ea0), and [resolve info changes](https://www.jetbrains.com/help/mps/resolve-conflicts.html#7f7418c7).
+
+![invisible Git change: unified viewer](images/invisible_git_change_unified_viewer.png)
+
+### Merge Conflicts
+
+![merge conflicts](images/merge_conflicts.png)
+
+Use the button *>><<* at the top next to *Accept Yours* to accept all non-conflicting changes for the root nodes, and do the same for the changes in the root nodes below. Then use the *>>* or *<<* button to accept the change from the left or right side. You can reject changes with the *x* button. 
+In other dialogs, there is a magic wand symbol to automatically apply non-conflicting changes.
+Alternatively, you can use the *All* option to accept the changes.
+You only have to resolve merge conflicts, all other changes can be resolved automatically. 
+
+![unresolved changes](images/unresolved_changes.png)
+
+You can also edit the node in the center, but can't make changes like resolving references and
+importing dependencies.
+
+### Local Change in Node but the Node is Deleted on the Server
+
+![deleted node on server](images/git_deleted_node_on_server.png)
+
+You can reject the deletion on the server by clicking *Select Left* or accept the deletion by clicking
+*Accept Right*. **Don't** click the arrow in the right window to accept the change from the server. You will end up
+with an empty file that can't be loaded.
+
+### Checkout would overwrite local changes
+
+![Git checkout problem](images/git_checkout_problem.png){width="500px"}
+
+When you hover with the mouse over the buttons, MPS explains what they do. *Force Checkout* switch to the new branch and discards any local changes; *Smart Checkout* [shelves the changes](https://www.jetbrains.com/help/mps/shelving-and-unshelving-changes.html), switches to the branch, and then unshelves the changes.
+*Don't checkout* does nothing and closes the dialog.
+
+### Checking Out a Remote Branch While Having Local Commits
+
+![Checkout remote branch with local commits](images/checkout_remote_branch_with_local_commits.png){width="500px"}
+
+The first two options are self-explanatory. *Rebase onto Remote* checks out the remote branch and appends the
+local commits to the end.
+
+### Local Branch Name Already Exists
+
+![branch name already exists](images/branch_name_already_exists.png){width="500px"}
+
+If you don't need the old branch, use the overwrite option or find the branch in the lower right corner and click *Rename...*
+or *Delete*.
+
+### Failed Merge or Rebase
+
+![failed merge or rebase](images/failed_merged_or_rebase.png)
+
+You can click *Resolve* in the Merge Conflicts change list or go to *Main menu* -> *Git* -> *Abort Merge/Rebase* to undo
+the action.
+
+### Applying a Patch, but the Base is Missing
+
+![Applying patch with missing base](images/apply_patch_missing_base.png){width="500px"}
+
+After [creating a patch](https://www.jetbrains.com/help/mps/using-patches.html), you can't apply the patch because you've selected the wrong base path in the *Patch File Settings*.
+The base path must be the path of the project displayed in the logical view.
+
+
 !!! question "How do you compare Git branches?"
 
     Have a look at [this guide](/files/compare_git_branches.pdf).
@@ -63,6 +141,10 @@ tags:
     An external change could be done by accident, for example, the project is on a shared drive, and someone else changes some files but not on purpose. You might also edit some MPS files with a different editor to fix some issues, so there must be the option to decide which version to use. The feature itself comes from the IntelliJ platform and is not MPS-specific:
     
     > If an external process changes a file that was opened and unsaved in IntelliJ IDEA, it results in two conflicting versions.
+
+!!! question "How can I undo a merge or pull?"
+
+    You can use 'git reset --hard ORIG_HEAD' to go back. To keep the local changes, use  `git reset --merge`.
 
 
 ## General
