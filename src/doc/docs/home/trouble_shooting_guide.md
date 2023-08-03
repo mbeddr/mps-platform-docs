@@ -42,6 +42,17 @@ compare if the risky dirty build is worth the time you save.
     MPS plugins, for example, make the indexing break or throw errors because they expect a text editor and not the projectional
     editor from MPS. Firewalls and [proxies](https://www.jetbrains.com/help/mps/settings-http-proxy.html) could also affect MPS negatively.
 
+!!! failure "MPS freezes on startup."
+
+    There can be multiple reasons for freezes at startup:
+
+      - an infinite loop in an application/project plugin
+      - wrong usage of threading mechanisms that lead to a [deadlock](https://www.javatpoint.com/deadlock-in-java).
+      - the startup module maker compiles not built modules
+      - a deadlock occurs because some code interferes with [indexing](https://plugins.jetbrains.com/docs/intellij/indexing-and-psi-stubs.html#indexes) files
+
+    If you know the offending module/model, the simplest solution is to delete the generated files in the file explorer (source_gen/classes_gen). Then fix the error and recompile the module/module.When you are unsure where the error comes from, you can do [remote debugging](https://specificlanguages.com/articles/debugging/). There is also the `dontReopenProjects` command line flag to not open the last project when starting MPS. It helps to access the general settings or to remove plugins.
+
 !!! failure "MPS cannot find languages/solutions."
 
     > For instance: "language X is not deployed" errors.
