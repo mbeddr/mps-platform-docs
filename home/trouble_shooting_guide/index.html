@@ -1662,6 +1662,17 @@ plugins you have installed. Some IntelliJ plugins that can be found on the marke
 editor from <abbr title="Meta Programming System">MPS</abbr>. Firewalls and <a href="https://www.jetbrains.com/help/mps/settings-http-proxy.html">proxies ⧉</a> could also affect <abbr title="Meta Programming System">MPS</abbr> negatively.</p>
 </div>
 <div class="admonition failure">
+<p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> freezes on startup.</p>
+<p>There can be multiple reasons for freezes at startup:</p>
+<ul>
+<li>an infinite loop in an application/project plugin</li>
+<li>wrong usage of threading mechanisms that lead to a <a href="https://www.javatpoint.com/deadlock-in-java">deadlock ⧉</a>.</li>
+<li>the startup module maker compiles not built modules</li>
+<li>a deadlock occurs because some code interferes with <a href="https://plugins.jetbrains.com/docs/intellij/indexing-and-psi-stubs.html#indexes">indexing ⧉</a> files</li>
+</ul>
+<p>If you know the offending module/model, the simplest solution is to delete the generated files in the file explorer (source_gen/classes_gen). Then fix the error and recompile the module/module.When you are unsure where the error comes from, you can do <a href="https://specificlanguages.com/articles/debugging/">remote debugging ⧉</a>. There is also the <code>dontReopenProjects</code> command line flag to not open the last project when starting <abbr title="Meta Programming System">MPS</abbr>. It helps to access the general settings or to remove plugins.</p>
+</div>
+<div class="admonition failure">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> cannot find languages/solutions.</p>
 <blockquote>
 <p>For instance: "language X is not deployed" errors.</p>
@@ -1861,7 +1872,7 @@ The tests can be executed locally with <code>./gradlew ant-build-tests -Dmps.hom
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2023</span>
       
     
   </small>

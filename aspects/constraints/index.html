@@ -1860,13 +1860,20 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
 <p>A parent scope asks your node or up in the hierarchy for the scope until it finds a scope provider.
 <code>super.getScope</code> will use the implementation from the super-concept.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What does the resolve attribute in the XML files is used for? It often shows up in the <abbr title="difference">diff</abbr> tool or when running migrations.</p>
+<p>The resolve attribute helps to bind references again. Assume you have a Base Language class that declares a variable <em>myVar</em> that you refer to. Now you delete the variable, which destroys the reference to that variable. Then you create a parameter called myVar. After pressing F5, the variable reference is bound to the parameter again.</p>
+<p>This rebinding also works after restarting <abbr title="Meta Programming System">MPS</abbr> because the reference text string is stored. Now, If you change the name of <em>myVar</em> to <em>myParam</em>, <abbr title="Meta Programming System">MPS</abbr> automatically updates the projection. It also updates the reference in the same model, <strong>not</strong> everywhere (because that would be a global search). Note: You can rename it everywhere if you don't just type over the name of <em>myVar</em> but use <em>rename refactoring</em> (F6) . If you had a reference to <em>myVar</em> in some unrelated model, maybe even in a different module, <em>resolveInfo</em> would not be updated.</p>
+<p><abbr title="Meta Programming System">MPS</abbr> updates the <em>resolveInfo</em> at some point, most of the time when it rewrites the model. That might happen during migration. You can also force it by choosing <em>main menu</em> &rarr; <em>File</em> &rarr; <em>Save All</em>.</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/enikao" title="GitHub User: enikao">@enikao</a><sub></p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2023</span>
       
     
   </small>
