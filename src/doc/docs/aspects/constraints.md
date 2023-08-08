@@ -80,3 +80,13 @@ The inherited scope is often used for references that inherit the referenced con
 
     A parent scope asks your node or up in the hierarchy for the scope until it finds a scope provider.
     `super.getScope` will use the implementation from the super-concept.
+
+!!! question "What does the resolve attribute in the XML files is used for? It often shows up in the diff tool or when running migrations."
+
+    The resolve attribute helps to bind references again. Assume you have a Base Language class that declares a variable *myVar* that you refer to. Now you delete the variable, which destroys the reference to that variable. Then you create a parameter called myVar. After pressing F5, the variable reference is bound to the parameter again.
+    
+    This rebinding also works after restarting MPS because the reference text string is stored. Now, If you change the name of *myVar* to *myParam*, MPS automatically updates the projection. It also updates the reference in the same model, **not** everywhere (because that would be a global search). Note: You can rename it everywhere if you don't just type over the name of *myVar* but use *rename refactoring* (F6) . If you had a reference to *myVar* in some unrelated model, maybe even in a different module, *resolveInfo* would not be updated.
+    
+    MPS updates the *resolveInfo* at some point, most of the time when it rewrites the model. That might happen during migration. You can also force it by choosing *main menu* --> *File* --> *Save All*.
+
+    {{ contribution_by('enikao') }}
