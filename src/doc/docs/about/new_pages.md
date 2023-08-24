@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## August 2023
+
+- [Pull Request Checklist](after_coding.md)
+
 ## July 2023
 
 - [Home: Overcoming Obstacles](overcoming_obstacles.md)

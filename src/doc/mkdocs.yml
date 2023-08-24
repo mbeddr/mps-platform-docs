@@ -411,6 +411,11 @@ nav:
   - Reference:
     - Being a Good Developer: reference/being_a_good_developer.md
     - Tips for Open Source Maintainers: reference/tips_for_os_maintainers.md
+    - Pull Request Checklist:
+      - After Coding: reference/pr_checklist/after_coding.md
+      - Before Pushing or When Creating the PR: reference/pr_checklist/push_and_pr.md
+      - After Review/Reimplementation: reference/pr_checklist/after_review.md
+      - Miscellaneous: reference/pr_checklist/pr_misc.md
     - Icons: reference/icons.md
     - Core Languages: reference/core_languages.md
     - Standard Plugins: reference/standard_plugins.md
