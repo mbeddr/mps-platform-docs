@@ -115,6 +115,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#example-queries" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -696,6 +701,17 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Console
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -705,6 +721,30 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-queries" class="md-nav__link">
+    Example queries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1491,6 +1531,21 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-queries" class="md-nav__link">
+    Example queries
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1556,6 +1611,44 @@ Additional to the provided commands, you can use it for the following common tas
   queries to constrain the amount of results. Ensure to not use too expensive queries (e.g. <code>#nodes&lt;scope = global&gt;</code>) or else 
   you might wait for your results for a while.</li>
 </ul>
+<h2 id="example-queries">Example queries<a class="headerlink" href="#example-queries" title="Permanent link">&para;</a></h2>
+<p>Find the action declaration for <em>Show Node in Explorer</em>: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">#</span><span class="n">instances</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ActionDeclaration</span><span class="p">).</span><span class="na">where</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">caption</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">caption</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Show Node in Explorer&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Delete all instances of a deprecated node in the project (with preview):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">#</span><span class="n">instances</span><span class="p">(</span><span class="n">ClassConcept</span><span class="p">).</span><span class="na">refactor</span><span class="p">({</span><span class="o">~</span><span class="n">node</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">detach</span><span class="p">;</span><span class="w"> </span><span class="p">})</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Delete all generates files in the project.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="err">#</span><span class="n">clean</span><span class="p">(</span><span class="o">&lt;</span><span class="n">project</span><span class="o">&gt;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="err">#</span><span class="n">removeGenSources</span><span class="p">(</span><span class="o">&lt;</span><span class="n">project</span><span class="o">&gt;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Query classes for a specific property and collect some results.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">nlist</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nlist</span><span class="o">&lt;&gt;</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="err">#</span><span class="n">instances</span><span class="p">(</span><span class="n">ClassConcept</span><span class="p">).</span><span class="na">where</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">getFqName</span><span class="p">().</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;com.mbeddr&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">constructors</span><span class="p">().</span><span class="na">isNotEmpty</span><span class="p">;</span><span class="w"> </span><span class="p">}).</span><span class="na">forEach</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">results</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">fields</span><span class="p">());</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">results</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Find all installed modules and their descriptor files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="err">#</span><span class="n">modules</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="p">.</span><span class="na">where</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">isPackaged</span><span class="p">();</span><span class="w"> </span><span class="p">}).</span><span class="na">select</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="n">AbstractModule</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">AbstractModule</span><span class="p">)</span><span class="w"> </span><span class="n">it</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="n">module</span><span class="p">.</span><span class="o">?</span><span class="n">getDescriptorFile</span><span class="p">().</span><span class="o">?</span><span class="n">toRealPath</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">})</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">I can't enter the print statement.</p>
 <p>Nested structures don't support it (<a href="https://youtrack.jetbrains.com/issue/MPS-34656"><abbr title="Meta Programming System">MPS</abbr>-34656 ⧉</a>). Use it at the top level instead. If you need to output multiple objects,
@@ -1583,7 +1676,10 @@ and belongs to a temporary model. It is possible to open it in a regular tab. Ri
 </div>
 <div class="admonition warning">
 <p class="admonition-title">After executing the current line, an error says that the compiler couldn't find the console class.</p>
-<p>This error can happen when the console's compilation of the model is unsuccessful. It can happen if you import a custom generation
+<p>You might have a dependency on some model, that interferes with the console's classpath. Make sure that you don't have any
+  broken references in previous console items or press <em>Clear</em> to delete all items except the current one. If nothing helps,
+  restart <abbr title="Meta Programming System">MPS</abbr>.</p>
+<p>This error can also happen when the console's compilation of the model is unsuccessful or if you import a custom generation
 plan into the console that turns off some generators. It can also occur if you import a solution that doesn’t enable the Java facet or has a different solution (e.g., <em>other</em>).</p>
 </div>
 <div class="admonition question">
@@ -1615,7 +1711,7 @@ for more <abbr title="information">info</abbr>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2023</span>
       
     
   </small>
