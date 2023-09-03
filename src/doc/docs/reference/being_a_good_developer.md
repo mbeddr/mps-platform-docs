@@ -73,7 +73,7 @@ You might have to deal with one of the following topics when you develop a new f
     - [Anxious during conference calls](https://interpersonal.stackexchange.com/questions/3265/anxious-during-conference-calls)
     - [When is it okay to ask "stupid" questions in the workplace?](https://interpersonal.stackexchange.com/questions/1701/when-is-it-okay-to-ask-stupid-questions-in-the-workplace)
     - [Knowing when you should send a message instead of asking in person](https://interpersonal.stackexchange.com/questions/20992/knowing-when-you-should-send-message-instead-of-asking-in-person)
-    - [How to make sure I understandd a work assignment correctly?](https://interpersonal.stackexchange.com/questions/5481/how-to-make-sure-i-understood-a-work-assignment-correctly)
+    - [How to make sure I understand a work assignment correctly?](https://interpersonal.stackexchange.com/questions/5481/how-to-make-sure-i-understood-a-work-assignment-correctly)
     - [How to respond when you are asked for an estimate?](https://softwareengineering.stackexchange.com/questions/648/how-to-respond-when-you-are-asked-for-an-estimate)
 
 === "Customers"

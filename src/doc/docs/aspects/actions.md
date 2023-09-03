@@ -61,8 +61,10 @@ The action aspect defines node factories and copy/paste related handlers.
 
     [CopyPasteUtil](http://127.0.0.1:63320/node?ref=r%3A84719e1a-99f6-4297-90ba-8ad2a947fa4a%28jetbrains.mps.ide.datatransfer%29%2F6299533519672638253) can help you with those two actions.
 
-!!! warning "I have an interface `IStatement `and two concepts `StatementA`, and `StatementB`, that implement the interface. I paste a node of concept `StatementA` into a node of concept `StatementB` into a role that accepts `IStatement`. Why is the paste wrapper not called?"
+!!! warning "I have an interface `IStatement `and two concepts `StatementA`, and `StatementB`, that implement that interface. I paste a node of concept `StatementA` into a node of concept `StatementB` into a role that accepts `IStatement`. Why is the paste wrapper not called?"
 
     A paste wrapper only modifies the pasted node if it can change the source concept to the target concept
     and if the pasted node is not already an instance of the target concept. In the described case, the node of concept `StatementA` is already
     an instance of `IStatement`, and the paste wrapper is not called.
+
+    *Edit: Not sure if this is really correct. Maybe the problem was rather that the paste wrapper was not implement for the direct concept but for the common interface.*

@@ -167,6 +167,7 @@
         - [ ] Mapping configurations have an applicable block set.
         - [ ] The generator runs deterministically.
         - [ ] Necessary attributes are not lost between generation steps.
+        - [ ] `Pick output` is used instead of `get output to have scoping checks.
 
     === "Expert"
 

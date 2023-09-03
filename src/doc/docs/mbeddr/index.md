@@ -17,8 +17,7 @@ the reusable parts of mbeddr that don't deal with C code. The platform comes wit
 !!! warning "I am using some mbeddr languages in my project, but some aren't deployed."
 
     There might be some additional plugins that you need to install:
-    
-    - ^^de.itemis.mps.nativelibs.loader^^
+
     - ^^com.mbeddr.mpsutil.actionsfilter^^
     - ^^mbeddr.spawner^^
 

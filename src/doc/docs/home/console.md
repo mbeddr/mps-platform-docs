@@ -27,6 +27,49 @@ Additional to the provided commands, you can use it for the following common tas
   queries to constrain the amount of results. Ensure to not use too expensive queries (e.g. `#nodes<scope = global>`) or else 
   you might wait for your results for a while.
 
+## Example queries
+
+Find the action declaration for *Show Node in Explorer*: 
+
+```java
+#instances<scope = global>(ActionDeclaration).where(
+  {~it => it.caption != null && it.caption.contains("Show Node in Explorer"); })
+```
+
+Delete all instances of a deprecated node in the project (with preview):
+
+```java
+#instances(ClassConcept).refactor({~node => node.detach; })
+```
+
+Delete all generates files in the project.
+
+```java
+{ 
+  #clean(<project>); 
+  #removeGenSources(<project>); 
+}
+```
+
+Query classes for a specific property and collect some results.
+
+```java
+{
+    nlist<> results = new nlist<>; 
+    #instances(ClassConcept).where({~it => it.getFqName().startsWith("com.mbeddr") && it.constructors().isNotEmpty; }).forEach({~it => results.addAll(it.fields()); });
+    #print results;
+}
+```
+
+Find all installed modules and their descriptor files:
+
+```java
+#modules<scope = global>.where({~it => it.isPackaged(); }).select({~it => 
+  AbstractModule module = ((AbstractModule) it); 
+  module.?getDescriptorFile().?toRealPath(); 
+})
+```
+
 !!! warning "I can't enter the print statement."
 
     Nested structures don't support it (MPS-34656). Use it at the top level instead. If you need to output multiple objects,
@@ -54,7 +97,11 @@ Additional to the provided commands, you can use it for the following common tas
 
 !!! warning "After executing the current line, an error says that the compiler couldn't find the console class."
 
-    This error can happen when the console's compilation of the model is unsuccessful. It can happen if you import a custom generation
+      You might have a dependency on some model, that interferes with the console's classpath. Make sure that you don't have any
+      broken references in previous console items or press *Clear* to delete all items except the current one. If nothing helps,
+      restart MPS.
+
+    This error can also happen when the console's compilation of the model is unsuccessful or if you import a custom generation
     plan into the console that turns off some generators. It can also occur if you import a solution that doesn’t enable the Java facet or has a different solution (e.g., *other*).
 
 !!! question "What does the expression #internalMode do?"
