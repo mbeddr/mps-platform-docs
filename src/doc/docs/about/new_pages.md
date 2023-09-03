@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## September 2023
+
+- [Platform Essentials: Platform Migration Guide](platform_migration_guide.md)
+
 ## August 2023
 
 - [Pull Request Checklist](after_coding.md)
