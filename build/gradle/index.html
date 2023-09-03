@@ -944,9 +944,29 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradle-tips" class="md-nav__link">
-    Gradle Tips
+  <a href="#mps-gradle-tips" class="md-nav__link">
+    MPS Gradle Tips
   </a>
+  
+    <nav class="md-nav" aria-label="MPS Gradle Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-properties" class="md-nav__link">
+    Project Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-properties" class="md-nav__link">
+    System Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -958,49 +978,16 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#location-of-dependencies" class="md-nav__link">
+    Location of Dependencies
   </a>
-  
-    <nav class="md-nav" aria-label="Dependencies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dependencies-inside-the-buildscript-block" class="md-nav__link">
-    Dependencies Inside the buildscript{...} Block
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencies-outside-the-buildscript-block" class="md-nav__link">
-    Dependencies Outside the buildScript{...} Block
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-gradle-plugin" class="md-nav__link">
-    Creating a Gradle Plugin
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
   </a>
-  
-    <nav class="md-nav" aria-label="Creating a Gradle Plugin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standalone-project" class="md-nav__link">
-    Standalone Project
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1488,9 +1475,29 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradle-tips" class="md-nav__link">
-    Gradle Tips
+  <a href="#mps-gradle-tips" class="md-nav__link">
+    MPS Gradle Tips
   </a>
+  
+    <nav class="md-nav" aria-label="MPS Gradle Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-properties" class="md-nav__link">
+    Project Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-properties" class="md-nav__link">
+    System Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1502,49 +1509,16 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#location-of-dependencies" class="md-nav__link">
+    Location of Dependencies
   </a>
-  
-    <nav class="md-nav" aria-label="Dependencies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dependencies-inside-the-buildscript-block" class="md-nav__link">
-    Dependencies Inside the buildscript{...} Block
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencies-outside-the-buildscript-block" class="md-nav__link">
-    Dependencies Outside the buildScript{...} Block
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-gradle-plugin" class="md-nav__link">
-    Creating a Gradle Plugin
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
   </a>
-  
-    <nav class="md-nav" aria-label="Creating a Gradle Plugin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standalone-project" class="md-nav__link">
-    Standalone Project
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1587,6 +1561,10 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <p><a href="https://docs.gradle.org/current/userguide/what_is_gradle.html">gradle.<abbr title="organization">org</abbr> ⧉</a> contains documentation about Gradle.
 <a href="https://docs.gradle.org/current/userguide/groovy_build_script_primer.html">A Groovy Build Script Primer ⧉</a> explains the used
 features of the Groovy languages. If you want to use Kotlin instead, start with the <a href="https://docs.gradle.org/current/userguide/kotlin_dsl.html">Gradle Kotlin <abbr title="Domain-Specific Language">DSL</abbr> Primer</a>. <a href="https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html">Migrating build logic from Groovy to Kotlin</a> might also be helpful. To automatically convert between Groovy and Kotlin syntax, you can use <a href="https://gradle-kotlinize.web.app/">Gradle Kotlinize ⧉</a>. Many manual corrections are still necessary.</p>
+<p>Why do we use Gradle? Gradle build scripts have the advantage that you write code instead of XML, like it's the case using Maven or Ant.
+We use Gradle to download <abbr title="Meta Programming System">MPS</abbr> and the dependencies in the correct version and put them in the right place, generate the Ant scripts from the <abbr title="Meta Programming System">MPS</abbr> build scripts using a <code>build-allScripts.xml</code> Ant script and then start Ant with correct parameters (where is <abbr title="Meta Programming System">MPS</abbr> on disc, where are the dependencies on disc, &hellip;).
+You can define the Gradle scripts using Groovy (<code>build.gradle</code>) or Kotlin (<code>build.gradle.kts</code>). Groovy is enough for smaller building scripts, but it's dynamically typed and thus fails late when the Gradle task executes. Kotlin provides type checking; auto-completion works better with Kotlin than Groovy inside IntelliJ IDEA.</p>
+<p>To get a better idea how our build scripts look like, head over to <a href="../../platform_essentials/platform_build_scripts/">Platform Essentials: Platform Build Scripts</a>.</p>
 <h2 id="useful-gradle-plugins-for-mps-projects">Useful Gradle Plugins for <abbr title="Meta Programming System">MPS</abbr> Projects<a class="headerlink" href="#useful-gradle-plugins-for-mps-projects" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong><a href="https://github.com/mbeddr/mps-gradle-plugin">mps-gradle-plugin ⧉</a></strong> contains miscellaneous practical tasks when building <abbr title="Meta Programming System">MPS</abbr>-based projects with Gradle. Many projects use this plugin.</li>
@@ -1793,84 +1771,38 @@ private_token=YYY
 <p class="admonition-title">How to run a Gradle task from Java code?</p>
 <p>Use the Gradle wrapper or the Gradle tooling <abbr title="Application Programming Interface">API</abbr> as described in this <a href="https://stackoverflow.com/a/49877200/16577108">StackOverflow answer ⧉</a>.</p>
 </div>
-<h2 id="gradle-tips">Gradle Tips<a class="headerlink" href="#gradle-tips" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>closures</td>
-<td>The closure does <code>it (delay)  {}</code>, which will delay the value propagation to execution instead of configuration time.</td>
-</tr>
-<tr>
-<td>buildAll scripts</td>
-<td>This is the <abbr title="metadata">meta</abbr>-build script (platforms only). <abbr title="Meta Programming System">MPS</abbr> generates the build model, and its artifact (ant-xml task) is committed to the Gradle <abbr title="repository">repo</abbr>.</td>
-</tr>
-<tr>
-<td>project properties</td>
-<td><ul><li>can be defined as <em><abbr title="extension">ext</abbr>.myPropName</em></li><li>passed through: -<b>P</b>myPop_name from CL</li><li> can be accessed like variables in the build project</li><li>can be checked if they are set or not </li></ul></td>
-</tr>
-<tr>
-<td>System properties</td>
-<td><ul><li>passed through <b>-D</b> from CL</li><li>are available in the Gradle build file through normal Java mechanism: <i>System.getProperty();</i></li><li>Project properties can be specified as system properties. Prefix them with <i><abbr title="organization">org</abbr>.gradle.project.NAME</i></li></ul></td>
-</tr>
-<tr>
-<td>gradle.properties</td>
-<td><ul><li>are by default project properties</li><li>if they are prefixed with <code>systemProp.</code>, they are system properties</li></ul></td>
-</tr>
-<tr>
-<td>configurations</td>
-<td>are also separated in the same way as dependencies</td>
-</tr>
-</tbody>
-</table>
+<h2 id="mps-gradle-tips"><abbr title="Meta Programming System">MPS</abbr> Gradle Tips<a class="headerlink" href="#mps-gradle-tips" title="Permanent link">&para;</a></h2>
+<p>A common question with Gradle in <abbr title="Meta Programming System">MPS</abbr> is: how to you pass values to Ant scripts. In general, there are two types of properties:</p>
+<h3 id="project-properties">Project Properties<a class="headerlink" href="#project-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>can be defined as <em><abbr title="extension">ext</abbr>.myPropName</em></li>
+<li>can be passed through <em>PmyPop_name</em> from the command line</li>
+<li>can be accessed like variables in the build projects</li>
+<li>can be checked if they are set or not</li>
+</ul>
+<h3 id="system-properties">System Properties<a class="headerlink" href="#system-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>can be passed through <em>-D</em> from the command line</li>
+<li>are available in the Gradle build file through normal Java mechanism: <code>System.getProperty()</code></li>
+<li>Project properties can be specified as system properties. Prefix them with <em><abbr title="organization">org</abbr>.gradle.project.NAME</em>.</li>
+</ul>
+<p>The properties in this file are by default project properties. If they are prefixed with <code>systemProp.</code>, they are system properties.</p>
 <h2 id="gradle-wrapper-gradlewgradlewbat">Gradle Wrapper (<em>gradlew/gradlew.bat</em>)<a class="headerlink" href="#gradle-wrapper-gradlewgradlewbat" title="Permanent link">&para;</a></h2>
 <p>The Gradle wrapper script downloads Gradle in the specified version, independent of your locally installed Gradle, and then starts the downloaded Gradle.
 It consists of a small java program (located under <code>./gradle/wrapper/gradle-wrapper.jar</code>), an <abbr title="initialization">init</abbr>-file that contains the Gradle version (<code>./gradle/wrapper/gradle-wrapper.properties</code>), and start scripts for Windows, Mac, and Linux (<code>./gradlew</code> and <code>./gradlew.bat</code>).</p>
-<p>Why do we use Gradle? Gradle build scripts have the advantage that you write code instead of XML, like it's the case using Maven or Ant.
-We use Gradle to download <abbr title="Meta Programming System">MPS</abbr> and the dependencies in the correct version and put them in the right place, generate the Ant scripts from the <abbr title="Meta Programming System">MPS</abbr> build scripts using a <code>build-allScripts.xml</code> Ant script and then start Ant with correct parameters (where is <abbr title="Meta Programming System">MPS</abbr> on disc, where are the dependencies on disc, &hellip;).
-You can define the Gradle scripts using Groovy (<code>build.gradle</code>) or Kotlin (<code>build.gradle.kts</code>). Groovy is enough for smaller building scripts, but it's dynamically typed and thus fails late when the Gradle task executes. Kotlin provides type checking; auto-completion works better with Kotlin than Groovy inside IntelliJ IDEA.</p>
-<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
-<h3 id="dependencies-inside-the-buildscript-block">Dependencies Inside the buildscript{&hellip;} Block<a class="headerlink" href="#dependencies-inside-the-buildscript-block" title="Permanent link">&para;</a></h3>
-<ul>
-<li>They are placed on the classpath of the build script itself (for the current Gradle file, which will also be compiled (like java))</li>
-<li>To be able to compile the build script into bytecode, Gradle needs to resolve its dependencies.</li>
-</ul>
-<h3 id="dependencies-outside-the-buildscript-block">Dependencies Outside the buildScript{&hellip;} Block<a class="headerlink" href="#dependencies-outside-the-buildscript-block" title="Permanent link">&para;</a></h3>
-<ul>
-<li>They are project dependencies.</li>
-<li>These dependencies are added to the project code's classpath. For example, Gson is used inside a Gradle project and needs to be on the project's classpath to compile the project.</li>
-</ul>
+<h2 id="location-of-dependencies">Location of Dependencies<a class="headerlink" href="#location-of-dependencies" title="Permanent link">&para;</a></h2>
+<p>Read more about <a href="https://www.baeldung.com/gradle-buildscripts-blocks">BuildScripts Blocks in Gradle ⧉</a>.
+Dependencies inside the build script block are placed on the classpath of the build script itself (for the current Gradle file, which will also be compiled like Java). To be able to compile the build script into bytecode, Gradle needs to resolve its dependencies.</p>
+<p>Dependencies outside the build script block are project dependencies. These dependencies are added to the project code's classpath. For example, Gson is used inside a Gradle project and needs to be on the project's classpath to compile the project.</p>
 <p>If the dependency is only used in the build script (i.e., only from the <code>build.gradle</code> file), then it should be in a <code>buildscript { }</code> block. Dependencies used in both project code and build scripts will effectively need to be listed twice.</p>
 <p><a href="https://medium.com/agorapulse-stories/gradle-configurations-explained-4b9608dd5e35">Gradle Configurations Explained: What is the difference between <abbr title="Application Programming Interface">API</abbr> and Implementation? | medium.<abbr title="commercial/common/communication">com</abbr> ⧉</a> contains a good explanation of Gradle configurations.</p>
-<h2 id="creating-a-gradle-plugin">Creating a Gradle Plugin<a class="headerlink" href="#creating-a-gradle-plugin" title="Permanent link">&para;</a></h2>
-<p>You have to decide between three choices:</p>
+<h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
 <ul>
-<li>build script</li>
-<li>buildSrc project</li>
-<li>standalone project</li>
-</ul>
-<h3 id="standalone-project">Standalone Project<a class="headerlink" href="#standalone-project" title="Permanent link">&para;</a></h3>
-<ul>
-<li>define all dependencies in the Gradle file</li>
-<li>create a properties file in the resource folder with the same name as the plugin <abbr title="identification/identifier">id</abbr><ul>
-<li>example:  <code>org.samples.greeting.properties</code> in <code>src/main/resources/META-INF/gradle-plugins/</code></li>
-</ul>
-</li>
-<li>plugin IDs<ul>
-<li>full qualified identifiers, similar to Java packages</li>
-<li>Use pattern component/company/plugin-name</li>
-<li>examples<ul>
-<li><code>com.github.[name].[plugin-name]</code></li>
-<li><code>com.github.[arimer].[migration-checker]</code></li>
-</ul>
-</li>
-</ul>
-</li>
+<li>To delay the execution of code in Groovy build script, use closures. They will delay the value propagation to execution instead of configuration time (<a href="https://www.baeldung.com/groovy-closures">documentation ⧉</a>).</li>
+<li>Creating a custom Gradle Plugin is described in <a href="https://docs.gradle.org/current/userguide/custom_plugins.html">Developing Custom Gradle Plugins | gradle.<abbr title="organization">org</abbr> ⧉</a>.</li>
+<li>A standalone project defines all dependencies in the Gradle file. Create a properties file in the resource folder with the same name as the plugin <abbr title="identification/identifier">id</abbr>, for example, <code>org.samples.greeting.properties</code> in <code>src/main/resources/META-INF/gradle-plugins/</code></li>
+<li>plugin IDs are full qualified identifiers, similar to Java packages Use the pattern <em>component/company/plugin-name</em> form them,
+  for example, <code>com.github.[name].[plugin-name]</code> or <code>com.github.[arimer].[migration-checker]</code>.</li>
 </ul>
 
   <hr>
@@ -1878,7 +1810,7 @@ You can define the Gradle scripts using Groovy (<code>build.gradle</code>) or Ko
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2023</span>
       
     
   </small>
