@@ -12,13 +12,13 @@
         <meta name="author" content="MPS Platform Docs team">
       
       
-        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/aspects/refactorings/">
+        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/platform_essentials/platform_migration_guide/">
       
       
-        <link rel="prev" href="../typesystem/">
+        <link rel="prev" href="../accessing_the_project/">
       
       
-        <link rel="next" href="../scripts/">
+        <link rel="next" href="../../build/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Refactorings Aspect - MPS Platform Docs</title>
+        <title>Platform Migration Guide - MPS Platform Docs</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#refactorings-aspect" class="md-skip">
+        <a href="#buildpublishjdk" class="md-skip">
           Skip to content
         </a>
       
@@ -168,7 +168,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Refactorings Aspect
+              Platform Migration Guide
             
           </span>
         </div>
@@ -283,13 +283,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../structure/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../aspects/structure/" class="md-tabs__link">
           
   
     
@@ -325,11 +323,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../platform_essentials/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -519,8 +519,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -621,8 +619,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
   
   
-    
-  
   
     
     
@@ -656,442 +652,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Aspects
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Aspects
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../structure/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Structure
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../editor/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../actions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../constraints/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Constraints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../behavior/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Behavior
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feedback/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Feedback
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../typesystem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Typesystem
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Refactorings
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scripts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intentions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intentions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../findusages/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Find Usages
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plugin
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dataflow/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dataflow
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Test
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../textgen/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TextGen
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../migration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Migration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vcs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VCS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../generator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../accessory_models/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Accessory Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
       
         
       
@@ -1113,11 +673,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../documentation/" class="md-nav__link">
+    <a href="../../aspects/structure/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Contributed Aspects
+    Aspects
   </span>
   
 
@@ -1127,14 +687,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1191,6 +743,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
   
   
+    
+  
   
     
     
@@ -1219,28 +773,316 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
     
     
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../platform_essentials/" class="md-nav__link">
-      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Platform Essentials
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              <label class="md-nav__link " for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Essentials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_everything_is_connected/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Everything Is Connected
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common_concepts_and_interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Concepts and Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpreter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreter, Coverage, and Tracing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform_build_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Build Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_folder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build Folder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing_the_project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing the Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Platform Migration Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Platform Migration Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#buildpublishjdk" class="md-nav__link">
+    build.publish.jdk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buildpublishmps" class="md-nav__link">
+    build.publish.mps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps-extensions" class="md-nav__link">
+    MPS-Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mbeddrcore" class="md-nav__link">
+    mbeddr.core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iets3opensource" class="md-nav__link">
+    iets3.opensource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-to-test" class="md-nav__link">
+    Things to Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    Additional Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1656,9 +1498,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1667,8 +1507,70 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#buildpublishjdk" class="md-nav__link">
+    build.publish.jdk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buildpublishmps" class="md-nav__link">
+    build.publish.mps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps-extensions" class="md-nav__link">
+    MPS-Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mbeddrcore" class="md-nav__link">
+    mbeddr.core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iets3opensource" class="md-nav__link">
+    iets3.opensource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-to-test" class="md-nav__link">
+    Things to Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    Additional Tips
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1683,20 +1585,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 
                   
   
-  
-
-
-  <nav class="md-tags" >
-    
-      
-        
-        
-      
-      
-        <a href="../../tags/#aspect" class="md-tag md-tag-icon">aspect</a>
-      
-    
-  </nav>
 
 
 
@@ -1704,42 +1592,134 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 
 
-<h1 id="refactorings-aspect"><a href="https://www.jetbrains.com/help/mps/mps-refactoring.html">Refactorings Aspect</a><a class="headerlink" href="#refactorings-aspect" title="Permanent link">&para; ⧉</a></h1>
-<blockquote>
-<p>You can write simple refactorings using the language <ins>jetbrains.mps.<abbr title="language">lang</abbr>.refactoring</ins>.</p>
-<p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
-</blockquote>
-<p>The following questions are related to the old refactoring declarations. Use refactoring participants instead. They
-are explained in the documentation.</p>
-<div class="admonition question">
-<p class="admonition-title">Is this aspect widely used?</p>
-<p>No, there are just a few use cases, even in <abbr title="Meta Programming System">MPS</abbr> languages.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Can you link to an example that demonstrates this aspect?</p>
-<p><a href="http://127.0.0.1:63320/node?ref=r%3Ad9efd362-28b8-4f70-9bcd-fb582528d11c%28jetbrains.mps.lang.core.refactorings%29%2F1347577327951770664">Rename ⧉</a> implements the refactoring.
-<a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943353">RenameNode ⧉</a> implements the action.
-The action is part of the group <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8784230320738943351">CoreNodeRefactorings ⧉</a> which belongs to the
-<a href="http://127.0.0.1:63320/node?ref=r%3Ade82dfab-9448-49ba-813e-2b0579f7fb15%28jetbrains.mps.ide.platform.actions%29%2F6714826334259354054">NodeRefactoring</a> group. Base Language has its group called <a href="http://127.0.0.1:63320/node?ref=r%3Adfc27cab-2d08-4c79-ac99-e95209e18392%28jetbrains.mps.baseLanguage.pluginSolution.plugin%29%2F225095413451945663">RefactoringAdditions ⧉</a>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Can you change the concept of a node while keeping all properties, references, and children?</p>
-<p>Yes, call <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F7217668918201205170">RefactoringRuntime.replaceWithNewConcept ⧉</a> with your node and new concept as parameters. 
-In this class, there are other handy methods, such as <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035392526">changePropertyInstance(node, oldProp, newProp)</a> and <a href="http://127.0.0.1:63320/node?ref=528ff3b9-5fc4-40dd-931f-c6ce3650640e%2Fr%3Af69c3fa1-0e30-4980-84e2-190ae44e4c3d%28jetbrains.mps.lang.migration.runtime%2Fjetbrains.mps.lang.migration.runtime.base%29%2F4853505765035354594">changeReferenceLinkInstances(node, oldLink, newLink) ⧉</a>.</p>
-<p><a href="https://specificlanguages.com/posts/2022-01/20-changing-node-concept/">Changing the concept of a node ⧉</a> (<em>Specific Languages' blog</em>)</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">What should I put in the applicable block of the refactoring and its action?</p>
-<p>For the action, you can use <code>is applicable refactoring&lt;YourRefactoring&gt;()</code>. By default, refactorings are not disabled for read-only
-editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F8451255343455518243">update block</a> of the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-42e8-9ea4-402ec93eaf11%28jetbrains.mps.ide.refactoring.plugin%29%2F830211401282058525">MoveNodes ⧉</a> action for more information.</p>
-</div>
+  <h1>Platform Migration Guide</h1>
+
+<p>This guide walks you through migrating all <abbr title="Meta Programming System">MPS</abbr> platforms starting from uploading the new <abbr title="JetBrains Runtime">JBR</abbr> and ending at migrating <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a>.
+<em>MPS_VERSION</em> stands for the <abbr title="Meta Programming System">MPS</abbr> version such as 2022.3. Before starting the migration process, read <a href="https://www.jetbrains.com/help/mps/migration-guide.html">Migration Guide | <abbr title="Meta Programming System">MPS</abbr> Documentation ⧉</a> first. Before starting a migration for a platform, make sure that
+all commits have landed on master by merging the maintenance branches into each other starting from the oldest version.
+The last maintenance branch should then be merged into master, so that master has all the changes and can be used as the base
+for the new branch (cascading merge, <a href="https://github.com/JetBrains/MPS-extensions/pull/656">example ⧉</a>).</p>
+<h2 id="buildpublishjdk"><a href="https://github.com/mbeddr/build.publish.jdk">build.publish.jdk</a><a class="headerlink" href="#buildpublishjdk" title="Permanent link">&para; ⧉</a></h2>
+<p>This repository is responsible for publishing the <a href="https://github.com/JetBrains/JetBrainsRuntime">JetBrains Runtime Environment ⧉</a> to GitHub
+and the Nexus repository. It is needed by the <a href="https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x#download-jetbrains-runtime">download-jbr task of the mps-gradle-plugin ⧉</a>.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a new branch mps/<em>MPS_VERSION</em> and update the file <a href="https://github.com/mbeddr/build.publish.jdk/blob/master/gradle.properties">gradle.properties ⧉</a>. To find the new version, open <abbr title="Meta Programming System">MPS</abbr>, go to <em>About <abbr title="Meta Programming System">MPS</abbr></em>, and read the Runtime version.
+ On a Mac, you can also open the file <code>jbr/Contents/Info.plist</code> in the <abbr title="Meta Programming System">MPS</abbr> installation.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure that the published flavor still exists for the <abbr title="JetBrains Runtime">JBR</abbr> version. You can find the newest <abbr title="JetBrains Runtime">JBR</abbr> version for the corresponding IntelliJ platform <a href="https://github.com/JetBrains/JetBrainsRuntime#releases-based-on-jdk-17">here</a> (<a href="https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-17.0.6b653.34">example for <abbr title="JetBrains Runtime">JBR</abbr> 17 ⧉</a>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a <abbr title="Pull Request or Public Relations">PR</abbr> (<a href="https://github.com/mbeddr/build.publish.jdk/pull/10">example ⧉</a>) and merge it into master. If you update a maintenance <abbr title="Meta Programming System">MPS</abbr> version, use the existing branch as the target branch.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If the <em>downloadJBR</em> task from the <a href="https://github.com/mbeddr/mps-gradle-plugin/pull/139">mps-gradle-plugin ⧉</a> doesn't work anymore, for example due to a change in the structure of the <abbr title="JetBrains Runtime">JBR</abbr> or
+a different naming convention, create a <abbr title="Pull Request or Public Relations">PR</abbr> for the <a href="https://github.com/mbeddr/mps-gradle-plugin/tree/v1.x">v1.x ⧉</a> branch in the plugin
+  (<a href="https://github.com/mbeddr/mps-gradle-plugin/pull/139">example <abbr title="Pull Request or Public Relations">PR</abbr> ⧉</a>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If it doesn't exist: create a branch for the old master branch, named mps/<em>MPS_VERSION</em>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If everything worked, you should find the artifact on the Nexus server (<a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps:com%2Fjetbrains%2Fjdk%2Fjbr%2F17.0.7-b1000.6">example ⧉</a>).</li>
+</ul>
+<h2 id="buildpublishmps"><a href="https://github.com/mbeddr/build.publish.mps">build.publish.mps</a><a class="headerlink" href="#buildpublishmps" title="Permanent link">&para; ⧉</a></h2>
+<p>This repository is responsible for publishing <abbr title="Meta Programming System">MPS</abbr> to GitHub and the Nexus repository. It is necessary to download <abbr title="Meta Programming System">MPS</abbr> in the build script (<a href="https://github.com/JetBrains/MPS-extensions/blob/5d96c3e69192f8902cf9aa7d846d05ccfb65253d/build.gradle#L139">example</a>) which can then be set as the home directly for the Ant build script (<a href="https://github.com/JetBrains/MPS-extensions/blob/5d96c3e69192f8902cf9aa7d846d05ccfb65253d/build.gradle#L206">example ⧉</a>).</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a new branch mps/<em>MPS_VERSION</em> and update <em><abbr title="extension">ext</abbr>.mpsMajor</em> and <em><abbr title="extension">ext</abbr>.mpsBuild</em> to <em>MPS_VERSION</em> in <a href="https://github.com/mbeddr/build.publish.mps/blob/master/build.gradle">build.gradle ⧉</a>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check that all the JARs that are published still exist and were not removed or renamed. Change the paths accordingly and update the README.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Optional: Add this new information to the <abbr title="Meta Programming System">MPS</abbr> Platform Docs in <a href="http://mbeddr.com/mps-platform-docs/reference/included_libraries/">Reference-&gt;Included Libraries ⧉</a>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a <abbr title="Pull Request or Public Relations">PR</abbr> (<a href="https://github.com/mbeddr/build.publish.mps/pull/7">example</a>) and merge it into master. If you update a maintenance <abbr title="Meta Programming System">MPS</abbr> version, use the existing branch as the target branch (<a href="https://github.com/mbeddr/build.publish.mps/pull/9">example ⧉</a>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If it doesn't exist: create a branch for the old master branch, named mps/MPS_VERSION.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If everything worked, you should find the artifact on the Nexus server (<a href="https://artifacts.itemis.cloud/#browse/browse:maven-mps:com%2Fjetbrains%2Fmps%2F2022.3">example ⧉</a>).</li>
+</ul>
+<h2 id="mps-extensions"><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr>-Extensions</a><a class="headerlink" href="#mps-extensions" title="Permanent link">&para; ⧉</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check if there is already an existing branch mps/<em>MPS_VERSION</em> to start with.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update <em>jbrVersion</em> and <em><abbr title="extension">ext</abbr>.mpsMajor</em> in <a href="https://github.com/JetBrains/MPS-extensions/blob/master/build.gradle">build.gradle ⧉</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Follow the migration guide for <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a> unless not applicable.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the badge in <a href="https://github.com/JetBrains/MPS-extensions/blob/master/README.md">README.<abbr title="model">md</abbr> ⧉</a> to show the newly supported <abbr title="Meta Programming System">MPS</abbr> version.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the current supported versions in the documentation.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check all sandboxes and actions in the project manually to ensure that no errors are thrown.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check that no (new) error messages appear in the <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#logs-directory">log file ⧉</a>. If the error/warning is fixable has
+ to be decided on a case-by-case basis.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a <abbr title="Pull Request or Public Relations">PR</abbr> and merge it into master (<a href="https://github.com/JetBrains/MPS-extensions/pull/622">example</a>). If you update a maintenance <abbr title="Meta Programming System">MPS</abbr> version, use the existing branch as the target branch (<a href="https://github.com/JetBrains/MPS-extensions/pull/648">example ⧉</a>).</li>
+</ul>
+<h2 id="mbeddrcore"><a href="https://github.com/mbeddr/mbeddr.core">mbeddr.core</a><a class="headerlink" href="#mbeddrcore" title="Permanent link">&para; ⧉</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Read the <a href="http://mbeddr.com/mps-platform-docs/mbeddr/building_mbeddr_locally/">Mbeddr section ⧉</a>, especially how to run the migrations in all projects using <em>BigProject</em>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Follow the <abbr title="Meta Programming System">MPS</abbr>-Extensions Guide unless not applicable.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Follow the migration guide for <span class="twemoji">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <image width="32" height="32"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
+    />
+</svg>
+</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a> unless not applicable.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> For the manual testing part, focus especially on the tools and actions.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If it doesn't exist: create a branch for the old master branch, named maintenance/MPS_VERSION.</li>
+</ul>
+<h2 id="iets3opensource"><a href="https://github.com/IETS3/iets3.opensource">iets3.opensource</a><a class="headerlink" href="#iets3opensource" title="Permanent link">&para; ⧉</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> When possible, merge open pull requests first.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a new branch: feature/<em>MPS_VERSION</em> (e.g., feature/mps20212)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update <em>jbrVersion</em>, <em>major</em>, <em>minor</em>, <em><abbr title="extension">ext</abbr>.mpsVersion</em>, <em>mbeddrVersion</em> in <a href="https://github.com/IETS3/iets3.opensource/blob/master/build.gradle">build.gradle ⧉</a>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Regenerate the <em>all scripts</em> build file (build-allScripts.xml) with a single commit, and regenerate the build model.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Remove references to languages that don’t exist anymore, for example when a language was removed in a different platform.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Execute migrations (<em>Migrations</em> → <em>Run Migration Assistant</em>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the README (currently supported version).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a pull request (<a href="https://github.com/IETS3/iets3.opensource/pull/674">example</a>) for master. If you update a maintenance <abbr title="Meta Programming System">MPS</abbr> version, use the existing branch as the target branch (<a href="https://github.com/IETS3/iets3.opensource/pull/706">example ⧉</a>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Fix tests that don't work. Remove the commit with the migration if necessary and run the migration again after the fixes.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If it doesn't exist: create a branch for the old master branch, named maintenance/MPS_VERSION.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the base branch of the pull requests that were not merged yet to the old master branch.</li>
+</ul>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<p>This section gives some hints on how to find information and get help if you are getting stuck.</p>
+<p>Things to read about the new <abbr title="Meta Programming System">MPS</abbr> version:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/mps/whatsnew/">What's New in <abbr title="Meta Programming System">MPS</abbr> | <abbr title="Meta Programming System">MPS</abbr> ⧉</a></li>
+<li><a href="https://youtrack.jetbrains.com/issues/MPS?q=Affected%20versions:%202023.2">Known issues | YouTrack (e.g., <abbr title="Meta Programming System">MPS</abbr> 2023.2) ⧉</a></li>
+</ul>
+<p>Things to read about the new IntelliJ platform version in case there is a change:</p>
+<ul>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/api-changes-list.html">Incompatible Changes | IntelliJ Platform SDK ⧉</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/api-notable.html">Notable <abbr title="Application Programming Interface">API</abbr> changes | IntelliJ Platform SDK ⧉</a></li>
+<li><a href="https://plugins.jetbrains.com/docs/intellij/api-internal.html">Internal <abbr title="Application Programming Interface">API</abbr> Migration | IntelliJ Platform SDK ⧉</a></li>
+</ul>
+<p>For getting other help, please ask <a href="https://jetbrains-mps.slack.com/team/U02BYFW82LA">@apann ⧉</a> on Slack. He can send you to the
+right people if necessary.</p>
+<h2 id="things-to-test">Things to Test<a class="headerlink" href="#things-to-test" title="Permanent link">&para;</a></h2>
+<p>Despite having automatic tests, there are still a lot of topics that should be manually tested:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Can I run tests?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Can I run tests in the same process?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Do I see any suspicious fatal error messages in the bottom right corner?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Do actions with dynamic texts (e.g., <em>Run</em> -&gt; <em>Run KernelF tests</em>) still work?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Do different graphical notations still work? (e.g., tables, vertical and horizontal lines)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Do I see any changes in the editor of the collections test suite (many tests)?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Does anything bad happen when I click <em>Tools</em> -&gt; <em>Reload all classes</em>?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Does anything bad happen when I restart <abbr title="Meta Programming System">MPS</abbr>?</li>
+</ul>
+<h2 id="additional-tips">Additional Tips<a class="headerlink" href="#additional-tips" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> To make sure that all resolve infos are up to date, execute <em>File</em> &rarr; <em>Force Save All</em> before pushing. <ul>
+<li>If you use the linters from <a href="https://github.com/mbeddr/mps-qa/tree/master">mps-qa ⧉</a>: there is a linter to check the resolve infos</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Run <em>git clean -dfx</em> if you run into any troubles and need to remove all files including the generated ones.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> When you update the dependencies in the build script and nothing happens, execute: <code>./gradlew setup --refresh-dependencies</code> or <code>gradle.bat setup --refresh-dependencies</code> on Windows.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Do not</strong> disable languages/features because you can't fix the issue. Ask for help!</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The decision which <abbr title="Meta Programming System">MPS</abbr> platforms are maintained are which are not is decided internally based on usage in projects. Please ask, if you have any questions.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2023</span>
       
     
   </small>
@@ -1748,8 +1728,6 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
 
   
 
-
-  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -1880,12 +1858,10 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../typesystem/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Typesystem" rel="prev">
+          <a href="../accessing_the_project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Accessing the Project" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1895,20 +1871,20 @@ editors. Consult the <a href="http://127.0.0.1:63320/node?ref=r%3A97d6b60a-b381-
                 Previous
               </span>
               <div class="md-ellipsis">
-                Typesystem
+                Accessing the Project
               </div>
             </div>
           </a>
         
         
           
-          <a href="../scripts/" class="md-footer__link md-footer__link--next" aria-label="Next: Scripts" rel="next">
+          <a href="../../build/" class="md-footer__link md-footer__link--next" aria-label="Next: Build" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Scripts
+                Build
               </div>
             </div>
             <div class="md-footer__button md-icon">
