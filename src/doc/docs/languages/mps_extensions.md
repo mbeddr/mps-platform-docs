@@ -86,6 +86,11 @@ You must add new cells and rows in the editor (they can be read-only). They incl
     
     [Entering enumerations easier with grammar cells](https://specificlanguages.com/posts/2022-02/03-entering-enumerations-easier/){{ blog('sl') }}
 
+!!! question "How can I use the transformation language together with this language?"
+
+    Do hide the substitute menu for a concept, create an empty substitute menu for it. When you want to add entries the traditional
+    way through substitute menus, you have to use [substitute menu contribution](https://www.jetbrains.com/help/mps/transformation-menu-language.html#substitutemenucontribution) to not overwrite the automatically generated entries by the Grammar cells language.
+
 ## Querylist
 
 > ^^com.mbeddr.mpsutil.editor.querylist^^
