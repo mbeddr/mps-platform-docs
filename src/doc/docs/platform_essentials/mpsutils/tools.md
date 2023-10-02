@@ -12,10 +12,9 @@ Some of the tools are slightly experimental, so use them with care.
 
 > ^^com.mbeddr.mpsutil.contextactions^^
 
-!!! warning "Context Actions (JetBrains) and Context Actions 2 (mbeddr) tools exist. Please use the one from JetBrains instead of this language."
-
 This language adds a tool with context-specific editor actions that you can navigate with the mouse. For more information about the
-JetBrains implementation, visit the page [Context actions tool | MPS](https://www.jetbrains.com/help/mps/context-actions-tool.html)
+JetBrains implementation, visit the page [Context actions tool | MPS](https://www.jetbrains.com/help/mps/context-actions-tool.html).
+Two different tools exist, named *Context Actions* and *Context Actions 2* (mbeddr). The main difference between mbeddr and MPS context actions is that in mbeddr, it's possible to define actions in a plugin solution whereas with the MPS language you can only define actions in the editor aspect of a language. 
 
 ## Editing Guide
 
