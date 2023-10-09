@@ -123,7 +123,7 @@ You can have editor cells with actions and all other regular cell features.
 
     {{ contribution_by('jonaskraemer') }}
 
-??? "How Do I make sure that the elements are also read-only in the Inspector?"
+??? question "How Do I make sure that the elements are also read-only in the Inspector?"
 
     I have a concept A which has children b of concept B. Another concept C references A. C uses a querylist in the editor to show the list b of children. 
     As C does not own the list b (A owns it) we aim to restrict access to 'read-only'. We are setting the 'read-only' style on the query-list.
