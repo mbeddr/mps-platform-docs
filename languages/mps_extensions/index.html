@@ -1646,20 +1646,17 @@ Instead, you can use the <em>hyperlink-node</em> style attribute (also from mpsu
 <p>A common workaround to get similar behavior with <em>navigatable-node</em> is to point it to a child or parent of the desired node instead of that node itself.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jonaskraemer" title="GitHub User: jonaskraemer">@jonaskraemer</a><sub></p>
 </details>
-<p>!!! "How Do I make sure that the elements are also read-only in the Inspector?"</p>
-<div class="codehilite"><pre><span></span><code>&gt; I have a concept A which has children b of concept B. Another concept C references A. C uses a querylist in the editor to show the list b of children. 
-&gt; As C does not own the list b (A owns it) we aim to restrict access to &#39;read-only&#39;. We are setting the &#39;read-only&#39; style on the query-list.
-&gt; This ensures that the list b cannot be changed. But if the concept B has a property, which is editable in the inspector, then this apporoach
-&gt; does not work. We can still edit the property, even if the concept instances of B are displayed via a query-list. 
-&gt; To achieve this you have to setup a &#39;read-only&#39; style in the inspector editor for B with a query:
-
-![hyperlink node](images/read-only-query.png)
-
-&gt; This code snippet finds the main editor of C where the query-list is. Then it looks for the simple true/false &#39;read-only&#39; style set on the query-list.
-
-&lt;sub&gt;contributed by: @dbinkele&lt;sub&gt;
-</code></pre></div>
-
+<details>
+<summary>How Do I make sure that the elements are also read-only in the Inspector?</summary>
+<p>I have a concept A which has children b of concept B. Another concept C references A. C uses a querylist in the editor to show the list b of children. 
+As C does not own the list b (A owns it) we aim to restrict access to 'read-only'. We are setting the 'read-only' style on the query-list.
+This ensures that the list b cannot be changed. But if the concept B has a property, which is editable in the inspector, then this apporoach
+does not work. We can still edit the property, even if the concept instances of B are displayed via a query-list. 
+To achieve this you have to setup a 'read-only' style in the inspector editor for B with a query: </p>
+<p><a class="glightbox" href="../images/read-only-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hyperlink node" src="../images/read-only-query.png" /></a></p>
+<p>This code snippet finds the main editor of C where the query-list is. Then it looks for the simple true/false 'read-only' style set on the query-list.</p>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></p>
+</details>
 <h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins>de.itemis.mps.tooltips.structure</ins></p>
