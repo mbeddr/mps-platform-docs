@@ -123,6 +123,19 @@ You can have editor cells with actions and all other regular cell features.
 
     {{ contribution_by('jonaskraemer') }}
 
+!!! "How Do I make sure that the elements are also read-only in the Inspector?"
+
+    > I have a concept A which has children b of concept B. Another concept C references A. C uses a querylist in the editor to show the list b of children. 
+    > As C does not own the list b (A owns it) we aim to restrict access to 'read-only'. We are setting the 'read-only' style on the query-list.
+    > This ensures that the list b cannot be changed. But if the concept B has a property, which is editable in the inspector, then this apporoach
+    > does not work. We can still edit the property, even if the concept instances of B are displayed via a query-list. 
+    > To achieve this you have to setup a 'read-only' style in the inspector editor for B with a query: 
+
+    ![hyperlink node](images/read-only-query.png)
+
+    > This code snippet finds the main editor of C where the query-list is. Then it looks for the simple true/false 'read-only' style set on the query-list.
+
+    {{ contribution_by('dbinkele') }}
 ## Tooltips
 
 > ^^de.itemis.mps.tooltips.structure^^
