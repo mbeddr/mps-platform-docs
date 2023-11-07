@@ -48,7 +48,7 @@ tags:
 !!! question "How do you add messages to the right side of the window?"
 
     In IntelliJ IDEA, it is called an [error stripe](https://www.jetbrains.com/help/rider/Code_Analysis__Status_Indicator.html).
-    In MPS it is called [MessagesGutter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter):
+    In MPS it is called [messages gutter](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor%28MPS.Editor%2F%29%2F%7EMessagesGutter):
     ``` Java
     jetbrains.mps.nodeEditor.EditorComponent component = ((EditorComponent) editorContext.getEditorComponent()); 
     NodeHighlightManager highlightManager = component.getHighlightManager();

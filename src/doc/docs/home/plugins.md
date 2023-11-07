@@ -11,7 +11,7 @@ the same way you install MPS plugins. They use the same mechanisms from the Inte
 This page answers only general questions about plugins. You can find more information about plugins in [Plugins](plugins.md)
 which deals with the plugin aspect.
 
-!!! question "Where can you use a created language?"
+!!! question "Where can you use a created language? :beginner:"
 
     Use them in MPS or a custom IDE based on MPS (a so-called RCP). You need to create a build script, so you can export your plugins
     as real IntelliJ plugins that others can install. To ship all the plugins together with a custom branding, create an RCP.
@@ -23,11 +23,11 @@ which deals with the plugin aspect.
 
     The MPS community uses this functionality only sparingly or not at all. Most of the time, developers create custom RCPs for the end users.
 
-!!! question "How can you find plugins on the JetBrains marketplace usable in MPS?"
+!!! question "How can you find plugins on the JetBrains marketplace usable in MPS? :beginner:"
 
     Searching for the word [MPS](https://plugins.jetbrains.com/search?products=mps&search=MPS) in all categories should do the trick.
 
-!!! question "Why do many IntelliJ plugins don't work with MPS?"
+!!! question "Why do many IntelliJ plugins don't work with MPS? :beginner:"
 
     Many of these plugins operate on the lines in text files. MPS uses a projectional editor, which is incompatible with regular text editors. It doesn't use
     a document model or [PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) because MPS models are not text-based.
@@ -36,7 +36,7 @@ which deals with the plugin aspect.
 !!! question "Are there any general-purpose plugins for MPS from the community?"
     Have a look at the [plugin section](https://mps.rocks/#awesome-MPS) of [mps.rocks](https://mps.rocks).
 
-!!! question "Which kinds of plugins are there?"
+!!! question "Which kinds of plugins are there? :beginner:"
 
     - [Two kinds of MPS plugins](https://specificlanguages.com/posts/2022-01/24-two-kinds-of-plugins/){{ blog('sl') }}
     - [MPS plugins vs. IDEA plugins](https://specificlanguages.com/posts/2022-05/09-mps-plugins-vs-idea-plugins/){{ blog('sl') }}

@@ -10,11 +10,11 @@ alias: general
 
 This page answers some general questions about MPS and is most useful for :beginner: beginners.
 
-!!! question "Who is MPS for?"
+!!! question "Who is MPS for? :beginner:"
 
     [Who is MPS for?](https://specificlanguages.com/posts/who-is-mps-for/){{ blog('sl') }}
 
-!!! hint "I am an MPS beginner. Where do I start?"
+!!! hint "I am an MPS beginner. Where do I start? :beginner:"
 
     If you are new to MPS and want to learn more about MPS, start with the following links:
 
@@ -23,13 +23,13 @@ This page answers some general questions about MPS and is most useful for :begin
     - [Learning MPS | mps.rocks](https://mps.rocks/#learning-mps)
     - Getting Started: [Part I](https://www.f1re.io/getting-started){{ blog('F1RE') }}, [Part II](https://www.f1re.io/getting-started-pt2){{ blog('F1RE') }}
 
-??? question "Is there a high-level presentation that I can have a look at?"
+??? question "Is there a high-level presentation that I can have a look at? :beginner:"
 
     Yes, there is a presentation from 2020 by [Václav Pech](https://github.com/vaclav).
 
     <iframe src="https://drive.google.com/file/d/1ofeLyO4mGC9tkDN88xPedCCxp8cpflqK/preview" width="100%" height="640px" allow="autoplay" framborder="0"></iframe>
 
-!!! question "Are there any video tutorials besides the official videos?"
+!!! question "Are there any video tutorials besides the official videos? :beginner:"
 
     Yes, [Heavy Meta TV](https://heavymeta.tv) hosts in-depth tutorials about MPS for a total length of 20 hours.
     @coolya filmed the tutorials as part of a series of live streams in 2018/2019.
@@ -38,11 +38,11 @@ This page answers some general questions about MPS and is most useful for :begin
 
     Start with the slides: [Introduction to Domain-Specific Languages](http://voelter.de/data/presentations/dslIntro2023.pdf) by [Markus Völter](https://voelter.de/publications.html). On the [books page](https://voelter.de/books.html), there are also a few relevant books like DSL Engineering (2013) and How to Understand Almost Anything - A Practitioner's Guide to Domain Analysis (2013).
 
-!!! question "What are the essential shortcuts?"
+!!! question "What are the essential shortcuts? :beginner:"
 
     [JetBrains MPS Shortcuts](https://www.f1re.io/mps-shortcuts){{ blog('F1RE') }}
 
-!!! question "Which directory contains the MPS project?"
+!!! question "Which directory contains the MPS project? :beginner:"
 
     [Which directory contains the MPS project?](https://specificlanguages.com/posts/2022-08/08-which-directory-contains-the-mps-project/){{ blog('sl') }}
 
@@ -66,17 +66,17 @@ This page answers some general questions about MPS and is most useful for :begin
     When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models' indicator", "../gifs/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
     To free memory, use the memory indicator. As a last resort, enable the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=Power%20Save#status-bar-icons", "power-saving mode", "../gifs/power_saving_mode.gif", "power-saving mode") }}. It turns off background tasks like the model checker (not recommended).
 
-!!! question "What are modules, models, nodes, and concepts?"
+!!! question "What are modules, models, nodes, and concepts? :beginner:"
 
     - [What goes where: the basic architecture of MPS projects](https://specificlanguages.com/posts/2022-04/28-what-goes-where/){{ blog('sl') }}
     - [Ambiguous terms: Modules and models](https://specificlanguages.com/posts/2022-02/25-ambiguous-terms-modules-models/){{ blog('sl') }}
     - [How MPS Identifies Things](https://blog.logv.ws/2021/04/21/how-jetbrains-mps-identifies-things/){{ blog('lv') }}
 
-!!! question "Can you explain the MPS technology stack, project concepts, and OpenAPI relations?"
+!!! question "Can you explain the MPS technology stack, project concepts, and OpenAPI relations? :beginner:"
 
     [MPS technology stack, project concepts, and OpenAPI relations explained visually](https://dslfoundry.com/mps-technology-stack-project-concepts-and-openapi-relations-explained-visually/){{ blog('dslf') }}
 
-!!! question "What's an SRepository, and how's it structured?"
+!!! question "What's an SRepository, and how's it structured? :beginner:"
 
     The [MPS sources](https://github.com/JetBrains/MPS/blob/78a8983d975c3177461ae2553fd253bdc63baab6/core/openapi/source/org/jetbrains/mps/openapi/module/SRepository.java#L24) contain the answer. Multiple repositories could be available in the future. If you have a repository, it can resolve references to modules, models, and nodes.
     There's no need to make IDs globally unique as each subsystem knows which exact repository to use at any moment

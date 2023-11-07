@@ -20,11 +20,11 @@ generator configurations, the generator of this language will be invoked by defa
 
     [Create an MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/){{ blog('sl') }}
 
-!!! warning "Concept XY wasn't found in the language."
+!!! warning "Concept XY wasn't found in the language :beginner:"
 
     [Concept not found](https://specificlanguages.com/posts/2022-03/14-concept-not-found/){{ blog('sl') }}
 
-!!! question "How do you find examples of MPS concepts?"
+!!! question "How do you find examples of MPS concepts? :beginner:"
 
     [Finding examples of MPS concepts](https://specificlanguages.com/posts/2022-01/19-finding-examples/){{ blog('sl') }}
 
@@ -97,7 +97,7 @@ value.
 Changing this design decision later, means deprecating the string property and introducing a migration. If no standard
 migration is possible, users might even have to change their models manually.
 
-!!! question "How do you use a list of string properties?"
+!!! question "How do you use a list of string properties? :beginner:"
 
     Wrap your property into a new concept and use a child collection:
 

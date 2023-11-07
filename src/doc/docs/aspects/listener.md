@@ -12,7 +12,7 @@ This aspect allows the creation of listeners that can react to changes in the mo
 
 !!! question "How do you react to changes in the model?"
 
-    Use ^^com.mbeddr.mpsutil.modellisteners^^ from {{ mbeddr_platform() }}.
+    Use ^^com.mbeddr.mpsutil.modellisteners^^ from the {{ mbeddr_platform() }}.
 
 !!! question "Is there a way to listen to changes in any descendant?"
 

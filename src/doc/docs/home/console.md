@@ -70,7 +70,7 @@ Find all installed modules and their descriptor files:
 })
 ```
 
-!!! warning "I can't enter the print statement."
+!!! warning "I can't enter the print statement :beginner:"
 
     Nested structures don't support it (MPS-34656). Use it at the top level instead. If you need to output multiple objects,
     save them to a list first and output the list at the top level.
@@ -85,7 +85,7 @@ Find all installed modules and their descriptor files:
 
     ![find print statements](images/find_print_statement.png)]
 
-!!! warning "#nodes, #models, #usages, etc., don't show any result."
+!!! warning "#nodes, #models, #usages, etc., don't show any result :beginner:"
     Make sure that your query is correct. You must also set a scope for these statements in square brackets, such as
     `#!java #nodes<scope = global>`, to find all the nodes in the global scope.
 
@@ -111,7 +111,7 @@ Find all installed modules and their descriptor files:
     One of the new action groups that it adds is called *Internal*. There is also an Internal Actions Menu in the IntelliJ IDEA. Consult the [documentation](https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html)
     for more info.
 
-!!! question "How do you open the selected node in the console?"
+!!! question "How do you open the selected node in the console? :beginner:"
 
     > Given I have a node selected in the editor. How can I reference it to manipulate it in the MPS console?
 

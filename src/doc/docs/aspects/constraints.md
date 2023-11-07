@@ -31,7 +31,7 @@ reference as its name. For a reference *r*, you can implement [INamedConcept](ht
 
     Use the language ^^com.mbeddr.mpsutil.propertydefault^^ from {{ mbeddr_platform() }}.
 
-!!! warning "The property value isn't valid."
+!!! warning "The property value isn't valid :beginner:"
 
     Specific Languages Blog: [Invalid property values](https://specificlanguages.com/posts/2022-02/22-invalid-property-values/)
 

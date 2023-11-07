@@ -28,7 +28,7 @@ compare if the risky dirty build is worth the time you save.
 
     Edit the file mps(64).vmoptions and give it sufficient heap space: `-Xmx8g`
 
-!!! warning "MPS behaves strangely."
+!!! warning "MPS behaves strangely :beginner:"
 
     > For instance: claims that a method is missing, although it exists.
 
@@ -92,7 +92,7 @@ compare if the risky dirty build is worth the time you save.
         - :octicons-check-circle-16: --> Make sure the method returns true
     5. Concept: Does a constraint on one of the ancestor nodes prohibit you from creating it?
 
-!!! failure "MPS build fails."
+!!! failure "MPS build fails :beginner:"
 
     1. Does the MPS Model-Checker report problems? :octicons-check-circle-16: --> Fix identified problems.
     2. Does the build log report intelligible problems? :octicons-check-circle-16: --> Fix identified problems.

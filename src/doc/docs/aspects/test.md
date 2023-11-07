@@ -21,11 +21,11 @@ Fore more information about testing in general, read [MPS Internals | Testing](t
 
     It isn't supported. You must comment out the test case or add the \@Ignore attribute in the reflective editor. The only official statement supporting this functionality is the *assert* statement of KernelF ({{ mps_url("@iets3.AssertTestItem") }}).
 
-!!! question "What's the *TestInfo* node used for?"
+!!! question "What's the *TestInfo* node used for? :beginner:"
 
     [How to create a TestInfo node for your tests](https://specificlanguages.com/posts/how-to-create-testinfo-node-for-your-tests/){{ blog('sl') }}
 
-!!! warning "How do node tests work?"
+!!! warning "How do node tests work? :beginner:"
 
     [How do node tests work?](https://specificlanguages.com/posts/2022-02/23-how-node-tests-work/){{ blog('sl') }}
 
@@ -37,7 +37,7 @@ Fore more information about testing in general, read [MPS Internals | Testing](t
 
     Enter them as one long word without spaces in between, for example, *publictransientclass*.
 
-!!! warning "How to know if some MPS code is inside a test?"
+!!! warning "How do you know if some MPS code is inside a test?"
 
     > I am writing some code in MPS that is supposed to run if we're not running tests. How can I detect if I'm running a test?
 
@@ -360,7 +360,7 @@ can only be executed in a new instance. This is probably also true for other typ
 Additionally, the tests are executed in temporary models which results in changed node IDs and root nodes become normal nodes with parents in tests.
 Avoid adapting your code to work in the test models and avoid adding checks to see if you are in a test model.
 
-!!! warning "Tests aren't running at all."
+!!! warning "Tests aren't running at all :beginner:"
 
     A [test info node](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590388%28jetbrains.mps.lang.test.structure%29%2F5097124989038916362) has to
     be added to the model of the tests so that the tests can find the project's path. The project path also has to be set
@@ -376,7 +376,7 @@ Avoid adapting your code to work in the test models and avoid adding checks to s
 
     [Why does my test fail when run from Ant but not when run from MPS?](https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/){{ blog('sl') }}
 
-!!! failure "Why does the test execution fail with "Test project '$...' is not opened. Aborted"?"
+!!! failure "Why does the test execution fail with "Test project '$...' is not opened. Aborted"? :beginner:"
 
     It happens because you didn't set the variable in the `TestInfo`. Go to *File* --> *Settings* --> *Path Variables* and create an entry for your variable with a path to the project location on your hard drive.
 

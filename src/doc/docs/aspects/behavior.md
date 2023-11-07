@@ -79,7 +79,7 @@ Internally, there is also the idea of node owners that the JavaDoc of
 implementing classes describe. When you create a new node, the owner is an [FreeFloatNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner), This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an [AttachedNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner). After calling `myNode.detach` it has an [DetachedNodeOwner](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner).
 The node could go be added back to a model.
 
-??? question "How do you initialize a node?"
+??? question "How do you initialize a node? :beginner:"
 
     ```kroki-plantuml
 @from_file:aspects/diagrams/initialize_node_car_example.puml
@@ -129,7 +129,7 @@ The node could go be added back to a model.
     </figure>
     
 
-!!! question "Can you access the parent in the constructor?"
+!!! question "Can you access the parent in the constructor? :beginner:"
 
     No, it doesn't work because the node is not attached yet ([Concept constructors | MPS](https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors)). Use a [node factory](https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation) to access the parent instead.
 

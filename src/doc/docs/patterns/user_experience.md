@@ -5,7 +5,7 @@ tags:
 alias: ux
 ---
 
-# User experience and user interfaces
+# User Experience and User Interfaces
 
 !!! question "How can I start learning about user experience?"
 

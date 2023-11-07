@@ -28,15 +28,15 @@ tags:
     for more information. There is also a [blog post](https://specificlanguages.com/posts/2022-01/13-coderules-entering-exiting/)
     about this project. The new MPS implementation of the Kotlin language uses CodeRules. @JetBrains/mps-kotlin-typesystem contains more information. There is also a free course about it on [stepik](https://stepik.org/course/101057/promo).
 
-!!! question "Type system vs. constraints?"
+!!! question "Type system vs. constraints? :beginner:"
     
     [Type system vs. constraints](https://specificlanguages.com/posts/typesystem-vs-constraints/){{ blog('sl') }}
 
-!!! question "Subtyping vs. inheritance?"
+!!! question "Subtyping vs. inheritance? :beginner:"
     
     [Subtyping vs inheritance](https://specificlanguages.com/posts/2022-02/08-subtyping-vs-inheritance/){{ blog('sl') }}
 
-!!! question "How can you speed up model checks?"
+!!! question "How can you speed up model checks? (< 2021.2)"
     
     [Speeding up model checks with Scope Cache](https://specificlanguages.com/posts/2022-01/26-speeding-up-model-checks-with-scope-cache/){{ blog('sl') }}
 
@@ -80,7 +80,7 @@ tags:
 
     {{ contribution_by('sergej-koscejev') }}
 
-!!! question "How do you suppress errors?"
+!!! question "How do you suppress errors? :beginner:"
 
     > I have a piece of embedded demonstration code and don't want it to show warnings (e.g., on unused variables).
     > How can I do that?

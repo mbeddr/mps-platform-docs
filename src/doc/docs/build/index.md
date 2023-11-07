@@ -16,7 +16,7 @@ tags:
 
     [Build script error: "Dependency on a module not visible from current build project"](https://specificlanguages.com/posts/build-script-errors/dependency-on-a-module-not-visible-from-current-build-project/){{ blog('sl') }}
 
-!!! warning "Build script error: unsatisfied dependency."
+!!! warning "Build script error: unsatisfied dependency :beginner:"
 
     [Build script error: "Unsatisfied dependency"](https://specificlanguages.com/posts/build-script-errors/unsatisfied-dependency/){{ blog('sl') }}
 
@@ -46,7 +46,7 @@ tags:
 
     [Why can I successfully build models with missing imports?](https://specificlanguages.com/posts/2022-02/11-successfully-build-models-with-errors/) {{ blog('sl') }}
 
-!!! warning "X errors before generation."
+!!! warning "X errors before generation :beginner:"
     
     [3358 errors before generation](https://specificlanguages.com/posts/2022-02/17-errors-before-generation/){{ blog('sl') }}
 

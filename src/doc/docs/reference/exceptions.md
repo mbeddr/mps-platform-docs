@@ -22,7 +22,7 @@ Module validation refers to checkers that implement the interface *IChecker* and
 An example for such a checker is [StructureChecker](https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/project/validation/StructureChecker.java#L57). They are
 registered in the component plugin [MPSProjectValidation](https://github.com/JetBrains/MPS/blob/master/core/project-check/source/jetbrains/mps/core/platform/MPSProjectValidation.java#L42)
 
-!!! failure "Can't find / couldn't load X (language, devkit...)."
+!!! failure "Can't find / couldn't load X (language, devkit...) :beginner:"
 
     X couldn't be loaded. The plugin containing X was not installed / the dependency was not fetched and added as a library.
     Install the plugin/open the project containing the language/fetch the dependency.

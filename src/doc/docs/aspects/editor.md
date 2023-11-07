@@ -60,7 +60,7 @@ all the menus that can be influenced. If you use [Grammar Cells](https://jetbrai
 from {{ mps_extensions() }}, transformation and substitution menus might not be needed at all. When you use the language, you
 only need to use empty substitutions menus for concepts that shouldn't be substituable at all.
 
-!!! hint "Explain the different menu-related terms."
+!!! hint "Explain the different menu-related terms :beginner:"
 
     - **Menu definitions** have two flavors *named* and *default* and can be defined in transformation or substitute menus.
     - **Default menu**
@@ -120,11 +120,11 @@ Many languages were developed over the years that help with creating better edit
 editor cells that you can use the same way as standard cells such as constant or collections cells. You only
 need to import the corresponding language in the editor aspect.
 
-!!! hint "I need a specific graphical notation/feature for the editor."
+!!! hint "I need a specific graphical notation/feature for the editor :beginner:"
 
     Have a look at the [complete extension list](https://jetbrains.github.io/MPS-extensions/extensions/all/#editor) from {{ mps_extensions() }}.
 
-!!! hint "I need hyperlinks."
+!!! hint "I need hyperlinks :beginner:"
 
     Use the language ^^com.mbeddr.mpsutil.hyperlink^^ from the {{ mbeddr_platform() }}.
 
