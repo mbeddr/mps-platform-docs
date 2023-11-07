@@ -1823,7 +1823,7 @@ reference as its name. For a reference <em>r</em>, you can implement <a href="ht
 </span><a href="http://mbeddr.com/platform.html">mbeddr platform ⧉</a>.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">The property value isn't valid.</p>
+<p class="admonition-title">The property value isn't valid <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></p>
 <p>Specific Languages Blog: <a href="https://specificlanguages.com/posts/2022-02/22-invalid-property-values/">Invalid property values ⧉</a></p>
 </div>
 <h2 id="references"><a href="https://www.jetbrains.com/help/mps/constraints.html#referentconstraints">References</a><a class="headerlink" href="#references" title="Permanent link">&para; ⧉</a></h2>
@@ -1833,6 +1833,20 @@ The inherited scope is often used for references that inherit the referenced con
 <div class="admonition question">
 <p class="admonition-title">How can you emulate references?</p>
 <p><a href="https://specificlanguages.com/posts/2022-02/02-pseudoreferences/">Pseudo-references: emulating references ⧉</a> (<em>Specific Languages' blog</em>)</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do you check for an unresolved reference programmatically?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isValidReference</span><span class="p">(</span><span class="n">reference</span><span class="w"> </span><span class="n">ref</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ref</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">SNode</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SNodeOperations</span><span class="p">.</span><span class="na">getTargetNodeSilently</span><span class="p">(</span><span class="n">ref</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">target</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">target</span><span class="p">.</span><span class="na">getModel</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/kbirken" title="GitHub User: kbirken">@kbirken</a><sub></p>
 </div>
 <h2 id="scopes"><a href="https://www.jetbrains.com/help/mps/scopes.html">Scopes</a><a class="headerlink" href="#scopes" title="Permanent link">&para; ⧉</a></h2>
 <div class="admonition question">
@@ -1877,7 +1891,7 @@ creates list scopes and also implements getName(child) like forNamedElements, ye
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 7, 2023</span>
       
     
   </small>

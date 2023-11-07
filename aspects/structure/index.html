@@ -1806,11 +1806,11 @@ generator configurations, the generator of this language will be invoked by defa
 <p><a href="https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/">Create an <abbr title="Meta Programming System">MPS</abbr> concept declaration programmatically ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Concept XY wasn't found in the language.</p>
+<p class="admonition-title">Concept XY wasn't found in the language <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></p>
 <p><a href="https://specificlanguages.com/posts/2022-03/14-concept-not-found/">Concept not found ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">How do you find examples of <abbr title="Meta Programming System">MPS</abbr> concepts?</p>
+<p class="admonition-title">How do you find examples of <abbr title="Meta Programming System">MPS</abbr> concepts? <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></p>
 <p><a href="https://specificlanguages.com/posts/2022-01/19-finding-examples/">Finding examples of <abbr title="Meta Programming System">MPS</abbr> concepts ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <div class="admonition question">
@@ -1855,6 +1855,15 @@ The type of the expression someConcept is <code>concept&lt;&gt;.</code></p>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">cls</span><span class="p">:</span><span class="n">BaseConcept</span><span class="p">.</span><span class="na">getLanguage</span><span class="p">().</span><span class="na">getQualifiedName</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">Can I get the ConceptEditorDeclaration for a given concept?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">concept</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">concept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myNode</span><span class="o">/</span><span class="p">.</span><span class="na">getConcept</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">model</span><span class="w"> </span><span class="n">editorModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LanguageAspect</span><span class="p">.</span><span class="na">EDITOR</span><span class="p">.</span><span class="na">get</span><span class="p">((</span><span class="n">Language</span><span class="p">)</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="na">getLanguage</span><span class="p">().</span><span class="na">getSourceModule</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="err">#</span><span class="n">print</span><span class="w"> </span><span class="n">editorModel</span><span class="p">.</span><span class="na">roots</span><span class="p">(</span><span class="n">ConceptEditorDeclaration</span><span class="p">).</span><span class="na">findFirst</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">conceptDeclaration</span><span class="w"> </span><span class="p">:</span><span class="n">eq</span><span class="p">:</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="na">asNode</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h2 id="interfaces"><a href="https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces">Interfaces</a><a class="headerlink" href="#interfaces" title="Permanent link">&para; ⧉</a></h2>
 <p>Interfaces work the same way as Java interfaces. They can be used to mark common classes, contain common methods and support the same aspects as
 concepts. A special interface is <a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590288%28jetbrains.mps.lang.core.structure%29%2F1169194658468">INamedConcept ⧉</a>
@@ -1878,7 +1887,7 @@ value.</p>
 <p>Changing this design decision later, means deprecating the string property and introducing a migration. If no standard
 migration is possible, users might even have to change their models manually.</p>
 <div class="admonition question">
-<p class="admonition-title">How do you use a list of string properties?</p>
+<p class="admonition-title">How do you use a list of string properties? <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></p>
 <p>Wrap your property into a new concept and use a child collection:</p>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcM7PS04tKFGo5sqtDC4pysxLt1LwhbIUog309PJiuWq5oIrhEtVcZYk5palWCsVgPlCFQ2peCtBUAFD8IUs=?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcM7PS04tKFGo5sqtDC4pysxLt1LwhbIUog309PJiuWq5oIrhEtVcZYk5palWCsVgPlCFQ2peCtBUAFD8IUs=?" /></a></p>
 </div>
@@ -1901,25 +1910,25 @@ you edit the cell in the editor. There is also a distinction between optional an
 delete them.</p>
 <div class="admonition question">
 <p class="admonition-title">How do you get the previous label of a reference?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">((</span><span class="n">SReference</span><span class="p">)</span><span class="n">node</span><span class="p">.</span><span class="na">getReference</span><span class="p">(</span><span class="n">link</span><span class="p">)).</span><span class="na">getResolveInfo</span><span class="p">()</span><span class="err">`</span><span class="w"> </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// or</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">node</span><span class="p">.</span><span class="na">reference</span><span class="o">&lt;</span><span class="n">ref</span><span class="o">&gt;</span><span class="p">.</span><span class="na">resolveInfo</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">((</span><span class="n">SReference</span><span class="p">)</span><span class="n">node</span><span class="p">.</span><span class="na">getReference</span><span class="p">(</span><span class="n">link</span><span class="p">)).</span><span class="na">getResolveInfo</span><span class="p">()</span><span class="err">`</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// or</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">node</span><span class="p">.</span><span class="na">reference</span><span class="o">&lt;</span><span class="n">ref</span><span class="o">&gt;</span><span class="p">.</span><span class="na">resolveInfo</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Can you use the resolve <abbr title="information">info</abbr> to fix a broken reference?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">ResolverComponent</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">resolve</span><span class="p">(...)</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">ResolverComponent</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">resolve</span><span class="p">(...)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you find broken references on the console?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="err">#</span><span class="n">instances</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="p">(</span><span class="n">BaseConcept</span><span class="p">).</span><span class="na">where</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="na">references</span><span class="p">.</span><span class="na">any</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">target</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">})</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">#</span><span class="n">instances</span><span class="o">&lt;</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="o">&gt;</span><span class="p">(</span><span class="n">BaseConcept</span><span class="p">).</span><span class="na">where</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="na">references</span><span class="p">.</span><span class="na">any</span><span class="p">({</span><span class="o">~</span><span class="n">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">target</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">})</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition warning">
@@ -1933,7 +1942,7 @@ delete them.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 7, 2023</span>
       
     
   </small>

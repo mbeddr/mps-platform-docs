@@ -1830,7 +1830,7 @@ In the case of root nodes, it might not even have a parent.</p>
 implementing classes describe. When you create a new node, the owner is an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EFreeFloatNodeOwner">FreeFloatNodeOwner</a>, This is the state any node has at creation time when a node wasn't added to any model yet. When the node is part of a model, it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EAttachedNodeOwner">AttachedNodeOwner</a>. After calling <code>myNode.detach</code> it has an <a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel%28MPS.Core%2F%29%2F%7EDetachedNodeOwner">DetachedNodeOwner ⧉</a>.
 The node could go be added back to a model.</p>
 <details class="question">
-<summary>How do you initialize a node?</summary>
+<summary>How do you initialize a node? <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></summary>
 <p><a class="glightbox" href="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcE4sUqjmsknOz8kvsiooLSrISbVLSS1OLsosKMnMz7PRB8vYWSl4hPj6uCAkFKINY7lquRxS81KAhgEAWN8fAQ==?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/plantuml/svg/eNpzKC5JLCopzc3hSs5JLC5WcE4sUqjmsknOz8kvsiooLSrISbVLSS1OLsosKMnMz7PRB8vYWSl4hPj6uCAkFKINY7lquRxS81KAhgEAWN8fAQ==?" /></a></p>
 <blockquote>
 <p>How can I ensure that all created nodes will have a non-null <code>HTMLDescription</code>?</p>
@@ -1868,7 +1868,7 @@ The node could go be added back to a model.</p>
 </figure></p>
 </details>
 <div class="admonition question">
-<p class="admonition-title">Can you access the parent in the constructor?</p>
+<p class="admonition-title">Can you access the parent in the constructor? <img alt="🔰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f530.svg" title=":beginner:" /></p>
 <p>No, it doesn't work because the node is not attached yet (<a href="https://www.jetbrains.com/help/mps/behavior.html#conceptconstructors">Concept constructors | <abbr title="Meta Programming System">MPS</abbr></a>). Use a <a href="https://www.jetbrains.com/help/mps/smodel-language-modification-operations.html#newnodecreation">node factory ⧉</a> to access the parent instead.</p>
 </div>
 <div class="admonition question">
@@ -1917,7 +1917,7 @@ implemented.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 7, 2023</span>
       
     
   </small>
