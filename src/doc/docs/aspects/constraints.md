@@ -45,6 +45,18 @@ The inherited scope is often used for references that inherit the referenced con
 
     [Pseudo-references: emulating references](https://specificlanguages.com/posts/2022-02/02-pseudoreferences/){{ blog('sl') }}
 
+!!! question "How do you check for an unresolved reference programmatically?"
+
+    ```java
+    private static boolean isValidReference(reference ref) {
+        if (ref == null ) return false; }
+        SNode target = SNodeOperations.getTargetNodeSilently(ref);
+        target != null && target.getModel() != null;
+    }
+    ```
+
+    {{ answer_by('kbirken') }}
+
 ## [Scopes](https://www.jetbrains.com/help/mps/scopes.html)
 
 !!! question "How do you filter scopes? Which scopes are available?"

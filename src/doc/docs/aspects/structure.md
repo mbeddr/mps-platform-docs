@@ -69,6 +69,14 @@ generator configurations, the generator of this language will be invoked by defa
     #print cls:BaseConcept.getLanguage().getQualifiedName();
     ```
 
+!!! question "Can I get the ConceptEditorDeclaration for a given concept?"
+
+    ```java
+    concept<> concept = myNode/.getConcept(); 
+    model editorModel = LanguageAspect.EDITOR.get((Language) concept.getLanguage().getSourceModule());
+    #print editorModel.roots(ConceptEditorDeclaration).findFirst({~it => it.conceptDeclaration :eq: concept.asNode; });
+    ```
+
 ## [Interfaces](https://www.jetbrains.com/help/mps/structure.html#conceptsandconceptinterfaces)
 
 Interfaces work the same way as Java interfaces. They can be used to mark common classes, contain common methods and support the same aspects as

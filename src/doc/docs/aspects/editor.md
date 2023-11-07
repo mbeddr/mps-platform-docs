@@ -150,20 +150,6 @@ This section contains some more advanced topics and questions when defining edit
     [Use empty text for empty cells](https://specificlanguages.com/posts/basic-editors/use-empty-text-for-empty-cells/){{ blog('sl') }}
 
 
-!!! hint "How can you set editor hints?"
-
-    - You can set hints via `#!java editorContext.getEditorComponent().getUpdater()`
-        - Set explicit hints for nodes.
-        -   Set initial hints globally. They behave similarly to pushed hints.
-    - Via right-click: Push editor hints and select a specific one.
-
-    - Via an {{ mps_url("@mpsutil.EditorHintToggleAction") }} (e.g., in action declarations)
-        - They are not visible in the push Editor hints menu.
-        - If you need the same behavior, for example, in intentions, you can use code from there (via [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent))
-    - Set explicit hints for nodes and hints via {{ mps_url("@mpsutil.EditorHintToggleAction") }}.
-      The usage of [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState) is not so obvious.
-
-
 ??? question "How do you set the cursor to the first editable cell?"
 
     > ![editable cell and error_cell](images/editor/editable_cell_error_cell.png)
@@ -243,6 +229,37 @@ This section contains some more advanced topics and questions when defining edit
 !!! question "How can I show an editor cell only if the edited node/sub-nodes are currently the active selected nodes?"
 
     You can implement a cell similar to the cell [EditorCell_MathEnd](http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058) in {{ mps_extensions() }}.
+
+### Editor Hints
+
+!!! question "Is there a utility class related to editor hints?"
+
+    Yes, there is in {{ mbeddr() }}: {{ mps_url("@mbeddr.EditorHintHelper") }}.
+
+!!! hint "How can you set editor hints?"
+
+    - You can set hints via `#!java editorContext.getEditorComponent().getUpdater()`
+        - Set explicit hints for nodes.
+        -   Set initial hints globally. They behave similarly to pushed hints.
+    - Via right-click: Push editor hints and select a specific one.
+
+    - Via an {{ mps_url("@mpsutil.EditorHintToggleAction") }} (e.g., in action declarations)
+        - They are not visible in the push Editor hints menu.
+        - If you need the same behavior, for example, in intentions, you can use code from there (via [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent))
+    - Set explicit hints for nodes and hints via {{ mps_url("@mpsutil.EditorHintToggleAction") }}.
+      The usage of [ConceptEditorHintSettingsComponent.HintsState](http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.nodeEditor.hintsSettings%28MPS.Editor%2F%29%2F%7EConceptEditorHintSettingsComponent%24HintsState) is not so obvious.
+
+!!! question "Can I push editor hints with a node attribute?"
+
+    Create a *custom factory cell* (available in {{ mps_extensions() }}) with a factory method similar to the following:
+
+    ```java
+    factory method(editorContext, node, cell)->EditorCell {
+        node<> n = node;
+        editorContext.getEditorComponent().getUpdater().addExplicitEditorHintsForNode(n.parent/.getReference(), concept editor hint/HintA/);
+        cell
+    }
+    ```
 
 ## [Inspector](https://www.jetbrains.com/help/mps/mps-inspector.html)
 
@@ -361,10 +378,6 @@ This section contains answers to code-related questions.
 !!! question "How can I customize the behavior when pressing the Tab key in the editor?"
 
     To override this behavior, you can specify the action `NEXT` in an [action map](https://www.jetbrains.com/help/mps/editor.html#actionmaps) ([MPS source reference](https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponent.java#L1809)). The default action is declared [here](https://github.com/JetBrains/MPS/blob/master/editor/editor-runtime/source/jetbrains/mps/nodeEditor/EditorComponentActions.java#L57) with its default implementation in [NodeEditorActions](https://github.com/JetBrains/MPS/blob/dac7f125fdaae7739110073cd8b8bb7ade8fc49e/editor/editor-runtime/source/jetbrains/mps/nodeEditor/NodeEditorActions.java#L401)(it jumps to the next editable leaf of the editor cell tree).
-
-!!! question "Is there a utility class related to editor hints?"
-
-    Yes, there is in {{ mbeddr() }}: {{ mps_url("@mbeddr.EditorHintHelper") }}.
 
 
 !!! question "I am using `NodeHighlightManager.mark()` to highlight AST nodes. MPS then uses the provided color for the cell's background and a slightly darker shade for an additional border. Can we change this, i.e., only paint the background, but not the border?"
