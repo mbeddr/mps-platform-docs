@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## January 2024
+
+- [Platform Essentials: Breaking Changes](breaking_changes.md)
+
 ## September 2023
 
 - [Platform Essentials: Platform Migration Guide](platform_migration_guide.md)

@@ -236,6 +236,7 @@ nav:
       - Testing: platform_essentials/testing.md
       - Accessing the Project: platform_essentials/accessing_the_project.md
       - Platform Migration Guide: platform_essentials/platform_migration_guide.md
+      - Breaking Changes: platform_essentials/breaking_changes.md
   - Build:
       - Build: build/index.md
       - CI: build/ci.md
