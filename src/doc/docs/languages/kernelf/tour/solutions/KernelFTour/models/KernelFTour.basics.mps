@@ -410,6 +410,7 @@
         <child id="543569365052056368" name="items" index="_fkp5" />
       </concept>
       <concept id="543569365052056266" name="org.iets3.core.expr.tests.structure.AssertTestItem" flags="ng" index="_fkuZ">
+        <property id="8173255439291719394" name="strict" index="3sVy9A" />
         <child id="543569365052056302" name="op" index="_fkur" />
         <child id="543569365052056269" name="expected" index="_fkuS" />
         <child id="543569365052056267" name="actual" index="_fkuY" />
@@ -12208,6 +12209,22 @@
                 <node concept="19SGf9" id="5JFEKYbQghn" role="OjmMu">
                   <node concept="19SUe$" id="5JFEKYbQgho" role="19SJt6">
                     <property role="19SUeA" value="Use the assert item to compare two expressions for equality." />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3dYjL0" id="3jPfgOVmW7X" role="_fkp5" />
+          <node concept="_fkuZ" id="3jPfgOVmW5q" role="_fkp5">
+            <property role="3sVy9A" value="true" />
+            <node concept="_fku$" id="3jPfgOVmW5r" role="_fkur" />
+            <node concept="2vmpnb" id="3jPfgOVmW5s" role="_fkuY" />
+            <node concept="2vmpnb" id="3jPfgOVmWbv" role="_fkuS" />
+            <node concept="1z9TsT" id="3jPfgOVmW5u" role="lGtFl">
+              <node concept="OjmMv" id="3jPfgOVmW5v" role="1w35rA">
+                <node concept="19SGf9" id="3jPfgOVmW5w" role="OjmMu">
+                  <node concept="19SUe$" id="3jPfgOVmW5x" role="19SJt6">
+                    <property role="19SUeA" value="To also compare the types, use the 'strict' keyword." />
                   </node>
                 </node>
               </node>
