@@ -30,6 +30,7 @@
       <concept id="1208623485264" name="jetbrains.mps.baseLanguage.structure.AbstractOperation" flags="nn" index="1B$H19" />
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
+      <concept id="2524418899405758586" name="jetbrains.mps.baseLanguage.closures.structure.InferredClosureParameterDeclaration" flags="ig" index="gl6BB" />
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
         <child id="1199569906740" name="parameter" index="1bW2Oz" />
         <child id="1199569916463" name="body" index="1bW5cS" />
@@ -49,7 +50,7 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
@@ -61,7 +62,6 @@
         <child id="1204796294226" name="closure" index="23t8la" />
       </concept>
       <concept id="1204980550705" name="jetbrains.mps.baseLanguage.collections.structure.VisitAllOperation" flags="nn" index="2es0OD" />
-      <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
     </language>
     <language id="de1ad86d-6e50-4a02-b306-d4d17f64c375" name="jetbrains.mps.console.base">
       <concept id="7656298970878093785" name="jetbrains.mps.console.base.structure.BLExpression" flags="ng" index="f80E0">
@@ -87,15 +87,15 @@
               <node concept="3clFbF" id="2BH_fs4$x2W" role="3cqZAp">
                 <node concept="2OqwBi" id="2BH_fs4$xrU" role="3clFbG">
                   <node concept="37vLTw" id="2BH_fs4$x2V" role="2Oq$k0">
-                    <ref role="3cqZAo" node="2BH_fs4$x0K" resolve="it" />
+                    <ref role="3cqZAo" node="3jPfgOVmc__" />
                   </node>
                   <node concept="1B$H19" id="2BH_fs4$xrZ" role="2OqNvi" />
                 </node>
               </node>
             </node>
-            <node concept="Rh6nW" id="2BH_fs4$x0K" role="1bW2Oz">
+            <node concept="gl6BB" id="3jPfgOVmc__" role="1bW2Oz">
               <property role="TrG5h" value="it" />
-              <node concept="2jxLKc" id="2BH_fs4$x0L" role="1tU5fm" />
+              <node concept="2jxLKc" id="3jPfgOVmc_A" role="1tU5fm" />
             </node>
           </node>
         </node>

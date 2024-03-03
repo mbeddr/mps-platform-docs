@@ -15,7 +15,7 @@ The tour shows the interpreter outputs but doesn't dive into the Java generator 
 on purpose. To use the mentioned languages, use either the core or advanced devkit. If you want to generate Java code, use
 the genall.core or genall.advanced devkit.
 
-You can find the corresponding MPS project in this GitHub repository. It needs to be opened with JetBrains MPS 2022.2.1
+You can find the corresponding MPS project in this GitHub repository. It needs to be opened with JetBrains MPS 2023.2
 and a corresponding version of IETS3.opensource.
 
 !!! info "If the font size of the screenshots is too small, click the images to make them appear in a popup. You can then click on the images to zoom in. If the images are too long, you can drag the images to scroll down or up."
