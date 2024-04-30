@@ -377,6 +377,7 @@ nav:
               - Defining Blocks: languages/kernelf/tour/solutions/KernelFTour/screenshots/Block_1_Defining_Blocks/Block_1_Defining_Blocks.md
               - Usage and Composite Blocks: languages/kernelf/tour/solutions/KernelFTour/screenshots/Block_2_Usage_And_Composite_Blocks/Block_2_Usage_And_Composite_Blocks.md
           - 9. Decision Tree: languages/kernelf/tour/solutions/KernelFTour/screenshots/DecisionTree/DecisionTree.md
+          - 10. Unit Language: languages/kernelf/tour/solutions/KernelFTour/screenshots/PhysicalUnitsLanguage/PhysicalUnitsLanguage.md
   - Mbeddr:
       - mbeddr/index.md
       - Building Mbeddr Locally: mbeddr/building_mbeddr_locally.md
