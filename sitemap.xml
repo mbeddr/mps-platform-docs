@@ -561,6 +561,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://mbeddr.com/mps-platform-docs/languages/kernelf/tour/solutions/KernelFTour/screenshots/PhysicalUnitsLanguage/PhysicalUnitsLanguage/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://mbeddr.com/mps-platform-docs/languages/kernelf/tour/solutions/KernelFTour/screenshots/Statemachines_1_Basic/Statemachines_1_Basic/</loc>
          <lastmod>2024-04-30</lastmod>
          <changefreq>daily</changefreq>
