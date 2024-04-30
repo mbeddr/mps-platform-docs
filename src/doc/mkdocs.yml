@@ -424,6 +424,7 @@ nav:
     - Included Libraries: reference/included_libraries.md
     - Extension Points: reference/extension_points.md
     - Exceptions: reference/exceptions.md
+    - Annotations: reference/annotations.md
     - Actions: reference/actions.md
     - Abbreviations: reference/abbreviations.md
     - Code Abbreviations: reference/code_abbreviations.md

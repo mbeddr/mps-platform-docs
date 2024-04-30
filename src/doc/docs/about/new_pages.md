@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## April 2024
+
+- [Reference: Annotations](annotations.md)
+
 ## January 2024
 
 - [Platform Essentials: Breaking Changes](breaking_changes.md)
