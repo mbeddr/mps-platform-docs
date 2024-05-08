@@ -122,7 +122,6 @@ plugins:
 
 markdown_extensions:
   - mdx_breakless_lists
-  - mdx_spanner
   - abbr
   - smarty:
       smart_quotes: false    
@@ -156,8 +155,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
           - overrides/.icons
@@ -227,7 +226,8 @@ nav:
           - Cell Layout: languages/cell_layout.md
   - Platform Essentials:
       - platform_essentials/index.md
-      - How Everything Is Connected: platform_essentials/how_everything_is_connected.md
+      - How Everything s Connected: platform_essentials/how_everything_is_connected.md
+      - What is Included in the Platforms: platform_essentials/what_is_included_in_the_platforms.md
       - Contributing: platform_essentials/contributing.md
       - Common Concepts and Interfaces: platform_essentials/common_concepts_and_interfaces.md
       - Interpreter, Coverage, and Tracing: platform_essentials/interpreter.md
