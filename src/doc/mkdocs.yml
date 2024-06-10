@@ -388,7 +388,6 @@ nav:
           - Base Language Extensions: platform_essentials/mpsutils/baselanguage_extensions.md
           - Generator: platform_essentials/mpsutils/generator.md
           - Importer and Exporter: platform_essentials/mpsutils/importer_and_exporter.md
-          - Languages: platform_essentials/mpsutils/languages.md
           - Language Extensions: platform_essentials/mpsutils/language_extensions.md
           - Tools: platform_essentials/mpsutils/tools.md
           - UI: platform_essentials/mpsutils/ui.md
