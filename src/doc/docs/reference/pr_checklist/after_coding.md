@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Pull Request Checklist
 
 !!! abstract "Structure Aspect"

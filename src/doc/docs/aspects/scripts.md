@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Scripts Aspect
 hide:
 - toc

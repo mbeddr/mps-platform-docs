@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Overcoming Obstacles
 
 You probably already read the [troubleshooting guide](trouble_shooting_guide.md), [Finding your way out | MPS User's Guide](https://www.jetbrains.com/help/mps/finding-your-way-out.html) and [Debugging](debugging.md) but you still need help with an issue.

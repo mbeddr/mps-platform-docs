@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Refactorings Aspect
 hide:
 - toc

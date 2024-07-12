@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Base Language Extensions
 
 These languages extend Base Language to add further functionality. If a language is reimplemented in MPS, it will be

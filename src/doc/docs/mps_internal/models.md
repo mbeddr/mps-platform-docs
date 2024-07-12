@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Model
 
 **UI**: An entry below a module in the logical view; they may be nested in folders.

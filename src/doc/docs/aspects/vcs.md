@@ -1,4 +1,5 @@
 ---
+comments: true
 title: VCS Aspect
 hide:
 - toc

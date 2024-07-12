@@ -1,4 +1,5 @@
 ---
+comments: false
 title: Home
 hide:
 - toc

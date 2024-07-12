@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Behavior Aspect
 tags:
 - aspect

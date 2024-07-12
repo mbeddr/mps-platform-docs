@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Actions
 
 This page describes additional actions that the {{ mbeddr_platform() }} provides. Not all of them are visible in menus

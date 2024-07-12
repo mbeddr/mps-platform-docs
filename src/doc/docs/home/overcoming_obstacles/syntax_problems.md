@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## [Syntax Problems in the Editor](https://pythonprinciples.com/blog/getting-unstuck/#syntax-problems)
 
 Caused by the projectional editing approach, syntax problems don’t exist in MPS. Sometimes it takes work to enter text, though. A general technique that often works is to search for instances of a concept in the current project or globally to figure out how it works if there is no documentation.

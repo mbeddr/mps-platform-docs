@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Language extensions
 
 This page lists some languages that extend existing MPS' languages. None of them are essential for working with MPS but

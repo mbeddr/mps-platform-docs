@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Recipes
 
 This section lists all relations required for a specific task.

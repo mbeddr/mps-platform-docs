@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Generator Aspect
 tags:
 - aspect

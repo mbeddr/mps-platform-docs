@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Editor Aspect
 tags:
 - aspect

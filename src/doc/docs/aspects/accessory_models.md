@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Accessory Models
 hide:
 - toc

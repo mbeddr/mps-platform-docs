@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 This page describes the connections between MPS, IntelliJ Community, JBR, TeamCity, and all open-source repositories.
 
 JetBrains MPS is based on **[IntelliJ IDEA](https://github.com/JetBrains/intellij-community)**. It doesn't use all the plugins but extends it through the [IntelliJ platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html) to add support for tools that facilitate designing domain-specific languages. The projectional editor of MPS is a custom editor implementation instead of the standard text editor. Therefore, many text-based features of IntelliJ won't work (such as syntax [language injections](https://www.jetbrains.com/help/idea/language-injections-settings.html) or [code templates](https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html)). Some features are unused or disabled such as the [Program Structure Interface](https://plugins.jetbrains.com/docs/intellij/psi.html), which the platform typically uses as the layer responsible for parsing files and creating the syntactic and semantic code model.

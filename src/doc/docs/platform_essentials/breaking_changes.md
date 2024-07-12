@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 A breaking change in software development is a change that affects the compatibility or functionality of existing code
 that depends on the changed code. In the platform it can also mean that the code now behaves for example, differently for the users, new errors are introduced or the user has to change its own code.
 

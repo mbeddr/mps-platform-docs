@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Deprecated languages and solutions
 
 Some deprecated languages that were removed in the platform in MPS 2022.2 can be found in [this PR](https://github.com/mbeddr/mbeddr.core/pull/2286).

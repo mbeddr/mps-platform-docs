@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Test Aspect
 tags:
 - aspect

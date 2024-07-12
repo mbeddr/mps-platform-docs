@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Structure Aspect
 tags:
 - aspect

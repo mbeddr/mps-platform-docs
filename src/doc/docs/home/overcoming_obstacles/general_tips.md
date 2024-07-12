@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # General Tips
 
 No matter what type of challenge you face, some tips always help you to make progress or remove your blocker.

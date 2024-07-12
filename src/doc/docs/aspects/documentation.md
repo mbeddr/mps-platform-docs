@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Documentation Aspect
 hide:
 - toc

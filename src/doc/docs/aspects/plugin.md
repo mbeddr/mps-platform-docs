@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Plugin Aspect
 tags:
 - aspect

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 The following sections list some topics from popular GitHub repositories and StackOverflow that deal with being a good developer.
 The selection is tailored to MPS developers.
 

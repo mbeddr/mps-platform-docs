@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 This document lists some recommendations for code written in MPS. For a general introduction to code smells, go to [Code Smells | Coding Horror](https://blog.codinghorror.com/code-smells/) and [How To Write Unmaintainable Code](https://web.archive.org/web/20171224114025id_/https://www.thc.org/root/phun/unmaintain.html). Clean code has many benefits. [Clean Code: Writing maintainable, readable, and testable code | https://blogs.sap.com/](https://blogs.sap.com/2022/12/21/clean-code-writing-maintainable-readable-and-testable-code/) describes those benefits.
 
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Standard Plugins in MPS
 
 The following list contains the plugins that are installed in MPS 2021.1 and later by default. The changes were collected on the 

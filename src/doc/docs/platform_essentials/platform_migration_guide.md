@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 This guide walks you through migrating all MPS platforms starting from uploading the new JBR and ending at migrating {{ iets3() }}.
 *MPS_VERSION* stands for the MPS version such as 2022.3. Before starting the migration process, read [Migration Guide | MPS Documentation](https://www.jetbrains.com/help/mps/migration-guide.html) first. Before starting a migration for a platform, make sure that
 all commits have landed on master by merging the maintenance branches into each other starting from the oldest version.

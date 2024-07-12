@@ -1,4 +1,5 @@
 ---
+comments: true
 tags:
 - java
 - best_practise

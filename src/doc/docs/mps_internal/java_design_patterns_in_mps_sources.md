@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 This page lists three examples or less per [Java design pattern](https://refactoring.guru/design-patterns) in the MPS source code.
 The headers link to explanations and demos for the corresponding design patterns in the Java world.
 

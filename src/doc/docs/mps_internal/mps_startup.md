@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 This page looks behind the hood of the startup process of MPS 2021.1.4 and newer. For most parts, similar code executes
 for other MPS versions.
 

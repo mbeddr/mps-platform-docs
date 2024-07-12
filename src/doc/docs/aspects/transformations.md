@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Transformations Aspect
 hide:
 - toc

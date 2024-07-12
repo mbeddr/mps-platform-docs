@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 There are many different ways to get the MPS/IntelliJ project, some of which are hacks you should avoid. This page only lists the recommended approaches on purpose. There are only a few practical use cases for the project class: access scope, repository, and core components. The idea is that user-triggered actions take what's necessary (e.g., a command lock), and then the code down the execution path shall not care to take one.
 
 ## What Are the Different Project Classes?

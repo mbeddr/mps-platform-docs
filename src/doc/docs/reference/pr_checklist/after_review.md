@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 !!! success "Corrections After Review"
 
     === "Basic"

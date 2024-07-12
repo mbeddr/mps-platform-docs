@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Intentions Aspect
 hide:
 - toc

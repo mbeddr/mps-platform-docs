@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Terminology and User Interface for Access
 
 This section lists terms that need to be mentioned in the MPS guide or be explained better. [MPS project structure](https://www.jetbrains.com/help/mps/mps-project-structure.html) should give an overview of the most important terms.

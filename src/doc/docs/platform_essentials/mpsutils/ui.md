@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # UI
 
 This page contains the description of languages that add new cells to the editor. For more editor-related extensions,

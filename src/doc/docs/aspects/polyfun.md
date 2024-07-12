@@ -1,4 +1,5 @@
 ---
+comments: true
 title: Polymorphic Functions Aspect
 hide:
 - toc

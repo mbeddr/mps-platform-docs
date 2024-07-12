@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 The following workflow suits small projects and projects with hundreds of developers. This guide assumes that you host the project on GitHub and that the CI pipeline also runs on GitHub. Additionally, one or more teams work on the project and have some form of [agile software development](https://www.wikiwand.com/en/Agile_software_development) implemented.
 New feature/bug fixes are developed based on a [ticket](https://www.vollcom-digital.com/blog/digital-transformation/how-to-write-an-agile-ticket/) system.
 

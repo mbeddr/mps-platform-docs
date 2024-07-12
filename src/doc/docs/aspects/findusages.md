@@ -1,4 +1,5 @@
 ---
+comments: true
 title: FindUsages Aspect
 hide:
 - toc

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # [Understanding the Problem](https://pythonprinciples.com/blog/getting-unstuck/#incomplete-understanding)
 
 Not understanding the problem 100% is often the problem. Read the task/issue several times until you can explain it to someone else. If you don't fully

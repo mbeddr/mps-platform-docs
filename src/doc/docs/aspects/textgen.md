@@ -1,4 +1,5 @@
 ---
+comments: true
 title: TextGen Aspect
 hide:
 - toc

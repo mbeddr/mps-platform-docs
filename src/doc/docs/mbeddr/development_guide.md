@@ -1,4 +1,5 @@
 ---
+comments: true
 status: deprecated
 tags:
 - mbeddr

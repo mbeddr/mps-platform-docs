@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IETS3.opensource Language Reference (WIP)
 
 This is a WIP language reference, currently under review on [GitHub](https://github.com/mbeddr/mbeddr.core/pull/2275).

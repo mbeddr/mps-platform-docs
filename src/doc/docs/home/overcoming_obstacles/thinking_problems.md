@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # [Thinking Problems](https://pythonprinciples.com/blog/getting-unstuck/#thinking-problems)
 
 You can do it without much thought when you have an easy coding problem. When you have to deal with a new topic that you are unfamiliar with

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Included Java Libraries
 
 The following list contains the Java libraries in the *lib* folder installed in MPS 2021.1 and later by default.

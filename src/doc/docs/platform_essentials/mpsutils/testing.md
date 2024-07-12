@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Testing
 
 The following languages contain small improvements to the existing testing infrastructure.
