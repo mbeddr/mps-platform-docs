@@ -2261,52 +2261,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <meta name="google-site-verification" content="bi636_-XqlP4mGp3BTSUPZNcaDLxz7_XUcZ8L0zT-ec" />
 
 
-<!-- Giscus -->
-<h2 id="__comments">Comments</h2>
-<script src="https://giscus.app/client.js"
-        data-repo="mbeddr/mps-platform-docs"
-        data-repo-id="R_kgDOHtFrwg"
-        data-category="General"
-        data-category-id="DIC_kwDOHtFrws4CQY8v"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-
-<!-- Reload on palette change -->
 <script>
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object")
-      if (palette.color.scheme === "slate") {
-        var giscus = document.querySelector("script[src*=giscus]")
-        giscus.setAttribute("data-theme", "dark")
-      }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-      
-    targetBlank();
-    })
    
    function targetBlank() {
   // remove subdomain of current site's url and setup regex
