@@ -46,6 +46,12 @@ Intentions always have the `editorContext` available and can access the project 
 
 The project expression is available in tests, although you should only need it when invoking the generator or resolving nodes through the global repository.
 
+### Tool Window
+
+val dataContext = DataManager.getInstance().getDataContext(toolWindow.component)
+val project = MPSDataKeys.PROJECT.getData(dataContext)
+val mpsProject = MPSDataKeys.MPS_PROJECT.getData(dataContext)
+
 ### Plugin Solution/Plugin Aspect
 
 If you need access to the project object, you can use a project plugin with an MPSProject instance in the init and dispose block. You can pass the instance to other classes as well. To get the IntelliJ project use `#!java ProjectHelper.toIdeaProject(project)`.
