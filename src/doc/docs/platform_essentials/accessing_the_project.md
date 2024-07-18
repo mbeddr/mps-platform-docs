@@ -52,9 +52,11 @@ The project expression is available in tests, although you should only need it w
 
 ### Tool Window
 
+```
 val dataContext = DataManager.getInstance().getDataContext(toolWindow.component)
 val project = MPSDataKeys.PROJECT.getData(dataContext)
 val mpsProject = MPSDataKeys.MPS_PROJECT.getData(dataContext)
+```
 
 ### Plugin Solution/Plugin Aspect
 
@@ -62,7 +64,13 @@ If you need access to the project object, you can use a project plugin with an M
 
 ### Other Places
 
-Some low-level code, like behaviors, are not supposed to start a command or interact with the UI (where some dialogs require the project/IDE frame). There's always a project for user-triggered actions, and this is the moment proper command access gets started and various UI stuff happens. It's wrong to invoke some behavior that would try to guess the project down the road. Typically, there also should not be a need to access the project in the generator.
+Some low-level code, like behaviors, are not supposed to start a command or interact with the UI (where some dialogs require the project/IDE frame). There's always a project for user-triggered actions, and this is the moment proper command access gets started and various UI stuff happens. It's wrong to invoke some behavior that would try to guess the project down the road. Typically, there also should not be a need to access the project in the generator. If you need to access it from the generator or TextGen, you can use:
+
+```
+MPSModuleRepository repository = MPSCoreComponents.getInstance().getPlatform().findComponent(MPSModuleRepository.class);
+MPSNodeVirtualFile file = NodeVirtualFileSystem.getInstance().getFileFor(repository, rootNode);
+Project project = ProjectLocator.getInstance().guessProjectForFile(file);
+```
 
 ### Code to Avoid
 
