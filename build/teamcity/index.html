@@ -1047,6 +1047,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jetbrains-teamcity" class="md-nav__link">
+    <span class="md-ellipsis">
+      JetBrains TeamCity
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1519,6 +1528,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jetbrains-teamcity" class="md-nav__link">
+    <span class="md-ellipsis">
+      JetBrains TeamCity
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1624,6 +1642,9 @@ This automatic building is configured through <a href="https://www.jetbrains.com
 the agent's Docker image.</p>
 <p>About ten agents are available for running builds simultaneously. They are hosted at multiple different locations (in server rooms and the cloud). The agents are running Linux, except one agent, which is running Windows 10, and one is running Mac <abbr title="Open Source / Operating System">OS</abbr> X.</p>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">This section is outdated, Docker is not used anymore.</p>
+</div>
 <p><span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <image width="32" height="32"
@@ -1647,6 +1668,8 @@ the agent's Docker image.</p>
 These images are built from a Dockerfile.</p>
 <p>Everything in the infrastructure is provisioning using Docker from the TeamCity front end over the database to the build agent. For the built agent, this approach allows us to keep the build agents consistent with their installed software and their versions. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.</p>
 <p>GitLab hosts our complete docker configuration. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we use <a href="https://docs.docker.com/compose/">docker-compose ⧉</a> as an orchestration tool. </p>
+<h2 id="jetbrains-teamcity">JetBrains TeamCity<a class="headerlink" href="#jetbrains-teamcity" title="Permanent link">&para;</a></h2>
+<p>JetBrains are also building <abbr title="Meta Programming System">MPS</abbr> on Teamcity which can be reached via <a href="https://teamcity.jetbrains.com/project/MPS?mode=builds#all-projects">https://teamcity.jetbrains.com/project/MPS?mode=builds#all-projects ⧉</a>. They provide downloadable artifacts, installers and have tests for different subsystems such as the typesystem, generation and also for some <abbr title="Meta Programming System">MPS</abbr> platforms such as <abbr title="Meta Programming System">MPS</abbr>-Extensions. All configurations starting from 2017.1 are available up to the latest <abbr title="Meta Programming System">MPS</abbr> version which is the master branch.</p>
 
 
 
@@ -1667,7 +1690,7 @@ These images are built from a Dockerfile.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2024</span>
   </span>
 
     

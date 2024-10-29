@@ -1867,13 +1867,22 @@ also works but depends on implementation details that might change in the future
 <h3 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h3>
 <p>The project expression is available in tests, although you should only need it when invoking the generator or resolving nodes through the global repository.</p>
 <h3 id="tool-window">Tool Window<a class="headerlink" href="#tool-window" title="Permanent link">&para;</a></h3>
-<p><abbr title="value">val</abbr> dataContext = DataManager.getInstance().getDataContext(toolWindow.component)
-<abbr title="value">val</abbr> project = MPSDataKeys.PROJECT.getData(dataContext)
-<abbr title="value">val</abbr> mpsProject = MPSDataKeys.MPS_PROJECT.getData(dataContext)</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>val dataContext = DataManager.getInstance().getDataContext(toolWindow.component)
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>val project = MPSDataKeys.PROJECT.getData(dataContext)
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>val mpsProject = MPSDataKeys.MPS_PROJECT.getData(dataContext)
+</code></pre></div></td></tr></table></div>
 <h3 id="plugin-solutionplugin-aspect">Plugin Solution/Plugin Aspect<a class="headerlink" href="#plugin-solutionplugin-aspect" title="Permanent link">&para;</a></h3>
 <p>If you need access to the project object, you can use a project plugin with an MPSProject instance in the <abbr title="initialization">init</abbr> and dispose block. You can pass the instance to other classes as well. To get the IntelliJ project use <code class="highlight"><span class="n">ProjectHelper</span><span class="p">.</span><span class="na">toIdeaProject</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></code>.</p>
 <h3 id="other-places">Other Places<a class="headerlink" href="#other-places" title="Permanent link">&para;</a></h3>
-<p>Some low-level code, like behaviors, are not supposed to start a command or interact with the <abbr title="User Interface">UI</abbr> (where some dialogs require the project/<abbr title="Integrated Development Environment">IDE</abbr> frame). There's always a project for user-triggered actions, and this is the moment proper command access gets started and various <abbr title="User Interface">UI</abbr> stuff happens. It's wrong to invoke some behavior that would try to guess the project down the road. Typically, there also should not be a need to access the project in the generator.</p>
+<p>Some low-level code, like behaviors, are not supposed to start a command or interact with the <abbr title="User Interface">UI</abbr> (where some dialogs require the project/<abbr title="Integrated Development Environment">IDE</abbr> frame). There's always a project for user-triggered actions, and this is the moment proper command access gets started and various <abbr title="User Interface">UI</abbr> stuff happens. It's wrong to invoke some behavior that would try to guess the project down the road. Typically, there also should not be a need to access the project in the generator. If you need to access it from the generator or TextGen, you can use:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>MPSModuleRepository repository = MPSCoreComponents.getInstance().getPlatform().findComponent(MPSModuleRepository.class);
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>MPSNodeVirtualFile file = NodeVirtualFileSystem.getInstance().getFileFor(repository, rootNode);
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Project project = ProjectLocator.getInstance().guessProjectForFile(file);
+</code></pre></div></td></tr></table></div>
 <h3 id="code-to-avoid">Code to Avoid<a class="headerlink" href="#code-to-avoid" title="Permanent link">&para;</a></h3>
 <ul>
 <li>guessing the project through <code class="highlight"><span class="n">ProjectManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getOpenedProjects</span><span class="p">()</span></code></li>
@@ -1882,11 +1891,11 @@ also works but depends on implementation details that might change in the future
 <li>guessing the IntelliJ project through the WindowManager class</li>
 </ul>
 <p>When you need to access the model from a different thread (<a href="https://www.jetbrains.com/help/mps/open-api-accessing-models-from-code.html#concurrentaccess">concurrent access ⧉</a>), it might be tempting to write the following code that doesn't work:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">command</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">model</span><span class="o">/</span><span class="p">.</span><span class="na">getRepository</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">command</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="na">model</span><span class="o">/</span><span class="p">.</span><span class="na">getRepository</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>It will fail with the following exception: <code>GlobalModelAccess does not support actions that require a command to run. One needs a project to run such actions</code>. In those cases, accessing it and writing <code>project.getRepository()</code>. Use one of the mentioned methods, and don't guess the project. A question that you should answer first: Do I need to invoke the code here, or is there a better place to invoke it?</p>
 <h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
@@ -1915,7 +1924,7 @@ also works but depends on implementation details that might change in the future
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2024</span>
   </span>
 
     
