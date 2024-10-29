@@ -36,6 +36,7 @@ Look at [this ticket search](https://youtrack.jetbrains.com/issues/MPS?q=%23Open
     - [pattern matching for instanceof](https://www.baeldung.com/java-pattern-matching-instanceof)
     - [double brace initialization](https://www.geeksforgeeks.org/double-brace-initialization-java)
 
+    For a full list of Java features in general, visit: [Java Versions and Features | marcobehler.com](https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features#_java_features_8_20) or [A categorized list of all Java and JVM features since JDK 8 to 21 | Advanced Web Machinery](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-21/)
 
 !!! warning "A function with Base Language code doesn't return anything when called."
 
