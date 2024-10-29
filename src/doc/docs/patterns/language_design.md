@@ -43,6 +43,7 @@ please raise an issue.
 - [When is something a (domain-specific) language?](https://markusvoelter.medium.com/when-is-something-a-domain-specific-language-83b7eff79ed4){{ blog('mv') }}
 - [What is Model Driven Engineering](https://www.f1re.io/model-driven-engineering){{ blog('F1RE') }}
 - [Domain-driven design vs. language engineering](https://specificlanguages.com/posts/2022-04/19-ddd-vs-le/){{ blog('sl') }}
+- [Pioneers, Settlers, Town Planners [Wardley]](https://orghacking.com/pioneers-settlers-town-planners-wardley-9dcd3709cde7)
 
 ### Introducing DSLs
 
