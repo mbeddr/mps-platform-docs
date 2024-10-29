@@ -45,6 +45,10 @@ alias: ux
     When there are many choices, a search functionality should be provided that works similarly to the code completion menu when a custom UI
     component is used. Similar choices can also be grouped (e.g., [intentions menu](https://jetbrains.github.io/MPS-extensions/extensions/utils/intentions-menu/) for grouping intentions).
 
+!!! question "Where Can I find I list of available icons?"
+
+    All IntelliJ platform icons can be found in [here](https://intellij-icons.jetbrains.design/). If you want to load icons programmatically, there are the classes [MPSIcons](https://github.com/JetBrains/MPS/blob/master/workbench/mps-icons/source/jetbrains/mps/icons/MPSIcons.java) and [IdeIcons](https://github.com/JetBrains/MPS/blob/master/workbench/mps-platform/source/jetbrains/mps/ide/icons/IdeIcons.java). Most icons are located in [workbench/mps-icons/source](https://github.com/JetBrains/MPS/tree/master/workbench/mps-icons/source).    
+
 ## Basics
 
 This section contains links to fundamental knowledge unrelated to MPS that is needed to understand the topic
