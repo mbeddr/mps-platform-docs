@@ -55,6 +55,8 @@ About ten agents are available for running builds simultaneously. They are hoste
 
 ## Docker
 
+!!! warning "This section is outdated, Docker is not used anymore."
+
 {{ mbeddr() }}, {{ mps_extensions() }}, {{ iets3() }}
 
 Docker is a Linux container technology that the platform projects use a lot. You can think of it as a lightweight virtual machine. Besides the container runtime, Docker also includes the tools required to build preconfigured images that are then executed in the container.
@@ -63,3 +65,7 @@ These images are built from a Dockerfile.
 Everything in the infrastructure is provisioning using Docker from the TeamCity front end over the database to the build agent. For the built agent, this approach allows us to keep the build agents consistent with their installed software and their versions. The docker image build from the docker file is published to Docker Hub, a hosting service for images, and then used in our build server.
 
  GitLab hosts our complete docker configuration. It also included the scripts that download/update the docker image and run the agent. Since our TeamCity setup uses multiple containers, a separate container for the database, or the web server that handles the encrypted connection, we use [docker-compose](https://docs.docker.com/compose/) as an orchestration tool. 
+ 
+## JetBrains TeamCity
+
+JetBrains are also building MPS on Teamcity which can be reached via https://teamcity.jetbrains.com/project/MPS?mode=builds#all-projects. They provide downloadable artifacts, installers and have tests for different subsystems such as the typesystem, generation and also for some MPS platforms such as MPS-Extensions. All configurations starting from 2017.1 are available up to the latest MPS version which is the master branch.
