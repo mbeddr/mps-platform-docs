@@ -9,6 +9,8 @@ open an issue in this repository.
 
 <img width="1068" alt="mps-platform-docs homepage" src="https://user-images.githubusercontent.com/88385944/180607116-2c61d660-7893-4ebb-a383-97b56ff94abb.png">
 
+![Alt](https://repobeats.axiom.co/api/embed/77376fbec2d85c6fc021d2ec238e36dc4b12b45f.svg "Repobeats analytics image")
+
 ## Requirements
 
 - Python >= 3.10
