@@ -245,6 +245,7 @@ nav:
       - Git: build/git.md
       - TeamCity: build/teamcity.md
       - Advanced GitHub Workflow: build/advanced_github_workflow.md
+      - MPS Versions Overview: build/versions-overview.md
   - MPS Internals:
       - mps_internal/index.md
       - Code:
