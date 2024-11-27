@@ -19,6 +19,23 @@ The knowledge was extracted directly from the artifacts provided on the [MPS dow
 The information in the following tables was extracted on 22.11.2024.
 
 !!! info optional-class "Latest Patch Versions Only"
+    | Extracted from | JAVA_ VERSION | JAVA_ RUNTIME_ VERSION | JCEF_VERSION | mps.build. number | mps.runtimeBuild | mps.idea.platform. build.number | IMPLEMENTOR_ VERSION | date | revision.number | SOURCE |
+    |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |
+    | 2024.1.1 | 17.0.11 | 17.0.11+1-b1207.30 | 122.1.9.770+ge9c0b4b | MPS<span>-</span>241.19072.1155 | 17.0.11b1207.30 | MPS<span>-</span>241.19072.411 | JBR<span>-</span>17.0.11+1-1207.30-jcef | 20241007 | 2c7e6e2187e62732aad52e5842787e4e7f2bd90d | .:git:4d85250ff739+ jcef_git:git:4a605f44671a |
+    | 2023.3.2 | 17.0.12 | 17.0.12+1-b1087.25 | 111.2.1.691+g3cc44b6 | MPS<span>-</span>233.15619.1151 | 17.0.12b1087.25 | MPS<span>-</span>233.15619.364 | JBR<span>-</span>17.0.12+1-1087.25-jcef | 20241001 | 47047272d9579a65e917959e2fb2817dbec6b1e2 | .:git:10845472265b+ jcef_git:git:4a605f44671a |
+    | 2023.2.2 | 17.0.12 | 17.0.12+7-b1000.54 | 111.2.1.674+g5e74e8b | MPS<span>-</span>232.10335.1039 | - | MPS<span>-</span>232.10335.326 | JBR<span>-</span>17.0.12+7-1000.54-jcef | 20241007 | 03047d3fa3be122c7c86f3f8868e31d709bea81a | .:git:d3255c31381c+ jcef_git:git:4a605f44671a |
+    | 2022.3.3 | 17.0.6 | - | - | MPS<span>-</span>223.8836.1611 | - | MPS<span>-</span>223.8836.282 | JBR<span>-</span>17.0.6+1-653.34-jcef | 20241007 | c5ee8dd320df4f6d9ba45cf4410cc2660da62430 | .:git:1ad964a7fee4+ jcef_git:git:4a605f44671a |
+    | 2022.2.4 | 17.0.6 | - | - | MPS<span>-</span>222.4554.1739 | - | MPS<span>-</span>222.4554.248 | JBR<span>-</span>17.0.6+7-469.82-jcef | 20240926 | 2cc8b65fa374d89c51ca1af07ae2c694b06b3d41 | .:git:33e568c57f1f+ jcef_git:git:651cf8b0aba1 |
+    | 2021.3.5 | 11.0.14.1 | - | - | MPS<span>-</span>213.7172.1189 | - | MPS<span>-</span>213.7172.25 | JBRSDK-11.0.14.1.1-1751.46-jcef | 20231114 | 8407ace49c5f9e2c6ab79c1cac61710464d27214 | .:git:4946c1d62860+ jcef_git:git:cdacaad252e2 |
+    | 2021.2.6 | 11.0.12 | - | - | MPS<span>-</span>212.5284.1433 | - | MPS<span>-</span>212.5284.40 | JBRSDK-11.0.12.7-1504.28-jcef | 20220915 | 11b1a6aa607520c9809cca4ebdf978c50e9978b0 | .:git:00c366175106+ jcef_git:git:6d72c61fd51a |
+    | 2021.1.4 | 11.0.11 | - | - | MPS<span>-</span>211.7628.1509 | - | MPS<span>-</span>211.7628.21 | JBR<span>-</span>11.0.11.9-1341.60-jcef | 20220316 | 24918829bd8cb18afec7bfdfb5958d197608be1a | .:git:7bea9b450563+ jcef_git:git:f4b4203aea4e |
+    | 2020.3.6 | 11.0.10 | - | - | MPS<span>-</span>203.8084.3437 | - | MPS<span>-</span>203.8084.24 | JBRSDK-11.0.10.8-1145.96-jcef | 20211222 | 1ab3403b76c9c200f5a8ddbc19a2b74ae0755499 | .:git:13a4b767ac3c+ jcef_git:git:d83fd9f56683 |
+    | 2020.2.3 | 11.0.9 | - | - | MPS<span>-</span>202.8194.1069 | - | IC-202.8194.7 | JBRSDK-11.0.9.11-944.49-jfx_jcef | 20201130 | 2a1b02429dbcc01953883d8d3c65d24114233aa5 | .:git:0cabfd8d6a81+ |
+    | 2020.1.7 | 11.0.7 | - | - | MPS<span>-</span>201.8743.1619 | - | IC-201.8743.12 | JBRSDK-11.0.7.10-765.65-jfx_jcef | 20201119 | 623c78a181a27a886882632fc3684398206447c8 | .:git:85fe29ff2d28+ |
+    | 2019.3.7 | 11.0.6 | - | - | MPS<span>-</span>193.1623 | - | IC-193.7288.26 | - | 20200810 | 7a035e7c5fc55ab168bf0813a4a75bb1f711fa0c |  |
+    | 2019.2.4 | 11.0.4 | - | - | MPS<span>-</span>192.2456 | - | IC-192.7142.36 | - | 20191202 | 1ef7e79c0906c6f21108ceb4b16a0c495300fbc5 |  |
+
+??? info optional-class "Click to show All Properties of all MPS Versions"
     | filename | filesize | IMPLEMENTOR | IMPLEMENTOR_VERSION | JAVA_RUNTIME_VERSION | JAVA_VERSION | JAVA_VERSION_DATE | JCEF_VERSION | LIBC | OS_ARCH | OS_NAME | SOURCE | mps.build.number | mps.build.vcs.number | mps.date | mps.idea.platform.build.number | mps.mps.build.counter | mps.runtimeBuild | mps.teamcity.buildConfName | mpsBootstrapCore.version | mpsBootstrapCore.version.bugfixNr | mpsBootstrapCore.version.eap | mpsBootstrapCore.version.major | mpsBootstrapCore.version.minor |
     |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |  ------  |
     | MPS<span>-</span>2024.1.1-macos-aarch64.dmg | 798125468 | JetBrains s.r.o. | JBR<span>-</span>17.0.11+1-1207.30-jcef | 17.0.11+1-b1207.30 | 17.0.11 | - | 122.1.9.770+ge9c0b4b | default | aarch64 | Darwin | .:git:4d85250ff739+ jcef_git:git:4a605f44671a | MPS<span>-</span>241.19072.1155 | 2c7e6e2187e62732aad52e5842787e4e7f2bd90d | 20241007 | MPS<span>-</span>241.19072.411 | 1155 | 17.0.11b1207.30 | Binaries | 2024.1 | .1 |  | 2024 | 1 |
@@ -377,3 +394,4 @@ The information in the following tables was extracted on 22.11.2024.
     | MPS<span>-</span>2017.3.6.zip | 227517796 | - | - | - | - | - | - | - | - | - | - | MPS<span>-</span>173.1812 | 82fb83b485427130049fc0b7f33c5b0ffdd971c9 | 20180323 | MPS<span>-</span>173.4674.1 | SNAPSHOT | - | Binaries | 2017.3 | - | - | - | - |
     | MPS<span>-</span>2017.2.3.zip | 248331337 | - | - | - | - | - | - | - | - | - | - | MPS<span>-</span>172.1493 | 358ff59350926453b034f97ae8765b06ed95c10f | 20171122 | MPS<span>-</span>172.4155.221 | SNAPSHOT | - | Binaries | 2017.2 | - | - | - | - |
     | MPS<span>-</span>2017.1.3.zip | 224803899 | - | - | - | - | - | - | - | - | - | - | MPS<span>-</span>171.1448 | d19e0cf87425d2e5141cbb8f8c1401d00810ce9a | 20170821 | MPS<span>-</span>171.4249.135 | SNAPSHOT | - | Binaries | 2017.1 | - | - | - | - |
+
