@@ -39,12 +39,12 @@ Some useful Intellij SDK annotations are:
 
 For an overview of JetBrains-specific annotations, read: [JetBrains Annotations](https://www.jetbrains.com/help/idea/annotating-source-code.html#jetbrains-annotations):
 
-- *@Nullable* and *@NotNull*: indicate a variable, parameter, or return value that can or cannot be null.
-- *@Nls*: indicates that an annotated code element is a string that needs to be localized.
-- *@NonNls*: indicates that an annotated code element is a string which is not visible to users, which doesn't require localization, and which doesn't contain strings requiring localization. When you annotate an element with @NonNls, localization tools will skip this element and strings inside it.
-- *@PropertyKey*: indicates that a method parameter accepts arguments that must be valid property keys in a specific resource bundle. When a string literal that is not a property key in a bundle is passed as a parameter, IntelliJ IDEA highlights it as an error. The annotation is also used to provide completion in string literals passed as parameters.
-- *@TestOnly*: indicates that a method or a constructor must be called from testing code only.
-- *@Contract*: lets you specify a set of rules (a contract) that a method must follow. If the contract is violated, IntelliJ IDEA reports a problem.
-- *@Language*: injects code written in another language in a Java String.
+- [@Nullable](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Nullable.html) and [NotNull](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html): indicate a variable, parameter, or return value that can or cannot be null.
+- [@Nls](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Nls.html): indicates that an annotated code element is a string that needs to be localized.
+- [@NonNls](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NonNls.html): indicates that an annotated code element is a string which is not visible to users, which doesn't require localization, and which doesn't contain strings requiring localization. When you annotate an element with [@NonNls](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NonNls.html), localization tools will skip this element and strings inside it.
+- [@PropertyKey](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/PropertyKey.html): indicates that a method parameter accepts arguments that must be valid property keys in a specific resource bundle. When a string literal that is not a property key in a bundle is passed as a parameter, IntelliJ IDEA highlights it as an error. The annotation is also used to provide completion in string literals passed as parameters.
+- [@TestOnly](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/TestOnly.html): indicates that a method or a constructor must be called from testing code only.
+- [@Contract](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Contract.html): lets you specify a set of rules (a contract) that a method must follow. If the contract is violated, IntelliJ IDEA reports a problem.
+- [@Language](https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/intellij/lang/annotations/Language.html): injects code written in another language in a Java String.
 
 More annotations can be found in the package [org.jetbrains.annotations](https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/package-summary.html) and [org.intellij.lang.annotations](https://javadoc.io/doc/org.jetbrains/annotations/latest/org/intellij/lang/annotations/package-summary.html).
