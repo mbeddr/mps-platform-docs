@@ -789,8 +789,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
     
     
       
@@ -1799,13 +1797,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 </ul>
 <p>For an overview of JetBrains-specific annotations, read: <a href="https://www.jetbrains.com/help/idea/annotating-source-code.html#jetbrains-annotations">JetBrains Annotations ⧉</a>:</p>
 <ul>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Nullable" title="GitHub User: Nullable">@Nullable</a></em> and <em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotNull" title="GitHub User: NotNull">@NotNull</a></em>: indicate a variable, parameter, or return value that can or cannot be null.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Nls" title="GitHub User: Nls">@Nls</a></em>: indicates that an annotated code element is a string that needs to be localized.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NonNls" title="GitHub User: NonNls">@NonNls</a></em>: indicates that an annotated code element is a string which is not visible to users, which doesn't require localization, and which doesn't contain strings requiring localization. When you annotate an element with <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NonNls" title="GitHub User: NonNls">@NonNls</a>, localization tools will skip this element and strings inside it.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/PropertyKey" title="GitHub User: PropertyKey">@PropertyKey</a></em>: indicates that a method parameter accepts arguments that must be valid property keys in a specific resource bundle. When a string literal that is not a property key in a bundle is passed as a parameter, IntelliJ IDEA highlights it as an error. The annotation is also used to provide completion in string literals passed as parameters.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/TestOnly" title="GitHub User: TestOnly">@TestOnly</a></em>: indicates that a method or a constructor must be called from testing code only.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Contract" title="GitHub User: Contract">@Contract</a></em>: lets you specify a set of rules (a contract) that a method must follow. If the contract is violated, IntelliJ IDEA reports a problem.</li>
-<li><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Language" title="GitHub User: Language">@Language</a></em>: injects code written in another language in a Java String.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Nullable.html">@Nullable</a> and <a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html">NotNull ⧉</a>: indicate a variable, parameter, or return value that can or cannot be null.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Nls.html">@Nls ⧉</a>: indicates that an annotated code element is a string that needs to be localized.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NonNls.html">@NonNls</a>: indicates that an annotated code element is a string which is not visible to users, which doesn't require localization, and which doesn't contain strings requiring localization. When you annotate an element with <a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NonNls.html">@NonNls ⧉</a>, localization tools will skip this element and strings inside it.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/PropertyKey.html">@PropertyKey ⧉</a>: indicates that a method parameter accepts arguments that must be valid property keys in a specific resource bundle. When a string literal that is not a property key in a bundle is passed as a parameter, IntelliJ IDEA highlights it as an error. The annotation is also used to provide completion in string literals passed as parameters.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/TestOnly.html">@TestOnly ⧉</a>: indicates that a method or a constructor must be called from testing code only.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/Contract.html">@Contract ⧉</a>: lets you specify a set of rules (a contract) that a method must follow. If the contract is violated, IntelliJ IDEA reports a problem.</li>
+<li><a href="https://javadoc.io/static/org.jetbrains/annotations/26.0.2/org/intellij/lang/annotations/Language.html">@Language ⧉</a>: injects code written in another language in a Java String.</li>
 </ul>
 <p>More annotations can be found in the package <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/package-summary.html"><abbr title="organization">org</abbr>.jetbrains.annotations</a> and <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/intellij/lang/annotations/package-summary.html"><abbr title="organization">org</abbr>.intellij.<abbr title="language">lang</abbr>.annotations ⧉</a>.</p>
 
@@ -1828,7 +1826,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2025</span>
   </span>
 
     

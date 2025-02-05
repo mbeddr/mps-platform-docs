@@ -794,8 +794,6 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
       
-        
-      
     
     
       
@@ -1135,6 +1133,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   <a href="#manual-build" class="md-nav__link">
     <span class="md-ellipsis">
       Manual Build
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps-20222-and-earlier" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPS 2022.2 and earlier
     </span>
   </a>
   
@@ -1599,6 +1606,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mps-20222-and-earlier" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPS 2022.2 and earlier
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1654,26 +1670,25 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li>You have to build the tests and sandboxes manually.</li>
 </ol>
 <h2 id="manual-build">Manual Build<a class="headerlink" href="#manual-build" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside <abbr title="Meta Programming System">MPS</abbr>, but when you execute it on the regular command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a <em>spawner</em> plugin into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling ⧉</a> and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.</li>
-<li>
 <p>You can now build all projects. Start with these projects in this order:</p>
-<ul>
-<li><em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em></li>
-<li><em><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil</em></li>
-<li><em><abbr title="commercial/common/communication">com</abbr>.mbeddr.core</em></li>
-<li><em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="extension">ext</abbr></em></li>
-<li>&hellip;</li>
-</ul>
-</li>
-</ol>
+<div class="codehilite"><pre><span></span><code>- *com.mbeddr.debugger*
+- *com.mbeddr.mpsutil*
+- *com.mbeddr.core*
+- *com.mbeddr.ext*
+- ...
+</code></pre></div>
+
 <p>If you get compilation errors, try a different order. Some projects like <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr></em> and <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.<abbr title="document/documentation">doc</abbr>.aspect</em> don't have as many dependencies on other projects as other projects.</p>
-<p>If a lot of errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you don't have the spawner plugin installed.</p>
 <div class="admonition warning">
 <p class="admonition-title">When anything goes wrong, and you want to start over, clean the generated files: <code>git clean -xdf</code>. After you've made a change, (re)build the parts of the project that you've changed and push the branch so that the build server can make a complete build + execute the tests.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">You don't need to open all dependent projects if you make a change in one project.</p>
+</div>
+<h2 id="mps-20222-and-earlier"><abbr title="Meta Programming System">MPS</abbr> 2022.2 and earlier<a class="headerlink" href="#mps-20222-and-earlier" title="Permanent link">&para;</a></h2>
+<p>Open the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project first in <abbr title="Meta Programming System">MPS</abbr> (multiple projects are located in the code/languages folder) and run <code>./gradlew install</code> on Mac/Linux or <code>gradlew.bat install</code> on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside <abbr title="Meta Programming System">MPS</abbr>, but when you execute it on the regular command line, you might need to pass <code>-PMPS_PATHS_SELECTOR</code>to gradle to set the path to the <abbr title="Meta Programming System">MPS</abbr> home directory. When everything works, the script should install a <em>spawner</em> plugin into your <abbr title="Meta Programming System">MPS</abbr> installation. This plugin contains libraries for the <a href="https://www.eclipse.org/cdt/">Eclipse C/C++ development tooling ⧉</a> and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.</p>
+<div class="admonition warning">
+<p class="admonition-title">If a lot of errors occur in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.debugger</em> project, you don't have the spawner plugin installed.</p>
 </div>
 
 
@@ -1695,7 +1710,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2025</span>
   </span>
 
     
