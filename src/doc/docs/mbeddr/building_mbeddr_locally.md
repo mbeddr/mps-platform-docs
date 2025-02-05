@@ -18,8 +18,7 @@ When building [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, you must 
 
 ## Manual Build
 
-1. Open the *com.mbeddr.debugger* project in MPS (multiple projects are located in the code/languages folder) and run `./gradlew install` on Mac/Linux or `gradlew.bat install` on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside MPS, but when you execute it on the regular command line, you might need to pass `-PMPS_PATHS_SELECTOR`to gradle to set the path to the MPS home directory. When everything works, the script should install a *spawner* plugin into your MPS installation. This plugin contains libraries for the [Eclipse C/C++ development tooling](https://www.eclipse.org/cdt/) and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.
-2. You can now build all projects. Start with these projects in this order:
+You can now build all projects. Start with these projects in this order:
 
     - *com.mbeddr.debugger*
     - *com.mbeddr.mpsutil*
@@ -29,8 +28,12 @@ When building [mbeddr](https://github.com/mbeddr/mbeddr.core) locally, you must 
 
 If you get compilation errors, try a different order. Some projects like *com.mbeddr.doc* and *com.mbeddr.doc.aspect* don't have as many dependencies on other projects as other projects.
 
-If a lot of errors occur in the *com.mbeddr.debugger* project, you don't have the spawner plugin installed.
-
 !!! warning "When anything goes wrong, and you want to start over, clean the generated files: `git clean -xdf`. After you've made a change, (re)build the parts of the project that you've changed and push the branch so that the build server can make a complete build + execute the tests."
 
 !!!hint "You don't need to open all dependent projects if you make a change in one project."
+
+## MPS 2022.2 and earlier
+
+Open the *com.mbeddr.debugger* project first in MPS (multiple projects are located in the code/languages folder) and run `./gradlew install` on Mac/Linux or `gradlew.bat install` on Windows in the command line. This command should build the entire project and takes more than 10 minutes. You don't have to start this command from inside MPS, but when you execute it on the regular command line, you might need to pass `-PMPS_PATHS_SELECTOR`to gradle to set the path to the MPS home directory. When everything works, the script should install a *spawner* plugin into your MPS installation. This plugin contains libraries for the [Eclipse C/C++ development tooling](https://www.eclipse.org/cdt/) and needs to be installed. It also installs the idea plugin for the actions filter language, which you needs to install to use the language.
+
+!!! warning "If a lot of errors occur in the *com.mbeddr.debugger* project, you don't have the spawner plugin installed."
