@@ -116,7 +116,7 @@ Hover over a green rectangle to show a short description. Reload the page if the
 
 
 <script type="text/javascript">
-  $(function() {
+$( document ).ready(function() {
     document.getElementsByTagName('body')[0].style.overflow = "scroll";
     $('.map').maphilight({
         alwaysOn: true,
@@ -125,5 +125,5 @@ Hover over a green rectangle to show a short description. Reload the page if the
         strokeWidth: 2,
         shadow: false,
     });
-  });
+});
 </script>
