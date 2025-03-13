@@ -126,6 +126,21 @@ migration is possible, users might even have to change their models manually.
 
     {{ contribution_by('abstraktor') }}
 
+!!! question "How can I get all properties of a node?"
+
+    To get all properties that are set in the current node, calll `myNode/.getProperties()`. To get a list of all available properties including inherited ones, use `concept/YourConcept.getProperties()` and read them through `myNode/.getProperty()`.
+
+!!! question "How can I get the value of a enumeration dynamically?"
+
+    If you know the property, you can call `new SNodeAccessUtilImpl().getPropertyValue(node, property)`.
+is even easier.
+
+## Links
+
+!!! question "How to properly check nodes of type `LinkDeclaration` for equality?"
+
+    Assuming you have a LinkDeclaration myLink, you can just write `myLink.is(link/Concept : otherLink/)`.
+
 ## [References](https://www.jetbrains.com/help/mps/structure.html#references)
 
 To refer to other nodes in the model, use references. They have a scope and can be automatically created (smart references)

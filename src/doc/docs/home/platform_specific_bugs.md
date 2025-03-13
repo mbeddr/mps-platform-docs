@@ -17,6 +17,8 @@ contain a small amount of OS-specific code.
 You only encounter serious issues with native code which is dependent on the platform. The JDK or JBR that you use, and the Java version can also play a role. For the last two factors,
 ensure everybody uses the same versions to not have to deal with sometimes odd error messages.
 
+Please note that you can't run the [generic distribution](https://www.jetbrains.com/mps/download/#section=zip) that you can find on the MPS download page. Running generic distributions directly is not supported at all since roughly 2023.2 because MPS needs a platform-specific JNA library. They provide JNA for several platforms in the generic distribution.
+
 ## Windows
 
 Based on the market share, you can assume that users and especially end users are Windows users. While it make sense in

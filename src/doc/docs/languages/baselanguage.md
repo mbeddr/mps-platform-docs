@@ -85,6 +85,10 @@ var x=0c710
     new singleton<string>("single")`
     ```
 
+!!! question "What do I need to know about sequences?"
+
+    Sequences are lazily evaluated meaning they are evaluated on demand when they are accessed which can lead to unwanted side effects (they are not purely functional). Always use the list type if you have to save something to a variable or iterate directly with a for-each loop over it. For existing code, you don't need to make this change unless it is performance-critical code. Is an operation like `ìsEmpty` expensive? Sequences internally use a Iterables and just call seq.iterator().hasNext(). They only try to fetch the first element, so it is not expensive at all.
+
 !!! question "How do you convert from a Java *ArrayList* to a Base Language list?"
 
     Use the copy constructor: 
@@ -159,7 +163,7 @@ var x=0c710
 
 ## Base Language Internal
 
-Specific Languages blog: [Poor man's cross-model generation: baseLanguageInternal](https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/)
+[Poor man's cross-model generation: baseLanguageInternal](https://specificlanguages.com/posts/2022-04/25-poor-mans-cross-model-generation/){{ blog('sl') }}
 
 ## Sax Parser
 

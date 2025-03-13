@@ -28,6 +28,7 @@ compare if the risky dirty build is worth the time you save.
 !!! warning "The IDE is sluggish and doesn't work the way it should."
 
     Edit the file mps(64).vmoptions and give it sufficient heap space: `-Xmx8g`
+    Make sure that the issue is not caused by any of the used languages. You can also enable the power save mode through *File* --> *Power Save Mode* to disable all background tasks including file indexing and typesystem checking. This approach also helps to see if an issue is related to a slow typesystem check or if there is a performance issue in the editor.
 
 !!! warning "MPS behaves strangely :beginner:"
 
@@ -73,7 +74,7 @@ compare if the risky dirty build is worth the time you save.
     - If you want to use [JCEF](https://plugins.jetbrains.com/docs/intellij/jcef.html), it must be a JBR runtime that [includes
     JCEF](https://github.com/JetBrains/JetBrainsRuntime/releases).
     - An MPS plugin was disabled (e.g., Java Debugger for MPS) that a language depends on.
-    - For mbeddr, [three plugins need to be installed](http://mbeddr.com/mps-platform-docs/mbeddr/?h=actionsfilter#:~:text=i%20am%20using%20some%20mbeddr%20languages%20in%20my%20project%20but%20some%20of%20them%20aren%E2%80%99t%20deployed.) to avoid languages that can't be loaded because they have dependencies on one of the three plugins.
+    - For mbeddr, [one plugin need to be installed](http://mbeddr.com/mps-platform-docs/mbeddr/?h=actionsfilter#:~:text=i%20am%20using%20some%20mbeddr%20languages%20in%20my%20project%20but%20some%20of%20them%20aren%E2%80%99t%20deployed.) to avoid languages that can't be loaded because they have dependencies on one of the three plugins.
  
 !!! warning "The IDE doesn't let you enter some text / an intention isn't visible that should be there."
 
@@ -122,6 +123,14 @@ compare if the risky dirty build is worth the time you save.
     [JetBrains MPS issue tracker](https://youtrack.jetbrains.com/issues/MPS) because the issue will likely be marked as invalid and
     doesn't land in the right issue tracker.
 
+!!! failure "The MPS console shows the error message: java.lang.ClassNotFoundException: ConsoleModel_.Main"
+
+    This exception can happen when you import a module/model into the console where the class loading fails, for example, because a dependency is missing, a language is not deployed/generated or the classloading is set to none. What you can try is to press the "clear" button in the console, import one language after another, and execute a simple expression like 1+1. When you have an issue with a language or dependency you will get this exception again. Another reason can be broken dependencies in a model that you import. Check the log file for additional hints. For the last reason, this can show up as a warning that the solution was marked invalid for classloading in the log file.
+
+!!! failure "Some aspect descriptors like StructureAspectDescriptor can't be generated"
+
+    Starting from MPS 2023.2, the corresponding devkit has to be import (in this case `jetbrains.mps.devkit.aspect.structure`. Unlikely but there could be also compilation issues while generating the aspect descriptor. If you the documentation descriptor for the documentation language can't be build, you are not using the documented concept/property annotation from `com.mbeddr.doc.aspect` in the documentation. This is needed for the descriptor to get generated.
+
 ## Gradle
 
 [Gradle | Build](gradle.md) gives some more details about working with this build tool. When working with Gradle, make sure
@@ -156,20 +165,13 @@ that you know which versions you are using. Different Gradle versions support [d
 
 !!! warning "Tests are failing on CI but are green in the local MPS installation."
 
-    What about the local Gradle build?
-    The tests can be executed locally with `./gradlew ant-build-tests -Dmps.home=PATH_TO_YOU_MPS_INSTALLTION`. The test results can be found in `build/iets3-allScripts` ({{ iets3() }}).
+    One reason can be that in the local MPS installation all necessary plugins are loaded or tests are executed in the same MPS instance. Especially starting from MPS 2024.1 all necessary plugins need to be declared in the build script, but also for executing tests.
 
-    - If it runs (green), then there is a discrepancy between the CI and your local Gradle build.
-        - Make sure you are on the same branch/commit as the CI,
-    - If it shows the same test failures as the CI, then there is a discrepancy between the MPS Build and the Gradle Build.
-        - Rebuild the build scripts in MPS.
-        - Try running the tests in a separate process (edit the run configuration in MPS).
-        - Make sure your MPS uses the same (versions of the) dependencies as the gradle build.
-            - This can be achieved in 2 different ways:
-                - Run `./gradlew dependencies` to see which versions of which dependency gradle uses and
-              make sure the OS and Mbeddr repos are checked out on the right branches/commits ({{ iets3() }}).
-                - Remove the file *projectlibraries.overrides.properties* from your repo and execute
-              `./gradlew setup` in both. This configures MPS to directly use the Java class files from the Gradle artifacts instead of the checked-out repos.
+    Another common issue are flaky tests that don't always show the same behavior. There can be multiple reasons for that including timing issues or other issues related to multi-threaded code.
+
+    Make also sure to replicate the environment on the CI locally and run the tests from the command line if you can't see the failure in MPS itself.
+
+    More information can be found in: [Why does my test fail when run from Ant but not when run from MPS?](https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/){{ blog('sl') }}
 
 ## Explanations
 

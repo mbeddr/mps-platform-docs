@@ -8,6 +8,7 @@ tags:
 # [Build Language](https://www.jetbrains.com/help/mps/build-language.html)
 
 - [Escaping to Ant from the build language](https://specificlanguages.com/posts/2022-03/24-escaping-to-ant-from-build-language/){{ blog('sl') }}
+- [3 small changes to improve your build scripts](https://specificlanguages.com/posts/2024-01/02-3-small-changes-to-improve-your-build-scripts/){{ blog('sl') }}
 
 !!! question "How can you override the build directory name *build* to something different?"
 
@@ -31,7 +32,7 @@ tags:
 
 !!! question "How do you build an MPS project with Maven?" 
 
-    Specific Languages blog: [Building MPS projects using Maven - a sample](https://specificlanguages.com/posts/building-mps-projects-using-maven/)
+    [Building MPS projects using Maven - a sample](https://specificlanguages.com/posts/building-mps-projects-using-maven/){{ blog('sl') }}
 
 !!! question "How can you find out the supported MPS version of a project?"
 
@@ -55,7 +56,7 @@ tags:
 
     Possible solutions:
 
-    - Specific Languages Blog: [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/)
+    - [mpsclean](https://specificlanguages.com/posts/2022-01/17-mpsclean/){{ blog('sl') }}
     - Have a dedicated clean task ([gradle example](https://github.com/JetBrains/MPS-extensions/blob/ade5d7798c2a233ce850ad539336362ed8ec437e/build.gradle#L272)) when using a build script.
 
     The idea of having such a task is not only to make it easier to clean the generated files but also keep downloaded dependencies. If you have, for example, MPS as dependency in your project, *git clean -xdf* will remove all dependencies including MPS.

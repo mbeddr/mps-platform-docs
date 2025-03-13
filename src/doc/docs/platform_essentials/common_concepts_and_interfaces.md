@@ -17,6 +17,61 @@ Identifiers starting with a capital "I" refer to interfaces.
 
 All common mbeddr interfaces are located in the namespace *com.mbeddr.core.base*.
 
+#### [IVisibleElementProvider](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F7139820346881179811)
+
+`IVisibleElementProvider` is a legacy predecessor of MPS' built-in `ScopeProvider`.
+
+Visible elements are whatever the implementation of `IVisibleElementProvider` defines them to be. If you ask, say, a `Chunk` what the visible elements of some concept are (e.g. an IETS3 `Function`), it should give you all functions visible from within the chunk, so anything it defines itself plus functions from imported chunk, excluding things that are somehow, in implementation-defined way, marked private.
+
+Here's the code of `Chunk#visibleContentsOfType`:
+
+```
+public virtual sequence<node<>> visibleContentsOfType(conceptNode<> targetConcept) 
+  overrides IVisibleElementProvider.visibleContentsOfType { 
+  list<node<>> result = new arraylist<node<>>; 
+   
+  sequence<node<>> referable = allReferenceableContentsInChunk(); 
+  foreach content in filterContent(referable, targetConcept) { 
+    if (!(content.@visibilityController != null && !content.@visibilityController.isCurrentlyVisible())) { 
+      result.add(content); 
+    } 
+  } 
+  foreach content in this.contentFromImportedChunks(targetConcept) { 
+    if (!(content.@visibilityController != null && !content.@visibilityController.isCurrentlyVisible())) { 
+      result.add(content); 
+    } 
+  } 
+   
+  return result; 
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+```
+
+Code that works with visible element providers usually defines reference scopes to traverse the hierarchy to find the first `IVisibleElementProvider` and ask it for visible contents. Here is the scope for `FunctionCall`, for example:
+
+```
+link {function} 
+  referent set handler <none> 
+  scope (referenceNode, contextNode, containmentLink, position, linkTarget)->Scope { 
+    ListScope.forResolvableElements(contextNode.ancestor<concept = IVisibleElementProvider, +>.visibleContentsOfTypeAsSequence(concept/IFunctionLike/).ofConcept<IFunctionLike>); 
+  } 
+```
+
+(And it really should be using the `visibleContentsOfType` overload that returns a `Scope` instead.)
+
+If possible, use `ScopeProvider` instead of `IVisibleElementProvider`. ScopeProvider offers more flexible methods for you to define such as `getScope(concept<> kind, SContainmentLink link, int index)` which allows you to specify that e.g. a variable is visible for every statement in the same method that *follows* its declaration. It also offers the ability to include the parent scope in your scope without doing manual traversals.
+
+When defining the scope of a reference with `ScopeProvider`, use `inherited` scope to replace the traversal above:
+
+```
+link {function} 
+  referent set handler <none> 
+  scope inherited for IFunctionLike 
+```
+
+If you have to use `IVisibleElementProvider`, try to use methods that return `Scope` instances rather than sequences. Scopes may be optimized to answer `contains` without computing the whole sequence. When you ask for a `sequence` and build a `Scope` out of it manually, you lose this optimization opportunity.
+
+{{ answer_by('sergej-koscejev') }}
+
 #### [Assessment](http://mbeddr.com/userguide/UserGuideExport.html#sid3231021218602645814)
 
 To extend assessments, extend the class [AssessmentQuery](AssessmentQuery) to create a new query. The result of the query has to extend the class [AssessmentResult](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F865293814733133833). Extend the interface [AssessmentSummary](http://127.0.0.1:63320/node?ref=r%3Af7764ca4-8c75-4049-922b-08516400a727%28com.mbeddr.core.base.structure%29%2F671216505796427448) to provide a summary of the results.

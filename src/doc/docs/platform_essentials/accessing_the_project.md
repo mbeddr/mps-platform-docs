@@ -26,7 +26,7 @@ There is no need to convert between different project classes because all projec
 
 ### Editor
 
-This topic is also explained on the Specific Languages blog: [How to get the current MPS project from within the editor](https://specificlanguages.com/posts/how-to-get-current-project-from-editor/). Components in the IntelliJ platform can implement the interface [DataProvider](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider)
+This topic is also explained in [How to get the current MPS project from within the editor](https://specificlanguages.com/posts/how-to-get-current-project-from-editor/){{ blog('sl') }}. Components in the IntelliJ platform can implement the interface [DataProvider](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider)
 to provide data that you can access through the [DataManager](http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide%28MPS.IDEA%2F%29%2F%7EDataManager) class. A typical data provider is the editor component. Actions also support the DataManager:
 
 ```java

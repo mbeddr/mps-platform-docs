@@ -90,5 +90,11 @@ MPS also has a null analyzer for Java that is part of the data flow analysis ([n
 
 - Do not leave debug statements in production code, including MPS log statements and *System.out* statements.
   Especially in tests, outputs can not only be annoying but can also fail the test with an *UncleanTestExecutionException*
-  The only acceptable debug statements are those that have the log level set to *debug* or lower because they are not visible
-  by default.
+  The only acceptable debug statements are those that have the log level set to *debug* or lower because they are not visible by default. 
+
+
+    When you use a logging framework you have the option to configure the output. You can filter out messages you don't care about, you can redirect them into a log file, and you have more details such as a timestamp and the source class. With System.out there is often just this mysterious output that tells you nothing and just spams the console.
+  
+    In unit tests this is fine because the only time when you will see this output is when you execute the test.
+
+    {{ answer_by('slisson') }}

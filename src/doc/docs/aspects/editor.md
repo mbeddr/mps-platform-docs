@@ -231,6 +231,38 @@ This section contains some more advanced topics and questions when defining edit
 
     You can implement a cell similar to the cell [EditorCell_MathEnd](http://127.0.0.1:63320/node?ref=r%3A34f40b74-cb38-46ba-8e5b-13b443c803c4%28de.itemis.mps.editor.math.runtime%29%2F9204702729138147058) in {{ mps_extensions() }}.
 
+!!! question "What is the difference between the style sheet item read-only and editable?"
+
+#### Read-only vs Editable Style Attribute
+
+- ***read-only*** - whether one can modify the cell and the nested cells or not. ***False*** by default. Designed for freezing fragments of cell tree.
+
+    - *disables side deletes for cells, the context assistant manager, editing of properties*
+
+    - *this attribute is inherited by child cells*
+
+- ***editable*** - whether one can modify text in a cell or not. By default is ***false*** for constant cell models, true for other cell models.
+
+    - *non-editable by default for: read only model access cell, braces, constant text, indent cell*
+
+    - go can't use keyboard navigation to go to this cell (e.g. typing TAB) and won't be considered as the next selectable cell
+
+    - can't paste text
+
+    - this attribute is not inherited by child cells
+
+**Q: What happens if I use the *navigatable-node* style sheet item on a cell where *editable* is set to false?**
+
+The reference will not be followed and the last cell with a reference will be used e.g. the cell to the left of the cell when it is a reference cell.
+
+**Q: What if I set read-only: true and editable: true?**
+
+The cell won't be editable since the read-only attribute overrides the other attribute.
+
+**Q: What attribute should I use?**
+
+Both attributes are often used. If the cell should be considered as a selectable cell or you need support for reference navigation don't use editable:false. read-only: false can also be set on whole collections to disable editing.
+
 ### Editor Hints
 
 !!! question "Is there a utility class related to editor hints?"

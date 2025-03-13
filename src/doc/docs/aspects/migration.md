@@ -109,6 +109,26 @@ phase and don't need to execute them. When using the *Refactoring* menu in a lan
     The module version of a solution can't change automatically. I also don't know why you would change it manually. Devkits don't even have the option to change the module version.
     A good example of a language with different language and module versions is ^^jetbrains.mps.lang.feedback.problem.scopes^^ (language: 0, module: 1) because it only has a refactoring step but no other migrations.
 
+!!! question "How to properly split and order MPS-Migrations?"
+
+    The samples shipped with MPS contain a migration demo that introduces those concepts.
+
+!!! question "How do I write a migration for adding a specialization to a link declaration?"
+
+    > I have a concept A with `arg:Expression[1]` and want to create a new interface `Intf` that the concept implements. The interface contains `expr:Expression[1]`.
+    As a result, A will have the link `arg:Expression[1] specializes expr`.
+
+    1. Let A implement Intf.
+    2. Refactoring --> Rename: arg to exp (update resolve info)
+    3. Refactoring --> Move Link up to Intf
+    4. Select everything except update references.
+    5. Remove `Deprecated annotation` and add specializes.
+    6. Refactoring --> Rename expr_old to arg.
+    7. Make the language.
+    8. Run the migration assistant.
+
+    If the child is already named `expr` and you only want to move it to the superconcept, you can skip 2 and 4 and select everything in 3.
+
 ## Troubleshooting
 
 Migrations are not only necessary from one language version to another but also for newer MPS versions. Issues can arise

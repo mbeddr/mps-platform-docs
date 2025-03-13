@@ -115,6 +115,39 @@ ususally end in *.pluginSolution* or *.plugin*.
 
     {{ contribution_by('dbinkele') }}
 
+??? question "How can I test extension point implementations?"
+
+    This can be achieved using MPS APIs. MPS exposes the so-called `ExtensionRegistry` which gathers all registered extension points of the current project.
+
+    Normally, to register an implementation of `extPointA`, you would define an extension point `myExtOfA` with a method `IextendA get() { ... }` returning the implementation of `IextendA`.
+    However, this would always(!) load the extension point if it is part of your project.
+    To test your implementation in solution `extPointA.tests`, add a class`myExtAImpl`in the solution which implements `Extension<IextendA>`.
+
+    First, this will require it to provide the implementation of your extension in the `get()`method, but also the ID of the extension point in the funciton `getExtensionPointID()`. The ID can easily be obtained from `extensionPoint/extPointA/.getID()` . 
+    The following code then first gets the extensionpoint `extPointA`  from the registry and extends with your implementation:
+    
+    ```
+    // project is a variable provided by the testing infrastructure
+    ExtensionRegistry registry = project.getComponent(ExtensionRegistry.class);
+    //  programmaticaly declare an extension point implementation 
+    DefaultExtensionDescriptor myExtAImplExtension = new DefaultExtensionDescriptor(new myExtAImpl()); 
+    registry.registerExtensionDescriptor(myExtAImpleExtension); 
+    ```
+    
+    After testing the implementation, you must then remove the handler with this line of code
+    
+    ```
+    registry.unregisterExtensionDescriptor(myExtAImplExtension);
+    ```
+
+    {{ contribution_by('HeikoBecker') }}
+
+!!! question "How can you add new languages to the MPS spellchecker?"
+
+    MPS uses the [spell checker of the IntelliJ IDEA (Grazie)](https://www.jetbrains.com/help/mps/2022.3/spellchecking.html) for spell checking.
+    The spell checker is also enabled for the rich text language (it can be disabled in *preferences* --> *Other Settings* --> *Text*). To add a new language, clone
+    https://github.com/wooorm/dictionaries and add a new custom dictionary in *preferences* --> *Editor* --> *Spelling* --> *Custom dictionaries *by selecting the .dic file of your language in the repo.
+
 ## Languages/Features
 
 Most additional plugins are contributed by languages in {{ mps_extensions() }}, and {{ mbeddr_platform() }}.

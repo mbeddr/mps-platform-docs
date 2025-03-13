@@ -17,13 +17,11 @@ the reusable parts of mbeddr that don't deal with C code. The platform comes wit
 
 !!! warning "I am using some mbeddr languages in my project, but some aren't deployed :beginner:"
 
-    There might be some additional plugins that you need to install:
+    There might be some additional plugin that you need to install:
 
     - ^^com.mbeddr.mpsutil.actionsfilter^^
-    - ^^mbeddr.spawner^^
 
     You can install them by calling `gradlew.bat install "-PMPS_Installation=<path to MPS>"`
-    from the root folder of the mbeddr.core repository when building from source. The actions filter plugin
-    is necessary for the actions filter language.
+    from the root folder of the mbeddr.core repository when building from source. The actions filter plugin is necessary for the actions filter language.
 
 

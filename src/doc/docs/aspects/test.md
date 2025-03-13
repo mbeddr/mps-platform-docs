@@ -123,6 +123,10 @@ Fore more information about testing in general, read [MPS Internals | Testing](t
 
      {{ contribution_by('abstraktor') }}
 
+!!! question "How to find out if a node is inside a test model?"
+
+    `SModelStereotype#isTestModel` is the right method. The same approach can be used for other special models: `SModelStereotype#isStubModel`, `SModelStereotype#isGeneratorModel`. For aspect models, use model.isAspectModel(x) where x is a reference to the aspect like `editor`.
+
 ## How to Test
 
 This section deals with practical questions regarding testing. Testing should be a big part of the CI pipeline to ensure that
@@ -176,6 +180,11 @@ Base Language and KernelF have support for test cases and assert statements.
     The easier solution is to place the tests in a separate solution and then invoke the make process for the solution that contains your input programmatically, so you can assert over the output. An example implementation of how the make process is invoked can be found in the [mbeddr-c part](http://127.0.0.1:63320/node?ref=r%3A35144171-bbda-419f-9015-4d1f075e1db4%28com.mbeddr.core.runconfiguration.pluginSolution.plugin%29%2F7943990500389317776).
 
     {{ answer_by('coolya') }}
+
+!!! question "Is it recommended to write editor tests?"
+
+    Most of the time they are difficult to maintain and break easily (e.g. a cell ID changes). It's better to avoid them or create other types of tests. For example, you can call behavior methods directly to simulate creating/modifying nodes. If you want to test if you could create a node, having a scope test that checks references can also be sufficient. The biggest trick is keeping those editor tests short to make them easier to fix when they fail.
+    Another problem with editor tests is that they don't show the difference graphically (MPS-38305).
 
 ??? question "How to write editor tests for context assistants?"
 
@@ -375,7 +384,7 @@ Avoid adapting your code to work in the test models and avoid adding checks to s
 
 !!! warning "The tests only work in MPS and not on the command line"
 
-    [Why does my test fail when run from Ant but not when run from MPS?](https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/){{ blog('sl') }}
+    [Why does my test fail when run from Ant but not when run from MPS?](https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/){{ blog('sl') }}. Simpler answer: If you have a different behaviour on CI than locally, it may be, because you have some old/broken (generated/compiled) artifacts on your machine, that either cause things to work out though the CI breaks or vice versa. Try a git clean (git clean -xfd) and rebuild the project locally.
 
 !!! failure "Why does the test execution fail with "Test project '$...' is not opened. Aborted"? :beginner:"
 
@@ -385,3 +394,7 @@ Avoid adapting your code to work in the test models and avoid adding checks to s
 
     One of the reasons why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is only one way to avoid this exception than not showing the dialog.
     According to the IntelliJ documentation, it can also happen when the dialog is not shown on the EDT thread or the dialog is not modal.
+
+!!! question "Which temporal model should you use for a node test setup?"
+
+    `TempModuleOptions#nonReloadableModule` is provisional code. Maybe `TempModuleOptions#forDefaultModule` would be the better option. The difference with the first option is that the module is invisible to the user. It shouldn't make a difference since it is discarded after the test anyway.

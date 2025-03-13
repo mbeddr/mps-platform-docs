@@ -62,6 +62,11 @@ This page answers some general questions about MPS and is most useful for :begin
     When using many languages or plugins, the {{ image_popup("https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options", "maximum heap size", "../gifs/maximum_heap_size.gif", "maximum heap size") }} should be changed to a higher value, such as 8 GB.
     Another reason for high memory usage can be many (poorly) implemented checking rules. 
 
+!!! question "How can I disable/enable the [new UI](https://www.jetbrains.com/idea/new-ui/)?"
+
+    The new UI became the default in MPS 2024.3. You can disable it through the preferences (*Settings* --> *Appearance & Behavior* --> *New UI*) or through the registry (*Registry..* -> *disable ide.experimental.ui*) 
+)
+
 !!! warning "I am running low on memory, or the IDE is running slow. What can you do without restarting MPS?" 
 
     When you have enabled the {{ image_popup("https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons", "loaded models' indicator", "../gifs/memory_indicator.gif", "memory indicator") }} in the lower right corner of the screen, you can click on the text to [unload not needed models](https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/#:~:text=Model%20unloading).
@@ -91,6 +96,47 @@ This page answers some general questions about MPS and is most useful for :begin
     ```kroki-mermaid
 @from_file:home/diagrams/srepository_example.mermaid
     ```
+
+??? question "What is the difference between the language level, java compliance level and the project bytecode version?"
+
+    - (A) [Project bytecode version](https://www.jetbrains.com/help/mps/mps-java-compatibility.html#configuration\(\)) (*preferences → Build, Execution, Deployment → Java*):
+    
+      - (B) [Java compliance level](https://www.jetbrains.com/help/mps/build-language.html#javaplugin)
+    
+      - (C) [Language version](https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#java) (part of module/solution properties):
+    
+      - (D) [The JetBrains Runtime Environment](https://github.com/JetBrains/JetBrainsRuntime) (JBR) which is a special version of a JRE (Java Runtime Environment)
+    
+    (A) is the Java version that Java classes, languages, solutions etc. will be compiled with. It must be set to the IntelliJ platform Java version or lower: (Java 17 for MPS 2022.2 and newer and Java 11 for older MPS versions). Explanation in the MPS documentation \>= 2022.2:
+    
+    > Note that MPS can only run on JDK 17 and later, so when compiling languages or MPS plugins you have to set the bytecode version to 17, otherwise your languages/plugins won't be loaded. Setting the byte code version to earlier JDK versions is only useful for solution-only projects, which are generated into Java sources that you then compile and use outside of MPS.
+    
+    (B) in the build script should be set to the same value as (A).
+    
+    (C) can be set from Java 7 to 11: Go to the properties of the module (in later versions only the Java tab of solutions) and set the language level. Depending on the version, it enables some Java features like default/private interface methods or support for variable declarations with "var" (Java 10). For Java 8, you can decide if closures should be compiled as lambdas (L) or anonymous classes (A).
+    
+    *Example:*
+    
+    (L):
+    
+    ```java
+    Runnable r = -> { System.out.println("test"); }; 
+    ```
+    
+    (A):
+    
+    ```java
+    Runnable r = new Runnable() {     
+        @Override    
+        public void run() {
+            System.out.println("test");
+        }
+    };  
+    ```
+    
+    The MPS JDK stub will have all classes available that you can find up to the (D) version. You can even use and compile them when (A) is set to a lower version. For execution the code, (D) or a JRE/JDK must be the same version or higher as the version where this class was introduced.
+    
+    *Example:*  [HexFormat](https://docs.oracle.com/en%2Fjava%2Fjavase%2F22%2Fdocs%2Fapi%2F%2F/java.base/java/util/HexFormat.html) was introduced in Java 17, so (A) must be \>= 17 as well as the Java version to execute the code.
 
 !!! question "Is there an existing expression/scripting language?"
 
@@ -165,6 +211,8 @@ This page answers some general questions about MPS and is most useful for :begin
     When you have a repository "repo," you can, for example, replace the name of the MPS version with repo1, repo2, repo3, or a different naming scheme.
     When using [remote debugging](https://specificlanguages.com/articles/remote-debugging/), use other ports for the MPS
     instances (e.g.5005, 5006...500n), or MPS won't start.
+
+    A general solution under Linux to this problem can be found at https://github.com/nkoester/mps-zookeeper.
 
 !!! question "Why is MPS shipped with JBR instead of an installed JDK/JRE?"
 

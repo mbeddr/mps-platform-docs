@@ -48,3 +48,7 @@ Implement custom finders for discovering related nodes in this aspect.
     - `#!java module.isPackaged()` to check for installed languages/solutions/devkits
     - `#!java model.isReadOnly()` to check if a model allows updates
     - `#!java SModelStereotype.isX()` to check if the model has a specific stereotype, for example, the model is a test model
+
+!!! question "How can I find all references to a given AST node programmatically?"
+
+    Use the [smodel query language](https://www.jetbrains.com/help/mps/smodel-query-language.html#smodel.querylanguage) and specifically the `#usages` expression.

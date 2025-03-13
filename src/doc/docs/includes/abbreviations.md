@@ -29,6 +29,7 @@
 *[JBR]: JetBrains Runtime
 *[JCEF]: Java Chromium Embedded Framework
 *[JDK]: Java Development Kit
+*[JNA]: Java Native Access
 *[JPS]: JetBrains Project System
 *[JSON]: Javascript Object Notation
 *[JRE]: Java Runtime Environment

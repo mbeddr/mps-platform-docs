@@ -91,6 +91,8 @@ which deals with the plugin aspect.
     - Use the language ^^com.mbeddr.mpsutil.nodediff^^:
         - Select the first node: *Set as First Node in Diff*.
         - Select the second node: *Show Diff with First Node*.
+    - For tests, you can use the language ^^com.mbeddr.mpsutil.compare^^ which contains a concept `AssertNodeEquals`. By default it shown the differences as a text description. Click the checkbox next to it, to enable the graphical diff viewer.
+
 
 !!! question "How do I access the current project from anywhere?"
 

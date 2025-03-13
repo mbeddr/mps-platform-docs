@@ -19,6 +19,18 @@ tags:
     *Model Checker*, the type system checks are enabled. The type system only checks some rules when you invoke *Check model*. In this case, the
     option *do not apply on the fly* is set to true in a checking rule.
 
+!!! question "How can I get a type in places where node.type returns null and type information is not available?"
+
+    Note: This code won't work in the generator because `MPSCoreComponents#getInstance()` is not available in this place:
+
+    ```java
+    ClassLoaderManager classLoaderManager = MPSCoreComponents.getInstance().getPlatform().findComponent(ClassLoaderManager.class)
+    TypeCheckingContext typeChecking = new  IncrementalTypecheckingContext(nodeToCheck, typechecker.getTypeCheckerHelper(), classLoaderManager)
+    
+    typeChecking.checkRoot(false);
+    node<> type = typeChecking.typeOf(nodeToCheck);
+    ```
+
 !!! question "Are comparison rules often used?"
 
     They are rarely used (not many results across various code bases).
@@ -188,4 +200,16 @@ tags:
     int[] c = {new Integer(1)}; // allowed in J, disallowed in B
     int[] d = new Integer[]{new Integer(1)}; // disallowed in both
     Object d = new int[]{1}; // allowed in both
+    ```
+
+!!! question "How can I find out programmatically if a model has errors or not?"
+
+    ```java
+    public boolean isOk() { 
+        List<SModel> models = new ArrayList<>();
+        models.add(model);
+        ModelCheckerViewer v = ModelCheckerTool.getInstance(project).checkModels(models);
+        SearchResults<IssueKindReportItem> results = v.getSearchResults();
+        return results.getNotNullResults().size() == 0;
+    }
     ```

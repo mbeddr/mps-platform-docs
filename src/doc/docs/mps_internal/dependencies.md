@@ -98,6 +98,8 @@ Neither runtime solutions nor accessory models constitute a dependency from the 
 
 ## Cyclic Dependencies
 
+[Dealing with cyclic dependencies](https://specificlanguages.com/posts/2024-12/08-dealing-with-cyclic-dependencies/){{ blog('sl') }} deals with the same topic.
+
 Avoid cyclic dependencies between modules. They tend to render generation orders and other behavior non-deterministic. Languages are explicitly checked not to have a cyclic *Extends Scope* dependency. Cycles between models in the same module are fine.
 Starting with MPS 2021.1, there's a higher chance that you could run into troubles with cyclic dependencies. The reason is the new Javax compiler that doesn't act as forgiving as the earlier one (ECJ).
 

@@ -140,6 +140,16 @@ alias: generator_aspect
 
     No, but you can try to use the post-processing function of a `$MAP_SRC$` macro.
 
+!!! question "How do reference reduction rules work?"
+
+    They are useful if you want to manipulate references during generation without manipulating nodes themselves. Usually you transform node A into a new node B with a reduction rule and then you set B’s references in that rule. But sometimes you don’t need to transform A into anything.
+
+    {{ answer_by('sergej-koscejev') }}
+
+!!! question "How can you prioritize reduction rules in the generator?"
+
+    The standard way to prioritize a set of rules is to put it into a separate mapping configuration and specify in the generator priorities tab that it should run before the main config.
+
 ## How to Generate XY
 
 The official documentation provides a lot of information about generator and the MPS samples contain good examples for generators. This
@@ -180,7 +190,7 @@ sections answers some question that still often arise.
 
 !!! question "How do you generate language X from MPS?"
 
-    Specific Languages blog: [How do I generate language XY from MPS?](https://specificlanguages.com/posts/how-do-i-generate-language-x-from-mps/)
+    [How do I generate language XY from MPS?](https://specificlanguages.com/posts/how-do-i-generate-language-x-from-mps/){{ blog('sl') }}
 
 ??? question "How can you make sure that generator B can use the output of generator A?"
 
@@ -301,6 +311,44 @@ the *Compile in MPS* flag in a solution if the compilation doesn't start.
 
     {{ contribution_by('sergej-koscejev') }}
 
+!!! question "How to find out whether a model is transient?"
+
+    Check for the class: `model instanceOf TransientSModel`. There are different [TransientSModel](http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.extapi.model%28MPS.Core%2F%29%2F~TransientSModel) classes, make sure you pick the linked one. If you are not inside the generator, you can use `TemporaryModels#isTemporal`.
+
+!!! question "Is there a way to use the typesystem in the generator and thus find out the return-type of an expression?"
+
+    Yes, just import `jetbrains.mps.lang.typesystem` and use the `type` operation.
+
+!!! question "How can I set the *do not generate* flag for a model programmatically?"
+
+    ```java
+    SModel model = ....
+    if (model instanceof GenerableSModel) {
+        model as GeneratableSModel.setDoNotGenerate(<flag value>)
+    }
+    ```
+
+## User Objects
+
+User objects can be used to save temporary data in nodes. The most common use case is the generator, but this approach can also be used in the editor. Changes in user objects are not persisted in the model by default and don't trigger an update of the editor and typesystem engine. They can be persisted in the model through: 
+
+```java
+ModelWithAttributes m = (DefaultSModelDescriptor) model-ptr/yourModel/.resolve(#project.getRepository())/; 
+m.setAttribute(MPSPersistence.UO_MODEL_ATTRIBUTE, UserObjectsPersistence.REQUIRED.name());
+```
+
+This code adds the following attribute to the model xml file: `<attribute name="mps:internal:user-objects" value="REQUIRED" />`
+
+You can then add user objects which you can save by saving the module:
+
+```java
+yourNode/.putUserObject("hello", "world"); 
+AbstractModule module = (AbstractModule) yourNode.model/.getModule(); 
+module.forceSaveRecursively();
+```
+
+The persisted user object looks like this: `<uo k="s:hello" v="s:world" />`
+
 ## Troubleshooting
 
 In addition to reading the following questions, read [Debugging generators](https://specificlanguages.com/posts/debugging-generators/){{ blog('sl') }}.
@@ -384,6 +432,9 @@ In addition to reading the following questions, read [Debugging generators](http
     
     If there are errors/warnings in the editor, you can do *Language Debug* --> *Go to Rule Which Caused Error* from the context menu to find the code which produced the error. A similar feature is *Show Node Messages*, which allows copying/pasting the message.
 
+!!! warning "I get the error message: missing reference macro when running a generator."
+
+    The generator is not built or the language/a dependency can't be loaded. This can happen, for example after checking out a project or when a language has a dependency on the model that uses it.
 
 ## Blog Posts
 

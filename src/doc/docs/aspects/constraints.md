@@ -34,7 +34,7 @@ reference as its name. For a reference *r*, you can implement [INamedConcept](ht
 
 !!! warning "The property value isn't valid :beginner:"
 
-    Specific Languages Blog: [Invalid property values](https://specificlanguages.com/posts/2022-02/22-invalid-property-values/)
+    [Invalid property values](https://specificlanguages.com/posts/2022-02/22-invalid-property-values/){{ blog('sl') }}
 
 ## [References](https://www.jetbrains.com/help/mps/constraints.html#referentconstraints)
 

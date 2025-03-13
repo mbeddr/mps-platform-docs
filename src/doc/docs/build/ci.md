@@ -127,5 +127,9 @@ CI with MPS projects can provide some challenges:
 
 !!! warning "The build fails with exit code 137"
 
-    Specific Languages blog: [Exit code 137](https://specificlanguages.com/posts/2022-07/14-exit-code-137)
+    [Exit code 137](https://specificlanguages.com/posts/2022-07/14-exit-code-137){{ blog('sl') }}
+
+!!! info "How can you make merging branches easier when you have maintenance branches?"
+
+    [Automating cascading merges](https://specificlanguages.com/posts/2024-01/05-automating-cascading-merges/){{ blog('sl') }}
 

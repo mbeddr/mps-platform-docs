@@ -26,8 +26,10 @@ Depending on the access type, you need different locks from the language ^^jetbr
 - synchronously write MPS model: `write action with`
 - synchronously write MPS model with undo: `command with`
 
+Several read actions can be executed in parallel from multiple threads. Note that if a write action is pending, all pending read actions are blocked until the write action completes. This has been known to cause deadlocks sometimes.
+
 In older MPS versions (< 2021.1.5), it was always necessary to use `command with` when writing a model. While it is not necessary anymore, it
-is still recommended to use it instead of the `write action with` statements.  As a tribute to legacy code, access to constant and meta info objects of a node is allowed without read access. It's not encouraged for new code and might change in the future.
+is still recommended to use it instead of the `write action with` statements. `write` actions **do not** update the UI automatically. As a tribute to legacy code, access to constant and meta info objects of a node is allowed without read access. It's not encouraged for new code and might change in the future.
 
 If you are not already in the EDT, you need one of the following methods:
 

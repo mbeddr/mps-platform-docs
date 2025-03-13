@@ -176,3 +176,14 @@ architectures such as the M1 chip, means some extra work.
         inspectorToolWindow.setAnchor(ToolWindowAnchor.RIGHT, null);
     }
     ```
+
+!!! question "How can you configure the default settings in the RCP?"
+
+    Some configurations can be done in the build scripts itself (e.g. the splashscreen). If you know the class that's responsible for a setting, you can invoke the corresponding code in an application or project plugin. Examples:
+
+    AdvancedSettings.getInstance().setBoolean("mps.make.include.dependencies", false); // don't build dependencies when calling make
+    EditorSettings.getInstance().setSyncWithModelOnSelectionChange(true); // discard unsaved changes in the editor when the selection changes
+    LayoutWatchdog.DEFAULT_MAX_LAYOUTING_OPERATIONS = 10000000; //
+    DiffSettingsUtil.setTrackMovedNodesDiffOption(true); // visualize nodes in the diff view differentially when only the order changes.
+
+    The alternative is to [provide a custom path](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#change-ide-dirs) to a [configuration directory](https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#config-directory) and include the configuration XML files in this directory.

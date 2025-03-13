@@ -31,3 +31,26 @@ This aspect allows the creation of listeners that can react to changes in the mo
     - remove cache entries when you remove a node
     - calculate IDs or updated calculated hashes when the model changes
     - populating the list of results when the specified scope of a node changes that fetches information from the model
+
+!!! question "What listener can you call when an MPS project is ready?"
+
+    The simplest solution would be to just create an application plugin in a plugin solution.
+
+    If you only need the IntelliJ Platform to be loaded, the extension point `com.intellij.postStartupActivity` or `com.intellij.backgroundPostStartupActivity` can be used.
+
+    For that you have to implement `com.intellij.openapi.startup.ProjectActivity`.
+    To support older versions of MPS, you can implement `com.intellij.openapi.startup.StartupActivity` instead.
+    
+    Then you can declare you implementation as extension.
+    
+    ```xml
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.example.MyProjectActivity"/>
+    </extensions>
+    ```
+
+    {{ answer_by('odzhychko') }}
+
+!!! question "Is there a listener that's called when an MPS project is closed?"
+
+    For simple use cases, you can use the dispose method of an application plugin. If you want get notified on the IntelliJ platform level, there is [AppLifecycleListener](https://github.com/JetBrains/intellij-community/blob/idea/233.13135.103/platform/platform-impl/src/com/intellij/ide/AppLifecycleListener.java) which can be registered as described [here](https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html#subscribing-to-a-topic).
