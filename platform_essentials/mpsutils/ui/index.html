@@ -2158,8 +2158,20 @@ The ReviewNote cell implements exactly Word's comment facility as an example of 
 </blockquote>
 <p><a class="glightbox" href="../images/conceptdiagram_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example:conceptdiagram" src="../images/conceptdiagram_example.png" /></a></p>
 <p>Create a new root node of the type <a href="http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138">ConceptDiagram ⧉</a>. The editor should now contain an empty editor. You can drag nodes
-from the <em>Diagram Palette</em> to the diagram. If nodes from other languages are needed, add the language to the <em>languages</em>
-section.</p>
+from the <em>Diagram Palette</em> to the diagram. If nodes from other languages are needed, add the language to the <em>languages</em> section.</p>
+<p>The following options are available:</p>
+<ul>
+<li><strong>auto populate</strong> dynamically creates the diagram on the fly for all listed languages or for the module itself if it is a language</li>
+<li><strong>ignore deprecated concepts</strong> doesn't show deprecated concepts in the diagram</li>
+<li><strong>auto layout on <abbr title="initialization">init</abbr></strong> runs the automatic layouting algorithm when you open the diagram and no layout data exist.</li>
+<li><strong>don't save layout data</strong> disables the mechanism to save the layout data in the model. It can be combined with the previous option.</li>
+</ul>
+<p>The following buttons can be pressed depending on the configuration:</p>
+<ul>
+<li><strong>Populate</strong> fills the diagram based on the current provided/available information.</li>
+<li><strong>Populate (ignore deprecated nodes)</strong> also fills the diagram but excludes deprecated concepts</li>
+<li><strong>Clear</strong> removes the contents of the diagram</li>
+</ul>
 <h4 id="dependencies-diagram">Dependencies Diagram<a class="headerlink" href="#dependencies-diagram" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.dependenciesdiagram</ins></p>
@@ -2183,9 +2195,9 @@ section.</p>
 </blockquote>
 <p>The class <a href="http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d-a811-70d97e847917%2Fr%3Af4ae6487-fb1d-418f-8dd3-759f9604156f%28com.mbeddr.mpsutil.editor.utils%2Fcom.mbeddr.mpsutil.editor.utils.runtime%29%2F4912572611769853192">EditorRuntimeUtil ⧉</a> contains a few helpful editor utility methods:</p>
 <ul>
-<li><strong>getErrorText(EditorContext)</strong>: returns the error text of the selected cell in the editor</li>
-<li><strong>collectAllOpenEditors(Project)</strong>: returns all opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
-<li><strong>collectAllOpenEditorComponents(Project)</strong>: returns all opened editor components</li>
+<li><em>getErrorText(EditorContext)</em>: returns the error text of the selected cell in the editor</li>
+<li><em>collectAllOpenEditors(Project)</em>: returns all opened <abbr title="Meta Programming System">MPS</abbr> editors</li>
+<li><em>collectAllOpenEditorComponents(Project)</em>: returns all opened editor components</li>
 </ul>
 <h2 id="file-picker">File Picker<a class="headerlink" href="#file-picker" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -2202,6 +2214,7 @@ the editor. There's also an intention <code>Open File Chooser Dialog</code> that
 <li><a href="http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F6156524541423588207">solution relative file picker ⧉</a></li>
 </ul>
 <p>The macro pickers can contain <a href="https://www.jetbrains.com/help/mps/absolute-path-variables.html">path variables ⧉</a>.</p>
+<p>All fill pickers can return paths relative to a <code>IOutputLocationProvider</code>, (non) canonical paths and valid paths or files. In addition, selected files/folders can be opened/edited with the system editor or opened with the system file explorer.</p>
 <h2 id="hyperlink">Hyperlink<a class="headerlink" href="#hyperlink" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><ins><abbr title="commercial/common/communication">com</abbr>.mbeddr.mpsutil.hyperlink</ins></p>
@@ -2299,7 +2312,7 @@ the <em>Chart</em> tool by calling the following code:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

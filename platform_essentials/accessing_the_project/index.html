@@ -1830,7 +1830,7 @@ the project frame, and other information via action context parameters. The offi
 you must import to access those. You can find the available actions on the page <a href="../../reference/actions/">Actions | Reference</a>.
 There is no need to convert between different project classes because all project parameters are available.</p>
 <h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
-<p>This topic is also explained on the Specific Languages blog: <a href="https://specificlanguages.com/posts/how-to-get-current-project-from-editor/">How to get the current <abbr title="Meta Programming System">MPS</abbr> project from within the editor</a>. Components in the IntelliJ platform can implement the interface <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider">DataProvider ⧉</a>
+<p>This topic is also explained in <a href="https://specificlanguages.com/posts/how-to-get-current-project-from-editor/">How to get the current <abbr title="Meta Programming System">MPS</abbr> project from within the editor</a> (<em>Specific Languages' blog</em>). Components in the IntelliJ platform can implement the interface <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.openapi.actionSystem%28MPS.IDEA%2F%29%2F%7EDataProvider">DataProvider ⧉</a>
 to provide data that you can access through the <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ide%28MPS.IDEA%2F%29%2F%7EDataManager">DataManager ⧉</a> class. A typical data provider is the editor component. Actions also support the DataManager:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Component</span><span class="w"> </span><span class="n">editorComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="w"> </span><span class="n">editorContext</span><span class="p">.</span><span class="na">getEditorComponent</span><span class="p">();</span>
@@ -1903,7 +1903,7 @@ also works but depends on implementation details that might change in the future
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

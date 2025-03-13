@@ -2025,6 +2025,10 @@ When I run the test, <em>test1</em> and <em>test2</em> print different node IDs.
 </ul>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/abstraktor" title="GitHub User: abstraktor">@abstraktor</a><sub></p>
 </details>
+<div class="admonition question">
+<p class="admonition-title">How to find <abbr title="output">out</abbr> if a node is inside a test model?</p>
+<p><code>SModelStereotype#isTestModel</code> is the right method. The same approach can be used for other special models: <code>SModelStereotype#isStubModel</code>, <code>SModelStereotype#isGeneratorModel</code>. For aspect models, use model.isAspectModel(x) where x is a reference to the aspect like <code>editor</code>.</p>
+</div>
 <h2 id="how-to-test">How to Test<a class="headerlink" href="#how-to-test" title="Permanent link">&para;</a></h2>
 <p>This section deals with practical questions regarding testing. Testing should be a big part of the <abbr title="Continuous Integration">CI</abbr> pipeline to ensure that
 changes don't introduce bugs and new feature work as intended. Not everything needs to be tested and manual testing can not
@@ -2078,6 +2082,11 @@ You can calculate a relative path for the test solution containing the packed so
 <p>The easier solution is to place the tests in a separate solution and then invoke the make process for the solution that contains your input programmatically, so you can assert over the output. An example implementation of how the make process is invoked can be found in the <a href="http://127.0.0.1:63320/node?ref=r%3A35144171-bbda-419f-9015-4d1f075e1db4%28com.mbeddr.core.runconfiguration.pluginSolution.plugin%29%2F7943990500389317776">mbeddr-c part ⧉</a>.</p>
 <p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/coolya" title="GitHub User: coolya">@coolya</a><sub></p>
 </details>
+<div class="admonition question">
+<p class="admonition-title">Is it recommended to write editor tests?</p>
+<p>Most of the time they are difficult to maintain and break easily (e.g. a cell ID changes). It's better to avoid them or create other types of tests. For example, you can call behavior methods directly to simulate creating/modifying nodes. If you want to test if you could create a node, having a scope test that checks references can also be sufficient. The biggest trick is keeping those editor tests short to make them easier to fix when they fail.
+Another problem with editor tests is that they don't show the difference graphically (<a href="https://youtrack.jetbrains.com/issue/MPS-38305"><abbr title="Meta Programming System">MPS</abbr>-38305 ⧉</a>).</p>
+</div>
 <details class="question">
 <summary>How to write editor tests for context assistants?</summary>
 <blockquote>
@@ -2299,7 +2308,7 @@ Check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/he
 </div>
 <div class="admonition warning">
 <p class="admonition-title">The tests only work in <abbr title="Meta Programming System">MPS</abbr> and not on the command line</p>
-<p><a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>? ⧉</a> (<em>Specific Languages' blog</em>)</p>
+<p><a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>? ⧉</a> (<em>Specific Languages' blog</em>). Simpler answer: If you have a different behaviour on <abbr title="Continuous Integration">CI</abbr> than locally, it may be, because you have some old/broken (generated/compiled) artifacts on your machine, that either cause things to work <abbr title="output">out</abbr> though the <abbr title="Continuous Integration">CI</abbr> breaks or vice versa. Try a git clean (git clean -xfd) and rebuild the project locally.</p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">Why does the test execution fail with "Test project '$&hellip;' is not opened. Aborted"? <img alt="🔰" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f530.svg" title=":beginner:" /></p>
@@ -2309,6 +2318,10 @@ Check the box <em>Allow parallel run</em> (<a href="https://www.jetbrains.com/he
 <p class="admonition-title">java.<abbr title="language">lang</abbr>.IllegalStateException: The showAndGet() method is for modal dialogs only.</p>
 <p>One of the reasons why this message pops up is that a dialog should be displayed in a headless environment like a build server. There is only one way to avoid this exception than not showing the dialog.
 According to the IntelliJ documentation, it can also happen when the dialog is not shown on the <abbr title="Event Dispatch Thread">EDT</abbr> thread or the dialog is not modal.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Which temporal model should you use for a node test setup?</p>
+<p><code>TempModuleOptions#nonReloadableModule</code> is provisional code. Maybe <code>TempModuleOptions#forDefaultModule</code> would be the better option. The difference with the first option is that the module is invisible to the user. It shouldn't make a difference since it is discarded after the test anyway.</p>
 </div>
 
 
@@ -2330,7 +2343,7 @@ According to the IntelliJ documentation, it can also happen when the dialog is n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

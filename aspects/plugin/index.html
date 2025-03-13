@@ -2022,6 +2022,35 @@ How may I get guidance in cleaning up these dangling references?</p>
 <p>Hint when used with Grammar Cells: you have to <em>disable component inlining</em>, which can be activated by an intention at the position where the include of <span class="arithmatex">\(A\)</span> happens. Also, in any editor component that inherits from <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\)</span> itself, we cannot use Grammar Cells.</p>
 <p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/dbinkele" title="GitHub User: dbinkele">@dbinkele</a><sub></p>
 </details>
+<details class="question">
+<summary>How can I test extension point implementations?</summary>
+<p>This can be achieved using <abbr title="Meta Programming System">MPS</abbr> APIs. <abbr title="Meta Programming System">MPS</abbr> exposes the so-called <code>ExtensionRegistry</code> which gathers all registered extension points of the current project.</p>
+<p>Normally, to register an implementation of <code>extPointA</code>, you would define an extension point <code>myExtOfA</code> with a method <code>IextendA get() { ... }</code> returning the implementation of <code>IextendA</code>.
+However, this would always(!) load the extension point if it is part of your project.
+To test your implementation in solution <code>extPointA.tests</code>, add a class<code>myExtAImpl</code>in the solution which implements <code>Extension&lt;IextendA&gt;</code>.</p>
+<p>First, this will require it to provide the implementation of your extension in the <code>get()</code>method, but also the ID of the extension point in the funciton <code>getExtensionPointID()</code>. The ID can easily be obtained from <code>extensionPoint/extPointA/.getID()</code> . 
+The following code then first gets the extensionpoint <code>extPointA</code>  from the registry and extends with your implementation:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>// project is a variable provided by the testing infrastructure
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>ExtensionRegistry registry = project.getComponent(ExtensionRegistry.class);
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>//  programmaticaly declare an extension point implementation 
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>DefaultExtensionDescriptor myExtAImplExtension = new DefaultExtensionDescriptor(new myExtAImpl()); 
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>registry.registerExtensionDescriptor(myExtAImpleExtension); 
+</code></pre></div></td></tr></table></div>
+<p>After testing the implementation, you must then remove the handler with this line of code</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>registry.unregisterExtensionDescriptor(myExtAImplExtension);
+</code></pre></div></td></tr></table></div>
+<p><sub>contributed by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/HeikoBecker" title="GitHub User: HeikoBecker">@HeikoBecker</a><sub></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">How can you add new languages to the <abbr title="Meta Programming System">MPS</abbr> spellchecker?</p>
+<p><abbr title="Meta Programming System">MPS</abbr> uses the <a href="https://www.jetbrains.com/help/mps/2022.3/spellchecking.html">spell checker of the IntelliJ IDEA (Grazie) ⧉</a> for spell checking.
+The spell checker is also enabled for the rich text language (it can be disabled in <em>preferences</em> &rarr; <em>Other Settings</em> &rarr; <em>Text</em>). To add a new language, clone
+<a href="https://github.com/wooorm/dictionaries">https://github.com/wooorm/dictionaries ⧉</a> and add a new custom dictionary in <em>preferences</em> &rarr; <em>Editor</em> &rarr; <em>Spelling</em> &rarr; *Custom dictionaries *by selecting the .dic file of your language in the <abbr title="repository">repo</abbr>.</p>
+</div>
 <h2 id="languagesfeatures">Languages/Features<a class="headerlink" href="#languagesfeatures" title="Permanent link">&para;</a></h2>
 <p>Most additional plugins are contributed by languages in <span class="twemoji">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
@@ -2082,12 +2111,12 @@ How may I get guidance in cleaning up these dangling references?</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">How can you open an <abbr title="Meta Programming System">MPS</abbr> Editor Tab programmatically?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">EditorContext</span><span class="p">.</span><span class="na">getEditorPanelManager</span><span class="p">().</span><span class="na">openEditor</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">EditorContext</span><span class="p">.</span><span class="na">getEditorPanelManager</span><span class="p">().</span><span class="na">openEditor</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Is it possible to associate an <abbr title="Meta Programming System">MPS</abbr>-Aspect with more than one node?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">IConceptAspect</span><span class="p">.</span><span class="na">getBaseConceptCollection</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">IConceptAspect</span><span class="p">.</span><span class="na">getBaseConceptCollection</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
@@ -2127,7 +2156,7 @@ action is registered. </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

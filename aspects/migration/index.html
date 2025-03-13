@@ -2004,6 +2004,28 @@ Reasons why the language version of a language updates:</p>
 <p>The module version of a solution can't change automatically. I also don't know why you would change it manually. Devkits don't even have the option to change the module version.
 A good example of a language with different language and module versions is <ins>jetbrains.mps.<abbr title="language">lang</abbr>.feedback.problem.scopes</ins> (language: 0, module: 1) because it only has a refactoring step but no other migrations.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How to properly split and order <abbr title="Meta Programming System">MPS</abbr>-Migrations?</p>
+<p>The samples shipped with <abbr title="Meta Programming System">MPS</abbr> contain a migration demo that introduces those concepts.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do I write a migration for adding a specialization to a link declaration?</p>
+<blockquote>
+<p>I have a concept A with <code>arg:Expression[1]</code> and want to create a new interface <code>Intf</code> that the concept implements. The interface contains <code>expr:Expression[1]</code>.
+As a result, A will have the link <code>arg:Expression[1] specializes expr</code>.</p>
+</blockquote>
+<ol>
+<li>Let A implement Intf.</li>
+<li>Refactoring &rarr; Rename: <abbr title="argument">arg</abbr> to exp (update resolve <abbr title="information">info</abbr>)</li>
+<li>Refactoring &rarr; Move Link up to Intf</li>
+<li>Select everything except update references.</li>
+<li>Remove <code>Deprecated annotation</code> and add specializes.</li>
+<li>Refactoring &rarr; Rename expr_old to <abbr title="argument">arg</abbr>.</li>
+<li>Make the language.</li>
+<li>Run the migration assistant.</li>
+</ol>
+<p>If the child is already named <code>expr</code> and you only want to move it to the superconcept, you can skip 2 and 4 and select everything in 3.</p>
+</div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>Migrations are not only necessary from one language version to another but also for newer <abbr title="Meta Programming System">MPS</abbr> versions. Issues can arise
 because <abbr title="Meta Programming System">MPS</abbr> or the IntelliJ platform changes or an even more drastic change occurs like a new Java version. Still, migrating early is a
@@ -2036,7 +2058,7 @@ is only marginally related to the migration aspect, it is mentioned here.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

@@ -1974,8 +1974,9 @@ In the IntelliJ platform/<abbr title="Meta Programming System">MPS</abbr>, it is
 <li>synchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>write action with</code></li>
 <li>synchronously write <abbr title="Meta Programming System">MPS</abbr> model with undo: <code>command with</code></li>
 </ul>
+<p>Several read actions can be executed in parallel from multiple threads. Note that if a write action is pending, all pending read actions are blocked until the write action completes. This has been known to cause deadlocks sometimes.</p>
 <p>In older <abbr title="Meta Programming System">MPS</abbr> versions (&lt; 2021.1.5), it was always necessary to use <code>command with</code> when writing a model. While it is not necessary anymore, it
-is still recommended to use it instead of the <code>write action with</code> statements.  As a tribute to legacy code, access to constant and <abbr title="metadata">meta</abbr> <abbr title="information">info</abbr> objects of a node is allowed without read access. It's not encouraged for new code and might change in the future.</p>
+is still recommended to use it instead of the <code>write action with</code> statements. <code>write</code> actions <strong>do not</strong> update the <abbr title="User Interface">UI</abbr> automatically. As a tribute to legacy code, access to constant and <abbr title="metadata">meta</abbr> <abbr title="information">info</abbr> objects of a node is allowed without read access. It's not encouraged for new code and might change in the future.</p>
 <p>If you are not already in the <abbr title="Event Dispatch Thread">EDT</abbr>, you need one of the following methods:</p>
 <ul>
 <li>Asynchronously write <abbr title="Meta Programming System">MPS</abbr> model: <code>execute command in EDT with</code>.</li>
@@ -2381,7 +2382,7 @@ has the permissions of the lower locks: <em>read</em> &lt; <em>write</em> &lt; <
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

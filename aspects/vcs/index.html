@@ -1825,7 +1825,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <h1 id="vcs-aspect"><a href="https://www.jetbrains.com/help/mps/mergehints.html"><abbr title="Version Control System">VCS</abbr> Aspect</a><a class="headerlink" href="#vcs-aspect" title="Permanent link">&para; ⧉</a></h1>
 <blockquote>
 <p>The <abbr title="Version Control System">VCS</abbr> merge aspect language aspect defines strategies to automatically resolve merge conflicts for nodes, their children, references, and properties.</p>
-<p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite></p>
+<p>— <cite><abbr title="Meta Programming System">MPS</abbr> documentation</cite>
+<a href="../about">about</a></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">I pulled some changes or made some other <abbr title="Version Control System">VCS</abbr>-related stuff, and strange errors appeared, or changes weren’t visible.</p>
@@ -1843,6 +1844,15 @@ There are quite some <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23%7B
 <li>accepting our node for nodes where the graphical representation changed (e.g., diagrams)</li>
 <li>accepting our node when it contains additional information, such as node attributes</li>
 </ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do I track/hide moved nodes in version control?</p>
+<p>Activate the <em>Track Moved Nodes</em> option in the change dialog.<br />
+<a class="glightbox" href="../images/vcs/track_moved_nodes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="track moved nodes option" src="../images/vcs/track_moved_nodes.png" /></a>
+To <code>hide unordered moves</code> enable the feature in the same dialog. Children of such concepts must have the <code>unordered</code> flag set to true:</p>
+<p><a class="glightbox" href="../images/vcs/unordered_attribute.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="unordered attribute" src="../images/vcs/unordered_attribute.png" /></a>
+Then the change won't be shown at all:</p>
+<p><a class="glightbox" href="../images/vcs/hide_unordered_nodes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hide unordered nodes" src="../images/vcs/hide_unordered_nodes.png" /></a></p>
 </div>
 
 
@@ -1864,7 +1874,7 @@ There are quite some <a href="https://youtrack.jetbrains.com/issues/MPS?q=%23%7B
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

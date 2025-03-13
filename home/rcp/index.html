@@ -1864,6 +1864,15 @@ architectures such as the M1 chip, means some extra work.</p>
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can you configure the default settings in the <abbr title="Rich Client Platform">RCP</abbr>?</p>
+<p>Some configurations can be done in the build scripts itself (e.g. the splashscreen). If you know the class that's responsible for a setting, you can invoke the corresponding code in an application or project plugin. Examples:</p>
+<p>AdvancedSettings.getInstance().setBoolean("mps.make.include.dependencies", false); // don't build dependencies when calling make
+EditorSettings.getInstance().setSyncWithModelOnSelectionChange(true); // discard unsaved changes in the editor when the selection changes
+LayoutWatchdog.DEFAULT_MAX_LAYOUTING_OPERATIONS = 10000000; //
+DiffSettingsUtil.setTrackMovedNodesDiffOption(true); // visualize nodes in the <abbr title="difference">diff</abbr> view differentially when only the order changes.</p>
+<p>The alternative is to <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#change-ide-dirs">provide a custom path</a> to a <a href="https://www.jetbrains.com/help/mps/directories-used-by-the-ide-to-store-settings-caches-plugins-and-logs.html#config-directory">configuration directory ⧉</a> and include the configuration XML files in this directory.</p>
+</div>
 
 
 
@@ -1884,7 +1893,7 @@ architectures such as the M1 chip, means some extra work.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

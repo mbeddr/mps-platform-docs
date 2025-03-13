@@ -1710,6 +1710,11 @@ Ask a question on <a href="http://slack-mps.jetbrains.com">Slack ⧉</a>.</p>
 <p>When using many languages or plugins, the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/tuning-the-ide.html#common-jvm-options">maximum heap size<span><a class="glightbox" href="../gifs/maximum_heap_size.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../gifs/maximum_heap_size.gif" alt="maximum heap size" /></a></span> ⧉</a></span> should be changed to a higher value, such as 8 GB.
 Another reason for high memory usage can be many (poorly) implemented checking rules. </p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">How can I disable/enable the <a href="https://www.jetbrains.com/idea/new-ui/">new <abbr title="User Interface">UI</abbr> ⧉</a>?</p>
+<p>The new <abbr title="User Interface">UI</abbr> became the default in <abbr title="Meta Programming System">MPS</abbr> 2024.3. You can disable it through the preferences (<em>Settings</em> &rarr; <em>Appearance &amp; Behavior</em> &rarr; <em>New <abbr title="User Interface">UI</abbr></em>) or through the registry (<em>Registry..</em> -&gt; <em>disable ide.experimental.<abbr title="user interface">ui</abbr></em>) </p>
+</div>
+<p>)</p>
 <div class="admonition warning">
 <p class="admonition-title">I <abbr title="abstract module">am</abbr> running low on memory, or the <abbr title="Integrated Development Environment">IDE</abbr> is running slow. What can you do without restarting <abbr title="Meta Programming System">MPS</abbr>?</p>
 <p>When you have enabled the <span class="hover_img"><a href="https://www.jetbrains.com/help/mps/status-bar.html?q=memory%20indicator#status-bar-icons">loaded models' indicator<span><a class="glightbox" href="../gifs/memory_indicator.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../gifs/memory_indicator.gif" alt="memory indicator" /></a></span></a></span> in the lower right corner of the screen, you can click on the text to <a href="https://blog.jetbrains.com/mps/2019/12/[MPS-2019](https://youtrack.jetbrains.com/issue/MPS-2019)-3-is-released/#:~:text=Model%20unloading">unload not needed models ⧉</a>.
@@ -1738,6 +1743,48 @@ A model is then a set of root nodes.
 Each root node is a root of a tree of nodes. Overall, a repository is a tree structure.</p>
 <p><a class="glightbox" href="https://kroki.io/mermaid/svg/eNpVzrEOgyAQgOHdp2Ah6OBwjJp0sltLG1Z0sCmpJgoG6dAY372IjYXx_g8uh_HSq94WaCG2k6MkBXm0syTrinHyMu3UoQsvE36-i9TISc-91eaTNcn1VoEQo36-B4mg8YEege6BHUG5sG1BeX5C298ynGg0sdIv20cOonY75ICM1hZB3TjlP6xg2Q1WVyvwlTNI_VvlCEEWCg2ERsICUVl0AY0uoP6CvzKnASvHX8WVYlE=?" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kroki" src="https://kroki.io/mermaid/svg/eNpVzrEOgyAQgOHdp2Ah6OBwjJp0sltLG1Z0sCmpJgoG6dAY372IjYXx_g8uh_HSq94WaCG2k6MkBXm0syTrinHyMu3UoQsvE36-i9TISc-91eaTNcn1VoEQo36-B4mg8YEege6BHUG5sG1BeX5C298ynGg0sdIv20cOonY75ICM1hZB3TjlP6xg2Q1WVyvwlTNI_VvlCEEWCg2ERsICUVl0AY0uoP6CvzKnASvHX8WVYlE=?" /></a></p>
 </div>
+<details class="question">
+<summary>What is the difference between the language level, java compliance level and the project bytecode version?</summary>
+<ul>
+<li>
+<p>(A) <a href="https://www.jetbrains.com/help/mps/mps-java-compatibility.html#configuration()">Project bytecode version ⧉</a> (<em>preferences → Build, Execution, Deployment → Java</em>):</p>
+</li>
+<li>
+<p>(B) <a href="https://www.jetbrains.com/help/mps/build-language.html#javaplugin">Java compliance level ⧉</a></p>
+</li>
+<li>
+<p>(C) <a href="https://www.jetbrains.com/help/mps/getting-the-dependencies-right.html#java">Language version ⧉</a> (part of module/solution properties):</p>
+</li>
+<li>
+<p>(D) <a href="https://github.com/JetBrains/JetBrainsRuntime">The JetBrains Runtime Environment ⧉</a> (<abbr title="JetBrains Runtime">JBR</abbr>) which is a special version of a <abbr title="Java Runtime Environment">JRE</abbr> (Java Runtime Environment)</p>
+</li>
+</ul>
+<p>(A) is the Java version that Java classes, languages, solutions etc. will be compiled with. It must be set to the IntelliJ platform Java version or lower: (Java 17 for <abbr title="Meta Programming System">MPS</abbr> 2022.2 and newer and Java 11 for older <abbr title="Meta Programming System">MPS</abbr> versions). Explanation in the <abbr title="Meta Programming System">MPS</abbr> documentation &gt;= 2022.2:</p>
+<blockquote>
+<p>Note that <abbr title="Meta Programming System">MPS</abbr> can only run on <abbr title="Java Development Kit">JDK</abbr> 17 and later, so when compiling languages or <abbr title="Meta Programming System">MPS</abbr> plugins you have to set the bytecode version to 17, otherwise your languages/plugins won't be loaded. Setting the byte code version to earlier <abbr title="Java Development Kit">JDK</abbr> versions is only useful for solution-only projects, which are generated into Java sources that you then compile and use outside of <abbr title="Meta Programming System">MPS</abbr>.</p>
+</blockquote>
+<p>(B) in the build script should be set to the same value as (A).</p>
+<p>(C) can be set from Java 7 to 11: Go to the properties of the module (in later versions only the Java tab of solutions) and set the language level. Depending on the version, it enables some Java features like default/private interface methods or support for variable declarations with "<abbr title="variable">var</abbr>" (Java 10). For Java 8, you can decide if closures should be compiled as lambdas (L) or anonymous classes (A).</p>
+<p><em>Example:</em></p>
+<p>(L):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Runnable</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">};</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<p>(A):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Runnable</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nd">@Override</span><span class="w">    </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">};</span><span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+<p>The <abbr title="Meta Programming System">MPS</abbr> <abbr title="Java Development Kit">JDK</abbr> stub will have all classes available that you can find up to the (D) version. You can even use and compile them when (A) is set to a lower version. For execution the code, (D) or a <abbr title="Java Runtime Environment">JRE</abbr>/<abbr title="Java Development Kit">JDK</abbr> must be the same version or higher as the version where this class was introduced.</p>
+<p><em>Example:</em>  <a href="https://docs.oracle.com/en%2Fjava%2Fjavase%2F22%2Fdocs%2Fapi%2F%2F/java.base/java/util/HexFormat.html">HexFormat ⧉</a> was introduced in Java 17, so (A) must be &gt;= 17 as well as the Java version to execute the code.</p>
+</details>
 <div class="admonition question">
 <p class="admonition-title">Is there an existing expression/scripting language?</p>
 <p><abbr title="Meta Programming System">MPS</abbr> ships with the expressions sample project. A complete and evaluable language is
@@ -1827,6 +1874,7 @@ For Linux you can use <a href="https://github.com/nkoester/mps-zookeeper">nkoest
 When you have a repository "<abbr title="repository">repo</abbr>," you can, for example, replace the name of the <abbr title="Meta Programming System">MPS</abbr> version with repo1, repo2, repo3, or a different naming scheme.
 When using <a href="https://specificlanguages.com/articles/remote-debugging/">remote debugging ⧉</a>, use other ports for the <abbr title="Meta Programming System">MPS</abbr>
 instances (e.g.5005, 5006&hellip;500n), or <abbr title="Meta Programming System">MPS</abbr> won't start.</p>
+<p>A general solution under Linux to this problem can be found at <a href="https://github.com/nkoester/mps-zookeeper">https://github.com/nkoester/mps-zookeeper ⧉</a>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Why is <abbr title="Meta Programming System">MPS</abbr> shipped with <abbr title="JetBrains Runtime">JBR</abbr> instead of an installed <abbr title="Java Development Kit">JDK</abbr>/<abbr title="Java Runtime Environment">JRE</abbr>?</p>
@@ -1862,7 +1910,7 @@ For older <abbr title="Meta Programming System">MPS</abbr> versions that used Ja
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

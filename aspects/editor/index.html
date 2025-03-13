@@ -821,6 +821,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#read-only-vs-editable-style-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read-only vs Editable Style Attribute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#editor-hints" class="md-nav__link">
     <span class="md-ellipsis">
       Editor Hints
@@ -1928,6 +1937,15 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#read-only-vs-editable-style-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read-only vs Editable Style Attribute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#editor-hints" class="md-nav__link">
     <span class="md-ellipsis">
       Editor Hints
@@ -2244,6 +2262,46 @@ But, since <strong>C.2</strong> and <strong>C.3</strong> are error cells, the de
 </svg>
 </span><a href="https://github.com/JetBrains/MPS-extensions"><abbr title="Meta Programming System">MPS</abbr> Extensions ⧉</a>.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What is the difference between the style sheet item read-only and editable?</p>
+</div>
+<h4 id="read-only-vs-editable-style-attribute">Read-only vs Editable Style Attribute<a class="headerlink" href="#read-only-vs-editable-style-attribute" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong><em>read-only</em></strong> - whether one can modify the cell and the nested cells or not. <strong><em>False</em></strong> by default. Designed for freezing fragments of cell tree.</p>
+<ul>
+<li>
+<p><em>disables side deletes for cells, the context assistant manager, editing of properties</em></p>
+</li>
+<li>
+<p><em>this attribute is inherited by child cells</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>editable</em></strong> - whether one can modify text in a cell or not. By default is <strong><em>false</em></strong> for constant cell models, true for other cell models.</p>
+<ul>
+<li>
+<p><em>non-editable by default for: read only model access cell, braces, constant text, indent cell</em></p>
+</li>
+<li>
+<p>go can't use keyboard navigation to go to this cell (e.g. typing TAB) and won't be considered as the next selectable cell</p>
+</li>
+<li>
+<p>can't paste text</p>
+</li>
+<li>
+<p>this attribute is not inherited by child cells</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Q: What happens if I use the <em>navigatable-node</em> style sheet item on a cell where <em>editable</em> is set to false?</strong></p>
+<p>The reference will not be followed and the last cell with a reference will be used e.g. the cell to the left of the cell when it is a reference cell.</p>
+<p><strong>Q: What if I set read-only: true and editable: true?</strong></p>
+<p>The cell won't be editable since the read-only attribute overrides the other attribute.</p>
+<p><strong>Q: What attribute should I use?</strong></p>
+<p>Both attributes are often used. If the cell should be considered as a selectable cell or you need support for reference navigation don't use editable:false. read-only: false can also be set on whole collections to disable editing.</p>
 <h3 id="editor-hints">Editor Hints<a class="headerlink" href="#editor-hints" title="Permanent link">&para;</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Is there a utility class related to editor hints?</p>
@@ -2455,7 +2513,7 @@ Some projects use the inspector nearly not all, but it can be good solution to n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

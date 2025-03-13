@@ -1965,6 +1965,25 @@ If you are a returning visitor, make sure to check out the page about <a href=".
 <li>populating the list of results when the specified scope of a node changes that fetches information from the model</li>
 </ul>
 </div>
+<div class="admonition question">
+<p class="admonition-title">What listener can you call when an <abbr title="Meta Programming System">MPS</abbr> project is ready?</p>
+<p>The simplest solution would be to just create an application plugin in a plugin solution.</p>
+<p>If you only need the IntelliJ Platform to be loaded, the extension point <code>com.intellij.postStartupActivity</code> or <code>com.intellij.backgroundPostStartupActivity</code> can be used.</p>
+<p>For that you have to implement <code>com.intellij.openapi.startup.ProjectActivity</code>.
+To support older versions of <abbr title="Meta Programming System">MPS</abbr>, you can implement <code>com.intellij.openapi.startup.StartupActivity</code> instead.</p>
+<p>Then you can declare you implementation as extension.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;extensions</span><span class="w"> </span><span class="na">defaultExtensionNs=</span><span class="s">&quot;com.intellij&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;postStartupActivity</span><span class="w"> </span><span class="na">implementation=</span><span class="s">&quot;com.example.MyProjectActivity&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">&lt;/extensions&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><sub>answered by: <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/odzhychko" title="GitHub User: odzhychko">@odzhychko</a><sub></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Is there a listener that's called when an <abbr title="Meta Programming System">MPS</abbr> project is closed?</p>
+<p>For simple use cases, you can use the dispose method of an application plugin. If you want get notified on the IntelliJ platform level, there is <a href="https://github.com/JetBrains/intellij-community/blob/idea/233.13135.103/platform/platform-impl/src/com/intellij/ide/AppLifecycleListener.java">AppLifecycleListener</a> which can be registered as described <a href="https://plugins.jetbrains.com/docs/intellij/messaging-infrastructure.html#subscribing-to-a-topic">here ⧉</a>.</p>
+</div>
 
 
 
@@ -1985,7 +2004,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     

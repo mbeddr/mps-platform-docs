@@ -1773,7 +1773,8 @@ calling make on the changed languages can be even enough.</p>
 compare if the risky dirty build is worth the time you save.</p>
 <div class="admonition warning">
 <p class="admonition-title">The <abbr title="Integrated Development Environment">IDE</abbr> is sluggish and doesn't work the way it should.</p>
-<p>Edit the file mps(64).vmoptions and give it sufficient heap space: <code>-Xmx8g</code></p>
+<p>Edit the file mps(64).vmoptions and give it sufficient heap space: <code>-Xmx8g</code>
+Make sure that the issue is not caused by any of the used languages. You can also enable the power save mode through <em>File</em> &rarr; <em>Power Save Mode</em> to disable all background tasks including file indexing and typesystem checking. This approach also helps to see if an issue is related to a slow typesystem check or if there is a performance issue in the editor.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title"><abbr title="Meta Programming System">MPS</abbr> behaves strangely <img alt="🔰" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f530.svg" title=":beginner:" /></p>
@@ -1829,7 +1830,7 @@ that the bundled <abbr title="JetBrains Runtime">JBR</abbr> or an external <abbr
 <li>If you want to use <a href="https://plugins.jetbrains.com/docs/intellij/jcef.html"><abbr title="Java Chromium Embedded Framework">JCEF</abbr> ⧉</a>, it must be a <abbr title="JetBrains Runtime">JBR</abbr> runtime that <a href="https://github.com/JetBrains/JetBrainsRuntime/releases">includes
 <abbr title="Java Chromium Embedded Framework">JCEF</abbr></a>.</li>
 <li>An <abbr title="Meta Programming System">MPS</abbr> plugin was disabled (e.g., Java Debugger for <abbr title="Meta Programming System">MPS</abbr>) that a language depends on.</li>
-<li>For mbeddr, <a href="http://mbeddr.com/mps-platform-docs/mbeddr/?h=actionsfilter#:~:text=i%20am%20using%20some%20mbeddr%20languages%20in%20my%20project%20but%20some%20of%20them%20aren%E2%80%99t%20deployed.">three plugins need to be installed ⧉</a> to avoid languages that can't be loaded because they have dependencies on one of the three plugins.</li>
+<li>For mbeddr, <a href="http://mbeddr.com/mps-platform-docs/mbeddr/?h=actionsfilter#:~:text=i%20am%20using%20some%20mbeddr%20languages%20in%20my%20project%20but%20some%20of%20them%20aren%E2%80%99t%20deployed.">one plugin need to be installed ⧉</a> to avoid languages that can't be loaded because they have dependencies on one of the three plugins.</li>
 </ul>
 </div>
 <div class="admonition warning">
@@ -1902,6 +1903,14 @@ when you can't identify the repository based on the package name in the error me
 <a href="https://youtrack.jetbrains.com/issues/MPS">JetBrains <abbr title="Meta Programming System">MPS</abbr> issue tracker ⧉</a> because the issue will likely be marked as invalid and
 doesn't land in the right issue tracker.</p>
 </div>
+<div class="admonition failure">
+<p class="admonition-title">The <abbr title="Meta Programming System">MPS</abbr> console shows the error message: java.<abbr title="language">lang</abbr>.ClassNotFoundException: ConsoleModel_.Main</p>
+<p>This exception can happen when you import a module/model into the console where the class loading fails, for example, because a dependency is missing, a language is not deployed/generated or the classloading is set to none. What you can try is to press the "clear" button in the console, import one language after another, and execute a simple expression like 1+1. When you have an issue with a language or dependency you will get this exception again. Another reason can be broken dependencies in a model that you import. Check the log file for additional hints. For the last reason, this can show up as a warning that the solution was marked invalid for classloading in the log file.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Some aspect descriptors like StructureAspectDescriptor can't be generated</p>
+<p>Starting from <abbr title="Meta Programming System">MPS</abbr> 2023.2, the corresponding devkit has to be import (in this case <code>jetbrains.mps.devkit.aspect.structure</code>. Unlikely but there could be also compilation issues while generating the aspect descriptor. If you the documentation descriptor for the documentation language can't be build, you are not using the documented concept/property annotation from <code>com.mbeddr.doc.aspect</code> in the documentation. This is needed for the descriptor to get generated.</p>
+</div>
 <h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h2>
 <p><a href="../../build/gradle/">Gradle | Build</a> gives some more details about working with this build tool. When working with Gradle, make sure
 that you know which versions you are using. Different Gradle versions support <a href="https://docs.gradle.org/current/userguide/compatibility.html">different Java versions</a>. Another topic that often leads to syntax issue, is <a href="https://docs.gradle.org/current/userguide/lazy_configuration.html">lazy configuration ⧉</a> which delay calculations until it's actually required.</p>
@@ -1949,41 +1958,10 @@ that you know which versions you are using. Different Gradle versions support <a
 <h2 id="ci"><abbr title="Continuous Integration">CI</abbr><a class="headerlink" href="#ci" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Tests are failing on <abbr title="Continuous Integration">CI</abbr> but are green in the local <abbr title="Meta Programming System">MPS</abbr> installation.</p>
-<p>What about the local Gradle build?
-The tests can be executed locally with <code>./gradlew ant-build-tests -Dmps.home=PATH_TO_YOU_MPS_INSTALLTION</code>. The test results can be found in <code>build/iets3-allScripts</code> (<span class="twemoji">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <image width="32" height="32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
-    />
-</svg>
-</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a>).</p>
-<ul>
-<li>If it runs (green), then there is a discrepancy between the <abbr title="Continuous Integration">CI</abbr> and your local Gradle build.<ul>
-<li>Make sure you are on the same branch/commit as the <abbr title="Continuous Integration">CI</abbr>,</li>
-</ul>
-</li>
-<li>If it shows the same test failures as the <abbr title="Continuous Integration">CI</abbr>, then there is a discrepancy between the <abbr title="Meta Programming System">MPS</abbr> Build and the Gradle Build.<ul>
-<li>Rebuild the build scripts in <abbr title="Meta Programming System">MPS</abbr>.</li>
-<li>Try running the tests in a separate process (edit the run configuration in <abbr title="Meta Programming System">MPS</abbr>).</li>
-<li>Make sure your <abbr title="Meta Programming System">MPS</abbr> uses the same (versions of the) dependencies as the gradle build.<ul>
-<li>This can be achieved in 2 different ways:<ul>
-<li>Run <code>./gradlew dependencies</code> to see which versions of which dependency gradle uses and
-  make sure the <abbr title="Open Source / Operating System">OS</abbr> and Mbeddr repos are checked <abbr title="output">out</abbr> on the right branches/commits (<span class="twemoji">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <image width="32" height="32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC7UlEQVR4nOxUXUg0VRh+5szMfu3s1/f1teoYqLtK2G4JJZjugqt4YVkgC0GyShmEIBv9QBBdVNAfQkGR/YBeCWURdFPZKuRFtF0pthprhUpZ2ogt2wq1O8vs7MwbM1itzngTelUPPMM57znnfWae97wjMAl+cRAzZgCDnAgRAPOUPezxpSlmjY9pQyPgjaoXp2CCI5MNt5r2GDDJqOjs59Wl6hdvJYVL92CuEsRw7QkDHIj404lABBjOOAOIEWrivBdmW3/Cw5jI9ADudmQ6J+gtkSFGHDwXJWAy0ccuKrkFrraAF4X/Bf4DAhyCIIeqwdCWDzs2W/+BH106HFaKRukMATgFzhOC9QiHb0VDvR9fpr9Cd08E11/2/b0hn8+jrq7OcXB1ZQXXbvSjr78PaqmI5c+X8Uex6CpC73/4ER3lc9aXULFcIcMwSNd1m5lMhtzw3LPPkFou06+Hh1QoHNH8u3N07MYJOorMMYZ33p6GKIo2u7q6IEkSxh+asNdjkR573npzCAwGgsEAZFnGK6++5vr2rreoqakZAwMDiMV6YZomyuUydF231zRNs+e/KAouXefD7OwMgoFmZDc3z6zDCYtKWpVUtUS5XI4OlH3iGWfHE6PjtjV33nG7PZd8l+m9+Q+oemzn0089acd5nidJkmptcgq8Of26w8vTAn+x/ZYQZda/Ib1Soc7OTkqn07S3t0/JyQn3GlgQBAFer9cmY+69mBgdw02NjdjZ3sK3330PIhM/7GwhHo/jk4UUAi0B9xpYnicfeQyqqtp84tGkq8BIYgyKoqBYLOGBsfvx0gvP4/eiihdfnsK9Q3dBOVDsfRwHmIFgK3fthqtY39hAKByGT/qnK3/a3cVvhQKuXLmKjo7b8PXaGrRKBTwvIBqNQpbrkc1msb29gwZZBkwD8ftGMPnwg+iORDV4GJbc7u+/YXsoTAufpWgxlaK+WC8JHD4G4yB7eCxygHZeQoyD4eHxKQD/nwEAAP//BNGNGTZu+RcAAAAASUVORK5CYII="
-    />
-</svg>
-</span><a href="https://github.com/IETS3/iets3.opensource"><abbr title="Integrated Specification Environment for the Specification of Technical Software Systems">IETS3</abbr> ⧉</a>).</li>
-<li>Remove the file <em>projectlibraries.overrides.properties</em> from your <abbr title="repository">repo</abbr> and execute
-  <code>./gradlew setup</code> in both. This configures <abbr title="Meta Programming System">MPS</abbr> to directly use the Java class files from the Gradle artifacts instead of the checked-<abbr title="output">out</abbr> repos.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>One reason can be that in the local <abbr title="Meta Programming System">MPS</abbr> installation all necessary plugins are loaded or tests are executed in the same <abbr title="Meta Programming System">MPS</abbr> instance. Especially starting from <abbr title="Meta Programming System">MPS</abbr> 2024.1 all necessary plugins need to be declared in the build script, but also for executing tests.</p>
+<p>Another common issue are flaky tests that don't always show the same behavior. There can be multiple reasons for that including timing issues or other issues related to multi-threaded code.</p>
+<p>Make also sure to replicate the environment on the <abbr title="Continuous Integration">CI</abbr> locally and run the tests from the command line if you can't see the failure in <abbr title="Meta Programming System">MPS</abbr> itself.</p>
+<p>More information can be found in: <a href="https://specificlanguages.com/posts/2023-06/07-why-does-my-test-fail-when-run-from-ant/">Why does my test fail when run from Ant but not when run from <abbr title="Meta Programming System">MPS</abbr>? ⧉</a> (<em>Specific Languages' blog</em>)</p>
 </div>
 <h2 id="explanations">Explanations<a class="headerlink" href="#explanations" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2016,7 +1994,7 @@ The tests can be executed locally with <code>./gradlew ant-build-tests -Dmps.hom
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2025</span>
   </span>
 
     
