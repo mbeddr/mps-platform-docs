@@ -119,3 +119,9 @@ Example Base Language:
 
 ![example: unique names in Base Language](images/uniquenames_class_unique.png)
 
+## Collections
+
+A new language com.mbeddr.mpsutil.collections was added that adds support for a set type nset that use nodes as the values of the set. Equivalence of nodes is checked structurally. The hash code calculation is done for all properties and children and the first level of references. The runtime solution also contains a more general class EquivalenceHashSet to implement hash sets with arbitrary equals and hashcode methods. nset<> is also compatible with set<node> and can be used as its type instead.
+
+![example: nset](images/nset_example.png)
+

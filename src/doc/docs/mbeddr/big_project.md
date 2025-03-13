@@ -15,22 +15,6 @@ A better approach is to use the BigProject contained in the mbeddr repository. T
 - From the command line: run `gradlew.bat :BigProject:run` or `./gradlew :BigProject:run` from the Git checkout root.
 - From IntelliJ IDEA: Open the Git checkout root as a (Gradle) project in IDEA and run Generate Big Project run configuration.
 
-## Old Usage
-
-1. Open project `mbeddr.core\tools\BigProject` with IntelliJ IDEA community edition.
-2. In IntelliJ IDEA, click in the menu on *Run* --> *Run BigProjectGenerator*.
-    1. If you didn't configure an SDK, follow the error message in the bottom right corner or via project settings and select a Java 11/17 SDK (depending on the MPS version) installed on your system.
-    2. Use *default* for the project language level.
-    3. If you didn't configure a project compiler output path, set it to `mbeddr.core/tmp/BigProject`.
-    4. Close and open the project again to run the project generator.
-3. Check generation feedback. It looks like this:
-   ```
-    === TOTAL ===
-    Languages: 214
-    Solutions: 305
-    Devkits: 22
-   ```
-   
 ## Next Steps
 
 1. Open project `mbeddr.core\tools\BigProject` with MPS.

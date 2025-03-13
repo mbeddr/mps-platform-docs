@@ -70,8 +70,20 @@ Specify the placeholder in the inspector by creating a query function for the *p
 ![example:conceptdiagram](images/conceptdiagram_example.png)
 
 Create a new root node of the type [ConceptDiagram](http://127.0.0.1:63320/node?ref=r%3A40ee9130-2844-4f59-96e6-d12b358ca46c%28com.mbeddr.mpsutil.conceptdiagram.structure%29%2F2634829965774842138). The editor should now contain an empty editor. You can drag nodes
-from the *Diagram Palette* to the diagram. If nodes from other languages are needed, add the language to the *languages*
-section.
+from the *Diagram Palette* to the diagram. If nodes from other languages are needed, add the language to the *languages* section.
+
+The following options are available:
+
+- **auto populate** dynamically creates the diagram on the fly for all listed languages or for the module itself if it is a language
+- **ignore deprecated concepts** doesn't show deprecated concepts in the diagram
+- **auto layout on init** runs the automatic layouting algorithm when you open the diagram and no layout data exist.
+- **don't save layout data** disables the mechanism to save the layout data in the model. It can be combined with the previous option.
+
+The following buttons can be pressed depending on the configuration:
+
+- **Populate** fills the diagram based on the current provided/available information.
+- **Populate (ignore deprecated nodes)** also fills the diagram but excludes deprecated concepts
+- **Clear** removes the contents of the diagram
 
 #### Dependencies Diagram
 
@@ -101,9 +113,9 @@ This widget is only the control. The developer handles synchronizing the control
 
 The class [EditorRuntimeUtil](http://127.0.0.1:63320/node?ref=371850a9-2c5b-4e1d-a811-70d97e847917%2Fr%3Af4ae6487-fb1d-418f-8dd3-759f9604156f%28com.mbeddr.mpsutil.editor.utils%2Fcom.mbeddr.mpsutil.editor.utils.runtime%29%2F4912572611769853192) contains a few helpful editor utility methods:
 
-- **getErrorText(EditorContext)**: returns the error text of the selected cell in the editor
-- **collectAllOpenEditors(Project)**: returns all opened MPS editors
-- **collectAllOpenEditorComponents(Project)**: returns all opened editor components
+- *getErrorText(EditorContext)*: returns the error text of the selected cell in the editor
+- *collectAllOpenEditors(Project)*: returns all opened MPS editors
+- *collectAllOpenEditorComponents(Project)*: returns all opened editor components
 
 ## File Picker
 
@@ -120,6 +132,8 @@ the editor. There's also an intention `Open File Chooser Dialog` that shows a fi
 - [solution relative file picker](http://127.0.0.1:63320/node?ref=r%3A2a10821d-612f-4a73-b7b0-ed6b57106321%28com.mbeddr.mpsutil.filepicker.structure%29%2F6156524541423588207)
 
 The macro pickers can contain [path variables](https://www.jetbrains.com/help/mps/absolute-path-variables.html).
+
+All fill pickers can return paths relative to a `IOutputLocationProvider`, (non) canonical paths and valid paths or files. In addition, selected files/folders can be opened/edited with the system editor or opened with the system file explorer.
 
 ## Hyperlink
 

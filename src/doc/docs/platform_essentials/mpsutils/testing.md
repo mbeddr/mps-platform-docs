@@ -6,14 +6,6 @@ comments: true
 
 The following languages contain small improvements to the existing testing infrastructure.
 
-## Lantest
-
-> ^^com.mbeddr.mpsutil.lantest^^
-
-This language was an attempt to automatically test languages, for example, check if the generation of files finished successfully or that you can instantiate existing models again via the editor (for example: discover bugs in constraints).
-
-!!! warning "This language isn't working anymore."
-
 ## Test Utils
 
 > ^^com.mbeddr.mpsutil.test.util^^

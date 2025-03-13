@@ -15,13 +15,6 @@ Some deprecated languages that were removed in the platform in MPS 2022.2 can be
 This language added support for customizing the code completion menu with tabs and a special tab for creating reference
 targets. The contributions were made in a plugin solution by creating a [CCMenuExtensions](http://127.0.0.1:63320/node?ref=r%3A3d5b7b5d-2674-4caf-bdca-c100c5a0cb8e%28com.mbeddr.mpsutil.ccmenu.structure%29%2F6243347984996272104) root node.
 
-## HTTP Support
-
-> ^^com.mbeddr.mpsutil.httpsupport^^
-
-!!! warning "This was the old HTTP support plugin. Please use the language jetbrains.mps.ide.httpsupport instead."
-
-
 ## Icon Char
 
 > ^^com.mbeddr.mpsutil.iconchar^^

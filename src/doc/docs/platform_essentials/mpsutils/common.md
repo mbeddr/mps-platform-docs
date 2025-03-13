@@ -23,9 +23,9 @@ You can use the [Graph](http://127.0.0.1:63320/node?ref=r%3A007d0985-20e2-4d70-8
 
 The class [ConceptInstanceFinder](http://127.0.0.1:63320/node?ref=r%3A72bc3a97-6a66-47f6-8cf2-f88ab2ada651%28com.mbeddr.mpsutil.common.model%29%2F6573709714620204463) contains a few methods for finding instances (= nodes) of a concept:
 
-- **findAllVisibleInstances(context, conceptToFind)**: find instances of a concept in the used languages of the model. The context node's model is the starting point.
+- *findAllVisibleInstances(context, conceptToFind)*: find instances of a concept in the used languages of the model. The context node's model is the starting point.
 
-- **findAllInstances(conceptToFind)**: searches for nodes of the given concept in all user models from the global scope (not including transient and temporary models)
+- *findAllInstances(conceptToFind)*: searches for nodes of the given concept in all user models from the global scope (not including transient and temporary models)
 
 ## Util
 
