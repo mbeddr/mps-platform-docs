@@ -1887,34 +1887,14 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.VisibleModuleMask</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps%28MPS.Platform%2F%29%2F%7EVisibleModuleMask">VisibleModuleMask ⧉</a></td>
-<td style="text-align: left;">controls the visibility of <abbr title="Meta Programming System">MPS</abbr> modules</td>
-</tr>
-<tr>
-<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.modelRootFactory</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EModelRootFactory">ModelRootFactory ⧉</a></td>
-<td style="text-align: left;">factory, which creates model roots</td>
-</tr>
-<tr>
-<td style="text-align: left;">jetbrains.mps.nodeStructureViewProvider</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor%28MPS.Editor%2F%29%2F%7ENodeStructureViewProvider">NodeStructureViewProvider ⧉</a></td>
-<td style="text-align: left;">provider for the structure tool in the lower left corner</td>
-</tr>
-<tr>
 <td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.editorWarningsProvider</td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor.warningPanel%28MPS.Editor%2F%29%2F%7EEditorWarningsProvider">EditorWarningsProvider ⧉</a></td>
 <td style="text-align: left;">provider for warnings that are shown above the editor (e.g., the node is in a read-only model)</td>
 </tr>
 <tr>
-<td style="text-align: left;">mps.CodeNavigationProvider</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.navigation%28MPS.Workbench%2F%29%2F%7ECodeNavigationProvider">CodeNavigationProvider ⧉</a></td>
-<td style="text-align: left;">opener for generated code files</td>
-</tr>
-<tr>
-<td style="text-align: left;">mps.ModelValidator</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.generator%28MPS.Workbench%2F%29%2F%7EModelValidator">ModelValidator ⧉</a></td>
-<td style="text-align: left;">validate a list of models</td>
+<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.facetTabFactory</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.ui.dialogs.properties.persistence%28MPS.Platform%2F%29%2F%7EFacetTabEP">FacetTabEP ⧉</a></td>
+<td style="text-align: left;">custom facets (e.g., ideaPlugin facet)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.modelRootEntry</td>
@@ -1922,9 +1902,9 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;"><abbr title="User Interface">UI</abbr> entry in the module properties dialog corresponding to the specific model root</td>
 </tr>
 <tr>
-<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.facetTabFactory</td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.ui.dialogs.properties.persistence%28MPS.Platform%2F%29%2F%7EFacetTabEP">FacetTabEP ⧉</a></td>
-<td style="text-align: left;">custom facets (e.g., ideaPlugin facet)</td>
+<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.modelRootFactory</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=8865b7a8-5271-43d3-884c-6fd1d9cfdd34%2Fjava%3Aorg.jetbrains.mps.openapi.persistence%28MPS.OpenAPI%2F%29%2F%7EModelRootFactory">ModelRootFactory ⧉</a></td>
+<td style="text-align: left;">factory, which creates model roots</td>
 </tr>
 <tr>
 <td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.modelTemplateProvider</td>
@@ -1937,9 +1917,29 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">contribution to the rename refactoring action</td>
 </tr>
 <tr>
+<td style="text-align: left;"><abbr title="commercial/common/communication">com</abbr>.intellij.mps.VisibleModuleMask</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps%28MPS.Platform%2F%29%2F%7EVisibleModuleMask">VisibleModuleMask ⧉</a></td>
+<td style="text-align: left;">controls the visibility of <abbr title="Meta Programming System">MPS</abbr> modules</td>
+</tr>
+<tr>
 <td style="text-align: left;">jetbrains.mps.debugger.PositionProvider</td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A7e184eff-8349-496f-875b-1e3646bb06f3%28jetbrains.mps.debug.api.source%29%2F7048882195103545633">PositionProvider ⧉</a></td>
 <td style="text-align: left;">source position of current debugger line</td>
+</tr>
+<tr>
+<td style="text-align: left;">jetbrains.mps.nodeStructureViewProvider</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor%28MPS.Editor%2F%29%2F%7ENodeStructureViewProvider">NodeStructureViewProvider ⧉</a></td>
+<td style="text-align: left;">provider for the structure tool in the lower left corner</td>
+</tr>
+<tr>
+<td style="text-align: left;">mps.CodeNavigationProvider</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.navigation%28MPS.Workbench%2F%29%2F%7ECodeNavigationProvider">CodeNavigationProvider ⧉</a></td>
+<td style="text-align: left;">opener for generated code files</td>
+</tr>
+<tr>
+<td style="text-align: left;">mps.ModelValidator</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.ide.generator%28MPS.Workbench%2F%29%2F%7EModelValidator">ModelValidator ⧉</a></td>
+<td style="text-align: left;">validate a list of models</td>
 </tr>
 </tbody>
 </table>
@@ -1955,19 +1955,39 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 </thead>
 <tbody>
 <tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00a69138-8767-4011-a710-463511eae7a6%28jetbrains.mps.lang.test.plugin%29%2F136702651994172951">ActionIDs ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.util%28JDK%2F%29%2F%7EList">List ⧉</a></td>
+<td style="text-align: left;">action IDs for tests</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acf23edd7-256f-4b20-82d2-696c87889d85%28jetbrains.mps.baseLanguage.collections.plugin%29%2F63012922131000005">customContainers ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F5571879668402623677">lambda ⧉</a></td>
+<td style="text-align: left;">custom collection container</td>
+</tr>
+<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590286%28jetbrains.mps.lang.core.plugin%29%2F6905339732004134989">GeneratorCache ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.generator%28MPS.Core%2F%29%2F%7EGenerationCacheContainer">GenerationCacheContainer ⧉</a></td>
 <td style="text-align: left;">cache container for the generator</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590290%28jetbrains.mps.lang.structure.plugin%29%2F7972144475523726200">NodeRenamer ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F5571879668402624601">lambda ⧉</a></td>
-<td style="text-align: left;">rename node action</td>
-</tr>
-<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A120d1a1b-e2af-479c-bc61-72f0ecc88047%28jetbrains.mps.ide.httpsupport.plugin%29%2F4517832885627178825">HttpRequestHandlerEP ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A05ff02e5-9836-4ae9-a454-eab43fa58c8f%28jetbrains.mps.ide.httpsupport.manager.plugin%29%2F4207974313407535367">IHttpRequestHandlerFactory ⧉</a></td>
 <td style="text-align: left;">handle requests to the <abbr title="Hypertext Transfer Protocol">HTTP</abbr> server</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aa3b52644-55d6-4bce-97d6-5a2f84c2b78b%28jetbrains.mps.kotlin.baseLanguage.runtime.plugin%29%2F8206368354800905528">JavaToKtConverters ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ae9005ea6-e4e0-4b7f-8b34-6e6513630cda%28jetbrains.mps.kotlin.baseLanguage.typeConversion%29%2F5019502120963309044">TypeConverterEngine ⧉</a></td>
+<td style="text-align: left;">custom type converters between Java and Kotlin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aa3b52644-55d6-4bce-97d6-5a2f84c2b78b%28jetbrains.mps.kotlin.baseLanguage.runtime.plugin%29%2F8206368354800921203">KtToJavaConverters ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ae9005ea6-e4e0-4b7f-8b34-6e6513630cda%28jetbrains.mps.kotlin.baseLanguage.typeConversion%29%2F5019502120963309044">TypeConverterEngine ⧉</a></td>
+<td style="text-align: left;">custom type converters between Kotlin and Java</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A33cde0a0-dbcb-4270-bdee-9b4160731fdf%28jetbrains.mps.lang.aspect.plugin%29%2F3323697319248328643">LanguageAspectsEP ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7ELanguageAspectDescriptor">LanguageAspectDescriptor ⧉</a></td>
+<td style="text-align: left;">automatic <abbr title="generation">gen</abbr>. language descriptors</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Abd779a69-a10b-4882-b646-c1303f2dd4f7%28jetbrains.mps.refactoring.participant.plugin%29%2F2941496348503195008">MoveModelParticipantEP ⧉</a></td>
@@ -1980,6 +2000,16 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">move node refactoring action</td>
 </tr>
 <tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Abd779a69-a10b-4882-b646-c1303f2dd4f7%28jetbrains.mps.refactoring.participant.plugin%29%2F1929018697514192216">MoveNodesActionEP ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acc08a4fa-e4f1-443c-b8f2-4a41972141bb%28jetbrains.mps.refactoring.participant.plugin%29%2F1929018697514192221">MoveNodesAction ⧉</a></td>
+<td style="text-align: left;">move nodes action</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590290%28jetbrains.mps.lang.structure.plugin%29%2F7972144475523726200">NodeRenamer ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F5571879668402624601">lambda ⧉</a></td>
+<td style="text-align: left;">rename node action</td>
+</tr>
+<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Abd779a69-a10b-4882-b646-c1303f2dd4f7%28jetbrains.mps.refactoring.participant.plugin%29%2F3628660716136488769">PersistentRefactoringParticipantsEP ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.lang%28JDK%2F%29%2F%7EIterable">Iterable ⧉</a></td>
 <td style="text-align: left;">refactoring action</td>
@@ -1990,24 +2020,9 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">rename node action</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Abd779a69-a10b-4882-b646-c1303f2dd4f7%28jetbrains.mps.refactoring.participant.plugin%29%2F1929018697514192216">MoveNodesActionEP ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acc08a4fa-e4f1-443c-b8f2-4a41972141bb%28jetbrains.mps.refactoring.participant.plugin%29%2F1929018697514192221">MoveNodesAction ⧉</a></td>
-<td style="text-align: left;">move nodes action</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acf23edd7-256f-4b20-82d2-696c87889d85%28jetbrains.mps.baseLanguage.collections.plugin%29%2F63012922131000005">customContainers ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A35e808a0-0758-4b03-9053-4675a7ced44c%28jetbrains.mps.baseLanguage.closures.runtime%29%2F5571879668402623677">lambda ⧉</a></td>
-<td style="text-align: left;">custom collection container</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00a69138-8767-4011-a710-463511eae7a6%28jetbrains.mps.lang.test.plugin%29%2F136702651994172951">ActionIDs ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.util%28JDK%2F%29%2F%7EList">List ⧉</a></td>
-<td style="text-align: left;">action IDs for tests</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A33cde0a0-dbcb-4270-bdee-9b4160731fdf%28jetbrains.mps.lang.aspect.plugin%29%2F3323697319248328643">LanguageAspectsEP ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6ed54515-acc8-4d1e-a16c-9fd6cfe951ea%2Fjava%3Ajetbrains.mps.smodel.language%28MPS.Core%2F%29%2F%7ELanguageAspectDescriptor">LanguageAspectDescriptor ⧉</a></td>
-<td style="text-align: left;">automatic <abbr title="generation">gen</abbr>. language descriptors</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aca03e632-3f02-43dd-8ea4-ad134e38a5a2%28jetbrains.mps.kotlin.plugin%29%2F9149616139757574622">TypesystemExtension ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A4d5ec8ef-7006-453c-a8cf-f9897337b08c%28jetbrains.mps.kotlin.api.extension%29%2F9149616139757575645">KotlinTypesystem ⧉</a></td>
+<td style="text-align: left;">extensions to the Kotlin typesystem</td>
 </tr>
 </tbody>
 </table>
@@ -2086,6 +2101,36 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ab71bf399-7fda-4c70-b141-468408de8cc3%28com.mbeddr.mpsutil.richstring.plugin%29%2F902624672039903063">IRichstringEvaluator ⧉</a></td>
 <td style="text-align: left;">evaluate a richstring</td>
 </tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F180736210943757023">SearchNodeFilter ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A0a882e21-5553-485b-8777-3b0ace5a0d84%28com.mbeddr.core.base.pluginSolution.plugin%29%2F180736210944696568">ISearchNodeFilter ⧉</a></td>
+<td style="text-align: left;">customizations for the filtering of the search tool</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ae361f9f2-2afa-4fbe-b895-bdd4fbfe44fa%28com.mbeddr.doc.aspect.plugin%29%2F2182050268112176390">documentationAspectConfiguration ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ae361f9f2-2afa-4fbe-b895-bdd4fbfe44fa%28com.mbeddr.doc.aspect.plugin%29%2F2182050268112176984">IDocumentationAspectConfiguration ⧉</a></td>
+<td style="text-align: left;">customizations for the documentation tool</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aecd3c807-fa84-48be-b99b-f9c5f7f6cc51%28com.mbeddr.mpsutil.checkinHandler.plugin%29%2F5242015161306120850">BackgroundCheckin ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aecd3c807-fa84-48be-b99b-f9c5f7f6cc51%28com.mbeddr.mpsutil.checkinHandler.plugin%29%2F338949497981488879">BackgroundCheckinHandler ⧉</a></td>
+<td style="text-align: left;">checkin handlers that are executed in the background</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aecd3c807-fa84-48be-b99b-f9c5f7f6cc51%28com.mbeddr.mpsutil.checkinHandler.plugin%29%2F1769900912208200093">ForegroundCheckin ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aecd3c807-fa84-48be-b99b-f9c5f7f6cc51%28com.mbeddr.mpsutil.checkinHandler.plugin%29%2F8627813190382744534">ForegroundCheckinHandler ⧉</a></td>
+<td style="text-align: left;">checkin handlers that are executed in the foreground</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6492a138-3e52-4756-96b0-7e3c330fe78e%28com.mbeddr.mpsutil.json.plugin%29%2F1085994689350268573">json ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6492a138-3e52-4756-96b0-7e3c330fe78e%28com.mbeddr.mpsutil.json.plugin%29%2F3281846772294579857">JsonConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the <abbr title="Javascript Object Notation">JSON</abbr> language</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad1bcbfee-eece-4092-829f-357792bc92f5%28com.mbeddr.mpsutil.xml.fix.plugin%29%2F5263556696363953633">XMLExtension ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad1bcbfee-eece-4092-829f-357792bc92f5%28com.mbeddr.mpsutil.xml.fix.plugin%29%2F5263556696363953686">XMLConfiguration ⧉</a></td>
+<td style="text-align: left;">customizations for the JetBrains XML language</td>
+</tr>
 </tbody>
 </table>
 <h2 id="mps-extensions"><abbr title="Meta Programming System">MPS</abbr>-Extensions<a class="headerlink" href="#mps-extensions" title="Permanent link">&para;</a></h2>
@@ -2099,14 +2144,14 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F3379970138989822475">IdentityCalculators ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F7848049006183172924">IdentityCalculator ⧉</a></td>
-<td style="text-align: left;">identity calculators for the model merger</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5480416882758526910">diagramConnectionTypesProvider ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F5480416882758527092">IConnectionTypesExtensionProvider ⧉</a></td>
+<td style="text-align: left;">connection types provider for diagrams</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5458251120638842458">GlobalDiagramMouseListener ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt.event%28JDK%2F%29%2F%7EMouseListener">MouseListener ⧉</a></td>
-<td style="text-align: left;">mouse listeners for diagrams</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5480416882758526910">diagramConnectionTypesProvider ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F5480416882758527092">IConnectionTypesExtensionProvider ⧉</a></td>
+<td style="text-align: left;">global provider for diagram connection based on the concept in the diagram</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F9051847868919679035">diagramPaletteEntryProvider ⧉</a></td>
@@ -2114,9 +2159,9 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">entry provider for diagrams</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5480416882758526910">diagramConnectionTypesProvider ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F5480416882758527092">IConnectionTypesExtensionProvider ⧉</a></td>
-<td style="text-align: left;">connection types provider for diagrams</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F9051847868919679035">diagramPaletteEntryProvider ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A095345ad-6627-42ca-9d3f-fc1b2d9fbd61%28de.itemis.mps.editor.diagram.runtime.model%29%2F9051847868920319006">IPaletteEntryExtensionProvider ⧉</a></td>
+<td style="text-align: left;">global provider for diagram palette entries based on the concept in the diagram</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ab49d7b4c-a97a-4226-a59e-b10183eecf00%28de.itemis.mps.selection.runtime.plugin%29%2F8796340803746625121">DragSelectionHandlerEP ⧉</a></td>
@@ -2124,9 +2169,39 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">drag selection handler</td>
 </tr>
 <tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5458251120638842458">GlobalDiagramMouseListener ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt.event%28JDK%2F%29%2F%7EMouseListener">MouseListener ⧉</a></td>
+<td style="text-align: left;">mouse listeners for diagrams</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F5458251120638842458">GlobalDiagramMouseListener ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=6354ebe7-c22a-4a0f-ac54-50b52ab9b065%2Fjava%3Ajava.awt.event%28JDK%2F%29%2F%7EMouseListener">MouseListener ⧉</a></td>
+<td style="text-align: left;">listener for global mouse clicks in diagrams</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F1742468285840696609">GlobalDiagramMPSCellClickListener ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A663468b2-7f77-448a-afd3-b1669ce5b4a7%28de.itemis.mps.editor.diagram.runtime.plugin%29%2F%7EMouseListener">MPSCellMouseListener ⧉</a></td>
+<td style="text-align: left;">listener for mouse clicks in <abbr title="Meta Programming System">MPS</abbr> cells in diagrams</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F3379970138989822475">IdentityCalculators ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A177139eb-5c36-4470-b440-3a70f7e15410%28de.itemis.mps.modelmerger.runtime.plugin%29%2F7848049006183172924">IdentityCalculator ⧉</a></td>
+<td style="text-align: left;">identity calculators for the model merger</td>
+</tr>
+<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A00bd6c6e-8efd-4091-b9e4-76836a81d03e%28de.itemis.model.merge.plugin%29%2F6484388657781186528">ModelMergeExt ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aa4055897-4d16-4474-96e9-a78cf2abfe5a%28de.itemis.model.merge.runtime.runtime%29%2F8750798999618173241">MergePolicySpec ⧉</a></td>
 <td style="text-align: left;">merge policy specifications for model merger</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad5239ba2-cf7c-43a5-8408-24daf38044ca%28com.mbeddr.mpsutil.grammarcells.runtime.plugin%29%2F7183792460437893164">ParserFailureNotifierExtensionPoint ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad5239ba2-cf7c-43a5-8408-24daf38044ca%28com.mbeddr.mpsutil.grammarcells.runtime.plugin%29%2F7183792460437893170">ParserFailureNotifier ⧉</a></td>
+<td style="text-align: left;">notification when the parser of Grammar Cells receives an timeout</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A5f74240b-ce7f-4ae5-99bc-bf1a210bda6d%28com.mbeddr.mpsutil.editor.querylist.runtime.plugin%29%2F1214064056838948400">queryListExtPoint ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A5f74240b-ce7f-4ae5-99bc-bf1a210bda6d%28com.mbeddr.mpsutil.editor.querylist.runtime.plugin%29%2F1214064056838948404">QueryListConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the querylist language</td>
 </tr>
 </tbody>
 </table>
@@ -2141,19 +2216,14 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F4577412849442986482">recordIsComparable ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F7838343651188660534">RecordIsComparable ⧉</a></td>
-<td style="text-align: left;">custom comparator for records</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A2aadf869-ec0a-4845-ac24-3bc9c1244385%28org.iets3.core.expr.doc.plugin.plugin%29%2F1085994689350268573">bookmark ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A2aadf869-ec0a-4845-ac24-3bc9c1244385%28org.iets3.core.expr.doc.plugin.plugin%29%2F3281846772294579857">BookmarkConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the bookmark explorer</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad354209e-0bea-497f-b905-d66f72900fa8%28org.iets3.analysis.base.plugin%29%2F1085994689350268573">solverfactories ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad354209e-0bea-497f-b905-d66f72900fa8%28org.iets3.analysis.base.plugin%29%2F8571724170507554661">SolverTaskFactory ⧉</a></td>
-<td style="text-align: left;">factory for creating solver tasks</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F1085994689350268573">primitiveTypeMapper ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F3281846772294579857">PrimitiveTypeMapper ⧉</a></td>
-<td style="text-align: left;">basic methods of primitive KernelF types</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A8e7e3b0c-cd10-406a-8ea9-1757f9338557%28org.iets3.components.plugin.plugin%29%2F1085994689350268573">components ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A8e7e3b0c-cd10-406a-8ea9-1757f9338557%28org.iets3.components.plugin.plugin%29%2F3281846772294579857">ComponentsConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the components language</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4577412849442986482">constraintViolationHandler ⧉</a></td>
@@ -2161,14 +2231,19 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">handler for KernelF constraint violations</td>
 </tr>
 <tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4394073590212312598">identifierConfigurator ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4394073590212256166">IdentifierConfigurator ⧉</a></td>
+<td style="text-align: left;">configuration for identifiers (allow umlauts/paragraphs)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aad1d7db8-c672-4ee1-8845-c01669f67e91%28org.iets3.core.attributes.plugin%29%2F5961697167160392620">mandatoryAttributesProviderEP ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aad1d7db8-c672-4ee1-8845-c01669f67e91%28org.iets3.core.attributes.plugin%29%2F5961697167160451804">IMandatoryAttributesProvider ⧉</a></td>
+<td style="text-align: left;">provider for mandatory attributes</td>
+</tr>
+<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F9167150562510400446">mutatorContributions ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F9167150562510400930">MutatorFactory ⧉</a></td>
 <td style="text-align: left;">factory for creating mutators</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F8137669259833410698">runtimeResolverConfig ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F8137669259833410690">RuntimeResolverConfig ⧉</a></td>
-<td style="text-align: left;">configuration for runtime resolver (e.g, functions resolving)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F1054099405275011419">nameCompletionProvider ⧉</a></td>
@@ -2176,19 +2251,69 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
 <td style="text-align: left;">name completion provider for nodes of type <code>INamedConcept</code> + a prefix</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4394073590212312598">identifierConfigurator ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4394073590212256166">IdentifierConfigurator ⧉</a></td>
-<td style="text-align: left;">configuration for identifiers (allow umlauts/paragraphs)</td>
-</tr>
-<tr>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483934994140">nixHandler ⧉</a></td>
 <td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F2417394483934995298">NixHandler ⧉</a></td>
 <td style="text-align: left;">handler for empty ('nothing') values</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aad1d7db8-c672-4ee1-8845-c01669f67e91%28org.iets3.core.attributes.plugin%29%2F5961697167160392620">mandatoryAttributesProviderEP ⧉</a></td>
-<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Aad1d7db8-c672-4ee1-8845-c01669f67e91%28org.iets3.core.attributes.plugin%29%2F5961697167160451804">IMandatoryAttributesProvider ⧉</a></td>
-<td style="text-align: left;">provider for mandatory attributes</td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6e69e40f-b186-4866-917f-dbdef5b3c590%28org.iets3.core.expr.typetags.physunits.plugin%29%2F5088826354699943892">PhysUnitLangConfig ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6e69e40f-b186-4866-917f-dbdef5b3c590%28org.iets3.core.expr.typetags.physunits.plugin%29%2F5088826354699943896">IUnitLangConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the physical units language</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F1085994689350268573">primitiveTypeMapper ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F3281846772294579857">PrimitiveTypeMapper ⧉</a></td>
+<td style="text-align: left;">basic methods of primitive KernelF types</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F4577412849442986482">recordIsComparable ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F7838343651188660534">RecordIsComparable ⧉</a></td>
+<td style="text-align: left;">custom comparator for records</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F4577412849442986482">recordIsComparable ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F7838343651188660534">RecordIsComparable ⧉</a></td>
+<td style="text-align: left;">customizations for record comparison</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F8179545539257114214">RecordValuePresenterExtensionPoint ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A93cd1fe8-b296-405c-a6e6-040c940ccfa1%28org.iets3.core.expr.toplevel.plugin%29%2F4299669183961870260">IPresenter ⧉</a></td>
+<td style="text-align: left;">customizations for the presentation of record values</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6152f7b8-7ec7-4c3a-ad96-68855bbe5797%28org.iets3.req.plugin.plugin%29%2F1085994689350268573">requirements ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6152f7b8-7ec7-4c3a-ad96-68855bbe5797%28org.iets3.req.plugin.plugin%29%2F3281846772294579857">RequirementsConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the requirements explorer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F8137669259833410698">runtimeResolverConfig ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F8137669259833410690">RuntimeResolverConfig ⧉</a></td>
+<td style="text-align: left;">configuration for runtime resolver (e.g, functions resolving)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad354209e-0bea-497f-b905-d66f72900fa8%28org.iets3.analysis.base.plugin%29%2F1085994689350268573">solverfactories ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ad354209e-0bea-497f-b905-d66f72900fa8%28org.iets3.analysis.base.plugin%29%2F8571724170507554661">SolverTaskFactory ⧉</a></td>
+<td style="text-align: left;">factory for creating solver tasks</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acdcdec44-a636-42c8-b599-c146eb2ca77d%28org.iets3.core.plugin.plugin%29%2F1085994689350268573"><abbr title="specification">spec</abbr> ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Acdcdec44-a636-42c8-b599-c146eb2ca77d%28org.iets3.core.plugin.plugin%29%2F3281846772294579857">SpecConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the specification explorer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Af2db22e1-5ffd-4b44-94b1-21c00f016390%28org.iets3.core.expr.tracing.plugin.plugin%29%2F4150517568284290688">TraceExplorerExtensionPoint ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3Ae3e5593b-dfcd-4a2e-b10f-f1ed4a43f093%28org.iets3.core.expr.plugin.plugin%29%2F4150517568284323165">ITraceExplorerAction ⧉</a></td>
+<td style="text-align: left;">customizations for the trace explorer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F4278808520492878530">typesystemCustomization ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A6c6155f0-4bbe-4af5-8c26-244d570e21e4%28org.iets3.core.expr.base.plugin%29%2F3538736798830874790">TypesystemCustomizer ⧉</a></td>
+<td style="text-align: left;">customizations for the KernelF typesystem</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A8397e61b-8602-4a1e-97b1-3469618bad2d%28org.iets3.core.expr.typetags.units.plugin%29%2F5088826354699943892">UnitLangConfig ⧉</a></td>
+<td style="text-align: left;"><a href="http://127.0.0.1:63320/node?ref=r%3A8397e61b-8602-4a1e-97b1-3469618bad2d%28org.iets3.core.expr.typetags.units.plugin%29%2F5088826354699943896">IUnitLangConfig ⧉</a></td>
+<td style="text-align: left;">customizations for the old units language</td>
 </tr>
 </tbody>
 </table>
@@ -2212,7 +2337,7 @@ The following table lists <abbr title="Meta Programming System">MPS</abbr> exten
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 8, 2025</span>
   </span>
 
     
