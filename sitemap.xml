@@ -821,6 +821,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://mbeddr.com/mps-platform-docs/mps_internal/mps_generation_plans/</loc>
+         <lastmod>2025-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/mps_startup/</loc>
          <lastmod>2025-04-17</lastmod>
          <changefreq>daily</changefreq>
