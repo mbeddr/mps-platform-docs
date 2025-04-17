@@ -5,6 +5,10 @@ tags:
 
 This page lists all new pages since August 2022.
 
+## April 2025
+
+- [MPS Internals: Generation Plans](mps_generation_plans.md)
+
 ## April 2024
 
 - [Reference: Annotations](annotations.md)
