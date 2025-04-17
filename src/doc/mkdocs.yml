@@ -256,6 +256,8 @@ nav:
           - Editor Development: mps_internal/editor_development.md
           - IntelliJ UI: mps_internal/gui.md
           - Platform UI Inspector : mps_internal/platform_ui_inspector.md
+      - Generators:
+          - MPS Generation Plans: mps_internal/mps_generation_plans.md
       - IntelliJ SDK: 
           - mps_internal/intellij_sdk.md
           - IntelliJ Integration: mps_internal/intellij_integration.md
