@@ -3,7 +3,7 @@ plugins {
 }
 
 wrapper {
-    gradleVersion = '8.13'
+    gradleVersion = '9.1.0'
 }
 
 mkdocs.publish.docPath = ''
