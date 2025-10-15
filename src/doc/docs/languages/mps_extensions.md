@@ -24,7 +24,8 @@ The mbeddr doc language uses it for generating XHTML, Latex, and markdown.
 
 !!! question "What Java libraries are used by the diagram language?"
 
-    For the graphs itself, it uses [JGraphX](https://jgraph.github.io/mxgraph/docs/manual_javavis.html).[Eclipse Layout Kernel (ELK)](https://www.eclipse.org/elk/) layouts the diagram.
+    For the graphs itself, it uses [a custom version of JGraphX](https://github.com/slisson/jgraphx/) (documentation of the original JGraphX can be found [here](https://jgraph.github.io/mxgraph/docs/manual_javavis.html)).
+    [Eclipse Layout Kernel (ELK)](https://www.eclipse.org/elk/) lays out the diagram.
 
 !!! warning "I encountered a bug."
 
