@@ -384,6 +384,7 @@ nav:
       - mbeddr/index.md
       - Building Mbeddr Locally: mbeddr/building_mbeddr_locally.md
       - Parallel Execution of Make Targets: mbeddr/parallel_execution_of_make_targets.md
+      - ECore Transformation Tools: mbeddr/ecore_transformation_tools.md
       - Mbeddr utilities:
           - platform_essentials/mpsutils/index.md
           - Common: platform_essentials/mpsutils/common.md
