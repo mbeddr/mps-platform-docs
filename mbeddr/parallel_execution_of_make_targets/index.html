@@ -12,13 +12,13 @@
         <meta name="author" content="MPS Platform Docs team">
       
       
-        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/reference/actions/">
+        <link rel="canonical" href="http://mbeddr.com/mps-platform-docs/mbeddr/parallel_execution_of_make_targets/">
       
       
-        <link rel="prev" href="../annotations/">
+        <link rel="prev" href="../building_mbeddr_locally/">
       
       
-        <link rel="next" href="../abbreviations/">
+        <link rel="next" href="../../platform_essentials/mpsutils/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Actions - MPS Platform Docs</title>
+        <title>Parallel Execution of Make Targets - MPS Platform Docs</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commondatakeys" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -166,7 +166,7 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Actions
+              Parallel Execution of Make Targets
             
           </span>
         </div>
@@ -404,11 +404,13 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../mbeddr/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -464,13 +466,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../being_a_good_developer/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../reference/being_a_good_developer/" class="md-tabs__link">
           
   
     
@@ -1005,6 +1005,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
   
   
+    
+  
   
   
     
@@ -1012,6 +1014,220 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Mbeddr
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mbeddr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building_mbeddr_locally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Mbeddr Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Parallel Execution of Make Targets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Execution of Make Targets
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importance-of-running-make-targets-in-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importance of running make Targets in parallel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-parallel-option-work-and-what-are-the-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the parallel Option work, and what are the Challenges?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktopplatform" class="md-nav__link">
+    <span class="md-ellipsis">
+      DesktopPlatform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-parallel-make-feature-in-mbeddr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Parallel make Feature in mbeddr
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Parallel make Feature in mbeddr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of Workers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1044,11 +1260,11 @@ If you are a returning visitor, make sure to check out the page about <a href=".
         
   
   
-    <a href="../../mbeddr/" class="md-nav__link">
+    <a href="../../platform_essentials/mpsutils/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Mbeddr
+    Mbeddr utilities
   </span>
   
 
@@ -1058,6 +1274,112 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://mbeddr.com/files/documentationdocumentation.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mbeddr Doc Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../big_project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BigProject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Guide
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--deprecated"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc_topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Topics
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--deprecated"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1171,539 +1493,73 @@ If you are a returning visitor, make sure to check out the page about <a href=".
       
   
   
-    
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../../reference/being_a_good_developer/" class="md-nav__link">
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     Reference
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_11">
-            <span class="md-nav__icon md-icon"></span>
-            Reference
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../being_a_good_developer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Being a Good Developer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips_for_os_maintainers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tips for Open Source Maintainers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../pr_checklist/after_coding/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Pull Request Checklist
-  </span>
-  
-
       
         <span class="md-nav__icon md-icon"></span>
       
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../icons/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Icons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core_languages/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Core Languages
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../standard_plugins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standard Plugins
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../included_libraries/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Included Libraries
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extension_points/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extension Points
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exceptions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exceptions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../annotations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Annotations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Actions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Actions
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commondatakeys" class="md-nav__link">
-    <span class="md-ellipsis">
-      CommonDataKeys
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platformdatakeys" class="md-nav__link">
-    <span class="md-ellipsis">
-      PlatformDataKeys
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../abbreviations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Abbreviations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../code_abbreviations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Code Abbreviations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gitignore/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gitignore File
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../issue_trackers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Issue Trackers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../language_reference/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Language Reference (WIP)
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1778,6 +1634,8 @@ If you are a returning visitor, make sure to check out the page about <a href=".
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1786,20 +1644,53 @@ If you are a returning visitor, make sure to check out the page about <a href=".
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commondatakeys" class="md-nav__link">
+  <a href="#importance-of-running-make-targets-in-parallel" class="md-nav__link">
     <span class="md-ellipsis">
-      CommonDataKeys
+      Importance of running make Targets in parallel
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#platformdatakeys" class="md-nav__link">
+  <a href="#how-does-the-parallel-option-work-and-what-are-the-challenges" class="md-nav__link">
     <span class="md-ellipsis">
-      PlatformDataKeys
+      How does the parallel Option work, and what are the Challenges?
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktopplatform" class="md-nav__link">
+    <span class="md-ellipsis">
+      DesktopPlatform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-parallel-make-feature-in-mbeddr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Parallel make Feature in mbeddr
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Parallel make Feature in mbeddr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of Workers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1817,265 +1708,120 @@ If you are a returning visitor, make sure to check out the page about <a href=".
                 
 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../tags/#reference" class="md-tag md-tag-icon">reference</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../tags/#intellij" class="md-tag md-tag-icon">intellij</a>
-    
-  
-</nav>
-
 
   
   
 
 
-  <h1>Actions</h1>
-
-<p>This page lists which data keys are available when you declare <a href="https://www.jetbrains.com/help/mps/plugin.html#actionsandactiongroups">actions ⧉</a>.
-<a href="http://127.0.0.1:63320/node?ref=742f6602-5a2f-4313-aa6e-ae1cd4ffdc61%2Fjava%3Ajetbrains.mps.ide.actions%28MPS.Platform%2F%29%2F%7EMPSCommonDataKeys">MPSCommonDataKeys</a> are always available, <a href="http://127.0.0.1:63320/node?ref=1ed103c3-3aa6-49b7-9c21-6765ee11f224%2Fjava%3Ajetbrains.mps.ide.editor%28MPS.Editor%2F%29%2F%7EMPSEditorDataKeys">MPSEditorDataKeys ⧉</a> is only
-available in node editors. <a href="http://127.0.0.1:63320/node?ref=86441d7a-e194-42da-81a5-2161ec62a379%2Fjava%3Ajetbrains.mps.workbench%28MPS.Workbench%2F%29%2F%7EMPSDataKeys">MPSDataKeys ⧉</a> are only available in certain places such as project panes.</p>
-<h2 id="commondatakeys">CommonDataKeys<a class="headerlink" href="#commondatakeys" title="Permanent link">&para;</a></h2>
-<p>This class lists common data keys used as parameter for actions.</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-<th>Available in <abbr title="Meta Programming System">MPS</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CARET</td>
-<td>Returns a caret instance (in host or injected editor, depending on context).</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>EDITOR</td>
-<td>Returns the currently focused editor instance.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>EDITOR_EVEN_IF_INACTIVE</td>
-<td>Returns an editor even if the focus currently is in the find bar.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>EDITOR_VIRTUAL_SPACE</td>
-<td>Returns whether the current location relates to a virtual space in an editor.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>HOST_EDITOR</td>
-<td>Returns a reference to host an editor instance in case the <em>EDITOR</em> key refers to an injected editor.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>NAVIGATABLE</td>
-<td>Returns a <code>Navigatable</code> instance.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>NAVIGATABLE_ARRAY</td>
-<td>Returns several navigatables, e.g.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>PROJECT</td>
-<td>Returns a project if a project node is selected (in project view)</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>PSI_ELEMENT</td>
-<td>Returns a <code>PsiElement</code> instance.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>PSI_FILE</td>
-<td>Returns the currently selected <code>PsiFile</code> instance.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>VIRTUAL_FILE</td>
-<td>Returns a <code>VirtualFile</code> instance.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>VIRTUAL_FILE_ARRAY</td>
-<td>Returns several <code>VirtualFile</code> instances</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-</tbody>
-</table>
-<h2 id="platformdatakeys">PlatformDataKeys<a class="headerlink" href="#platformdatakeys" title="Permanent link">&para;</a></h2>
-<p>This class extends <em>CommonDataKeys</em> and adds new keys that deal with the IntelliJ platform itself.</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-<th>Available in <abbr title="Meta Programming System">MPS</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ACTIONS_SORTER</td>
-<td>Deprecated. use ActionPromoter</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>CONTENT_MANAGER</td>
-<td>Returns the managing class that's responsible for the current component's content</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>CONTEXT_COMPONENT</td>
-<td>Returns the component that's currently in focus.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>CONTEXT_MENU_POINT</td>
-<td>Returns a point to guess where to show the context menu invoked by a key.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>COPY_PROVIDER</td>
-<td>Returns the copy provider responsible for copying data.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>CUT_PROVIDER</td>
-<td>Returns the cut provider responsible for cutting data.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>DELETE_ELEMENT_PROVIDER</td>
-<td></td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>DOMINANT_HINT_AREA_RECTANGLE</td>
-<td>Returns the position and dimension of a hint.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>EXPORTER_TO_TEXT_FILE</td>
-<td></td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>FILE_EDITOR</td>
-<td>Returns the file</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>FILE_TEXT</td>
-<td>Returns the text of the currently selected file/file revision</td>
-<td></td>
-</tr>
-<tr>
-<td>HELP_ID</td>
-<td>Returns help <abbr title="identification/identifier">id</abbr>.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>IS_MODAL_CONTEXT</td>
-<td>Returns Boolean. TRUE if action is executed in modal context and Boolean. FALSE if action is executed not in modal context.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>MODALITY_STATE</td>
-<td>See: <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#modality-and-invokelater">Modality and invokeLater() - IntelliJ Platform Plugin SDK ⧉</a></td>
-<td></td>
-</tr>
-<tr>
-<td>NONEMPTY_CONTENT_MANAGER</td>
-<td>Returns a non-empty managing class that's responsible for the current component's content</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>PASTE_PROVIDER</td>
-<td>Returns the paste provider responsible for pasting data.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>PREDEFINED_TEXT</td>
-<td>Returns a predefined text value.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>PROJECT_CONTEXT</td>
-<td>Returns a project if a project node is selected (in the project view).</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>PROJECT_FILE_DIRECTORY</td>
-<td></td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>SEARCH_INPUT_TEXT</td>
-<td></td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>SELECTED_ITEM</td>
-<td>Returns a single selected item.</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>SELECTED_ITEMS</td>
-<td>Returns multiple selected items.</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>SOURCE_NAVIGATION_LOCKED</td>
-<td></td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>SPEED_SEARCH_COMPONENT</td>
-<td>Returns the speed search component</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>STATUS_BAR</td>
-<td>Returns the status bar class</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>TOOL_WINDOW</td>
-<td>Returns the current tool window</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>TREE_EXPANDER</td>
-<td></td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-<tr>
-<td>UI_DISPOSABLE</td>
-<td>Returns the class responsible for disposing of a <abbr title="User Interface">UI</abbr> component</td>
-<td><img alt="⛔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26d4.svg" title=":no_entry:" /></td>
-</tr>
-</tbody>
-</table>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Prerequisites: In order to understand this document, the reader is expected to have a basic understanding of what a Makefile is and how targets in Makefiles are defined in order to accomplish build-related tasks. The reader can refer to the following URL to gain a basic understanding. <a href="https://www.gnu.org/software/make/">GNU Make ⧉</a></p>
+<p>When running code generation on a mbeddr model, <abbr title="Meta Programming System">MPS</abbr> generates source and header files corresponding to the implementation modules in the chosen model and generates a Makefile, which is then run using the “make” command (e.g., GNU make). This command is invoked with no arguments, which causes make to execute the “all” target (default) and all of its dependencies that are specified inside the generated Makefile. For instance, a target to “clean” existing files and another one that compiles source files into object files. Further, running “make” with no arguments executes all targets sequentially, while passing over the “-j" option instructs make to run parallelizable targets at the same time (more on that later).</p>
+<h2 id="importance-of-running-make-targets-in-parallel">Importance of running make Targets in parallel<a class="headerlink" href="#importance-of-running-make-targets-in-parallel" title="Permanent link">&para;</a></h2>
+<p>In mbeddr, about 40% of the overall code generation time (m2m, m2t and compilation) when rebuilding projects is spent on running make on the generated source files. Because mbeddr models usually contain multiple implementation modules that get translated to source and header files, we can parallelize the compilation of these files. After introducing this change, we observed that the time taken for parallel makes were almost half the time taken for linear makes in those manual tests, thereby motivating the need for using make's parallel option in mbeddr.</p>
+<h2 id="how-does-the-parallel-option-work-and-what-are-the-challenges">How does the parallel Option work, and what are the Challenges?<a class="headerlink" href="#how-does-the-parallel-option-work-and-what-are-the-challenges" title="Permanent link">&para;</a></h2>
+<p>The “make -j" option works at the granularity of targets. This means that targets are executed in parallel, not tasks inside targets. Consider the following example Makefile snippet:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>targeta:
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   stat1
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>   stat2
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>targetb:
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>   stat3
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>   stat4
+</code></pre></div></td></tr></table></div>
+<p>In this case, “make -j" would only execute <strong>targeta</strong> and <strong>targetb</strong> in parallel, but the runtime of statements would be linear, implying that <strong>stat1</strong> is always executed before <strong>stat2</strong>. So parallelizing the execution of a Makefile implies the following two main challenges:</p>
+<ol>
+<li>Tasks that are intended to be executed in parallel (e.g., compilation of source files) need to be specified in separate targets.</li>
+<li>Dependencies between targets must be specified explicitly, e.g., the target for linking object files must depend on the target for compiling source files.</li>
+</ol>
+<h2 id="desktopplatform">DesktopPlatform<a class="headerlink" href="#desktopplatform" title="Permanent link">&para;</a></h2>
+<p>In the following section, we describe how we tackled the previously mentioned challenges by modifying the DesktopPlatform to generate parallelizable Makefiles that can be executed by using the “-j” option.</p>
+<p>Note: Makefiles can contain <em>define</em> elements, which define in a macro a bunch of statements. These macros can be used inside a Makefile just like functions in C. This feature was used by the DesktopPlatform in mbeddr to generate a macro for compiling source files. Additionally, the DesktopPlatform generated a <em>foreach</em> loop that expanded this macro for each generated source file. This way, targets were created dynamically, which is not supported when using the "-j" option, .i.e., make needs to figure <abbr title="output">out</abbr> dependencies statically before macro expansion. Therefore, we have modified this Makefile generator to generate individual targets for each of the source files to be compiled and created a new target called <em>CompileSources</em> which depends on all of these individual targets. Additionally, we introduced a dependency from the linking target into this new <em>CompileSources</em> target. This way we have not only ensured that the targets for compilation of individual sources are executed in parallel (by being in different non-dependent targets), we have also ensured that linking does not happen before compilation.</p>
+<p>Here is the macro that we were talking about in the paragraph before:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>define CompileSources
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>$$(patsubst %.c,$(OBJODIR)/%.o,$$(notdir $(1))): $(1) $(ALL_INCS_ExternalOFile)  | $(OBJODIR)
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    $(vecho) &quot;  CC $$&lt;&quot;
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    $(Q) $(CC) $$(CFLAGS) $(ALL_INCDIR_FLAGS_ExternalOFile) -c -o $$@ $$&lt;
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>endef 
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>$(foreach asrc, $(sort $(ALL_SRCS_ExternalOFile)), $(eval $(call CompileSources,$(asrc))))
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>ExternalOFile$(EXEXT): $(ALL_OBJS_ExternalOFile)
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>ifeq ($(HOST),$(TARGET_ExternalOFile))
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    $(vecho) &quot;  LD $@&quot;
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>    $(Q) $(CC) $(LDFLAGS) -o $@ $^ $(EXT_LIBDIR_FLAGS_ExternalOFile) $(EXT_LIB_FLAGS_ExternalOFile)
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>else
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>    $(vecho) &quot;Cannot build $(TARGET_ExternalOFile)-specific &#39;ExternalOFile$(EXEXT)&#39; application under $(HOST).&quot;
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>endif
+</code></pre></div></td></tr></table></div></p>
+<p>As described above, we have modified the DesktopPlatform generator to generate for each source file a separate target and this way omit the not parallelizable macro from the code snippet before. The following snippet shows for an example Makefile how we generate individual targets that we can be executed in parallel:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>$(OBJODIR)/TestExternalOFiles.o: TestExternalOFiles.c  $(ALL_INCS_ExternalOFile) | $(OBJODIR)
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    $(vecho) &quot;  CC $&lt;&quot;
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    $(Q) $(CC) $(CFLAGS) $(ALL_INCDIR_FLAGS_ExternalOFile) -c -o $@ $&lt;
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>$(OBJODIR)/Unittest_Helper.o: Unittest_Helper.c  $(ALL_INCS_ExternalOFile) | $(OBJODIR)
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    $(vecho) &quot;  CC $&lt;&quot;
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    $(Q) $(CC) $(CFLAGS) $(ALL_INCDIR_FLAGS_ExternalOFile) -c -o $@ $&lt;
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>$(OBJODIR)/Unittest_Helper_NonIsolated.o: Unittest_Helper_NonIsolated.c  $(ALL_INCS_ExternalOFile) | $(OBJODIR)
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    $(vecho) &quot;  CC $&lt;&quot;
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    $(Q) $(CC) $(CFLAGS) $(ALL_INCDIR_FLAGS_ExternalOFile) -c -o $@ $&lt;
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>$(OBJODIR)/UnitTestMessages.o: UnitTestMessages.c  $(ALL_INCS_ExternalOFile) | $(OBJODIR)
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    $(vecho) &quot;  CC $&lt;&quot;
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>    $(Q) $(CC) $(CFLAGS) $(ALL_INCDIR_FLAGS_ExternalOFile) -c -o $@ $&lt;
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>CompileSources:    $(OBJODIR)/TestExternalOFiles.o  $(OBJODIR)/Unittest_Helper.o  $(OBJODIR)/Unittest_Helper_NonIsolated.o  $(OBJODIR)/UnitTestMessages.o
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>ExternalOFile$(EXEXT): CompileSources
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>ifeq ($(HOST),$(TARGET_ExternalOFile))
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>    $(vecho) &quot;  LD $@&quot;
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>    $(Q) $(CC) $(LDFLAGS) -o $@ $^ $(EXT_LIBDIR_FLAGS_ExternalOFile) $(EXT_LIB_FLAGS_ExternalOFile)
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>else
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>    $(vecho) &quot;Cannot build $(TARGET_ExternalOFile)-specific &#39;ExternalOFile$(EXEXT)&#39; application under $(HOST).&quot;
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>endif
+</code></pre></div></td></tr></table></div></p>
+<h2 id="using-the-parallel-make-feature-in-mbeddr">Using the Parallel make Feature in mbeddr<a class="headerlink" href="#using-the-parallel-make-feature-in-mbeddr" title="Permanent link">&para;</a></h2>
+<p>mbeddr comes with the <em>Platform</em> concept that is extended in order to customize the generation of Makefiles. We have designed a new Interface <em>IGeneratesToMakeFile</em> in the <em><abbr title="commercial/common/communication">com</abbr>.mbeddr.core.make</em> language that contains a virtual method called <em>canBeParallelized</em> that controls whether a Makefile that has been generated for the specific platform (a subconcept of <em>Platform</em>) can be run in parallel. The default implementation of this method in the abstract concept <em>Platform</em> returns false. But, if a specific subconcept of <em>Platform</em> generates a Makefile that can be parallelized, then the developer simply needs to override the <em>canBeParallelized</em> method by returning true. This ensures that the <em>runMake</em> facet of mbeddr, which is responsible for running make after text generation, employs the parallel make execution process for Makefiles that are generated by a <em>Platform</em> that can be parallelized. As an example, the <em>canBeParallelized</em> implementation for <em>DesktopPlatform</em> currently returns true, thus instructing the <em>runMake</em> facet to run generated Makefiles in parallel.</p>
+<h3 id="number-of-workers">Number of Workers<a class="headerlink" href="#number-of-workers" title="Permanent link">&para;</a></h3>
+<p>The “-j" option accepts an optional number that can be specified to indicate the amount of workers that run make targets in parallel. The <em>runMake</em> facet sets this number to <em>(number of cores minus 1)</em>. This choice makes sure that there is one core left that can be used for external IO operations. Not using all cores is a best practice and prevents the system from freezing.</p>
 
 
 
@@ -2096,7 +1842,7 @@ available in node editors. <a href="http://127.0.0.1:63320/node?ref=86441d7a-e19
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2025</span>
   </span>
 
     
@@ -2151,60 +1897,6 @@ available in node editors. <a href="http://127.0.0.1:63320/node?ref=86441d7a-e19
   </form>
 
 
-<h2 id="__comments">Comments</h2>
-
-<script src="https://giscus.app/client.js"
-        data-repo="mbeddr/mps-platform-docs"
-        data-repo-id="R_kgDOHtFrwg"
-        data-category="General"
-        data-category-id="DIC_kwDOHtFrws4CQY8v"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
                 
 
 
@@ -2251,7 +1943,7 @@ available in node editors. <a href="http://127.0.0.1:63320/node?ref=86441d7a-e19
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../annotations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotations">
+          <a href="../building_mbeddr_locally/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Building Mbeddr Locally">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2261,20 +1953,20 @@ available in node editors. <a href="http://127.0.0.1:63320/node?ref=86441d7a-e19
                 Previous
               </span>
               <div class="md-ellipsis">
-                Annotations
+                Building Mbeddr Locally
               </div>
             </div>
           </a>
         
         
           
-          <a href="../abbreviations/" class="md-footer__link md-footer__link--next" aria-label="Next: Abbreviations">
+          <a href="../../platform_essentials/mpsutils/" class="md-footer__link md-footer__link--next" aria-label="Next: Mbeddr MPS Utilities">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Abbreviations
+                Mbeddr MPS Utilities
               </div>
             </div>
             <div class="md-footer__button md-icon">
