@@ -781,6 +781,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://mbeddr.com/mps-platform-docs/mbeddr/platform_maturity_and_criteria/</loc>
+         <lastmod>2025-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://mbeddr.com/mps-platform-docs/mps_internal/</loc>
          <lastmod>2025-12-15</lastmod>
          <changefreq>daily</changefreq>
