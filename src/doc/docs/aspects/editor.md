@@ -19,6 +19,14 @@ To learn more about internal editor topics, visit [MPS Internals: Editor Develop
 
     [F5 in editor](https://specificlanguages.com/posts/2022-03/09-f5-in-editor/){{ blog('sl') }}
 
+!!! question "Where can I find new information about the new UI introduced in MPS 2023.2?"
+
+    - General information: https://www.jetbrains.com/help/idea/new-ui.html
+    - MPS specific: https://www.jetbrains.com/help/mps/new-ui.html
+    - Configure the new UI to behave like the old one: https://youtrack.jetbrains.com/articles/SUPPORT-A-649/How-to-configure-the-new-UI-to-behave-more-like-classic-one
+
+    To check if the new UI is activated, use `ExperimentalUI.isNewUI()`.
+
 !!! question "How can you delete non-existing children, references, or properties from a node?"
 
     Switch to the [reflective editor](https://www.jetbrains.com/help/mps/finding-your-way-out.html#reflectiveeditor) and remove the offending parts. There is also an [enhancement script](http://127.0.0.1:63320/node?ref=r%3A00000000-0000-4000-0000-011c89590291%28jetbrains.mps.lang.structure.scripts%29%2F6066872190921237633) that can remove properties.
