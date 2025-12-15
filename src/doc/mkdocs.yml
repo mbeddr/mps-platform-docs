@@ -51,7 +51,7 @@ extra_javascript:
 
 extra:
   mps_minimum: 2021.1.4
-  mps_maximum: 2024.1
+  mps_maximum: 2025.2
   tags:
     beginner: beginner
   analytics:
