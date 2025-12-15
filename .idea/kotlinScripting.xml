@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="KotlinScriptingSettings">
-    <scriptDefinition className="kotlin.script.templates.standard.ScriptTemplateWithBindings" definitionName="Script definition for extension scripts and IDE console">
-      <order>2147483647</order>
-      <autoReloadConfigurations>true</autoReloadConfigurations>
-    </scriptDefinition>
-  </component>
-</project>
